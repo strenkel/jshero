@@ -13,20 +13,22 @@
     
     <div>
 
-      <nav id="nav">
-        <a href="index.html">Home</a>
-        <a href="tests.html">Übungen</a>
-        <a href="info.html">Info</a>
-      </nav>
-
       <div id="header">
         <div id="title">JS Hero</div>
         <div id="menu">≡</div>
       </div>
 
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="main.html">Übungen</a>
+        <a href="info.html">Info</a>
+      </nav>
+
       <div id="lesson">
         
         <h1 id="koans-title"></h1>
+        <p id="koans-lesson"></p>
+        <h2>Aufgabe</h2>
         <p id="koans-task"></p>
       
         <textarea
@@ -34,23 +36,23 @@
           placeholder="// ... dein Code ..."
           rows="10"></textarea>
 
-        <div>
-          <input id="test-button" type="button" value="Test">
-          <input id="next-button" type="button" value=">>">
-        </div>
+        <p>
+          <button id="test-button">Tests</button>
+          <a id="next-button" class="link-button" href="main.html">>></a>
+        </p>
       
-
         <div id="messages">
 
       </div>
     </div>
     
-    <script src="js/libs/jquery.js" type="text/javascript" ></script>
     <script src="js/nav.js" type="text/javascript" ></script>
     <script src="js/koans.js" type="text/javascript" ></script>
     <script src="js/message.js" type="text/javascript" ></script>
     <script src="js/main.js" type="text/javascript" ></script>
     <script src="js/koans/var.js" type="text/javascript" ></script>
+    <script src="js/koans/var2.js" type="text/javascript" ></script>
+    <script src="js/koans/function.js" type="text/javascript" ></script>
     <script src="js/koans/add.js" type="text/javascript" ></script>
   </body>
 </html>

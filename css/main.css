@@ -10,23 +10,24 @@ html, body {
   margin: 0;
 }
 
-input[type="button"] {
+button {
   width: 6em;
   font-size: 1em;
   border: 1px solid black;
   background-color: white;
-  height: 2em;
+  height: 2.3333em;
+  cursor: pointer;
 }
 
 code {
-  color: darkblue;
+  color: blue;
 }
 
 nav {
   top: 3em;
   border-bottom: 1px solid white;
   text-align: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   background-color: #bbb;
   display: none;
@@ -51,6 +52,9 @@ nav a {
   color: white;
   height: 3em;
   line-height: 3em;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 #title {
@@ -68,13 +72,17 @@ nav a {
 }
 
 #lesson {
-  margin: 5em auto 3em auto;
+  margin: 8em auto 3em auto;
   max-width: 44em;
   padding: 0 1em 0 1em; 
 }
 
 #lesson h1 {
   margin-bottom: 1.5em;
+}
+
+#lesson h2 {
+  margin-top: 1.5em;
 }
 
 #lesson p {
@@ -101,7 +109,8 @@ nav a {
 #code-area {
   width: 100%;
   margin-bottom: 1em;
-  font-size: 0.8em;
+  font-size: 1em;
+  margin-top: 2em;
 }
 
 #messages {
@@ -124,11 +133,11 @@ nav a {
   color: green;
 }
 
-#start-hero a {
-  margin-top: 1em;
+.link-button {
+  vertical-align: top;
   border: 1px solid black;
   display: inline-block;
-  padding: 0.3em 2em;
+  padding: 0.3em 2.3em;
 }
 
 #success {
@@ -141,4 +150,8 @@ nav a {
   color: red;
   margin-left: 2em;
   display: none;
+}
+
+#start-hero {
+  margin-top: 2em;
 }

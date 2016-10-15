@@ -5,32 +5,41 @@ if (typeof jshero === "undefined") {
 jshero.koans = (function() {
 
   var index = 0;
-  var koansList = [];
+  var koans = [];
 
-  var add = function(koans) {
-    koansList.push(koans);
+  var add = function(koan) {
+    koans.push(koan);
   };
 
   var next = function() {
     index++;
   };
 
-  var getKoans = function() {
-    return koansList[index];
+  var getKoan = function() {
+    return koans[index];
   };
 
   var nextId = function() {
-    if (index + 1 < koansList.length) {
-      return koansList[index + 1].id;
+    if (index + 1 < koans.length) {
+      return koans[index + 1].id;
     }
     return null;
+  };
+
+  var setIndexById = function(id) {
+    koans.forEach(function(koan, i) {
+      if (koan.id === id) {
+        index = i;
+      }
+    });
   };
 
   return {
     add: add,
     next: next,
     nextId: nextId,
-    getKoans: getKoans
+    getKoan: getKoan,
+    setIndexById: setIndexById
   };
 
 })();

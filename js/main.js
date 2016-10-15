@@ -4,21 +4,42 @@ if (typeof jshero === "undefined") {
 
 (function(msg, koans) {
 
-  var testButton = document.getElementById("test-button"); 
+  var testButton = document.getElementById("test-button");
+  var nextButton = document.getElementById("next-button");
 
   var write = function() {
-    document.getElementById("koans-title").innerHTML = koans.getKoans().title;
-    document.getElementById("koans-task").innerHTML = koans.getKoans().task;
+    var koan = getKoanFromUrl() || getKoanFromStorage();
+    koans.setIndexById(koan);
+    document.getElementById("koans-title").innerHTML = koans.getKoan().title;
+    document.getElementById("koans-lesson").innerHTML = koans.getKoan().lesson;
+    document.getElementById("koans-task").innerHTML = koans.getKoan().task;
+    nextButton.href = "main.html?koan=" + koans.nextId(); 
+  };
+
+  var getKoanFromUrl = function() {
+    var parts = window.location.search.split("=");
+    if (parts.length === 2) {
+      return parts[1];
+    }
+    return null;
+  };
+
+  var getKoanFromStorage = function() {
+    return localStorage.getItem("lastKoanId");
+  };
+  
+  var setKoanToStorage = function(koan) {
+    localStorage.setItem("lastKoanId", koan);
   };
 
   var testCode = function() {
     clear();
-    koans.getKoans().beforeTests();
+    koans.getKoan().beforeTests();
     var okAll = false;
     var ok = readCode();
     if (ok) {
       okAll = true;
-      var tests = koans.getKoans().tests;
+      var tests = koans.getKoan().tests;
       for (var i = 0, l = tests.length; i < l; i = i + 2) {
         try {
           ok = tests[i + 1]();
@@ -32,6 +53,22 @@ if (typeof jshero === "undefined") {
         }
       };
     }
+    handleButtons(okAll);
+    scrollToButtom();
+    handleStorage(okAll);
+  };
+
+  var handleStorage = function(okAll) {
+    if (okAll) {
+      setKoanToStorage(koans.nextId());
+    }
+  };
+
+  var scrollToButtom = function() {
+    window.scrollTo(0,document.body.scrollHeight);
+  };
+
+  var handleButtons = function(okAll) {
     var visibility;
     if (okAll) {
       visibility = "visible";
@@ -40,7 +77,7 @@ if (typeof jshero === "undefined") {
       visibility = "hidden";
       testButton.className = "red";
     }
-    document.getElementById("next-button").style.visibility = visibility;
+    nextButton.style.visibility = visibility;
   };
 
   var clear = function() {
@@ -66,7 +103,7 @@ if (typeof jshero === "undefined") {
     }
   };
 
-  document.getElementById('test-button').onclick = testCode;
+  testButton.onclick = testCode;
   window.onload = write;
 
 })(jshero.message, jshero.koans);

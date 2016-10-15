@@ -1,17 +1,18 @@
 (function() {
 
-  var nav = $("#nav");
+  var nav = document.getElementById("nav");
+  nav.style.display = "none";
   
-  $("#menu").click(function() {
+  document.getElementById("menu").onclick = function() {
     if (menuIsClosed()) {
-      nav.show();
+      nav.style.display = "block";
     } else {
-      nav.hide();
+      nav.style.display = "none";
     }
-  });
+  };
 
   var menuIsClosed = function() {
-    return nav.css("display") === "none";
+    return nav.style.display === "none";
   };
 
 

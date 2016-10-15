@@ -4,8 +4,9 @@ jshero.koans.add({
 
   title: "Addition",
 
-  task: "Mit <code>+</code> addierst du Zahlen.<br>" +
-        "Schreibe eine Funktion <code>add</code>, die 2 Zahlen addiert.",
+  lesson: "Mit <code>+</code> addierst du Zahlen.", 
+
+  task: "Schreibe eine Funktion <code>add</code>, die 2 Zahlen addiert.",
 
   beforeTests: function() {
     if (typeof add !== "undefined") {
