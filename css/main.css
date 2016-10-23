@@ -1,7 +1,6 @@
 /*
   gruen: #2bae41 
- 
- 
+  rot: #e30000 / fc2929 / db3026
 */
 
 html, body {
@@ -11,6 +10,8 @@ html, body {
 }
 
 button {
+  padding-left: 0;
+  padding-right: 0;
   width: 6em;
   font-size: 1em;
   border: 1px solid black;
@@ -20,7 +21,7 @@ button {
 }
 
 code {
-  color: blue;
+  color: #0033ff;
 }
 
 nav {
@@ -74,7 +75,7 @@ nav a {
 #lesson {
   margin: 8em auto 3em auto;
   max-width: 44em;
-  padding: 0 1em 0 1em; 
+  padding: 0 0.5em 0 0.5em; 
 }
 
 #lesson h1 {
@@ -89,11 +90,13 @@ nav a {
   line-height: 1.6em;
 }
 
+#prev-button {
+  float: right;
+  margin-right: 0.3em;
+}
+
 #next-button {
   float: right;
-  visibility: hidden;
-  color: green;
-  border-color: #2bae41;
 }
 
 #test-button.red {
@@ -124,8 +127,8 @@ nav a {
 }
 
 #messages p.red {
-  border-color: red;
-  color: red;
+  border-color: #e30000;
+  color: #e30000;
 }
 
 #messages p.green {

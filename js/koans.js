@@ -19,9 +19,24 @@ jshero.koans = (function() {
     return koans[index];
   };
 
+  var hasNext = function() {
+    return index + 1 < koans.length;
+  };
+
   var nextId = function() {
-    if (index + 1 < koans.length) {
+    if (hasNext()) {
       return koans[index + 1].id;
+    }
+    return null;
+  };
+  
+  var hasPrev = function() {
+    return index > 0;
+  };
+
+  var prevId = function() {
+    if (hasPrev()) {
+      return koans[index - 1].id;
     }
     return null;
   };
@@ -38,6 +53,9 @@ jshero.koans = (function() {
     add: add,
     next: next,
     nextId: nextId,
+    hasNext: hasNext,
+    prevId: prevId,
+    hasPrev: hasPrev,
     getKoan: getKoan,
     setIndexById: setIndexById
   };

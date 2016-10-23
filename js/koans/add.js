@@ -15,22 +15,55 @@ jshero.koans.add({
   },
 
   tests: [
-    "'add' ist eine Funktion.",
+
     function() {
-      return typeof add === 'function';
+      var ok = typeof add === 'function';
+      var msg;
+      if (ok) {
+        msg = "<code>add</code> ist eine Funktion.";
+      } else {
+        msg = "<code>add</code> ist keine Funktion.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     },
-    "'add' hat zwei Parameter.",
+
     function() {
-      return add.length === 2;
+      var ok = add.length === 2;
+      var msg;
+      if (ok) {
+        msg = "<code>add</code> hat zwei Parameter.";
+      } else {
+        msg = "<code>add</code> hat nicht zwei Parameter.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     },
-    "add(0, 0) = 0",
+    
     function() {
-      return add(0, 0) === 0;
-    },
-    "add(2, 5) = 7",
-    function() {
-      return add(2, 5) === 7;
+      var ok, msg;
+      try {
+        var result = add(0, 0);
+        ok = result === 0;
+        if (ok) {
+          msg = '<code>add(0,0)</code> ergibt <code>0</code>.';
+        } else {
+          msg = '<code>add(0,0)</code> ergibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+        }
+      } catch(e) {
+        ok = false;
+        msg = "Fehler beim Aufruf von <code>add(0, 0)</code>.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     }
-  ],
+
+  ]
 
 });

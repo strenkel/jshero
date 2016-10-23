@@ -6,14 +6,25 @@ if (typeof jshero === "undefined") {
 
   var testButton = document.getElementById("test-button");
   var nextButton = document.getElementById("next-button");
+  var prevButton = document.getElementById("prev-button");
 
   var write = function() {
     var koan = getKoanFromUrl() || getKoanFromStorage();
+    setKoanToStorage(koan);
     koans.setIndexById(koan);
     document.getElementById("koans-title").innerHTML = koans.getKoan().title;
     document.getElementById("koans-lesson").innerHTML = koans.getKoan().lesson;
     document.getElementById("koans-task").innerHTML = koans.getKoan().task;
-    nextButton.href = "main.html?koan=" + koans.nextId(); 
+    if (koans.hasPrev()) {
+      prevButton.href = "main.html?koan=" + koans.prevId();
+    } else {
+      prevButton.href = "index.html";
+    }
+    if (koans.hasNext()) {
+      nextButton.href = "main.html?koan=" + koans.nextId();
+    } else {
+      nextButton.href = "success.html";
+    }
   };
 
   var getKoanFromUrl = function() {
@@ -37,47 +48,41 @@ if (typeof jshero === "undefined") {
     koans.getKoan().beforeTests();
     var okAll = false;
     var ok = readCode();
+    var result;
     if (ok) {
       okAll = true;
       var tests = koans.getKoan().tests;
-      for (var i = 0, l = tests.length; i < l; i = i + 2) {
+      for (var i = 0, l = tests.length; i < l; i++) {
         try {
-          ok = tests[i + 1]();
+          result = tests[i]();
         } catch (e) {
-          ok = false;
+          console.log("Unbekannter Testfehler!", e)
+          result = {
+            ok: false,
+            msg: "Unbekannter Testfehler!"
+          };
         }
-        msg.log(tests[i], ok);
-        if(!ok) {
+        msg.log(result.msg, result.ok);
+        if(!result.ok) {
           okAll = false;
           break;
         }
       };
     }
-    handleButtons(okAll);
+    handleTestButton(okAll);
     scrollToButtom();
-    handleStorage(okAll);
-  };
-
-  var handleStorage = function(okAll) {
-    if (okAll) {
-      setKoanToStorage(koans.nextId());
-    }
   };
 
   var scrollToButtom = function() {
     window.scrollTo(0,document.body.scrollHeight);
   };
 
-  var handleButtons = function(okAll) {
-    var visibility;
+  var handleTestButton = function(okAll) {
     if (okAll) {
-      visibility = "visible";
       testButton.className = "green";
     } else {
-      visibility = "hidden";
       testButton.className = "red";
     }
-    nextButton.style.visibility = visibility;
   };
 
   var clear = function() {

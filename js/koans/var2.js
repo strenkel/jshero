@@ -4,12 +4,12 @@ jshero.koans.add({
 
   title: "Mehrere Variablen",
 
-  lesson: "Möchte man mehrere Variable deklarieren und initialisieren, so kann man das in zwei Programmzeilen tun:" +
-    "<pre><code>var stadt = 'Prag';</code><br><code>var land = 'Tschechien';</code></pre>" +
-    "Jede Anweisung wird dabei mit einem Semikolon (<code>;</code>) abgeschlossen.",
+  lesson: 'Möchte man mehrere Variable deklarieren und initialisieren, so kann man das in zwei Programmzeilen tun:' +
+    '<pre><code>var stadt = "Prag";<br>var land = "Tschechien";</code></pre>' +
+    'Jede Anweisung wird dabei mit einem Semikolon (<code>;</code>) abgeschlossen.',
         
-  task: "Deklariere eine Variable <code>blume</code> und weise ihr den Wert <code>'Rose'</code> zu. " +
-    "Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>'Käfer'</code> zu.",
+  task: 'Deklariere eine Variable <code>blume</code> und weise ihr den Wert <code>"Rose"</code> zu. ' +
+    'Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>"Käfer"</code> zu.',
 
   beforeTests: function() {
     if (typeof blume !== "undefined") {
@@ -21,22 +21,65 @@ jshero.koans.add({
   },
 
   tests: [
-    "'blume' hat einen Wert.",
+  
     function() {
-      return typeof blume !== 'undefined';
+      
+      var ok = typeof blume !== 'undefined';
+      var msg;
+      if (ok) {
+        msg = "<code>blume</code> hat einen Wert.";
+      } else {
+        msg = "<code>blume</code> hat keinen Wert.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     },
-    "'blume' hat den Wert 'Rose'.",
+    
     function() {
-      return blume === "Rose";
+      var ok = blume === "Rose";
+      var msg;
+      if (ok) {
+        msg = '<code>blume</code> hat den Wert <code>"Rose"</code>.';
+      } else {
+        msg = '<code>blume</code> hat nicht den Wert <code>"Rose"</code>, sondern den Wert <code>' + JSON.stringify(blume) + '</code>.';
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     },
-    "'tier' hat einen Wert.",
+    
     function() {
-      return typeof tier !== 'undefined';
+      
+      var ok = typeof tier !== 'undefined';
+      var msg;
+      if (ok) {
+        msg = "<code>tier</code> hat einen Wert.";
+      } else {
+        msg = "<code>tier</code> hat keinen Wert.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     },
-    "'tier' hat den Wert 'Käfer'.",
+    
     function() {
-      return tier === "Käfer";
+      var ok = tier === "Käfer";
+      var msg;
+      if (ok) {
+        msg = '<code>tier</code> hat den Wert <code>"Käfer"</code>.';
+      } else {
+        msg = '<code>tier</code> hat nicht den Wert <code>"Käfer"</code>, sondern den Wert <code>' + JSON.stringify(tier) + '</code>.';
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
     }
-  ],
+
+  ]
 
 });
