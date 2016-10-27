@@ -48,6 +48,10 @@ jshero.koans = (function() {
       }
     });
   };
+  
+  var getIndex = function() {
+    return index;
+  }
 
   return {
     add: add,
@@ -57,7 +61,8 @@ jshero.koans = (function() {
     prevId: prevId,
     hasPrev: hasPrev,
     getKoan: getKoan,
-    setIndexById: setIndexById
+    setIndexById: setIndexById,
+    getIndex: getIndex
   };
 
 })();

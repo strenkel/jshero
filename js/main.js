@@ -2,19 +2,25 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-(function(msg, koans) {
+(function(msg, koans, storage) {
 
   var testButton = document.getElementById("test-button");
   var nextButton = document.getElementById("next-button");
   var prevButton = document.getElementById("prev-button");
 
   var write = function() {
-    var koan = getKoanFromUrl() || getKoanFromStorage();
-    setKoanToStorage(koan);
+    var koan = getKoanFromUrl() || storage.getActualKoan();
+    storage.setActualKoan(koan);
     koans.setIndexById(koan);
-    document.getElementById("koans-title").innerHTML = koans.getKoan().title;
+    document.getElementById("koans-title").innerHTML = (koans.getIndex() + 1) + ". " + koans.getKoan().title;
     document.getElementById("koans-lesson").innerHTML = koans.getKoan().lesson;
     document.getElementById("koans-task").innerHTML = koans.getKoan().task;
+    
+    var solution = storage.getSolution(koans.getKoan().id);
+    if (solution) {
+      setCode(solution);
+    }
+    
     if (koans.hasPrev()) {
       prevButton.href = "main.html?koan=" + koans.prevId();
     } else {
@@ -33,14 +39,6 @@ if (typeof jshero === "undefined") {
       return parts[1];
     }
     return null;
-  };
-
-  var getKoanFromStorage = function() {
-    return localStorage.getItem("lastKoanId");
-  };
-  
-  var setKoanToStorage = function(koan) {
-    localStorage.setItem("lastKoanId", koan);
   };
 
   var testCode = function() {
@@ -71,6 +69,10 @@ if (typeof jshero === "undefined") {
     }
     handleTestButton(okAll);
     scrollToButtom();
+    if (okAll) {
+      var code = getCode();
+      storage.setSolution(koans.getKoan().id, code);
+    }
   };
 
   var scrollToButtom = function() {
@@ -90,8 +92,7 @@ if (typeof jshero === "undefined") {
   };
 
   var readCode = function() {
-    var code = document.getElementById('code-area').value;
-    code = code.trim();
+    var code = getCode();
     if (code.length === 0) {
       msg.log("Schreibe deinen Code in das Eingabefeld.", false);
       return false;
@@ -108,8 +109,17 @@ if (typeof jshero === "undefined") {
     }
   };
 
+  var getCode = function() {
+    var code = document.getElementById('code-area').value;
+    return code.trim();
+  };
+  
+  var setCode = function(code) {
+    document.getElementById('code-area').value = code;
+  };
+
   testButton.onclick = testCode;
   window.onload = write;
 
-})(jshero.message, jshero.koans);
+})(jshero.message, jshero.koans, jshero.storage);
 

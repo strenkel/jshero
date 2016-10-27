@@ -11,7 +11,7 @@ new compressor.minify({
     'string.js',
     'add.js'
   ],
-  fileOut: '../js/koans/minify/koans.js',
+  fileOut: '../js/koans-min/koans.js',
   callback: function(err, min){
     if (err) {
       console.log(err);

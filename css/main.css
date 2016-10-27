@@ -59,17 +59,31 @@ nav a {
 }
 
 #title {
-  display: inline-block;
   vertical-align: middle;
-  margin-left: 10%;
+  margin-left: 5%;
+  font-size: 1.25em;
 }
 
 #menu {
-  margin-right: 3%;
+  cursor: pointer;
+}
+
+#header .control {
+  color: white;
   float: right;
   font-size: 1.5em;
-  padding: 0 1em 0 1em;
-  cursor: pointer;
+  padding: 0 0.6em;
+}
+
+#header > :first-child {
+  margin-right: 5%;
+}
+
+#index #prev-button,
+#index #next-button,
+#info #prev-button,
+#info #next-button {
+  visibility: hidden;
 }
 
 #lesson {
@@ -88,15 +102,6 @@ nav a {
 
 #lesson p {
   line-height: 1.6em;
-}
-
-#prev-button {
-  float: right;
-  margin-right: 0.3em;
-}
-
-#next-button {
-  float: right;
 }
 
 #test-button.red {

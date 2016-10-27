@@ -6,8 +6,12 @@ jshero.koans.add({
 
   lesson: 'Nun möchten wir Funktionen mit Parameter kennen lernen. Mit <pre><code>var gebe = function(wert) {<br>  return wert;<br>}</code></pre>' +
     'definieren wir eine Funktion, die den übergebenen Parameter einfach wieder zurückgibt. ' +
-    'Der Paramter muss eine Variable sein und steht in der runden Klammer. ' +
-    '<code>gebe("Schokolade")</code> liefert den Wert <code>"Schokolade"</code>.',
+    'Der Paramter ist eine Variable und steht in der runden Klammer. ' +
+    'Mit <pre><code>var meinWert = "Birne";' +
+    '<br>var deinWert = gebe(meinWert);</code></pre>' +
+    'initialisieren wir die Variable <code>meinWert</code> mit <code>"Birne"</code> und übergeben anschließend diese Variable der Funktion <code>gebe</code>. ' +
+    'Die Rückgabe der Funktion wird der Variablen <code>deinWert</code> zugewiesen. <code>deinWert</code> hat ' +
+    'dann auch den Wert <code>"Birne"</code>.',
         
   task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
 
