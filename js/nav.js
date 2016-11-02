@@ -1,4 +1,8 @@
+// Ist fuer das Oeffnen und Schliessen der Navigation (das Menue) zustaendig.
+
 (function() {
+
+  "use strict";
 
   var nav = document.getElementById("nav");
   nav.style.display = "none";

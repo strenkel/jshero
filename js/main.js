@@ -1,24 +1,22 @@
-if (typeof jshero === "undefined") {
-  var jshero = {};
-}
-
-(function(msg, koans, storage) {
+(function(msg, koans, header) {
 
   var testButton = document.getElementById("test-button");
   var nextButton = document.getElementById("next-button");
   var prevButton = document.getElementById("prev-button");
 
   var write = function() {
-    var koan = getKoanFromUrl() || storage.getActualKoan();
-    storage.setActualKoan(koan);
-    koans.setIndexById(koan);
-    document.getElementById("koans-title").innerHTML = (koans.getIndex() + 1) + ". " + koans.getKoan().title;
-    document.getElementById("koans-lesson").innerHTML = koans.getKoan().lesson;
-    document.getElementById("koans-task").innerHTML = koans.getKoan().task;
+    koans.setIndexByUrl();
+    var koan = koans.getKoan();
+    document.getElementById("koans-title").innerHTML = (koans.getIndex() + 1) + ". " + koan.title;
+    document.getElementById("koans-lesson").innerHTML = koan.lesson;
+    document.getElementById("koans-task").innerHTML = koan.task;
     
-    var solution = storage.getSolution(koans.getKoan().id);
+    var solution = koan.getSolution();
     if (solution) {
       setCode(solution);
+      header.toGreen();
+    } else {
+      header.toRed();
     }
     
     if (koans.hasPrev()) {
@@ -33,23 +31,16 @@ if (typeof jshero === "undefined") {
     }
   };
 
-  var getKoanFromUrl = function() {
-    var parts = window.location.search.split("=");
-    if (parts.length === 2) {
-      return parts[1];
-    }
-    return null;
-  };
-
   var testCode = function() {
     clear();
-    koans.getKoan().beforeTests();
+    var koan = koans.getKoan();
+    koan.beforeTests();
     var okAll = false;
     var ok = readCode();
     var result;
     if (ok) {
       okAll = true;
-      var tests = koans.getKoan().tests;
+      var tests = koan.tests;
       for (var i = 0, l = tests.length; i < l; i++) {
         try {
           result = tests[i]();
@@ -71,7 +62,10 @@ if (typeof jshero === "undefined") {
     scrollToButtom();
     if (okAll) {
       var code = getCode();
-      storage.setSolution(koans.getKoan().id, code);
+      koan.setSolution(code);
+      header.toGreen();
+    } else {
+      header.toRed();
     }
   };
 
@@ -121,5 +115,5 @@ if (typeof jshero === "undefined") {
   testButton.onclick = testCode;
   window.onload = write;
 
-})(jshero.message, jshero.koans, jshero.storage);
+})(jshero.message, jshero.koans, jshero.header);
 

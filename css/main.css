@@ -58,6 +58,14 @@ nav a {
   top: 0;
 }
 
+#hedaer.green {
+  background-color: #2bae41;
+}
+
+#header.red {
+  background-color: #e30000;
+}
+
 #title {
   vertical-align: middle;
   margin-left: 5%;
@@ -77,13 +85,6 @@ nav a {
 
 #header > :first-child {
   margin-right: 5%;
-}
-
-#index #prev-button,
-#index #next-button,
-#info #prev-button,
-#info #next-button {
-  visibility: hidden;
 }
 
 #lesson {
@@ -148,18 +149,19 @@ nav a {
   padding: 0.3em 2.3em;
 }
 
-#success {
-  color: green;
-  margin-left: 2em;
-  display: none;
-}
-
-#fail {
-  color: red;
-  margin-left: 2em;
-  display: none;
-}
-
 #start-hero {
   margin-top: 2em;
+}
+
+#success .green {
+  color: green;
+}
+
+#success .red {
+  color: #e30000;
+}
+
+#success #koans a{
+  display: block;
+  margin: 0.5em 0;
 }

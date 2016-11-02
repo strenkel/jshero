@@ -12,14 +12,12 @@ jshero.storage = (function() {
     localStorage.setItem("actualKoanId", koan);
   };
   
-  var setSolution = function(koan, text) {
-    console.log("xxx", koan, text);
-    localStorage.setItem("solution_" + koan, text);
+  var setSolution = function(koan, solution) {
+    localStorage.setItem("solution_" + koan.id, solution);
   };
   
   var getSolution = function(koan) {
-    console.log("yyy", koan, localStorage.getItem("solution_" + koan));
-    return localStorage.getItem("solution_" + koan);
+    return localStorage.getItem("solution_" + koan.id);
   };
   
   return {
