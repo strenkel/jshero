@@ -9,6 +9,8 @@ new compressor.minify({
     'function.js',
     'parameter.js',
     'string.js',
+    'stringlength.js',
+    'stringupper.js,'
     'add.js'
   ],
   fileOut: '../js/koans-min/koans.js',
