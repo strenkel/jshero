@@ -6,16 +6,19 @@ jshero.koans.add({
 
   lesson: 'Strings besitzen die Eigenschaft <code>length</code>. Diese Eigenschaft liefert die Anzahl der Zeichen eines Strings. ' +
     'Dazu muss man dem String  oder der Variablen, die den String enthält, <code>.length</code> anhängen:' +
-    '<pre><code>var laenge1 = "Franz".length;<br>var stadt = "Prag";<br>var laenge2 = stadt.length;</code/></pre>' +
-    '<code>laenge1</code> erhält den Wert <code>5</code> und <code>laenge2</code> den Wert <code>4</code>.<br>' +
-    'Der leere String <code>""</code> hat die Länge <code>0</code>.',
+    '<pre><code>var anzahl = "Franz".length;</code/></pre>' +
+    '<code>"Franz"</code> hat 5 Zeichen. Also hat <code>anzahl</code> jetzt den Wert <code>5</code>.' +
+    '<pre><code>var stadt = "Prag";<br>anzahl = stadt.length;</code/></pre>' +
+    '<code>"Prag"</code> hat 4 Zeichen. <code>anzahl</code> hat jetzt den Wert <code>4</code>.' +
+    '<pre><code>anzahl = "".length</code/></pre>' + 
+    'Der Leerstring besitzt keine Zeichen. Der Wert von <code>anzahl</code> ist jetzt <code>0</code>.',
 
   task: 'Schreibe eine Funktion <code>laenge</code>, die bei Übergabe eines Strings die Anzahl der Zeichen dieses Strings zurückgibt. ' +
     '<code>laenge("Franz")</code> sollte <code>5</code> zurückgeben.',
 
   beforeTests: function() {
-    if (typeof echo !== "undefined") {
-      echo = undefined;
+    if (typeof laenge !== "undefined") {
+      laenge = undefined;
     }
   },
 

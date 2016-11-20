@@ -1,19 +1,22 @@
 var compressor = require('node-minify');
 
-new compressor.minify({
-  type: 'gcc',
+compressor.minify({
+  compressor: 'gcc',
   publicFolder: '../js/koans/',
-  fileIn: [
+  input: [
     'var.js',
     'var2.js',
     'function.js',
     'parameter.js',
     'string.js',
     'stringlength.js',
-    'stringupper.js,'
-    'add.js'
+    'stringupper.js',
+    'stringcharat.js',
+    'number.js',
+    'mean.js'
+    
   ],
-  fileOut: '../js/koans-min/koans.js',
+  output: '../js/koans-min/koans.js',
   callback: function(err, min){
     if (err) {
       console.log(err);

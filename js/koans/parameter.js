@@ -36,6 +36,21 @@ jshero.koans.add({
     },
  
     function() {
+      var result = echo.length;
+      var ok = result === 1;
+      var msg;
+      if (ok) {
+        msg = '<code>echo</code> hat genau einen Parameter.';
+      } else {
+        msg = '<code>echo</code> hat nicht einen, sondern ' + result + ' Parameter.';
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    },
+ 
+    function() {
       var ok, msg;
       try {
         var result = echo('Hallo Welt!');
@@ -48,6 +63,7 @@ jshero.koans.add({
       } catch(e) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>echo("Hallo Welt!")</code>.';
+        console.log(msg, e);
       }
       return {
         ok: ok,
@@ -68,6 +84,7 @@ jshero.koans.add({
       } catch(e) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>echo("Franz")</code>.';
+        console.log(msg, e);
       }
       return {
         ok: ok,

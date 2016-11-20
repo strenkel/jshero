@@ -2,6 +2,12 @@
   gruen: #2bae41 
   rot: #e30000 / fc2929 / db3026
 */
+#lesson pre {
+  background-color: #f5f5f5;
+  padding: 1em 0.7em;
+  margin: 1em 0em;
+}
+
 
 html, body {
   font-size: 18px;
@@ -120,6 +126,7 @@ nav a {
   margin-bottom: 1em;
   font-size: 1em;
   margin-top: 2em;
+  font-family: monospace;
 }
 
 #messages {
