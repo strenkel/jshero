@@ -13,7 +13,8 @@ compressor.minify({
     'stringupper.js',
     'stringcharat.js',
     'number.js',
-    'mean.js'
+    'mean.js',
+    'math.js'
     
   ],
   output: '../js/koans-min/koans.js',
