@@ -86,7 +86,7 @@ jshero.koans.add({
         ok: ok,
         msg: msg
       };
-    },
+    }
 
   ]
 

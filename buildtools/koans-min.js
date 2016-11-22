@@ -14,7 +14,8 @@ compressor.minify({
     'stringcharat.js',
     'number.js',
     'mean.js',
-    'math.js'
+    'math.js',
+    'bool.js'
     
   ],
   output: '../js/koans-min/koans.js',

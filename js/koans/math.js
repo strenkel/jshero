@@ -17,20 +17,20 @@ jshero.koans.add({
     'Da 3&sup2; + 4&sup2; = 5&sup2; gilt, sollte <code>hypotenuse(3, 4)</code> den Wert <code>5</code> liefern.',
 
   beforeTests: function() {
-    if (typeof mittelwert !== "undefined") {
-      mittelwert = undefined;
+    if (typeof hypotenuse !== "undefined") {
+      hypotenuse = undefined;
     }
   },
 
   tests: [
     
     function() {
-      var ok = typeof mittelwert === 'function';
+      var ok = typeof hypotenuse === 'function';
       var msg;
       if (ok) {
-        msg = "<code>mittelwert</code> ist eine Funktion.";
+        msg = "<code>hypotenuse</code> ist eine Funktion.";
       } else {
-        msg = "<code>mittelwert</code> ist keine Funktion.";
+        msg = "<code>hypotenuse</code> ist keine Funktion.";
       }
       return {
         ok: ok,
@@ -39,12 +39,12 @@ jshero.koans.add({
     },
 
     function() {
-      var ok = mittelwert.length === 2;
+      var ok = hypotenuse.length === 2;
       var msg;
       if (ok) {
-        msg = "<code>mittelwert</code> hat zwei Parameter.";
+        msg = "<code>hypotenuse</code> hat zwei Parameter.";
       } else {
-        msg = "<code>mittelwert</code> hat nicht 2, sondern " + mittelwert.length + " Parameter.";
+        msg = "<code>hypotenuse</code> hat nicht 2, sondern " + hypotenuse.length + " Parameter.";
       }
       return {
         ok: ok,
@@ -55,16 +55,16 @@ jshero.koans.add({
     function() {
       var ok, msg;
       try {
-        var result = mittelwert(1, 2);
-        ok = result === 1.5;
+        var result = hypotenuse(3, 4);
+        ok = result === 5;
         if (ok) {
-          msg = '<code>mittelwert(1, 2)</code> ergibt <code>1.5</code>.';
+          msg = '<code>hypotenuse(3, 4)</code> ergibt <code>5</code>.';
         } else {
-          msg = '<code>mittelwert(1, 2)</code> ergibt nicht <code>1.5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>hypotenuse(3, 4)</code> ergibt nicht <code>5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
       } catch(e) {
         ok = false;
-        msg = "Fehler beim Aufruf von <code>mittelwert(1, 2)</code>.";
+        msg = "Fehler beim Aufruf von <code>hypotenuse(3, 4)</code>.";
       }
       return {
         ok: ok,
@@ -75,22 +75,22 @@ jshero.koans.add({
     function() {
       var ok, msg;
       try {
-        var result = mittelwert(0, 0);
-        ok = result === 0;
+        var result = hypotenuse(5, 12);
+        ok = result === 13;
         if (ok) {
-          msg = '<code>mittelwert(0, 0)</code> ergibt <code>0</code>.';
+          msg = '<code>hypotenuse(5, 12)</code> ergibt <code>13</code>.';
         } else {
-          msg = '<code>mittelwert(0, 0)</code> ergibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>hypotenuse(5, 12)</code> ergibt nicht <code>13</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
       } catch(e) {
         ok = false;
-        msg = "Fehler beim Aufruf von <code>mittelwert(0, 0)</code>.";
+        msg = "Fehler beim Aufruf von <code>hypotenuse(5, 12)</code>.";
       }
       return {
         ok: ok,
         msg: msg
       };
-    },
+    }
 
   ]
 
