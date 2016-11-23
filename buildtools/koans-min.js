@@ -15,6 +15,7 @@ compressor.minify({
     'number.js',
     'mean.js',
     'math.js',
+    'pi.js',
     'bool.js'
     
   ],
