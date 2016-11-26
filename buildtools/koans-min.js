@@ -16,13 +16,14 @@ compressor.minify({
     'mean.js',
     'math.js',
     'pi.js',
-    'bool.js'
-    
+    'bool.js',
+    'equals.js',
+    'equals2.js'    
   ],
   output: '../js/koans-min/koans.js',
   callback: function(err, min){
     if (err) {
-      console.log(err);
+      console.err(err);
     }
     //console.log(min); 
   }

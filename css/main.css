@@ -34,7 +34,7 @@ nav {
   top: 3em;
   border-bottom: 1px solid white;
   text-align: center;
-  position: fixed;
+  position: absolute;
   width: 100%;
   background-color: #bbb;
   display: none;
@@ -59,7 +59,7 @@ nav a {
   color: white;
   height: 3em;
   line-height: 3em;
-  position: fixed;
+  position: absolute;
   width: 100%;
   top: 0;
 }
