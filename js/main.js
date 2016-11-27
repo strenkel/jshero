@@ -24,10 +24,14 @@
     } else {
       prevButton.href = "index.html";
     }
+    nextButton.href = nextPageUrl();
+  };
+
+  var nextPageUrl = function() {
     if (koans.hasNext()) {
-      nextButton.href = "main.html?koan=" + koans.nextId();
+      return "main.html?koan=" + koans.nextId();
     } else {
-      nextButton.href = "success.html";
+      return "success.html";
     }
   };
 
@@ -59,14 +63,17 @@
       };
     }
     handleTestButton(okAll);
-    scrollToButtom();
     if (okAll) {
       var code = getCode();
       koan.setSolution(code);
       header.toGreen();
+      var message = "<a href='" + nextPageUrl() + "'>Alle Tests bestanden! Gehe zur nächsten Übung!</a>";
+      msg.log(message, true);
     } else {
       header.toRed();
+      msg.log("Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!", false);
     }
+    scrollToButtom();
   };
 
   var scrollToButtom = function() {

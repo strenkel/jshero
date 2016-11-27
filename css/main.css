@@ -149,6 +149,12 @@ nav a {
   color: green;
 }
 
+#messages p.green a {
+  width: 100%;
+  display: block;
+  color: green;
+}
+
 .link-button {
   vertical-align: top;
   border: 1px solid black;
