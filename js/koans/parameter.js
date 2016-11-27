@@ -4,13 +4,15 @@ jshero.koans.add({
 
   title: "Parameter",
 
-  lesson: 'Nun möchten wir Funktionen mit Parametern kennen lernen. Mit <pre><code>var gebe = function(wert) {<br>  return wert;<br>}</code></pre>' +
-    'definieren wir eine Funktion, die den übergebenen Parameter einfach wieder zurückgibt. ' +
-    'Der Paramter ist eine Variable und steht in der runden Klammer. ' +
-    'Mit <pre><code>var wert = gebe("Apfel");</code></pre>' +
-    'rufen wir die Funktion <code>gebe</code> mit der Wert <code>"Apfel"</code>  auf. ' +
-    'Die Rückgabe der Funktion wird der Variablen <code>wert</code> zugewiesen. <code>wert</code> hat ' +
-    'dann den Wert <code>"Apfel"</code>.',
+  lesson: 'Nun möchten wir Funktionen mit Parametern kennen lernen. Mit <pre><code>var gebe = function(eingabe) {<br>  return eingabe;<br>}</code></pre>' +
+    'definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt. ' +
+    'Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu ihrer Deklaration. ' +
+    'Mit <pre><code>var ergebnis = gebe("Apfel");</code></pre>' +
+    'rufen wir die Funktion <code>gebe</code> mit der Wert <code>"Apfel"</code> auf. Jetzt wird unsere zuvor definierte Funktion <code>gebe</code> ' +
+    'ausgeführt. Dabei wird zunächst der Wert <code>"Apfel"</code> dem Parameter <code>eingabe</code> zugewiesen. <code>eingabe</code> hat jetzt den ' +
+    'Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion <code>gebe</code> wird nun die Variable <code>eingabe</code> mit der ' +
+    '<code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
+    'dann ebenfalls den Wert <code>"Apfel"</code>.',
         
   task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
 

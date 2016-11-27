@@ -8,7 +8,8 @@ jshero.koans.add({
     'Eine Funktion kann Parameter entgegennehmen und eine Funktion kann einen Wert zurückgeben. ' +
     'Funktionen werden mit dem Schlüsselwort <code>function</code> definiert. Darauf folgen in runden Klammern eingeschlossen die Parameter und ' +
     'anschließend, eingeschlossen in geschweiften Klammern, die Anweisungen. Mit dem Schlüsselwort <code>return</code> ' +
-    'kann ein Wert zurückgegeben werden. Funktionen kann man Variablen zuodnen. Die Funktion trägt dann den Namen der Variablen. Mit ' +
+    'kann ein Wert zurückgegeben werden. Gleichzeitig beendet <code>return</code> die Funktion. Code nach einer <code>return</code>-Anweisung ' +
+    'wird nicht mehr ausgeführt. Funktionen kann man Variablen zuodnen. Die Funktion trägt dann den Namen der Variablen. Mit ' +
     '<pre><code>var farbe = function() {<br>  return "grün";<br>};</code></pre> definieren wir eine Funktion <code>farbe</code>, ' +
     'die <code>"grün"</code> zurückgibt. Die Funktion nimmt keine Paramter entgegen (die runde Klammer ist leer) und sie enthält genau ' +
     'eine Anweisung, die Rückgabe.<br> Der Aufruf einer Funktion geschiet über ihren Namen. Mit <pre><code>var ergebnis = farbe();</code></pre>' +
