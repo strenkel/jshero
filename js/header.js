@@ -5,8 +5,6 @@ if (typeof jshero === "undefined") {
 // Ist fuer das Rot/Gruen-Markieren der Seite zustaendig. 
 jshero.header = (function() {
 
-  "use strict";
-
   var headerElm = document.getElementById("header");
 
   var toGreen = function() {

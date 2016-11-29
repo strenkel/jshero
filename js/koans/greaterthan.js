@@ -1,19 +1,10 @@
 jshero.koans.add({
 
-  id: 'equals',
+  id: 'greaterthan',
 
-  title: 'Strikte Gleichheit',
+  title: 'Zahlen vergleichen',
 
-  lesson: 'Zwei Werte kann man auf strikte Gleichheit überprüfen. Das Ergebnis eines solchen Vergleichs ist entweder <code>true</code>, ' +
-    'die beiden Werte sind gleich, oder <code>false</code>, die beiden Werte sind ungleich. Der Operator für strikte Gleichheit ist ' +
-    '<code>===</code>.' + 
-    '<pre><code>var sprache = "JavaScript";<br>var x = 10;<br>var v1 = sprache === "Java";<br>var v2 = x === 10;<br>' +
-    'var v3 = x === "10";</code></pre><code>v1</code> bekommt das Ergebnis des Vergleichs der Variablen <code>sprache</code> ' +
-    'mit dem Wert <code>"Java"</code> zugewiesen. Da <code>sprache</code> zuvor den Wert <code>JavaScript</code> erhalten hat und ' +
-    'diese beiden Werte verschieden sind, hat <code>v1</code> den Wert <code>false</code>. <code>v2</code> ist <code>true</code>, ' +
-    'da der Wert von <code>x</code> gleich <code>10</code> ist. Bei der strikten Gleichheit kommt es auch darauf an, dass die ' +
-    'Datentypen der beiden verglichenen Werte gleich sind. <code>v3</code> ist <code>false</code>, da hier unterschiedliche Typen ' + 
-    'verglichen werden. Auf der linken Seite des Vergleichs steht eine Zahl, auf der rechten Seite ein String.',
+  lesson: 'Zahlen kann man auch au',
         
   task: 'Schreibe eine Funktion <code>gleich</code>, die zwei Werte auf strikte Gleichheit überprüft. <code>gleich(1, 1)</code> soll ' +
     '<code>true</code> zurückgeben, <code>gleich(1, 2)</code> soll <code>false</code> ergeben.',

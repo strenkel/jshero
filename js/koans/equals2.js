@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'equals2',
 
-  title: 'Strikte Gleichheit (2)',
+  title: 'Drei gleiche Werte',
 
   lesson: 'Die folgende Aufgabe soll das Zusammenspiel von strikter Gleichheit und booleschen Operatoren vertiefen.',
         

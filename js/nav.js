@@ -2,8 +2,6 @@
 
 (function() {
 
-  "use strict";
-
   var nav = document.getElementById("nav");
   nav.style.display = "none";
   

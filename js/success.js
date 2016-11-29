@@ -1,6 +1,4 @@
-(function(koans, header) {
-  
-  "use strict";
+(function(koans) {
   
   var rootElm = document.getElementById("koans");
   
@@ -24,4 +22,4 @@
   
   window.onload = write;
   
-})(jshero.koans, jshero.header);
+})(jshero.koans);
