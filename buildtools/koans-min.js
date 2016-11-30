@@ -20,6 +20,7 @@ compressor.minify({
     'equals.js',
     'equals2.js',
     'notequals.js',
+    'greaterthan.js',
     'if.js'   
   ],
   output: '../js/koans-min/koans.js',
