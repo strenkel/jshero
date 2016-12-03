@@ -3,6 +3,7 @@
   var testButton = document.getElementById("test-button");
   var nextButton = document.getElementById("next-button");
   var prevButton = document.getElementById("prev-button");
+  var codeArea = document.getElementById('code-area');
 
   var write = function() {
     koans.setIndexByUrl();
@@ -25,6 +26,7 @@
       prevButton.href = "index.html";
     }
     nextButton.href = nextPageUrl();
+    adjustCodeAreaHeight();
   };
 
   var nextPageUrl = function() {
@@ -36,12 +38,14 @@
   };
 
   var testCode = function() {
+    
     clear();
     var koan = koans.getKoan();
     koan.beforeTests();
     var okAll = false;
     var ok = readCode();
     var result;
+    
     if (ok) {
       okAll = true;
       var tests = koan.tests;
@@ -60,14 +64,15 @@
           okAll = false;
           break;
         }
-      };
+      }
     }
+
     handleTestButton(okAll);
     if (okAll) {
       var code = getCode();
       koan.setSolution(code);
       header.toGreen();
-      var message = "<a href='" + nextPageUrl() + "'>Alle Tests bestanden! Gehe zur nächsten Übung!</a>";
+      var message = "<a href='" + nextPageUrl() + "'>Alle Tests bestanden! Gehe zur nächsten Übung!";
       msg.log(message, true);
     } else {
       header.toRed();
@@ -111,16 +116,24 @@
   };
 
   var getCode = function() {
-    var code = document.getElementById('code-area').value;
+    var code = codeArea.value;
     return code.trim();
   };
   
   var setCode = function(code) {
-    document.getElementById('code-area').value = code;
+    codeArea.value = code;
+  };
+
+  var adjustCodeAreaHeight = function() {
+    while (codeArea.scrollHeight > codeArea.clientHeight) {
+      codeArea.rows = codeArea.rows + 5;
+    }
   };
 
   testButton.onclick = testCode;
+  codeArea.onkeyup = adjustCodeAreaHeight;
   window.onload = write;
+
 
 })(jshero.message, jshero.koans, jshero.header);
 

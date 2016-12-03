@@ -21,7 +21,9 @@ compressor.minify({
     'equals2.js',
     'notequals.js',
     'greaterthan.js',
-    'if.js'   
+    'if.js',
+    'else.js',
+    'elseif.js'   
   ],
   output: '../js/koans-min/koans.js',
   callback: function(err, min){

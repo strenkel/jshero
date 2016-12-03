@@ -61,7 +61,12 @@ jshero.koans = (function(storage) {
   var getKoanIdFromUrl = function() {
     var parts = window.location.search.split("=");
     if (parts.length === 2) {
-      return parts[1];
+      console.log("xxxxx", parts[0])
+      if (parts[0] === "?koan") {      
+        return parts[1];
+      } else if (parts[0] === "?pos" && parts[1] === "last") {
+        return koans[koans.length - 1].id;
+      }
     }
     return null;
   };
