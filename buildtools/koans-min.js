@@ -23,7 +23,10 @@ compressor.minify({
     'greaterthan.js',
     'if.js',
     'else.js',
-    'elseif.js'   
+    'elseif.js',
+    'array.js', 
+    'array2.js',
+    'array3.js'  
   ],
   output: '../js/koans-min/koans.js',
   callback: function(err, min){
