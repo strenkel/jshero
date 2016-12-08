@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'Array-Elemente setzen',
 
-  lesson: 'Ebenso wie man Array-Elemente über einen Index auslesen kann, kann man sie über diesen Index setzen. ' +
+  lesson: 'Ebenso wie man Array-Elemente über einen Index auslesen kann, kann man sie über diesen Index auch setzen. ' +
     'Dabei spielt es keine Rolle, ob das Array vorher gefüllt oder leer war.' +
     '<pre><code>var sprachen = [];<br>' +
     'sprachen[0] = "C";<br>' +

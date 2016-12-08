@@ -4,17 +4,20 @@ jshero.koans.add({
 
   title: 'Array.length',
 
-  lesson: '' +
+  lesson: 'Die Eigenschaft <code>length</code> hatten wird schon bei Strings kennengelernt. Dort gab sie die Anzahl ' +
+    'der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente zurück. ' +
     '<pre><code>var sprachen = [];<br>' +
+    'var l0 = sprachen.length;<br>' +
     'sprachen[0] = "C";<br>' +
+    'var l1 = sprachen.length;<br>' +
     'sprachen[1] = "C++";<br>' +
-    'sprachen[2] = "Java";<br>' +
-    'sprachen[3] = "JavaScript";</code></pre>' +
-    'Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt.',
+    'var l2 = sprachen.length;</code></pre>' +
+    'Das leere Array zu Anfang enthällt keine Elemente. <code>l0</code> ist also <code>0</code>. ' +
+    'Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>. ' +
+    'Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index des Arrays.',
         
-  task: 'Schreibe ein Funktion <code>setFirstElement</code>, die ein Array und eine beliebige Variable entgegennimmt ' +
-    'und die die Variable als erstes Element in das Array schreibt. ' +
-    '<code>setFirstElement([1, 2], 3)</code> sollte <code>[3, 2]</code> zurückgeben.',
+  task: 'Schreibe ein Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element des Arrays zurückgibt. ' +
+    '<code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof setFirstElement !== "undefined") {
@@ -25,12 +28,12 @@ jshero.koans.add({
   tests: [
     
     function() {
-      var ok = typeof setFirstElement === 'function';
+      var ok = typeof getLastElement === 'function';
       var msg;
       if (ok) {
-        msg = '<code>setFirstElement</code> ist eine Funktion.';
+        msg = '<code>getLastElement</code> ist eine Funktion.';
       } else {
-        msg = '<code>setFirstElement</code> ist keine Funktion.';
+        msg = '<code>getLastElement</code> ist keine Funktion.';
       }
       return {
         ok: ok,
@@ -39,12 +42,12 @@ jshero.koans.add({
     },
 
     function() {
-      var ok = setFirstElement.length === 2;
+      var ok = getLastElement.length === 1;
       var msg;
       if (ok) {
-        msg = '<code>setFirstElement</code> hat 2 Parameter.';
+        msg = '<code>getLastElement</code> hat 1 Parameter.';
       } else {
-        msg = '<code>setFirstElement</code> hat nicht 2, sondern ' + getFirstElement.length + ' Parameter.';
+        msg = '<code>getLastElement</code> hat nicht 1, sondern ' + getLastElement.length + ' Parameter.';
       }
       return {
         ok: ok,
@@ -55,16 +58,16 @@ jshero.koans.add({
     function() {
       var ok, msg;
       try {
-        var result = setFirstElement([1, 2], 3);
-        ok = Array.isArray(result) && result.length === 2 && result[0] === 3 && result[1] === 2;
+        var result = getLastElement(["a", "b", "c"]);
+        ok = result === "c";
         if (ok) {
-          msg = '<code>setFirstElement([1, 2], 3)</code> gibt <code>[3, 2]</code> zurück.';
+          msg = '<code>getLastElement(["a", "b", "c"])</code> gibt <code>"c"</code> zurück.';
         } else {
-          msg = '<code>setFirstElement([1, 2], 3)</code> gibt nicht <code>[3, 2]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>getLastElement(["a", "b", "c"])</code> gibt nicht <code>"c"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(e) {
         ok = false;
-        msg = 'Fehler beim Aufruf von <code>setFirstElement([1, 2], 3)</code>.';
+        msg = 'Fehler beim Aufruf von <code>getLastElement(["a", "b", "c"])</code>.';
       }
       return {
         ok: ok,
@@ -75,22 +78,22 @@ jshero.koans.add({
     function() {
       var ok, msg;
       try {
-        var result = setFirstElement([], 1);
-        ok = Array.isArray(result) && result.length === 1 && result[0] === 1;
+        var result = getLastElement([1, 2]);
+        ok = result === 2;
         if (ok) {
-          msg = '<code>setFirstElement([], 1)</code> gibt <code>[1]</code> zurück.';
+          msg = '<code>getLastElement([1, 2])</code> gibt <code>2</code> zurück.';
         } else {
-          msg = '<code>setFirstElement([], 1)</code> gibt nicht <code>[1]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>getLastElement([1, 2])</code> gibt nicht <code>2</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(e) {
         ok = false;
-        msg = 'Fehler beim Aufruf von <code>setFirstElement([], 1)</code>.';
+        msg = 'Fehler beim Aufruf von <code>getLastElement([1, 2])</code>.';
       }
       return {
         ok: ok,
         msg: msg
       };
-    }
+    },
 
   ]
 
