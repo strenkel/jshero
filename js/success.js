@@ -19,7 +19,7 @@
     elm.href = "main.html?koan=" + koan.id;
     rootElm.appendChild(elm);
   };
-  
+
   window.onload = write;
-  
+
 })(jshero.koans);
