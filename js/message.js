@@ -6,9 +6,13 @@ jshero.message = (function() {
 
   var messageRoot = document.getElementById('messages');
 
-  var log = function(message, type) {
+  var log = function(message, type, e) {
     var paragraph = document.createElement('p');
-    paragraph.innerHTML =  message;
+    var errormessage = "";
+    if (e) {
+      errormessage = e + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + "). ";
+    }
+    paragraph.innerHTML = errormessage + message;
     paragraph.className = type ? 'green' : 'red';
     messageRoot.appendChild(paragraph);
   };

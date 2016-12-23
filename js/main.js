@@ -52,14 +52,15 @@
       for (var i = 0, l = tests.length; i < l; i++) {
         try {
           result = tests[i]();
-        } catch (e) {
+        } catch (exc) {
           console.log("Unbekannter Testfehler!", e)
           result = {
             ok: false,
-            msg: "Unbekannter Testfehler!"
+            msg: "Unbekannter Testfehler!",
+            e: exc
           };
         }
-        msg.log(result.msg, result.ok);
+        msg.log(result.msg, result.ok, result.e);
         if(!result.ok) {
           okAll = false;
           break;
@@ -109,8 +110,8 @@
       msg.log("Die Syntax ist korrekt.", true);
       return true;
     } catch(e) {
-      msg.log("Syntax-Fehler!", false);
-      console.log(e);
+      msg.log("", false, e);
+      console.log("Syntax-Fehler.", e);
       return false;
     }
   };

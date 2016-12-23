@@ -44,7 +44,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = toCase('Code');
         ok = result === "code-CODE";
@@ -53,13 +53,15 @@ jshero.koans.add({
         } else {
           msg = '<code>toCase("Code")</code> gibt nicht <code>"code-CODE"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch (exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>toCase("Code")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 

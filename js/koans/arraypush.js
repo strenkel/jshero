@@ -17,8 +17,8 @@ jshero.koans.add({
     'Das Array <code>sprachen</code> wird mit 3 Programmiersprachen angelegt. Nach dem <code>shift</code> enthält <code>sprachen</code> ' +
     'nur noch 2 Elemente, nämlich <code>["Java", "JavaScript"]</code>. Der Wert <code>"C"</code> ist in der Variablen ' +
     '<code>naechsteSprache</code> gelandet.<br>' +
-    'Mit der häufig verwendeten Methode <code>Array.push()</code> fügt man dem Array ein neues Element hinzu.' +
-    'Das neue Element wird dabei an das Ende des Arrays angehängt.' +
+    'Mit der häufig verwendeten Methode <code>Array.push()</code> fügt man dem Array ein neues Element hinzu. ' +
+    'Das neue Element wird als Parameter übergeben und an das Ende des Arrays gehängt.' +
     '<pre><code>var sprachen = [];<br>' +
     'sprachen.push("C");<br>' +
     'sprachen.push("Java");<br>' +
@@ -26,7 +26,7 @@ jshero.koans.add({
     'Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt. Am Ende erhalten wir das Array ' +
     '<code>["C", "Java", "JavaScript"]</code>. Wir hatten gesehen, dass man ein Array auch per Index füllen kann. ' +
     '<code>sprachen[sprachen.length] = "PHP"</code> ist dasselbe wie <code>sprachen.push("PHP")</code>. Doch schon ' +
-    'an der Länge des Codes sieht man, dass die Variante mit <code>push</code> einfacher ist.',
+    'an der Länge des Codes sieht man, dass die Variante mit <code>push</code> eleganter ist.',
         
   task: 'Schreibe ein Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert. Alle Elemente des Arrays sollen um eine ' +
     'Position nach links verschoben werden. Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden. ' +
