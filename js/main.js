@@ -73,7 +73,7 @@
       var code = getCode();
       koan.setSolution(code);
       header.toGreen();
-      var message = "<a href='" + nextPageUrl() + "'>Alle Tests bestanden! Gehe zur nächsten Übung!";
+      var message = "<a href='" + nextPageUrl() + "'>Alle Tests bestanden! Gehe zur nächsten Übung!</a>";
       msg.log(message, true);
     } else {
       header.toRed();
@@ -110,7 +110,7 @@
       msg.log("Die Syntax ist korrekt.", true);
       return true;
     } catch(e) {
-      msg.log("", false, e);
+      msg.log("Fehler beim Einlesen des Codes!", false, e);
       console.log("Syntax-Fehler.", e);
       return false;
     }
