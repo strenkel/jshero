@@ -2,24 +2,21 @@
 
 jshero.koans.add({
 
-  id: 'for2',
+  id: 'while',
 
-  title: 'Schleifen und Arrays',
+  title: 'while-Schleife',
 
-  lesson: '<code>for</code>-Schleifen eignen sich besonders gut zum Durchlaufen von Arrays. Die folgende Funktion gibt das größte Element eines Arrays zurück:' +
-    '<pre><code>function max(a) {<br>' +
-    '  var maximum = a[0];<br>' +
-    '  for (var i = 1; i < a.length; i++) {<br>' +
-    '    if (a[i] > max) {<br>' +  
-    '      maximum = a[i];<br>' +
-    '    }<br>' +
-    '  }<br>' +
-    '  return maximum;<br>' +
-    '}</code></pre>',
+  lesson: 'Die <code>while</code>-Schleife besitzt nur eine Schleifen-Bedingung. Der Schleifen-Code wird ausgeführt, solange die Bedingung <code>true</code> ergibt. ' +
+    'Ergibt die Bedingung <code>false</code>, wird die Schleife beendet und die Codeausführung wird nach der Schleife fortgesetzt.' +
+    '<pre><code>var space = "";<br>' +
+    'while (space.length < 3) {<br>' +
+    '  space = space + "x";<br>' +  
+    '}</code></pre>' +
+    'Solange <code>space</code> weniger als 3 Zeichen besitzt, wird es um <code>"x"</code> ergänzt. ' +
+    'Hat <code>space</code> die Länge 3, wird die Schleife beendet. <code>space</code> hat dann den Wert <code>"xxx"</code>.',
         
-  task: 'Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den Mittelwert dieser Zahlen zurückgibt. ' +
-    'Tipp: Um den Mittelwert von n Zahlen zu berechnen, mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen. ' +
-    '<code>mean([1, 4])</code> sollte <code>(1 + 4)/2 = 2.5</code> ergeben.',
+  task: 'Schreibe eine Funktion <code>abstand</code>, die eine natürliche Zahl n als Parameter entgegennimmt und die einen String bestehend aus ' +
+    'n Leerzeichen zurückgibt. <code>abstand(1)</code> sollte <code>" "</code> ergeben.',
 
   beforeTests: function() {
     if (typeof mean !== "undefined") {
