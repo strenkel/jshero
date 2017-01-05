@@ -19,20 +19,20 @@ jshero.koans.add({
     'n Leerzeichen zurückgibt. <code>abstand(1)</code> sollte <code>" "</code> ergeben.',
 
   beforeTests: function() {
-    if (typeof mean !== "undefined") {
-      mean = undefined;
+    if (typeof abstand !== "undefined") {
+      abstand = undefined;
     }
   },
 
   tests: [
     
     function() {
-      var ok = typeof mean === 'function';
+      var ok = typeof abstand === 'function';
       var msg;
       if (ok) {
-        msg = '<code>mean</code> ist eine Funktion.';
+        msg = '<code>abstand</code> ist eine Funktion.';
       } else {
-        msg = '<code>mean</code> ist keine Funktion.';
+        msg = '<code>abstand</code> ist keine Funktion.';
       }
       return {
         ok: ok,
@@ -41,12 +41,12 @@ jshero.koans.add({
     },
 
     function() {
-      var ok = mean.length === 1;
+      var ok = abstand.length === 1;
       var msg;
       if (ok) {
-        msg = '<code>mean</code> hat 1 Parameter.';
+        msg = '<code>abstand</code> hat 1 Parameter.';
       } else {
-        msg = '<code>mean</code> hat nicht 1, sondern ' + addiereBis.length + ' Parameter.';
+        msg = '<code>abstand</code> hat nicht 1, sondern ' + abstand.length + ' Parameter.';
       }
       return {
         ok: ok,
@@ -57,16 +57,16 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = mean([0]);
-        ok = result === 0;
+        var result = abstand(0);
+        ok = result === "";
         if (ok) {
-          msg = '<code>mean([0])</code> gibt <code>0</code> zurück.';
+          msg = '<code>abstand(0)</code> gibt <code>""</code> zurück.';
         } else {
-          msg = '<code>mean([0])</code> gibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>abstand(0)</code> gibt nicht <code>""</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
-        msg = 'Fehler beim Aufruf von <code>mean([0])</code>.';
+        msg = 'Fehler beim Aufruf von <code>abstand(0)</code>.';
         e = exc;
         console.log(msg, e);
       }
@@ -80,16 +80,16 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = mean([1, 2]);
-        ok = result === 1.5;
+        var result = abstand(2);
+        ok = result === "  ";
         if (ok) {
-          msg = '<code>mean([1, 2])</code> gibt <code>1.5</code> zurück.';
+          msg = '<code>abstand(2)</code> gibt <code>"&nbsp;&nbsp;"</code> zurück.';
         } else {
-          msg = '<code>mean([1, 2])</code> gibt nicht <code>1.5</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>abstand(2)</code> gibt nicht <code>"&nbsp;&nbsp;"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
-        msg = 'Fehler beim Aufruf von <code>mean([1, 2])</code>.';
+        msg = 'Fehler beim Aufruf von <code>abstand(2)</code>.';
         e = exc;
         console.log(msg, e);
       }
@@ -99,7 +99,6 @@ jshero.koans.add({
         e: e
       };
     }
-
   ]
 
 });

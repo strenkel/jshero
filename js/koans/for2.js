@@ -49,7 +49,7 @@ jshero.koans.add({
       if (ok) {
         msg = '<code>mean</code> hat 1 Parameter.';
       } else {
-        msg = '<code>mean</code> hat nicht 1, sondern ' + addiereBis.length + ' Parameter.';
+        msg = '<code>mean</code> hat nicht 1, sondern ' + mean.length + ' Parameter.';
       }
       return {
         ok: ok,
