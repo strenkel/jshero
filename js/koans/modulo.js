@@ -9,7 +9,7 @@ jshero.koans.add({
     'var y = 20 % 3;</code></pre>' +
     '7 geteilt durch 2 ergibt 3 Rest 1. x ist als 1. 20 geteilt durch 3 ergibt 6 Rest 2. y ist also 2.',
 
-  task: 'Schreibe eine Funktion <code>einer</code>, die eine natürliche Zahl entgegenimmt und die Einer-Stelle zurückgibt. ' +
+  task: 'Schreibe eine Funktion <code>einer</code>, die eine natürliche Zahl entgegenimmt und die Ziffer der Einer-Stelle zurückgibt. ' +
     '<code>einer(2674)</code> sollte <code>4</code> zurückgeben.',
 
   beforeTests: function() {

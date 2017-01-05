@@ -71,11 +71,16 @@ nav a {
 
 #title {
   vertical-align: middle;
-  margin-left: 5%;
   font-size: 1.25em;
+  display: inline-block;
 }
 
 #menu {
+  padding: 0 0.5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 3%;
+  font-size: 2.2em;
   cursor: pointer;
 }
 
