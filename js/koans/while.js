@@ -4,7 +4,7 @@ jshero.koans.add({
 
   id: 'while',
 
-  title: 'while-Schleife',
+  title: 'while - Schleife',
 
   lesson: 'Die <code>while</code>-Schleife besitzt nur eine Schleifen-Bedingung. Der Schleifen-Code wird ausgeführt, solange die Bedingung <code>true</code> ergibt. ' +
     'Ergibt die Bedingung <code>false</code>, wird die Schleife beendet und die Codeausführung wird nach der Schleife fortgesetzt.' +

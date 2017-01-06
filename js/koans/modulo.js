@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: "Modulo",
 
-  lesson: 'Ein weiterer arithmetischer Operator ist Modulo. Er berechnet den Rest einer Division und wird mit <code>%</code> notiert.' +
+  lesson: 'Ein weiterer arithmetischer Operator ist Modulo. Er berechnet den Rest einer Division und wird mit dem Prozentzeichen <code>%</code> notiert.' +
     '<pre><code>var x = 7 % 2;<br>' +
     'var y = 20 % 3;</code></pre>' +
     '7 geteilt durch 2 ergibt 3 Rest 1. x ist als 1. 20 geteilt durch 3 ergibt 6 Rest 2. y ist also 2.',

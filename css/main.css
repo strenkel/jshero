@@ -79,7 +79,7 @@ nav a {
   padding: 0 0.5em;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 3%;
+  
   font-size: 2.2em;
   cursor: pointer;
 }
@@ -88,11 +88,11 @@ nav a {
   color: white;
   float: right;
   font-size: 1.5em;
-  padding: 0 0.6em;
+  padding: 0 0.5em;
 }
 
 #header > :first-child {
-  margin-right: 5%;
+  margin-right: 2%;
 }
 
 #lesson {
