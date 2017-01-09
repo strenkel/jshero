@@ -37,10 +37,10 @@ compressor.minify({
     'break.js'
   ],
   output: '../js/koans-min/koans.js',
-  callback: function(err, min){
+  callback: function(err, min) {
+    // err is always null. I doesn't know why.
     if (err) {
-      console.err(err);
+      console.error(err);
     }
-    //console.log(min); 
   }
 });

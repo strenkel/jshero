@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "Math",
 
   lesson: 'Viele mathematische Funktionen sind in dem Objekt <code>Math</code> zusammengefasst. ' +
-    'So gibt <code>Math.sqrt(x)</code> die Qudratwurzel (engl.: square root) zurück ' +
+    'So gibt <code>Math.sqrt(x)</code> die Quadratwurzel (engl.: square root) zurück ' +
     'und mit <code>Math.pow(x, y)</code> berechnet man die Potenz (engl.: power) x hoch y.' +
     '<pre><code>var y1 = Math.sqrt(9);<br>var y2 = Math.pow(10, 3);</code></pre>' +
     '<code>y1</code> hat den Wert <code>3</code> und <code>y2</code> den Wert <code>1000</code> (10&sup3; = 10 * 10 * 10 = 1000). ',

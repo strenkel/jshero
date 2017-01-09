@@ -53,7 +53,7 @@
         try {
           result = tests[i]();
         } catch (exc) {
-          console.log("Unbekannter Testfehler!", e)
+          console.log("Unbekannter Testfehler!", exc)
           result = {
             ok: false,
             msg: "Unbekannter Testfehler!",
