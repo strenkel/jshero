@@ -16,7 +16,7 @@ jshero.koans.add({
         
   task: 'Schreibe eine Funktion <code>nand</code>, die zwei boolesche Werte als Parameter entgegennimmt. Die Rückgabe der Funktion soll <code>false</code> sein, ' +
     'wenn beide Paramter <code>true</code> sind. In den anderen Fällen soll die Rückgabe <code>true</code> sein. <code>nand(true, true)</code> ' +
-    'soll <code>false</code> liefern, <code>nand(true, false)</code> soll <code>false</code> zurückgeben.',
+    'soll <code>false</code> liefern, <code>nand(true, false)</code> soll <code>true</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof nand !== "undefined") {

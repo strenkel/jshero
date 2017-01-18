@@ -14,7 +14,7 @@ jshero.koans.add({
     'Hat in unserem Beispiel die Variable <code>wuerfelzahl</code> den Wert <code>6</code>, so wird <code>gewinn</code> auf ' +
     '<code>100</code> gesetzt. Hat <code>wuerfelzahl</code> nicht den Wert <code>6</code>, bleibt <code>gewinn</code> bei <code>0</code>.',
         
-  task: 'Schreibe eine Funktion <code>gleich</code>, die 2 Werte auf strikte Gleichheit überprüft. Sind die beiden Werte gleich, so soll der ' +
+  task: 'Schreibe eine Funktion <code>gleich</code>, die 2 Werte auf strikte Gleichheit überprüft. Sind die beiden Werte gleich, so soll ' +
     'der String "GLEICH" zurückgegeben werden. Sind sie ungleich, so soll man "UNGLEICH" erhalten. Tipp: Verwende zwei <code>return</code>' +
     '-Anweisungen. Eine innerhalb des <code>if</code>-Anweisungsblocks, eine im Anschluss an diesem Block.',
 
