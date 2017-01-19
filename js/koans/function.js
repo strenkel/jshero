@@ -40,7 +40,7 @@ jshero.koans.add({
     },
  
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = hallo();
         ok = result === "Hallo Welt!";
@@ -49,13 +49,15 @@ jshero.koans.add({
         } else {
           msg = '<code>hallo()</code> gibt nicht <code>"Hallo Welt!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>hallo()</code>.";
+        e: exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
   ]

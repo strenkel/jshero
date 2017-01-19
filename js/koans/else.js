@@ -52,7 +52,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = addiereMitZuschlag(10, 10);
         ok = result === 22;
@@ -61,18 +61,20 @@ jshero.koans.add({
         } else {
           msg = '<code>addiereMitZuschlag(10, 10)</code> ergibt nicht <code>22</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereMitZuschlag(10, 10)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = addiereMitZuschlag(10, 11);
         ok = result === 24;
@@ -81,18 +83,20 @@ jshero.koans.add({
         } else {
           msg = '<code>addiereMitZuschlag(10, 11)</code> ergibt nicht <code>24</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereMitZuschlag(10, 11)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = addiereMitZuschlag(11, 10);
         ok = result === 24;
@@ -101,18 +105,20 @@ jshero.koans.add({
         } else {
           msg = '<code>addiereMitZuschlag(11, 10)</code> ergibt nicht <code>24</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereMitZuschlag(11, 10)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = addiereMitZuschlag(11, 11);
         ok = result === 26;
@@ -121,13 +127,15 @@ jshero.koans.add({
         } else {
           msg = '<code>addiereMitZuschlag(11, 11)</code> ergibt nicht <code>26</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereMitZuschlag(11, 11)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

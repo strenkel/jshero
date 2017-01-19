@@ -82,7 +82,6 @@ function() {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereBis(2)</code>.';
         e = exc;
-        console.log(msg, e);
       }
       return {
         ok: ok,
@@ -105,7 +104,6 @@ function() {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereBis(4)</code>.';
         e = exc;
-        console.log(msg, e);
       }
       return {
         ok: ok,
