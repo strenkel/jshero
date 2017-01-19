@@ -30,8 +30,9 @@ jshero.koans.add({
     'So werden alle ungeraden Zahlen kleiner 10 aufaddiert.<br>' +
     '<code>break</code> und <code>continue</code> kann man in allen Schleifen (for, while, do...while) verwenden.',
 
-  task: 'Schreibe eine Funktion <code>isPrime</code>. Sie soll prüfen, ob eine übergebene Zahl eine Primezahl ist oder nicht. Ist die ' +
-    'Zahl prim, so soll <code>true</code> zurückgegeben werden, im anderen Fall <code>false</code>.',
+  task: 'Schreibe eine Funktion <code>isPrime</code>. Sie soll prüfen, ob eine übergebene Zahl eine Primzahl ist oder nicht. Ist die ' +
+    'Zahl prim, so soll <code>true</code> zurückgegeben werden, im anderen Fall <code>false</code>. ' +
+    'Der Aufruf <code>isPrime(2)</code> soll <code>true</code> zurückgeben, <code>isPrime(4)</code> soll <code>false</code> ergeben. Beachte: 1 ist keine Primzahl.',
 
   beforeTests: function() {
     if (typeof isPrime !== "undefined") {

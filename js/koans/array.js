@@ -15,7 +15,7 @@ jshero.koans.add({
     'var allesMoegliche = [a, b, c];</code></pre>' +
     'Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen anderen Datentyp besitzen.',
         
-  task: 'Schreibe ein Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt.' +
+  task: 'Schreibe ein Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt. ' +
     '<code>toArray(5, 9)</code> sollte das Array <code>[5, 9]</code> ergeben.',
 
   beforeTests: function() {
@@ -80,7 +80,7 @@ jshero.koans.add({
         var result = toArray(1, 2);
         ok = result.length === 2 && result[0] === 1 && result[1] === 2;
         if (ok) {
-          msg = '<code>toArray(1, 2)</code> gibt <code>[1, 2]</code> zurück.</code>.';
+          msg = '<code>toArray(1, 2)</code> gibt <code>[1, 2]</code> zurück.';
         } else {
           msg = '<code>toArray(1, 2)</code> gibt nicht <code>[1, 2]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
@@ -100,7 +100,7 @@ jshero.koans.add({
         var result = toArray("Hänsel", "Gretel");
         ok = Array.isArray(result) && result.length === 2 && result[0] === "Hänsel" && result[1] === "Gretel";
         if (ok) {
-          msg = '<code>toArray("Hänsel", "Gretel")</code> gibt <code>["Hänsel", "Gretel"]</code> zurück.</code>.';
+          msg = '<code>toArray("Hänsel", "Gretel")</code> gibt <code>["Hänsel", "Gretel"]</code> zurück.';
         } else {
           msg = '<code>toArray("Hänsel", "Gretel")</code> gibt nicht <code>["Hänsel", "Gretel"]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
