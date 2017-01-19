@@ -51,7 +51,7 @@ jshero.koans.add({
     },
    
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = getFirstElement([1, 2]);
         ok = result === 1;
@@ -60,18 +60,20 @@ jshero.koans.add({
         } else {
           msg = '<code>getFirstElement([1, 2])</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>getFirstElement([1, 2])</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
  
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = getFirstElement(["Hänsel", "Gretel"]);
         ok = result === "Hänsel";
@@ -80,13 +82,15 @@ jshero.koans.add({
         } else {
           msg = '<code>getFirstElement(["Hänsel", "Gretel"])</code> gibt nicht <code>"Hänsel"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>getFirstElement(["Hänsel", "Gretel"])</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

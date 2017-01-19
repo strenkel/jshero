@@ -69,7 +69,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = rotiere([1, 2]);
         ok = array.isEqual(result, [2, 1]);
@@ -78,19 +78,20 @@ jshero.koans.add({
         } else {
           msg = '<code>rotiere([1, 2])</code> gibt nicht <code>[2, 1]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>rotiere([1, 2])</code>.';
-        console.log(msg, e);
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = rotiere(["a", "b", "c"]);
         ok = array.isEqual(result, ["b", "c", "a"]);
@@ -99,18 +100,17 @@ jshero.koans.add({
         } else {
           msg = '<code>rotiere(["a", "b", "c"])</code> gibt nicht <code>["b", "c", "a"]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>rotiere(["a", "b", "c"])</code>.';
-        console.log(msg, e);
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
-   
-    
 
   ]
 

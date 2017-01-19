@@ -54,7 +54,7 @@ jshero.koans.add({
     },
    
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = setFirstElement([1, 2], 3);
         ok = Array.isArray(result) && result.length === 2 && result[0] === 3 && result[1] === 2;
@@ -63,18 +63,20 @@ jshero.koans.add({
         } else {
           msg = '<code>setFirstElement([1, 2], 3)</code> gibt nicht <code>[3, 2]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>setFirstElement([1, 2], 3)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
  
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = setFirstElement([], 1);
         ok = Array.isArray(result) && result.length === 1 && result[0] === 1;
@@ -83,13 +85,15 @@ jshero.koans.add({
         } else {
           msg = '<code>setFirstElement([], 1)</code> gibt nicht <code>[1]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
+        e = exc;
         ok = false;
         msg = 'Fehler beim Aufruf von <code>setFirstElement([], 1)</code>.';
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

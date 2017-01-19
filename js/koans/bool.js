@@ -55,7 +55,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = nand(true, true);
         ok = result === false;
@@ -64,18 +64,20 @@ jshero.koans.add({
         } else {
           msg = '<code>nand(true, true)</code> ergibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>nand(true, true)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = nand(true, false);
         ok = result === true;
@@ -84,13 +86,15 @@ jshero.koans.add({
         } else {
           msg = '<code>nand(true, false)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>nand(true, false)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 

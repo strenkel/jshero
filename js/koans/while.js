@@ -68,7 +68,6 @@ jshero.koans.add({
         ok = false;
         msg = 'Fehler beim Aufruf von <code>abstand(0)</code>.';
         e = exc;
-        console.log(msg, e);
       }
       return {
         ok: ok,
@@ -91,7 +90,6 @@ jshero.koans.add({
         ok = false;
         msg = 'Fehler beim Aufruf von <code>abstand(2)</code>.';
         e = exc;
-        console.log(msg, e);
       }
       return {
         ok: ok,

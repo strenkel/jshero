@@ -55,7 +55,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = toArray(1, 2);
         ok = Array.isArray(result);
@@ -64,18 +64,20 @@ jshero.koans.add({
         } else {
           msg = '<code>toArray(1, 2)</code> gibt kein Array zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>toArray(1, 2)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = toArray(1, 2);
         ok = result.length === 2 && result[0] === 1 && result[1] === 2;
@@ -84,18 +86,20 @@ jshero.koans.add({
         } else {
           msg = '<code>toArray(1, 2)</code> gibt nicht <code>[1, 2]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>toArray(1, 2)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = toArray("Hänsel", "Gretel");
         ok = Array.isArray(result) && result.length === 2 && result[0] === "Hänsel" && result[1] === "Gretel";
@@ -104,13 +108,15 @@ jshero.koans.add({
         } else {
           msg = '<code>toArray("Hänsel", "Gretel")</code> gibt nicht <code>["Hänsel", "Gretel"]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von toArray("Hänsel", "Gretel")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 
