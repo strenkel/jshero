@@ -49,7 +49,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = mittelwert(1, 2);
         ok = result === 1.5;
@@ -58,18 +58,20 @@ jshero.koans.add({
         } else {
           msg = '<code>mittelwert(1, 2)</code> ergibt nicht <code>1.5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>mittelwert(1, 2)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = mittelwert(0, 0);
         ok = result === 0;
@@ -78,13 +80,15 @@ jshero.koans.add({
         } else {
           msg = '<code>mittelwert(0, 0)</code> ergibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>mittelwert(0, 0)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

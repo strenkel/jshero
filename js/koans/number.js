@@ -52,7 +52,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = add(0, 0);
         ok = result === 0;
@@ -61,18 +61,20 @@ jshero.koans.add({
         } else {
           msg = '<code>add(0, 0)</code> ergibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>add(0, 0)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = add(2, 3);
         ok = result === 5;
@@ -81,13 +83,15 @@ jshero.koans.add({
         } else {
           msg = '<code>add(2, 3)</code> ergibt nicht <code>5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>add(2, 3)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

@@ -55,7 +55,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = gleich(1, 1);
         ok = result === "GLEICH";
@@ -64,18 +64,20 @@ jshero.koans.add({
         } else {
           msg = '<code>gleich(1, 1)</code> ergibt nicht <code>"GLEICH"</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>gleich(1, 1)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = gleich(1, "1");
         ok = result === "UNGLEICH";
@@ -84,13 +86,15 @@ jshero.koans.add({
         } else {
           msg = '<code>gleich(1, "1")</code> ergibt nicht <code>"UNGLEICH"</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>gleich(1, "1")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

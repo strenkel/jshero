@@ -40,7 +40,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg; 
+      var ok, msg, e;
       try {
         var result = begruesse('Maria');
         if (result === "Hallo Maria!") {
@@ -50,18 +50,20 @@ jshero.koans.add({
           ok = false;
           msg = '<code>begruesse("Maria")</code> gibt nicht <code>"Hallo Maria!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>hallo("Maria")</code>.';
+        e = exc;
       }
       return {
         msg: msg,
-        ok: ok
+        ok: ok,
+        e: e
       };
     },
     
     function() {
-      var ok, msg; 
+      var ok, msg, e;
       try {
         var result = begruesse('Franz');
         if (result === "Hallo Franz!") {
@@ -71,13 +73,15 @@ jshero.koans.add({
           ok = false;
           msg = '<code>begruesse("Franz")</code> gibt nicht <code>"Hallo Franz!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>hallo("Franz")</code>.';
+        e = exc;
       }
       return {
         msg: msg,
-        ok: ok
+        ok: ok,
+        e: e
       };
     }
     

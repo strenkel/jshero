@@ -70,7 +70,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = istDreistellig(999);
         ok = result === true;
@@ -79,18 +79,20 @@ jshero.koans.add({
         } else {
           msg = '<code>istDreistellig(999)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>istDreistellig(999)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = istDreistellig(99);
         ok = result === false;
@@ -99,18 +101,20 @@ jshero.koans.add({
         } else {
           msg = '<code>istDreistellig(99)</code> ergibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>istDreistellig(99)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = istDreistellig(1000);
         ok = result === false;
@@ -119,13 +123,15 @@ jshero.koans.add({
         } else {
           msg = '<code>istDreistellig(1000)</code> ergibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>istDreistellig(1000)</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

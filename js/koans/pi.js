@@ -49,7 +49,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = flaeche(1);
         ok = result === Math.PI;
@@ -58,18 +58,19 @@ jshero.koans.add({
         } else {
           msg = '<code>flaeche(1)</code> ergibt nicht <code>' + Math.PI + '</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>flaeche(1)</code>.";
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = flaeche(2);
         ok = result === Math.PI * 4;
@@ -78,13 +79,15 @@ jshero.koans.add({
         } else {
           msg = '<code>flaeche(2)</code> ergibt nicht <code>' + (Math.PI *4) + '</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>flaeche(2)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

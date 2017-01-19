@@ -52,7 +52,7 @@ jshero.koans.add({
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = hypotenuse(3, 4);
         ok = result === 5;
@@ -61,18 +61,20 @@ jshero.koans.add({
         } else {
           msg = '<code>hypotenuse(3, 4)</code> ergibt nicht <code>5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>hypotenuse(3, 4)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = hypotenuse(5, 12);
         ok = result === 13;
@@ -81,13 +83,15 @@ jshero.koans.add({
         } else {
           msg = '<code>hypotenuse(5, 12)</code> ergibt nicht <code>13</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>hypotenuse(5, 12)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

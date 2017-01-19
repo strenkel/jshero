@@ -62,7 +62,6 @@ jshero.koans.add({
         ok = false;
         msg = 'Fehler beim Aufruf von <code>einer(0)</code>.';
         e = exc;
-        console.log(msg, e);
       }
       return {
         ok: ok,
@@ -85,7 +84,6 @@ jshero.koans.add({
         ok = false;
         msg = 'Fehler beim Aufruf von <code>einer(17)</code>.';
         e = exc;
-        console.log(msg, e);
       }
       return {
         ok: ok,
