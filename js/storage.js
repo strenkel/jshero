@@ -4,14 +4,6 @@ if (typeof jshero === "undefined") {
 
 jshero.storage = (function() {
   
-  var getActualKoan = function() {
-    return localStorage.getItem("actualKoanId");
-  };
-  
-  var setActualKoan = function(koan) {
-    localStorage.setItem("actualKoanId", koan);
-  };
-  
   var setSolution = function(koan, solution) {
     localStorage.setItem("solution_" + koan.id, solution);
   };
@@ -20,11 +12,14 @@ jshero.storage = (function() {
     return localStorage.getItem("solution_" + koan.id);
   };
   
+  var removeSolution = function(koan) {
+    return localStorage.removeItem("solution_" + koan.id);
+  };
+
   return {
-    setActualKoan: setActualKoan,
-    getActualKoan: getActualKoan,
     setSolution: setSolution,
-    getSolution: getSolution
+    getSolution: getSolution,
+    removeSolution: removeSolution
   };
   
 })();

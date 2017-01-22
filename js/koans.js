@@ -56,6 +56,12 @@ jshero.koans = (function(storage) {
     return koans;
   };
 
+  var clearSolutions = function() {
+    koans.forEach(function(koan) {
+      storage.removeSolution(koan);
+    });
+  };
+
   // --- private methods ---
 
   var getKoanIdFromUrl = function() {
@@ -87,7 +93,8 @@ jshero.koans = (function(storage) {
     getKoan: getKoan,
     setIndexByUrl: setIndexByUrl,
     getIndex: getIndex,
-    getKoans: getKoans
+    getKoans: getKoans,
+    clearSolutions: clearSolutions
   };
 
 })(jshero.storage);

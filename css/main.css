@@ -5,7 +5,6 @@
   overflow: auto;
 }
 
-
 html, body {
   font-size: 18px;
   font-family:  Arial,Helvetica Neue,Helvetica,sans-serif;
@@ -13,9 +12,7 @@ html, body {
 }
 
 button {
-  padding-left: 0;
-  padding-right: 0;
-  width: 6em;
+  width: 15em;
   font-size: 1em;
   border: 1px solid black;
   background-color: white;
@@ -103,6 +100,13 @@ nav a {
 
 #lesson h1 {
   margin-bottom: 1.5em;
+  font-size: 2em;
+}
+
+@media (max-width: 30em) {
+  #lesson h1 {
+    font-size: 1.8em;
+}
 }
 
 #lesson h2 {
@@ -111,6 +115,10 @@ nav a {
 
 #lesson p {
   line-height: 1.6em;
+}
+
+#lesson .extra-margin {
+  margin-bottom: 3em;
 }
 
 #test-button.red {
@@ -161,7 +169,7 @@ nav a {
   vertical-align: top;
   border: 1px solid black;
   display: inline-block;
-  padding: 0.3em 2.3em;
+  padding: 0.3em 6em;
 }
 
 #start-hero {
@@ -176,7 +184,20 @@ nav a {
   color: #e30000;
 }
 
-#success #koans a{
+#koans a {
   display: block;
   margin: 0.5em 0;
+}
+
+#koans {
+  margin-bottom: 5em;
+}
+
+#reset-confirmation {
+  margin-top: 2.5em;
+  visibility: hidden;
+}
+
+.reset-confirmation-button {
+  margin-bottom: 0.5em;
 }

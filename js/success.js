@@ -1,4 +1,6 @@
 (function(koans) {
+
+  // write koans
   
   var rootElm = document.getElementById("koans");
   
@@ -21,5 +23,33 @@
   };
 
   window.onload = write;
+
+  // reset
+
+  var resetButton = document.getElementById("reset-button");
+  var resetConfiramtionRoot = document.getElementById("reset-confirmation");
+  var resetYesButton = document.getElementById("reset-yes-button");
+  var resetNoButton = document.getElementById("reset-no-button");
+
+  resetButton.onclick = function() {
+    resetConfiramtionRoot.style.visibility = "visible";
+    scrollToButtom();
+  };
+
+  resetNoButton.onclick = function() {
+    resetConfiramtionRoot.style.visibility = "hidden";
+  };
+
+  resetYesButton.onclick = function() {
+    resetConfiramtionRoot.style.visibility = "hidden";
+    koans.clearSolutions();
+    rootElm.innerHTML = "";
+    write();
+    window.scrollTo(0, 0);
+  };
+
+  var scrollToButtom = function() {
+    window.scrollTo(0, document.body.scrollHeight);
+  };
 
 })(jshero.koans);

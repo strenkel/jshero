@@ -29,8 +29,32 @@
       </nav>
 
       <div id="lesson">
+
         <h1>Übersicht</h1>
+
+        <p class="extra-margin">
+          Hier findest du alle Übungen. Ungelöste Übungen sind rot, gelöste grün.
+          Durch Klick oder Touch auf die Übung navigierst du zu der Übung.
+          Mit dem untenstehenden Button <em>Übungen zurücksetzen</em> löscht du alle deine Lösungen.
+          Alle Übungen sind danach rot und du kannst JS Hero von neuem beginnen.
+        </p>
+
         <p id="koans"></p>
+
+        <p id="reset-exercises">
+          <button id="reset-button">Übungen zurücksetzen</button>
+        </p>
+
+        <div id="reset-confirmation">
+          <p>
+            Möchtest du wirklich alle Übungen zurücksetzen?
+          </p>
+          <p>
+            <button id="reset-no-button" class="reset-confirmation-button">Nein</button>
+            <button id="reset-yes-button" class="reset-confirmation-button">Ja</button>
+          </p>
+        </div>
+
       </div>
 
     </div>
