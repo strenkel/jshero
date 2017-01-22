@@ -83,7 +83,7 @@
   };
 
   var scrollToButtom = function() {
-    window.scrollTo(0,document.body.scrollHeight);
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   var handleTestButton = function(okAll) {
