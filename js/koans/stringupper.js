@@ -44,6 +44,21 @@ jshero.koans.add({
     },
 
     function() {
+      var result = toCase.length;
+      var ok = result === 1;
+      var msg;
+      if (ok) {
+        msg = '<code>toCase</code> hat genau 1 Parameter.';
+      } else {
+        msg = '<code>toCase</code> hat nicht 1, sondern ' + result + ' Parameter.';
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    },
+
+    function() {
       var ok, msg, e;
       try {
         var result = toCase('Code');

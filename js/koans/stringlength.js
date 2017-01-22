@@ -38,6 +38,21 @@ jshero.koans.add({
     },
 
     function() {
+      var result = laenge.length;
+      var ok = result === 1;
+      var msg;
+      if (ok) {
+        msg = '<code>laenge</code> hat genau 1 Parameter.';
+      } else {
+        msg = '<code>laenge</code> hat nicht 1, sondern ' + result + ' Parameter.';
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    },
+
+    function() {
       var ok, msg;
       try {
         var result = laenge('Hallo Welt!');

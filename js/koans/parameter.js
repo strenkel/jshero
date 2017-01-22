@@ -42,9 +42,9 @@ jshero.koans.add({
       var ok = result === 1;
       var msg;
       if (ok) {
-        msg = '<code>echo</code> hat genau einen Parameter.';
+        msg = '<code>echo</code> hat genau 1 Parameter.';
       } else {
-        msg = '<code>echo</code> hat nicht einen, sondern ' + result + ' Parameter.';
+        msg = '<code>echo</code> hat nicht 1, sondern ' + result + ' Parameter.';
       }
       return {
         ok: ok,

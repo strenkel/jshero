@@ -40,6 +40,20 @@ jshero.koans.add({
     },
     
     function() {
+      var ok = begruesse.length === 1;
+      var msg;
+      if (ok) {
+        msg = "<code>begruesse</code> hat 1 Parameter.";
+      } else {
+        msg = "<code>begruesse</code> hat nicht 1, sondern " + begruesse.length + " Parameter.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    },
+
+    function() {
       var ok, msg, e;
       try {
         var result = begruesse('Maria');
