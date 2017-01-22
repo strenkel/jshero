@@ -15,9 +15,13 @@ button {
   width: 15em;
   font-size: 1em;
   border: 1px solid black;
-  background-color: white;
+  background-color: #f7f7f7;
   height: 2.3333em;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #eee;
 }
 
 code {
@@ -170,6 +174,11 @@ nav a {
   border: 1px solid black;
   display: inline-block;
   padding: 0.3em 6em;
+  background-color: #f7f7f7;
+}
+
+.link-button:hover {
+  background-color: #eee;
 }
 
 #start-hero {

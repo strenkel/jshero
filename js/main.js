@@ -68,7 +68,6 @@
       }
     }
 
-    handleTestButton(okAll);
     if (okAll) {
       var code = getCode();
       koan.setSolution(code);
@@ -84,14 +83,6 @@
 
   var scrollToButtom = function() {
     window.scrollTo(0, document.body.scrollHeight);
-  };
-
-  var handleTestButton = function(okAll) {
-    if (okAll) {
-      testButton.className = "green";
-    } else {
-      testButton.className = "red";
-    }
   };
 
   var clear = function() {
