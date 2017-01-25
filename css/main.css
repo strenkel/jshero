@@ -12,16 +12,17 @@ html, body {
 }
 
 button {
-  width: 15em;
+  min-width: 10em;
   font-size: 1em;
   border: 1px solid black;
-  background-color: #f7f7f7;
+  background-color: #fff;
   height: 2.3333em;
   cursor: pointer;
+  padding: 0 2em;
 }
 
 button:hover {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 
 code {
@@ -173,12 +174,11 @@ nav a {
   vertical-align: top;
   border: 1px solid black;
   display: inline-block;
-  padding: 0.3em 6em;
-  background-color: #f7f7f7;
+  padding: 0.35em 4em;
 }
 
 .link-button:hover {
-  background-color: #eee;
+  background-color: #f0f0f0;
 }
 
 #start-hero {
@@ -203,10 +203,10 @@ nav a {
 }
 
 #reset-confirmation {
-  margin-top: 2.5em;
-  visibility: hidden;
+  margin-bottom: 4.4em;
+  display: none;
 }
 
-.reset-confirmation-button {
-  margin-bottom: 0.5em;
+#reset-exercises {
+  margin-bottom: 7em;
 }
