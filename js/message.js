@@ -17,12 +17,21 @@ jshero.message = (function() {
     messageRoot.appendChild(paragraph);
   };
 
+  var goto = function(url) {
+    var link = document.createElement('a');
+    link.href = url;
+    link.innerHTML = "Weiter";
+    link.className = "link-button";
+    messageRoot.appendChild(link);
+  };
+
   var clear = function() {
     messageRoot.innerHTML = null;
   };
 
   return {
     log: log,
+    goto: goto,
     clear: clear
   };
 

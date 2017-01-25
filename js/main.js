@@ -72,8 +72,8 @@
       var code = getCode();
       koan.setSolution(code);
       header.toGreen();
-      var message = "<a href='" + nextPageUrl() + "'>Alle Tests bestanden! Gehe zur nächsten Übung!</a>";
-      msg.log(message, true);
+      msg.log("Alle Tests bestanden!", true);
+      msg.goto(nextPageUrl());
     } else {
       header.toRed();
       msg.log("Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!", false);

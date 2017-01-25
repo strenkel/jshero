@@ -12,13 +12,14 @@ html, body {
 }
 
 button {
-  min-width: 10em;
+  min-width: 6em;
   font-size: 1em;
   border: 1px solid black;
   background-color: #fff;
-  height: 2.3333em;
+  height: 2.5em;
   cursor: pointer;
   padding: 0 2em;
+  box-sizing: content-box;
 }
 
 button:hover {
@@ -171,14 +172,21 @@ nav a {
 }
 
 .link-button {
-  vertical-align: top;
+  width: 10em;
+  height: 2.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+  text-align: center;
   border: 1px solid black;
   display: inline-block;
-  padding: 0.35em 4em;
 }
 
 .link-button:hover {
   background-color: #f0f0f0;
+}
+
+#messages .link-button {
+  margin-top: 2em;
 }
 
 #start-hero {
