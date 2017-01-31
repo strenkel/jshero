@@ -12,11 +12,11 @@ html, body {
 }
 
 button {
-  min-width: 6em;
+  min-width: 4em;
   font-size: 1em;
   border: 1px solid black;
   background-color: #fff;
-  height: 2.5em;
+  min-height: 2.5em;
   cursor: pointer;
   padding: 0 2em;
   box-sizing: content-box;
@@ -172,7 +172,7 @@ nav a {
 }
 
 .link-button {
-  width: 10em;
+  width: 8em;
   height: 2.5em;
   line-height: 2.5em;
   vertical-align: middle;
@@ -217,4 +217,8 @@ nav a {
 
 #reset-exercises {
   margin-bottom: 7em;
+}
+
+.reset-confirmation-button {
+  margin-bottom: 0.5em;
 }
