@@ -47,15 +47,15 @@ nav {
 }
 
 nav a {
-   display: block;
-   color: white;
-   margin: 1.5em;
-   font-size: 1.2em;
+  display: block;
+  color: white;
+  margin: 1.5em;
+  font-size: 1.2em;
 }
 
 #header {
+  background-color: #14A62C;
   font-size: 1em;
-  background-color: #2bae41;
   color: white;
   height: 3em;
   line-height: 3em;
@@ -64,8 +64,8 @@ nav a {
   top: 0;
 }
 
-#hedaer.green {
-  background-color: #2bae41;
+#header.green {
+  background-color: #14A62C;
 }
 
 #header.red {
@@ -82,7 +82,6 @@ nav a {
   padding: 0 0.5em;
   display: inline-block;
   vertical-align: middle;
-  
   font-size: 2.2em;
   cursor: pointer;
 }
@@ -112,7 +111,7 @@ nav a {
 @media (max-width: 30em) {
   #lesson h1 {
     font-size: 1.8em;
-}
+  }
 }
 
 #lesson h2 {
@@ -125,16 +124,6 @@ nav a {
 
 #lesson .extra-margin {
   margin-bottom: 3em;
-}
-
-#test-button.red {
-  color: #e30000;
-  border-color: #e30000;
-}
-
-#test-button.green {
-  color: green;
-  border-color: #2bae41;
 }
 
 #code-area {
@@ -161,14 +150,9 @@ nav a {
 }
 
 #messages p.green {
-  border-color: #2bae41;
-  color: green;
-}
+  border-color: #0f7820;
+  color: #0f7820;
 
-#messages p.green a {
-  width: 100%;
-  display: block;
-  color: green;
 }
 
 .link-button {
@@ -194,7 +178,8 @@ nav a {
 }
 
 #success .green {
-  color: green;
+  color: #0f7820;
+
 }
 
 #success .red {
