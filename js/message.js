@@ -10,7 +10,14 @@ jshero.message = (function() {
     var paragraph = document.createElement('p');
     var errormessage = "";
     if (e) {
-      errormessage = e + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + "). ";
+      errormessage = errormessage + e;
+      if (e.lineNumber != null && e.columnNumber != null) {
+        // mozilla
+        errormessage = errormessage + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + "). ";
+      } else if (e.line != null) {
+        // safari
+        errormessage = errormessage + " (Zeile: " + e.line + "). ";
+      }
     }
     paragraph.innerHTML = errormessage + message;
     paragraph.className = type ? 'green' : 'red';
