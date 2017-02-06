@@ -13,11 +13,12 @@ jshero.message = (function() {
       errormessage = errormessage + e;
       if (e.lineNumber != null && e.columnNumber != null) {
         // mozilla
-        errormessage = errormessage + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + "). ";
+        errormessage = errormessage + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + ")";
       } else if (e.line != null) {
         // safari
-        errormessage = errormessage + " (Zeile: " + e.line + "). ";
+        errormessage = errormessage + " (Zeile: " + e.line + ")";
       }
+      errormessage = errormessage + ". ";
     }
     paragraph.innerHTML = errormessage + message;
     paragraph.className = type ? 'green' : 'red';
