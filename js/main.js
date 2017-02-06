@@ -37,8 +37,10 @@
     }
   };
 
-  var testCode = function() {
+  var testCode = function(e) {
     
+    e.preventDefault();
+
     clear();
     var koan = koans.getKoan();
     koan.beforeTests();
@@ -67,6 +69,11 @@
         }
       }
     }
+
+    // Durch das preventDefault() schloss sich auf mobilen Geraeten das Keyboard nicht mehr.
+    // Durch das expliziete Setzen des Focus außerhalb des Input-Feldes wird das Keyboard geschlossen.
+    // Wir setzten den Fokus vor dem Einfügen des Weiter-Buttons. Wird dieser eingefügt, bekommt er den Fokus.
+    testButton.focus();
 
     if (okAll) {
       var code = getCode();
@@ -122,7 +129,8 @@
     }
   };
 
-  testButton.onclick = testCode;
+  testButton.addEventListener("click", testCode);
+  testButton.addEventListener("touchstart", testCode);
   codeArea.onkeyup = adjustCodeAreaHeight;
   window.onload = write;
 

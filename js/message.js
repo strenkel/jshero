@@ -31,6 +31,7 @@ jshero.message = (function() {
     link.innerHTML = "Weiter";
     link.className = "link-button";
     messageRoot.appendChild(link);
+    link.focus();
   };
 
   var clear = function() {
