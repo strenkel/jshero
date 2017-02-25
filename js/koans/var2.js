@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: 'Möchte man mehrere Variablen deklarieren und initialisieren, so kann man das in zwei Programmzeilen tun:' +
     '<pre><code>var stadt = "Prag";<br>var land = "Tschechien";</code></pre>' +
-    'Jede Anweisung wird dabei mit einem Semikolon abgeschlossen.',
+    'In jeder Zeile steht eine Anweisung. Jede Anweisung wird mit einem Semikolon abgeschlossen.',
         
   task: 'Deklariere eine Variable <code>blume</code> und weise ihr den Wert <code>"Rose"</code> zu. ' +
     'Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>"Käfer"</code> zu.',

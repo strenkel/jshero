@@ -23,7 +23,7 @@
     if (koans.hasPrev()) {
       prevButton.href = "main.html?koan=" + koans.prevId();
     } else {
-      prevButton.href = "index.html";
+      prevButton.href = "intro.html";
     }
     nextButton.href = nextPageUrl();
     adjustCodeAreaHeight();

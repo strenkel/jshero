@@ -12,7 +12,7 @@ jshero.koans.add({
     'ausgeführt. Dabei wird zunächst der Wert <code>"Apfel"</code> dem Parameter <code>eingabe</code> zugewiesen. <code>eingabe</code> hat jetzt den ' +
     'Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion <code>gebe</code> wird nun die Variable <code>eingabe</code> mit der ' +
     '<code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
-    'dann ebenfalls den Wert <code>"Apfel"</code>.',
+    'dann auch den Wert <code>"Apfel"</code>.',
         
   task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
 
