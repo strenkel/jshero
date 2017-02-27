@@ -36,6 +36,7 @@ compressor.minify({
     'for.js',
     'for2.js',
     'while.js',
+    'dowhile.js',
     'break.js'
   ],
   output: '../js/koans-min/koans.js',
