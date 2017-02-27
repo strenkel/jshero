@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: 'In der letzten Aufgabe hast du ein sogenanntes NAND-Gatter (engl.: Not AND - nicht und) programmiert. ' +
     'NAND-Gatter sind in der Digitaltechnik ein sogenannter Standardbaustein. Mit ihm lassen sich alle logischen Verknüpfungen zusammenstellen. ' +
-    'Hier sollst du ein weiteres wichtiges Gatter, das XOR-Gatter (engl.: eXclusive OR - exklusives Oder), programmieren.',
+    'Hier sollst du ein weiteres wichtiges Gatter, das XOR-Gatter (engl.: eXclusive OR - exklusives Oder), kennen lernen.',
         
   task: 'Schreibe eine Funktion <code>xor</code>, die zwei boolesche Werte als Parameter entgegennimmt. Die Rückgabe der Funktion soll <code>true</code> sein, ' +
     'wenn beide Paramter verschieden sind. In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>xor(true, false)</code> und ' +

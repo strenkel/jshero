@@ -17,12 +17,12 @@ jshero.koans.add({
     '  kgV++;<br>' +
     '  istTeilbarDurch6 = kgV % 6;<br>' +
     '  istTeilbarDurch8 = kgV % 8;<br>' + 
-    '} while(istTeilbarDurch6 !== 0 || istTeilbarDurch8 !== 0)</code></pre>' +
+    '} while (istTeilbarDurch6 !== 0 || istTeilbarDurch8 !== 0)</code></pre>' +
     'Dieser Codeabschnitt berechnet das kleinste gemeinsame Vielfache (kgV) von 6 und 8. ' +
     'Das ist die kleinste Zahl, die sowohl ein Vielfaches von 6 als auch ein Vielfaches von 8 ist. ' +
     'Die Vielfachen von 6 sind 6, 12, 18, 24, 30, ... und die Vielfachen von 8 sind 8, 16, 24, 32, ... . ' +
     'Damit ist das kgV von 6 und 8 die Zahl 24.<br>' +
-    'Unser Codebeispiel prüft beginnend mit <code>1</code>, ob <code>kgV</code> sowohl durch 6 als auch durch 8 teilbar ist. ' +
+    'Unser Codebeispiel prüft beginnend mit <code>1</code>, ob <code>kgV</code> sowohl durch <code>6</code> als auch durch <code>8</code> teilbar ist. ' +
     'Die Teilbarkeit wird mithilfe des Modulo-Operators überprüft. Eine Zahl ist durch 6 bzw. 8 teilbar, ' +
     'wenn sie Modulo 6 bzw. Modulo 8 den Wert 0 liefert. Die Modulo-Berechnung findet im Schleifencode statt. ' +
     'In der Schleifenbedingung wird dann überprüft, ob beide Modulo-Berechnungen <code>0</code> ergeben. Ist eine von beiden ' +
@@ -111,7 +111,7 @@ jshero.koans.add({
         msg: msg,
         e: e
       };
-    },
+    }
   ]
 
 });
