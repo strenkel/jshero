@@ -34,7 +34,8 @@ jshero.koans.add({
 
   task: 'Schreibe eine Funktion <code>isPrime</code>. Sie soll prüfen, ob eine übergebene Zahl eine Primzahl ist oder nicht. Ist die ' +
     'Zahl prim, so soll <code>true</code> zurückgegeben werden, im anderen Fall <code>false</code>. ' +
-    'Der Aufruf <code>isPrime(2)</code> soll <code>true</code> zurückgeben, <code>isPrime(4)</code> soll <code>false</code> ergeben. Beachte: 1 ist keine Primzahl.',
+    'Der Aufruf <code>isPrime(2)</code> soll <code>true</code> zurückgeben, <code>isPrime(4)</code> soll <code>false</code> ergeben. Tipp: ' +
+    'Eine Zahl ist eine Primzahl, wenn sie nur durch sich selber und durch 1 teilbar ist. 1 selber ist keine Primzahl.',
 
   beforeTests: function() {
     if (typeof isPrime !== "undefined") {

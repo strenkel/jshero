@@ -16,7 +16,7 @@ jshero.koans.add({
         
   task: 'Schreibe eine Funktion <code>nand</code>, die zwei boolesche Werte als Parameter entgegennimmt. Die Rückgabe der Funktion soll <code>false</code> sein, ' +
     'wenn beide Paramter <code>true</code> sind. In den anderen Fällen soll die Rückgabe <code>true</code> sein. <code>nand(true, true)</code> ' +
-    'soll <code>false</code> liefern, <code>nand(true, false)</code> soll <code>true</code> zurückgeben.',
+    'soll <code>false</code> liefern, <code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen <code>true</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof nand !== "undefined") {
@@ -97,6 +97,50 @@ jshero.koans.add({
         e: e
       };
     },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = nand(false, true);
+        ok = result === true;
+        if (ok) {
+          msg = '<code>nand(false, true)</code> ergibt <code>true</code>.';
+        } else {
+          msg = '<code>nand(false, true)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = "Fehler beim Aufruf von <code>nand(false, true)</code>.";
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = nand(false, false);
+        ok = result === true;
+        if (ok) {
+          msg = '<code>nand(false, false)</code> ergibt <code>true</code>.';
+        } else {
+          msg = '<code>nand(false, false)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = "Fehler beim Aufruf von <code>nand(false, false)</code>.";
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
+    }
 
   ]
 
