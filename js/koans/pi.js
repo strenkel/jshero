@@ -61,6 +61,7 @@ jshero.koans.add({
       } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>flaeche(1)</code>.";
+        e = exc;
       }
       return {
         ok: ok,
