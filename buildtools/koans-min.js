@@ -13,6 +13,7 @@ compressor.minify({
     'stringupper.js',
     'stringcharat.js',
     'stringindexof.js',
+    'stringindexof2.js',
     'number.js',
     'modulo.js',
     'mean.js',
