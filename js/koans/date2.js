@@ -1,33 +1,22 @@
 jshero.koans.add({
 
-  id: 'date',
+  id: 'date2',
 
-  title: 'Datum und Uhrzeit',
+  title: 'Datum und Uhrzeit ausgeben',
 
-  lesson: 'Um mit Datum und Uhrzeit zu arbeiten verwendet man <code>Date</code>-Objekte. Ein <code>Date</code>-Objekt repräsentiert ' +
-    'einen Zeitpunkt, also ein Datum zusammen mit einer Uhrzeit. Die Uhrzeit wird dabei auf die Millisekunde genau festgelegt. ' +
-    'Ein Date-Objekt erzeugt man mit <code>new Date()</code>. Es gibt 4 mögliche Aufrufe: ' +
-    '<pre><code>// aktueller Zeitpunkt<br>var d1 = new Date();</code></pre>' +
-    'Ohne Parameter erzeugt <code>new Date()</code> ein Date-Objekt, dass dem Zeitpunkt seines Aufrufs entspricht. Wird obiges Beispiel ' +
-    'am 1. Mai 2017 um 8:15 Uhr aufgerufen, so enthält <code>d1</code> eben diesen Zeitpunkt.<br>' +
-    '<pre><code>// Aufruf mit Jahr, Monat, Tag, Stunde,<br>// Stunde, Minute, Sekunde, Millisekunde<br>var d2 = new Date(2017, 2, 8, 16, 31, 10, 117);</code></pre>' +
-    'Möchte man ein Date-Objekt zu einem bestimmten Zeitpunkt erstellen, verwendet man am besten die zweite Möglichkeit. ' +
-    'Hier übergibt man als Parameter das Jahr, den Monat, den Tag, die Stunde, die Minute, die Sekunde und die Millisekunde. ' +
-    'Das Jahr muss in voller Länge übergeben werden. <code>17</code> ergibt das Jahr 17 n. Chr. und <code>2017</code> das Jahr 2017 n. Chr. ' +
-    'Bei dem Monat muss man aufpassen. JavaScript nummeriert die Monate von 0 (Januar) bis 11 (Dezember). Alle weitere Zahlen entsprechen der üblichen ' +
-    'Bedeutung. <code>d2</code> repräsentiert also den Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden.<br>' +
-    'Die Parameter Millisekunde, Sekunde, Minute, Stunde und Tag sind - in dieser Reihenfolge - optional. Man kann sie weglassen. ' +
-    'Gibt man sie nicht an, werden die Zeitangaben automatisch auf 0 gesetzt. Der Tag wird auf den Monatsersten gesetzt. ' +
-    'Das ist besonders praktisch, wenn man nur mit einem Datum arbeiten möchte. ' +
-    'Dann läßt man einfach alle Zeitangaben weg. <code>new&nbsp;Date(2017, 5, 2)</code> ist der 2.6.2017, 0:00 Uhr.<br>' +
-    '<pre><code>// Millisekunden seit dem 1.1.1970<br>var d3 = new Date(86400000);</code></pre>' +
-    'Bei der dritten Variante übergibt man die vergangenen Millisekunden seit dem 1.1.1970, 0:00 Uhr. Der Bezugspunkt 1.1.1970 für Datumsangaben ist seit den ' +
-    'Tagen von Unix und der Programmiersprache C in der IT üblich geworden. Ein Tag hat 24 * 60 * 60 * 1000 = 86400000 Millisekunden. <code>d3</code> ist ' +
-    'also der 2.1.1970, 0:00 Uhr.<br>' +
-    '<pre><code>// Übergabe eines Datumsstrings<br>var d4 = new Date("2017-3-8T16:31:10.117");</code></pre>' +
-    'Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d.h. in einer bestimmten Schreibweise, übergeben. ' +
-    '<code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden. Diese Varainte ist jedoch nicht zu empfehlen, ' +
-    'da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufweisen.',
+  lesson: 'Zur Ausgabe der Daten eines Date-Objekts gibt es 7 Methoden:' +
+    '<pre><code>' +
+    'var startFastnacht = new Date(2017, 10, 11, 11, 11);<br>' +
+    'var jahr = startFastnacht.getFullYear(); // =2017<br>' +
+    'var monat = startFastnacht.getMonth(); // =10<br>' +
+    'var tag = startFastnacht.getDate(); // =11<br>' +
+    'var stunde = startFastnacht.getHour(); // =11<br>' +
+    'var minute = startFastnacht.getMinutes(); // =11<br>' +
+    'var sekunde = startFastnacht.getSeconds(); // = 0<br>' +
+    'var millisekunde = startFastnacht.getMilliseconds(); // = 0<br>' +
+    '</code></pre>' +
+    'Man erhält die erwarteten Werte. Lediglich beim Monat muss man auspassen. Wie beim Erzeugen eines Date-Objektes mit <code>new Date()</code> ' +
+    'beginnt die Monatszählung auch hier mit <code>0</code>. Der Wert <code>10</code> entspricht dem November.',
 
   task: 'Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und die dessen Datum im Format "d.M.YYYY" zurückgibt. ' +
     'Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>"8.3.2017"</code> zurückgeben.',
