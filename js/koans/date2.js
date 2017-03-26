@@ -15,8 +15,9 @@ jshero.koans.add({
     'var sekunde = startFastnacht.getSeconds();<br>' +
     'var millisekunde = startFastnacht.getMilliseconds();<br>' +
     '</code></pre>' +
-    'Man erhält die erwarteten Werte: 2017 für das Jahr, 10 für den Monat, 11 für den Tag, die Stunde und die Minute, sowie 0 für die Sekunde und die Millisekunde. ' + 
-    'Die Monatszählung beginnt wie beim Erzeugen eines Date-Objektes mit <code>0</code>. Der Wert <code>10</code> entspricht für den November.',
+    'Man erhält die erwarteten Werte: <code>2017</code> für das Jahr, <code>10</code> für den Monat, <code>11</code> für den Tag, die Stunde und die Minute, ' +
+    'sowie <code>0</code> für die Sekunde und die Millisekunde. ' +
+    'Die Monatszählung beginnt wie beim Erzeugen eines Date-Objektes mit <code>0</code>. <code>10</code> steht für den November.',
 
   task: 'Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und die dessen Datum im Format "d.M.YYYY" zurückgibt. ' +
     'Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>"8.3.2017"</code> zurückgeben.',
