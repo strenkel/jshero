@@ -6,7 +6,7 @@ jshero.koans.add({
 
   title: 'Datum und Uhrzeit',
 
-  lesson: 'Um mit Datum und Uhrzeit zu arbeiten verwendet man <code>Date</code>-Objekte. Ein <code>Date</code>-Objekt repräsentiert ' +
+  lesson: 'Um mit Datum und Uhrzeit zu arbeiten, verwendet man <code>Date</code>-Objekte. Ein <code>Date</code>-Objekt repräsentiert ' +
     'einen Zeitpunkt, also ein Datum zusammen mit einer Uhrzeit. Die Uhrzeit wird dabei auf die Millisekunde genau festgelegt. ' +
     'Ein Date-Objekt erzeugt man mit <code>new Date()</code>. Es gibt 4 mögliche Aufrufe: ' +
     '<pre><code>// aktueller Zeitpunkt<br>var d1 = new Date();</code></pre>' +
@@ -16,7 +16,7 @@ jshero.koans.add({
     'Möchte man ein Date-Objekt zu einem bestimmten Zeitpunkt erstellen, verwendet man am besten die zweite Möglichkeit. ' +
     'Hier übergibt man als Parameter das Jahr, den Monat, den Tag, die Stunde, die Minute, die Sekunde und die Millisekunde. ' +
     'Das Jahr muss in voller Länge übergeben werden. <code>17</code> ergibt das Jahr 17 n. Chr. und <code>2017</code> das Jahr 2017 n. Chr. ' +
-    'Bei dem Monat muss man aufpassen. JavaScript nummeriert die Monate von 0 (Januar) bis 11 (Dezember). Alle weitere Zahlen entsprechen der üblichen ' +
+    'Bei dem Monat muss man aufpassen. JavaScript nummeriert die Monate von 0 (Januar) bis 11 (Dezember). Alle weiteren Zahlen entsprechen der üblichen ' +
     'Bedeutung. <code>d2</code> repräsentiert also den Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden.<br>' +
     'Die Parameter Millisekunde, Sekunde, Minute, Stunde und Tag sind - in dieser Reihenfolge - optional. Man kann sie weglassen. ' +
     'Gibt man sie nicht an, werden die Zeitangaben automatisch auf 0 gesetzt. Der Tag wird auf den Monatsersten gesetzt. ' +

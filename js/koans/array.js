@@ -15,7 +15,7 @@ jshero.koans.add({
     'var allesMoegliche = [a, b, c];</code></pre>' +
     'Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen anderen Datentyp besitzen.',
         
-  task: 'Schreibe ein Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt. ' +
+  task: 'Schreibe eine Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt. ' +
     '<code>toArray(5, 9)</code> sollte das Array <code>[5, 9]</code> ergeben.',
 
   beforeTests: function() {
