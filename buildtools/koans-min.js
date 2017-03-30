@@ -43,7 +43,8 @@ compressor.minify({
     'ggt.js',
     'break.js',
     'date.js',
-    'date2.js'
+    'date2.js',
+    'further.js'
   ],
   output: '../js/koans-min/koans.js',
   callback: function(err, min) {
