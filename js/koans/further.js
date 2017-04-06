@@ -2,9 +2,9 @@ jshero.koans.add({
 
   id: "further",
 
-  title: "... wird fortgesetzt ...",
+  title: "Fortsetzung folgt ...",
 
-  lesson: 'JS Hero wird fortgesetzt. Weitere Übungen folgen in Kürze. Zum Abschluss noch eine anspruchsvolle Aufgabe aus dem Gebiet der Mathematik.' ,
+  lesson: 'JS Hero wird fortgesetzt. Weitere Übungen folgen. Zum Abschluss noch eine Aufgabe aus dem Gebiet der Mathematik.' ,
         
   task: 'Schreibe eine Funktion <code>quersumme</code>, die die Quersumme einer natürlichen Zahl berechnet. ' +
     'Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)</code> sollte <code>18</code> ergeben.',

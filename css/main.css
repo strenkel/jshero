@@ -207,3 +207,7 @@ nav a {
 .reset-confirmation-button {
   margin-bottom: 0.5em;
 }
+
+#intro #lesson a, #info #lesson a {
+  color: black;
+}
