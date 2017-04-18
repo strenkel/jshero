@@ -72,7 +72,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = ungleich(1, 1, 2);
         ok = result === false;

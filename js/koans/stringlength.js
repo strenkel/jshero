@@ -10,7 +10,7 @@ jshero.koans.add({
     '<code>"Franz"</code> hat 5 Zeichen. Also hat <code>anzahl</code> jetzt den Wert <code>5</code>.' +
     '<pre><code>var stadt = "Prag";<br>anzahl = stadt.length;</code/></pre>' +
     '<code>"Prag"</code> hat 4 Zeichen. <code>anzahl</code> hat jetzt den Wert <code>4</code>.' +
-    '<pre><code>anzahl = "".length</code/></pre>' + 
+    '<pre><code>anzahl = "".length;</code/></pre>' + 
     'Der Leerstring besitzt keine Zeichen. Der Wert von <code>anzahl</code> ist jetzt <code>0</code>.',
 
   task: 'Schreibe eine Funktion <code>laenge</code>, die bei Übergabe eines Strings die Anzahl der Zeichen dieses Strings zurückgibt. ' +

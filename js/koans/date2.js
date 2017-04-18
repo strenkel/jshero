@@ -19,7 +19,7 @@ jshero.koans.add({
     'sowie <code>0</code> für die Sekunde und die Millisekunde. ' +
     'Die Monatszählung beginnt wie beim Erzeugen eines Date-Objektes mit <code>0</code>. <code>10</code> steht für den November.',
 
-  task: 'Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und die dessen Datum im Format "d.M.YYYY" zurückgibt. ' +
+  task: 'Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und dessen Datum im Format "d.M.YYYY" zurückgibt. ' +
     'Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>"8.3.2017"</code> zurückgeben.',
 
   beforeTests: function() {

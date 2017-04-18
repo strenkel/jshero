@@ -42,6 +42,7 @@ compressor.minify({
     'dowhile.js',
     'ggt.js',
     'break.js',
+    /*'comment.js',*/
     'date.js',
     'date2.js',
     'further.js'
