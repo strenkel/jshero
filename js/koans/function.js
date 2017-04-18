@@ -12,7 +12,7 @@ jshero.koans.add({
     'werden nicht mehr ausgeführt. Funktionen kann man Variablen zuordnen. Die Funktion trägt dann den Namen der Variablen. Mit ' +
     '<pre><code>var farbe = function() {<br>  return "grün";<br>};</code></pre> definieren wir eine Funktion <code>farbe</code>, ' +
     'die <code>"grün"</code> zurückgibt. Die Funktion nimmt keine Paramter entgegen (die runde Klammer ist leer) und sie enthält genau ' +
-    'eine Anweisung, die Rückgabe.<br> Der Aufruf einer Funktion geschiet über ihren Namen. Mit <pre><code>var ergebnis = farbe();</code></pre>' +
+    'eine Anweisung, die Rückgabe.<br> Der Aufruf einer Funktion geschieht über ihren Namen. Mit <pre><code>var ergebnis = farbe();</code></pre>' +
     'wird die Funktion <code>farbe</code> ausgeführt und ihre Rückgabe der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
     'dann den Wert <code>"grün"</code>.',
         
