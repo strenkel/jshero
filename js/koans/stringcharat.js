@@ -52,7 +52,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = abkuerzung('Hansestadt', 'Bremen');
         ok = result === "HB";
@@ -61,18 +61,20 @@ jshero.koans.add({
         } else {
           msg = '<code>abkuerzung("Hansestadt", "Bremen")</code> gibt nicht <code>"HB"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
+        e = exc;
         ok = false;
         msg = 'Fehler beim Aufruf von <code>abkuerzung("Hansestadt", "Bremen")</code>.';
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = abkuerzung('Java', 'Script');
         ok = result === "JS";
@@ -81,13 +83,15 @@ jshero.koans.add({
         } else {
           msg = '<code>abkuerzung("Java", "Script")</code> gibt nicht <code>"JS"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>abkuerzung("Java", "Script")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 

@@ -53,7 +53,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = laenge('Hallo Welt!');
         ok = result === 11;
@@ -62,18 +62,20 @@ jshero.koans.add({
         } else {
           msg = '<code>laenge("Hallo Welt!")</code> gibt nicht <code>11</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>laenge("Hallo Welt!")</code>.';
+        e: exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
     
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = laenge('');
         ok = result === 0;
@@ -82,13 +84,15 @@ jshero.koans.add({
         } else {
           msg = '<code>laenge("")</code> gibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>laenge("")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
   ]

@@ -54,7 +54,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = indexOfIgnoreCase("Fred Feuerstein", "FEUER");
         ok = result === 5;
@@ -63,18 +63,20 @@ jshero.koans.add({
         } else {
           msg = '<code>indexOfIgnoreCase("Fred Feuerstein", "FEUER")</code> gibt nicht <code>5</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>indexOfIgnoreCase("Fred Feuerstein", "FEUER")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     },
 
     function() {
-      var ok, msg;
+      var ok, msg, e;
       try {
         var result = indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer");
         ok = result === 6;
@@ -83,13 +85,15 @@ jshero.koans.add({
         } else {
           msg = '<code>indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer")</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(e) {
+      } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer")</code>.';
+        e = exc;
       }
       return {
         ok: ok,
-        msg: msg
+        msg: msg,
+        e: e
       };
     }
 
