@@ -22,9 +22,19 @@ jshero.koans.add({
     ' * dienen nur zur Verzierung.<br>' +
     ' * So sieht ein längerer Blockkommentar<br>' +
     ' * übersichtlicher aus.<br>' +
-    ' * Dies wird meist für allgemeine<br>' +
-    ' * Kommentare genutzt.<br>' +
     ' */</code></pre>' +
+    'Block-Kommentare schreibt man gerne über Funktionen, Zeilen-Kommentare in den Code-Fluss.' +
+    '<pre><code>' +
+    '/**<br>' +
+    ' * Prüft, ob eine String mindestens ein Zeichen,<br>' +
+    ' * das kein Leerzeichen ist, enthält.<br>' +
+    ' */<br>' +
+    'var istLeer = function(string) {<br>' +
+    '  // Die Methode trim() entfernt Leerzeichen<br>' +
+    '  // an beiden Enden einer Zeichenfolge.<br>' +
+    '  var ohneLeerzeichen = string.trim();<br>' +
+    '  return ohneLeerzeichen.length === 0;<br>' +
+    '};</code></pre>' +
     'Da Kommentare mit den hier verwendeten Tests nicht überprüfen werden können, eine Aufgabe, bei der man vieles von dem bisher Gelernten anwenden muss.',
         
   task: 'Schreibe ein Funktion <code>median</code>, die ein Array von aufsteigend sortierten Zahlen entgegennimmt und die den Median dieser Zahlen zurückgibt. ' +
