@@ -52,7 +52,7 @@ jshero.koans.add({
       } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>hallo()</code>.";
-        e: exc;
+        e = exc;
       }
       return {
         ok: ok,

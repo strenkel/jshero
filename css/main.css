@@ -27,7 +27,7 @@ button:hover {
 }
 
 code {
-  color: #0033ff;
+  color: #0033ff; /* blau */
 }
 
 nav {
@@ -36,7 +36,7 @@ nav {
   text-align: center;
   position: absolute;
   width: 100%;
-  background-color: #bbb;
+  background-color: #bbb; /* grau */
   display: none;
   padding: 2em 0 3em 0;
 }
@@ -54,7 +54,7 @@ nav a {
 }
 
 #header {
-  background-color: #14A62C;
+  background-color: #14A62C; /* gruen */
   font-size: 1em;
   color: white;
   height: 3em;
@@ -65,11 +65,11 @@ nav a {
 }
 
 #header.green {
-  background-color: #14A62C;
+  background-color: #14A62C; /* gruen */
 }
 
 #header.red {
-  background-color: #e30000;
+  background-color: #e30000; /* rot */
 }
 
 #title {
@@ -145,14 +145,13 @@ nav a {
 }
 
 #messages p.red {
-  border-color: #e30000;
-  color: #e30000;
+  border-color: #e30000; /* rot */
+  color: #e30000; /* rot */
 }
 
 #messages p.green {
-  border-color: #0f7820;
-  color: #0f7820;
-
+  border-color: #0f7820; /* dunkelgruen */
+  color: #0f7820; /* dunkelgruen */
 }
 
 .link-button {
@@ -173,17 +172,24 @@ nav a {
   margin-top: 2em;
 }
 
+#logs {
+  color: #000;
+  font-family: monospace;
+  font-size: 0.85em;
+  padding: 0.5em 0 1em 1em;
+}
+
 #start-hero {
   margin: 2em 0;
 }
 
 #success .green {
-  color: #0f7820;
-
+  color: #0f7820; /* dunkelgruen */
+ 
 }
 
 #success .red {
-  color: #e30000;
+  color: #e30000; /* rot */
 }
 
 #koans a {

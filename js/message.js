@@ -6,8 +6,17 @@ jshero.message = (function() {
 
   var messageRoot = document.getElementById('messages');
 
-  var log = function(message, type, e) {
-    var paragraph = document.createElement('p');
+  var log = function(message, type, e, logs) {
+
+    logs = logs || [];
+    var logsElm = document.createElement('div');
+    logsElm.id = "logs";
+    for (var i = 0, l = logs.length; i < l; i++) {
+      var logElm = document.createElement('div');
+      logElm.innerHTML = logs[i];
+      logsElm.appendChild(logElm);
+    }
+
     var errormessage = "";
     if (e) {
       errormessage = errormessage + e;
@@ -20,7 +29,15 @@ jshero.message = (function() {
       }
       errormessage = errormessage + ". ";
     }
-    paragraph.innerHTML = errormessage + message;
+
+
+    var messageElm = document.createElement('div');
+    messageElm.innerHTML = errormessage + message;
+    var paragraph = document.createElement('p');
+    if (logs.length > 0) {
+      paragraph.appendChild(logsElm);
+    }
+    paragraph.appendChild(messageElm);
     paragraph.className = type ? 'green' : 'red';
     messageRoot.appendChild(paragraph);
   };

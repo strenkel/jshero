@@ -52,6 +52,7 @@
       okAll = true;
       var tests = koan.tests;
       for (var i = 0, l = tests.length; i < l; i++) {
+        jshero.clearLogs();
         try {
           result = tests[i]();
         } catch (exc) {
@@ -62,7 +63,7 @@
             e: exc
           };
         }
-        msg.log(result.msg, result.ok, result.e);
+        msg.log(result.msg, result.ok, result.e, jshero.getLogs());
         if(!result.ok) {
           okAll = false;
           break;
@@ -103,6 +104,7 @@
       return false;
     }
     try {
+      // global eval: it works at global scope rather than local scope
       var geval = eval;
       geval(code);
       msg.log("Die Syntax ist korrekt.", true);
