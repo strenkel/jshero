@@ -9,6 +9,7 @@ compressor.minify({
     'function.js',
     'parameter.js',
     'string.js',
+    'log.js',
     'stringlength.js',
     'stringupper.js',
     'stringcharat.js',
