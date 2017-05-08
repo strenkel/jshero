@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: "Loggen",
 
-  lesson: 'Wenn man Programme schreibt, laufen die Dinge häufig nicht so wie man will. Es kommt einfach nicht das ' +
+  lesson: 'Wenn man Programme schreibt, laufen die Dinge manchmal nicht so wie man will. Es kommt einfach nicht das ' +
     'gewünschte Ergebnis heraus und man weiß nicht warum. Eine Möglichkeit hier weiter ' +
     'zu kommen ist das Loggen. Man läßt sich den Wert von Variablen während der Programmausführung ausgeben. In JavaScript macht man ' +
     'das mit der Funktion <code>console.log</code>.' +
@@ -14,25 +14,25 @@ jshero.koans.add({
     'mitteilung = mitteilung + " Franz!";<br>' +
     'console.log(mitteilung);<br>' +
     '</code></pre>' +
-    'Hier geben wir den Wert von <code>mitteilung</code> zweimal mit <code>console.log</code> aus. Beim ersten Log wird der initiale Werte von ' +
+    'Wir geben den Wert von <code>mitteilung</code> zweimal mit <code>console.log</code> aus. Beim ersten Log wird der initiale Werte von ' +
     '<code>mitteilung</code> ausgegeben. Beim zweiten Log sehen wir, welchen Wert <code>mitteilung</code> nach der Änderung hat. ' +
     'So können wir feststellen, welchen Wert Variablen an bestimmen Stellen des Programmsablaufs besitzen und wie sich dieser Wert im Ablauf ändert. ' +
     'In unserem Beispiel erhalten wir nacheinander die Ausgaben <code>"Hallo"</code> und <code>"Hallo Franz!"</code>.<br><br>' +
-    'Wo man die Ausgaben zu sehen bekommt, hängt von der JavaScript-Umgebung ab. Node.js wird in einer klassische Konsole gestartet. Dort erscheint dann auch die Log-Ausgabe. ' +
+    'Wo man das Log zu sehen bekommt, hängt von der JavaScript-Umgebung ab. Node.js wird in einer klassischen Konsole gestartet. Dort wird auch das Log ausgegeben. ' +
     'In Browsern sieht man die Log-Ausgabe im normalen Betrieb nicht. Doch jeder Browser besitzt sogenannte Entwickler-Werkzeuge. Das sind mächtige Tools zur Unterstützung ' +
-    'von Webentwicklern. Eines dieser Tools ist die Konsole. Dort wird u.a das Log ausgegeben. Wie man die Entwickler-Werkzeuge öffnet hängt von jeweiligen Browser ab. ' +
-    'Bei vielen Browsern (z.B. Firefox) öffnet sie sich über die Taste F12. Die Konsole kannst du dann als Reiter auswählen. ' +
-    'Benutzt du <em>JavaScript Hero</em> im Browser (www.jshero.net) kannst du das sofort ausprobieren. Öffne die Entwickler-Konsole mit F12, schreibe unten in das Lösungsfeld ' +
+    'von Webentwicklern. Eines dieser Tools ist die Konsole. Dort wird das Log ausgegeben. Wie man die Entwickler-Werkzeuge öffnet hängt vom jeweiligen Browser ab. ' +
+    'Bei vielen Browsern (z.B. Firefox) wird sie mit der Taste F12 geöffnet. Die Konsole kannst du dann als Reiter auswählen. ' +
+    'Benutzt du JavaScript Hero im Browser, dann kannst du das sofort ausprobieren. Öffne die Entwickler-Konsole (im Firefox mit F12), schreibe unten in das Lösungsfeld ' +
     '<code>console.log("Hallo Konsole!")</code> und führe die Tests aus. In der Entwickler-Konsole erscheint "Hallo Konsole!".<br><br>' +
-    'Da es sinnvoll ist, das Log direkt in der Testausgabe zu sehen, besitzt <em>JavaScript Hero</em> eine eigene Log-Funktion: <code>jshero.log</code>. ' +
+    'Da es sinnvoll ist, das Log direkt in der Testausgabe zu sehen, besitzt JavaScript Hero eine eigene Log-Funktion: <code>jshero.log</code>. ' +
     'Diese Funktion loggt so wie oben <code>console.log</code>. Die Ausgabe wird allerdings nicht in die Entwickler-Konsole, sondern in die Testausgabe geschrieben. ' +
-    'So sieht man genau, was bei welchem Testaufruf geloggt wird. <code>jshero.log</code> kannst du in jeder Lektion verwenden. Der vollständiger halber seien zwei Unterschiede zwischen dem ' +
+    'So sieht man genau, was bei welchem Testaufruf geloggt wird. <code>jshero.log</code> kannst du in jeder Lektion verwenden! Der Vollständigkeit halber seien zwei Unterschiede zwischen dem ' +
     'Loggen mit <code>console.log</code> und <code>jshero.log</code> genannt: (i) <code>console.log</code> kann mehrere Paramter gleichzeitig loggen ' +
     'und es loggt Objekte (diese werden wir später kennen lernen) in ihrer Objekt-Notation. (ii) <code>jshero.log</code> loggt nicht beim Einlesen des Lösungs-Codes. ' + 
     'Es ist nur beim Aufruf deiner Lösungsfunktion aktiv. Dadurch werden Log-Aufrufe außerhalb deiner Lösungsfunktion mit <code>jshero.log</code> nicht geloggt, während sie ' +
     'mit <code>console.log</code> geloggt werden.',
         
-  task: 'Schreibe eine Funktion <code>rufe</code>, die eine String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt. ' +
+  task: 'Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt. ' +
     'Gleichzeitig soll der Eingangsparameter und die Rückgabe mit <code>jshero.log</code> geloggt werden. Der Aufruf <code>rufe("Werder")</code> ' +
     'sollte <code>"WerderWerder"</code> zurückgeben und es sollte nacheinander <code>"Werder"</code> und <code>"WerderWerder"</code> geloggt werden.',
 

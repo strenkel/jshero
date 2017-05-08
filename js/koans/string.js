@@ -10,7 +10,7 @@ jshero.koans.add({
     'bezeichnet man auch als Zeichenkette oder String. Strings schreibt man immer in einfachen oder doppelten Anführungszeichen. So ist "Hallo Welt!" derselbe String ' +
     'wie \'Hallo Welt!\'.<br>Mit Strings kann man arbeiten. Man kann sie zum Beispiel verketten. Dies macht man mit dem <code>+</code> Zeichen. ' +
     'So liefert <code>"Java" + "Script"</code> den String <code>"JavaScript"</code>.<br>Die folgende Funktion hängt an dem übergebenen Parameter einen Text an und ' +
-    'gibt den zusammengesetzten Text zurück: <pre><code>var lobe = function(name) {<br>  return name + " ist toll!";<br>}</code></pre>' + 
+    'gibt den zusammengesetzten Text zurück: <pre><code>var lobe = function(name) {<br>  return name + " ist toll!";<br>};</code></pre>' + 
     'So liefert <code>lobe("JavaScript")</code> den Wert <code>"JavaScript ist toll!"</code>.', 
         
   task: 'Schreibe eine Funktion <code>begruesse</code>, die einen Parameter entgegennimmt und die <code>"Hallo &lt;Parameter&gt;!"</code> zurückgibt. ' +
