@@ -27,8 +27,8 @@ jshero.koans.add({
     'Da es sinnvoll ist, das Log direkt in der Testausgabe zu sehen, besitzt JavaScript Hero eine eigene Log-Funktion: <code>jshero.log</code>. ' +
     'Diese Funktion loggt so wie oben <code>console.log</code>. Die Ausgabe wird allerdings nicht in die Entwickler-Konsole, sondern in die Testausgabe geschrieben. ' +
     'So sieht man genau, was bei welchem Testaufruf geloggt wird. <code>jshero.log</code> kannst du in jeder Lektion verwenden! Der Vollständigkeit halber seien zwei Unterschiede zwischen dem ' +
-    'Loggen mit <code>console.log</code> und <code>jshero.log</code> genannt: (i) <code>console.log</code> kann mehrere Paramter gleichzeitig loggen ' +
-    'und es loggt Objekte (diese werden wir später kennen lernen) in ihrer Objekt-Notation. (ii) <code>jshero.log</code> loggt nicht beim Einlesen des Lösungs-Codes. ' + 
+    'Loggen mit <code>console.log</code> und <code>jshero.log</code> genannt: (i)&nbsp;<code>console.log</code> kann mehrere Paramter gleichzeitig loggen ' +
+    'und es loggt Objekte (diese werden wir später kennen lernen) in ihrer Objekt-Notation. (ii)&nbsp;<code>jshero.log</code> loggt nicht beim Einlesen deines Lösungs-Codes. ' + 
     'Es ist nur beim Aufruf deiner Lösungsfunktion aktiv. Dadurch werden Log-Aufrufe außerhalb deiner Lösungsfunktion mit <code>jshero.log</code> nicht geloggt, während sie ' +
     'mit <code>console.log</code> geloggt werden.',
         

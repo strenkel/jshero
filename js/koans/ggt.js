@@ -73,28 +73,6 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = ggT(12, 18);
-        ok = result === 6;
-        if (ok) {
-          msg = '<code>ggT(12, 18)</code> gibt <code>6</code> zurück.';
-        } else {
-          msg = '<code>ggT(12, 18)</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>ggT(12, 18)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    },
-
-    function() {
-      var ok, msg, e;
-      try {
         var result = ggT(5, 7);
         ok = result === 1;
         if (ok) {
@@ -112,7 +90,74 @@ jshero.koans.add({
         msg: msg,
         e: e
       };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = ggT(7, 5);
+        ok = result === 1;
+        if (ok) {
+          msg = '<code>ggT(7, 5)</code> gibt <code>1</code> zurück.';
+        } else {
+          msg = '<code>ggT(7, 5)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>ggT(7, 5)</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = ggT(2, 4);
+        ok = result === 2;
+        if (ok) {
+          msg = '<code>ggT(2, 4)</code> gibt <code>2</code> zurück.';
+        } else {
+          msg = '<code>ggT(2, 4)</code> gibt nicht <code>2</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>ggT(2, 4)</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = ggT(4, 2);
+        ok = result === 2;
+        if (ok) {
+          msg = '<code>ggT(4, 2)</code> gibt <code>2</code> zurück.';
+        } else {
+          msg = '<code>ggT(4, 2)</code> gibt nicht <code>2</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>ggT(4, 2)</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
     }
+
   ]
 
 });

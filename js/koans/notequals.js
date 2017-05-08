@@ -135,6 +135,28 @@ jshero.koans.add({
         msg: msg,
         e: e
       };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = ungleich("1", 1, true);
+        ok = result === true;
+        if (ok) {
+          msg = '<code>ungleich("1", 1, true)</code> ergibt <code>true</code>.';
+        } else {
+          msg = '<code>ungleich("1", 1, true)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>ungleich("1", 1, true)</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
     }
 
   ]
