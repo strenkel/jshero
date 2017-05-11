@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'if',
 
-  lesson: 'Sehr häufig kommt es vor, dass Code nur dann ausgeführt werden soll, wenn eine bestimmte Bedingung erfüllt ist. ' +
+  lesson: 'Häufig soll Code nur dann ausgeführt werden, wenn eine bestimmte Bedingung erfüllt ist. ' +
     'Dazu verwendet man die <code>if</code>-Anweisung.' +
     '<pre><code>var gewinn = 0;<br>if (wuerfelzahl === 6) {<br>  gewinn = 100;<br>}</code></pre>' +
     'Diese Anweisung besteht aus dem Schlüsselwort <code>if</code> (engl: wenn) gefolgt von runden Klammern. In den runden Klammern steht ein ' +
@@ -15,8 +15,7 @@ jshero.koans.add({
     '<code>100</code> gesetzt. Hat <code>wuerfelzahl</code> nicht den Wert <code>6</code>, bleibt <code>gewinn</code> bei <code>0</code>.',
         
   task: 'Schreibe eine Funktion <code>gleich</code>, die 2 Werte auf strikte Gleichheit überprüft. Sind die beiden Werte gleich, so soll ' +
-    'der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie ungleich, so soll man <code>"UNGLEICH"</code> erhalten. Tipp: Verwende zwei <code>return</code>' +
-    '-Anweisungen. Eine innerhalb des <code>if</code>-Anweisungsblocks, eine im Anschluss an diesem Block.',
+    'der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie ungleich, so soll man <code>"UNGLEICH"</code> erhalten.',
 
   beforeTests: function() {
     if (typeof gleich !== "undefined") {

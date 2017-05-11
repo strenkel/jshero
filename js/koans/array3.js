@@ -13,8 +13,8 @@ jshero.koans.add({
     'sprachen[3] = "JavaScript";</code></pre>' +
     'Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt.',
         
-  task: 'Schreibe ein Funktion <code>setFirstElement</code>, die ein Array und eine beliebige Variable entgegennimmt ' +
-    'und die die Variable als erstes Element in das Array schreibt. ' +
+  task: 'Schreibe ein Funktion <code>setFirstElement</code>, die ein Array und eine beliebige Variable entgegennimmt. ' +
+    'Die Variable soll als erstes Element in das Array geschrieben werden. Das Array soll dann zurückgegeben werden. ' +
     '<code>setFirstElement([1, 2], 3)</code> sollte <code>[3, 2]</code> zurückgeben.',
 
   beforeTests: function() {
