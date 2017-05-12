@@ -9,17 +9,18 @@ jshero.koans.add({
     'Folgende Beispiele geben <code>19</code> oder <code>-19</code> zurück: ' +
     '<pre><code>' +
     'var n1 = parseInt("19", 10);<br>' +
-    'var n2 = parseInt("-19", 10);<br>' +
-    'var n3 = parseInt("19 Grad", 10);<br>' +
-    'var n4 = parseInt("19.1", 10);<br>' +
-    'var n5 = parseInt("019", 10);<br>' +
-    'var n6 = parseInt(" 19", 10);<br>' +
+    'var n2 = parseInt("+19", 10);<br>' +
+    'var n3 = parseInt("-19", 10);<br>' +
+    'var n4 = parseInt("19 Grad", 10);<br>' +
+    'var n5 = parseInt("19.1", 10);<br>' +
+    'var n6 = parseInt("019", 10);<br>' +
+    'var n7 = parseInt(" 19", 10);<br>' +
     '</code></pre>' +
-    'Neben dem direkten Einlesen von ganzen Zahlen (n1, n2) beherrscht <code>parseInt</code> auch einige komplexe Fälle. Nicht-numerische Zeichen nach ' +
-    'der ganzen Zahl (n3, n4) sowie Nullen (n4) und Leerzeichen (n6) vor der Zahl werden ignoriert.<br><br>' +
+    'Neben dem direkten Einlesen von ganzen Zahlen mit oder ohne Vorzeichen (n1, n2, n3) beherrscht <code>parseInt</code> auch einige komplexe Fälle. Nicht-numerische Zeichen nach ' +
+    'der ganzen Zahl (n4, n5) sowie Nullen (n6) und Leerzeichen (n7) vor der Zahl werden ignoriert.<br><br>' +
     'In allen Beispielen ist der zweite an <code>parseInt</code> übergebene Parameter <code>10</code>. Dieser Paramter gibt an, zu welcher Basis die Zahl ' +
     'interpretiert werden soll. <code>10</code> steht für das übliche Dezimalsystem. Läßt man den zweiten Paramter weg, wird normalerweise das Dezimalsystem als Default verwendet. ' +
-    'Da es aber von dieser Regel Außnahmen gibt und diese Ausnahmen in verschiedenen Browsern auch noch unterschiedlich gehandhabt werden, sollte man immer die Basis mit angeben!<br><br>' +
+    'Da es aber von dieser Regel Ausnahmen gibt und diese Ausnahmen in verschiedenen Browsern auch noch unterschiedlich gehandhabt werden, sollte man immer die Basis mit angeben!<br><br>' +
     'Kann <code>parseInt</code> keine Zahl einlesen, gibt sie den Wert <code>NaN</code> (engl.: Not a Number) zurück:' +
     '<pre><code>' +
     'var n1 = parseInt("Nur Text", 10);<br>' +

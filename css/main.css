@@ -217,3 +217,7 @@ nav a {
 #intro #lesson a, #info #lesson a {
   color: black;
 }
+
+#privacy {
+  font-size: 0.9em;
+}

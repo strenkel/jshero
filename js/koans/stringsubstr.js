@@ -14,7 +14,7 @@ jshero.koans.add({
     'Ist der zweite Paramter nicht angegeben, so wird immer bis zum Ende des ursprüglichen Strings extrahiert.',
 
   task: 'Schreibe eine Funktion <code>firstWord</code>, die einen String entgegennimmt und das erste Wort in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ' +
-    'ersten Leerzeichen. <code>firstWord("Wo ist hier")</code> sollte "Wo" zurückgeben.',
+    'ersten Leerzeichen. <code>firstWord("Wo ist hier")</code> sollte <code>"Wo"</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof firstWord !== "undefined") {
