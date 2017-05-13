@@ -17,23 +17,23 @@ jshero.koans.add({
     'über mehrere Zeilen. */<br><br>' +
     '/**<br>' +
     ' * Auch dies ist ein Blockkommentar.<br>' +
-    ' * Die zusätzlichen Sterne zwischen dem Beginn<br>' +
-    ' * und dem Ende des Blockkommentars<br>' +
-    ' * dienen nur zur Verzierung.<br>' +
-    ' * So sieht ein längerer Blockkommentar<br>' +
-    ' * übersichtlicher aus.<br>' +
+    ' * Die zusätzlichen Sterne zwischen<br>' +
+    ' * dem Beginn und dem Ende des<br>' +
+    ' * Blockkommentars dienen nur zur<br>' +
+    ' * Verzierung. So sieht ein längerer <br>' +
+    ' * Blockkommentar übersichtlicher aus.<br>' +
     ' */</code></pre>' +
     'Block-Kommentare schreibt man gerne über Funktionen, Zeilen-Kommentare in den Code-Fluss.' +
     '<pre><code>' +
     '/**<br>' +
-    ' * Prüft, ob eine String mindestens ein Zeichen,<br>' +
-    ' * das kein Leerzeichen ist, enthält.<br>' +
+    ' * Prüft, ob eine String kein Zeichen<br>' +
+    ' * außer Leerzeichen enthält.<br>' +
     ' */<br>' +
-    'var istLeer = function(string) {<br>' +
+    'var isEmpty = function(string) {<br>' +
     '  // Die Methode trim() entfernt Leerzeichen<br>' +
-    '  // an beiden Enden einer Zeichenfolge.<br>' +
-    '  var ohneLeerzeichen = string.trim();<br>' +
-    '  return ohneLeerzeichen.length === 0;<br>' +
+    '  // am Anfang und am Ende einer Zeichenfolge.<br>' +
+    '  var trimmedString = string.trim();<br>' +
+    '  return trimmedString.length === 0;<br>' +
     '};</code></pre>' +
     'Da Kommentare mit den hier verwendeten Tests nicht überprüfen werden können, eine Aufgabe, bei der man vieles von dem bisher Gelernten anwenden muss.',
         

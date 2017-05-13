@@ -108,12 +108,6 @@ nav a {
   font-size: 2em;
 }
 
-@media (max-width: 30em) {
-  #lesson h1 {
-    font-size: 1.8em;
-  }
-}
-
 #lesson h2 {
   margin-top: 1.5em;
 }
@@ -220,4 +214,15 @@ nav a {
 
 #privacy {
   font-size: 0.9em;
+}
+
+@media (max-width: 30em) {
+
+  #lesson h1 {
+    font-size: 1.8em;
+  }
+
+  #lesson pre {
+    font-size: 0.95em;
+  }
 }

@@ -10,7 +10,7 @@ jshero.koans.add({
     'einen Zeitpunkt, also ein Datum zusammen mit einer Uhrzeit. Die Uhrzeit wird dabei auf die Millisekunde genau festgelegt. ' +
     'Ein Date-Objekt erzeugt man mit <code>new Date()</code>. Es gibt 4 mögliche Aufrufe: ' +
     '<pre><code>// aktueller Zeitpunkt<br>var d1 = new Date();</code></pre>' +
-    'Ohne Parameter erzeugt <code>new Date()</code> ein Date-Objekt, dass dem Zeitpunkt seines Aufrufs entspricht. Wird obiges Beispiel ' +
+    'Ohne Parameter erzeugt <code>new Date()</code> ein Date-Objekt, das dem Zeitpunkt seines Aufrufs entspricht. Wird obiges Beispiel ' +
     'am 1. Mai 2017 um 8:15 Uhr aufgerufen, so enthält <code>d1</code> eben diesen Zeitpunkt.<br>' +
     '<pre><code>// Aufruf mit Jahr, Monat, Tag, Stunde,<br>// Stunde, Minute, Sekunde, Millisekunde<br>var d2 = new Date(2017, 2, 8, 16, 31, 10, 117);</code></pre>' +
     'Möchte man ein Date-Objekt zu einem bestimmten Zeitpunkt erstellen, verwendet man am besten die zweite Möglichkeit. ' +
@@ -32,7 +32,7 @@ jshero.koans.add({
     'da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufweisen.',
 
   task: 'Schreibe eine Funktion <code>nikolaus</code>, die eine Jahreangabe als Zahl entgegennimmt und  die ein Date-Objekt mit dem 6. Dezember ' +
-    'des übergebenen Jahres, 0:00 Uhr, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkz 6.12.2017, 0:00 Uhr zurückgeben.',
+    'des übergebenen Jahres, 0:00 Uhr, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 Uhr zurückgeben.',
 
   beforeTests: function() {
     if (typeof nikolaus !== "undefined") {
