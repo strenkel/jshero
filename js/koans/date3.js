@@ -11,7 +11,8 @@ jshero.koans.add({
     'Mit diesen 7 Methoden kann man den entsprechenden Date-Eintrag setzen:' +
     '<pre><code>' +
     'var today = new Date();<br>' +
-    'today.setHours(0);<br>' + 
+    'today.setHours(0);<br>' +
+    'today.setMinutes(0);<br>' + 
     'today.setSeconds(0);<br>' +
     'today.setMilliseconds(0);<br>' +    
     '</code></pre>' +
@@ -19,12 +20,12 @@ jshero.koans.add({
     'So enthält <code>today</code> das aktuelle Tagesdatum mit zurückgesetzter Uhrzeit.<br><br>' +
     'Überschreitet oder unterschreitet man bei einer dieser Methoden den zulässigen Wertebereich, dann rechnen diese Methoden den Über- oder Untertrag automatisch um:<br>' +
     '<pre><code>' +
-    'var someDay = new Date(2017, 3, 1);<br>' +
+    'var someDay = new Date(2020, 3, 1);<br>' +
     'someDay.setDate(32);<br>' +
     'someDay.setDate(0);<br>' +
     '</code></pre>' +
-    'Zunächst repräsentiert <code>someDay</code> den 1.4.2017. Nun wird der Tag auf den 32. gesetzt. Da der April 30 Tage hat, entspricht das dem 2.5.2017. Wird nun der Tag ' +
-    'auf 0 gesetzt, erhält man den 30.4.2017.',
+    'Zunächst repräsentiert <code>someDay</code> den 1.4.2020. Nun wird der Tag auf den 32. gesetzt. Da der April 30 Tage hat, entspricht das dem 2.5.2020. Wird nun der Tag ' +
+    'auf 0 gesetzt, erhält man den 30.4.2020.',
 
   task: 'Schreibe eine Funktion <code>yesterday</code>, die ein Date-Objekt entgegennimmt, dessen Datum um einen Tag zurücksetzt und dann dieses Date-Objekt zurückgibt. ' +
     'Die Uhrzeit soll dabei nicht verändert werden. Mit <code>date = new Date(1965, 8, 14)</code> sollte <code>yesterday(date)</code> ein Date-Objekt zurückgeben, das den 13.9.1965 repräsentiert.',
@@ -71,7 +72,7 @@ jshero.koans.add({
         var result = yesterday(new Date(1965, 8, 14));
         ok = dateUtil.isDate(result);
         if (ok) {
-          msg = 'yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück.';
+          msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück.';
         } else {
           msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt kein Date-Objekt zurück.';
         }
@@ -93,7 +94,7 @@ jshero.koans.add({
         var result = yesterday(new Date(1965, 8, 14));
         ok = dateUtil.isEqual(result, new Date(1965, 8, 13));
         if (ok) {
-          msg = 'yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück, das den 13.9.1965 repräsentiert. ';
+          msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück, das den 13.9.1965 repräsentiert. ';
         } else {
           msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück, das nicht den 13.9.1965 repräsentiert, sondern den ' + result.toLocaleString() + '.';
         }
@@ -115,7 +116,7 @@ jshero.koans.add({
         var result = yesterday(new Date(2000, 0, 1, 12));
         ok = dateUtil.isDate(result);
         if (ok) {
-          msg = 'yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück.';
+          msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück.';
         } else {
           msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt kein Date-Objekt zurück.';
         }
@@ -137,7 +138,7 @@ jshero.koans.add({
         var result = yesterday(new Date(2000, 0, 1, 12));
         ok = dateUtil.isEqual(result, new Date(1999, 11, 31, 12));
         if (ok) {
-          msg = 'yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück, das den 31.12.1999, 12 Uhr repräsentiert. ';
+          msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück, das den 31.12.1999, 12 Uhr repräsentiert. ';
         } else {
           msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück, das nicht den 31.12.1999, 12 Uhr repräsentiert, sondern den '+ result.toLocaleString() + '.';
         }
