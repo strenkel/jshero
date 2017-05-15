@@ -4,13 +4,13 @@ jshero.koans.add({
 
   title: 'Datum und Uhrzeit ausgeben',
 
-  lesson: 'Zur Ausgabe der Daten eines Date-Objekts gibt es 7 Methoden:' +
+  lesson: 'Zur Ausgabe der Daten eines Date-Objekts gibt es sieben sogenannte Getter-Methoden:' +
     '<pre><code>' +
     'var startFastnacht = new Date(2017, 10, 11, 11, 11);<br>' +
     'var jahr = startFastnacht.getFullYear();<br>' +
     'var monat = startFastnacht.getMonth();<br>' +
     'var tag = startFastnacht.getDate();<br>' +
-    'var stunde = startFastnacht.getHour();<br>' +
+    'var stunde = startFastnacht.getHours();<br>' +
     'var minute = startFastnacht.getMinutes();<br>' +
     'var sekunde = startFastnacht.getSeconds();<br>' +
     'var millisekunde = startFastnacht.getMilliseconds();<br>' +

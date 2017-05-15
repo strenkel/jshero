@@ -4,23 +4,6 @@ if (typeof jshero === "undefined") {
 
 jshero.date = (function() {
 
-  var to2 = function(n) {
-    if (n < 10) {
-      return "0" + n;
-    }
-    return "" + n;
-  };
-
-  /**
-   * Gibt das Datum im Format dd.mm.YYYY zurueck.
-   */
-  var toGermanString = function(date) {
-    var yyyy = date.getFullYear();
-    var mm = date.getMonth() + 1;
-    var dd = date.getDate();
-    return to2(dd) + "." + to2(mm) + "." + yyyy;
-  };
-
   /**
    * Prueft, ob obj ein Date-Objekt ist.
    */
@@ -28,9 +11,16 @@ jshero.date = (function() {
     return Object.prototype.toString.call(obj) === "[object Date]";
   };
 
+  /**
+   * Prüft, ob die beiden Date-Objekte den selben Zeitpunt repräsentieren.
+   */
+  var isEqual = function(d1, d2) {
+    return d1.getTime() === d2.getTime();
+  };
+
   return {
-    toGermanString: toGermanString,
-    isDate: isDate
+    isDate: isDate,
+    isEqual: isEqual
   };
 
 })();

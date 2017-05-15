@@ -48,6 +48,7 @@ compressor.minify({
     'comment.js',
     'date.js',
     'date2.js',
+    'date3.js',
     'further.js'
   ],
   output: '../js/koans-min/koans.js',
