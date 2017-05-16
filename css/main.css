@@ -72,14 +72,21 @@ nav a {
   background-color: #e30000; /* rot */
 }
 
-#title {
+.title {
   vertical-align: middle;
   font-size: 1.2em;
+}
+
+#title {
   display: inline-block;
 }
 
+#title-short {
+  display: none;
+}
+
 #menu {
-  padding: 0 0.5em;
+  padding: 0 1em;
   display: inline-block;
   vertical-align: middle;
   font-size: 2.2em;
@@ -217,6 +224,18 @@ nav a {
 }
 
 @media (max-width: 30em) {
+
+  #title {
+    display: none;
+  }
+
+  #title-short {
+    display: inline-block;
+  }
+
+  #menu {
+    padding: 0 0.5em;
+  }
 
   #lesson h1 {
     font-size: 1.8em;
