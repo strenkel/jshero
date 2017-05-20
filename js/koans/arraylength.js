@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'arraylength',
 
-  title: 'Array.length',
+  title: 'Array: length',
 
   lesson: 'Die Eigenschaft <code>length</code> hatten wird schon bei Strings kennengelernt. Dort gab sie die Anzahl ' +
     'der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente zurück. ' +

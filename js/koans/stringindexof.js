@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'stringindexof',
 
-  title: 'String.indexOf()',
+  title: 'String: indexOf()',
 
   lesson: 'Um die Position eines Strings innerhalb eines anderen Strings zu bestimmen, verwendet man die Methode <code>indexOf</code>:' +
     '<pre><code>' +

@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'stringsubstr',
 
-  title: 'String.substr()',
+  title: 'String: substr()',
 
   lesson: 'Die Methode <code>substr</code> extrahiert aus einen String einen Teilstring:' +
     '<pre><code>' +

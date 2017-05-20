@@ -4,10 +4,10 @@ jshero.koans.add({
 
   id: 'arraypush',
 
-  title: 'Array.shift() und Array.push()',
+  title: 'Array: shift() und push()',
 
   lesson: 'Arrays besitzen eine Reihe von Methoden. Zwei dieser Methoden sind <code>shift</code> und <code>push</code>. ' +
-    'Zur Erinnerung: Methoden sind Funktionen, die auf einem Objekt, hier Array, ausgeführt werden. Methoden werden mit einem Punkt ' +
+    'Zur Erinnerung: Methoden sind Funktionen, die auf einem Objekt, hier einem Array, ausgeführt werden. Methoden werden mit einem Punkt ' +
     'an das Objekt angehängt. Wie bei Funktionen üblich folgt dem Methodennamen die runden Klammern, ggf. gefüllt mit Parametern. ' +
     '<code>Array.shift()</code> hat keine Parameter und verschiebt die Elemente eines Arrays nach links. ' +
     'Das 1te Element wird zum 0ten, das 2te zum 1ten, das 3te zum 2ten, usw. ' +

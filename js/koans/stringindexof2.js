@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'stringindexof2',
 
-  title: '... String.indexOf()',
+  title: 'String: ... indexOf()',
 
   lesson: 'Der Methode <code>indexOf</code> kann man als zweiten Paramter noch die Stelle mitgeben, ab der der Suchstring im aufrufenden String gesucht werden soll. ' +
     '<pre><code>' +

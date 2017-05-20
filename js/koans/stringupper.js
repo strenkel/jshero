@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'stringupper',
 
-  title: 'String.toUpperCase()',
+  title: 'String: toUpperCase()',
 
   lesson: 'Neben der Eigenschaft <code>length</code> besitzen Strings noch eine Reihe von Methoden. Das sind Funktionen, die direkt auf dem String angewendet werden. ' +
     'Wie die Eigenschaft <code>length</code> werden diese Methoden mit einem Punkt direkt dem String oder einer Variablen, die einen String enthält, angehängt. ' +

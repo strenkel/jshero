@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: "stringlength",
 
-  title: "String.length",
+  title: "String: length",
 
   lesson: 'Strings besitzen die Eigenschaft <code>length</code>. Diese Eigenschaft liefert die Anzahl der Zeichen eines Strings. ' +
     'Dazu muss man dem String  oder der Variablen, die den String enthält, <code>.length</code> anhängen:' +
