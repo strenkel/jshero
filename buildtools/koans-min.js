@@ -47,6 +47,7 @@ compressor.minify({
     'break.js',
     'comment.js',
     'undefined.js',
+    'stringsplit.js',
     'date.js',
     'date2.js',
     'date3.js',

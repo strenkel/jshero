@@ -82,7 +82,7 @@ jshero.koans.add({
       var ok, msg, e;
       try {
         var result = hallo();
-        ok = result === "Hallo Welt!"
+        ok = result === "Hallo Welt!";
         if (ok) {
           msg = '<code>hallo()</code> gibt <code>"Hallo Welt!"</code> zurück.';
         } else {
@@ -104,7 +104,7 @@ jshero.koans.add({
       var ok, msg, e;
       try {
         var result = hallo("Melek");
-        ok = result === "Hallo Melek!"
+        ok = result === "Hallo Melek!";
         if (ok) {
           msg = '<code>hallo("Melek")</code> gibt <code>"Hallo Melek!"</code> zurück.';
         } else {

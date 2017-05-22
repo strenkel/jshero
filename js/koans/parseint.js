@@ -30,7 +30,7 @@ jshero.koans.add({
     '<code>NaN</code>.', 
         
   task: 'Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das Ergebnis der Addition als Zahl zurückgibt. ' +
-    'Die Additionsaufagbe ist ein String der Form "zahl1+zahl2". So soll <code>add("100+19")</code> die Zahl <code>119</code> zurückgeben.',
+    'Es sollen zwei natürliche Zahlen addiert werden. Die Additionsaufgabe ist ein String der Form "zahl1+zahl2". So soll <code>add("100+19")</code> die Zahl <code>119</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof add !== "undefined") {

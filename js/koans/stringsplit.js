@@ -7,10 +7,18 @@ jshero.koans.add({
   lesson: 'Die Methode <code>split</code> zerlegt einen String anhand eines Trennstrings in Teilstrings. Die Teilstrings werden als Array zurückgegeben. ' +
     'Der ursprüngliche String wird nicht verändert.' +
     '<pre><code>' +
-    'var ',
+    'var date = "31-10-2017";<br>' +
+    'var parts = date.split("-");<br>' +
+    'var day = parts[0]; // "31"<br>' +
+    'var month = parts[1]; // "10"<br>' +
+    'var year = parts[2]; // "2017"<br>' +
+    '</code></pre>' +
+    'Der Trennstring ist hier der Bindestrich. Er zerlegt den Datumsstring in drei Teile. Diese drei Teile werden als Array der Variablen <code>parts</code> zugewiesen. ' +
+    'Anschließend werden die einzelnen Teile aus dem Array ausgelesen und gesonderten Variablen zugewiesen. Die Variable <code>date</code> hat weiterhin den Wert <code>"31-10-2017"</code>.',
 
-  task: 'Schreibe eine Funktion <code>hallo</code>, die einen String als Parameter entgegennimmt und <code>"Hallo &lt;Parameter&gt;!"</code> zurückgibt. ' +
-    '<code>hallo("Akgün")</code> sollte <code>"Hallo Akgün!"</code> zurückgeben. Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>"Hallo Welt!"</code> zurückgegeben werden.',
+  task: 'Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das Ergebnis der Addition als Zahl zurückgibt. ' +
+    'Es sollen endlich viele natürliche Zahlen addiert werden. Die Additionsaufgabe ist ein String der Form "1+19+...+281". ' +
+    'So soll <code>add("7+12+100")</code> die Zahl <code>119</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof hallo !== "undefined") {
@@ -21,12 +29,12 @@ jshero.koans.add({
   tests: [
 
     function() {
-      var ok = typeof hallo === 'function';
+      var ok = typeof add === 'function';
       var msg;
       if (ok) {
-        msg = "<code>hallo</code> ist eine Funktion.";
+        msg = "<code>add</code> ist eine Funktion.";
       } else {
-        msg = "<code>hallo</code> ist keine Funktion.";
+        msg = "<code>add</code> ist keine Funktion.";
       }
       return {
         ok: ok,
@@ -35,12 +43,12 @@ jshero.koans.add({
     },
 
     function() {
-      var ok = hallo.length === 1;
+      var ok = add.length === 1;
       var msg;
       if (ok) {
-        msg = "<code>hallo</code> hat 1 Parameter.";
+        msg = "<code>add</code> hat 1 Parameter.";
       } else {
-        msg = "<code>hallo</code> hat nicht 1, sondern " + hallo.length + " Parameter.";
+        msg = "<code>add</code> hat nicht 1, sondern " + add.length + " Parameter.";
       }
       return {
         ok: ok,
@@ -51,16 +59,16 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = hallo();
-        ok = result === "Hallo Welt!"
+        var result = add("1+2");
+        ok = result === 3;
         if (ok) {
-          msg = '<code>hallo()</code> gibt <code>"Hallo Welt!"</code> zurück.';
+          msg = '<code>add("1+2")</code> gibt <code>3</code> zurück.';
         } else {
-          msg = '<code>hallo()</code> gibt nicht <code>"Hallo Welt!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>add("1+2")</code> gibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
-        msg = 'Fehler beim Aufruf von <code>hallo()</code>.';
+        msg = 'Fehler beim Aufruf von <code>add("1+2")</code>.';
         e = exc;
       }
       return {
@@ -73,16 +81,16 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = hallo("Melek");
-        ok = result === "Hallo Melek!"
+        var result = add("50000+4000+300+20+1");
+        ok = result === 54321;
         if (ok) {
-          msg = '<code>hallo("Melek")</code> gibt <code>"Hallo Melek!"</code> zurück.';
+          msg = '<code>add("50000+4000+300+20+1")</code> gibt <code>54321</code> zurück.';
         } else {
-          msg = '<code>hallo("Melek")</code> gibt nicht <code>"Hallo Melek!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>add("50000+4000+300+20+1")</code> gibt nicht <code>54321</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
-        msg = 'Fehler beim Aufruf von <code>hallo("Melek")</code>.';
+        msg = 'Fehler beim Aufruf von <code>add("50000+4000+300+20+1")</code>.';
         e = exc;
       }
       return {
