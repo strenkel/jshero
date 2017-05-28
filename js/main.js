@@ -126,8 +126,9 @@
   };
 
   var adjustCodeAreaHeight = function() {
-    while (codeArea.scrollHeight > codeArea.clientHeight) {
+    if (codeArea.scrollHeight > codeArea.clientHeight) {
       codeArea.rows = codeArea.rows + 5;
+      codeArea.style.height = "auto";
     }
   };
 
