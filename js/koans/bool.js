@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: 'Der dritte wichtige Datentyp neben Strings und Zahlen sind Wahrheitswerte. Sie werden auch boolesche Werte genannt. Boolesche Werte kennen nur zwei Zustände: ' +
     '<code>true</code> und <code>false</code>. Mit booleschen Werten kann man ähnlich "rechnen" wie mit Zahlen. JavaScript kennt drei boolesche Operatoren: ' +
     '<code>&&</code> (und), <code>||</code> (oder) und <code>!</code> (nicht). Das Ergebnis dieser Operationen ist wieder ein boolescher Wert. ' +
-    '<code>&&</code> verknüpft zwei boolsche Werte. Sind beide Werte <code>true</code>, ist das Ergebnis auch <code>true</code>. In allen anderen Fällen ' +
+    '<code>&&</code> verknüpft zwei boolesche Werte. Sind beide Werte <code>true</code>, ist das Ergebnis auch <code>true</code>. In allen anderen Fällen ' +
     'ist es <code>false</code>. Bei <code>||</code> ist das Ergebnis <code>false</code>, wenn beide Eingangswerte auch <code>false</code> sind. In  allen ' +
     'anderen Fällen ist das Ergebnis <code>true</code>. <code>!</code> wird nur auf einen booleschen Wert angewendet und invertiert diesen Wert: aus ' +
     '<code>true</code> wird <code>false</code> und aus <code>false</code> wird <code>true</code>.' +

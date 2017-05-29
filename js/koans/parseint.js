@@ -26,7 +26,7 @@ jshero.koans.add({
     'var n1 = parseInt("Nur Text", 10);<br>' +
     'var n2 = parseInt("Nr. 8", 10);<br>' +
     '</code></pre>' +
-    'Im ersten Fall ist überhaupt keine Zahl vorhanden. Im zweiten Fall gibt es nicht-numerische Zeichen von der eigentlichen Zahl. Auch das ist nicht zulässig und führt zur Rückgabe ' +
+    'Im ersten Fall ist überhaupt keine Zahl vorhanden. Im zweiten Fall gibt es nicht-numerische Zeichen vor der eigentlichen Zahl. Auch das ist nicht zulässig und führt zur Rückgabe ' +
     '<code>NaN</code>.', 
         
   task: 'Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das Ergebnis der Addition als Zahl zurückgibt. ' +
