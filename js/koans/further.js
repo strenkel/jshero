@@ -57,7 +57,7 @@ jshero.koans.add({
       } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>quersumme(1)</code>.";
-        e: exc;
+        e = exc;
       }
       return {
         ok: ok,
@@ -79,7 +79,7 @@ jshero.koans.add({
       } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>quersumme(198)</code>.";
-        e: exc;
+        e = exc;
       }
       return {
         ok: ok,
@@ -101,7 +101,7 @@ jshero.koans.add({
       } catch(exc) {
         ok = false;
         msg = "Fehler beim Aufruf von <code>quersumme(123456789)</code>.";
-        e: exc;
+        e = exc;
       }
       return {
         ok: ok,

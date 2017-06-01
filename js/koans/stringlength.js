@@ -65,7 +65,7 @@ jshero.koans.add({
       } catch(exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>laenge("Hallo Welt!")</code>.';
-        e: exc;
+        e = exc;
       }
       return {
         ok: ok,

@@ -110,6 +110,28 @@ jshero.koans.add({
         msg: msg,
         e: e
       };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = gleich("1", 1, 1);
+        ok = result === false;
+        if (ok) {
+          msg = '<code>gleich("1", 1, 1)</code> ergibt <code>false</code>.';
+        } else {
+          msg = '<code>gleich("1", 1, 1)</code> ergibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>gleich("1", 1, 1)</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
     }
 
   ]
