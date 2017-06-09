@@ -1,5 +1,19 @@
+/* colors: https://material.io/guidelines/style/color.html */
+
+h1, h2 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
 #lesson pre {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* grey 100 */
   padding: 1em 0.7em;
   margin: 1em 0em;
   overflow: auto;
@@ -36,7 +50,7 @@ nav {
   text-align: center;
   position: absolute;
   width: 100%;
-  background-color: #bbb; /* grau */
+  background-color: #9e9e9e; /* grey 500 */
   display: none;
   padding: 2em 0 3em 0;
 }
@@ -54,7 +68,7 @@ nav a {
 }
 
 #header {
-  background-color: #14A62C; /* gruen */
+  background-color: #4caf50; /* green 500 */
   font-size: 1em;
   color: white;
   height: 3em;
@@ -65,11 +79,11 @@ nav a {
 }
 
 #header.green {
-  background-color: #14A62C; /* gruen */
+  background-color: #4caf50; /* green 500 */
 }
 
 #header.red {
-  background-color: #e30000; /* rot */
+  background-color:  #f44336; /* red 500 */
 }
 
 .title {
@@ -112,7 +126,6 @@ nav a {
 
 #lesson h1 {
   margin-bottom: 1.5em;
-  font-size: 2em;
 }
 
 #lesson h2 {
@@ -146,13 +159,13 @@ nav a {
 }
 
 #messages p.red {
-  border-color: #e30000; /* rot */
-  color: #e30000; /* rot */
+  border-color: #d50000; /* red A700 */
+  color: #d50000; /* red A700 */
 }
 
 #messages p.green {
-  border-color: #0f7820; /* dunkelgruen */
-  color: #0f7820; /* dunkelgruen */
+  border-color: #1b5e20; /* green 900 */
+  color: #1b5e20; /* green 900 */
 }
 
 .link-button {
@@ -185,12 +198,11 @@ nav a {
 }
 
 #success .green {
-  color: #0f7820; /* dunkelgruen */
- 
+  color: #1b5e20; /* green 900 */
 }
 
 #success .red {
-  color: #e30000; /* rot */
+  color: #d50000; /* red A700 */
 }
 
 #koans a {
