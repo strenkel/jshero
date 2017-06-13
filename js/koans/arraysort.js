@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'Arrays sortieren',
 
-  lesson: 'Mit dem Gelernten können wir Arrays mit vorgegebener Länge sortieren.',
+  lesson: 'Wir können jetzt Arrays mit vorgegebener Länge sortieren.',
         
   task: 'Schreibe eine Funktion <code>sortiere</code>, die ein mit 3 Zahlen gefülltes Array entgegennimmt und die diese 3 Zahlen aufsteigend sortiert als Array  zurückgibt. ' +
     '<code>sortiere([2,&nbsp;3,&nbsp;1])</code> sollte <code>[1,&nbsp;2,&nbsp;3]</code> ergeben.',

@@ -11,7 +11,7 @@ jshero.koans.add({
     'for (var i = 1; i < 3; i++) {<br>' +
     '  summe = summe + i;<br>' +
     '}</code></pre>' +
-    'Die <code>for</code>-Schleife besteht aus drei Steuer-Anweisungen und dem Schleifen-Code. Die drei Anweisungen folgen dem <code>for</code> in runden Klammern.' +
+    'Die <code>for</code>-Schleife besteht aus drei Steuer-Anweisungen und dem Schleifen-Code. Die drei Anweisungen folgen dem <code>for</code> in runden Klammern. ' +
     'Sie werden durch Semikolons voneinander getrennt. Die erste Anweisung ist die Start-Anweisung. Sie wird einmal zu Beginn der Schleife ausgeführt. ' +
     'Hier wird normalerweise eine Variable, die sogenannte Schleifenvariable, initialisiert. Die zweite Anweisung ist die Schleifen-Bedingung. ' +
     'Sie wird vor jedem Schleifendurchlauf zu <code>true</code> oder <code>false</code> ausgewertet. Ist der Ausdruck <code>true</code>, wird der Schleifen-Code ausgeführt. ' +

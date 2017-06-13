@@ -81,7 +81,7 @@ nav a {
 }
 
 #header.red {
-  background-color:  #e30000; /* standard-red */
+  background-color:  #e33027; /* standard-red */
 }
 
 .title {
@@ -235,6 +235,10 @@ nav a {
 
 @media (max-width: 30em) {
 
+  html, body {
+    font-size: 17px;
+  }
+
   #title {
     display: none;
   }
@@ -255,7 +259,4 @@ nav a {
     font-size: 1.5em;
   }
 
-  #lesson pre {
-    font-size: 0.95em;
-  }
 }

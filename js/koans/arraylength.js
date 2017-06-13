@@ -58,28 +58,6 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = getLastElement(["a", "b", "c"]);
-        ok = result === "c";
-        if (ok) {
-          msg = '<code>getLastElement(["a", "b", "c"])</code> gibt <code>"c"</code> zurück.';
-        } else {
-          msg = '<code>getLastElement(["a", "b", "c"])</code> gibt nicht <code>"c"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>getLastElement(["a", "b", "c"])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    },
- 
-    function() {
-      var ok, msg, e;
-      try {
         var result = getLastElement([1, 2]);
         ok = result === 2;
         if (ok) {
@@ -99,6 +77,28 @@ jshero.koans.add({
       };
     },
 
+    function() {
+      var ok, msg, e;
+      try {
+        var result = getLastElement(["a", "b", "c"]);
+        ok = result === "c";
+        if (ok) {
+          msg = '<code>getLastElement(["a", "b", "c"])</code> gibt <code>"c"</code> zurück.';
+        } else {
+          msg = '<code>getLastElement(["a", "b", "c"])</code> gibt nicht <code>"c"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>getLastElement(["a", "b", "c"])</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
+    }
+ 
   ]
 
 });

@@ -10,7 +10,7 @@ jshero.koans.add({
     '<pre><code>function max(a) {<br>' +
     '  var maximum = a[0];<br>' +
     '  for (var i = 1; i < a.length; i++) {<br>' +
-    '    if (a[i] > max) {<br>' +  
+    '    if (a[i] > maximum) {<br>' +
     '      maximum = a[i];<br>' +
     '    }<br>' +
     '  }<br>' +
