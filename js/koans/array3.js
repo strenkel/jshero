@@ -45,7 +45,7 @@ jshero.koans.add({
       if (ok) {
         msg = '<code>setFirstElement</code> hat 2 Parameter.';
       } else {
-        msg = '<code>setFirstElement</code> hat nicht 2, sondern ' + getFirstElement.length + ' Parameter.';
+        msg = '<code>setFirstElement</code> hat nicht 2, sondern ' + setFirstElement.length + ' Parameter.';
       }
       return {
         ok: ok,
