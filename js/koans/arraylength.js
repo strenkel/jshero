@@ -16,7 +16,7 @@ jshero.koans.add({
     'Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>. ' +
     'Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index des Arrays.',
         
-  task: 'Schreibe ein Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element des Arrays zurückgibt. ' +
+  task: 'Schreibe eine Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element des Arrays zurückgibt. ' +
     '<code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.',
 
   beforeTests: function() {

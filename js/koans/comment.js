@@ -37,7 +37,7 @@ jshero.koans.add({
     '};</code></pre>' +
     'Da Kommentare mit den hier verwendeten Tests nicht überprüfen werden können, eine Aufgabe, bei der man vieles von dem bisher Gelernten anwenden muss.',
         
-  task: 'Schreibe ein Funktion <code>median</code>, die ein Array von aufsteigend sortierten Zahlen entgegennimmt und die den Median dieser Zahlen zurückgibt. ' +
+  task: 'Schreibe eine Funktion <code>median</code>, die ein Array von aufsteigend sortierten Zahlen entgegennimmt und die den Median dieser Zahlen zurückgibt. ' +
     '<code>median([1, 2, 10])</code> sollte <code>2</code> ergeben; <code>median([1, 2, 10, 100])</code> sollte <code>6</code> ergeben. ' +
     'Der Median einer sortierten Zahlenreihe ist der Wert, der an der mittleren Stelle steht. Ist die Anzahl der Werte gerade, so ist der Median der Mittelwert ' +
     'der beiden mittleren Zahlen.',

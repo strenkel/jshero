@@ -99,6 +99,28 @@ jshero.koans.add({
         msg: msg,
         e: e
       };
+    },
+
+    function() {
+      var ok, msg, e;
+      try {
+        var result = mean([1, 4, 10, 85]);
+        ok = result === 25;
+        if (ok) {
+          msg = '<code>mean([1, 4, 10, 85])</code> gibt <code>25</code> zurück.';
+        } else {
+          msg = '<code>mean([1, 4, 10, 85])</code> gibt nicht <code>25</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+        }
+      } catch(exc) {
+        ok = false;
+        msg = 'Fehler beim Aufruf von <code>mean([1, 4, 10, 85])</code>.';
+        e = exc;
+      }
+      return {
+        ok: ok,
+        msg: msg,
+        e: e
+      };
     }
 
   ]
