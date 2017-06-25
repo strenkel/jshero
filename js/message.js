@@ -2,10 +2,21 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
+/**
+ * Write messages and controls in the messages-Element.
+ */
 jshero.message = (function() {
 
   var messageRoot = document.getElementById('messages');
 
+  /**
+   * Write a message-Element.
+   *
+   * @param message, String
+   * @param type, Boolean, the color of the message, true: green, false: red
+   * @param e, Exception
+   * @param logs, [String]
+   */
   var log = function(message, type, e, logs) {
 
     logs = logs || [];
@@ -19,7 +30,7 @@ jshero.message = (function() {
 
     var errormessage = "";
     if (e) {
-      errormessage = errormessage + e;
+      errormessage = errormessage + e; // converts e to String
       if (e.lineNumber != null && e.columnNumber != null) {
         // mozilla
         errormessage = errormessage + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + ")";
@@ -42,6 +53,9 @@ jshero.message = (function() {
     messageRoot.appendChild(paragraph);
   };
 
+  /**
+   * Write a NEXT-Botton.
+   */
   var goto = function(url) {
     var link = document.createElement('a');
     link.href = url;
@@ -51,6 +65,9 @@ jshero.message = (function() {
     link.focus();
   };
 
+  /**
+   * Remove all message-Elements.
+   */
   var clear = function() {
     messageRoot.innerHTML = null;
   };

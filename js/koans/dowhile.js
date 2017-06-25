@@ -19,7 +19,7 @@ jshero.koans.add({
     '  restDurch8 = kgV % 8;<br>' +
     '} while (restDurch6 !== 0 || restDurch8 !== 0)</code></pre>' +
     'Dieser Codeabschnitt berechnet das kleinste gemeinsame Vielfache (kgV) von 6 und 8. ' +
-    'Das ist die kleinste Zahl, die sowohl ein Vielfaches von 6 als auch ein Vielfaches von 8 ist. ' +
+    'Das kgV ist die kleinste Zahl, die sowohl ein Vielfaches von 6 als auch ein Vielfaches von 8 ist. ' +
     'Die Vielfachen von 6 sind 6, 12, 18, 24, 30, ... und die Vielfachen von 8 sind 8, 16, 24, 32, ... . ' +
     'Damit ist das kgV von 6 und 8 die Zahl 24.<br>' +
     'Unser Codebeispiel prüft beginnend mit <code>1</code>, ob <code>kgV</code> sowohl durch <code>6</code> als auch durch <code>8</code> teilbar ist. ' +

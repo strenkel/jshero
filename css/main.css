@@ -233,6 +233,16 @@ nav a {
   font-size: 0.9em;
 }
 
+#links h2 {
+  font-size: 1.1em;
+  margin-top: 2.7em;
+  margin-bottom: 0.5em;
+}
+
+#links p {
+  margin: 0;
+}
+
 @media (max-width: 30em) {
 
   html, body {
