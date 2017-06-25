@@ -39,7 +39,7 @@ button:hover {
 }
 
 code {
-  color: #0033ff; /* blau */
+  color: #0033ff; /* blue */
 }
 
 nav {
@@ -241,6 +241,12 @@ nav a {
 
 #links p {
   margin: 0;
+}
+
+#playground #show-example {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0033ff;
 }
 
 @media (max-width: 30em) {
