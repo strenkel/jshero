@@ -13,6 +13,7 @@ compressor.minify({
     'stringlength.js',
     'stringupper.js',
     'stringcharat.js',
+    'trim.js',
     'stringindexof.js',
     'stringindexof2.js',
     'stringsubstr.js',
