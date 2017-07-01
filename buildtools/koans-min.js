@@ -25,6 +25,7 @@ compressor.minify({
     'round.js',
     'random.js',
     'parseint.js',
+    'numbertostring.js',
     'bool.js',
     'xor.js',
     'equals.js',
