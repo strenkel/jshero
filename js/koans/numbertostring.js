@@ -4,25 +4,34 @@ jshero.koans.add({
 
   title: "Number: toString()",
 
-  lesson: '', 
+  lesson: 'Die Number-Methode <code>toString</code> wandelt eine Zahl in den entsprechenden String um. Der Dezimalpunkt wird dabei als Punkt dargestellt. ' +
+    'Das kann man z.B. dazu verwenden, eine Zahl im deutschen Format, also mit Komma als Dezimalpunkt, auszugeben:' +
+    '<code><pre>' +
+    'var number = 7.25;<br>' +
+    'var numberInEnglish = number.toString();<br>' +
+    'var numberInGerman = numberInEnglish.replace(".", ",");' +
+    '</code></pre>' +
+    '<code>numberInEnglish</code> enthält den String <code>"7.25"</code>. Da wir jetzt unsere Zahl als String vorliegen haben, können wir auf ihr die String-Methode ' +
+    '<code>replace</code> anwenden. <code>numberInGerman</code> enthält so den String <code>"7,25"</code>.',
         
-  task: '',
-
+  task: 'Schreibe eine Funktion <code>digitLength</code>, die eine natürliche Zahl entgegennimmt und die Anzahl der Ziffern zurückgibt. ' +
+    '<code>digitLength(709)</code> sollte 3 zurückgeben.',
+ 
   beforeTests: function() {
-    if (typeof add !== "undefined") {
-      add = undefined;
+    if (typeof digitLength !== "undefined") {
+      digitLength = undefined;
     }
   },
 
   tests: [
     
     function() {
-      var ok = typeof add === 'function';
+      var ok = typeof digitLength === 'function';
       var msg;
       if (ok) {
-        msg = "<code>add</code> ist eine Funktion.";
+        msg = "<code>digitLength</code> ist eine Funktion.";
       } else {
-        msg = "<code>add</code> ist keine Funktion.";
+        msg = "<code>digitLength</code> ist keine Funktion.";
       }
       return {
         ok: ok,
@@ -31,12 +40,12 @@ jshero.koans.add({
     },
 
     function() {
-      var ok = add.length === 2;
+      var ok = digitLength.length === 1;
       var msg;
       if (ok) {
-        msg = "<code>add</code> hat zwei Parameter.";
+        msg = "<code>digitLength</code> hat einen Parameter.";
       } else {
-        msg = "<code>add</code> hat nicht 2, sondern " + add.length + " Parameter.";
+        msg = "<code>digitLength</code> hat nicht 1, sondern " + digitLength.length + " Parameter.";
       }
       return {
         ok: ok,
@@ -47,16 +56,16 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = add(0, 0);
-        ok = result === 0;
+        var result = digitLength(1);
+        ok = result === 1;
         if (ok) {
-          msg = '<code>add(0, 0)</code> ergibt <code>0</code>.';
+          msg = '<code>digitLength(1)</code> gibt <code>1</code> zurück.';
         } else {
-          msg = '<code>add(0, 0)</code> ergibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>digitLength(1)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
       } catch(exc) {
         ok = false;
-        msg = "Fehler beim Aufruf von <code>add(0, 0)</code>.";
+        msg = "Fehler beim Aufruf von <code>digitLength(1)</code>.";
         e = exc;
       }
       return {
@@ -69,16 +78,16 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = add(2, 3);
-        ok = result === 5;
+        var result = digitLength(709);
+        ok = result === 3;
         if (ok) {
-          msg = '<code>add(2, 3)</code> ergibt <code>5</code>.';
+          msg = '<code>digitLength(709)</code> gibt <code>3</code> zurück.';
         } else {
-          msg = '<code>add(2, 3)</code> ergibt nicht <code>5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>digitLength(709)</code> gibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
       } catch(exc) {
         ok = false;
-        msg = "Fehler beim Aufruf von <code>add(2, 3)</code>.";
+        msg = "Fehler beim Aufruf von <code>digitLength(709)</code>.";
         e = exc;
       }
       return {

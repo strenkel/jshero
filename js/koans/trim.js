@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "String: trim()",
 
   lesson: 'Die Methode <code>trim</code> entfernt Leerzeichen an beiden Enden eines Strings. Der an den Enden um Leerzeichen bereinigte String wird zurückgegeben. ' +
-    'Der ursprügliche String bleib unverändert.' +
+    'Der ursprügliche String bleibt unverändert.' +
     '<pre><code>' +
     'var eingabe = " Rosa Parks ";<br>' +
     'var name = eingabe.trim();' +

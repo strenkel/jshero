@@ -29,7 +29,7 @@
 
   var showExample = function() {
     var code = 'var hallo = function() {\n  return "Hallo Welt!";\n};\n\n';
-    code = code + 'jshero.log("Der Aufruf \'hallo()\' ergibt:");\njshero.log(hallo());';
+    code = code + 'jshero.log("Der Aufruf \'hallo()\' liefert:");\njshero.log(hallo());';
     codeArea.set(code);
   };
 

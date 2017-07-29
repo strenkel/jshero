@@ -17,6 +17,7 @@ compressor.minify({
     'stringindexof.js',
     'stringindexof2.js',
     'stringsubstr.js',
+    'replace.js',
     'number.js',
     'modulo.js',
     'mean.js',
