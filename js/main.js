@@ -88,7 +88,7 @@
       header.toRed();
       msg.log("Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!", false);
     }
-    util.scrollToButtom();
+    util.scrollToBottom();
   };
 
   var readCode = function() {

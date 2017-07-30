@@ -24,7 +24,7 @@
         console.log("Fehler beim Ausführen des Codes!", e);
       }
     }
-    util.scrollToButtom();
+    util.scrollToBottom();
   };
 
   var showExample = function() {

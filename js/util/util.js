@@ -9,13 +9,18 @@ jshero.util = (function() {
     return document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
   };
 
-  var scrollToButtom = function() {
+  var scrollToBottom = function() {
     window.scrollTo(0, document.body.scrollHeight);
+  };
+
+  function scrollToTop() {
+    window.scrollTo(0, 0);
   };
 
   return {
     isPhoneGap: isPhoneGap,
-    scrollToButtom: scrollToButtom
+    scrollToBottom: scrollToBottom,
+    scrollToTop: scrollToTop
   };
 
 })();
