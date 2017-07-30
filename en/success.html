@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <meta HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+    <meta content="width=device-width" name="viewport">
+    <title>JavaScript Hero</title>
+    <meta name="description" content="Become a JavaScript hero!">
+    <meta name="keywords" content="JavaScript Tutorial Course Exercises Learning Tests Koans Programming Language Hour-Of-Code JSHero">
+    <meta name="author" content="Stefan Trenkel">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+  </head>
+
+  <body id="success">
+
+    <div>
+
+      <div id="header">
+        <a id="next-button" class="control" href="info.html">></a>
+        <a class="control" href="success.html">#</a> 
+        <a id="prev-button" class="control" href="main.html?pos=last"><</a>
+        <div id="menu">≡</div>
+        <div id="title" class="title">JavaScript Hero</div>
+        <div id="title-short" class="title">JS Hero</div>
+      </div>
+
+      <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="main.html">Start</a>
+        <a href="success.html">Overview</a>
+        <a href="info.html">Info</a>
+      </nav>
+
+      <div id="lesson">
+
+        <h1>Overview</h1>
+
+        <p class="extra-margin">
+          Here you can find all exercises. Unresolved exercises are red, dissolved green.
+          Click or touch the exercise to navigate to the exercise.
+          Use the <em>Reset Exercises</em> button to reset all your solutions.
+          All exercises will be red and you can start JavaScript Hero again.
+        </p>
+
+        <p id="koans"></p>
+
+        <p id="reset-exercises">
+          <button id="reset-button">Reset Exercises</button>
+        </p>
+
+        <div id="reset-confirmation">
+          <p>
+            Do you really want to reset all exercises?
+          </p>
+          <p>
+            <button id="reset-no-button" class="reset-confirmation-button">No</button>
+            <button id="reset-yes-button" class="reset-confirmation-button">Yes</button>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script src="../js/lib/nav.js" type="text/javascript" ></script>
+    <script src="../js/lib/header.js" type="text/javascript" ></script>
+    <script src="../js/lib/storage.js" type="text/javascript" ></script>
+    <script src="../js/lib/koans.js" type="text/javascript" ></script>
+    <script src="js/koans-min/koans.js" type="text/javascript" ></script>
+    <script src="../js/success.js" type="text/javascript" ></script>
+
+  </body>
+</html>

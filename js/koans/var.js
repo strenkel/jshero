@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: 
     'JavaScript-Programme bestehen aus einer Reihe von Anweisungen. Jede Anweisung führt eine elementare Operation durch. ' +
-    'Durch das Ausführen vieler Anweisungen kann man schließlich komplexe Aufgaben lösen. Große Programme bestehen aus Tausenden von Anweisungen. ' + 
-    'Normalerweise schreibt man jede Anweisung in eine Zeile und schließt die Anweisung mit einem Semikolon ab.<br><br>' +
+    'Durch das Ausführen vieler Anweisungen kann man schließlich komplexe Aufgaben lösen. ' +
+    'Jede Anweisung schreibt man in eine Zeile und schließt sie mit einem Semikolon ab.<br><br>' +
     'Eine elementare Anweisung ist die Deklaration und Initialisierung einer Variablen. ' +
     'In der Programmierung ist eine Variable ein Behälter für einen Wert. ' + 
     'Mit der Anweisung ' +

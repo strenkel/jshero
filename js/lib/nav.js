@@ -1,4 +1,4 @@
-// Ist fuer das Oeffnen und Schliessen der Navigation (das Menue) zustaendig.
+// Responsible for the opening and closing of the navigation (the menu).
 
 (function() {
 

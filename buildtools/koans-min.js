@@ -66,3 +66,18 @@ compressor.minify({
     }
   }
 });
+
+compressor.minify({
+  compressor: 'gcc',
+  publicFolder: '../en/js/koans/',
+  input: [
+    'var.js'
+  ],
+  output: '../en/js/koans-min/koans.js',
+  callback: function(err, min) {
+    // err is always null. I doesn't know why.
+    if (err) {
+      console.error(err);
+    }
+  }
+});
