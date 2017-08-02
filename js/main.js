@@ -25,6 +25,8 @@
 
     if (koans.hasPrev()) {
       prevButton.href = "main.html?koan=" + koans.prevId();
+    } else if (util.isEnglish()) {
+      prevButton.href = "index.html";
     } else {
       prevButton.href = "intro.html";
     }

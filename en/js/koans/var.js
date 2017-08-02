@@ -12,7 +12,7 @@ jshero.koans.add({
     'In programming, a variable is a container for a value. ' + 
     'The statement ' +
     '<pre><code>var city = "Porbandar";</code></pre>' +
-    'declares a variable with the name <code>city</code> and initializes it with the value <code>"Porbandar"</code> ' +
+    'declares a variable with the name <code>city</code> and initializes it with the value <code>"Porbandar"</code>. ' +
     'The variable is declared with the keyword <code>var</code>. ' +
     'Use the equals sign, the assignment operator, to assign a value to the variable. ' +
     'Note: JavaScript is case-sensitive. <code>city</code> and <code>City</code> are two different variables.',
