@@ -9,13 +9,23 @@ jshero.util = (function() {
     return document.URL.indexOf( 'http://' ) === -1 && document.URL.indexOf( 'https://' ) === -1;
   };
 
-  var scrollToButtom = function() {
+  var isEnglish = function() {
+    return document.URL.indexOf( '/en/' ) > -1;
+  };
+
+  var scrollToBottom = function() {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
+  function scrollToTop() {
+    window.scrollTo(0, 0);
+  };
+
   return {
+    isEnglish: isEnglish,
     isPhoneGap: isPhoneGap,
-    scrollToButtom: scrollToButtom
+    scrollToBottom: scrollToBottom,
+    scrollToTop: scrollToTop
   };
 
 })();

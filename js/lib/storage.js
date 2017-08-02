@@ -2,18 +2,26 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-jshero.storage = (function() {
+jshero.storage = (function(util) {
   
   var setSolution = function(koan, solution) {
-    localStorage.setItem("solution_" + koan.id, solution);
+    localStorage.setItem(getKey(koan), solution);
   };
   
   var getSolution = function(koan) {
-    return localStorage.getItem("solution_" + koan.id);
+    return localStorage.getItem(getKey(koan));
   };
   
   var removeSolution = function(koan) {
-    return localStorage.removeItem("solution_" + koan.id);
+    return localStorage.removeItem(getKey(koan));
+  };
+
+  var getKey = function(koan) {
+    var prefix = "solution_";
+    if (util.isEnglish()) {
+       prefix = prefix + "en_";
+    }
+    return prefix + koan.id;
   };
 
   return {
@@ -22,4 +30,4 @@ jshero.storage = (function() {
     removeSolution: removeSolution
   };
   
-})();
+})(jshero.util);

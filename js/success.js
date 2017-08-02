@@ -1,4 +1,4 @@
-(function(koans) {
+(function(koans, util) {
 
   // --- write koans ---
   
@@ -34,7 +34,7 @@
 
   resetButton.onclick = function() {
     showConfirmation();
-    scrollToButtom();
+    util.scrollToBottom();
   };
 
   resetNoButton.onclick = showReset;
@@ -42,7 +42,7 @@
   resetYesButton.onclick = function() {
     showReset();
     resetKoans();
-    scrollToTop();
+    util.scrollToTop();
   };
 
   function resetKoans() {
@@ -61,12 +61,4 @@
     resetConfiramtionRoot.style.display = "none";
   };
 
-  function scrollToTop() {
-    window.scrollTo(0, 0);
-  };
-
-  function scrollToButtom() {
-    window.scrollTo(0, document.body.scrollHeight);
-  };
-
-})(jshero.koans);
+})(jshero.koans, jshero.util);
