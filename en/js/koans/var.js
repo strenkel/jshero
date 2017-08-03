@@ -31,9 +31,9 @@ jshero.koans.add({
       var ok = typeof firstname !== 'undefined';
       var msg;
       if (ok) {
-        msg = "<code>firstname</code> hat einen Wert.";
+        msg = "<code>firstname</code> has a value.";
       } else {
-        msg = "<code>firstname</code> hat keinen Wert.";
+        msg = "<code>firstname</code> has no value.";
       }
       return {
         ok: ok,
@@ -46,9 +46,9 @@ jshero.koans.add({
       var ok = firstname === "Lata";
       var msg;
       if (ok) {
-        msg = '<code>firstname</code> hat den Wert "Lata".';
+        msg = '<code>firstname</code> has the value "Lata".';
       } else {
-        msg = '<code>firstname</code> hat nicht den Wert <code>"Lata"</code>, sondern den Wert <code>' + JSON.stringify(vorname) + '</code>.';
+        msg = '<code>firstname</code> has not the value <code>"Lata"</code>, but the value <code>' + JSON.stringify(firstname) + '</code>.';
       }
       return {
         ok: ok,

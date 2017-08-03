@@ -54,7 +54,7 @@ nav {
   width: 100%;
   background-color: #9e9e9e; /* grey 500 */
   display: none;
-  padding: 2em 0 3em 0;
+  padding: 2em 0 2em 0;
 }
 
 #header a, nav a, a.link-button, #messages a, #koans a {
@@ -65,8 +65,14 @@ nav {
 nav a {
   display: block;
   color: white;
-  margin: 1.5em;
+  margin: 1.2em;
   font-size: 1.2em;
+}
+
+/* Separates the language-link from the normal navigation links. */
+nav a:last-child {
+  margin-top: 2.5em;
+  font-style: italic;
 }
 
 #header {

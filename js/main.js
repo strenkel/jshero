@@ -1,4 +1,4 @@
-(function(msg, koans, header, codeArea, util) {
+(function(msg, koans, header, codeArea, util, i18n, lang) {
 
   var testButton = document.getElementById("test-button");
   var nextButton = document.getElementById("next-button");
@@ -25,10 +25,10 @@
 
     if (koans.hasPrev()) {
       prevButton.href = "main.html?koan=" + koans.prevId();
-    } else if (util.isEnglish()) {
-      prevButton.href = "index.html";
+    } else if (lang === "de") {
+      prevButton.href = "intro.html";      
     } else {
-      prevButton.href = "intro.html";
+      prevButton.href = "index.html";
     }
     nextButton.href = nextPageUrl();
   };
@@ -60,10 +60,10 @@
         try {
           result = tests[i]();
         } catch (exc) {
-          console.log("Unbekannter Testfehler!", exc)
+          console.log(i18n("unknownError"), exc)
           result = {
             ok: false,
-            msg: "Unbekannter Testfehler!",
+            msg: i18n("unknownError"),
             e: exc
           };
         }
@@ -84,11 +84,11 @@
       var code = codeArea.get();
       koan.setSolution(code);
       header.toGreen();
-      msg.log("Alle Tests bestanden!", true);
+      msg.log(i18n("testsPassed"), true);
       msg.goto(nextPageUrl());
     } else {
       header.toRed();
-      msg.log("Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!", false);
+      msg.log(i18n("testError"), false);
     }
     util.scrollToBottom();
   };
@@ -96,18 +96,18 @@
   var readCode = function() {
     var code = codeArea.get();
     if (code.length === 0) {
-      msg.log("Schreibe deinen Code in das Eingabefeld.", false);
+      msg.log(i18n("writeCode"), false);
       return false;
     }
     try {
       // global eval: it works at global scope rather than local scope
       var geval = eval;
       geval(code);
-      msg.log("Code erfolgreich eingelesen.", true);
+      msg.log(i18n("noSyntaxError"), true);
       return true;
     } catch(e) {
-      msg.log("Fehler beim Einlesen des Codes!", false, e);
-      console.log("Fehler beim Einlesen des Codes!", e);
+      msg.log(i18n("syntaxError"), false, e);
+      console.log(i18n("syntaxError"), e);
       return false;
     }
   };
@@ -116,5 +116,5 @@
   testButton.addEventListener("touchstart", testCode);
   window.onload = write;
 
-})(jshero.message, jshero.koans, jshero.header, jshero.code, jshero.util);
+})(jshero.message, jshero.koans, jshero.header, jshero.code, jshero.util, jshero.i18n.get, jshero.i18n.getLang());
 

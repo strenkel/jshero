@@ -2,7 +2,7 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-jshero.storage = (function(util) {
+jshero.storage = (function(lang) {
   
   var setSolution = function(koan, solution) {
     localStorage.setItem(getKey(koan), solution);
@@ -18,8 +18,8 @@ jshero.storage = (function(util) {
 
   var getKey = function(koan) {
     var prefix = "solution_";
-    if (util.isEnglish()) {
-       prefix = prefix + "en_";
+    if (lang !== "de") {
+       prefix = prefix + lang + "_";
     }
     return prefix + koan.id;
   };
@@ -30,4 +30,4 @@ jshero.storage = (function(util) {
     removeSolution: removeSolution
   };
   
-})(jshero.util);
+})(jshero.i18n.getLang());
