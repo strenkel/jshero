@@ -28,7 +28,7 @@
     } else if (lang === "de") {
       prevButton.href = "intro.html";      
     } else {
-      prevButton.href = "index.html";
+      prevButton.href = "home.html";
     }
     nextButton.href = nextPageUrl();
   };
