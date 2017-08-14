@@ -48,7 +48,7 @@ jshero.koans.add({
       if (ok) {
         msg = '<code>firstname</code> has the value "Lata".';
       } else {
-        msg = '<code>firstname</code> has not the value <code>"Lata"</code>, but the value <code>' + JSON.stringify(firstname) + '</code>.';
+        msg = '<code>firstname</code> does not have the value <code>"Lata"</code>, but the value <code>' + JSON.stringify(firstname) + '</code>.';
       }
       return {
         ok: ok,

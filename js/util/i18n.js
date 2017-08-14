@@ -10,7 +10,8 @@ jshero.i18n = (function() {
     testError: "Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!",
     testsPassed: "Alle Tests bestanden!",
     syntaxError: "Fehler beim Einlesen des Codes!",
-    unknownError: "Unbekannter Testfehler!"
+    unknownError: "Unbekannter Testfehler!",
+    goon: "Weiter"
   };
 
   var dictionary_en = {
@@ -19,7 +20,8 @@ jshero.i18n = (function() {
     testError: "Test-Error! Correct the error and re-run the tests!",
     testsPassed: "All tests passed!",
     syntaxError: "Error reading your code!",
-    unknownError: "Unknown test error!"
+    unknownError: "Unknown test error!",
+    goon: "Continue"
   };
 
   var getLang = function() {

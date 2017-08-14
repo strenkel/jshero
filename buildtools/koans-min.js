@@ -71,7 +71,11 @@ compressor.minify({
   compressor: 'gcc',
   publicFolder: '../en/js/koans/',
   input: [
-    'var.js'
+    'var.js',
+    'var2.js',
+    'function.js',
+    'parameter.js',
+    'string.js'
   ],
   output: '../en/js/koans-min/koans.js',
   callback: function(err, min) {

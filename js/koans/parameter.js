@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: "Parameter",
 
-  lesson: 'Nun möchten wir Funktionen mit Parametern kennen lernen. Mit <pre><code>var gebe = function(eingabe) {<br>  return eingabe;<br>};</code></pre>' +
+  lesson: 'Jetzt lernen wir Funktionen mit Parametern kennen. Mit <pre><code>var gebe = function(eingabe) {<br>  return eingabe;<br>};</code></pre>' +
     'definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt. ' +
     'Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu ihrer Deklaration. ' +
     'Mit <pre><code>var ergebnis = gebe("Apfel");</code></pre>' +
