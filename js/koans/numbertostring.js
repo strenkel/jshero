@@ -61,7 +61,7 @@ jshero.koans.add({
         if (ok) {
           msg = '<code>digitLength(1)</code> gibt <code>1</code> zurück.';
         } else {
-          msg = '<code>digitLength(1)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>digitLength(1)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
@@ -83,7 +83,7 @@ jshero.koans.add({
         if (ok) {
           msg = '<code>digitLength(709)</code> gibt <code>3</code> zurück.';
         } else {
-          msg = '<code>digitLength(709)</code> gibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>digitLength(709)</code> gibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;

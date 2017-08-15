@@ -68,7 +68,7 @@ jshero.koans.add({
         if (ok) {
           msg = '<code>convert("10-07-1871")</code> gibt <code>"10.07.1871"</code> zurück.';
         } else {
-          msg = '<code>onvert("10-07-1871")</code> gibt nicht <code>"10.07.1871"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>convert("10-07-1871")</code> gibt nicht <code>"10.07.1871"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
