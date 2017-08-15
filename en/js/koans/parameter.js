@@ -13,7 +13,7 @@ jshero.koans.add({
     'The variable <code>input</code> is returned in the single code line of the function <code>give</code>. ' +
     'This return is assigned to the variable <code>result</code>. Finally, <code>result</code> has the value <code>"apple"</code>. ',
         
-  task: 'Write a function <code>echo</code>, which also returns the passed parameter.',
+  task: 'Write a function <code>echo</code> that also returns the passed parameter.',
 
   beforeTests: function() {
     if (typeof echo !== "undefined") {

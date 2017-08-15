@@ -13,7 +13,7 @@ jshero.koans.add({
     '<pre><code>var praise = function(name) {<br>  return name + " is great!";<br>};</code></pre>' + 
     '<code>praise("JavaScript")</code> will return <code>"JavaScript is great!"</code>.', 
         
-  task: 'Write a function <code>greet</code> having one parameter and which returns <code>"Hello &lt;parameter&gt;!"</code>. ' +
+  task: 'Write a function <code>greet</code> having one parameter and that returns <code>"Hello &lt;parameter&gt;!"</code>. ' +
     '<code>greet("Ada")</code> should return <code>"Hello Ada!"</code> and <code>greet("Tayo")</code> should return <code>"Hello Tayo!"</code>.',
 
   beforeTests: function() {

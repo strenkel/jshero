@@ -14,7 +14,7 @@ jshero.koans.add({
     'A function is called by its name: <pre><code>var result = color();</code></pre>' +
     'The function <code>color</code> is executed and its return is assigned to the variable <code>result</code>. <code>result</code> therefore has the value <code>"red"</code>.',
         
-  task: 'Write a function <code>hello</code>, which returns <code>"Hello world!"</code>.',
+  task: 'Write a function <code>hello</code> that returns <code>"Hello world!"</code>.',
 
   beforeTests: function() {
     if (typeof hello !== "undefined") {

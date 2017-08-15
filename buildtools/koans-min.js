@@ -76,7 +76,11 @@ compressor.minify({
     'function.js',
     'parameter.js',
     'string.js',
-    'stringlength.js'
+    'stringlength.js',
+    'number.js',
+    'modulo.js',
+    'mean.js',
+    'further.js'
   ],
   output: '../en/js/koans-min/koans.js',
   callback: function(err, min) {
