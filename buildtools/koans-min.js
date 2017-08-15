@@ -75,7 +75,8 @@ compressor.minify({
     'var2.js',
     'function.js',
     'parameter.js',
-    'string.js'
+    'string.js',
+    'stringlength.js'
   ],
   output: '../en/js/koans-min/koans.js',
   callback: function(err, min) {
