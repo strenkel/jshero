@@ -13,7 +13,7 @@ jshero.koans.add({
     '<pre><code>numberOfChars = "".length;</code/></pre>' + 
     'The empty string has no characters. The value of <code>numberOfChars</code> is <code>0</code>.',
 
-  task: 'Write a function <code>length</code> that returns the number of characters of a passed string. ' +
+  task: 'Write a function <code>length</code> that takes a string and returns the number of characters of the string. ' +
     '<code>length("sun")</code> should return <code>3</code>.',
 
   beforeTests: function() {

@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "Parentheses",
 
   lesson: 'Just as in mathematics, the order of operations rules are valid in JavaScript. Multiplication and division are performed before addition and subtraction. ' +
-  'With parentheses you can specify as in mathematics the order of operations.' +
+  'With parentheses you can specify the order of operations.' +
   '<pre><code>var x1 = 3 + 4 * 2;<br>var x2 = (3 + 4) * 2;</code></pre>' +
   '<code>x1</code> is <code>11</code> and <code>x2</code> is <code>14</code>.',
         

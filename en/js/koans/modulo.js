@@ -10,7 +10,7 @@ jshero.koans.add({
     '7 divided by 2 is 3 with remainder 1. <code>x</code> is <code>1</code>.<br>' +
     '20 divided by 3 is 6 with remainder 2. <code>y</code> is <code>2</code>.',
 
-  task: 'Write a function <code>firstDigit</code> that takes a natural number and returns the first digit of that namber.' +
+  task: 'Write a function <code>firstDigit</code> that takes a natural number and returns the first digit of that number. ' +
     '<code>firstDigit(2674)</code> should return <code>4</code>.',
 
   beforeTests: function() {
