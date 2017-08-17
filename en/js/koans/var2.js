@@ -6,8 +6,7 @@ jshero.koans.add({
 
   lesson: 'Several variables are declared and initialized in 2 program lines:' +
     '<pre><code>var city = "Lubumbashi";<br>' +
-    'var country = "Congo";</code></pre>' +
-    'Each line has a statement. Each statement should be terminated with a semicolon.',
+    'var country = "Congo";</code></pre>',
         
   task: 'Declare a variable <code>flower</code> and assign it the value <code>"rose"</code>. ' +
     'Declare a second variable <code>tree</code> and assign it the value <code>"maple"</code>.',

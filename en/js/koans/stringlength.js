@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "String: length",
 
   lesson: 'Strings have the <code>length</code> property. This property returns the number of characters in a string. ' +
-    'To do this, you must append <code>.length</code> to the string or to the variable that contains the string:' +
+    'To do this, you must append <code>.length</code> to the string or to the variable which contains the string:' +
     '<pre><code>var numberOfChars = "Ai".length;</code/></pre>' +
     '<code>"Ai"</code> has 2 characters. So <code>numberOfChars</code> has the value <code>2</code>.' +
     '<pre><code>var name = "Weiwei";<br>numberOfChars = name.length;</code/></pre>' +

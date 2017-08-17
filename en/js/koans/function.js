@@ -10,11 +10,11 @@ jshero.koans.add({
     'Use the keyword <code>return</code> to return a value. At the same time <code>return</code> terminates the function. ' +
     'Functions can be assigned to a variable. Then the function carries the name of the variable. With ' +
     '<pre><code>var color = function() {<br>  return "red";<br>};</code></pre> we define a function <code>color</code> ' +
-    'which returns the value <code>"red"</code>. The function has no parameters (the parentheses are empty) and contains only the return statement.<br><br>' +
+    'that returns the value <code>"red"</code>. The function has no parameters (the parentheses are empty) and contains only the return statement.<br><br>' +
     'A function is called by its name: <pre><code>var result = color();</code></pre>' +
-    'The function <code>color</code> is executed and its return is assigned to the variable <code>result</code>. <code>result</code> therefore has the value <code>"red"</code>.',
+    'The function <code>color</code> will be executed and its return is assigned to the variable <code>result</code>. <code>result</code> therefore has the value <code>"red"</code>.',
         
-  task: 'Write a function <code>hello</code> that returns <code>"Hello world!"</code>.',
+  task: 'Define a function <code>hello</code> that returns <code>"Hello world!"</code>.',
 
   beforeTests: function() {
     if (typeof hello !== "undefined") {
