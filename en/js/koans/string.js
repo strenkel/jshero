@@ -8,7 +8,7 @@ jshero.koans.add({
     'Values have a type. The type of <code>"Hello world!"</code> is string. ' +
     'Strings are always written in single or double quotes. <code>"Hello world!"</code> is the same string as <code>\'Hello world!\'</code>.<br>' +
     'You can work with strings. For example, they can be concatenated. This is done with the <code>+</code> sign. ' +
-    '<code>"Java" + "Script"</code> result in the string <code>"JavaScript"</code>.<br>' +
+    '<code>"Java" + "Script"</code> results in the string <code>"JavaScript"</code>.<br>' +
     'The following function appends <code>" is great!"</code> to the passed parameter and returns the result:' +
     '<pre><code>var praise = function(name) {<br>  return name + " is great!";<br>};</code></pre>' + 
     '<code>praise("JavaScript")</code> will return <code>"JavaScript is great!"</code>.', 

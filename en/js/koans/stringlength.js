@@ -4,14 +4,14 @@ jshero.koans.add({
 
   title: "String: length",
 
-  lesson: 'Strings have the <code>length</code> property. This property returns the number of characters in a string. ' +
+  lesson: 'Strings have the <code>length</code> property. This property represents the number of characters in a string. ' +
     'To do this, you must append <code>.length</code> to the string or to the variable which contains the string:' +
-    '<pre><code>var numberOfChars = "Ai".length;</code/></pre>' +
-    '<code>"Ai"</code> has 2 characters. So <code>numberOfChars</code> has the value <code>2</code>.' +
-    '<pre><code>var name = "Weiwei";<br>numberOfChars = name.length;</code/></pre>' +
-    '<code>"Weiwei"</code> has 6 characters. <code>numberOfChars</code> now has the value <code>6</code>.' +
-    '<pre><code>numberOfChars = "".length;</code/></pre>' + 
-    'The empty string has no characters. The value of <code>numberOfChars</code> is <code>0</code>.',
+    '<pre><code>var charNumber = "Ai".length;</code/></pre>' +
+    '<code>"Ai"</code> has 2 characters. So <code>charNumber</code> has the value <code>2</code>.' +
+    '<pre><code>var name = "Weiwei";<br>charNumber = name.length;</code/></pre>' +
+    '<code>"Weiwei"</code> has 6 characters. <code>charNumber</code> now has the value <code>6</code>.' +
+    '<pre><code>charNumber = "".length;</code/></pre>' +
+    'The empty string has no characters. The value of <code>charNumber</code> is <code>0</code>.',
 
   task: 'Write a function <code>length</code> that takes a string and returns the number of characters of the string. ' +
     '<code>length("sun")</code> should return <code>3</code>.',

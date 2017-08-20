@@ -8,9 +8,9 @@ jshero.koans.add({
     'definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt. ' +
     'Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu ihrer Deklaration. ' +
     'Mit <pre><code>var ergebnis = gebe("Apfel");</code></pre>' +
-    'rufen wir die Funktion <code>gebe</code> mit der Wert <code>"Apfel"</code> auf. Jetzt wird unsere zuvor definierte Funktion <code>gebe</code> ' +
+    'wird die Funktion mit der Wert <code>"Apfel"</code> aufgerufen. Jetzt wird unsere zuvor definierte Funktion ' +
     'ausgeführt. Dabei wird zunächst der Wert <code>"Apfel"</code> dem Parameter <code>eingabe</code> zugewiesen. <code>eingabe</code> hat jetzt den ' +
-    'Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion <code>gebe</code> wird nun die Variable <code>eingabe</code> mit der ' +
+    'Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion wird nun die Variable <code>eingabe</code> mit der ' +
     '<code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
     'dann auch den Wert <code>"Apfel"</code>.',
         

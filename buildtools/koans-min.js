@@ -7,6 +7,7 @@ compressor.minify({
     'var.js',
     'var2.js',
     'function.js',
+    'functioncall.js',
     'parameter.js',
     'string.js',
     'log.js',

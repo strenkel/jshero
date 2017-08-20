@@ -8,13 +8,14 @@ jshero.koans.add({
     'A function can have parameters and can return a value. ' +
     'Functions are defined by the keyword <code>function</code>, followed by the parameters enclosed in parentheses, followed by the instructions enclosed in curly brackets. ' +
     'Use the keyword <code>return</code> to return a value. At the same time <code>return</code> terminates the function. ' +
-    'Functions can be assigned to a variable. Then the function carries the name of the variable. With ' +
-    '<pre><code>var color = function() {<br>  return "red";<br>};</code></pre> we define a function <code>color</code> ' +
-    'that returns the value <code>"red"</code>. The function has no parameters (the parentheses are empty) and contains only the return statement.<br><br>' +
-    'A function is called by its name: <pre><code>var result = color();</code></pre>' +
-    'The function <code>color</code> will be executed and its return is assigned to the variable <code>result</code>. <code>result</code> therefore has the value <code>"red"</code>.',
+    'Functions can be assigned to a variable. With ' +
+    '<pre><code>var color = function() {<br>  return "red";<br>};</code></pre> we define a function ' +
+    'that returns the value <code>"red"</code>. The function has no parameters (the parentheses are empty) and contains only the return statement. ' +
+    'The function is assigned to the variable <code>color</code>. The function is called via this variable:' +
+    '<pre><code>var result = color();</code></pre>' +
+    'Now the function is executed. Its return is assigned to the variable <code>result</code>. <code>result</code> therefore has the value <code>"red"</code>.',
         
-  task: 'Define a function <code>hello</code> that returns <code>"Hello world!"</code>.',
+  task: 'Declare a variable <code>hello</code>. Assign a function to it, that returns <code>"Hello world!"</code>.',
 
   beforeTests: function() {
     if (typeof hello !== "undefined") {

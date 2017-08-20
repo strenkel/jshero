@@ -10,7 +10,7 @@ jshero.koans.add({
   'You can calculate with numbers. The four basic arithmetics adding, subtracting, multiplying and dividing are represented by '+
    '<code> + - * </code> and <code>/</code>.' +
   '<pre><code>var x1 = 6;<br>var x2 = 2;<br>var x3 = x1 + x2;<br>var x4 = x1 - x2;<br>var x5 = x1 * x2;<br>var x6 = x1 / x2;</code></pre>' +
-  'The variables <code>x3</code> to <code>x6</code> thus have the values <code>8</code>, <code>4</code>, <code>12</ code> and <code>3</code>.',
+  'The variables <code>x3</code> to <code>x6</code> thus have the values <code>8</code>, <code>4</code>, <code>12</code> and <code>3</code>.',
         
   task: 'Write a function <code>add</code> that takes two numbers and returns their sum. ' +
   '<code>add(1,&nbsp;2)</code> should return <code>3</code>.',

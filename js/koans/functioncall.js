@@ -6,26 +6,31 @@ jshero.koans.add({
 
   lesson: 'Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion. ' +
     'Mit der Definition wird festgelegt, was die Funktion machen soll. Sie wird dabei nicht ausgeführt. Sie wird lediglich zur Ausführung bereitgestellt. ' +
-    'Erst mit ihrem Aufruf wir die Funktion ausgeführt. Dann werden die Anweisung im Funktionsblock der Reihe nach abgearbeitet. ' +
-    'Funktionen werden einmal definiert, um sie dann an ganz verschiedenen Programmstellen durch ihren Aufruf zu nutzen.',
+    'Erst mit ihrem Aufruf wird die Funktion ausgeführt. Dann werden die Anweisung im Funktionsblock der Reihe nach abgearbeitet. ' +
+    'Definiert werden Funktionen mit dem Schlüsselwort <code>function</code>. Ist die Funktion einer Variablen zugewiesen, geschiet der Aufruf der Funktion über diese Variable. ' +
+    'Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen durch ihren Aufruf zu nutzen.',
         
-  task: 'Schreibe eine Funktion <code>hallo</code>, die <code>"Moin"</code> zurückgibt. ' +
-    'Rufe die Funktion auf und weise einer Variablen <code>begruessung</code> die Rückgabe dieses Aufrufs zu.',
+  task: 'Deklariere eine Variable <code>begruesse</code> und weise ihr eine Funktion zu, die <code>"Moin!"</code> zurückgibt. ' +
+    'Deklariere eine Variable <code>begruessung</code>. Rufe die Funktion auf und weise der Variablen <code>begruessung</code> die Rückgabe dieses Aufrufs zu.',
 
   beforeTests: function() {
-    if (typeof hallo !== "undefined") {
+    if (typeof begruesse !== "undefined") {
       hallo = undefined;
+    }
+    if (typeof begruessung !== "undefined") {
+      begruessung = undefined;
     }
   },
 
   tests: [
+
     function() {
-      var ok = typeof hallo === 'function';
+      var ok = typeof begruesse === 'function';
       var msg;
       if (ok) {
-        msg = '<code>hallo</code> ist eine Funktion.';
+        msg = '<code>begruesse</code> ist eine Funktion.';
       } else {
-        msg = '<code>hallo</code> ist keine Funktion.';
+        msg = '<code>begruesse</code> ist keine Funktion.';
       }
       return {
         ok: ok,
@@ -36,12 +41,12 @@ jshero.koans.add({
     function() {
       var ok, msg, e;
       try {
-        var result = hallo();
-        ok = result === "Hallo Welt!";
+        var result = begruesse();
+        ok = result === "Moin!";
         if (ok) {
-          msg = '<code>hallo()</code> gibt <code>"Hallo Welt!"</code> zurück.';
+          msg = '<code>begruesse()</code> gibt <code>"Moin!"</code> zurück.';
         } else {
-          msg = '<code>hallo()</code> gibt nicht <code>"Hallo Welt!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
+          msg = '<code>begruesse()</code> gibt nicht <code>"Moin!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
       } catch(exc) {
         ok = false;
@@ -52,6 +57,34 @@ jshero.koans.add({
         ok: ok,
         msg: msg,
         e: e
+      };
+    },
+
+    function() {
+      var ok = typeof begruessung !== 'undefined';
+      var msg;
+      if (ok) {
+        msg = "<code>begruessung</code> hat einen Wert.";
+      } else {
+        msg = "<code>begruessung</code> hat keinen Wert.";
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    },
+
+    function() {
+      var ok = begruessung === "Moin!";
+      var msg;
+      if (ok) {
+        msg = '<code>begruessung</code> hat den Wert "Moin!".';
+      } else {
+        msg = '<code>begruessung</code> hat nicht den Wert <code>"Moin!"</code>, sondern den Wert <code>' + JSON.stringify(begruessung) + '</code>.';
+      }
+      return {
+        ok: ok,
+        msg: msg
       };
     }
   ]
