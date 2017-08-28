@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: 'Neben der Eigenschaft <code>length</code> besitzen Strings noch eine Reihe von Methoden. Das sind Funktionen, die direkt auf dem String angewendet werden. ' +
     'Wie die Eigenschaft <code>length</code> werden diese Methoden mit einem Punkt direkt dem String oder einer Variablen, die einen String enthält, angehängt. ' +
-    'Da Methoden Funktionen sind, folgen in runden Klammern eingeschlossen die Parameter. ' +
-    'Zwei dieser String-Methoden sind die parameterlosen Methoden <code>toUpperCase()</code> und <code>toLowerCase()</code>. ' +
+    'Da Methoden Funktionen sind, folgen in runden Klammern eingeschlossen die Argumente. ' +
+    'Zwei dieser String-Methoden sind die parameterlosen Methoden <code>toUpperCase</code> und <code>toLowerCase</code>. ' +
     'Sie geben den String, auf dem sie angewendet werden, in Groß- bzw. Kleinbuchstaben zurück. Wichtig ist, dass der eigentliche String unverändert bleibt. ' +
     'Die Rückgabe dieser Methoden ist der in Groß- bzw. Kleinbuchstaben umgewandelte String.' + 
     '<pre><code>var stadt = "Prag";<br>var ausgabe = stadt.toUpperCase();</code/></pre>' +
