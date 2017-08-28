@@ -81,6 +81,7 @@ compressor.minify({
     'string.js',
     'stringlength.js',
     'stringupper.js',
+    'stringcharat.js',
     'number.js',
     'modulo.js',
     'mean.js',

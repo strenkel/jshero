@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'String: charAt()',
 
-  lesson: 'Um aus einem String das Zeichen an einer bestimmten Stelle zu bestimmen, verwendet man die Methode ' +
+  lesson: 'Um aus einem String das Zeichen an einer bestimmten Stelle zu erhalten, verwendet man die Methode ' +
   '<code>charAt(index)</code>. Der Paramter <code>index</code> gibt die Stelle des Zeichens innerhalb der Zeichenkette an. ' +
   'Dabei hat das erste Zeichen einer Zeichenkette den Index 0:' +
   '<pre><code>var n1 = "Maria".charAt(0);<br>var n2 = "Maria".charAt(1);<br>var n3 = "Maria".charAt(5);<br>var n4 = "Maria".charAt();</code></pre>' +
