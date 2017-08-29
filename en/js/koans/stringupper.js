@@ -65,7 +65,7 @@ jshero.koans.add({
         }
       } catch (exc) {
         ok = false;
-        msg = 'Error while calling <code>toCase("Mthatha")</code>.';
+        msg = 'Error when calling <code>toCase("Mthatha")</code>.';
         e = exc;
       }
       return {
@@ -87,7 +87,7 @@ jshero.koans.add({
         }
       } catch (exc) {
         ok = false;
-        msg = 'Error while calling <code>toCase("Johannesburg")</code>.';
+        msg = 'Error when calling <code>toCase("Johannesburg")</code>.';
         e = exc;
       }
       return {

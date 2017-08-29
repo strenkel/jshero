@@ -65,7 +65,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>greet("Ada")</code>.';
+        msg = 'Error when calling <code>greet("Ada")</code>.';
         e = exc;
       }
       return {
@@ -88,7 +88,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>greet("Tayo")</code>.';
+        msg = 'Error when calling <code>greet("Tayo")</code>.';
         e = exc;
       }
       return {

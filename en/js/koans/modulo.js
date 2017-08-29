@@ -61,7 +61,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>firstDigit(0)</code>.';
+        msg = 'Error when calling <code>firstDigit(0)</code>.';
         e = exc;
       }
       return {
@@ -83,7 +83,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>firstDigit(217)</code>.';
+        msg = 'Error when calling <code>firstDigit(217)</code>.';
         e = exc;
       }
       return {

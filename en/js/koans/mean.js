@@ -60,7 +60,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = "Error while calling <code>mean(1, 2)</code>.";
+        msg = "Error when calling <code>mean(1, 2)</code>.";
         e = exc;
       }
       return {
@@ -82,7 +82,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = "Error while calling <code>mean(0, 0)</code>.";
+        msg = "Error when calling <code>mean(0, 0)</code>.";
         e = exc;
       }
       return {

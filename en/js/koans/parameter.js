@@ -63,7 +63,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>echo("Hello World!")</code>.';
+        msg = 'Error when calling <code>echo("Hello World!")</code>.';
         e = exc;
       }
       return {
@@ -85,7 +85,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>echo("rose")</code>.';
+        msg = 'Error when calling <code>echo("rose")</code>.';
         e = exc;
       }
       return {

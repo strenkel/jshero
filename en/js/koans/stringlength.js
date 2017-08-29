@@ -64,7 +64,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>length("Hello world!")</code>.';
+        msg = 'Error when calling <code>length("Hello world!")</code>.';
         e = exc;
       }
       return {
@@ -86,7 +86,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error while calling <code>length("")</code>.';
+        msg = 'Error when calling <code>length("")</code>.';
         e = exc;
       }
       return {

@@ -50,7 +50,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = "Error while calling <code>hello()</code>.";
+        msg = "Error when calling <code>hello()</code>.";
         e = exc;
       }
       return {

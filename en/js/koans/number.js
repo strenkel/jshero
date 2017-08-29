@@ -63,7 +63,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = "Error while calling <code>add(0, 0)</code>.";
+        msg = "Error when calling <code>add(0, 0)</code>.";
         e = exc;
       }
       return {
@@ -85,7 +85,7 @@ jshero.koans.add({
         }
       } catch(exc) {
         ok = false;
-        msg = "Error while calling <code>add(2, 3)</code>.";
+        msg = "Error when calling <code>add(2, 3)</code>.";
         e = exc;
       }
       return {

@@ -60,7 +60,7 @@ jshero.koans.add({
       } catch(exc) {
         e = exc;
         ok = false;
-        msg = 'Error while calling <code>shortcut("Amnesty", "International")</code>.';
+        msg = 'Error when calling <code>shortcut("Amnesty", "International")</code>.';
       }
       return {
         ok: ok,
@@ -82,7 +82,7 @@ jshero.koans.add({
       } catch(exc) {
         e = exc;
         ok = false;
-        msg = 'Error while calling <code>shortcut("Java", "Script")</code>.';
+        msg = 'Error when calling <code>shortcut("Java", "Script")</code>.';
       }
       return {
         ok: ok,
