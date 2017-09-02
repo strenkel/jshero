@@ -54,6 +54,7 @@ compressor.minify({
     'arguments.js',
     'comment.js',
     'undefined.js',
+    'nan.js',
     'stringsplit.js',
     'date.js',
     'date2.js',
