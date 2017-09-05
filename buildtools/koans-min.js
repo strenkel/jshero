@@ -87,6 +87,7 @@ compressor.minify({
     'number.js',
     'modulo.js',
     'mean.js',
+    'math.js',
     'further.js'
   ],
   output: '../en/js/koans-min/koans.js',

@@ -4,9 +4,9 @@ jshero.koans.add({
 
   title: "NaN",
 
-  lesson: '<code>NaN</code> repräsentiert den Wert Not-A-Number (engl.: Keine-Zahl). Numerischen Operationen oder Funktionen geben <code>NaN</code> zurück, ' +
-    'wenn sie keinen numerischen Wert berechnen können. Wir hatten dies bei <code><a href="main.html?koan=parseint">parseInt</a></code> kennengelernt. ' +
-    '<code>parseInt</code> gibt <code>NaN</code> zurück, wenn sie keine Zahl parsen kann. Ein weiteres Beispiel ist die Berechnung der Quadratwurzel aus einer negativen Zahl. ' +
+  lesson: '<code>NaN</code> repräsentiert den Wert Not-A-Number (engl.: Keine-Zahl). Numerische Operationen oder Funktionen geben <code>NaN</code> zurück, ' +
+    'wenn sie keinen Wert berechnen können. Wir hatten dies bei <code><a href="main.html?koan=parseint">parseInt</a></code> kennengelernt. ' +
+    '<code>parseInt</code> gibt <code>NaN</code> zurück, wenn es keine Zahl parsen kann. Ein weiteres Beispiel ist die Berechnung der Wurzel aus einer negativen Zahl. ' +
     '<pre><code>' +
     'var age = parseInt("Babylon");<br>' +
     'var length = Math.sqrt(-1);' +

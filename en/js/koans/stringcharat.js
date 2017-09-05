@@ -53,7 +53,7 @@ jshero.koans.add({
         var result = shortcut("Amnesty", "International");
         ok = result === "AI";
         if (ok) {
-          msg = '<code>shortcut("Amnesty", "International")</code> returns <code>"AI"</code> zurück.';
+          msg = '<code>shortcut("Amnesty", "International")</code> returns <code>"AI"</code>.';
         } else {
           msg = '<code>shortcut("Amnesty", "International")</code> does not return <code>"AI"</code>, but <code>' + JSON.stringify(result) + '</code>.';
         }
@@ -75,7 +75,7 @@ jshero.koans.add({
         var result = shortcut("Java", "Script");
         ok = result === "JS";
         if (ok) {
-          msg = '<code>shortcut("Java", "Script")</code> returns <code>"JS"</code> zurück.';
+          msg = '<code>shortcut("Java", "Script")</code> returns <code>"JS"</code>.';
         } else {
           msg = '<code>shortcut("Java", "Script")</code> does not return <code>"JS"</code>, but <code>' + JSON.stringify(result) + '</code>.';
         }

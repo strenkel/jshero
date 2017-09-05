@@ -17,7 +17,7 @@ jshero.koans.add({
     '  return bruttoX + bruttoY;<br>' +
     '};</code></pre>' +
     '<code>addiereMitMehrwertsteuer</code> nimmt 2 Nettobeträge entgegen und gibt die Summe der Bruttobeträge zurück. <code>brutto</code> ' +
-    'berechnet aus einem Nettobetrag den Bruttobetrag. Dabei wird eine Mehrwertsteuer von 19% zu Grunde gelegt. ' +
+    'berechnet aus einem Nettobetrag den Bruttobetrag. Dabei wird eine Mehrwertsteuer von 19% zugrunde gelegt. ' +
     'Anstatt den Bruttobetrag selbst zu berechnen, ruft <code>addiereMitMehrwertsteuer</code> die Funktion ' +
     '<code>brutto</code> auf. Das hat zwei Vorteile: Der Code ist besser lesbar und die Bruttoberechnung wird zentral an einer Stelle durchgeführt.',
         

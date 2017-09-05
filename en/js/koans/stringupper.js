@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'String: toUpperCase()',
 
-  lesson: 'In addition to <code>length</code> property, strings have methods. These are functions that are applied to the string. ' +
+  lesson: 'In addition to the <code>length</code> property, strings have methods. These are functions that are applied to the string. ' +
     'Like the <code>length</code> property, these methods are appended with a point to the string or to a variable that contains a string. ' +
     'The arguments enclosed in parentheses follow. ' +
     'Two of these string methods are the parameterless methods <code>toUpperCase</code> and <code>toLowerCase</code>. ' +
@@ -14,8 +14,8 @@ jshero.koans.add({
     '<pre><code>output = town.toLowerCase();</code/></pre>' +
     'Now <code>output</code> has the value <code>"mthatha"</code>.',
 
-  task: 'Write a function <code>toCase</code> that takes a string and returns that string in lowercase and uppercase with the delimiter <code>-</code>. ' +
-    'The call <code>toCase("Mthatha")</code> should return <code>"mthatha-MTHATHA"</code>.',
+  task: 'Write a function <code>toCase</code> that takes a string and returns that string in lowercase and uppercase with <code>-</code> as delimiter. ' +
+    '<code>toCase("Mthatha")</code> should return <code>"mthatha-MTHATHA"</code>.',
 
   beforeTests: function() {
     if (typeof toCase !== "undefined") {
