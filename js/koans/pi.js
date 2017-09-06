@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: "Math.PI",
 
-  lesson: 'Neben mathematischen Funktionen besitzt <code>Math</code> auch einige mathematische Konstanten. ' +
+  lesson: 'Neben Funktionen bietet <code>Math</code> auch einige mathematische Konstanten an. ' +
     '<code>Math.PI</code> liefert die Kreiszahl &pi; (gerundet 3.14) und <code>Math.E</code> die Eulersche Zahl e (gerundet 2.71). ' +
     'Beachte: Die Konstanten werden im Gegensatz zu Funktionen ohne anschließende Klammern aufgerufen.',
         

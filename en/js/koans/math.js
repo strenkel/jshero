@@ -9,7 +9,7 @@ jshero.koans.add({
     'and <code>Math.pow(x,y)</code> calculates x to the power of y.' +
     '<pre><code>var y1 = Math.sqrt(9);<br>var y2 = Math.pow(10, 3);</code></pre>' +
     '<code>y1</code> has the value <code>3</code> and <code>y2</code> has the value <code>1000</code> (10&sup3; = 10 * 10 * 10 = 1000). ',
-        
+
   task: 'Write a function <code>hypotenuse</code> that calculates the length of the hypotenuse of a right triangle.' +
     'The length of the two legs is passed to the function. Tip: In a right triangle the Pythagorean theorem is valid. ' +
     'If a and b are the lengths of the two legs and c is the length of the hypotenuse, the following is true: a&sup2; + b&sup2; = c&sup2;. ' +
