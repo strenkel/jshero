@@ -2,13 +2,16 @@
 
 (function() {
 
+  var menu = document.getElementById("menu");
   var nav = document.getElementById("nav");
   nav.style.display = "none";
   
-  document.getElementById("menu").onclick = function() {
+  menu.onclick = function() {
     if (menuIsClosed()) {
+      menu.className = "close";
       nav.style.display = "block";
     } else {
+      menu.className = "menu";
       nav.style.display = "none";
     }
   };

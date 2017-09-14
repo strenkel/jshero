@@ -20,6 +20,10 @@
       codeArea.set(solution);
       header.toGreen();
     } else {
+      var shot = koan.getShot();
+      if (shot) {
+        codeArea.set(shot);
+      }
       header.toRed();
     }
 
@@ -80,13 +84,16 @@
     // Wir setzten den Fokus vor dem Einfügen des Weiter-Buttons. Wird dieser eingefügt, bekommt er den Fokus.
     testButton.focus();
 
+    var code = codeArea.get();
     if (okAll) {
-      var code = codeArea.get();
       koan.setSolution(code);
       header.toGreen();
       msg.log(i18n("testsPassed"), true);
       msg.goto(nextPageUrl());
     } else {
+      if (code) {
+        koan.setShot(code);
+      }
       header.toRed();
       msg.log(i18n("testError"), false);
     }

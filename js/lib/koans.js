@@ -14,6 +14,12 @@ jshero.koans = (function(storage) {
     koan.getSolution = function() {
       return storage.getSolution(koan);
     };
+    koan.setShot = function(solution) {
+      storage.setShot(koan, solution);
+    };
+    koan.getShot = function() {
+      return storage.getShot(koan);
+    };
     koans.push(koan);
   };
 
@@ -59,6 +65,7 @@ jshero.koans = (function(storage) {
   var clearSolutions = function() {
     koans.forEach(function(koan) {
       storage.removeSolution(koan);
+      storage.removeShot(koan);
     });
   };
 

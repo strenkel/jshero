@@ -100,19 +100,31 @@ nav a:last-child {
 }
 
 #title {
-  display: inline-block;
+  display: block;
+  float: left;
 }
 
 #title-short {
   display: none;
+  float: left;
 }
 
 #menu {
-  padding: 0 1em;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 2.2em;
+  float: left;
   cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 3em;
+  width: 3em;
+  margin: 0 2em;
+}
+
+#menu.menu {
+  background-image: url("../img/ic_menu_white_36px.svg");
+}
+
+#menu.close {
+  background-image: url("../img/ic_close_white_36px.svg");
 }
 
 #header .control {
@@ -266,11 +278,12 @@ nav a:last-child {
   }
 
   #title-short {
-    display: inline-block;
+    display: block;
   }
 
   #menu {
-    padding: 0 0.5em;
+    margin: 0 0.7em;
+    background-size: 32px 32px;
   }
 
   h1 {
