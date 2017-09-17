@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: 'Many mathematical functions are grouped together in the <code>Math</code> object. ' +
     'For example, <code>Math.sqrt(x)</code> returns the square root ' +
-    'and <code>Math.pow(x,y)</code> calculates x to the power of y.' +
+    'and <code>Math.pow(x, y)</code> calculates x to the power of y.' +
     '<pre><code>var y1 = Math.sqrt(9);<br>var y2 = Math.pow(10, 3);</code></pre>' +
     '<code>y1</code> has the value <code>3</code> and <code>y2</code> has the value <code>1000</code> (10&sup3; = 10 * 10 * 10 = 1000). ',
 

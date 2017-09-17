@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: 'JavaScript Hero will be continued.' ,
         
-  task: 'More exercises follow.',
+  task: 'Further exercises will follow.',
 
   beforeTests: function() {},
 

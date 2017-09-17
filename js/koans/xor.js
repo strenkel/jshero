@@ -47,7 +47,7 @@ jshero.koans.add({
         msg: msg
       };
     },
-    
+
     function() {
       var ok, msg, e;
       try {

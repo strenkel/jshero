@@ -89,6 +89,8 @@ compressor.minify({
     'mean.js',
     'math.js',
     'pi.js',
+    'bool.js',
+    'xor.js',
     'further.js'
   ],
   output: '../en/js/koans-min/koans.js',
