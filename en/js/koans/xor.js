@@ -9,8 +9,8 @@ jshero.koans.add({
     'Here you will get to know another important gate, the XOR (eXclusive OR) gate.',
         
   task: 'Write a function <code>xor</code> that takes two Boolean values. If both values are different, the result should be <code>true</code>. ' +
-    'If both values are the same, the result should be <code>false</code>.<br><code>xor(true, false)</code> and ' +
-    '<code>xor(false, true)</code> should return <code>true</code>.<br><code>xor(true, true)</code> and <code>xor(false, false)</code> should return <code>false</code>.',
+    'If both values are the same, the result should be <code>false</code>. The calls <code>xor(true, false)</code> and ' +
+    '<code>xor(false, true)</code> should return <code>true</code>. The calls <code>xor(true, true)</code> and <code>xor(false, false)</code> should return <code>false</code>.',
 
   beforeTests: function() {
     if (typeof nand !== "undefined") {
@@ -56,7 +56,7 @@ jshero.koans.add({
         if (ok) {
           msg = '<code>xor(true, true)</code> returns <code>false</code>.';
         } else {
-          msg = '<code>xor(true, true)</code> does not return <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>xor(true, true)</code> does not return <code>false</code>, but <code>' + JSON.stringify(result) + '</code>.';
         }
       } catch(exc) {
         ok = false;
