@@ -91,6 +91,7 @@ compressor.minify({
     'pi.js',
     'bool.js',
     'xor.js',
+    'equals.js',
     'further.js'
   ],
   output: '../en/js/koans-min/koans.js',
