@@ -5,11 +5,11 @@ jshero.koans.add({
   title: 'Get array elements',
 
   lesson: 'The elements of an array are accessed by an index beginning with 0. ' +
-    '<pre><code>var languages = ["C", "C++", "Java", "JavaScript"];<br>' +
+    '<pre><code>var languages = ["C", "C++", "Java"];<br>' +
     'var c = languages[0];<br>' +
     'var cPlusPlus = languages[1];<br>' +
-    'var java = languages[2];<br>' +
-    'var javaScript = languages[3];',
+    'var java = languages[2];' +
+    '</code></pre>',
         
   task: 'Write a function <code>getFirstElement</code> that takes an array and returns the first element of the array. ' +
     '<code>getFirstElement([1, 2])</code> should return <code>1</code>.',

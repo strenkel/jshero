@@ -5,7 +5,7 @@ jshero.koans.add({
   title: 'Creating arrays',
 
   lesson: 'Arrays are objects for storing multiple values. Arrays are preferably created with square brackets.' +
-    '<pre><code>var languages = ["C", "C++", "Java", "JavaScript"];<br>' +
+    '<pre><code>var languages = ["C", "C++", "Java"];<br>' +
     'var primes = [2, 3, 5, 7, 11];<br>' +
     'var emptyArray = [];<br>' +
     'var a = "Douglas";<br>' +
