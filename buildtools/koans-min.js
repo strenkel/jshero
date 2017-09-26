@@ -94,6 +94,8 @@ compressor.minify({
     'equals.js',
     'equals2.js',
     'if.js',
+    'array.js',
+    'array2.js',
     'further.js'
   ],
   output: '../en/js/koans-min/koans.js',
