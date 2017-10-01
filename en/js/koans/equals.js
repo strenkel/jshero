@@ -14,7 +14,7 @@ jshero.koans.add({
     'var c3 = x === "10";</code></pre>' +
     'The first comparison results in <code>false</code>, because <code>language</code> does not have the value <code>"Java"</code>. So <code>c1</code> is <code>false</code>. ' +
     'The second comparison results in <code>true</code>, because the value of <code>x</code> equals <code>10</code>. So <code>c2</code> is <code>true</code>. ' +
-    'In the case of strict equality, it is also important that the two compared values has the same data type. ' +
+    'In the case of strict equality, it is also important that the two compared values have the same data type. ' +
     '<code>c3</code> is <code>false</code>, because different data types are compared here. ' + 
     'On the left side of the comparison is a number, on the right side a string.',
         

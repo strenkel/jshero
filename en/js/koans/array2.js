@@ -42,7 +42,7 @@ jshero.koans.add({
       if (ok) {
         msg = '<code>getFirstElement</code> has 1 parameter.';
       } else {
-        msg = '<code>getFirstElement</code> has not 1 parameter, but ' + getFirstElement.length;
+        msg = '<code>getFirstElement</code> has not 1 parameter, but ' + getFirstElement.length + '.';
       }
       return {
         ok: ok,

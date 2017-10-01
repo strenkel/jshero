@@ -102,13 +102,13 @@ jshero.koans.add({
         var result = toArray("Tom", "Huckleberry");
         ok = Array.isArray(result) && result.length === 2 && result[0] === "Tom" && result[1] === "Huckleberry";
         if (ok) {
-          msg = '<code>toArray("Tom", "Huckleberry")</code> returns <code>["Tom", "Huckleberry"]</code>.';
+          msg = '<code>toArray("Tom", "Huck")</code> returns <code>["Tom", "Huck"]</code>.';
         } else {
-          msg = '<code>toArray("Tom", "Huckleberry")</code> does not return <code>["Tom", "Huckleberry"]</code>, but <code>' + JSON.stringify(result) + '</code>.';
+          msg = '<code>toArray("Tom", "Huck")</code> does not return <code>["Tom", "Huck"]</code>, but <code>' + JSON.stringify(result) + '</code>.';
         }
       } catch(exc) {
         ok = false;
-        msg = 'Error when calling toArray("Tom", "Huckleberry")</code>.';
+        msg = 'Error when calling toArray("Tom", "Huck")</code>.';
         e = exc;
       }
       return {

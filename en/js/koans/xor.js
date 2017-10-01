@@ -40,7 +40,7 @@ jshero.koans.add({
       if (ok) {
         msg = "<code>xor</code> has 2 parameters.";
       } else {
-        msg = "<code>xor</code> has not 2, but " + xor.length + " parameter.";
+        msg = "<code>xor</code> has not 2 parameters, but " + xor.length + ".";
       }
       return {
         ok: ok,
