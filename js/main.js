@@ -81,7 +81,7 @@
 
     // Durch das preventDefault() schloss sich auf mobilen Geraeten das Keyboard nicht mehr.
     // Durch das expliziete Setzen des Focus außerhalb des Input-Feldes wird das Keyboard geschlossen.
-    // Wir setzten den Fokus vor dem Einfügen des Weiter-Buttons. Wird dieser eingefügt, bekommt er den Fokus.
+    // Wir setzten den Fokus vor dem Einfuegen des Weiter-Buttons. Wird dieser eingefuegt, bekommt er den Fokus.
     testButton.focus();
 
     var code = codeArea.get();
@@ -91,9 +91,7 @@
       msg.log(i18n("testsPassed"), true);
       msg.goto(nextPageUrl());
     } else {
-      if (code) {
-        koan.setShot(code);
-      }
+      koan.setShot(code);
       header.toRed();
       msg.log(i18n("testError"), false);
     }

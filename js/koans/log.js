@@ -21,8 +21,8 @@ jshero.koans.add({
     'Wo man das Log zu sehen bekommt, hängt von der JavaScript-Umgebung ab. Node.js wird in einer klassischen Konsole gestartet. Dort wird auch das Log ausgegeben. ' +
     'In Browsern sieht man die Log-Ausgabe im normalen Betrieb nicht. Doch jeder Browser besitzt sogenannte Entwickler-Werkzeuge. Das sind mächtige Tools zur Unterstützung ' +
     'von Webentwicklern. Eines dieser Tools ist die Konsole. Dort wird das Log ausgegeben. Wie man die Entwickler-Werkzeuge öffnet hängt vom jeweiligen Browser ab. ' +
-    'Bei vielen Browsern (z.B. Firefox) wird sie mit der Taste F12 geöffnet. Die Konsole kannst du dann als Reiter auswählen. ' +
-    'Benutzt du JavaScript Hero im Browser, dann kannst du das sofort ausprobieren. Öffne die Entwickler-Konsole (im Firefox mit F12), schreibe unten in das Lösungsfeld ' +
+    'Bei vielen Desktop-Browsern (z.B. Firefox) wird sie mit der Taste F12 geöffnet. Die Konsole kannst du dann als Reiter auswählen. ' +
+    'Benutzt du JavaScript Hero im Browser auf einem PC oder Laptop, dann kannst du das sofort ausprobieren. Öffne die Entwickler-Konsole (im Firefox mit F12), schreibe unten in das Lösungsfeld ' +
     '<code>console.log("Hallo Konsole!")</code> und führe die Tests aus. In der Entwickler-Konsole erscheint "Hallo Konsole!".<br><br>' +
     'Da es sinnvoll ist, das Log direkt in der Testausgabe zu sehen, besitzt JavaScript Hero eine eigene Log-Funktion: <code>jshero.log</code>. ' +
     'Diese Funktion loggt so wie oben <code>console.log</code>. Die Ausgabe wird allerdings nicht in die Entwickler-Konsole, sondern in die Testausgabe geschrieben. ' +

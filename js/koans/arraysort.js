@@ -11,7 +11,7 @@ jshero.koans.add({
 
   beforeTests: function() {
     if (typeof sortiere !== "undefined") {
-      sortieren = undefined;
+      sortiere = undefined;
     }
   },
 

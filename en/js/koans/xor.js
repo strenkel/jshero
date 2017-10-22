@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "XOR",
 
   lesson: 'In the last task you have coded a so-called NAND (Not AND) gate. ' +
-    'NAND gates are a standard component in digital electronics. Any boolean function can be implemented by using a combination of NAND gates. ' +
+    'NAND gates are a standard component in digital electronics. Any Boolean function can be implemented by using a combination of NAND gates. ' +
     'Here you will get to know another important gate, the XOR (eXclusive OR) gate.',
         
   task: 'Write a function <code>xor</code> that takes two Boolean values. If both values are different, the result should be <code>true</code>. ' +

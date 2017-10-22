@@ -21,7 +21,11 @@ jshero.storage = (function(lang) {
   // --- shot ---
 
   var setShot = function(koan, solution) {
-    localStorage.setItem(getShotKey(koan), solution);
+    if (solution) {
+      localStorage.setItem(getShotKey(koan), solution);
+    } else {
+      removeShot(koan);
+    }
   };
 
   var getShot = function(koan) {

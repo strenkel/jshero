@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'Three identical values',
 
-  lesson: 'The following task should demonstrate the interaction of strict equality and Boolean operators.',
+  lesson: 'The following task can be solved by an interaction of strict equality and a Boolean operator.',
         
   task: 'Write a function <code>equals</code> that checks 3 values for strict equality. The function should only return <code>true</code> if all 3 values are equal. ' +
     '<code>equals(1, 1, 1)</code> should return <code>true</code> and <code>equals(1, 2, 1)</code> should return <code>false</code>.',

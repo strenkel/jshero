@@ -47,9 +47,9 @@ jshero.koans.add({
       var ok = equals.length === 2;
       var msg;
       if (ok) {
-        msg = '<code>equals</code> has 2 parameter.';
+        msg = '<code>equals</code> has 2 parameters.';
       } else {
-        msg = '<code>equals</code> has not 2, but ' + equals.length + ' parameters.';
+        msg = '<code>equals</code> has not 2 parameters, but ' + equals.length + '.';
       }
       return {
         ok: ok,

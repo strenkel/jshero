@@ -98,6 +98,7 @@ compressor.minify({
     'array2.js',
     'array3.js',
     'arraylength.js',
+    'arraysort.js',
     'further.js'
   ],
   output: '../en/js/koans-min/koans.js',
