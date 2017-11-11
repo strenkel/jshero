@@ -1,0 +1,15 @@
+{
+  "name": "build-tools",
+  "description": "Tools to build jshero (though it also runs locally)",
+  "version": "1.0.0",
+  "author": "jshero authors",
+  "private": true,
+  "scripts": {
+    "build": "node koans-min.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "node-minify": "^2.4.0"
+  }
+}
