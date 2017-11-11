@@ -14,7 +14,7 @@
     document.getElementById("koans-title").innerHTML = (koans.getIndex() + 1) + ". " + koan.title;
     document.getElementById("koans-lesson").innerHTML = koan.lesson;
     document.getElementById("koans-task").innerHTML = koan.task;
-    
+
     var solution = koan.getSolution();
     if (solution) {
       codeArea.set(solution);
@@ -30,7 +30,7 @@
     if (koans.hasPrev()) {
       prevButton.href = "main.html?koan=" + koans.prevId();
     } else if (lang === "de") {
-      prevButton.href = "intro.html";      
+      prevButton.href = "intro.html";
     } else {
       prevButton.href = "home.html";
     }
@@ -46,7 +46,7 @@
   };
 
   var testCode = function(e) {
-    
+
     e.preventDefault();
 
     msg.clear();
@@ -55,7 +55,7 @@
     var okAll = false;
     var ok = readCode();
     var result;
-    
+
     if (ok) {
       okAll = true;
       var tests = koan.tests;
