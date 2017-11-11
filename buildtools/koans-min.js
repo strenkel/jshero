@@ -1,5 +1,8 @@
 var compressor = require('node-minify');
 
+/* The order of the files in the input array defines the order
+   in which the koans appear in the tutorial.
+*/
 compressor.minify({
   compressor: 'gcc',
   publicFolder: '../js/koans/',
@@ -38,7 +41,7 @@ compressor.minify({
     'if.js',
     'else.js',
     'elseif.js',
-    'array.js', 
+    'array.js',
     'array2.js',
     'array3.js',
     'arraylength.js',
@@ -64,7 +67,7 @@ compressor.minify({
   ],
   output: '../js/koans-min/koans.js',
   callback: function(err, min) {
-    // err is always null. I doesn't know why.
+    // err is always null. I don't know why.
     if (err) {
       console.error(err);
     }
@@ -103,7 +106,7 @@ compressor.minify({
   ],
   output: '../en/js/koans-min/koans.js',
   callback: function(err, min) {
-    // err is always null. I doesn't know why.
+    // err is always null. I don't know why.
     if (err) {
       console.error(err);
     }

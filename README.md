@@ -19,3 +19,6 @@ Die Datei package.json definiert die nötigen Module, die für koans-min.js verw
 Mit `$ yarn install` (oder `$ npm install`) werden diese Module einmalig installiert.
 
 Das Script kann dann mit `$ yarn run build` (oder `$ node koans-min.js`) ausgeführt werden.
+
+In der koans-min.js-Datei wird die Reihenfolge der Koans definiert, so wie sie
+im Tutorial erscheinen.
