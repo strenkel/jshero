@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'arguments',
 
-  title: 'arguments',
+  title: 'Das arguments-Objekt',
 
   lesson: 'Das <code>arguments</code>-Objekt ist eine in jeder Funktion verfügbare Variable. ' +
     'Es ist ein Array ähnliches Objekt, das die übergebenen Argumente einer Funktion der Reihe nach enthält. ' +
@@ -35,7 +35,7 @@ jshero.koans.add({
   task: 'Schreibe eine Funktion <code>maximum</code>, die beliebig viele Zahlen entgegennimmt und das Maximum dieser Zahlen liefert. ' +
     '<code>maximum(12, 68, 3, 52)</code> sollte <code>68</code> ergeben.',
 
-  beforeTests: function() { 
+  beforeTests: function() {
     if (typeof maximum !== "undefined") {
       maximum = undefined;
     }

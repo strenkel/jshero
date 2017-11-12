@@ -1,0 +1,9 @@
+# http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# 2 space indentation for JavaScript
+[*.js]
+indent_style = space
+indent_size = 2

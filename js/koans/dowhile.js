@@ -4,7 +4,7 @@ jshero.koans.add({
 
   id: 'dowhile',
 
-  title: 'do...while - Schleife',
+  title: 'do...while-Schleife',
 
   lesson: 'Die <code>do...while</code>-Schleife funktioniert ähnlich wie die <code>while</code>-Schleife. ' +
     'Der Schleifen-Code wird ausgeführt, solange die Schleifenbedingung <code>true</code> ergibt. ' +
@@ -29,10 +29,10 @@ jshero.koans.add({
     'Modulo-Berechnungen nicht <code>0</code>, ist die Schleifenbedingung <code>true</code> und der Schleifen-Code wird mit einem um 1 erhöhten <code>kgV</code> ' +
     'erneut durchlaufen. Ergeben beide Modulo-Berechnungen <code>0</code>, ist die Schleifenbedingung <code>false</code> und die Schleife wird beendet. ' +
     '<code>kgV</code> hat dann den gewünschten Wert (nämlich 24), da es die erste Zahl ist, die sowohl durch 6 als auch durch 8 teilbar ist.',
-        
+
   task: 'Schreibe eine Funktion <code>kgV</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren kgV berechnet. ' +
     '<code>kgV(6, 8)</code> sollte <code>24</code> zurückgeben.',
- 
+
   beforeTests: function() {
     if (typeof kgV !== "undefined") {
       kgV = undefined;
@@ -40,7 +40,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
       var ok = typeof kgV === 'function';
       var msg;

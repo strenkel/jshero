@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'array3',
 
-  title: 'Array-Elemente setzen',
+  title: 'Array-Elemente schreiben',
 
   lesson: 'Ebenso wie man Array-Elemente über einen Index auslesen kann, kann man sie über diesen Index setzen. ' +
     'Dabei spielt es keine Rolle, ob das Array vorher gefüllt oder leer war.' +
@@ -12,7 +12,7 @@ jshero.koans.add({
     'sprachen[2] = "Java";<br>' +
     'sprachen[3] = "JavaScript";</code></pre>' +
     'Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt.',
-        
+
   task: 'Schreibe eine Funktion <code>setFirstElement</code>, die ein Array und eine beliebige Variable entgegennimmt. ' +
     'Die Variable soll als erstes Element in das Array geschrieben werden. Das Array soll dann zurückgegeben werden. ' +
     '<code>setFirstElement([1, 2], 3)</code> sollte <code>[3, 2]</code> zurückgeben.',
@@ -24,7 +24,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
       var ok = typeof setFirstElement === 'function';
       var msg;
@@ -52,7 +52,7 @@ jshero.koans.add({
         msg: msg
       };
     },
-   
+
     function() {
       var ok, msg, e;
       try {
@@ -74,7 +74,7 @@ jshero.koans.add({
         e: e
       };
     },
- 
+
     function() {
       var ok, msg, e;
       try {

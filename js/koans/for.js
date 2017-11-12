@@ -4,7 +4,7 @@ jshero.koans.add({
 
   id: 'for',
 
-  title: 'for - Schleife',
+  title: 'for-Schleife',
 
   lesson: 'Mit Schleifen können Code-Abschnitte mehrmals durchlaufen werden. JavaScript kennt mehrere Schleifenarten. Die einfachste ist die <code>for</code>-Schleife.' +
     '<pre><code>var summe = 0;<br>' +
@@ -27,7 +27,7 @@ jshero.koans.add({
     '<code>i</code> wird abermals erhöht und hat nun den Wert <code>3</code>. ' +
     'Die Schleifenbedingung <code>3 < 3</code> ist jetzt nicht mehr erfüllt. Die Schleife wird beendet und die Programmausführung wird nach der Schleife fortgesetzt. ' +
     'Unser Codebespiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.',
-        
+
   task: 'Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die ' +
     'alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden. ' +
     '<code>addiereBis(4)</code> sollte <code>6</code> ergeben.',
@@ -39,7 +39,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
       var ok = typeof addiereBis === 'function';
       var msg;

@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'array2',
 
-  title: 'Array-Elemente ansprechen',
+  title: 'Array-Elemente lesen',
 
   lesson: 'Die Elemente eines Arrays werden mit einem Index beginnend mit 0 angesprochen. ' +
     '<pre><code>var sprachen = ["C", "C++", "Java", "JavaScript"];<br>' +
@@ -10,7 +10,7 @@ jshero.koans.add({
     'var cPlusPlus = sprachen[1];<br>' +
     'var java = sprachen[2];<br>' +
     'var javaScript = sprachen[3];',
-        
+
   task: 'Schreibe eine Funktion <code>getFirstElement</code>, die ein Array entgegennimmt und die das erste Element des Arrays zurückgibt. ' +
     '<code>getFirstElement([1, 2])</code> sollte <code>1</code> zurückgeben.',
 
@@ -21,7 +21,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
       var ok = typeof getFirstElement === 'function';
       var msg;
@@ -49,7 +49,7 @@ jshero.koans.add({
         msg: msg
       };
     },
-   
+
     function() {
       var ok, msg, e;
       try {
@@ -71,7 +71,7 @@ jshero.koans.add({
         e: e
       };
     },
- 
+
     function() {
       var ok, msg, e;
       try {
