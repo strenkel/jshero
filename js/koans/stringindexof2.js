@@ -15,7 +15,9 @@ var n3 = "Fred Feuerstein".indexOf("e", 7);</code></pre>
 
   task: `Schreibe eine Funktion <code>secondIndexOf</code>, die 2 Strings entgegennimmt und die zweite Position des
     zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vor, so soll <code>-1</code> zurückgegeben werden.
-    <code>secondIndexOf("Maria Maria", "Maria")</code> soll <code>6</code> zurückgeben.`,
+    <code>secondIndexOf("Maria Maria", "Maria")</code> soll <code>6</code> zurückgeben.
+    <br/>Tipp: falls der Test fehlschlägt, lese dir auch diese Beschreibung durch:
+    <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String/indexOf">String/indexOf</a>.`,
 
   beforeTests: function() {
     if (typeof secondIndexOf !== "undefined") {
