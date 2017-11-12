@@ -29,16 +29,16 @@ jshero.koans = (function(storage) {
    * the order in which the koans appear in the tutorial.
    */
   var initReorder = function(idArray) {
-        var tmpArr = [];
+    var koansInNewOrder = [];
 
-        idArray.forEach(function(id) {
-            k = koans.find(function(k) {
-                return k.id == id;
-            });
-            tmpArr.push(k);
-        });
+    idArray.forEach(function(id) {
+      var koanForId = koans.find(function(k) {
+          return k.id == id;
+      });
+      koansInNewOrder.push(koanForId);
+    });
 
-        koans = tmpArr;
+    koans = koansInNewOrder;
   }
 
   var getKoan = function() {

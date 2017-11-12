@@ -1,7 +1,5 @@
 /* This puts the koans in the desired order */
 
-var tmpArr = [];
-
 jshero.koans.initReorder(
     [
     'var',
