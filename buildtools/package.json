@@ -5,11 +5,12 @@
   "author": "jshero authors",
   "private": true,
   "scripts": {
-    "build": "node koans-min.js"
+    "comment_build": "run manually using $ ./node_modules/.bin/babel",
+    "build": "babel -o ../js/koans-min/koans.js --minified ../js/koans/ && babel -o ../en/js/koans-min/koans.js --minified ../en/js/koans/"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "node-minify": "^2.4.0"
   }
 }

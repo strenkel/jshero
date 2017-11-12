@@ -23,6 +23,24 @@ jshero.koans = (function(storage) {
     koans.push(koan);
   };
 
+  /**
+   * Pass an array of all koan ids that should appear in the tutorial.
+   * This order in the array will define
+   * the order in which the koans appear in the tutorial.
+   */
+  var initReorder = function(idArray) {
+        var tmpArr = [];
+
+        idArray.forEach(function(id) {
+            k = koans.find(function(k) {
+                return k.id == id;
+            });
+            tmpArr.push(k);
+        });
+
+        koans = tmpArr;
+  }
+
   var getKoan = function() {
     return koans[index];
   };
@@ -37,7 +55,7 @@ jshero.koans = (function(storage) {
     }
     return null;
   };
-  
+
   var hasPrev = function() {
     return index > 0;
   };
@@ -74,7 +92,7 @@ jshero.koans = (function(storage) {
   var getKoanIdFromUrl = function() {
     var parts = window.location.search.split("=");
     if (parts.length === 2) {
-      if (parts[0] === "?koan") {      
+      if (parts[0] === "?koan") {
         return parts[1];
       } else if (parts[0] === "?pos" && parts[1] === "last") {
         return koans[koans.length - 1].id;
@@ -93,6 +111,7 @@ jshero.koans = (function(storage) {
 
   return {
     add: add,
+    initReorder: initReorder,
     nextId: nextId,
     hasNext: hasNext,
     prevId: prevId,

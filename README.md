@@ -7,18 +7,23 @@ Playstore: https://play.google.com/store/apps/details?id=net.jshero
 Statische Website: läuft lokal oder auf jeden Webserver.
 Die Playstore-App ist ein CORDOVA-Build (https://cordova.apache.org) der Website.
 
-Das File js/koans-min/koans.js ist das gepackte JavaScript aller Dateien in js/koans.
-Dazu muss man mit nodejs und dem Modul node-minify die Datei koans-min.js im Verzeichnis buildtools ausführen.
-
 License: GNU Free Documentation License (Text) / GNU General Public License (Code)
 
 ## buildtools
 
-Die Datei package.json definiert die nötigen Module, die für koans-min.js verwendet werden.
+Nach Änderungen an den Koans muss JS Hero neu gebaut werden.
+
+Die Datei package.json definiert die dazu nötigen Module.
 
 Mit `$ yarn install` (oder `$ npm install`) werden diese Module einmalig installiert.
 
-Das Script kann dann mit `$ yarn run build` (oder `$ node koans-min.js`) ausgeführt werden.
+Dann mit `$ yarn run build` (oder `$ npm run build`) bauen.
 
-In der koans-min.js-Datei wird die Reihenfolge der Koans definiert, so wie sie
-im Tutorial erscheinen.
+Dadurch werden die Dateien js/koans-min/koans.js und en/js/koans-min/koans.js neu erstellt.
+Erst dann werden die Änderungen im Browser sichtbar.
+
+## Ein neues Koan hinzufügen
+
+1. Kopiere ein vorhandens Koan und passe es an allen Stellen sinnvoll an (was genau sinnvoll ist, wird noch beschrieben).
+
+2. Füge die id des neuen Koans in die Datei zzz-order.js an der richtigen Stelle ein.
