@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: "function2",
 
-  title: "Zwei Funktionen",
+  title: "Mehrere Funktionen",
 
   lesson: `Wir definieren nun mehr als eine Funktion.
 
