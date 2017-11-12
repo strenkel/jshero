@@ -21,29 +21,25 @@ jshero.koans.add({
   `,
 
   beforeTests: function() {
-    if (typeof a !== "undefined") {
       a = undefined;
-    }
-    if (typeof b !== "undefined") {
       b = undefined;
-    }
   },
 
   tests: [
     function() {
-      return jshero.testutil.assert_de_isFunction(a);
+      return jshero.testutil.assert_de_isFunction('a');
     },
 
     function() {
-      return jshero.testutil.assert_de_isFunction(b);
+      return jshero.testutil.assert_de_isFunction('b');
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns(a, "Hallo a!");
+      return jshero.testutil.assert_de_functionReturns('a', 'a()', "Hallo a!");
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns(b, "Hallo b!");
+      return jshero.testutil.assert_de_functionReturns('b', 'b()', "Hallo b!");
     }
   ]
 });

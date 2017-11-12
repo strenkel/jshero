@@ -22,19 +22,19 @@ jshero.koans.add({
   tests: [
 
     function() {
-        return jshero.testutil.assert_de_isFunction(begruesse);
+        return jshero.testutil.assert_de_isFunction('begruesse');
     },
 
     function() {
-        return jshero.testutil.assert_de_functionReturns(begruesse, "Moin!");
+        return jshero.testutil.assert_de_functionReturns('begruesse', 'begruesse()', 'Moin!');
     },
 
     function() {
-        return jshero.testutil.assert_de_variableDefined(begruessung, "begruessung");
+        return jshero.testutil.assert_de_variableDefined(begruessung, 'begruessung');
     },
 
     function() {
-        return jshero.testutil.assert_de_variableHasValue(begruessung, "begruessung", "Moin!");
+        return jshero.testutil.assert_de_variableHasValue(begruessung, 'begruessung', 'Moin!');
     }
   ]
 
