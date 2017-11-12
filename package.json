@@ -1,0 +1,23 @@
+{
+  "name": "build-tools",
+  "description": "Tools to build jshero (though it also runs locally)",
+  "version": "1.0.0",
+  "author": "jshero authors",
+  "private": true,
+  "scripts": {
+    "build_comment_1": "# Run manually using $ ./node_modules/.bin/babel",
+    "build_comment_2": "# When scripts are used the local babel is used automatically (recommended)",
+    "build": "babel -o js/koans-min/koans.js js/koans/ && babel -o en/js/koans-min/koans.js en/js/koans/"
+    },
+   "babel-ALTERNATIVE": {
+      "comment": "siehe https://babeljs.io/docs/usage/babelrc/ für das Lookup-Behaviour",
+      "minified": true,
+      "plugins": ["transform-es2015-template-literals"]
+    },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "node-minify": "^2.4.0"
+  }
+}

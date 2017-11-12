@@ -1,0 +1,4 @@
+{
+  "minified": true,
+  "plugins": ["transform-es2015-template-literals"]
+}
