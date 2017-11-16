@@ -141,7 +141,7 @@ nav a:last-child {
 #lesson {
   margin: 8em auto 3em auto;
   max-width: 44em;
-  padding: 0 1em 0 1em; 
+  padding: 0 6% 0 6%;
 }
 
 #lesson h1 {
@@ -267,7 +267,8 @@ nav a:last-child {
   color: #0033ff; /* blue */
 }
 
-@media (max-width: 30em) {
+/* smartphones */
+@media (max-width: 35em) {
 
   html, body {
     font-size: 17px;
@@ -292,6 +293,10 @@ nav a:last-child {
 
   h2 {
     font-size: 1.5em;
+  }
+
+  #lesson {
+    padding: 0 1em 0 1em;
   }
 
 }
