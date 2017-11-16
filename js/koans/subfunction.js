@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'subfunction',
 
-  title: 'Mehrere Funktionen',
+  title: 'Funktionen benutzen Funktionen',
 
   lesson: 'Funktionen können weitere Funktionen aufrufen:' +
     '<pre><code>' +
@@ -20,7 +20,7 @@ jshero.koans.add({
     'berechnet aus einem Nettobetrag den Bruttobetrag. Dabei wird eine Mehrwertsteuer von 19% zugrunde gelegt. ' +
     'Anstatt den Bruttobetrag selbst zu berechnen, ruft <code>addiereMitMehrwertsteuer</code> die Funktion ' +
     '<code>brutto</code> auf. Das hat zwei Vorteile: Der Code ist besser lesbar und die Bruttoberechnung wird zentral an einer Stelle durchgeführt.',
-        
+
   task: 'Schreibe eine Funktion <code>sum</code>, die ein Array gefüllt mit Zahlen entgegennimmt und die Summe dieser Zahlen zurückgibt. ' +
     'Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den Mittelwert dieser Zahlen zurückgibt. ' +
     'Die Funktion <code>mean</code> soll dabei die Funktion <code>sum</code> benutzen.',
@@ -35,7 +35,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     // sum
 
     function() {
