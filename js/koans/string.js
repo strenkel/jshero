@@ -9,7 +9,7 @@ jshero.koans.add({
     Der Typ von <code>"Hallo Welt!"</code> ist Text. Diesen Typ
     bezeichnet man auch als Zeichenkette oder String. Strings schreibt man immer in einfachen oder doppelten Anführungszeichen. So ist "Hallo Welt!" derselbe String
     wie \'Hallo Welt!\'.<br>Mit Strings kann man arbeiten. Man kann sie zum Beispiel verketten. Dies macht man mit dem <code>+</code> Zeichen.
-    So liefert <code>"aaa" + "BBB"</code> den String <code>"aaaBBB"</code>.<br>Die folgende Funktion hängt an dem übergebenen Parameter einen Text an und
+    So liefert <code>"Blau" + "meier"</code> den String <code>"Blaumeier"</code>.<br>Die folgende Funktion hängt an dem übergebenen Parameter einen Text an und
     gibt den zusammengesetzten Text zurück: <pre><code>var lobe = function(name) {<br>  return name + " ist toll!";<br>};</code></pre>
     So liefert <code>lobe("JavaScript")</code> den Wert <code>"JavaScript ist toll!"</code>.`,
 

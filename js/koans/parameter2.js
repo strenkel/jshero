@@ -5,16 +5,17 @@ jshero.koans.add({
   title: "Parameternamen",
 
   lesson: `Bitte achte darauf, dass du eventuelle Parameter deiner Funktion anders nennst als die Funktion selbst.
-  Diese Funktion <code>f1</code> zum Beispiel<br/>
-  <pre><code>var f1 = function(f1) {
-    return f1;
-  };</code></pre>
+  Die Funktion <code>f1</code> zum Beispiel
 
-  macht das gleiche wie diese hier<br/>
+<pre><code>var f1 = function(f1) {
+  return f1;
+};</code></pre>
 
-  <pre><code>var f2 = function(eingabe) {
-    return eingabe;
-  };</code></pre>
+  macht das gleiche wie diese Funktion:
+
+<pre><code>var f2 = function(eingabe) {
+  return eingabe;
+};</code></pre>
 
   Die zweite Funktionsdefinition ist aber besser, weil der Parameter <code>eingabe</code> heißt
   und damit anders als die Funktion selbst.

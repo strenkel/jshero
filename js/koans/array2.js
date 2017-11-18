@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'Array-Elemente lesen',
 
-  lesson: 'Die Elemente eines Arrays werden mit einem Index beginnend mit 0 angesprochen. ' +
+  lesson: 'Die Elemente eines Arrays werden mit einem Index beginnend mit 0 ausgelesen. ' +
     '<pre><code>var sprachen = ["C", "C++", "Java", "JavaScript"];<br>' +
     'var c = sprachen[0];<br>' +
     'var cPlusPlus = sprachen[1];<br>' +
