@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `Wir definieren nun mehr als eine Funktion.
 
-  Wiederholung: So wird eine Funktion mit Namen <code>farbe</code> definiert, die den Wert <code>rot</code>
+  Wiederholung: So wird eine Funktion mit Namen <code>farbe</code> definiert, die den Wert <code>"rot"</code>
   zurückgibt:
 
 <pre><code>var farbe = function() {
