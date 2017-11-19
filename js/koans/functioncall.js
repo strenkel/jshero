@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "Funktionsaufrufe",
 
   lesson: `Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion.
-    Mit der Definition
+    Mit der Definition, z. B.
 
 <pre><code>var f = function() {
   return "hallo";
