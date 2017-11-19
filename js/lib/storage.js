@@ -3,22 +3,31 @@ if (typeof jshero === "undefined") {
 }
 
 jshero.storage = (function(lang) {
-  
-  // --- solution ---
+
+  // jshero.net and www.jshero.net should be under the same origin police.
+  // Both domains should share the same local storage.
+  // If jshero is running under another domain (e.g. local), do nothing.
+  // See https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
+  var myDomain = "jshero.net";
+  if (document.domain.indexOf(myDomain) > 0) {
+    document.domain = myDomain;
+  }
+
+  // --- handle solutions ---
 
   var setSolution = function(koan, solution) {
     localStorage.setItem(getSolutionKey(koan), solution);
   };
-  
+
   var getSolution = function(koan) {
     return localStorage.getItem(getSolutionKey(koan));
   };
-  
+
   var removeSolution = function(koan) {
     return localStorage.removeItem(getSolutionKey(koan));
   };
 
-  // --- shot ---
+  // --- handle shots ---
 
   var setShot = function(koan, solution) {
     if (solution) {
@@ -61,5 +70,5 @@ jshero.storage = (function(lang) {
     getShot: getShot,
     removeShot: removeShot
   };
-  
+
 })(jshero.i18n.getLang());
