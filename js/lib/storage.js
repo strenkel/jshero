@@ -4,15 +4,6 @@ if (typeof jshero === "undefined") {
 
 jshero.storage = (function(lang) {
 
-  // jshero.net and www.jshero.net should be under the same origin police.
-  // Both domains should share the same local storage.
-  // If jshero is running under another domain (e.g. local), do nothing.
-  // See https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy
-  var myDomain = "jshero.net";
-  if (document.domain.indexOf(myDomain) > 0) {
-    document.domain = myDomain;
-  }
-
   // --- handle solutions ---
 
   var setSolution = function(koan, solution) {
