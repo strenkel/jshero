@@ -2,12 +2,11 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-// Note for hosting: local storage is under the same origin police. www.jshero.net and jshero.net
-// are different origins. So, you cannot share solutions under www.jshero.net and jshero.net.
-// There may be two solutions:
-// (i) Changing origin. See https://developer.mozilla.org/de/docs/Web/Security/Same-origin_policy
-// (ii) Redirect non-www to www in .htaccess. See https://stackoverflow.com/questions/12050590/redirect-non-www-to-www-in-htaccess
-// The first solution did not work in chrome. jshero.net runs now under the non-www to www redirect.
+// Note for hosting: local storage is regulated by the same origin police. http://www.jshero.net and http://jshero.net
+// are different origins. The local storage under www.jshero.net and jshero.net will not be shared.
+// Therefore (and due to other reasons) it is recomended to redirect non-www to www (or vice versa).
+// See: https://stackoverflow.com/questions/12050590/redirect-non-www-to-www-in-htaccess
+
 jshero.storage = (function(lang) {
 
   // --- handle solutions ---
