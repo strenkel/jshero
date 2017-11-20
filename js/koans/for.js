@@ -1,5 +1,3 @@
-(function() {
-
 jshero.koans.add({
 
   id: 'for',
@@ -32,7 +30,7 @@ jshero.koans.add({
     'alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden. ' +
     '<code>addiereBis(4)</code> sollte <code>6</code> ergeben.',
 
-  beforeTests: function() {
+  beforeTests: function () {
     if (typeof addiereBis !== "undefined") {
       rotiere = undefined;
     }
@@ -40,7 +38,7 @@ jshero.koans.add({
 
   tests: [
 
-    function() {
+    function () {
       var ok = typeof addiereBis === 'function';
       var msg;
       if (ok) {
@@ -54,7 +52,7 @@ jshero.koans.add({
       };
     },
 
-    function() {
+    function () {
       var ok = addiereBis.length === 1;
       var msg;
       if (ok) {
@@ -68,7 +66,7 @@ jshero.koans.add({
       };
     },
 
-function() {
+    function () {
       var ok, msg, e;
       try {
         var result = addiereBis(2);
@@ -78,7 +76,7 @@ function() {
         } else {
           msg = '<code>addiereBis(2)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(exc) {
+      } catch (exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereBis(2)</code>.';
         e = exc;
@@ -90,7 +88,7 @@ function() {
       };
     },
 
-    function() {
+    function () {
       var ok, msg, e;
       try {
         var result = addiereBis(4);
@@ -100,7 +98,7 @@ function() {
         } else {
           msg = '<code>addiereBis(4)</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
         }
-      } catch(exc) {
+      } catch (exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>addiereBis(4)</code>.';
         e = exc;
@@ -115,5 +113,3 @@ function() {
   ]
 
 });
-
-})();
