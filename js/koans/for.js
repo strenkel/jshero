@@ -32,7 +32,7 @@ jshero.koans.add({
 
   beforeTests: function () {
     if (typeof addiereBis !== "undefined") {
-      rotiere = undefined;
+      addiereBis = undefined;
     }
   },
 
