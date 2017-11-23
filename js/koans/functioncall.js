@@ -16,7 +16,7 @@ jshero.koans.add({
 
 <pre><code>var x = f();</code></pre>
 
-    wird die Funktion ausgeführt. Dann werden die Anweisung im Funktionsblock der Reihe nach abgearbeitet.
+    wird die Funktion ausgeführt. Dann werden die Anweisungen im Funktionsblock der Reihe nach abgearbeitet.
     Die Rückgabe der Funktion wird in diesem Beispiel der Variablen <code>x</code> zugewiesen.
     Definiert werden Funktionen mit dem Schlüsselwort <code>function</code>.
     Ist die Funktion einer Variablen zugewiesen, geschieht der Aufruf der Funktion über diese Variable.
