@@ -64,7 +64,7 @@
         try {
           result = tests[i]();
         } catch (exc) {
-          console.log(i18n("unknownError"), exc)
+          console.log(i18n("unknownError"), exc);
           result = {
             ok: false,
             msg: i18n("unknownError"),
@@ -72,7 +72,7 @@
           };
         }
         msg.log(result.msg, result.ok, result.e, jshero.getLogs());
-        if(!result.ok) {
+        if (!result.ok) {
           okAll = false;
           break;
         }
@@ -110,7 +110,7 @@
       geval(code);
       msg.log(i18n("noSyntaxError"), true);
       return true;
-    } catch(e) {
+    } catch (e) {
       msg.log(i18n("syntaxError"), false, e);
       console.log(i18n("syntaxError"), e);
       return false;
