@@ -24,7 +24,7 @@ jshero.koans.add({
     'Der Schleifen-Code wird erneut ausgeführt und <code>summe</code> erhält jetzt den Wert <code>1 + 2</code>, also <code>3</code>. ' +
     '<code>i</code> wird abermals erhöht und hat nun den Wert <code>3</code>. ' +
     'Die Schleifenbedingung <code>3 < 3</code> ist jetzt nicht mehr erfüllt. Die Schleife wird beendet und die Programmausführung wird nach der Schleife fortgesetzt. ' +
-    'Unser Codebespiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.',
+    'Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.',
 
   task: 'Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die ' +
     'alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden. ' +
