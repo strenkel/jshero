@@ -75,7 +75,7 @@ jshero.testutil = (function (i18n) {
     return lastIndex !== index
       ? html + str.substring(lastIndex, index)
       : html;
-  }
+  };
 
   /** ------------- copied and adpated from escape-html/index.js
    *  END ------------- */
@@ -161,13 +161,35 @@ jshero.testutil = (function (i18n) {
       ok: ok,
       msg: msg
     };
-  }
+  };
+
+  /**
+   * Prüfen, ob die Function die geforderte ANzahl Parameter hat.
+   *
+   * @param {string} f_name Name der Funktion.
+   * @param {int} numOfParam Anzahl der geforderten Parameter.
+   */
+  var assert_de_functionHasNumOfParameter = function (f_name, numOfParam) {
+      var fun = eval(f_name);
+      var ok = fun.length === numOfParam;
+      var msg = '<code>' + f_name + '</code> hat ';
+      if (ok) {
+        msg += numOfParam + ' Parameter.';
+      } else {
+        msg += ' nicht ' + numOfParam + ', sondern ' + fun.length + ' Parameter.';
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    };
 
   return {
     assert_isFunction: assert_isFunction,
     assert_de_functionReturns: assert_de_functionReturns,
     assert_de_variableDefined: assert_de_variableDefined,
-    assert_de_variableHasValue: assert_de_variableHasValue
+    assert_de_variableHasValue: assert_de_variableHasValue,
+    assert_de_functionHasNumOfParameter: assert_de_functionHasNumOfParameter
   };
 
 })(jshero.i18n);
