@@ -15,7 +15,7 @@ jshero.koans.add({
     'eine Anweisung, die Rückgabe. Die Funktion wird der Variablen <code>farbe</code> zugeordnet. Über diese Variable wird die Funktion aufgerufen: <pre><code>var ergebnis = farbe();</code></pre>' +
     'Jetzt wird die Funktion ausgeführt. Ihre Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
     'dann den Wert <code>"grün"</code>.',
-        
+
   task: 'Deklariere eine Variable <code>hallo</code> und weise ihr eine Funktion zu, die <code>"Hallo Welt!"</code> zurückgibt.',
 
   beforeTests: function() {
@@ -25,41 +25,14 @@ jshero.koans.add({
   },
 
   tests: [
-    function() {
-      var ok = typeof hallo === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>hallo</code> ist eine Funktion.';
-      } else {
-        msg = '<code>hallo</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
- 
-    function() {
-      var ok, msg, e;
-      try {
-        var result = hallo();
-        ok = result === "Hallo Welt!";
-        if (ok) {
-          msg = '<code>hallo()</code> gibt <code>"Hallo Welt!"</code> zurück.';
-        } else {
-          msg = '<code>hallo()</code> gibt nicht <code>"Hallo Welt!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>hallo()</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    }
+      function() {
+        return jshero.testutil.assert_isFunction('hallo');
+      },
+
+      function() {
+        return jshero.testutil.assert_de_functionReturns('hallo()', "Hallo Welt!");
+      },
+
   ]
 
 });
