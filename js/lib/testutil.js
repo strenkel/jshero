@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function () {
+jshero.testutil = (function (i18n) {
 
   'use strict';
 
@@ -84,17 +84,17 @@ jshero.testutil = (function () {
   /**
    * Example usage:
    *
-   * jshero.testutil.assert_de_isFunction('a')
+   * jshero.testutil.assert_isFunction('a')
    *
    * We expect a function named "a".
    */
-  var assert_de_isFunction = function (f_name) {
+  var assert_isFunction = function (f_name) {
     var ok = typeof eval(f_name) === 'function';
     var msg;
     if (ok) {
-      msg = '<code>' + f_name + '</code> ist eine Funktion.';
+      msg = '<code>' + f_name + '</code> ' + i18n.get("isAFunction") + ".";
     } else {
-      msg = '<code>' + f_name + '</code> ist keine Funktion.';
+      msg = '<code>' + f_name + '</code> ' + i18n.get("isNotAFunction") + ".";
     }
     return {
       ok: ok,
@@ -164,10 +164,10 @@ jshero.testutil = (function () {
   }
 
   return {
-    assert_de_isFunction: assert_de_isFunction,
+    assert_isFunction: assert_isFunction,
     assert_de_functionReturns: assert_de_functionReturns,
     assert_de_variableDefined: assert_de_variableDefined,
     assert_de_variableHasValue: assert_de_variableHasValue
   };
 
-})();
+})(jshero.i18n);

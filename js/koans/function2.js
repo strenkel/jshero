@@ -26,11 +26,11 @@ jshero.koans.add({
 
   tests: [
     function() {
-      return jshero.testutil.assert_de_isFunction('a');
+      return jshero.testutil.assert_isFunction('a');
     },
 
     function() {
-      return jshero.testutil.assert_de_isFunction('b');
+      return jshero.testutil.assert_isFunction('b');
     },
 
     function() {

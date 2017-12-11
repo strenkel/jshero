@@ -11,7 +11,9 @@ jshero.i18n = (function() {
     testsPassed: "Alle Tests bestanden!",
     syntaxError: "Fehler beim Einlesen des Codes!",
     unknownError: "Unbekannter Testfehler!",
-    goon: "Weiter"
+    goon: "Weiter",
+    isAFunction: "ist eine Funktion",
+    isNotAFunction: "ist keine Funktion"
   };
 
   var dictionary_en = {
@@ -21,7 +23,9 @@ jshero.i18n = (function() {
     testsPassed: "All tests passed!",
     syntaxError: "Error reading your code!",
     unknownError: "Unknown test error!",
-    goon: "Continue"
+    goon: "Continue",
+    isAFunction: "is a funktion",
+    isNotAFunction: "is not a function"
   };
 
   var getLang = function() {

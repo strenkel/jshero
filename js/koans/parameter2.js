@@ -31,7 +31,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-      return jshero.testutil.assert_de_isFunction('echo');
+      return jshero.testutil.assert_isFunction('echo');
     },
 
     function() {

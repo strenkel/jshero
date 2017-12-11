@@ -24,7 +24,7 @@ jshero.koans.add({
   tests: [
 
     function() {
-        return jshero.testutil.assert_de_isFunction('begruesse');
+        return jshero.testutil.assert_isFunction('begruesse');
     },
 
     function() {
