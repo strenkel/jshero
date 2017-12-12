@@ -17,10 +17,28 @@ jshero.util = (function() {
     window.scrollTo(0, 0);
   };
 
+  /**
+   * Diese Funktion ersetzt die Platzhalter %0 bis %9 durch die Werte im übergebenen Wertearray.
+   *
+   * @param {string} message mit den Platzhaltern.
+   * @param {array} values für die Platzhalter.
+   *
+   * return {string} die formatierte Nachricht.
+   */
+  var formatMessage = function( message, values ) {
+    var result = message;
+    for (var i=0; i<values.length; i++) {
+      result = result.replace( "%"+i, values[i]);
+    }
+    return result;
+  };
+
+
   return {
     isPhoneGap: isPhoneGap,
     scrollToBottom: scrollToBottom,
-    scrollToTop: scrollToTop
+    scrollToTop: scrollToTop,
+    formatMessage: formatMessage
   };
 
 })();

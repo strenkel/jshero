@@ -5,6 +5,7 @@ jshero.koans.initReorder(
     'var',
     'var2',
     'function',
+    'function2',
     'parameter',
     'string',
     'stringlength',
