@@ -19,7 +19,11 @@ jshero.i18n = (function() {
     functionReturns: "<code>%0</code> gibt <code>%1</code> zurück.",
     functionNotReturns: "<code>%0</code> gibt nicht <code>%1</code>, sondern <code>%2</code> zurück.",
     correctNumOfParam: "<code>%0</code> hat %1 Parameter.",
-    wrongNumOfParam: "<code>%0</code> hat nicht %1 Parameter, sondern %2."
+    wrongNumOfParam: "<code>%0</code> hat nicht %1 Parameter, sondern %2.",
+    varHasValue: "<code>%0</code> hat einen Wert.",
+    varHasNoValue: "<code>%0</code> hat keinen Wert.",
+    varHasValueOf: "<code>%0</code> hat den Wert <code>%1</code>.",
+    varHasWrongValue: "<code>%0</code> hat nicht den erwarteten Wert <code>%1</code>, sondern den Wert <code>%2</code>."
   };
 
   var dictionary_en = {
@@ -37,7 +41,11 @@ jshero.i18n = (function() {
     functionReturns: "<code>%0</code> returns <code>%1</code>.",
     functionNotReturns: "<code>%0</code> does not return expected <code>%1</code>, but <code>%2</code>.",
     correctNumOfParam: "<code>%0</code> has %1 parameter.",
-    wrongNumOfParam: "<code>%0</code> has not %1, but %2 parameter."
+    wrongNumOfParam: "<code>%0</code> has not %1, but %2 parameter.",
+    varHasValue: "<code>%0</code> has a value.",
+    varHasNoValue: "<code>%0</code> has no value.",
+    varHasValueOf: "<code>%0</code> has value of <code>%1</code>.",
+    varHasWrongValue: "<code>%0</code> has not expected value <code>%1</code>, but the value <code>%2</code>."
   };
 
   var getLang = function() {

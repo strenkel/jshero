@@ -134,13 +134,13 @@ jshero.testutil = (function (i18n) {
   /**
    * Bei der Variable v müssen wir noch mitgeben wie sie heißt (name)
    */
-  var assert_de_variableDefined = function (v, name) {
+  var assert_variableDefined = function (v, name) {
     var ok = typeof v !== 'undefined';
     var msg;
     if (ok) {
-      msg = '<code>' + name + '</code> hat einen Wert.';
+      msg = jshero.util.formatMessage(i18n.get("varHasValue"), [name]);
     } else {
-      msg = '<code>' + name + '</code> hat keinen Wert.';
+      msg = jshero.util.formatMessage(i18n.get("varHasNoValue"), [name]);
     }
     return {
       ok: ok,
@@ -151,13 +151,13 @@ jshero.testutil = (function (i18n) {
   /**
    * Prüfen, ob eine Variable einen Wert hat
    */
-  var assert_de_variableHasValue = function (v, name, expValue) {
-    var ok = begruessung === expValue;
+  var assert_variableHasValue = function (v, name, expValue) {
+    var ok = v === expValue;
     var msg;
     if (ok) {
-      msg = '<code>' + name + '</code> hat den Wert <code>' + escapeHtml(JSON.stringify(v)) + '</code>.';
+      msg = jshero.util.formatMessage(i18n.get("varHasValueOf"), [name, escapeHtml(JSON.stringify(v))]);
     } else {
-      msg = '<code>' + name + '</code> hat nicht den Wert <code>"' + expValue + '"</code>, sondern den Wert <code>' + escapeHtml(JSON.stringify(v)) + '</code>.';
+      msg = jshero.util.formatMessage(i18n.get("varHasWrongValue"), [name, expValue, escapeHtml(JSON.stringify(v))]);
     }
     return {
       ok: ok,
@@ -190,10 +190,14 @@ jshero.testutil = (function (i18n) {
     assert_isFunction: assert_isFunction,
     assert_functionReturns: assert_functionReturns,
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
+    assert_variableDefined: assert_variableDefined,
+    assert_variableHasValue: assert_variableHasValue,
     assert_de_functionReturns: assert_functionReturns,
     assert_en_functionReturns: assert_functionReturns,
-    assert_de_variableDefined: assert_de_variableDefined,
-    assert_de_variableHasValue: assert_de_variableHasValue,
+    assert_de_variableDefined: assert_variableDefined,
+    assert_en_variableDefined: assert_variableDefined,
+    assert_de_variableHasValue: assert_variableHasValue,
+    assert_en_variableHasValue: assert_variableHasValue,
     assert_de_functionHasNumOfParameter: assert_functionHasNumOfParameter,
     assert_en_functionHasNumOfParameter: assert_functionHasNumOfParameter
   };
