@@ -35,11 +35,11 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('a()', '"Hello a!"');
+      return jshero.testutil.assert_functionReturns('a()', 'Hello a!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('b()', '"Hello b!"');
+      return jshero.testutil.assert_functionReturns('b()', 'Hello b!');
     }
   ]
 });

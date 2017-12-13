@@ -115,9 +115,9 @@ jshero.testutil = (function (i18n) {
       var result = eval(f_call);
       ok = result === expectedReturnValue;
       if (ok) {
-        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, expectedReturnValue ]);
+        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue) ]);
       } else {
-        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, expectedReturnValue, escapeHtml(JSON.stringify(result)) ]);
+        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result)) ]);
       }
     } catch (exc) {
       ok = false;
@@ -190,8 +190,6 @@ jshero.testutil = (function (i18n) {
     assert_isFunction: assert_isFunction,
     assert_functionReturns: assert_functionReturns,
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
-    assert_de_functionReturns: assert_functionReturns,
-    assert_en_functionReturns: assert_functionReturns,
     assert_de_variableDefined: assert_de_variableDefined,
     assert_de_variableHasValue: assert_de_variableHasValue,
     assert_de_functionHasNumOfParameter: assert_functionHasNumOfParameter,

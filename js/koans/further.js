@@ -21,19 +21,19 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_de_functionHasNumOfParameter('quersumme',1);
+      return jshero.testutil.assert_functionHasNumOfParameter('quersumme', 1);
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('quersumme(1)', 1);
+      return jshero.testutil.assert_functionReturns('quersumme(1)', 1);
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('quersumme(198)', 18);
+      return jshero.testutil.assert_functionReturns('quersumme(198)', 18);
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('quersumme(123456789)', 45);
+      return jshero.testutil.assert_functionReturns('quersumme(123456789)', 45);
     }
   ],
 

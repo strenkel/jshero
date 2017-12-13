@@ -39,7 +39,7 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_de_functionReturns('begruesse()', 'Moin!');
+        return jshero.testutil.assert_functionReturns('begruesse()', 'Moin!');
     },
 
     function() {
