@@ -31,11 +31,11 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("echo('Hello world!')", "Hello world!");
+      return jshero.testutil.assert_functionReturns('echo("Hello world!")', '"Hello world!"');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("echo('rose')", "rose");
+      return jshero.testutil.assert_functionReturns('echo("rose")', '"rose"');
     }
   ]
 

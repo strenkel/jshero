@@ -75,7 +75,7 @@ jshero.testutil = (function (i18n) {
     return lastIndex !== index
       ? html + str.substring(lastIndex, index)
       : html;
-  };
+  }
 
   /** ------------- copied and adpated from escape-html/index.js
    *  END ------------- */
