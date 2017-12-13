@@ -75,7 +75,7 @@ jshero.testutil = (function (i18n) {
     return lastIndex !== index
       ? html + str.substring(lastIndex, index)
       : html;
-  }
+  };
 
   /** ------------- copied and adpated from escape-html/index.js
    *  END ------------- */
@@ -105,21 +105,23 @@ jshero.testutil = (function (i18n) {
   /**
    * We expect that calling a function
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
-   * returns the value expectedReturnValue
+   * returns the value expectedReturnValue.
+   * @param {function} f_call
+   * @param {object} expectedReturnValue
    */
-  var assert_de_functionReturns = function (f_call, expectedReturnValue) {
+  var assert_functionReturns = function (f_call, expectedReturnValue) {
     var ok, msg, e;
     try {
       var result = eval(f_call);
       ok = result === expectedReturnValue;
       if (ok) {
-        msg = '<code>' + f_call + '</code> gibt <code>"' + expectedReturnValue + '"</code> zurück.';
+        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, expectedReturnValue ]);
       } else {
-        msg = '<code>' + f_call + '</code> gibt nicht <code>"' + expectedReturnValue + '"</code>, sondern <code>' + escapeHtml(JSON.stringify(result)) + '</code> zurück.';
+        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, expectedReturnValue, escapeHtml(JSON.stringify(result)) ]);
       }
     } catch (exc) {
       ok = false;
-      msg = 'Fehler beim Aufruf von <code>' + f_call + '</code>.';
+      msg = i18n.get("errorAtCallOf") + ' <code>' + f_call + '</code>.';
       e = exc;
     }
     return {
@@ -161,13 +163,39 @@ jshero.testutil = (function (i18n) {
       ok: ok,
       msg: msg
     };
-  }
+  };
+
+  /**
+   * Prüfen, ob die Function die geforderte ANzahl Parameter hat.
+   *
+   * @param {string} f_name Name der Funktion.
+   * @param {int} numOfParam Anzahl der geforderten Parameter.
+   */
+  var assert_functionHasNumOfParameter = function (f_name, numOfParam) {
+      var fun = eval(f_name);
+      var ok = fun.length === numOfParam;
+      var msg;
+      if (ok) {
+        msg = jshero.util.formatMessage(i18n.get("correctNumOfParam"), [f_name, numOfParam]);
+      } else {
+        msg = jshero.util.formatMessage(i18n.get("wrongNumOfParam"), [f_name, numOfParam, fun.length]);
+      }
+      return {
+        ok: ok,
+        msg: msg
+      };
+    };
 
   return {
     assert_isFunction: assert_isFunction,
-    assert_de_functionReturns: assert_de_functionReturns,
+    assert_functionReturns: assert_functionReturns,
+    assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
+    assert_de_functionReturns: assert_functionReturns,
+    assert_en_functionReturns: assert_functionReturns,
     assert_de_variableDefined: assert_de_variableDefined,
-    assert_de_variableHasValue: assert_de_variableHasValue
+    assert_de_variableHasValue: assert_de_variableHasValue,
+    assert_de_functionHasNumOfParameter: assert_functionHasNumOfParameter,
+    assert_en_functionHasNumOfParameter: assert_functionHasNumOfParameter
   };
 
 })(jshero.i18n);
