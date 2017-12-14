@@ -39,7 +39,7 @@ jshero.i18n = (function() {
     errorAtCallOf: "Error on call of",
 
     functionReturns: "<code>%0</code> returns <code>%1</code>.",
-    functionNotReturns: "<code>%0</code> does not return expected <code>%1</code>, but <code>%2</code>.",
+    functionNotReturns: "<code>%0</code> does not return <code>%1</code>, but <code>%2</code>.",
     correctNumOfParam: "<code>%0</code> has %1 parameter.",
     wrongNumOfParam: "<code>%0</code> has not %1, but %2 parameter.",
     varHasValue: "<code>%0</code> has a value.",

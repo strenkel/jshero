@@ -42,11 +42,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_de_functionReturns('begruesse("Maria")', 'Hallo Maria!');
+        return jshero.testutil.assert_functionReturns('begruesse("Maria")', 'Hallo Maria!');
     },
 
     function() {
-        return jshero.testutil.assert_de_functionReturns('begruesse("Franz")', 'Hallo Franz!');
+        return jshero.testutil.assert_functionReturns('begruesse("Franz")', 'Hallo Franz!');
     }
   ]
 
