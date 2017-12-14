@@ -1,11 +1,11 @@
 # jshero
 JS Hero: JavaScript-Tutorial mit Übungen/Koans
 
-Website: http://www.jshero.net
-Playstore: https://play.google.com/store/apps/details?id=net.jshero
+Website: <http://www.jshero.net><br>
+Playstore: <https://play.google.com/store/apps/details?id=net.jshero>
 
-Statische Website: läuft lokal oder auf jeden Webserver.
-Die Playstore-App ist ein CORDOVA-Build (https://cordova.apache.org) der Website.
+Statische Website: läuft lokal oder auf jedem Webserver.
+Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Website.
 
 License: GNU Free Documentation License (Text) / GNU General Public License (Code)
 

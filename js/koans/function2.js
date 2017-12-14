@@ -34,11 +34,11 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('a()', "Hallo a!");
+      return jshero.testutil.assert_functionReturns('a()', "Hallo a!");
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('b()', "Hallo b!");
+      return jshero.testutil.assert_functionReturns('b()', "Hallo b!");
     }
   ]
 });

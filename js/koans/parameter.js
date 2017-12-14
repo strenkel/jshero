@@ -13,7 +13,7 @@ jshero.koans.add({
     'Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion wird nun die Variable <code>eingabe</code> mit der ' +
     '<code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
     'dann auch den Wert <code>"Apfel"</code>.',
-        
+
   task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
 
   beforeTests: function() {
@@ -24,76 +24,19 @@ jshero.koans.add({
 
   tests: [
     function() {
-      var ok = typeof echo === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>echo</code> ist eine Funktion.';
-      } else {
-        msg = '<code>echo</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('echo');
     },
- 
+
     function() {
-      var result = echo.length;
-      var ok = result === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>echo</code> hat genau 1 Parameter.';
-      } else {
-        msg = '<code>echo</code> hat nicht 1, sondern ' + result + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('echo', 1);
     },
- 
+
     function() {
-      var ok, msg, e;
-      try {
-        var result = echo('Hallo Welt!');
-        ok = result === "Hallo Welt!";
-        if (ok) {
-          msg = '<code>echo("Hallo Welt!")</code> gibt <code>"Hallo Welt!"</code> zurück.';
-        } else {
-          msg = '<code>echo("Hallo Welt!")</code> gibt nicht <code>"Hallo Welt!"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>echo("Hallo Welt!")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns("echo('Hallo Welt!')", "Hallo Welt!");
     },
-    
+
     function() {
-      var ok, msg, e;
-      try {
-        var result = echo('Franz');
-        ok = result === "Franz";
-        if (ok) {
-          msg = '<code>echo("Franz")</code> gibt <code>"Franz"</code> zurück.';
-        } else {
-          msg = '<code>echo("Franz")</code> gibt nicht <code>"Franz"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>echo("Franz")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns("echo('Franz')", "Franz");
     }
   ]
 

@@ -4,12 +4,12 @@ jshero.koans.add({
 
   title: "Variablen",
 
-  lesson: 
+  lesson:
     'JavaScript-Programme bestehen aus einer Reihe von Anweisungen. Jede Anweisung führt eine elementare Operation durch. ' +
     'Durch das Ausführen vieler Anweisungen kann man schließlich komplexe Aufgaben lösen. ' +
     'Jede Anweisung schreibt man in eine Zeile und schließt sie mit einem Semikolon ab.<br><br>' +
     'Eine elementare Anweisung ist die Deklaration und Initialisierung einer Variablen. ' +
-    'In der Programmierung ist eine Variable ein Behälter für einen Wert. ' + 
+    'In der Programmierung ist eine Variable ein Behälter für einen Wert. ' +
     'Mit der Anweisung ' +
     '<pre><code>var stadt = "Prag";</code></pre>' +
     'deklariert man eine Variable mit dem Namen <code>stadt</code> und initialisiert sie mit dem Wert <code>"Prag"</code>. ' +
@@ -17,7 +17,7 @@ jshero.koans.add({
     'Mit dem Gleichheitszeichen, dem Zuweisungsoperator, weist man der Variablen einen Wert zu.<br><br>' +
     'Beachte: JavaScript unterscheidet zwischen Groß- und Kleinschreibung. <code>stadt</code> und <code>Stadt</code> sind ' +
     'zwei verschiedene Variablen. Man sagt auch: JavaScript ist case sensitive.',
-        
+
   task: 'Deklariere eine Variable <code>vorname</code> und initialisiere sie mit dem Wert <code>"Franz"</code>.',
 
   beforeTests: function() {
@@ -27,34 +27,12 @@ jshero.koans.add({
   },
 
   tests: [
-  
     function() {
-      var ok = typeof vorname !== 'undefined';
-      var msg;
-      if (ok) {
-        msg = "<code>vorname</code> hat einen Wert.";
-      } else {
-        msg = "<code>vorname</code> hat keinen Wert.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_variableDefined(vorname, 'vorname');
     },
- 
-    
+
     function() {
-      var ok = vorname === "Franz";
-      var msg;
-      if (ok) {
-        msg = '<code>vorname</code> hat den Wert "Franz".';
-      } else {
-        msg = '<code>vorname</code> hat nicht den Wert <code>"Franz"</code>, sondern den Wert <code>' + JSON.stringify(vorname) + '</code>.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_variableHasValue(vorname, 'vorname', 'Franz');
     }
   ]
 
