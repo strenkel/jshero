@@ -30,9 +30,8 @@ jshero.koans.add({
       },
 
       function() {
-        return jshero.testutil.assert_de_functionReturns('hallo()', "Hallo Welt!");
-      },
-
+        return jshero.testutil.assert_functionReturns('hallo()', "Hallo Welt!");
+      }
   ]
 
 });
