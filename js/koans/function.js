@@ -25,13 +25,13 @@ jshero.koans.add({
   },
 
   tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('hallo');
-    },
+      function() {
+        return jshero.testutil.assert_isFunction('hallo');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('hallo()', "Hallo Welt!");
-    }
+      function() {
+        return jshero.testutil.assert_functionReturns('hallo()', "Hallo Welt!");
+      }
   ]
 
 });

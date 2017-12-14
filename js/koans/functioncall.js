@@ -22,7 +22,7 @@ jshero.koans.add({
     Ist die Funktion einer Variablen zugewiesen, geschieht der Aufruf der Funktion über diese Variable.
     Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen durch ihren Aufruf mehrfach zu benutzen.`,
 
-  task: `1. Definiere eine Funktion <code>begruesse</code>, die den Wet <code>"Moin!"</code> zurückgibt.
+  task: `1. Definiere eine Funktion <code>begruesse</code>, die den Wert <code>"Moin!"</code> zurückgibt.
   <br/>
     2. Deklariere eine Variable <code>begruessung</code>. Rufe die Funktion <code>begruesse</code> auf und weise der Variablen
     <code>begruessung</code> die Rückgabe dieses Aufrufs zu.`,
@@ -43,11 +43,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_de_variableDefined(begruessung, 'begruessung');
+        return jshero.testutil.assert_variableDefined(begruessung, 'begruessung');
     },
 
     function() {
-        return jshero.testutil.assert_de_variableHasValue(begruessung, 'begruessung', 'Moin!');
+        return jshero.testutil.assert_variableHasValue(begruessung, 'begruessung', 'Moin!');
     }
   ]
 

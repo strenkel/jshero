@@ -24,34 +24,12 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof firstname !== 'undefined';
-      var msg;
-      if (ok) {
-        msg = "<code>firstname</code> has a value.";
-      } else {
-        msg = "<code>firstname</code> has no value.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_variableDefined(firstname, 'firstname');
     },
 
-
     function() {
-      var ok = firstname === "Lata";
-      var msg;
-      if (ok) {
-        msg = '<code>firstname</code> has the value <code>"Lata"</code>.';
-      } else {
-        msg = '<code>firstname</code> does not have the value <code>"Lata"</code>, but the value <code>' + JSON.stringify(firstname) + '</code>.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_variableHasValue(firstname, 'firstname', 'Lata');
     }
   ]
 
