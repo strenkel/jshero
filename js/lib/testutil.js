@@ -157,7 +157,7 @@ jshero.testutil = (function (i18n) {
     if (ok) {
       msg = jshero.util.formatMessage(i18n.get("varHasValueOf"), [name, escapeHtml(JSON.stringify(v))]);
     } else {
-      msg = jshero.util.formatMessage(i18n.get("varHasWrongValue"), [name, expValue, escapeHtml(JSON.stringify(v))]);
+      msg = jshero.util.formatMessage(i18n.get("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(v))]);
     }
     return {
       ok: ok,
