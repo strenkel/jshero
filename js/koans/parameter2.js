@@ -50,11 +50,11 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('echo("Test")', "Test");
+      return jshero.testutil.assert_functionReturns('echo("Test")', "Test");
     },
 
     function() {
-      return jshero.testutil.assert_de_functionReturns('echo("Hallo Welt!")', "Hallo Welt!");
+      return jshero.testutil.assert_functionReturns('echo("Hallo Welt!")', "Hallo Welt!");
     }
   ]
 

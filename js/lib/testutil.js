@@ -75,7 +75,7 @@ jshero.testutil = (function (i18n) {
     return lastIndex !== index
       ? html + str.substring(lastIndex, index)
       : html;
-  };
+  }
 
   /** ------------- copied and adpated from escape-html/index.js
    *  END ------------- */
@@ -115,9 +115,9 @@ jshero.testutil = (function (i18n) {
       var result = eval(f_call);
       ok = result === expectedReturnValue;
       if (ok) {
-        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, expectedReturnValue ]);
+        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue) ]);
       } else {
-        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, expectedReturnValue, escapeHtml(JSON.stringify(result)) ]);
+        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result)) ]);
       }
     } catch (exc) {
       ok = false;
@@ -157,7 +157,7 @@ jshero.testutil = (function (i18n) {
     if (ok) {
       msg = jshero.util.formatMessage(i18n.get("varHasValueOf"), [name, escapeHtml(JSON.stringify(v))]);
     } else {
-      msg = jshero.util.formatMessage(i18n.get("varHasWrongValue"), [name, expValue, escapeHtml(JSON.stringify(v))]);
+      msg = jshero.util.formatMessage(i18n.get("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(v))]);
     }
     return {
       ok: ok,
