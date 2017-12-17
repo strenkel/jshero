@@ -33,7 +33,7 @@ jshero.message = (function(i18n) {
       errormessage = errormessage + e; // converts e to String
       if (e.lineNumber != null && e.columnNumber != null) {
         // mozilla
-        errormessage = errormessage + " (Zeile: " + e.lineNumber + ", Reihe: " + e.columnNumber + ")";
+        errormessage = errormessage + " (" + i18n("line") + ": " + e.lineNumber + ", " + i18n("column") + ": " + e.columnNumber + ")";
       } else if (e.line != null) {
         // safari
         errormessage = errormessage + " (Zeile: " + e.line + ")";
