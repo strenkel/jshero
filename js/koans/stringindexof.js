@@ -26,77 +26,24 @@ jshero.koans.add({
 
   tests: [
     function() {
-      var ok = typeof indexOfIgnoreCase === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>indexOfIgnoreCase</code> ist eine Funktion.';
-      } else {
-        msg = '<code>indexOfIgnoreCase</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('indexOfIgnoreCase');
     },
 
     function() {
-      var ok = indexOfIgnoreCase.length === 2;
-      var msg;
-      if (ok) {
-        msg = "<code>indexOfIgnoreCase</code> hat 2 Parameter.";
-      } else {
-        msg = "<code>indexOfIgnoreCase</code> hat nicht 2, sondern " + indexOfIgnoreCase.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('indexOfIgnoreCase', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = indexOfIgnoreCase("Fred Feuerstein", "FEUER");
-        ok = result === 5;
-        if (ok) {
-          msg = '<code>indexOfIgnoreCase("Fred Feuerstein", "FEUER")</code> gibt <code>5</code> zurück.';
-        } else {
-          msg = '<code>indexOfIgnoreCase("Fred Feuerstein", "FEUER")</code> gibt nicht <code>5</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>indexOfIgnoreCase("Fred Feuerstein", "FEUER")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("Fred Feuerstein", "FEUER")', 5);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer");
-        ok = result === 6;
-        if (ok) {
-          msg = '<code>indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer")</code> gibt <code>6</code> zurück.';
-        } else {
-          msg = '<code>indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer")</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("WILMA FEUERSTEIN", "feuer")', 6);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("JavaScript", "Script")', 4);
     }
-
   ]
 
 });

@@ -10,7 +10,7 @@ jshero.koans.add({
     '<code>"Franz"</code> hat 5 Zeichen. Also hat <code>anzahl</code> jetzt den Wert <code>5</code>.' +
     '<pre><code>var stadt = "Prag";<br>anzahl = stadt.length;</code/></pre>' +
     '<code>"Prag"</code> hat 4 Zeichen. <code>anzahl</code> hat jetzt den Wert <code>4</code>.' +
-    '<pre><code>anzahl = "".length;</code/></pre>' + 
+    '<pre><code>anzahl = "".length;</code/></pre>' +
     'Der Leerstring besitzt keine Zeichen. Der Wert von <code>anzahl</code> ist jetzt <code>0</code>.',
 
   task: 'Schreibe eine Funktion <code>laenge</code>, die bei Übergabe eines Strings die Anzahl der Zeichen dieses Strings zurückgibt. ' +
@@ -24,76 +24,19 @@ jshero.koans.add({
 
   tests: [
     function() {
-      var ok = typeof laenge === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>laenge</code> ist eine Funktion.';
-      } else {
-        msg = '<code>laenge</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('laenge');
     },
 
     function() {
-      var result = laenge.length;
-      var ok = result === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>laenge</code> hat genau 1 Parameter.';
-      } else {
-        msg = '<code>laenge</code> hat nicht 1, sondern ' + result + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('laenge', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = laenge('Hallo Welt!');
-        ok = result === 11;
-        if (ok) {
-          msg = '<code>laenge("Hallo Welt!")</code> gibt <code>11</code> zurück.';
-        } else {
-          msg = '<code>laenge("Hallo Welt!")</code> gibt nicht <code>11</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>laenge("Hallo Welt!")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('laenge("Hallo Welt!")', 11);
     },
-    
+
     function() {
-      var ok, msg, e;
-      try {
-        var result = laenge('');
-        ok = result === 0;
-        if (ok) {
-          msg = '<code>laenge("")</code> gibt <code>0</code> zurück.';
-        } else {
-          msg = '<code>laenge("")</code> gibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>laenge("")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('laenge("")', 0);
     }
   ]
 

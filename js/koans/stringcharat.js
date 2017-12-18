@@ -24,75 +24,19 @@ jshero.koans.add({
 
   tests: [
     function() {
-      var ok = typeof abkuerzung === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>abkuerzung</code> ist eine Funktion.';
-      } else {
-        msg = '<code>abkuerzung</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('abkuerzung');
     },
 
     function() {
-      var ok = abkuerzung.length === 2;
-      var msg;
-      if (ok) {
-        msg = "<code>abkuerzung</code> hat zwei Parameter.";
-      } else {
-        msg = "<code>abkuerzung</code> hat nicht 2, sondern " + abkuerzung.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('abkuerzung', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = abkuerzung('Hansestadt', 'Bremen');
-        ok = result === "HB";
-        if (ok) {
-          msg = '<code>abkuerzung("Hansestadt", "Bremen")</code> gibt <code>"HB"</code> zurück.';
-        } else {
-          msg = '<code>abkuerzung("Hansestadt", "Bremen")</code> gibt nicht <code>"HB"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        e = exc;
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>abkuerzung("Hansestadt", "Bremen")</code>.';
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('abkuerzung("Hansestadt", "Bremen")', 'HB');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = abkuerzung('Java', 'Script');
-        ok = result === "JS";
-        if (ok) {
-          msg = '<code>abkuerzung("Java", "Script")</code> gibt <code>"JS"</code> zurück.';
-        } else {
-          msg = '<code>abkuerzung("Java", "Script")</code> gibt nicht <code>"JS"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>abkuerzung("Java", "Script")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('abkuerzung("Java", "Script")', 'JS');
     }
 
   ]
