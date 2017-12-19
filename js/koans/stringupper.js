@@ -38,7 +38,7 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('toCase("Case")', 'case-CASE');
+        return jshero.testutil.assert_functionReturns('toCase("Ida")', 'ida-Ida');
     },
 
     function() {

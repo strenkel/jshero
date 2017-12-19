@@ -35,10 +35,6 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('firstChar("1 Kaffee")', 'K');
-    },
-
-    function() {
         return jshero.testutil.assert_functionReturns('firstChar("Franz")', 'F');
     }
   ]

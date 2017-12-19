@@ -39,15 +39,15 @@ var n3 = "Fred Feuerstein".indexOf("e", 7);</code></pre>
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('secondIndexOf("xxXX", "X")', 3);
+        return jshero.testutil.assert_functionReturns('secondIndexOf("ja!", "ja")', -1);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('secondIndexOf("O ja!", "ja")', -1);
+        return jshero.testutil.assert_functionReturns('secondIndexOf("JA! ja!", "ja")', -1);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('secondIndexOf("O JA! O ja", "ja")', -1);
+      return jshero.testutil.assert_functionReturns('secondIndexOf("JA! ja! ja!", "ja")', 8);
     }
   ]
 
