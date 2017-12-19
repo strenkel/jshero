@@ -35,18 +35,7 @@ jshero.koans.add({
     },
 
     function() {
-      var result = echo.length;
-      var ok = result === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>echo</code> hat genau 1 Parameter.';
-      } else {
-        msg = '<code>echo</code> hat nicht 1, sondern ' + result + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('echo', 1);
     },
 
     function() {

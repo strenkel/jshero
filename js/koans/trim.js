@@ -23,76 +23,23 @@ jshero.koans.add({
 
   tests: [
     function() {
-      var ok = typeof firstChar === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>firstChar</code> ist eine Funktion.';
-      } else {
-        msg = '<code>firstChar</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('firstChar');
     },
 
     function() {
-      var result = firstChar.length;
-      var ok = result === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>firstChar</code> hat genau 1 Parameter.';
-      } else {
-        msg = '<code>firstChar</code> hat nicht 1, sondern ' + result + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('firstChar', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = firstChar(' Rosa');
-        ok = result === "R";
-        if (ok) {
-          msg = '<code>firstChar(" Rosa")</code> gibt <code>"R"</code> zurück.';
-        } else {
-          msg = '<code>firstChar(" Rosa")</code> gibt nicht <code>"R"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>firstChar(" Rosa")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('firstChar(" Maria")', 'M');
     },
-    
+
     function() {
-      var ok, msg, e;
-      try {
-        var result = firstChar('Parks');
-        ok = result === "P";
-        if (ok) {
-          msg = '<code>firstChar("Parks")</code> gibt <code>"P"</code> zurück.';
-        } else {
-          msg = '<code>firstChar("Parks")</code> gibt nicht <code>"P"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>firstChar("Parks")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('firstChar("1 Kaffee")', 'K');
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('firstChar("Franz")', 'F');
     }
   ]
 
