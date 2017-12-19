@@ -28,10 +28,10 @@ jshero.koans.add({
     'Diese Funktion loggt so wie oben <code>console.log</code>. Die Ausgabe wird allerdings nicht in die Entwickler-Konsole, sondern in die Testausgabe geschrieben. ' +
     'So sieht man genau, was bei welchem Testaufruf geloggt wird. <code>jshero.log</code> kannst du in jeder Lektion verwenden! Der Vollständigkeit halber seien zwei Unterschiede zwischen dem ' +
     'Loggen mit <code>console.log</code> und <code>jshero.log</code> genannt: (i)&nbsp;<code>console.log</code> kann mehrere Paramter gleichzeitig loggen ' +
-    'und es loggt Objekte (diese werden wir später kennen lernen) in ihrer Objekt-Notation. (ii)&nbsp;<code>jshero.log</code> loggt nicht beim Einlesen deines Lösungs-Codes. ' + 
+    'und es loggt Objekte (diese werden wir später kennen lernen) in ihrer Objekt-Notation. (ii)&nbsp;<code>jshero.log</code> loggt nicht beim Einlesen deines Lösungs-Codes. ' +
     'Es ist nur beim Aufruf deiner Lösungsfunktion aktiv. Dadurch werden Log-Aufrufe außerhalb deiner Lösungsfunktion mit <code>jshero.log</code> nicht geloggt, während sie ' +
     'mit <code>console.log</code> geloggt werden.',
-        
+
   task: 'Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt. ' +
     'Gleichzeitig soll der Eingangsparameter und die Rückgabe mit <code>jshero.log</code> geloggt werden. Der Aufruf <code>rufe("Werder")</code> ' +
     'sollte <code>"WerderWerder"</code> zurückgeben und es sollte nacheinander <code>"Werder"</code> und <code>"WerderWerder"</code> geloggt werden.',
@@ -43,58 +43,19 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
-      var ok = typeof rufe === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>rufe</code> ist eine Funktion.";
-      } else {
-        msg = "<code>rufe</code> ist keine Funktion."
-      }
-      return {
-        msg: msg,
-        ok: ok
-      };
-    },
-    
-    function() {
-      var ok = rufe.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>rufe</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>rufe</code> hat nicht 1, sondern " + rufe.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('rufe');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = rufe("Werder");
-        if (result === "WerderWerder") {
-          ok = true;
-          msg = '<code>rufe("Werder")</code> gibt <code>"WerderWerder"</code> zurück.';
-        } else {
-          ok = false;
-          msg = '<code>rufe("Werder")</code> gibt nicht <code>"WerderWerder"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>rufe("Werder")</code>.';
-        e = exc;
-      }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('rufe', 1);
     },
-    
+
+    function() {
+        return jshero.testutil.assert_functionReturns('rufe("Werder")', 'WerderWerder');
+    },
+
     function() {
       var ok, msg, e;
       try {
@@ -143,7 +104,7 @@ jshero.koans.add({
         e: e
       };
     },
-  
+
     function() {
       var ok, msg, e;
       try {
@@ -170,26 +131,7 @@ jshero.koans.add({
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = rufe("Kickers");
-        if (result === "KickersKickers") {
-          ok = true;
-          msg = '<code>rufe("Kickers")</code> gibt <code>"KickersKickers"</code> zurück.';
-        } else {
-          ok = false;
-          msg = '<code>rufe("Kickers")</code> gibt nicht <code>"KickersKickers"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>rufe("Kickers")</code>.';
-        e = exc;
-      }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('rufe("Kickers")', 'KickersKickers');
     },
 
     function() {
@@ -216,7 +158,7 @@ jshero.koans.add({
         e: e
       };
     },
-  
+
     function() {
       var ok, msg, e;
       try {
@@ -241,7 +183,7 @@ jshero.koans.add({
         e: e
       };
     }
-    
+
   ]
 
 });

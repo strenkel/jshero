@@ -27,99 +27,28 @@ var n3 = "Fred Feuerstein".indexOf("e", 7);</code></pre>
 
   tests: [
     function() {
-      var ok = typeof secondIndexOf === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>secondIndexOf</code> ist eine Funktion.';
-      } else {
-        msg = '<code>secondIndexOf</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('secondIndexOf');
     },
 
     function() {
-      var ok = secondIndexOf.length === 2;
-      var msg;
-      if (ok) {
-        msg = "<code>secondIndexOf</code> hat 2 Parameter.";
-      } else {
-        msg = "<code>secondIndexOf</code> hat nicht 2, sondern " + secondIndexOf.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('secondIndexOf', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = secondIndexOf("Maria Maria", "Maria");
-        ok = result === 6;
-        if (ok) {
-          msg = '<code>secondIndexOf("Maria Maria", "Maria")</code> gibt <code>6</code> zurück.';
-        } else {
-          msg = '<code>secondIndexOf("Maria Maria", "Maria")</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>secondIndexOf("Maria Maria", "Maria")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('secondIndexOf("Maria Maria", "Maria")', 6);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = secondIndexOf("xxXX", "X");
-        ok = result === 3;
-        if (ok) {
-          msg = '<code>secondIndexOf("xxXX", "X")</code> gibt <code>3</code> zurück.';
-        } else {
-          msg = '<code>secondIndexOf("xxXX", "X")</code> gibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>secondIndexOf("xxXX", "X")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('secondIndexOf("xxXX", "X")', 3);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = secondIndexOf("O ja!", "ja");
-        ok = result === -1;
-        if (ok) {
-          msg = '<code>secondIndexOf("O ja!", "ja")</code> gibt <code>-1</code> zurück.';
-        } else {
-          msg = '<code>secondIndexOf("O ja!", "ja")</code> gibt nicht <code>-1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>secondIndexOf("O ja!", "ja")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('secondIndexOf("O ja!", "ja")', -1);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('secondIndexOf("O JA! O ja", "ja")', -1);
     }
-
   ]
 
 });
