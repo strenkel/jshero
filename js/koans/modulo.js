@@ -20,77 +20,24 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof einer === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>einer</code> ist eine Funktion.";
-      } else {
-        msg = "<code>einer</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('einer');
     },
 
     function() {
-      var ok = einer.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>einer</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>einer</code> hat nicht 1, sondern " + einer.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-    
-    function() {
-      var ok, msg, e;
-      try {
-        var result = einer(0);
-        ok = result === 0;
-        if (ok) {
-          msg = '<code>einer(0)</code> gibt <code>0</code> zurück.';
-        } else {
-          msg = '<code>einer(0)</code> gibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>einer(0)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('einer', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = einer(17);
-        ok = result === 7;
-        if (ok) {
-          msg = '<code>einer(17)</code> gibt <code>7</code> zurück.';
-        } else {
-          msg = '<code>einer(17)</code> gibt nicht <code>7</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>einer(17)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('einer(2674)', 4);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('einer(210)', 0);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('einer(17)', 7);
     }
 
   ]
