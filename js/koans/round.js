@@ -41,10 +41,6 @@ jshero.koans.add({
 
     function() {
         return jshero.testutil.assert_functionReturns('round100(4650)', 4700);
-    },
-
-    function() {
-        return jshero.testutil.assert_functionReturns('round100(-4650)', -4600);
     }
 
   ]
