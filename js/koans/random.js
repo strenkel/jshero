@@ -114,17 +114,6 @@
       },
       function() {
         return testWith(6);
-      },
-
-      function() {
-        result = testWith(7);
-        if (result.ok) {
-          result.msg = "Ein Würfel mit einer 7?";
-          result.ok = false;
-        } else {
-          result.ok = true;
-        }
-        return result;
       }
 
     ]
