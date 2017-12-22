@@ -28,7 +28,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('round100');
+      return jshero.testutil.assert_isFunction('round100');
     },
 
     function() {
@@ -36,11 +36,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('round100(49.999)', 0);
+      return jshero.testutil.assert_functionReturns('round100(49.999)', 0);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('round100(4650)', 4700);
+      return jshero.testutil.assert_functionReturns('round100(4650)', 4700);
     }
 
   ]
