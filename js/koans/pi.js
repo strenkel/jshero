@@ -20,7 +20,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('flaeche');
+      return jshero.testutil.assert_isFunction('flaeche');
     },
 
     function() {
@@ -28,15 +28,15 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('flaeche(4)', Math.PI*4*4);
+      return jshero.testutil.assert_functionReturns('flaeche(4)', Math.PI * 4 * 4);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('flaeche(1)', Math.PI);
+      return jshero.testutil.assert_functionReturns('flaeche(1)', Math.PI);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('flaeche(0)', 0);
+      return jshero.testutil.assert_functionReturns('flaeche(0)', 0);
     }
 
   ]

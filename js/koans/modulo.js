@@ -21,7 +21,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('einer');
+      return jshero.testutil.assert_isFunction('einer');
     },
 
     function() {
@@ -29,15 +29,15 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('einer(2674)', 4);
+      return jshero.testutil.assert_functionReturns('einer(2674)', 4);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('einer(210)', 0);
+      return jshero.testutil.assert_functionReturns('einer(210)', 0);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('einer(17)', 7);
+      return jshero.testutil.assert_functionReturns('einer(17)', 7);
     }
 
   ]
