@@ -33,75 +33,19 @@ jshero.koans.add({
 
   tests: [
     function() {
-      var ok = typeof convert === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>convert</code> ist eine Funktion.';
-      } else {
-        msg = '<code>convert</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('convert ');
     },
 
     function() {
-      var ok = convert.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>convert</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>convert</code> hat nicht 1, sondern " + convert.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('convert ', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = convert("10-07-1871");
-        ok = result === "10.07.1871";
-        if (ok) {
-          msg = '<code>convert("10-07-1871")</code> gibt <code>"10.07.1871"</code> zurück.';
-        } else {
-          msg = '<code>convert("10-07-1871")</code> gibt nicht <code>"10.07.1871"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>convert("10-07-1871")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('convert ("10-07-1871")', '10.07.1871');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = convert("18/11/1922");
-        ok = result === "18.11.1922";
-        if (ok) {
-          msg = '<code>convert("18/11/1922")</code> gibt <code>"18.11.1922"</code> zurück.';
-        } else {
-          msg = '<code>convert("18/11/1922")</code> gibt nicht <code>"18.11.1922"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>convert("18/11/1922")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('convert ("8/11/1922")', '8.11.1922');
     }
 
   ]

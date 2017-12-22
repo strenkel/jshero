@@ -8,7 +8,7 @@ jshero.koans.add({
   'ausgeführt. Möchte man zuerst die Strichrechnung ausführen, verwendet man genauso wie in der Mathematik Klammern.' +
   '<pre><code>var x1 = 3 + 4 * 2;<br>var x2 = (3 + 4) * 2;</code></pre>' +
   '<code>x1</code> hat den Wert <code>11</code>, der Wert von <code>x2</code> ist <code>14</code>.',
-        
+
   task: 'Schreibe eine Funktion <code>mittelwert</code>, die zwei Zahlen als Parameter entgegennimmt und deren Mittelwert zurückgibt. ' +
   '<code>mittelwert(1, 2)</code> sollte <code>1.5</code> ergeben.',
 
@@ -19,79 +19,26 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof mittelwert === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>mittelwert</code> ist eine Funktion.";
-      } else {
-        msg = "<code>mittelwert</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+        return jshero.testutil.assert_isFunction('mittelwert');
     },
 
     function() {
-      var ok = mittelwert.length === 2;
-      var msg;
-      if (ok) {
-        msg = "<code>mittelwert</code> hat zwei Parameter.";
-      } else {
-        msg = "<code>mittelwert</code> hat nicht 2, sondern " + mittelwert.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-    
-    function() {
-      var ok, msg, e;
-      try {
-        var result = mittelwert(1, 2);
-        ok = result === 1.5;
-        if (ok) {
-          msg = '<code>mittelwert(1, 2)</code> ergibt <code>1.5</code>.';
-        } else {
-          msg = '<code>mittelwert(1, 2)</code> ergibt nicht <code>1.5</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>mittelwert(1, 2)</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('mittelwert', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = mittelwert(0, 0);
-        ok = result === 0;
-        if (ok) {
-          msg = '<code>mittelwert(0, 0)</code> ergibt <code>0</code>.';
-        } else {
-          msg = '<code>mittelwert(0, 0)</code> ergibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>mittelwert(0, 0)</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+        return jshero.testutil.assert_functionReturns('mittelwert(1, 2)', 1.5);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('mittelwert(0, 0)', 0);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('mittelwert(3, -1)', 1);
     }
-
+    
   ]
 
 });
