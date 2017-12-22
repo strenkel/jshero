@@ -52,8 +52,6 @@ jshero.koans.add({
     function() {
       return jshero.testutil.assert_functionReturns('gleich("Links", "Rechts")', false);
     }
-
-
   ]
 
 });
