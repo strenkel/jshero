@@ -44,7 +44,6 @@ jshero.koans.add({
     function() {
       return jshero.testutil.assert_functionReturns('istGerade(2)', true);
     }
-
   ]
 
 });
