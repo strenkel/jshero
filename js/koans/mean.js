@@ -20,7 +20,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('mittelwert');
+      return jshero.testutil.assert_isFunction('mittelwert');
     },
 
     function() {
@@ -28,17 +28,17 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('mittelwert(1, 2)', 1.5);
+      return jshero.testutil.assert_functionReturns('mittelwert(1, 2)', 1.5);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('mittelwert(0, 0)', 0);
+      return jshero.testutil.assert_functionReturns('mittelwert(0, 0)', 0);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('mittelwert(3, -1)', 1);
+      return jshero.testutil.assert_functionReturns('mittelwert(3, -1)', 1);
     }
-    
+
   ]
 
 });

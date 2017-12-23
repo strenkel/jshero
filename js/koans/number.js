@@ -5,15 +5,15 @@ jshero.koans.add({
   title: "Zahlen",
 
   lesson: 'Zahlen werden in JavaScript durch einfache Ziffern dargestellt. Sie können einen Dezimalpunkt und ein Minuszeichen besitzen.' +
-  '<pre><code>var x1 = 1;<br>var x2 = 1.0;<br>var x3 = 3.14;<br>var x4 = -1;</code></pre>' +
-  '<code>1</code> und <code>1.0</code> sind dieselbe Zahl. ' +
-  'Mit Zahlen kann man rechnen. Die vier Grundrechenarten Addieren, Subtrahieren, Multiplizieren und Dividieren werden durch ' +
-  '<code>+ - *</code> und <code>/</code> dargestellt.' +
-  '<pre><code>var x1 = 6;<br>var x2 = 2;<br>var x3 = x1 + x2;<br>var x4 = x1 - x2;<br>var x5 = x1 * x2;<br>var x6 = x1 / x2;</code></pre>' +
-  'Die Variablen <code>x3</code> bis <code>x6</code> haben so die Werte <code>8</code>, <code>4</code>, <code>12</code> und <code>3</code>.',
+    '<pre><code>var x1 = 1;<br>var x2 = 1.0;<br>var x3 = 3.14;<br>var x4 = -1;</code></pre>' +
+    '<code>1</code> und <code>1.0</code> sind dieselbe Zahl. ' +
+    'Mit Zahlen kann man rechnen. Die vier Grundrechenarten Addieren, Subtrahieren, Multiplizieren und Dividieren werden durch ' +
+    '<code>+ - *</code> und <code>/</code> dargestellt.' +
+    '<pre><code>var x1 = 6;<br>var x2 = 2;<br>var x3 = x1 + x2;<br>var x4 = x1 - x2;<br>var x5 = x1 * x2;<br>var x6 = x1 / x2;</code></pre>' +
+    'Die Variablen <code>x3</code> bis <code>x6</code> haben so die Werte <code>8</code>, <code>4</code>, <code>12</code> und <code>3</code>.',
 
   task: 'Schreibe eine Funktion <code>add</code>, die zwei Zahlen als Parameter entgegennimmt und deren Summe zurückgibt. ' +
-  '<code>add(1, 2)</code> sollte <code>3</code> ergeben.',
+    '<code>add(1, 2)</code> sollte <code>3</code> ergeben.',
 
   beforeTests: function() {
     if (typeof add !== "undefined") {
@@ -23,7 +23,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('add');
+      return jshero.testutil.assert_isFunction('add');
     },
 
     function() {
@@ -31,15 +31,15 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('add(0, 0)', 0);
+      return jshero.testutil.assert_functionReturns('add(0, 0)', 0);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('add(2, 3)', 5);
+      return jshero.testutil.assert_functionReturns('add(2, 3)', 5);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('add(-1, 3)', 2);
+      return jshero.testutil.assert_functionReturns('add(-1, 3)', 2);
     }
 
   ]

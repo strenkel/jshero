@@ -18,13 +18,13 @@ jshero.koans.add({
     so sollte die Rückgabe <code>"Hallo Franz!"</code> sein.`,
 
   beforeTests: function() {
-      begruesse = undefined;
+    begruesse = undefined;
   },
 
   tests: [
 
     function() {
-        return jshero.testutil.assert_isFunction('begruesse');
+      return jshero.testutil.assert_isFunction('begruesse');
     },
 
     function() {
@@ -32,11 +32,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('begruesse("Maria")', 'Hallo Maria!');
+      return jshero.testutil.assert_functionReturns('begruesse("Maria")', 'Hallo Maria!');
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('begruesse("Franz")', 'Hallo Franz!');
+      return jshero.testutil.assert_functionReturns('begruesse("Franz")', 'Hallo Franz!');
     }
   ]
 

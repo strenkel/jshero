@@ -33,7 +33,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('convert ');
+      return jshero.testutil.assert_isFunction('convert ');
     },
 
     function() {
@@ -41,11 +41,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('convert ("10-07-1871")', '10.07.1871');
+      return jshero.testutil.assert_functionReturns('convert ("10-07-1871")', '10.07.1871');
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('convert ("8/11/1922")', '8.11.1922');
+      return jshero.testutil.assert_functionReturns('convert ("8/11/1922")', '8.11.1922');
     }
 
   ]
