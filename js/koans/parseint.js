@@ -27,8 +27,8 @@ jshero.koans.add({
     'var n2 = parseInt("Nr. 8", 10);<br>' +
     '</code></pre>' +
     'Im ersten Fall ist überhaupt keine Zahl vorhanden. Im zweiten Fall gibt es nicht-numerische Zeichen vor der eigentlichen Zahl. Auch das ist nicht zulässig und führt zur Rückgabe ' +
-    '<code>NaN</code>.', 
-        
+    '<code>NaN</code>.',
+
   task: 'Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das Ergebnis der Addition als Zahl zurückgibt. ' +
     'Es sollen zwei natürliche Zahlen addiert werden. Die Additionsaufgabe ist ein String der Form "zahl1+zahl2". So soll <code>add("100+19")</code> die Zahl <code>119</code> zurückgeben.',
 
@@ -39,77 +39,24 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof add === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>add</code> ist eine Funktion.";
-      } else {
-        msg = "<code>add</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('add');
     },
 
     function() {
-      var ok = add.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>add</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>add</code> hat nicht 1, sondern " + add.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-    
-    function() {
-      var ok, msg, e;
-      try {
-        var result = add("1+2");
-        ok = result === 3;
-        if (ok) {
-          msg = '<code>add("1+2")</code> ergibt <code>3</code>.';
-        } else {
-          msg = '<code>add("1+2")</code> ergibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>add("1+2")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('add', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = add("100123+456");
-        ok = result === 100579;
-        if (ok) {
-          msg = '<code>add("100123+456")</code> ergibt <code>100579</code>.';
-        } else {
-          msg = '<code>add("100123+456")</code> ergibt nicht <code>100579</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>add("100123+456")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('add("1+2")', 3);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('add("100123+456")', 100579);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('add("-10+6")', 4);
     }
 
   ]

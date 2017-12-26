@@ -13,7 +13,7 @@ jshero.koans.add({
     'wird der durch die geschweiften Klammern begrenzte Block übersprungen. ' +
     'Hat in unserem Beispiel die Variable <code>wuerfelzahl</code> den Wert <code>6</code>, so wird <code>gewinn</code> auf ' +
     '<code>100</code> gesetzt. Hat <code>wuerfelzahl</code> nicht den Wert <code>6</code>, bleibt <code>gewinn</code> bei <code>0</code>.',
-        
+
   task: 'Schreibe eine Funktion <code>gleich</code>, die 2 Werte auf strikte Gleichheit überprüft. Sind die beiden Werte gleich, so soll ' +
     'der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie ungleich, so soll man <code>"UNGLEICH"</code> erhalten.',
 
@@ -24,79 +24,33 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof gleich === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>gleich</code> ist eine Funktion.';
-      } else {
-        msg = '<code>gleich</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('gleich');
     },
 
     function() {
-      var ok = gleich.length === 2;
-      var msg;
-      if (ok) {
-        msg = '<code>gleich</code> hat 2 Parameter.';
-      } else {
-        msg = '<code>gleich</code> hat nicht 2, sondern ' + gleich.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-    
-    function() {
-      var ok, msg, e;
-      try {
-        var result = gleich(1, 1);
-        ok = result === "GLEICH";
-        if (ok) {
-          msg = '<code>gleich(1, 1)</code> ergibt <code>"GLEICH"</code>.';
-        } else {
-          msg = '<code>gleich(1, 1)</code> ergibt nicht <code>"GLEICH"</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>gleich(1, 1)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('gleich', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = gleich(1, "1");
-        ok = result === "UNGLEICH";
-        if (ok) {
-          msg = '<code>gleich(1, "1")</code> ergibt <code>"UNGLEICH"</code>.';
-        } else {
-          msg = '<code>gleich(1, "1")</code> ergibt nicht <code>"UNGLEICH"</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>gleich(1, "1")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('gleich(1, 1)', 'GLEICH');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('gleich(1, "1")', 'UNGLEICH');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('gleich(1, 2)', 'UNGLEICH');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('gleich("klein", "klein")', 'GLEICH');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('gleich("Links", "Rechts")', 'UNGLEICH');
     }
-
   ]
 
 });

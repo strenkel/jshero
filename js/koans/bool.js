@@ -13,7 +13,7 @@ jshero.koans.add({
     '<code>true</code> wird <code>false</code> und aus <code>false</code> wird <code>true</code>.' +
     '<pre><code>var x1 = true && false;<br>var x2 = !x1;<br>var x3 = x1 || x2;</code></pre>' +
     '<code>x1</code> ist <code>false</code>,  <code>x2</code> ist <code>true</code> und <code>x3</code> ist ebenfalls <code>true</code>.',
-        
+
   task: 'Schreibe eine Funktion <code>nand</code>, die zwei boolesche Werte als Parameter entgegennimmt. Die Rückgabe der Funktion soll <code>false</code> sein, ' +
     'wenn beide Paramter <code>true</code> sind. In den anderen Fällen soll die Rückgabe <code>true</code> sein. <code>nand(true, true)</code> ' +
     'soll <code>false</code> liefern, <code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen <code>true</code> zurückgeben.',
@@ -25,123 +25,29 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof nand === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>nand</code> ist eine Funktion.";
-      } else {
-        msg = "<code>nand</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('nand');
     },
 
     function() {
-      var ok = nand.length === 2;
-      var msg;
-      if (ok) {
-        msg = "<code>nand</code> hat zwei Parameter.";
-      } else {
-        msg = "<code>nand</code> hat nicht 2, sondern " + nand.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-    
-    function() {
-      var ok, msg, e;
-      try {
-        var result = nand(true, true);
-        ok = result === false;
-        if (ok) {
-          msg = '<code>nand(true, true)</code> ergibt <code>false</code>.';
-        } else {
-          msg = '<code>nand(true, true)</code> ergibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>nand(true, true)</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('nand', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = nand(true, false);
-        ok = result === true;
-        if (ok) {
-          msg = '<code>nand(true, false)</code> ergibt <code>true</code>.';
-        } else {
-          msg = '<code>nand(true, false)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>nand(true, false)</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('nand(true, true)', false);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = nand(false, true);
-        ok = result === true;
-        if (ok) {
-          msg = '<code>nand(false, true)</code> ergibt <code>true</code>.';
-        } else {
-          msg = '<code>nand(false, true)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>nand(false, true)</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('nand(true, false)', true);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = nand(false, false);
-        ok = result === true;
-        if (ok) {
-          msg = '<code>nand(false, false)</code> ergibt <code>true</code>.';
-        } else {
-          msg = '<code>nand(false, false)</code> ergibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = "Fehler beim Aufruf von <code>nand(false, false)</code>.";
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('nand(false, true)', true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('nand(false, false)', true);
     }
-
   ]
 
 });

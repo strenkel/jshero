@@ -21,7 +21,6 @@ var v4 = 5 <= 5;</code></pre>`,
   },
 
   tests: [
-
     function() {
       return jshero.testutil.assert_isFunction('istDreistellig');
     },
@@ -44,8 +43,11 @@ var v4 = 5 <= 5;</code></pre>`,
 
     function() {
       return jshero.testutil.assert_functionReturns('istDreistellig(1000)', false);
-    }
+    },
 
+    function() {
+      return jshero.testutil.assert_functionReturns('istDreistellig(-100)', false);
+    }
   ]
 
 });
