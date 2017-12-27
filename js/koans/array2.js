@@ -21,79 +21,25 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof getFirstElement === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>getFirstElement</code> ist eine Funktion.';
-      } else {
-        msg = '<code>getFirstElement</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('getFirstElement');
     },
 
     function() {
-      var ok = getFirstElement.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>getFirstElement</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>getFirstElement</code> hat nicht 1, sondern ' + getFirstElement.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('getFirstElement', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = getFirstElement([1, 2]);
-        ok = result === 1;
-        if (ok) {
-          msg = '<code>getFirstElement([1, 2])</code> gibt <code>1</code> zurück.';
-        } else {
-          msg = '<code>getFirstElement([1, 2])</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>getFirstElement([1, 2])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('getFirstElement([1, 2])', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = getFirstElement(["Hänsel", "Gretel"]);
-        ok = result === "Hänsel";
-        if (ok) {
-          msg = '<code>getFirstElement(["Hänsel", "Gretel"])</code> gibt <code>"Hänsel"</code> zurück.';
-        } else {
-          msg = '<code>getFirstElement(["Hänsel", "Gretel"])</code> gibt nicht <code>"Hänsel"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>getFirstElement(["Hänsel", "Gretel"])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('getFirstElement(["Hänsel", "Gretel"])', 'Hänsel');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('getFirstElement(["Maus", 1])', 'Maus');
     }
-
   ]
 
 });

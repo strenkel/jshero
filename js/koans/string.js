@@ -22,9 +22,8 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-        return jshero.testutil.assert_isFunction('begruesse');
+      return jshero.testutil.assert_isFunction('begruesse');
     },
 
     function() {
@@ -32,12 +31,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('begruesse("Maria")', 'Hallo Maria!');
+      return jshero.testutil.assert_functionReturns('begruesse("Maria")', 'Hallo Maria!');
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('begruesse("Franz")', 'Hallo Franz!');
-    }
-  ]
+      return jshero.testutil.assert_functionReturns('begruesse("Franz")', 'Hallo Franz!');
+    }  ]
 
 });
