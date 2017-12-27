@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function (i18n) {
+jshero.testutil = (function(i18n) {
 
   'use strict';
 
@@ -72,9 +72,9 @@ jshero.testutil = (function (i18n) {
       html += escape;
     }
 
-    return lastIndex !== index
-      ? html + str.substring(lastIndex, index)
-      : html;
+    return lastIndex !== index ?
+      html + str.substring(lastIndex, index) :
+      html;
   }
 
   /** ------------- copied and adpated from escape-html/index.js
@@ -88,7 +88,7 @@ jshero.testutil = (function (i18n) {
    *
    * We expect a function named "a".
    */
-  var assert_isFunction = function (f_name) {
+  var assert_isFunction = function(f_name) {
     var ok = typeof eval(f_name) === 'function';
     var msg;
     if (ok) {
@@ -109,15 +109,19 @@ jshero.testutil = (function (i18n) {
    * @param {function} f_call
    * @param {object} expectedReturnValue
    */
-  var assert_functionReturns = function (f_call, expectedReturnValue) {
+  var assert_functionReturns = function(f_call, expectedReturnValue) {
     var ok, msg, e;
     try {
       var result = eval(f_call);
-      ok = result === expectedReturnValue;
-      if (ok) {
-        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue) ]);
+      if (Array.isArray(result)) {
+        ok = jshero.array.isEqual(result, expectedReturnValue);
       } else {
-        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result)) ]);
+        ok = result === expectedReturnValue;
+      }
+      if (ok) {
+        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue)]);
+      } else {
+        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result))]);
       }
     } catch (exc) {
       ok = false;
@@ -134,7 +138,7 @@ jshero.testutil = (function (i18n) {
   /**
    * Bei der Variable v müssen wir noch mitgeben wie sie heißt (name)
    */
-  var assert_variableDefined = function (v, name) {
+  var assert_variableDefined = function(v, name) {
     var ok = typeof v !== 'undefined';
     var msg;
     if (ok) {
@@ -151,7 +155,7 @@ jshero.testutil = (function (i18n) {
   /**
    * Prüfen, ob eine Variable einen Wert hat
    */
-  var assert_variableHasValue = function (v, name, expValue) {
+  var assert_variableHasValue = function(v, name, expValue) {
     var ok = v === expValue;
     var msg;
     if (ok) {
@@ -171,20 +175,20 @@ jshero.testutil = (function (i18n) {
    * @param {string} f_name Name der Funktion.
    * @param {int} numOfParam Anzahl der geforderten Parameter.
    */
-  var assert_functionHasNumOfParameter = function (f_name, numOfParam) {
-      var fun = eval(f_name);
-      var ok = fun.length === numOfParam;
-      var msg;
-      if (ok) {
-        msg = jshero.util.formatMessage(i18n.get("correctNumOfParam"), [f_name, numOfParam]);
-      } else {
-        msg = jshero.util.formatMessage(i18n.get("wrongNumOfParam"), [f_name, numOfParam, fun.length]);
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+  var assert_functionHasNumOfParameter = function(f_name, numOfParam) {
+    var fun = eval(f_name);
+    var ok = fun.length === numOfParam;
+    var msg;
+    if (ok) {
+      msg = jshero.util.formatMessage(i18n.get("correctNumOfParam"), [f_name, numOfParam]);
+    } else {
+      msg = jshero.util.formatMessage(i18n.get("wrongNumOfParam"), [f_name, numOfParam, fun.length]);
+    }
+    return {
+      ok: ok,
+      msg: msg
     };
+  };
 
   return {
     assert_isFunction: assert_isFunction,
