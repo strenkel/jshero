@@ -37,79 +37,24 @@ jshero.koans.add({
   },
 
   tests: [
-
-    function () {
-      var ok = typeof addiereBis === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>addiereBis</code> ist eine Funktion.';
-      } else {
-        msg = '<code>addiereBis</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+    function() {
+      return jshero.testutil.assert_isFunction('addiereBis');
     },
 
-    function () {
-      var ok = addiereBis.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>addiereBis</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>addiereBis</code> hat nicht 1, sondern ' + addiereBis.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+    function() {
+      return jshero.testutil.assert_functionHasNumOfParameter('addiereBis', 1);
     },
 
-    function () {
-      var ok, msg, e;
-      try {
-        var result = addiereBis(2);
-        ok = result === 1
-        if (ok) {
-          msg = '<code>addiereBis(2)</code> gibt <code>1</code> zurück.';
-        } else {
-          msg = '<code>addiereBis(2)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>addiereBis(2)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereBis(2)', 1);
     },
 
-    function () {
-      var ok, msg, e;
-      try {
-        var result = addiereBis(4);
-        ok = result === 6
-        if (ok) {
-          msg = '<code>addiereBis(4)</code> gibt <code>6</code> zurück.';
-        } else {
-          msg = '<code>addiereBis(4)</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>addiereBis(4)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereBis(4)', 6);
+    },
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereBis(15)', 105);
     }
-
   ]
 
 });

@@ -25,77 +25,24 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof abstand === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>abstand</code> ist eine Funktion.';
-      } else {
-        msg = '<code>abstand</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('abstand');
     },
 
     function() {
-      var ok = abstand.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>abstand</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>abstand</code> hat nicht 1, sondern ' + abstand.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('abstand', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = abstand(0);
-        ok = result === "";
-        if (ok) {
-          msg = '<code>abstand(0)</code> gibt <code>""</code> zurück.';
-        } else {
-          msg = '<code>abstand(0)</code> gibt nicht <code>""</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>abstand(0)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('abstand(0)', "");
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = abstand(2);
-        ok = result === "  ";
-        if (ok) {
-          msg = '<code>abstand(2)</code> gibt <code>"&nbsp;&nbsp;"</code> zurück.';
-        } else {
-          msg = '<code>abstand(2)</code> gibt nicht <code>"&nbsp;&nbsp;"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>abstand(2)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('abstand(2)', "  ");
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('abstand(5)', "     ");
     }
   ]
 
