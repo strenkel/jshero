@@ -89,7 +89,12 @@ jshero.testutil = (function (i18n) {
    * We expect a function named "a".
    */
   var assert_isFunction = function (f_name) {
-    var ok = typeof eval(f_name) === 'function';
+    var ok = false;
+    try {
+      ok = typeof eval(f_name) === 'function';
+    } catch(e) {
+      // nothing to do. f_name is not defined.
+    }
     var msg;
     if (ok) {
       msg = '<code>' + f_name + '</code> ' + i18n.get("isAFunction") + ".";
