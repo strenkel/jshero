@@ -22,6 +22,7 @@ jshero.koans.initReorder(
     'xor',
     'equals',
     'equals2',
+    'greaterthan',
     'if',
     'array',
     'array2',
