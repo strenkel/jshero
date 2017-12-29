@@ -1,5 +1,3 @@
-// Work in progress. Not ready!
-
 (function() {
 
   jshero.koans.add({
@@ -12,7 +10,7 @@
 
 <pre><code>var sum = 0;
 for (var i = 1; i < 3; i++) {
-  sum = sum + i;<br>' +
+  sum = sum + i;
 }</code></pre>
 
 The <code>for</code> loop consists of three control expressions and the loop code.
@@ -35,8 +33,8 @@ In the final expression <code>i</code> is increased again and gets the value <co
 The loop condition <code>3 < 3</code> is no longer fulfilled. The loop is terminated and the program execution continues after the loop.
 Our code example has added all natural numbers smaller than 3.`,
 
-    task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all the natural numbers smaller than the parameter.
-The result of the addition is to be returned. <code>addTo(4)</code> should return <code>6</code>.`,
+    task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers smaller than the parameter.
+The result is to be returned. <code>addTo(4)</code> should return <code>6</code>.`,
 
     beforeTests: function() {
       addTo = undefined;
