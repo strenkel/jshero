@@ -7,7 +7,7 @@ Playstore: <https://play.google.com/store/apps/details?id=net.jshero>
 Statische Website: läuft lokal oder auf jedem Webserver.
 Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Website.
 
-License: GNU Free Documentation License (Text) / GNU General Public License (Code)
+License: GNU Free Documentation License (Text) / GNU Affero General Public License (Code)
 
 ## Lokal starten
 
