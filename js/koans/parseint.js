@@ -56,7 +56,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('add("-10+6")', 4);
+      return jshero.testutil.assert_functionReturns('add("-10+6")', -4);
     }
 
   ]
