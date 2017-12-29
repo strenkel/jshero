@@ -30,19 +30,19 @@ jshero.koans.add({
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('istGerade(1)', false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('istGerade(2)', true);
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns('istGerade(37)', false);
     },
 
     function() {
       return jshero.testutil.assert_functionReturns('istGerade(208)', true);
-    },
-
-    function() {
-      return jshero.testutil.assert_functionReturns('istGerade(15)', false);
-    },
-
-    function() {
-      return jshero.testutil.assert_functionReturns('istGerade(2)', true);
     }
   ]
 
