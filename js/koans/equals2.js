@@ -42,7 +42,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich("klein", "klein", "kIein")', false);
+      return jshero.testutil.assert_functionReturns('gleich("klein", "klein", "groß")', false);
     }
   ]
 
