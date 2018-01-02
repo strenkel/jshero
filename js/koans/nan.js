@@ -22,7 +22,7 @@ jshero.koans.add({
     '  message = "Du hast keine Zahl eingegeben.";<br>' +
     '}' +
     '</code></pre>',
-        
+
   task: 'Schreibe eine Funktion <code>parseFirstInt</code>, die einen String entgegennimmt und die die erste in dem String vorkommende ganze Zahl zurückgibt. ' +
     '<code>parseFirstInt("Sonnebornstr. 27")</code> sollte <code>27</code> zurückgeben. <code>parseFirstInt("Babylon")</code> sollte <code>NaN</code> ergeben.',
 
@@ -33,77 +33,24 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof parseFirstInt === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>parseFirstInt</code> ist eine Funktion.";
-      } else {
-        msg = "<code>parseFirstInt</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('parseFirstInt');
     },
 
     function() {
-      var ok = parseFirstInt.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>parseFirstInt</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>parseFirstInt</code> hat nicht 1, sondern " + parseFirstInt.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-    
-    function() {
-      var ok, msg, e;
-      try {
-        var result = parseFirstInt("Sonnebornstr. 27");
-        ok = result === 27;
-        if (ok) {
-          msg = '<code>parseFirstInt("Sonnebornstr. 27")</code> ergibt <code>27</code>.';
-        } else {
-          msg = '<code>parseFirstInt("Sonnebornstr. 27")</code> ergibt nicht <code>27</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>parseFirstInt("Sonnebornstr. 27")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('parseFirstInt', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = parseFirstInt("28 Jahre");
-        ok = result === 28;
-        if (ok) {
-          msg = '<code>parseFirstInt("28 Jahre")</code> ergibt <code>28</code>.';
-        } else {
-          msg = '<code>parseFirstInt("28 Jahre")</code> ergibt nicht <code>28</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>parseFirstInt("28 Jahre")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('parseFirstInt("Sonnebornstr. 27")', 27);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('parseFirstInt("28 Jahre")', 28);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('parseFirstInt("André ist 22 Jahre alt.")', 22);
     },
 
     function() {
@@ -116,7 +63,7 @@ jshero.koans.add({
         } else {
           msg = '<code>parseFirstInt("Ohnezahl")</code> ergibt nicht <code>NaN</code>, sondern <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(exc) {
+      } catch (exc) {
         ok = false;
         msg = 'Fehler beim Aufruf von <code>parseFirstInt("Ohnezahl")</code>.';
         e = exc;
@@ -127,7 +74,6 @@ jshero.koans.add({
         e: e
       };
     }
-
   ]
 
 });

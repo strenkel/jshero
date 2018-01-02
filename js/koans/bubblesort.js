@@ -32,7 +32,7 @@ jshero.koans.add({
     'Damit ist automatisch auch das kleinste Element an der richtigen Stelle.<br>' +
     'Das Array ist aufsteigend sortiert.' +
     '</code></pre>',
-        
+
   task: 'Schreibe eine Funktion <code>sort</code>, die ein mit Zahlen gefülltes Array entgegennimmt und die diese Zahlen aufsteigend sortiert als Array zurückgibt. ' +
     'Wird ein leeres Array übergeben, so soll auch ein leeres Array zurückgegeben werden. <code>sort([4,&nbsp;2,&nbsp;3,&nbsp;1])</code> sollte <code>[1,&nbsp;2,&nbsp;3,&nbsp;4]</code> ergeben.',
 
@@ -43,145 +43,41 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof sort === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>sort</code> ist eine Funktion.';
-      } else {
-        msg = '<code>sort</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('sort');
     },
 
     function() {
-      var ok = sort.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>sort</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>sort</code> hat nicht 1, sondern ' + sort.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-
-   function() {
-      var ok, msg, e;
-      try {
-        var result = sort([]);
-        ok = ArrayUtil.isEqual(result, []);
-        if (ok) {
-          msg = '<code>sort([])</code> gibt <code>[]</code> zurück.';
-        } else {
-          msg = '<code>sort([])</code> gibt nicht <code>[]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sort([])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('sort', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = sort([1]);
-        ok = ArrayUtil.isEqual(result, [1]);
-        if (ok) {
-          msg = '<code>sort([1])</code> gibt <code>[1]</code> zurück.';
-        } else {
-          msg = '<code>sort([1])</code> gibt nicht <code>[1]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sort([1])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    },
-   
-    function() {
-      var ok, msg, e;
-      try {
-        var result = sort([2, 1]);
-        ok = ArrayUtil.isEqual(result, [1, 2]);
-        if (ok) {
-          msg = '<code>sort([2, 1])</code> gibt <code>[1, 2]</code> zurück.';
-        } else {
-          msg = '<code>sort([2, 1])</code> gibt nicht <code>[1, 2]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sort([2, 1])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('sort([])', []);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = sort([2, 3, 1]);
-        ok = ArrayUtil.isEqual(result, [1, 2, 3]);
-        if (ok) {
-          msg = '<code>sort([2, 3, 1])</code> gibt <code>[1, 2, 3]</code> zurück.';
-        } else {
-          msg = '<code>sort([2, 3, 1])</code> gibt nicht <code>[1, 2, 3]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sort([2, 3, 1])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('sort([1])', [1]);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = sort([5, 4, 3, 2, 1]);
-        ok = ArrayUtil.isEqual(result, [1, 2, 3, 4, 5]);
-        if (ok) {
-          msg = '<code>sort([5, 4, 3, 2, 1])</code> gibt <code>[1, 2, 3, 4, 5]</code> zurück.';
-        } else {
-          msg = '<code>sort([5, 4, 3, 2, 1])</code> gibt nicht <code>[1, 2, 3, 4, 5]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sort([5, 4, 3, 2, 1])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('sort([3, 1])', [1, 3]);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('sort([3, 1, 2])', [1, 2, 3]);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('sort([3, 2, 1])', [1, 2, 3]);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('sort([5, 4, 3, 2, 1])', [1, 2, 3, 4, 5]);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('sort(["c", "a", "b"])', ["a", "b", "c"]);
     }
-
   ]
 
 });
