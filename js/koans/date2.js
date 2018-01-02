@@ -29,77 +29,19 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof toGerman === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>toGerman</code> ist eine Funktion.";
-      } else {
-        msg = "<code>toGerman</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('toGerman');
     },
 
     function() {
-      var ok = toGerman.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>toGerman</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>toGerman</code> hat nicht 1, sondern " + toGerman.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('toGerman', 1);
+    },
+    function() {
+      return jshero.testutil.assert_functionReturns('toGerman(new Date(2017, 2, 8))', '8.3.2017');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = toGerman(new Date(2017, 2, 8));
-        ok = result === "8.3.2017";
-        if (ok) {
-          msg = '<code>toGerman(new Date(2017, 2, 8))</code> gibt <code>"8.3.2017"</code> zurück.';
-        } else {
-          msg = '<code>toGerman(new Date(2017, 2, 8))</code> gibt nicht <code>"8.3.2017"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>toGerman(new Date(2017, 2, 8))</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    },
-
-    function() {
-      var ok, msg, e;
-      try {
-        var result = toGerman(new Date(1724, 3, 22));
-        ok = result === "22.4.1724";
-        if (ok) {
-          msg = '<code>toGerman(new Date(1724, 3, 22))</code> gibt <code>"22.4.1724"</code> zurück.';
-        } else {
-          msg = '<code>toGerman(new Date(1724, 3, 22))</code> gibt nicht <code>"22.4.1724"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>toGerman(new Date(1724, 3, 22))</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('toGerman(new Date(1724, 3, 22))', '22.4.1724');
     }
   ]
 
