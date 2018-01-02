@@ -18,7 +18,7 @@ jshero.koans.add({
     so sollte die Rückgabe <code>"Hallo Franz!"</code> sein.`,
 
   beforeTests: function() {
-      begruesse = undefined;
+    begruesse = undefined;
   },
 
   tests: [
@@ -36,6 +36,7 @@ jshero.koans.add({
 
     function() {
       return jshero.testutil.assert_functionReturns('begruesse("Franz")', 'Hallo Franz!');
-    }  ]
+    }
+  ]
 
 });

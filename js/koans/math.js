@@ -23,7 +23,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('hypotenuse');
+      return jshero.testutil.assert_isFunction('hypotenuse');
     },
 
     function() {
@@ -31,15 +31,15 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('hypotenuse(3, 4)', 5);
+      return jshero.testutil.assert_functionReturns('hypotenuse(3, 4)', 5);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('hypotenuse(5, 12)', 13);
+      return jshero.testutil.assert_functionReturns('hypotenuse(5, 12)', 13);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('hypotenuse(1, 1)', Math.sqrt(2));
+      return jshero.testutil.assert_functionReturns('hypotenuse(1, 1)', Math.sqrt(2));
     }
 
   ]
