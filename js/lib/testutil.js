@@ -105,6 +105,61 @@ jshero.testutil = (function(i18n) {
   /**
    * We expect that calling a function
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
+   * returns a value of type expectedReturnType.
+   * @param {function} f_call
+   * @param {string} expectedReturnType
+   */
+  var assert_functionReturnsType = function(f_call, expectedReturnType) {
+    var ok, msg, e;
+    try {
+      var result = eval(f_call);
+      var resultType = typeof result;
+      switch (expectedReturnType) {
+        case 'Array':
+          ok = Array.isArray(result);
+          break;
+        case 'Date':
+          ok = jshero.date.isDate(result);
+          break;
+        case 'NaN':
+          ok = isNaN(result);
+          break;
+        case 'undefined':
+        case 'boolean':
+        case 'string':
+        case 'number':
+        case 'object':
+        case 'symbol':
+          ok = resultType === expectedReturnType;
+          break;
+        case 'null':
+          ok = (result == null);
+          break;
+        default:
+          ok = false;
+          console.log('Unbekannter Type gefordert.');
+          break;
+      }
+      if (ok) {
+        msg = jshero.util.formatMessage(i18n.get("functionReturnsType"), [f_call, JSON.stringify(expectedReturnType)]);
+      } else {
+        msg = jshero.util.formatMessage(i18n.get("functionReturnsWrongType"), [f_call, JSON.stringify(expectedReturnType), escapeHtml(JSON.stringify(resultType))]);
+      }
+    } catch (exc) {
+      ok = false;
+      msg = i18n.get("errorAtCallOf") + ' <code>' + f_call + '</code>.';
+      e = exc;
+    }
+    return {
+      ok: ok,
+      msg: msg,
+      e: e
+    };
+  };
+
+  /**
+   * We expect that calling a function
+   * with the call f_call (e.g. 'f()' or 'f("Hallo")')
    * returns the value expectedReturnValue.
    * @param {function} f_call
    * @param {object} expectedReturnValue
@@ -115,6 +170,8 @@ jshero.testutil = (function(i18n) {
       var result = eval(f_call);
       if (Array.isArray(result)) {
         ok = jshero.array.isEqual(result, expectedReturnValue);
+      } else if (jshero.date.isDate(result)) {
+        ok = jshero.date.isEqual(result, expectedReturnValue);
       } else {
         ok = result === expectedReturnValue;
       }
@@ -170,7 +227,7 @@ jshero.testutil = (function(i18n) {
   };
 
   /**
-   * Prüfen, ob die Function die geforderte ANzahl Parameter hat.
+   * Prüfen, ob die Function die geforderte Anzahl Parameter hat.
    *
    * @param {string} f_name Name der Funktion.
    * @param {int} numOfParam Anzahl der geforderten Parameter.
@@ -191,7 +248,9 @@ jshero.testutil = (function(i18n) {
   };
 
   return {
+    //escapeHtml: escapeHtml,
     assert_isFunction: assert_isFunction,
+    assert_functionReturnsType: assert_functionReturnsType,
     assert_functionReturns: assert_functionReturns,
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
     assert_variableDefined: assert_variableDefined,
