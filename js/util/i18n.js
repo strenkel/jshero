@@ -27,7 +27,7 @@ jshero.i18n = (function() {
     varHasValueOf: "<code>%0</code> hat den Wert <code>%1</code>.",
     varHasWrongValue: "<code>%0</code> hat nicht den erwarteten Wert <code>%1</code>, sondern den Wert <code>%2</code>.",
     functionReturnsType: "<code>%0</code> gibt ein <code>%1</code>-Objekt zurück.",
-    functionReturnsWrongType: "<code>%0</code> gibt kein <code>%1</code>-Objekt, sondern <code>%2</code> zurück."
+    functionReturnsWrongType: "<code>%0</code> gibt kein %1-Objekt, sondern <code>%2</code> zurück."
   };
 
   var dictionary_en = {

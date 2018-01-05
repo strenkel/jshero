@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function(i18n) {
+jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
 
   'use strict';
 
@@ -111,7 +111,9 @@ jshero.testutil = (function(i18n) {
    * We expect that calling a function
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
    * returns a value of type expectedReturnType.
-   * @param {function} f_call
+   * expectedReturnType can be a JavaScript data type or some picked object-types.
+   * See switch-case for details. Watch out for upper/lower case.
+   * @param {string} f_call
    * @param {string} expectedReturnType
    */
   var assert_functionReturnsType = function(f_call, expectedReturnType) {
@@ -124,7 +126,7 @@ jshero.testutil = (function(i18n) {
           ok = Array.isArray(result);
           break;
         case 'Date':
-          ok = jshero.date.isDate(result);
+          ok = jsheroDate.isDate(result);
           break;
         case 'NaN':
           ok = isNaN(result);
@@ -138,7 +140,7 @@ jshero.testutil = (function(i18n) {
           ok = resultType === expectedReturnType;
           break;
         case 'null':
-          ok = (result == null);
+          ok = (result === null);
           break;
         default:
           ok = false;
@@ -146,9 +148,9 @@ jshero.testutil = (function(i18n) {
           break;
       }
       if (ok) {
-        msg = jshero.util.formatMessage(i18n.get("functionReturnsType"), [f_call, JSON.stringify(expectedReturnType)]);
+        msg = jsheroUtil.formatMessage(i18n.get("functionReturnsType"), [f_call, JSON.stringify(expectedReturnType)]);
       } else {
-        msg = jshero.util.formatMessage(i18n.get("functionReturnsWrongType"), [f_call, JSON.stringify(expectedReturnType), escapeHtml(JSON.stringify(resultType))]);
+        msg = jsheroUtil.formatMessage(i18n.get("functionReturnsWrongType"), [f_call, expectedReturnType, resultType]);
       }
     } catch (exc) {
       ok = false;
@@ -175,15 +177,15 @@ jshero.testutil = (function(i18n) {
       var result = eval(f_call);
       if (Array.isArray(result)) {
         ok = jshero.array.isEqual(result, expectedReturnValue);
-      } else if (jshero.date.isDate(result)) {
-        ok = jshero.date.isEqual(result, expectedReturnValue);
+      } else if (jsheroDate.isDate(result)) {
+        ok = jsheroDate.isEqual(result, expectedReturnValue);
       } else {
         ok = result === expectedReturnValue;
       }
       if (ok) {
-        msg = jshero.util.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue)]);
+        msg = jsheroUtil.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue)]);
       } else {
-        msg = jshero.util.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result))]);
+        msg = jsheroUtil.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result))]);
       }
     } catch (exc) {
       ok = false;
@@ -204,9 +206,9 @@ jshero.testutil = (function(i18n) {
     var ok = typeof v !== 'undefined';
     var msg;
     if (ok) {
-      msg = jshero.util.formatMessage(i18n.get("varHasValue"), [name]);
+      msg = jsheroUtil.formatMessage(i18n.get("varHasValue"), [name]);
     } else {
-      msg = jshero.util.formatMessage(i18n.get("varHasNoValue"), [name]);
+      msg = jsheroUtil.formatMessage(i18n.get("varHasNoValue"), [name]);
     }
     return {
       ok: ok,
@@ -221,9 +223,9 @@ jshero.testutil = (function(i18n) {
     var ok = v === expValue;
     var msg;
     if (ok) {
-      msg = jshero.util.formatMessage(i18n.get("varHasValueOf"), [name, escapeHtml(JSON.stringify(v))]);
+      msg = jsheroUtil.formatMessage(i18n.get("varHasValueOf"), [name, escapeHtml(JSON.stringify(v))]);
     } else {
-      msg = jshero.util.formatMessage(i18n.get("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(v))]);
+      msg = jsheroUtil.formatMessage(i18n.get("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(v))]);
     }
     return {
       ok: ok,
@@ -242,9 +244,9 @@ jshero.testutil = (function(i18n) {
     var ok = fun.length === numOfParam;
     var msg;
     if (ok) {
-      msg = jshero.util.formatMessage(i18n.get("correctNumOfParam"), [f_name, numOfParam]);
+      msg = jsheroUtil.formatMessage(i18n.get("correctNumOfParam"), [f_name, numOfParam]);
     } else {
-      msg = jshero.util.formatMessage(i18n.get("wrongNumOfParam"), [f_name, numOfParam, fun.length]);
+      msg = jsheroUtil.formatMessage(i18n.get("wrongNumOfParam"), [f_name, numOfParam, fun.length]);
     }
     return {
       ok: ok,
@@ -270,4 +272,4 @@ jshero.testutil = (function(i18n) {
     assert_en_functionHasNumOfParameter: assert_functionHasNumOfParameter
   };
 
-})(jshero.i18n);
+})(jshero.i18n, jshero.date, jshero.util);
