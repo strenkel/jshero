@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
+jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
 
   'use strict';
 
@@ -88,11 +88,11 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
    *
    * We expect a function named "a".
    */
-  var assert_isFunction = function (f_name) {
+  var assert_isFunction = function(f_name) {
     var ok = false;
     try {
       ok = typeof eval(f_name) === 'function';
-    } catch(e) {
+    } catch (e) {
       // nothing to do. f_name is not defined.
     }
     var msg;
@@ -113,6 +113,13 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
    * returns a value of type expectedReturnType.
    * expectedReturnType can be a JavaScript data type or some picked object-types.
    * See switch-case for details. Watch out for upper/lower case.
+   *
+   * Not sure if this function works correctly in all cases.
+   * In particular, the messages are not always correct (e.g. expectedReturnType='undefined').
+   * If f_call returns a function assert_functionReturnsType must be extended.
+   * Maybe its better to have special methods like
+   * assert_functionReturnsDate, assert_functionReturnsArray, ...
+   *
    * @param {string} f_call
    * @param {string} expectedReturnType
    */
@@ -148,7 +155,7 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
           break;
       }
       if (ok) {
-        msg = jsheroUtil.formatMessage(i18n.get("functionReturnsType"), [f_call, JSON.stringify(expectedReturnType)]);
+        msg = jsheroUtil.formatMessage(i18n.get("functionReturnsType"), [f_call, expectedReturnType]);
       } else {
         msg = jsheroUtil.formatMessage(i18n.get("functionReturnsWrongType"), [f_call, expectedReturnType, resultType]);
       }
@@ -168,6 +175,10 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
    * We expect that calling a function
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
    * returns the value expectedReturnValue.
+   *
+   * Attention: If expectedReturnValue is a Date, f_call must return a Date too.
+   * In this case, check the return type first.
+   *
    * @param {function} f_call
    * @param {object} expectedReturnValue
    */
@@ -176,16 +187,24 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
     try {
       var result = eval(f_call);
       if (Array.isArray(result)) {
-        ok = jshero.array.isEqual(result, expectedReturnValue);
+        ok = jsheroArray.isEqual(result, expectedReturnValue);
       } else if (jsheroDate.isDate(result)) {
         ok = jsheroDate.isEqual(result, expectedReturnValue);
       } else {
         ok = result === expectedReturnValue;
       }
-      if (ok) {
-        msg = jsheroUtil.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue)]);
+      if (jsheroDate.isDate(expectedReturnValue)) {
+        if (ok) {
+          msg = jsheroUtil.formatMessage(i18n.get("functionReturnsDate"), [f_call, expectedReturnValue.toLocaleString()]);
+        } else {
+          msg = jsheroUtil.formatMessage(i18n.get("functionNotReturnsDate"), [f_call, expectedReturnValue.toLocaleString(), result.toLocaleString()]);
+        }
       } else {
-        msg = jsheroUtil.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result))]);
+        if (ok) {
+          msg = jsheroUtil.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue)]);
+        } else {
+          msg = jsheroUtil.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result))]);
+        }
       }
     } catch (exc) {
       ok = false;
@@ -272,4 +291,4 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil) {
     assert_en_functionHasNumOfParameter: assert_functionHasNumOfParameter
   };
 
-})(jshero.i18n, jshero.date, jshero.util);
+})(jshero.i18n, jshero.date, jshero.util, jshero.array);

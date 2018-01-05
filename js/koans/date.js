@@ -48,6 +48,7 @@
       function() {
         return jshero.testutil.assert_functionHasNumOfParameter('nikolaus', 1);
       },
+
       function() {
         return jshero.testutil.assert_functionReturnsType('nikolaus(2017)', 'Date');
       },
@@ -57,7 +58,7 @@
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('nikolaus(1801)', new Date(1801, 11, 6));
+        return jshero.testutil.assert_functionReturnsType('nikolaus(1960)', 'Date');
       },
 
       function() {

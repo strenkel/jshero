@@ -20,14 +20,16 @@ jshero.i18n = (function() {
 
     functionReturns: "<code>%0</code> gibt <code>%1</code> zurück.",
     functionNotReturns: "<code>%0</code> gibt nicht <code>%1</code>, sondern <code>%2</code> zurück.",
+    functionReturnsDate: "<code>%0</code> gibt den %1 zurück.",
+    functionNotReturnsDate: "<code>%0</code> gibt nicht den %1, sondern den %2 zurück.",
     correctNumOfParam: "<code>%0</code> hat %1 Parameter.",
     wrongNumOfParam: "<code>%0</code> hat nicht %1 Parameter, sondern %2.",
     varHasValue: "<code>%0</code> hat einen Wert.",
     varHasNoValue: "<code>%0</code> hat keinen Wert.",
     varHasValueOf: "<code>%0</code> hat den Wert <code>%1</code>.",
     varHasWrongValue: "<code>%0</code> hat nicht den erwarteten Wert <code>%1</code>, sondern den Wert <code>%2</code>.",
-    functionReturnsType: "<code>%0</code> gibt ein <code>%1</code>-Objekt zurück.",
-    functionReturnsWrongType: "<code>%0</code> gibt kein %1-Objekt, sondern <code>%2</code> zurück."
+    functionReturnsType: "<code>%0</code> gibt ein %1-Objekt zurück.",
+    functionReturnsWrongType: "<code>%0</code> gibt kein %1-Objekt zurück."
   };
 
   var dictionary_en = {
@@ -46,14 +48,16 @@ jshero.i18n = (function() {
 
     functionReturns: "<code>%0</code> returns <code>%1</code>.",
     functionNotReturns: "<code>%0</code> does not return <code>%1</code>, but <code>%2</code>.",
+    functionReturnsDate: "<code>%0</code> returns %1.",
+    functionNotReturnsDate: "<code>%0</code> does not return %1, but %2 zurück.",
     correctNumOfParam: "<code>%0</code> has %1 parameter.",
     wrongNumOfParam: "<code>%0</code> has not %1, but %2 parameter.",
     varHasValue: "<code>%0</code> has a value.",
     varHasNoValue: "<code>%0</code> has no value.",
     varHasValueOf: "<code>%0</code> has value of <code>%1</code>.",
     varHasWrongValue: "<code>%0</code> has not expected value <code>%1</code>, but the value <code>%2</code>.",
-    functionReturnsType: "<code>%0</code> returns <code>%1</code>-object.",
-    functionReturnsWrongType: "<code>%0</code> does not return <code>%1</code>-object, but  <code>%2</code>."
+    functionReturnsType: "<code>%0</code> returns a %1-object.",
+    functionReturnsWrongType: "<code>%0</code> does not return a %1-objekt."
   };
 
   var getLang = function() {

@@ -5,17 +5,17 @@ if (typeof jshero === "undefined") {
 jshero.date = (function() {
 
   /**
-   * Prueft, ob obj ein Date-Objekt ist.
+   * Check whether obj is a Date object.
    */
   var isDate = function(obj) {
     return Object.prototype.toString.call(obj) === "[object Date]";
   };
 
   /**
-   * Prüft, ob die beiden Date-Objekte den selben Zeitpunt repräsentieren.
+   * Returns true if d1 and d2 are Date objects and represent the same timestamp.
    */
   var isEqual = function(d1, d2) {
-    return d1.getTime() === d2.getTime();
+    return isDate(d1) && isDate(d2) && d1.getTime() === d2.getTime();
   };
 
   return {
