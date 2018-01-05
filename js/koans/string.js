@@ -22,7 +22,6 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
       return jshero.testutil.assert_isFunction('begruesse');
     },

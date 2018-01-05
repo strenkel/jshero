@@ -44,145 +44,41 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof isPrime === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>isPrime</code> ist eine Funktion.";
-      } else {
-        msg = "<code>isPrime</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('isPrime');
     },
 
     function() {
-      var ok = isPrime.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>isPrime</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>isPrime</code> hat nicht 1, sondern " + isPrime.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('isPrime', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = isPrime(1);
-        ok = result === false;
-        if (ok) {
-          msg = '<code>isPrime(1)</code> gibt <code>false</code> zurück.';
-        } else {
-          msg = '<code>isPrime(1)</code> gibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>isPrime(1)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('isPrime(1)', false);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = isPrime(2);
-        ok = result === true;
-        if (ok) {
-          msg = '<code>isPrime(2)</code> gibt <code>true</code> zurück.';
-        } else {
-          msg = '<code>isPrime(2)</code> gibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>isPrime(2)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('isPrime(2)', true);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = isPrime(3);
-        ok = result === true;
-        if (ok) {
-          msg = '<code>isPrime(3)</code> gibt <code>true</code> zurück.';
-        } else {
-          msg = '<code>isPrime(3)</code> gibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>isPrime(3)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('isPrime(3)', true);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = isPrime(4);
-        ok = result === false;
-        if (ok) {
-          msg = '<code>isPrime(4)</code> gibt <code>false</code> zurück.';
-        } else {
-          msg = '<code>isPrime(4)</code> gibt nicht <code>false</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>isPrime(4)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('isPrime(4)', false);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = isPrime(11);
-        ok = result === true;
-        if (ok) {
-          msg = '<code>isPrime(11)</code> gibt <code>true</code> zurück.';
-        } else {
-          msg = '<code>isPrime(11)</code> gibt nicht <code>true</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>isPrime(11)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('isPrime(11)', true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('isPrime(351)', false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('isPrime(281)', true);
     }
-
   ]
 
 });

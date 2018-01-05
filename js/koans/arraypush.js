@@ -27,7 +27,7 @@ jshero.koans.add({
     '<code>["C", "Java", "JavaScript"]</code>. Wir hatten gesehen, dass man ein Array auch per Index füllen kann. ' +
     '<code>sprachen[sprachen.length] = "PHP"</code> ist dasselbe wie <code>sprachen.push("PHP")</code>. Doch schon ' +
     'an der Länge des Codes sieht man, dass die Variante mit <code>push</code> eleganter ist.',
-        
+
   task: 'Schreibe eine Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert. Alle Elemente des Arrays sollen um eine ' +
     'Position nach links verschoben werden. Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden. ' +
     '<code>rotiere(["a", "b", "c"])</code> sollte <code>["b", "c", "a"]</code> ergeben.',
@@ -39,79 +39,25 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof rotiere === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>rotiere</code> ist eine Funktion.';
-      } else {
-        msg = '<code>rotiere</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('rotiere');
     },
 
     function() {
-      var ok = rotiere.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>rotiere</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>rotiere</code> hat nicht 1, sondern ' + rotiere.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('rotiere', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = rotiere([1, 2]);
-        ok = array.isEqual(result, [2, 1]);
-        if (ok) {
-          msg = '<code>rotiere([1, 2])</code> gibt <code>[2, 1]</code> zurück.';
-        } else {
-          msg = '<code>rotiere([1, 2])</code> gibt nicht <code>[2, 1]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>rotiere([1, 2])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('rotiere([1, 2])', [2, 1]);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = rotiere(["a", "b", "c"]);
-        ok = array.isEqual(result, ["b", "c", "a"]);
-        if (ok) {
-          msg = '<code>rotiere(["a", "b", "c"])</code> gibt <code>["b", "c", "a"]</code> zurück.';
-        } else {
-          msg = '<code>rotiere(["a", "b", "c"])</code> gibt nicht <code>["b", "c", "a"]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>rotiere(["a", "b", "c"])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('rotiere(["a", "b", "c"])', ["b", "c", "a"]);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('rotiere([1, "b", "c", 37])', ["b", "c", 37, 1]);
     }
-
   ]
 
 });

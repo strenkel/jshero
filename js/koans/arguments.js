@@ -42,65 +42,29 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof maximum === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>maximum</code> ist eine Funktion.';
-      } else {
-        msg = '<code>maximum</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('maximum');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = maximum(1);
-        ok = result === 1;
-        if (ok) {
-          msg = '<code>maximum(1)</code> gibt <code>1</code> zurück.';
-        } else {
-          msg = '<code>maximum(1)</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>maximum(1)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('maximum()', '');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = maximum(1, 7, 3, 9, 2);
-        ok = result === 9;
-        if (ok) {
-          msg = '<code>maximum(1, 7, 3, 9, 2)</code> gibt <code>9</code> zurück.';
-        } else {
-          msg = '<code>maximum(1, 7, 3, 9, 2)</code> gibt nicht <code>9</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>maximum(1, 7, 3, 9, 2)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('maximum(1)', 1);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('maximum(15, 2)', 15);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('maximum(1, 15)', 15);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('maximum(1, 7, 3, 9, 2)', 9);
     }
-
   ]
 
 });
