@@ -24,79 +24,25 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof setFirstElement === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>setFirstElement</code> ist eine Funktion.';
-      } else {
-        msg = '<code>setFirstElement</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('setFirstElement');
     },
 
     function() {
-      var ok = setFirstElement.length === 2;
-      var msg;
-      if (ok) {
-        msg = '<code>setFirstElement</code> hat 2 Parameter.';
-      } else {
-        msg = '<code>setFirstElement</code> hat nicht 2, sondern ' + setFirstElement.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('setFirstElement', 2);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = setFirstElement([1, 2], 3);
-        ok = Array.isArray(result) && result.length === 2 && result[0] === 3 && result[1] === 2;
-        if (ok) {
-          msg = '<code>setFirstElement([1, 2], 3)</code> gibt <code>[3, 2]</code> zurück.';
-        } else {
-          msg = '<code>setFirstElement([1, 2], 3)</code> gibt nicht <code>[3, 2]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>setFirstElement([1, 2], 3)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('setFirstElement([1, 2], 3)', [3, 2]);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = setFirstElement([], 1);
-        ok = Array.isArray(result) && result.length === 1 && result[0] === 1;
-        if (ok) {
-          msg = '<code>setFirstElement([], 1)</code> gibt <code>[1]</code> zurück.';
-        } else {
-          msg = '<code>setFirstElement([], 1)</code> gibt nicht <code>[1]</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        e = exc;
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>setFirstElement([], 1)</code>.';
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('setFirstElement(["Hein", "Gretel"], "Hänsel")', ["Hänsel", "Gretel"]);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('setFirstElement([1, "Maus"], "kleine")', ["kleine", "Maus"]);
     }
-
   ]
 
 });

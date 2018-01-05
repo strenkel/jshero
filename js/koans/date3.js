@@ -6,15 +6,15 @@ jshero.koans.add({
 
   title: 'Datum und Uhrzeit ändern',
 
-  lesson: 'Passend zu den sieben Getter-Methoden besitzt das Date-Objekt sieben Setter-Methoden: ' + 
+  lesson: 'Passend zu den sieben Getter-Methoden besitzt das Date-Objekt sieben Setter-Methoden: ' +
     '<code>setFullYear</code>, <code>setMounth</code>, <code>setDate</code>, <code>setHours</code>, <code>setMinutes</code>, <code>setSeconds</code> und <code>setMilliseconds</code>. ' +
     'Mit diesen 7 Methoden kann man den entsprechenden Date-Eintrag setzen:' +
     '<pre><code>' +
     'var today = new Date();<br>' +
     'today.setHours(0);<br>' +
-    'today.setMinutes(0);<br>' + 
+    'today.setMinutes(0);<br>' +
     'today.setSeconds(0);<br>' +
-    'today.setMilliseconds(0);<br>' +    
+    'today.setMilliseconds(0);<br>' +
     '</code></pre>' +
     '<code>today</code> enthält zunächst den Zeitpunkt seiner Erstellung. Anschließend wird mit den vier Setter-Aufrufen die Zeit auf 0:00:00.000 Uhr gesetzt. ' +
     'So enthält <code>today</code> das aktuelle Tagesdatum mit zurückgesetzter Uhrzeit.<br><br>' +
@@ -37,123 +37,28 @@ jshero.koans.add({
   },
 
   tests: [
-
     function() {
-      var ok = typeof yesterday === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>yesterday</code> ist eine Funktion.";
-      } else {
-        msg = "<code>yesterday</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('yesterday');
     },
 
     function() {
-      var ok = yesterday.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>yesterday</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>yesterday</code> hat nicht 1, sondern " + yesterday.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('yesterday', 1);
+    },
+    function() {
+      return jshero.testutil.assert_functionReturnsType('yesterday(new Date(1965, 8, 14))', 'Date');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = yesterday(new Date(1965, 8, 14));
-        ok = dateUtil.isDate(result);
-        if (ok) {
-          msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück.';
-        } else {
-          msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt kein Date-Objekt zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>yesterday(new Date(1965, 8, 14))</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('yesterday(new Date(1965, 8, 14))', new Date(1965, 8, 13));
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = yesterday(new Date(1965, 8, 14));
-        ok = dateUtil.isEqual(result, new Date(1965, 8, 13));
-        if (ok) {
-          msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück, das den 13.9.1965 repräsentiert. ';
-        } else {
-          msg = '<code>yesterday(new Date(1965, 8, 14))</code> gibt eine Date-Objekt zurück, das nicht den 13.9.1965 repräsentiert, sondern den ' + result.toLocaleString() + '.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>yesterday(new Date(1965, 8, 14))</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('yesterday(new Date(2000, 0, 1, 12))', new Date(1999, 11, 31, 12));
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = yesterday(new Date(2000, 0, 1, 12));
-        ok = dateUtil.isDate(result);
-        if (ok) {
-          msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück.';
-        } else {
-          msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt kein Date-Objekt zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>yesterday(new Date(2000, 0, 1, 12))</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    },
-
-    function() {
-      var ok, msg, e;
-      try {
-        var result = yesterday(new Date(2000, 0, 1, 12));
-        ok = dateUtil.isEqual(result, new Date(1999, 11, 31, 12));
-        if (ok) {
-          msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück, das den 31.12.1999, 12 Uhr repräsentiert. ';
-        } else {
-          msg = '<code>yesterday(new Date(2000, 0, 1, 12))</code> gibt eine Date-Objekt zurück, das nicht den 31.12.1999, 12 Uhr repräsentiert, sondern den '+ result.toLocaleString() + '.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>yesterday(new Date(2000, 0, 1, 12))</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('yesterday(new Date(1965, 8, 14))', new Date(1965, 8, 13));
     }
-
   ]
 
 });

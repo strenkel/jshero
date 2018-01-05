@@ -21,85 +21,35 @@ jshero.koans.add({
     'So soll <code>add("7+12+100")</code> die Zahl <code>119</code> zurückgeben.',
 
   beforeTests: function() {
-    if (typeof hallo !== "undefined") {
-      hallo = undefined;
+    if (typeof add !== "undefined") {
+      add = undefined;
     }
   },
 
   tests: [
-
     function() {
-      var ok = typeof add === 'function';
-      var msg;
-      if (ok) {
-        msg = "<code>add</code> ist eine Funktion.";
-      } else {
-        msg = "<code>add</code> ist keine Funktion.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('add');
     },
 
     function() {
-      var ok = add.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>add</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>add</code> hat nicht 1, sondern " + add.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('add', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = add("1+2");
-        ok = result === 3;
-        if (ok) {
-          msg = '<code>add("1+2")</code> gibt <code>3</code> zurück.';
-        } else {
-          msg = '<code>add("1+2")</code> gibt nicht <code>3</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>add("1+2")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('add("1+2")', 3);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = add("50000+4000+300+20+1");
-        ok = result === 54321;
-        if (ok) {
-          msg = '<code>add("50000+4000+300+20+1")</code> gibt <code>54321</code> zurück.';
-        } else {
-          msg = '<code>add("50000+4000+300+20+1")</code> gibt nicht <code>54321</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>add("50000+4000+300+20+1")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('add("12+5+1+10")', 28);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('add("50000+4000+300+20+1")', 54321);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('add("13+2+4+100+3")', 122);
     }
-
   ]
 
 });

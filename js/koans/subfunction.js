@@ -37,155 +37,56 @@ jshero.koans.add({
   tests: [
 
     // sum
-
     function() {
-      var ok = typeof sum === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>sum</code> ist eine Funktion.';
-      } else {
-        msg = '<code>sum</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('sum');
     },
 
     function() {
-      var ok = sum.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>sum</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>sum</code> hat nicht 1, sondern ' + sum.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('sum', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = sum([0]);
-        ok = result === 0;
-        if (ok) {
-          msg = '<code>sum([0])</code> gibt <code>0</code> zurück.';
-        } else {
-          msg = '<code>sum([0])</code> gibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sum([0])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('sum([0])', 0);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = sum([1, 2, 3]);
-        ok = result === 6;
-        if (ok) {
-          msg = '<code>sum([1, 2, 3])</code> gibt <code>6</code> zurück.';
-        } else {
-          msg = '<code>sum([1, 2, 3])</code> gibt nicht <code>6</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>sum([1, 2, 3])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('sum([1, 2])', 3);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('sum([1, 4, 10, 85])', 100);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('sum([-2, -4, 17, 34])', 45);
     },
 
     // mean
-
     function() {
-      var ok = typeof mean === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>mean</code> ist eine Funktion.';
-      } else {
-        msg = '<code>mean</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('mean');
     },
 
     function() {
-      var ok = mean.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>mean</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>mean</code> hat nicht 1, sondern ' + mean.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('mean', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = mean([0]);
-        ok = result === 0;
-        if (ok) {
-          msg = '<code>mean([0])</code> gibt <code>0</code> zurück.';
-        } else {
-          msg = '<code>mean([0])</code> gibt nicht <code>0</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>mean([0])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('mean([0])', 0);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = mean([1, 2, 9]);
-        ok = result === 4;
-        if (ok) {
-          msg = '<code>mean([1, 2, 9])</code> gibt <code>4</code> zurück.';
-        } else {
-          msg = '<code>mean([1, 2, 9])</code> gibt nicht <code>4</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>mean([1, 2, 9])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('mean([1, 2])', 1.5);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('mean([1, 4, 10, 85])', 25);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('mean([-2, -4, 17, 34])', 11.25);
     },
 
     // mean calls sum
-
     function() {
       var msg, e;
       var sumIsCalled = false;
@@ -211,9 +112,7 @@ jshero.koans.add({
         msg: msg,
         e: e
       };
-    },
-
+    }
   ]
 
 });
-

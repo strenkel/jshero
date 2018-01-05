@@ -36,7 +36,7 @@ jshero.koans.add({
     '  return trimmedString.length === 0;<br>' +
     '};</code></pre>' +
     'Da Kommentare mit den hier verwendeten Tests nicht überprüfen werden können, eine Aufgabe, bei der man vieles von dem bisher Gelernten anwenden muss.',
-        
+
   task: 'Schreibe eine Funktion <code>median</code>, die ein Array von aufsteigend sortierten Zahlen entgegennimmt und die den Median dieser Zahlen zurückgibt. ' +
     '<code>median([1, 2, 10])</code> sollte <code>2</code> ergeben; <code>median([1, 2, 10, 100])</code> sollte <code>6</code> ergeben. ' +
     'Der Median einer sortierten Zahlenreihe ist der Wert, der an der mittleren Stelle steht. Ist die Anzahl der Werte gerade, so ist der Median der Mittelwert ' +
@@ -49,102 +49,29 @@ jshero.koans.add({
   },
 
   tests: [
-    
     function() {
-      var ok = typeof median === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>median</code> ist eine Funktion.';
-      } else {
-        msg = '<code>median</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('median');
     },
 
     function() {
-      var ok = median.length === 1;
-      var msg;
-      if (ok) {
-        msg = '<code>median</code> hat 1 Parameter.';
-      } else {
-        msg = '<code>median</code> hat nicht 1, sondern ' + median.length + ' Parameter.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
-    },
-   
-    function() {
-      var ok, msg, e;
-      try {
-        var result = median([1]);
-        ok = result === 1;
-        if (ok) {
-          msg = '<code>median([1])</code> gibt <code>1</code> zurück.';
-        } else {
-          msg = '<code>median([1])</code> gibt nicht <code>1</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>median([1])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
-    },
- 
-    function() {
-      var ok, msg, e;
-      try {
-        var result = median([1, 2]);
-        ok = result === 1.5;
-        if (ok) {
-          msg = '<code>median([1, 2])</code> gibt <code>1.5</code> zurück.';
-        } else {
-          msg = '<code>median([1, 2])</code> gibt nicht <code>1.5</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>median([1, 2])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('median', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = median([1, 2, 10]);
-        ok = result === 2;
-        if (ok) {
-          msg = '<code>median([1, 2, 10])</code> gibt <code>2</code> zurück.';
-        } else {
-          msg = '<code>median([1, 2, 10])</code> gibt nicht <code>2</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch(exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>median([1, 2, 10])</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('median([1])', 1);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('median([1, 2])', 1.5);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('median([1, 2, 10])', 2);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('median([1, 1, 2, 10, 100, 101])', 6);
     }
-
-
   ]
 
 });
