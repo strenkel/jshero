@@ -6,21 +6,18 @@
 
     title: 'Schleifen und Arrays',
 
-    lesson: '<code>for</code>-Schleifen eignen sich besonders gut zum Durchlaufen von Arrays. Die folgende Funktion filtert aus einem Array diejenigen Elemente heraus, die größer gleich 10 sind. ' +
-      'Die gefilterten Werte werden als Array zurückgegeben:' +
-      '<pre><code>var filter = function(in) {<br>' +
-      '  var out = [];<br>' +
-      '  for (var i = 1; i < in.length; i++) {<br>' +
-      '    if (in[i] >= 10) {<br>' +
-      '      out.push(in[i]);<br>' +
-      '    }<br>' +
-      '  }<br>' +
-      '  return out;<br>' +
-      '};</code></pre>',
+    lesson: `<code>for</code>-Schleifen eignen sich besonders gut zum Durchlaufen von Arrays.
+Im folgenden Beispiel werden die Elemente eines Arrays aufaddiert:
 
-    task: 'Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den Mittelwert dieser Zahlen zurückgibt. ' +
-      'Tipp: Um den Mittelwert von n Zahlen zu berechnen, mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen. ' +
-      '<code>mean([1, 4])</code> sollte <code>(1 + 4)/2 = 2.5</code> ergeben.',
+<pre><code>var sum = 0;
+for (var i = 1; i < meinArray.length; i++) {
+  sum = sum + meinArray[i];
+}</code></pre>`,
+
+    task: `Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den
+Durchschnitt dieser Zahlen zurückgibt. Tipp: Um den Durchschnitt von n Zahlen zu berechnen,
+mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen.
+<code>mean([1, 2, 3])</code> sollte <code>(1+2+3)/3</code> = <code>2</code> ergeben.`,
 
     beforeTests: function() {
       if (typeof mean !== "undefined") {
