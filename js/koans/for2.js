@@ -10,8 +10,8 @@
 Im folgenden Beispiel werden die Elemente eines Arrays aufaddiert:
 
 <pre><code>var sum = 0;
-for (var i = 1; i < meinArray.length; i++) {
-  sum = sum + meinArray[i];
+for (var i = 1; i < myArray.length; i++) {
+  sum = sum + myArray[i];
 }</code></pre>`,
 
     task: `Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den
