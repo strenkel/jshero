@@ -2,20 +2,18 @@ jshero.koans.add({
 
   id: 'for2',
 
-  title: 'Schleifen und Arrays',
+  title: 'Loops and arrays',
 
-  lesson: `<code>for</code>-Schleifen eignen sich besonders gut zum Durchlaufen von Arrays.
-Im folgenden Beispiel werden die Elemente eines Arrays aufaddiert:
+  lesson: `<code>for</code> loops are handy for traversing arrays.
+In the following example, the elements of an array are added together:
 
 <pre><code>var sum = 0;
-for (var i = 1; i < myArray.length; i++) {
+for (var i = 0; i < myArray.length; i++) {
   sum = sum + myArray[i];
 }</code></pre>`,
 
-  task: `Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den
-Durchschnitt dieser Zahlen zurückgibt. Tipp: Um den Durchschnitt von n Zahlen zu berechnen,
-mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen.
-<code>mean([1, 2, 3])</code> sollte <code>(1+2+3)/3</code> = <code>2</code> ergeben.`,
+  task: `Write a function <code>mean</code> that accepts an array filled with numbers
+and returns the arithmetic mean of those numbers. <code>mean([1, 2, 3])</code> should return <code>(1+2+3)/3</code> = <code>2</code>.`,
 
   beforeTests: function() {
     if (typeof mean !== "undefined") {
@@ -50,3 +48,5 @@ mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen.
   ]
 
 });
+
+
