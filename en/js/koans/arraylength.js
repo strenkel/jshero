@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'Array: length',
 
-  lesson: 'Like strings, arrays have the property <code>length</code>. It returns the number of elements in the array:' +
+  lesson: 'Like strings, arrays have the property <code>length</code>. Here it returns the number of elements in the array:' +
     '<pre><code>var languages = [];<br>' +
     'var l0 = languages.length;<br>' +
     'languages[0] = "C";<br>' +
@@ -13,7 +13,7 @@ jshero.koans.add({
     'var l2 = languages.length;</code></pre>' +
     'The empty array contains no elements. <code>l0</code> is <code>0</code>. ' +
     'Now we fill the array step by step. <code>l1</code> is <code>1</code> and <code>l2</code> is <code>2</code>.',
-        
+
   task: 'Write a function <code>getLastElement</code> that takes an array and returns the last element of the array. ' +
     '<code>getLastElement([1, 2])</code> should return <code>2</code>.',
 
@@ -24,7 +24,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
       var ok = typeof getLastElement === 'function';
       var msg;
@@ -52,7 +52,7 @@ jshero.koans.add({
         msg: msg
       };
     },
-   
+
     function() {
       var ok, msg, e;
       try {
@@ -96,7 +96,7 @@ jshero.koans.add({
         e: e
       };
     }
- 
+
   ]
 
 });
