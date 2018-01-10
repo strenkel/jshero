@@ -22,7 +22,7 @@ jshero.koans.add({
     '<code>brutto</code> auf. Das hat zwei Vorteile: Der Code ist besser lesbar und die Bruttoberechnung wird zentral an einer Stelle durchgeführt.',
 
   task: 'Schreibe eine Funktion <code>sum</code>, die ein Array gefüllt mit Zahlen entgegennimmt und die Summe dieser Zahlen zurückgibt. ' +
-    'Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den Mittelwert dieser Zahlen zurückgibt. ' +
+    'Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den Durchschnitt dieser Zahlen zurückgibt. ' +
     'Die Funktion <code>mean</code> soll dabei die Funktion <code>sum</code> benutzen.',
 
   beforeTests: function() {
