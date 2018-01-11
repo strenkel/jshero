@@ -13,6 +13,7 @@ jshero.koans.initReorder(
     'stringupper',
     'stringcharat',
     'trim',
+    'stringindexof',
     'number',
     'modulo',
     'mean',
