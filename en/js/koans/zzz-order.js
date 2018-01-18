@@ -15,6 +15,7 @@ jshero.koans.initReorder(
     'trim',
     'stringindexof',
     'stringindexof2',
+    'stringsubstr',
     'number',
     'modulo',
     'mean',
