@@ -26,77 +26,20 @@ in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ers
 
   tests: [
     function() {
-      var ok = typeof firstWord === 'function';
-      var msg;
-      if (ok) {
-        msg = '<code>firstWord</code> ist eine Funktion.';
-      } else {
-        msg = '<code>firstWord</code> ist keine Funktion.';
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_isFunction('firstWord');
     },
 
     function() {
-      var ok = firstWord.length === 1;
-      var msg;
-      if (ok) {
-        msg = "<code>firstWord</code> hat 1 Parameter.";
-      } else {
-        msg = "<code>firstWord</code> hat nicht 1, sondern " + firstWord.length + " Parameter.";
-      }
-      return {
-        ok: ok,
-        msg: msg
-      };
+      return jshero.testutil.assert_functionHasNumOfParameter('firstWord', 1);
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = firstWord("Wo ist hier");
-        ok = result === "Wo";
-        if (ok) {
-          msg = '<code>firstWord("Wo ist hier")</code> gibt <code>"Wo"</code> zurück.';
-        } else {
-          msg = '<code>firstWord("Wo ist hier")</code> gibt nicht <code>"Wo"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>firstWord("Wo ist hier")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('firstWord("Wo ist hier")', 'Wo');
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = firstWord("Irres Licht");
-        ok = result === "Irres";
-        if (ok) {
-          msg = '<code>firstWord("Irres Licht")</code> gibt <code>"Irres"</code> zurück.';
-        } else {
-          msg = '<code>firstWord("Irres Licht")</code> gibt nicht <code>"Irres"</code>, sondern <code>' + JSON.stringify(result) + '</code> zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>firstWord("Irres Licht")</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturns('firstWord("Irres Licht")', 'Irres');
     }
-
   ]
 
 });
