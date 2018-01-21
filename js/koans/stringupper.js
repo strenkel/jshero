@@ -20,7 +20,7 @@ jshero.koans.add({
 
   task: 'Schreibe eine Funktion <code>toCase</code>, die bei Übergabe eines Strings diesen aneinandergehängt in Klein- und in Großschreibung zurückgibt. ' +
     'Das Trennzeichen zwischen der Klein- und Großschreibung soll <code>-</code> sein. ' +
-    '<code>toCase("Code")</code> sollte <code>"code-CODE"</code> zurückgeben.',
+    '<code>toCase("Ida")</code> sollte <code>"ida-IDA"</code> zurückgeben.',
 
   beforeTests: function() {
     if (typeof toCase !== "undefined") {
@@ -38,11 +38,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('toCase("Ida")', 'ida-Ida');
+        return jshero.testutil.assert_functionReturns('toCase("Ida")', 'ida-IDA');
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('toCase("Maria")', 'maria-MARIA');
+        return jshero.testutil.assert_functionReturns('toCase("Paris")', 'paris-PARIS');
     }
   ]
 
