@@ -18,7 +18,7 @@ ist also 2. Das zweite <code>"e"</code> in <code>"Fred Feuerstein"</code> befind
 
   task: `Schreibe eine Funktion <code>secondIndexOf</code>, die 2 Strings entgegennimmt und die zweite Position des
 zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vor, so soll <code>-1</code> zurückgegeben werden.
-<code>secondIndexOf("Maria Maria", "Maria")</code> soll <code>6</code> zurückgeben.
+<code>secondIndexOf("Ida-Ida", "Ida")</code> soll <code>4</code> zurückgeben.
 <br/>Tipp: Falls Du Hilfe brauchst, lese dir auch die Beschreibung in
 <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String/indexOf">SELFHTML</a> durch.`,
 
@@ -30,7 +30,7 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('secondIndexOf');
+      return jshero.testutil.assert_isFunction('secondIndexOf');
     },
 
     function() {
@@ -38,20 +38,21 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('secondIndexOf("Maria Maria", "Maria")', 6);
+      return jshero.testutil.assert_functionReturns('secondIndexOf("Ida-Ida", "Ida")', 4);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('secondIndexOf("ja!", "ja")', -1);
+      return jshero.testutil.assert_functionReturns('secondIndexOf("a rose is a rose", "rose")', 12);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('secondIndexOf("JA! ja!", "ja")', -1);
+      return jshero.testutil.assert_functionReturns('secondIndexOf("There is no there there.", "there")', 18);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('secondIndexOf("JA! ja! ja!", "ja")', 8);
+      return jshero.testutil.assert_functionReturns('secondIndexOf("There is no there there.", "There")', -1);
     }
+
   ]
 
 });
