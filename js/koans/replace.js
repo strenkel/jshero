@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Die Methode <code>replace</code> ersetzt einen Teilstring durch einen anderen:
 
 <pre><code>var str = "Hallo Marcel!";
-var newstr = str.replace("Marcel", "Robert");</code></pre>' +
+var newstr = str.replace("Marcel", "Robert");</code></pre>
 
 "Marcel" wird durch "Robert" ersetzt. <code>newstr</code> hat also den Wert <code>"Hallo Robert!"</code>.
 Der ursprüngliche String bleibt unverändert. Nur das erste Vorkommen wird ersetzt:
