@@ -42,14 +42,17 @@
 
     title: 'Zufallszahlen',
 
-    lesson: 'Mit <code>Math.random()</code> erzeugt man eine Pseudozufallszahl zwischen 0 (inklusive) und 1 (exklusive).' +
-      '<pre><code>' +
-      'var x = Math.random();' +
-      '</code></pre>' +
-      '<code>x</code> könnte z.B. den Wert <code>0.6206372241429993</code> erhalten. Jeder Aufruf von <code>Math.random()</code> generiert eine neue Pseudozufallszahl. ' +
-      'Die Zahlen sind zwischen 0 und 1 gleichverteilt. Sie heißen Pseudozufallszahlen, weil sie zufällig aussehen, aber dennoch berechnet werden. ' +
-      'Möchte man Zufallszahlen in einem anderen Wertebereich oder mit einer anderen Verteilung erhalten, muss man die von <code>Math.random()</code> generierten Zahlen ' +
-      'geeignet umrechnen. Das soll jetzt gleich probiert werden.',
+    lesson: `Mit <code>Math.random()</code> erzeugt man eine Pseudozufallszahl zwischen 0 (inklusive) und 1 (exklusive).
+
+<pre><code>var x = Math.random();</code></pre>
+
+<code>x</code> könnte z.B. den Wert <code>0.6206372241429993</code> erhalten.
+Jeder Aufruf von <code>Math.random()</code> generiert eine neue Pseudozufallszahl.
+Die Zahlen sind zwischen 0 und 1 gleichverteilt. Sie heißen Pseudozufallszahlen,
+weil sie zufällig aussehen, aber dennoch berechnet werden.
+Möchte man Zufallszahlen in einem anderen Wertebereich oder mit einer anderen Verteilung erhalten,
+muss man die von <code>Math.random()</code> generierten Zahlen
+geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
 
     task: 'Schreibe eine Funktion <code>dice</code>, die wie ein Würfel eine Zufallszahl zwischen 1 und 6 zurückgibt.',
 
