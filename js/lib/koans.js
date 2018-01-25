@@ -29,11 +29,17 @@ jshero.koans = (function(storage) {
    * the order in which the koans appear in the tutorial.
    */
   var initReorder = function(idArray) {
+
+    if (idArray.length !== koans.length) {
+      // This should not happend in production.
+      console.warn("Koans-Order-Array length unequal to Koans length.");
+    }
+
     var koansInNewOrder = [];
 
     idArray.forEach(function(id) {
       var koanForId = koans.find(function(k) {
-          return k.id == id;
+        return k.id == id;
       });
       koansInNewOrder.push(koanForId);
     });
