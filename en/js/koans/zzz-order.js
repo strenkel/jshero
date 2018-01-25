@@ -23,6 +23,7 @@ jshero.koans.initReorder(
     'math',
     'pi',
     'round',
+    'random',
     'bool',
     'xor',
     'equals',
