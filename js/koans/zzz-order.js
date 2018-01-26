@@ -23,6 +23,7 @@ jshero.koans.initReorder(
     'modulo',
     'mean',
     'math',
+    'minmax',
     'pi',
     'round',
     'random',
