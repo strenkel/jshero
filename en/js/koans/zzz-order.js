@@ -29,6 +29,7 @@ jshero.koans.initReorder(
     'equals',
     'equals2',
     'even',
+    'notequals',
     'greaterthan',
     'if',
     'array',
