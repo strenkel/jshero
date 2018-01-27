@@ -4,14 +4,19 @@ jshero.koans.add({
 
   title: 'Strikte Ungleichtheit',
 
-  lesson: 'Mit <code>!==</code> vergleicht man zwei Werte auf strikte Ungleichheit.' +
-    '<pre><code>var v1 = "lauf" !== "Lauf";<br>var v2 = 10 !== "10";</code></pre>' +
-    'Beide Vergleiche ergeben <code>true</code>. Der erste, weil sich die beiden Strings in der Groß- und Kleinschreibung unterscheiden. ' +
-    'Der zweite, weil sich die beiden Werte von Typ her unterscheiden.',
+  lesson: `Mit <code>!==</code> vergleicht man zwei Werte auf strikte Ungleichheit.
 
-  task: 'Schreibe eine Funktion <code>ungleich</code>, die 3 Werte auf strikte Ungleichheit überprüft. Die Funktion soll nur dann ' +
-    '<code>true</code> ergeben, wenn alle drei Parameter unterschiedlich sind. <code>ungleich(1, 2, 3)</code> soll ' +
-    '<code>true</code> liefern, <code>ungleich(1, 1, 2)</code> soll <code>false</code> ergeben.',
+<pre><code>var v1 = "lauf" !== "Lauf";
+var v2 = 10 !== "10";</code></pre>
+
+Beide Vergleiche ergeben <code>true</code>. Der erste, weil sich die beiden
+Strings in der Groß- und Kleinschreibung unterscheiden.
+Der zweite, weil sich die beiden Werte von Typ her unterscheiden.`,
+
+  task: `Schreibe eine Funktion <code>ungleich</code>, die 3 Werte auf strikte Ungleichheit überprüft.
+Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter unterschiedlich sind.
+<code>ungleich(1, 2, 3)</code> soll <code>true</code> liefern, <code>ungleich(1, 1, 2)</code> soll
+<code>false</code> ergeben.`,
 
   beforeTests: function() {
     if (typeof ungleich !== "undefined") {
