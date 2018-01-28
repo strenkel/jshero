@@ -4,12 +4,38 @@ jshero.koans.add({
 
   title: "To be continued ...",
 
-  lesson: 'JavaScript Hero will be continued.' ,
-        
-  task: 'Further exercises will follow.',
+  lesson: 'JS Hero will be continued. Here\'s one last exercise.',
 
-  beforeTests: function() {},
+  task: `Write a function <code>digitsum</code> that calculates the digit sum of an integer.
+The digit sum of an integer is the sum of all its digits.
+<code>digitsum(192)</code> should returm <code>12</code>.`,
 
-  tests: []
+  beforeTests: function() {
+    if (typeof digitsum !== "undefined") {
+      digitsum = undefined;
+    }
+  },
+
+  tests: [
+    function() {
+      return jshero.testutil.assert_isFunction('digitsum');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionHasNumOfParameter('digitsum', 1);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('digitsum(1)', 1);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('digitsum(192)', 12);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('digitsum(1234567890)', 45);
+    }
+  ]
 
 });
