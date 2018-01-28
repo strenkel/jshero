@@ -39,6 +39,7 @@ jshero.koans.initReorder(
     'arraysort',
     'for',
     'for2',
+    'while',
     'further'
     ]
 );

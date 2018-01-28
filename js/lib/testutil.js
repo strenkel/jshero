@@ -20,7 +20,7 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
    * MIT Licensed
    */
 
-  var matchHtmlRegExp = /["'&<>]/;
+  var matchHtmlRegExp = /["'&<>\s]/;
 
   /**
    * Escape special characters in the given string of html.
@@ -45,6 +45,9 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
 
     for (index = match.index; index < str.length; index++) {
       switch (str.charCodeAt(index)) {
+        case 32: // space
+          escape = '&nbsp;';
+          break;
         case 34: // "
           escape = '&quot;';
           break;
@@ -201,9 +204,11 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
         }
       } else {
         if (ok) {
-          msg = jsheroUtil.formatMessage(i18n.get("functionReturns"), [f_call, JSON.stringify(expectedReturnValue)]);
+          msg = jsheroUtil.formatMessage(i18n.get("functionReturns"),
+            [f_call, escapeHtml(JSON.stringify(expectedReturnValue))]);
         } else {
-          msg = jsheroUtil.formatMessage(i18n.get("functionNotReturns"), [f_call, JSON.stringify(expectedReturnValue), escapeHtml(JSON.stringify(result))]);
+          msg = jsheroUtil.formatMessage(i18n.get("functionNotReturns"),
+            [f_call, escapeHtml(JSON.stringify(expectedReturnValue)), escapeHtml(JSON.stringify(result))]);
         }
       }
     } catch (exc) {
