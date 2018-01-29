@@ -4,16 +4,23 @@ jshero.koans.add({
 
   title: 'if ... else',
 
-  lesson: 'Möchte man, dass ein Codeblock nur dann ausgeführt wird, wenn eine <code>if</code>-Bedingung nicht erfüllt ist, verwendet man ' +
-    'zusätzlich zum <code>if</code> ein <code>else</code> (engl.: sonst).' +
-    '<pre><code>var mitteilung;<br>if (betrag > 1000) {<br>  mitteilung = "Keine Auszahlung möglich!";<br>} else {<br>' +
-    '  mitteilung = "Der Betrag wird ausgezahlt!";<br>}</code></pre>' +
-    'Je nachdem, ob <code>betrag</code> größer oder kleiner <code>1000</code> ist, wird entweder der <code>if</code>-Zweig oder ' +
-    'der <code>else</code>-Zweig ausgeführt.',
+  lesson: `Soll ein Codeblock nur dann ausgeführt werden, wenn eine <code>if</code>-Bedingung
+nicht erfüllt ist, verwendet man zusätzlich zum <code>if</code> ein <code>else</code> (engl.: sonst).
 
-  task: 'Schreibe eine Funktion <code>addiereMitZuschlag</code>, die zwei Beträge mit Zuschlag addiert. Für jeden Betrag, der kleiner gleich <code>10</code> ' +
-    'ist, beträgt der Zuschlag <code>1</code>. Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>. ' +
-    '<code>addiereMitZuschlag(10, 20)</code> sollte <code>33</code> ergeben.',
+<pre><code>var mitteilung;
+if (betrag > 1000) {
+  mitteilung = "Keine Auszahlung möglich!";
+} else {
+  mitteilung = "Der Betrag wird ausgezahlt!";
+}</code></pre>
+
+Je nachdem, ob <code>betrag</code> größer oder kleiner <code>1000</code> ist, wird entweder der
+<code>if</code>-Zweig oder der <code>else</code>-Zweig ausgeführt.`,
+
+  task: `Schreibe eine Funktion <code>addiereMitZuschlag</code>, die zwei Beträge mit Zuschlag addiert.
+Für jeden Betrag, der kleiner gleich <code>10</code> ist, beträgt der Zuschlag <code>1</code>.
+Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>.
+Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben.`,
 
   beforeTests: function() {
     if (typeof addiereMitZuschlag !== "undefined") {
@@ -35,7 +42,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(10, 9)', 21);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(10, 10)', 22);
     },
 
     function() {
@@ -47,7 +54,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(13, 20)', 37);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(11, 11)', 26);
     },
 
     function() {
