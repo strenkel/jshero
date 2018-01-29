@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'else',
 
-  title: 'if ... else',
+  title: 'if...else',
 
   lesson: `Soll ein Codeblock nur dann ausgeführt werden, wenn eine <code>if</code>-Bedingung
 nicht erfüllt ist, verwendet man zusätzlich zum <code>if</code> ein <code>else</code> (engl.: sonst).
