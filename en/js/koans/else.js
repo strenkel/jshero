@@ -11,7 +11,7 @@ is not fulfilled, an <code>else</code> is added.
 if (amount > 1000) {
   message = "No payout possible!";
 } else {
-  mitteilung = "The amount will be paid out!";
+  message = "The amount will be paid out!";
 }</code></pre>
 
 Depending on whether <code>amount</code> is greater or smaller <code>1000</code>,
