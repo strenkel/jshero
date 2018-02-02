@@ -1,4 +1,5 @@
 {
   "minified": true,
-  "plugins": ["transform-es2015-template-literals"]
+  "plugins": ["transform-es2015-template-literals"],
+  "comments": false
 }
