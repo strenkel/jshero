@@ -35,16 +35,20 @@ jshero.koans = (function(storage) {
       console.warn("Koans-Order-Array length unequal to Koans length.");
     }
 
-    var koansInNewOrder = [];
+    var koan;
+    var koansIdMap = {};
+    for (var i = 0, l = koans.length; i < l; i++) {
+      koan = koans[i];
+      koansIdMap[koan.id] = koan;
+    }
 
-    idArray.forEach(function(id) {
-      var koanForId = koans.find(function(k) {
-        return k.id == id;
-      });
-      koansInNewOrder.push(koanForId);
-    });
-
-    koans = koansInNewOrder;
+    koans = [];
+    for (var i = 0, l = idArray.length; i < l; i++) {
+      koan = koansIdMap[idArray[i]];
+      if (koan != null) {
+        koans.push(koan);
+      }
+    }
   }
 
   var getKoan = function() {
