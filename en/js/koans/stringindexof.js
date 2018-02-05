@@ -6,17 +6,17 @@ jshero.koans.add({
 
   lesson: `To determine the first occurrence of a string within another string, use the <code>indexOf</code> method:
 
-<pre><code>var n1 = "White Rabbit".indexOf("Rabbit");
-var n2 = "White Rabbit".indexOf("Coney");
-var n3 = "White Rabbit".indexOf("RABBIT");</code></pre>
+<pre><code>var n1 = "bit".indexOf("it");
+var n2 = "bit".indexOf("js");
+var n3 = "bit".indexOf("IT");</code></pre>
 
-<code>n1</code> is <code>6</code>, because <code>"Rabbit"</code> occurs in <code>"White Rabbit"</code> at the 6th place.
+<code>n1</code> is <code>1</code>, because <code>"it"</code> occurs in <code>"bit"</code> at the 1st place.
 As usual, counting starts at 0. <code>indexOf</code> returns <code>-1</code> if the search string does not occur in the calling string.
 Thus <code>n2</code> is <code>-1</code>. The <code>indexOf()</code> method is case sensitive. So <code>n3</code> is also <code>-1</code>.`,
 
   task: `Write a function <code>indexOfIgnoreCase</code>, that accepts two strings
 and determines the first occurrence of the second string in the first string. The function should be case insensitive.
-<code>indexOfIgnoreCase("Rabbit","bit")</code> and <code>indexOfIgnoreCase("Rabbit","BIT")</code> should return <code>2</code>.`,
+<code>indexOfIgnoreCase("bit","it")</code> and <code>indexOfIgnoreCase("bit","IT")</code> should return <code>1</code>.`,
 
   beforeTests: function() {
     if (typeof indexOfIgnoreCase !== "undefined") {
@@ -34,15 +34,19 @@ and determines the first occurrence of the second string in the first string. Th
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("White Rabbit", "White")', 0);
+      return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("bit", "bi")', 0);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("White Rabbit", "RABBIT")', 6);
+      return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("bit", "it")', 1);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("White Rabbit", "Coney")', -1);
+        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("bit", "T")', 2);
+    },
+
+    function() {
+        return jshero.testutil.assert_functionReturns('indexOfIgnoreCase("bit", "js")', -1);
     }
   ]
 
