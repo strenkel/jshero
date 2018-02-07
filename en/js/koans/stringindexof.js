@@ -10,9 +10,9 @@ jshero.koans.add({
 var n2 = "bit".indexOf("js");
 var n3 = "bit".indexOf("IT");</code></pre>
 
-<code>n1</code> is <code>1</code>, because <code>"it"</code> occurs in <code>"bit"</code> at the 1st place.
+<code>n1</code> is <code>1</code>, because the starting position of <code>"it"</code> in <code>"bit"</code> is <code>1</code>.
 As usual, counting starts at 0. <code>indexOf</code> returns <code>-1</code> if the search string does not occur in the calling string.
-Thus <code>n2</code> is <code>-1</code>. The <code>indexOf()</code> method is case sensitive. So <code>n3</code> is also <code>-1</code>.`,
+Thus <code>n2</code> is <code>-1</code>. The <code>indexOf</code> method is case sensitive. So <code>n3</code> is also <code>-1</code>.`,
 
   task: `Write a function <code>indexOfIgnoreCase</code>, that accepts two strings
 and determines the first occurrence of the second string in the first string. The function should be case insensitive.
