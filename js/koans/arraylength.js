@@ -47,9 +47,13 @@ jshero.koans.add({
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('getLastElement(["Maus", 1])', 1);
+    },
+
+    function() {
       var testArray = new Array();
       var testArrayString = '[';
-      var size = 15;
+      var size = 5;
       for (var i = 0; i < size - 1; i++) {
         testArray[i] = Math.random();
         testArrayString += testArray[i] + ', ';
@@ -57,11 +61,8 @@ jshero.koans.add({
       testArray[size - 1] = Math.random();
       testArrayString += testArray[size - 1] + ']';
       return jshero.testutil.assert_functionReturns('getLastElement(' + testArrayString + ')', testArray[size - 1]);
-    },
-
-    function() {
-      return jshero.testutil.assert_functionReturns('getLastElement(["Maus", 1])', 1);
     }
+
   ]
 
 });
