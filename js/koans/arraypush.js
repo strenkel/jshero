@@ -1,5 +1,3 @@
-(function(array) {
-
 jshero.koans.add({
 
   id: 'arraypush',
@@ -61,5 +59,3 @@ jshero.koans.add({
   ]
 
 });
-
-})(jshero.array);
