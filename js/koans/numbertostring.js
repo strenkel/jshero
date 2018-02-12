@@ -41,7 +41,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('digitLength(100123)', 5);
+      return jshero.testutil.assert_functionReturns('digitLength(123456)', 6);
     }
   ]
 
