@@ -37,11 +37,11 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich(1, "1")', 'UNGLEICH');
+      return jshero.testutil.assert_functionReturns('gleich(1, 2)', 'UNGLEICH');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich(1, 2)', 'UNGLEICH');
+      return jshero.testutil.assert_functionReturns('gleich(1, "1")', 'UNGLEICH');
     },
 
     function() {
