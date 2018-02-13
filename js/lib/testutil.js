@@ -279,21 +279,12 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
   };
 
   return {
-    //escapeHtml: escapeHtml,
     assert_isFunction: assert_isFunction,
     assert_functionReturnsType: assert_functionReturnsType,
     assert_functionReturns: assert_functionReturns,
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
     assert_variableDefined: assert_variableDefined,
-    assert_variableHasValue: assert_variableHasValue,
-    assert_de_functionReturns: assert_functionReturns,
-    assert_en_functionReturns: assert_functionReturns,
-    assert_de_variableDefined: assert_variableDefined,
-    assert_en_variableDefined: assert_variableDefined,
-    assert_de_variableHasValue: assert_variableHasValue,
-    assert_en_variableHasValue: assert_variableHasValue,
-    assert_de_functionHasNumOfParameter: assert_functionHasNumOfParameter,
-    assert_en_functionHasNumOfParameter: assert_functionHasNumOfParameter
+    assert_variableHasValue: assert_variableHasValue
   };
 
 })(jshero.i18n, jshero.date, jshero.util, jshero.array);
