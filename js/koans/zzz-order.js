@@ -30,6 +30,7 @@ jshero.koans.initReorder(
     'parseint',
     'numbertostring',
     'bool',
+    'nor',
     'xor',
     'equals',
     'equals2',
