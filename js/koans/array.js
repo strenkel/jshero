@@ -4,19 +4,21 @@ jshero.koans.add({
 
   title: 'Arrays anlegen',
 
-  lesson: 'Arrays sind Objekte zur Speicherung vieler, meist ähnlicher Werte. Diese sogenannten Elemente werden ' +
-    'in einem Array der Reihe nach abgelegt. Arrays erzeugt man am besten mit eckigen Klammern.' +
-    '<pre><code>var sprachen = ["C", "C++", "Java", "JavaScript"];<br>' +
-    'var primzahlen = [2, 3, 5, 7, 11];<br>' +
-    'var leeresArray = [];<br>' +
-    'var a = "Douglas";<br>' +
-    'var b = 12;<br>' +
-    'var c = true;<br>' +
-    'var allesMoegliche = [a, b, c];</code></pre>' +
-    'Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen anderen Datentyp besitzen.',
+  lesson: `Arrays sind Objekte zur Speicherung vieler, meist ähnlicher Werte. Diese sogenannten Elemente werden
+in einem Array der Reihe nach abgelegt. Arrays erzeugt man am besten mit eckigen Klammern.
 
-  task: 'Schreibe eine Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt. ' +
-    '<code>toArray(5, 9)</code> sollte das Array <code>[5, 9]</code> ergeben.',
+<pre><code>var sprachen = ["C", "C++", "Java", "JavaScript"];
+var primzahlen = [2, 3, 5, 7, 11];
+var leeresArray = [];
+var a = "Douglas";
+var b = 12;
+var c = true;
+var allesMoegliche = [a, b, c];</code></pre>
+
+Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen anderen Datentyp besitzen.`,
+
+  task: `Schreibe eine Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt.
+<code>toArray(5, 9)</code> sollte das Array <code>[5, 9]</code> ergeben.`,
 
   beforeTests: function() {
     if (typeof toArray !== "undefined") {
