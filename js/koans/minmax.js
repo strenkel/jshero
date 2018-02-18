@@ -42,7 +42,7 @@ einer Reihe von Zahlen ist der Mittelwert der kleinsten und größten Zahl.
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('bereichsmittel(8, 3, 0)', 4);
+      return jshero.testutil.assert_functionReturns('bereichsmittel(7, 3, 0)', 3.5);
     }
 
   ]
