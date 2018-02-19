@@ -69,7 +69,7 @@ jshero.message = (function(i18n) {
    * Remove all message-Elements.
    */
   var clear = function() {
-    messageRoot.innerHTML = null;
+    messageRoot.innerHTML = "";
   };
 
   return {
