@@ -4,20 +4,22 @@ jshero.koans.add({
 
   title: 'Array: length',
 
-  lesson: 'Die Eigenschaft <code>length</code> hatten wird schon bei Strings kennengelernt. Dort gab sie die Anzahl ' +
-    'der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente zurück. ' +
-    '<pre><code>var sprachen = [];<br>' +
-    'var l0 = sprachen.length;<br>' +
-    'sprachen[0] = "C";<br>' +
-    'var l1 = sprachen.length;<br>' +
-    'sprachen[1] = "C++";<br>' +
-    'var l2 = sprachen.length;</code></pre>' +
-    'Das leere Array zu Anfang enthällt keine Elemente. <code>l0</code> ist also <code>0</code>. ' +
-    'Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>. ' +
-    'Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index des Arrays.',
+  lesson: `Die Eigenschaft <code>length</code> hatten wird schon bei Strings kennengelernt. Dort gab sie die Anzahl
+der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente zurück.
 
-  task: 'Schreibe eine Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element des Arrays zurückgibt. ' +
-    '<code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.',
+<pre><code>var sprachen = [];
+var l0 = sprachen.length;
+sprachen[0] = "C";
+var l1 = sprachen.length;
+sprachen[1] = "C++";
+var l2 = sprachen.length;</code></pre>
+
+Das leere Array zu Anfang enthällt keine Elemente. <code>l0</code> ist also <code>0</code>.
+Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>.
+Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index des Arrays.`,
+
+  task: `Schreibe eine Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element des Arrays zurückgibt.
+<code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.`,
 
   beforeTests: function() {
     if (typeof getLastElement !== "undefined") {
