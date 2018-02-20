@@ -43,7 +43,7 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_variableDefined(begruessung, 'begruessung');
+        return jshero.testutil.assert_variableDefined('begruessung');
     },
 
     function() {

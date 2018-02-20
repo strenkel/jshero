@@ -42,7 +42,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_variableDefined(salutation, 'salutation');
+      return jshero.testutil.assert_variableDefined('salutation');
     },
 
     function() {

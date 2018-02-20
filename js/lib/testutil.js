@@ -224,10 +224,17 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
   };
 
   /**
-   * Bei der Variable v müssen wir noch mitgeben wie sie heißt (name)
+   * Test if a variable with the name 'name' is defined and is not undefined.
    */
-  var assert_variableDefined = function(v, name) {
-    var ok = typeof v !== 'undefined';
+  var assert_variableDefined = function(name) {
+
+    var ok = false;
+    try {
+      ok = typeof eval(name) !== 'undefined';
+    } catch (e) {
+      // nothing to do. name is not defined.
+    }
+
     var msg;
     if (ok) {
       msg = jsheroUtil.formatMessage(i18n.get("varHasValue"), [name]);

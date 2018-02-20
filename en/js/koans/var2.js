@@ -22,7 +22,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-      return jshero.testutil.assert_variableDefined(flower, 'flower');
+      return jshero.testutil.assert_variableDefined('flower');
     },
 
     function() {
@@ -30,7 +30,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_variableDefined(tree, 'tree');
+      return jshero.testutil.assert_variableDefined('tree');
     },
 
     function() {

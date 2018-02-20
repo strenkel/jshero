@@ -25,7 +25,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-      return jshero.testutil.assert_variableDefined(firstname, 'firstname');
+      return jshero.testutil.assert_variableDefined('firstname');
     },
 
     function() {
