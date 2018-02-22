@@ -18,8 +18,8 @@ Ansonsten gibt das übergebene Argument das Trennzeichen vor.
 <code>l3</code> den String <code>"Sex and Drugs and Rock and Roll"</code>.`,
 
   task: `Schreibe eine Funktion <code>list</code>, die Wörter in einem Array zu einer Aufzählung zusammenführt.
-  <code>list(["Sonne", "Mond", "Sterne"])</code> soll <code>"Sonne, Mond und Sterne"</code> ergeben.
-  Das übergebene Array enthält mindestens zwei Wörter.`,
+<code>list(["Sonne", "Mond", "Sterne"])</code> soll <code>"Sonne, Mond und Sterne"</code> ergeben.
+Das übergebene Array enthält mindestens zwei Wörter.`,
 
   beforeTests: function() {
     if (typeof list !== "undefined") {

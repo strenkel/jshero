@@ -1,62 +1,59 @@
-(function() {
 
-  jshero.koans.add({
+jshero.koans.add({
 
-    id: 'ggt',
+  id: 'ggt',
 
-    title: 'ggT',
+  title: 'ggT',
 
-    lesson: 'Das Gegenstück zum kleinsten gemeinsamen Vielfachen ist der größte gemeinsamer Teiler (ggT). ' +
-      'Der größte gemeinsame Teiler zweier Zahlen a und b ist die größte Zahl, durch die sich sowohl a als auch b teilen läßt.',
+  lesson: `Das Gegenstück zum kleinsten gemeinsamen Vielfachen ist der größte gemeinsamer Teiler (ggT).
+Der größte gemeinsame Teiler zweier Zahlen a und b ist die größte Zahl, durch die sich sowohl a als auch b teilen läßt.`,
 
-    task: 'Schreibe eine Funktion <code>ggT</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren ggT berechnet. ' +
-      '<code>ggT(6, 15)</code> sollte <code>3</code> zurückgeben.',
+  task: `Schreibe eine Funktion <code>ggT</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren ggT berechnet.
+<code>ggT(6, 15)</code> sollte <code>3</code> zurückgeben.`,
 
-    beforeTests: function() {
-      if (typeof ggT !== "undefined") {
-        ggT = undefined;
-      }
+  beforeTests: function() {
+    if (typeof ggT !== "undefined") {
+      ggT = undefined;
+    }
+  },
+
+  tests: [
+    function() {
+      return jshero.testutil.assert_isFunction('ggT');
     },
 
-    tests: [
-      function() {
-        return jshero.testutil.assert_isFunction('ggT');
-      },
+    function() {
+      return jshero.testutil.assert_functionHasNumOfParameter('ggT', 2);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionHasNumOfParameter('ggT', 2);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(6, 15)', 3);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(6, 15)', 3);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(2, 4)', 2);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(2, 4)', 2);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(9, 3)', 3);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(9, 3)', 3);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(5, 7)', 1);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(5, 7)', 1);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(7, 5)', 1);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(7, 5)', 1);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(15, 45)', 15);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(15, 45)', 15);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('ggT(15, 45)', 15);
+    }
 
-      function() {
-        return jshero.testutil.assert_functionReturns('ggT(15, 45)', 15);
-      }
+  ]
 
-    ]
-
-  });
-
-})();
+});
