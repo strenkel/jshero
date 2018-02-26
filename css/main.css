@@ -1,3 +1,5 @@
+/* colors: material.io*/
+
 h1, h2 {
   font-weight: normal;
 }
@@ -52,7 +54,7 @@ nav {
   text-align: center;
   position: absolute;
   width: 100%;
-  background-color: #9e9e9e; /* grey 500 */
+  background-color: #424242; /* grey 800 */
   display: none;
   padding: 2em 0 2em 0;
 }
@@ -67,6 +69,10 @@ nav a {
   color: white;
   margin: 1.2em;
   font-size: 1.2em;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /* Separates the language-link from the normal navigation links. */
@@ -127,11 +133,19 @@ nav a:last-child {
   background-image: url("../img/ic_close_white_36px.svg");
 }
 
+#menu:hover {
+  background-color: #424242; /* grey 800 */
+}
+
 #header .control {
   color: white;
   float: right;
   font-size: 1.5em;
   padding: 0 0.5em;
+}
+
+#header .control:hover {
+  background-color: #424242;
 }
 
 #header > :first-child {
