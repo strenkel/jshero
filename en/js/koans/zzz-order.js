@@ -26,6 +26,7 @@ jshero.koans.initReorder(
     'round',
     'random',
     'bool',
+    'nor',
     'xor',
     'equals',
     'equals2',
