@@ -131,6 +131,7 @@ nav a:last-child {
 
 #menu.close {
   background-image: url("../img/ic_close_white_36px.svg");
+  background-color: #424242; /* grey 800 */
 }
 
 #menu:hover {
