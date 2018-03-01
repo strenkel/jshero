@@ -4,19 +4,19 @@ jshero.koans.add({
 
   title: 'Array: slice()',
 
-  lesson: `Mit <code>slice</code> kopiert man aus einem Array ein Teilarray:
+  lesson: `With <code>slice</code> you can copy a subarray from an array.:
 
 <pre><code>var abcd = ["a", "b", "c", "d"];
 var ab = abcd.slice(0, 2);
 var bc = abcd.slice(1, 3);
 var bcd = abcd.slice(1, 4);</code></pre>
 
-Der erste Parameter gibt den Startindex (einschließlich), der zweite den Endindex (ausschließlich) an.
-Das ursprüngliche Array wird nicht verändert.`,
+The first parameter specifies the start index (included) and the second parameter specifies the end index (excluded).
+The original array will not be modified.`,
 
-  task: `Schreibe eine Funktion <code>halve</code>, die aus einem Array die erste Hälfte kopiert.
-Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der ersten Hälfte gehören.
-<code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> sollte <code>[1,&nbsp;2]</code> zurückgeben.`,
+  task: `Write a function <code>halve</code> that copies the first half of an array.
+With an odd number of array elements, the middle element should belong to the first half.
+<code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.`,
 
   beforeTests: function() {
     if (typeof halve !== "undefined") {

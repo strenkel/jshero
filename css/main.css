@@ -42,7 +42,8 @@ button {
 }
 
 button:hover {
-  background-color: #9e9e9e;
+  background-color: #424242; /* grey 800 */
+  color: white;
 }
 
 code {
@@ -60,7 +61,7 @@ nav {
   padding: 2em 0 2em 0;
 }
 
-#header a, nav a, a.link-button, #messages a, #koans a {
+#header a, nav a, #messages a, .link-button, #koans a {
   text-decoration: none;
   color: black;
 }
@@ -214,8 +215,9 @@ nav a:last-child {
   display: inline-block;
 }
 
-.link-button:hover {
-  background-color: #9e9e9e;
+a.link-button:hover {
+  background-color: #424242; /* grey 800 */
+  color: white !important;
 }
 
 #messages .link-button {
