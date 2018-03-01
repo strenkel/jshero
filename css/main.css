@@ -38,10 +38,11 @@ button {
   cursor: pointer;
   padding: 0 2em;
   box-sizing: content-box;
+  color: black;
 }
 
 button:hover {
-  background-color: #f0f0f0;
+  background-color: #9e9e9e;
 }
 
 code {
@@ -214,7 +215,7 @@ nav a:last-child {
 }
 
 .link-button:hover {
-  background-color: #f0f0f0;
+  background-color: #9e9e9e;
 }
 
 #messages .link-button {
