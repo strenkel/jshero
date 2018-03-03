@@ -1,12 +1,10 @@
-(function() {
+jshero.koans.add({
 
-  jshero.koans.add({
+  id: 'dowhile',
 
-    id: 'dowhile',
+  title: 'do...while-Schleife',
 
-    title: 'do...while-Schleife',
-
-    lesson: `Die <code>do...while</code>-Schleife funktioniert ähnlich wie die <code>while</code>-Schleife.
+  lesson: `Die <code>do...while</code>-Schleife funktioniert ähnlich wie die <code>while</code>-Schleife.
 Der Schleifen-Code wird ausgeführt, solange die Schleifenbedingung <code>true</code> ergibt.
 Einziger Unterschied ist, dass die Schleifenbedingung nach dem Schleifen-Code überprüft wird.
 Dadurch ist sichergestellt, dass der Schleifen-Code mindestens einmal durchlaufen wird.
@@ -32,41 +30,59 @@ Modulo-Berechnungen nicht <code>0</code>, ist die Schleifenbedingung <code>true<
 erneut durchlaufen. Ergeben beide Modulo-Berechnungen <code>0</code>, ist die Schleifenbedingung <code>false</code> und die Schleife wird beendet.
 <code>kgV</code> hat dann den gewünschten Wert (nämlich 24), da es die erste Zahl ist, die sowohl durch 6 als auch durch 8 teilbar ist.`,
 
-    task: `Schreibe eine Funktion <code>kgV</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren kgV berechnet.
-'<code>kgV(6, 8)</code> sollte <code>24</code> zurückgeben.`,
+  task: `Schreibe eine Funktion <code>kgV</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren kgV berechnet.
+<code>kgV(6, 8)</code> sollte <code>24</code> zurückgeben.`,
 
-    beforeTests: function() {
-      if (typeof kgV !== "undefined") {
-        kgV = undefined;
-      }
+  beforeTests: function() {
+    if (typeof kgV !== "undefined") {
+      kgV = undefined;
+    }
+  },
+
+  tests: [
+    function() {
+      return jshero.testutil.assert_isFunction('kgV');
     },
 
-    tests: [
-      function() {
-        return jshero.testutil.assert_isFunction('kgV');
-      },
+    function() {
+      return jshero.testutil.assert_functionHasNumOfParameter('kgV', 2);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionHasNumOfParameter('kgV', 2);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(1, 1)', 1);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('kgV(6, 8)', 24);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(1, 2)', 2);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('kgV(5, 7)', 35);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(2, 3)', 6);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('kgV(7, 5)', 35);
-      },
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(3, 2)', 6);
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('kgV(15, 45)', 45);
-      }
-    ]
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(4, 6)', 12);
+    },
 
-  });
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(5, 7)', 35);
+    },
 
-})();
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(6, 8)', 24);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(10, 20)', 20);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('kgV(20, 10)', 20);
+    }
+  ]
+
+});

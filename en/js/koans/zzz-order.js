@@ -47,6 +47,7 @@ jshero.koans.initReorder(
     'for',
     'for2',
     'while',
+    'dowhile',
     'further'
     ]
 );
