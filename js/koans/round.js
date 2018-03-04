@@ -40,6 +40,22 @@ Tipp:&nbsp;Verwende neben <code>Math.round()</code> noch Multiplikation und Divi
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('round100(50)', 100);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(349)', 300);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(350)', 400);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(4649)', 4600);
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns('round100(4650)', 4700);
     }
 

@@ -40,7 +40,23 @@ Therefore, the variables <code>a</code> to <code>d</code> all get the value <cod
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('round100(650)', 700);
+      return jshero.testutil.assert_functionReturns('round100(50)', 100);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(349)', 300);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(350)', 400);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(4649)', 4600);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('round100(4650)', 4700);
     }
 
   ]
