@@ -38,11 +38,23 @@ is the mean of the smallest and largest number.
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('midrange(3, 0, 8)', 4);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('midrange(7, 4, 0)', 3.5);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('midrange(-6, -5, -2)', -4);
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns('midrange(5, -5, 2)', 0);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('midrange(7, 3, 0)', 3.5);
+      return jshero.testutil.assert_functionReturns('midrange(10, 20, 17)', 15);
     }
 
   ]
