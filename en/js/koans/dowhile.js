@@ -18,7 +18,8 @@ do {
 After the loop <code>threeX</code> has the value <code>"xxx"</code>.`,
 
   task: `Write a function <code>lcm</code> that takes two natural numbers and calculates their
-<a href="https://en.wikipedia.org/wiki/Least_common_multiple">least common multiple</a>.
+<a href="https://en.wikipedia.org/wiki/Least_common_multiple">least common multiple (lcm)</a>.
+The lcm of two natural numbers a und b is the smallest natural number that is divisible by a and b.
 <code>lcm(4, 6)</code> should return <code>12</code>.`,
 
   beforeTests: function() {
