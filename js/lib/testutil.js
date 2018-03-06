@@ -154,7 +154,7 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
           break;
         default:
           ok = false;
-          console.log('Unbekannter Type gefordert.');
+          console.log('testutil.assert_functionReturnsType: unkwown type');
           break;
       }
       if (ok) {

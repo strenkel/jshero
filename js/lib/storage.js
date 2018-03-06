@@ -21,7 +21,7 @@ jshero.storage = (function(lang) {
   };
 
   var removeSolution = function(koan) {
-    return localStorage.removeItem(getSolutionKey(koan));
+    localStorage.removeItem(getSolutionKey(koan));
   };
 
   // --- handle shots ---
@@ -39,24 +39,50 @@ jshero.storage = (function(lang) {
   };
 
   var removeShot = function(koan) {
-    return localStorage.removeItem(getShotKey(koan));
+    localStorage.removeItem(getShotKey(koan));
+  };
+
+  // --- handle playground ---
+
+  var setPlaygroundCode = function(code) {
+    localStorage.setItem(getPlaygroundKey(), code);
+  };
+
+  var getPlaygroundCode = function(code) {
+    return localStorage.getItem(getPlaygroundKey());
+  };
+
+  var removePlaygroundCode = function(code) {
+    localStorage.removeItem(getPlaygroundKey());
   };
 
   // --- private methods ---
 
   var getSolutionKey = function(koan) {
-    return getKey(koan, "solution_");
+    return getKey("solution", koan.id);
   };
 
   var getShotKey = function(koan) {
-    return getKey(koan, "shot_");
+    return getKey("shot", koan.id);
   };
 
-  var getKey = function(koan, prefix) {
+  var getPlaygroundKey = function() {
+    return getKey("playground");
+  };
+
+  /**
+   *@param {String} prefix ; not null/undefined
+   * @param {String} id; can be null/undefined
+   */
+  var getKey = function(prefix, id) {
+    var key = prefix;
     if (lang !== "de") {
-      prefix = prefix + lang + "_";
+      key = key + "_" + lang;
     }
-    return prefix + koan.id;
+    if (id) {
+      key = key + "_" + id;
+    }
+    return key;
   };
 
   return {
@@ -65,7 +91,10 @@ jshero.storage = (function(lang) {
     removeSolution: removeSolution,
     setShot: setShot,
     getShot: getShot,
-    removeShot: removeShot
+    removeShot: removeShot,
+    setPlaygroundCode: setPlaygroundCode,
+    getPlaygroundCode: getPlaygroundCode,
+    removePlaygroundCode: removePlaygroundCode
   };
 
 })(jshero.i18n.getLang());

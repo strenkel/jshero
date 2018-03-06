@@ -24,7 +24,7 @@ jshero.message = (function(i18n) {
     logsElm.id = "logs";
     for (var i = 0, l = logs.length; i < l; i++) {
       var logElm = document.createElement('div');
-      logElm.innerHTML = logs[i];
+      logElm.innerHTML = "> " + logs[i];
       logsElm.appendChild(logElm);
     }
 

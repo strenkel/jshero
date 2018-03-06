@@ -38,7 +38,8 @@
 
         <h1>Playground</h1>
         <p id="koans-lesson">
-          Hier kannst du üben. Gebe deinen Code in das Textfeld ein, verwende <code>jshero.log</code> zur Ausgabe und führe den Code mit 'Run' aus.
+          Hier kannst du üben. Schreibe deinen Code in das Textfeld, verwende <code>jshero.log</code> zur Ausgabe und führe den Code mit 'Run' aus.
+          Mit 'Clear' löscht du deine Eingabe.
           <span id="show-example">Hier ist ein Beispiel.</span>
         </p>
         <textarea
@@ -52,6 +53,7 @@
 
         <p>
           <button id="test-button">Run</button>
+          <button id="clear-button">Clear</button>
         </p>
 
         <div id="messages"></div>
@@ -61,6 +63,7 @@
 
     <script src="js/util/util.js"></script>
     <script src="js/util/i18n.js"></script>
+    <script src="js/lib/storage.js"></script>
     <script src="js/lib/nav.js"></script>
     <script src="js/lib/code.js"></script>
     <script src="js/lib/message.js"></script>

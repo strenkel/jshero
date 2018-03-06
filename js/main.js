@@ -64,7 +64,6 @@
         try {
           result = tests[i]();
         } catch (exc) {
-          console.log(i18n("unknownError"), exc);
           result = {
             ok: false,
             msg: i18n("unknownError"),
@@ -112,7 +111,6 @@
       return true;
     } catch (e) {
       msg.log(i18n("syntaxError"), false, e);
-      console.log(i18n("syntaxError"), e);
       return false;
     }
   };

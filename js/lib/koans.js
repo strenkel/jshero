@@ -32,7 +32,7 @@ jshero.koans = (function(storage) {
 
     if (idArray.length !== koans.length) {
       // This should not happend in production.
-      console.warn("Koans-Order-Array length unequal to Koans length.");
+      console.log("Koans-Order-Array length unequal to Koans length.");
     }
 
     var koan;

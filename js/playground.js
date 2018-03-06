@@ -1,27 +1,30 @@
-(function(msg, codeArea, util) {
+(function(msg, codeArea, util, storage, i18n) {
 
   var testButton = document.getElementById("test-button");
+  var clearButton = document.getElementById("clear-button");
   var exampleLink = document.getElementById("show-example");
 
   var runCode = function() {
     msg.clear();
     var code = codeArea.get();
     if (code.length === 0) {
-      msg.log("Schreibe deinen Code in das Eingabefeld.", false);
+      msg.log(i18n("writeCode"), false);
+      storage.removePlaygroundCode();
     } else {
+      storage.setPlaygroundCode(code);
       try {
         jshero.clearLogs();
         eval(code);
         var logs = jshero.getLogs();
         if (logs.length > 0) {
-           msg.log("", true, null, logs);
+          msg.log("", true, null, logs);
         } else {
-           var message = "Benutze <code>jshero.log</code> zur Ausgabe!";
-           msg.log(message, false);
+          var message = "Benutze <code>jshero.log</code> zur Ausgabe!";
+          msg.log(message, false);
         }
-      } catch(e) {
-        msg.log("Fehler beim Ausführen des Codes!", false, e);
-        console.log("Fehler beim Ausführen des Codes!", e);
+      } catch (e) {
+        var logs = jshero.getLogs();
+        msg.log("Fehler beim Ausführen des Codes!", false, e, logs);
       }
     }
     util.scrollToBottom();
@@ -33,10 +36,27 @@
     codeArea.set(code);
   };
 
+  var insertCodeFromStorage = function() {
+    var code = storage.getPlaygroundCode();
+    if (code) {
+      codeArea.set(code);
+    }
+  }
+
+  var clearCode = function() {
+    storage.removePlaygroundCode();
+    codeArea.set("");
+  }
+
   testButton.addEventListener("click", runCode);
   testButton.addEventListener("touchstart", runCode);
+
+  clearButton.addEventListener("click", clearCode);
+  clearButton.addEventListener("touchstart", clearCode);
 
   exampleLink.addEventListener("click", showExample);
   exampleLink.addEventListener("touchstart", showExample);
 
-})(jshero.message, jshero.code, jshero.util);
+  window.onload = insertCodeFromStorage;
+
+})(jshero.message, jshero.code, jshero.util, jshero.storage, jshero.i18n.get);
