@@ -13,6 +13,7 @@ jshero.storage = (function(lang) {
 
   var setSolution = function(koan, solution) {
     localStorage.setItem(getSolutionKey(koan), solution);
+    removeShot(koan);
   };
 
   var getSolution = function(koan) {
