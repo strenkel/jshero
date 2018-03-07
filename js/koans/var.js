@@ -4,7 +4,8 @@ jshero.koans.add({
 
   title: "Variablen",
 
-  lesson: `JavaScript-Programme bestehen aus einer Reihe von Anweisungen. Jede Anweisung führt eine elementare Operation durch.
+  lesson: `<a href="https://de.wikipedia.org/wiki/JavaScript">JavaScript</a>-Programme bestehen
+aus einer Reihe von Anweisungen. Jede Anweisung führt eine elementare Operation durch.
 Durch das Ausführen vieler Anweisungen kann man schließlich komplexe Aufgaben lösen.
 Jede Anweisung schreibt man in eine Zeile und schließt sie mit einem Semikolon ab.<br><br>
 Eine elementare Anweisung ist die Deklaration und Initialisierung einer Variablen.
