@@ -183,6 +183,10 @@ nav a:last-child {
   font-size: 0.95em;
   margin-top: 2em;
   font-family: monospace;
+
+  /* due to bad textarea layout IE11/Win7 (shadow and scrollbar) */
+  border: solid 1px grey;
+  overflow: auto;
 }
 
 #messages {
