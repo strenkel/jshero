@@ -115,8 +115,8 @@
     }
   };
 
-  testButton.addEventListener("click", testCode);
-  testButton.addEventListener("touchstart", testCode);
+  testButton.onclick = testCode;
+  testButton.ontouchstart = testCode;
   window.onload = write;
 
 })(jshero.message, jshero.koans, jshero.header, jshero.code, jshero.util, jshero.i18n.get, jshero.i18n.getLang());

@@ -48,14 +48,14 @@
     codeArea.set("");
   }
 
-  testButton.addEventListener("click", runCode);
-  testButton.addEventListener("touchstart", runCode);
+  testButton.onclick = runCode;
+  testButton.ontouchstart = runCode;
 
-  clearButton.addEventListener("click", clearCode);
-  clearButton.addEventListener("touchstart", clearCode);
+  clearButton.onclick = clearCode;
+  clearButton.ontouchstart = clearCode;
 
-  exampleLink.addEventListener("click", showExample);
-  exampleLink.addEventListener("touchstart", showExample);
+  exampleLink.onclick = showExample;
+  exampleLink.ontouchstart = showExample;
 
   window.onload = insertCodeFromStorage;
 
