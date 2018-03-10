@@ -1,15 +1,16 @@
 (function(koans, util) {
 
   // --- write koans ---
-  
+
   var rootElm = document.getElementById("koans");
-  
+
   function write() {
-    koans.getKoans().forEach(function(koan, i) {
-      writeKoan(koan, i);
-    });
+    var myKoans = koans.getKoans();
+    for (var i = 0, l = myKoans.length; i < l; i++) {
+      writeKoan(myKoans[i], i);
+    }
   };
-  
+
   function writeKoan(koan, i) {
     var elm = document.createElement("a");
     elm.innerHTML = (i + 1) + ". " + koan.title;

@@ -91,10 +91,11 @@ jshero.koans = (function(storage) {
   };
 
   var clearSolutions = function() {
-    koans.forEach(function(koan) {
+    for (var i = 0, l = koans.length; i < l; i++) {
+      var koan = koans[i];
       storage.removeSolution(koan);
       storage.removeShot(koan);
-    });
+    }
   };
 
   // --- private methods ---
@@ -112,11 +113,12 @@ jshero.koans = (function(storage) {
   };
 
   var setIndexById = function(id) {
-    koans.forEach(function(koan, i) {
-      if (koan.id === id) {
+    for (var i = 0, l = koans.length; i < l; i++) {
+      if (koans[i].id === id) {
         index = i;
+        break;
       }
-    });
+    }
   };
 
   return {

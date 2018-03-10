@@ -37,9 +37,11 @@
       <div id="lesson">
 
         <h1 id="koans-title"></h1>
-        <p id="koans-lesson"></p>
+        <!-- IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements! -->
+        <!-- See main.js -->
+        <div id="koans-lesson" class="paragraph"></div>
         <h2>Aufgabe</h2>
-        <p id="koans-task"></p>
+        <div id="koans-task" class="paragraph"></div>
 
         <textarea
           autocapitalize="none"

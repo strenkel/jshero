@@ -12,6 +12,8 @@
     koans.setIndexByUrl();
     var koan = koans.getKoan();
     document.getElementById("koans-title").innerHTML = (koans.getIndex() + 1) + ". " + koan.title;
+
+    // IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements!
     document.getElementById("koans-lesson").innerHTML = koan.lesson;
     document.getElementById("koans-task").innerHTML = koan.task;
 
