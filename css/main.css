@@ -50,7 +50,7 @@ code {
   color: #0033ff; /* blue */
 }
 
-nav {
+#nav {
   top: 3em;
   border-bottom: 1px solid white;
   text-align: center;
@@ -61,24 +61,24 @@ nav {
   padding: 2em 0 2em 0;
 }
 
-#header a, nav a, #messages a, .link-button, #koans a {
+#header a, #nav a, #messages a, .link-button, #koans a {
   text-decoration: none;
   color: black;
 }
 
-nav a {
+#nav a {
   display: block;
   color: white;
   margin: 1.2em;
   font-size: 1.2em;
 }
 
-nav a:hover {
+#nav a:hover {
   text-decoration: underline;
 }
 
 /* Separates the language-link from the normal navigation links. */
-nav a:last-child {
+#nav a:last-child {
   margin-top: 2.5em;
   font-style: italic;
 }
