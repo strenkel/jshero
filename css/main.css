@@ -134,28 +134,34 @@ code {
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  background-size: 2em;
   height: 3em;
   width: 3em;
 }
 
 #prev-button {
   background-image: url("../img/ic_navigate_before_white_18dp_2x.png");
+  background-image: url("../img/ic_navigate_before_white_24px.svg"), none;
 }
 
 #next-button {
   background-image: url("../img/ic_navigate_next_white_18dp_2x.png");
+  background-image: url("../img/ic_navigate_next_white_24px.svg"), none;
 }
 
 #success-button {
   background-image: url("../img/ic_more_vert_white_18dp_2x.png");
+  background-image: url("../img/ic_more_vert_white_24px.svg"), none;
 }
 
 #menu.menu {
   background-image: url("../img/ic_menu_white_18dp_2x.png");
+  background-image: url("../img/ic_menu_white_24px.svg"), none;
 }
 
 #menu.close {
   background-image: url("../img/ic_close_white_18dp_2x.png");
+  background-image: url("../img/ic_close_white_24px.svg"), none;
   background-color: #424242; /* grey 800 */
 }
 
@@ -379,4 +385,13 @@ a.link-button:hover {
 
   #footer a {
     padding: 0 0.2em;
+  }
+
+  #footer {
+    text-align: center;
+  }
+
+  #footer-info {
+    float: none;
+  }
 }
