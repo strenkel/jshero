@@ -1,4 +1,4 @@
-/* colors: material.io*/
+/* colors, icons: material.io */
 
 h1, h2 {
   font-weight: normal;
@@ -16,17 +16,26 @@ a {
   color: #0033ff; /* blue */
 }
 
-#lesson pre {
+#content pre {
   background-color: #f5f5f5; /* grey 100 */
   padding: 1em 0.7em;
   margin: 1em 0em;
   overflow: auto;
 }
 
+html {
+  height: 100%;
+}
+
 html, body {
   font-size: 18px;
-  font-family:  Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-family:  Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100%
 }
 
 button {
@@ -104,35 +113,49 @@ code {
 
 .title {
   vertical-align: middle;
-  font-size: 1.2em;
+  font-size: 1.3em;
+  float: left;
 }
 
 #title {
   display: block;
-  float: left;
 }
 
 #title-short {
   display: none;
-  float: left;
 }
 
 #menu {
   float: left;
+  margin: 0 2em;
+}
+
+.control, #menu {
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   height: 3em;
   width: 3em;
-  margin: 0 2em;
+}
+
+#prev-button {
+  background-image: url("../img/ic_navigate_before_white_18dp_2x.png");
+}
+
+#next-button {
+  background-image: url("../img/ic_navigate_next_white_18dp_2x.png");
+}
+
+#success-button {
+  background-image: url("../img/ic_more_vert_white_18dp_2x.png");
 }
 
 #menu.menu {
-  background-image: url("../img/ic_menu_white_24dp_2x.png");
+  background-image: url("../img/ic_menu_white_18dp_2x.png");
 }
 
 #menu.close {
-  background-image: url("../img/ic_close_white_24dp_2x.png");
+  background-image: url("../img/ic_close_white_18dp_2x.png");
   background-color: #424242; /* grey 800 */
 }
 
@@ -141,10 +164,7 @@ code {
 }
 
 #header .control {
-  color: white;
   float: right;
-  font-size: 1.5em;
-  padding: 0 0.5em;
 }
 
 #header .control:hover {
@@ -155,30 +175,35 @@ code {
   margin-right: 2%;
 }
 
-#lesson {
-  margin: 8em auto 8em auto;
+#content {
+  margin: 0 auto;
   max-width: 44em;
-  padding: 0 6% 0 6%;
+  padding: 8em 6%;
 }
 
-#lesson h1 {
-  margin-bottom: 1.5em;
+#content h1 {
+  margin: 0;
+  padding-bottom: 1em;
 }
 
-#lesson h2 {
+#content h2 {
   margin-top: 1.5em;
 }
 
-#lesson p, #lesson .paragraph {
+#content p, #content .paragraph {
+  margin: 1em 0;
   line-height: 1.6em;
 }
 
-#lesson .paragraph {
-  margin-bottom: 1em;
-  margin-top: 1em;
+#content .paragraph2 {
+  margin: 2em 0;
 }
 
-#lesson .extra-margin {
+#content .paragraph5 {
+  margin: 5em 0;
+}
+
+#content .extra-margin {
   margin-bottom: 3em;
 }
 
@@ -196,6 +221,7 @@ code {
 
 #messages {
   margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 #messages p {
@@ -240,10 +266,6 @@ a.link-button:hover {
   padding: 0.5em 0 1em 1em;
 }
 
-#start-hero {
-  margin: 2em 0;
-}
-
 #success .green {
   color: #0f7820; /* dark-green */
 }
@@ -280,18 +302,44 @@ a.link-button:hover {
 
 #links h2 {
   font-size: 1.1em;
-  margin-top: 2.7em;
-  margin-bottom: 0.5em;
+  margin: 1em 0 0 0;
 }
 
 #links p {
-  margin: 0;
+  margin: 0.5em 0 3em 0;
 }
 
 #playground #show-example {
   text-decoration: underline;
   cursor: pointer;
   color: #0033ff; /* blue */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #424242; /* grey 800 */
+  color: white;
+  height: 3em;
+  line-height: 3em;
+}
+
+#footer-info {
+  color: white;
+  float: right;
+  padding: 0 0.5em;
+  margin-right: 3%;
+}
+
+#footer a {
+  padding: 0 1em;
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
 }
 
 /* smartphones */
@@ -313,14 +361,6 @@ a.link-button:hover {
     margin: 0 0.7em;
   }
 
-  #menu.menu {
-    background-image: url("../img/ic_menu_white_18dp_2x.png");
-  }
-
-  #menu.close {
-    background-image: url("../img/ic_close_white_18dp_2x.png");
-  }
-
   h1 {
     font-size: 1.8em;
   }
@@ -329,8 +369,14 @@ a.link-button:hover {
     font-size: 1.5em;
   }
 
-  #lesson {
-    padding: 0 1em 0 1em;
+  #content {
+    padding: 8em 1em;
   }
 
+  .control {
+    width: 2.5em;
+  }
+
+  #footer a {
+    padding: 0 0.2em;
 }

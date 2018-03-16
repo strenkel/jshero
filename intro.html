@@ -1,104 +1,122 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width" name="viewport">
-    <title>JavaScript Hero</title>
-    <meta name="description" content="Werde ein JavaScript-Held!">
-    <meta name="keywords" content="JavaScript Koans Lernen Übungen Tutorial Tests">
-    <meta name="author" content="Stefan Trenkel">
-    <link rel="stylesheet" href="css/main.css">
-  </head>
 
-  <body id="intro">
-    <div>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JavaScript Hero</title>
+  <meta name="description" content="Werde ein JavaScript-Held!">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Tutorial Tests">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="css/main.css">
+</head>
 
-      <div id="header">
-        <a id="next-button" class="control" href="main.html" title="Nächste Seite">&gt;</a>
-        <a class="control" href="success.html" title="Übersicht">#</a>
-        <a id="prev-button" class="control" href="home.html" title="Vorherige Seite">&lt;</a>
-        <div id="menu" class="menu" title="Menü"></div>
-        <div id="title" class="title">JavaScript Hero</div>
-        <div id="title-short" class="title">JS Hero</div>
-      </div>
+<body id="intro">
 
-      <div id="nav">
-        <a href="home.html">Home</a>
-        <a href="intro.html">Einführung</a>
-        <a href="main.html">Start</a>
-        <a href="success.html">Übersicht</a>
-        <a href="playground.html">Playground</a>
-        <a href="links.html">Links</a>
-        <a href="info.html">Info</a>
-        <a href="en/home.html">--- English ---</a>
-      </div>
+  <div id="header">
+    <a id="next-button" class="control" href="main.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="home.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <div id="title" class="title">JavaScript Hero</div>
+    <div id="title-short" class="title">JS Hero</div>
+  </div>
 
-      <div id="lesson">
-        <h1>Einführung</h1>
-        <p>
-          Dieses Tutorial bietet dir einen <strong>Einstieg ins Programmieren</strong>. Es vermittelt allgemeine Programmierkonzepte wie
-          Variablen, Bedingungen, Schleifen, Funktionen und einiges mehr. Diese Konzepte sind Grundlage vieler Programmiersprachen.
-        </p>
-        <p>
-          Das Tutorial ist auch ein Einstieg in <strong>JavaScript</strong>. JavaScript ist eine sehr verbreitete Programmiersprache.
-          Sie ist die Sprache des Web. Sie läuft in jedem Browser und mit Hilfe von <a href="https://nodejs.org">Node.js</a> auf jedem Computer.
-          Man kann mit ihr Webseiten animieren, komplexe Webanwendungen erstellen und mit Node.js Webserver realisieren.
-          JavaScript ist eine elegante, eine moderne Sprache. Sie unterstützt objektorientierte und funktionale
-          Programmierung.
-        </p>
-        <p>
-          JavaScript besteht zum einen aus dem eigentlichen <strong>Sprachkern</strong>, zum anderen aus einer Reihe von <strong>Bibliotheken</strong>.
-          Mit der vielleicht bekanntesten JavaScript-Bibliothek, dem DOM, lassen sich zum Beispiel Objekte im Browser verschieben.
-          Während der Sprachkern für alle Umgebungen der gleiche ist, stehen je nach Laufzeitumgebung verschiedene Bibliotheken zur Verfügung.
-          Dieses Tutorial geht auf keine dieser Biblioteken ein. Es behandelt ausschließlich den Sprachkern von JavaScript.
-        </p>
-        <p>
-          JavaScript Hero besteht aus kleinen, überschaubaren <strong>Lektionen und Übungen</strong>.
-          Eine Lektion stellt ein jeweils abgeschlossenes Thema in seinen wesentlichen Zügen vor.
-          Dabei wird immer ein praktisches Beispiel verwendet.
-          Die Übungen bewegen sich auf unterschiedlichem Niveau. Zum einen Wiederholen sie das Lektions-Beispiel in leicht abgewandelter Form.
-          Hier soll das Gelernte durch praktische Übung gefestigt werden.
-          Zum anderen sind es anspruchsvolle Aufgaben, häufig aus dem Bereich der Informatik (z.B. sortieren) oder der Mathematik (z.B. Primzahlen bestimmen).
-          Hier soll das Gelernte angewendet und vertieft werden.
-        </p>
-        <p>
-          Die Übungen basieren auf sogenannten <strong>Unit-Tests und dem Konzept der testgetriebenen Entwicklung</strong> (engl.: test-driven development, TDD).
-          Die Idee ist, bei einer gegebenen Anforderung zuerst entsprechende Tests zu schreiben und anschließend das geforderte Programm.
-          Dies hat den Vorteil, dass man jederzeit anhand der Tests überprüfen kann, ob die Anforderung erfüllt oder nicht erfüllt ist.
-        </p>
-        <p>
-          Bei <strong>Unit-Tests</strong> werden kleine Einheiten, in der Regel Funktionen, getestet. Unit-Tests sind dabei selbst kleine Programme.
-          Sie rufen die zu testende Funktion auf
-          und überprüfen stichprobenartig, ob das gewünschte Verhalten auftritt oder nicht. Jede Aufgabe ist hier mit einer Reihe solcher Unit-Tests hinterlegt.
-          Drückst du auf den Test-Button, werden diese Unit-Tests ausgeführt. Unterhalb des Tests-Buttons erscheint dann das Ergebnis dieser Tests. Jeder Rahmen
-          gibt das Ergebnis eines Unit-Tests wieder.
-        </p>
-        <p>
-          Bei einem nicht bestandenen Test liegt entweder ein <strong>fachlicher oder ein technischer Fehler</strong> vor. Bei einem <strong>fachlichen Fehler</strong>
-          stimmt das tatsächliche Ergebnis nicht mit dem erwarteten Ergebnis überein. Eine Funktion soll zwei Zahlen addieren. Der Unit-Test überprüft
-          diese Anforderung beispielhaft anhand der beiden Zahlen 1 und 2. Das erwartente Ergebnis ist 3. Liefert die Funktion das tatsächliche  Ergebnis 4,
-          so liegt ein fachlicher Fehler vor. Solche Fehler werden mit einer Meldung wie "addiere(1, 2) gibt nicht 3, sondern 4 zurück." quittiert.
-        </p>
-        <p>
-          Bei <strong>technischen Fehlern</strong> kann die Funktion nicht ausgeführt werden. Die Funktion kann entweder nicht eingelesen werden oder
-          sie bricht während ihrer Ausführung ab. Bei technischen Fehlern liefert der JavaScript-Interpreter, also das Programm
-          im Browser, das die JavaScript-Anweisungen ausführt, eine entsprechende Fehlermeldung.
-          Vergisst man zum Beispiel eine schließende Klammer, so wird folgender Fehler geworfen: "SyntaxError: missing } after function body".
-          Diese Fehlermeldungen sind in Englisch, da sie direkt von dem JavaScript-Interpreter stammen.
-        </p>
-        <p>
-          JavaScript Hero funktioniert am besten im Browser <a href="https://www.mozilla.org/de/firefox/">Firefox</a>.
-          Das hat einen einfachen Grund: Firefox ist der einzige Browser, der bei technischen Fehlern sowohl die
-          <strong>Fehler-Zeile</strong> als auch die <strong>Fehler-Spalte</strong> mit ausgibt. Das erleichtert die Fehlersuche.
-        </p>
-        <p>
-          Bei Fragen, Anmerkungen und Hinweisen freue ich mich über eine <a href="info.html">Mail</a>.
-        </p>
-      </div>
+  <div id="nav">
+    <a href="home.html">Home</a>
+    <a href="intro.html">Einführung</a>
+    <a href="main.html">Start</a>
+    <a href="success.html">Übersicht</a>
+    <a href="playground.html">Playground</a>
+    <a href="links.html">Links</a>
+    <a href="en/home.html">--- English ---</a>
+  </div>
 
+  <div id="content">
+    <h1>Einführung</h1>
+    <p>
+      Dieses Tutorial bietet dir einen
+      <strong>Einstieg ins Programmieren</strong>. Es vermittelt allgemeine Programmierkonzepte wie Variablen, Bedingungen, Schleifen,
+      Funktionen und einiges mehr. Diese Konzepte sind Grundlage vieler Programmiersprachen.
+    </p>
+    <p>
+      Das Tutorial ist auch ein Einstieg in
+      <strong>JavaScript</strong>. JavaScript ist eine sehr verbreitete Programmiersprache. Sie ist die Sprache des Web. Sie läuft
+      in jedem Browser und mit Hilfe von
+      <a href="https://nodejs.org">Node.js</a> auf jedem Computer. Man kann mit ihr Webseiten animieren, komplexe Webanwendungen erstellen und mit Node.js
+      Webserver realisieren. JavaScript ist eine elegante, eine moderne Sprache. Sie unterstützt objektorientierte und funktionale
+      Programmierung.
+    </p>
+    <p>
+      JavaScript besteht zum einen aus dem eigentlichen
+      <strong>Sprachkern</strong>, zum anderen aus einer Reihe von
+      <strong>Bibliotheken</strong>. Mit der vielleicht bekanntesten JavaScript-Bibliothek, dem DOM, lassen sich zum Beispiel Objekte
+      im Browser verschieben. Während der Sprachkern für alle Umgebungen der gleiche ist, stehen je nach Laufzeitumgebung
+      verschiedene Bibliotheken zur Verfügung. Dieses Tutorial geht auf keine dieser Biblioteken ein. Es behandelt ausschließlich
+      den Sprachkern von JavaScript.
+    </p>
+    <p>
+      JavaScript Hero besteht aus kleinen, überschaubaren
+      <strong>Lektionen und Übungen</strong>. Eine Lektion stellt ein jeweils abgeschlossenes Thema in seinen wesentlichen Zügen
+      vor. Dabei wird immer ein praktisches Beispiel verwendet. Die Übungen bewegen sich auf unterschiedlichem Niveau. Zum
+      einen Wiederholen sie das Lektions-Beispiel in leicht abgewandelter Form. Hier soll das Gelernte durch praktische Übung
+      gefestigt werden. Zum anderen sind es anspruchsvolle Aufgaben, häufig aus dem Bereich der Informatik (z.B. sortieren)
+      oder der Mathematik (z.B. Primzahlen bestimmen). Hier soll das Gelernte angewendet und vertieft werden.
+    </p>
+    <p>
+      Die Übungen basieren auf sogenannten
+      <strong>Unit-Tests und dem Konzept der testgetriebenen Entwicklung</strong> (engl.: test-driven development, TDD). Die Idee
+      ist, bei einer gegebenen Anforderung zuerst entsprechende Tests zu schreiben und anschließend das geforderte Programm.
+      Dies hat den Vorteil, dass man jederzeit anhand der Tests überprüfen kann, ob die Anforderung erfüllt oder nicht erfüllt
+      ist.
+    </p>
+    <p>
+      Bei
+      <strong>Unit-Tests</strong> werden kleine Einheiten, in der Regel Funktionen, getestet. Unit-Tests sind dabei selbst kleine
+      Programme. Sie rufen die zu testende Funktion auf und überprüfen stichprobenartig, ob das gewünschte Verhalten auftritt
+      oder nicht. Jede Aufgabe ist hier mit einer Reihe solcher Unit-Tests hinterlegt. Drückst du auf den Test-Button, werden
+      diese Unit-Tests ausgeführt. Unterhalb des Tests-Buttons erscheint dann das Ergebnis dieser Tests. Jeder Rahmen gibt
+      das Ergebnis eines Unit-Tests wieder.
+    </p>
+    <p>
+      Bei einem nicht bestandenen Test liegt entweder ein
+      <strong>fachlicher oder ein technischer Fehler</strong> vor. Bei einem
+      <strong>fachlichen Fehler</strong>
+      stimmt das tatsächliche Ergebnis nicht mit dem erwarteten Ergebnis überein. Eine Funktion soll zwei Zahlen addieren. Der
+      Unit-Test überprüft diese Anforderung beispielhaft anhand der beiden Zahlen 1 und 2. Das erwartente Ergebnis ist 3.
+      Liefert die Funktion das tatsächliche Ergebnis 4, so liegt ein fachlicher Fehler vor. Solche Fehler werden mit einer
+      Meldung wie "addiere(1, 2) gibt nicht 3, sondern 4 zurück." quittiert.
+    </p>
+    <p>
+      Bei
+      <strong>technischen Fehlern</strong> kann die Funktion nicht ausgeführt werden. Die Funktion kann entweder nicht eingelesen
+      werden oder sie bricht während ihrer Ausführung ab. Bei technischen Fehlern liefert der JavaScript-Interpreter, also
+      das Programm im Browser, das die JavaScript-Anweisungen ausführt, eine entsprechende Fehlermeldung. Vergisst man zum
+      Beispiel eine schließende Klammer, so wird folgender Fehler geworfen: "SyntaxError: missing } after function body".
+      Diese Fehlermeldungen sind in Englisch, da sie direkt von dem JavaScript-Interpreter stammen.
+    </p>
+    <p>
+      JavaScript Hero funktioniert am besten im Browser
+      <a href="https://www.mozilla.org/de/firefox/">Firefox</a>. Das hat einen einfachen Grund: Firefox ist der einzige Browser, der bei technischen Fehlern sowohl die
+      <strong>Fehler-Zeile</strong> als auch die
+      <strong>Fehler-Spalte</strong> mit ausgibt. Das erleichtert die Fehlersuche.
+    </p>
+    <p>
+      Bei Fragen, Anmerkungen und Hinweisen freue ich mich über eine
+      <a href="info.html">Mail</a>.
+    </p>
+  </div>
+
+  <div id="footer">
+    <div id="footer-info">
+      <a href="http://www.jshero.net">Web App</a> |
+      <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a> |
+      <a href="info.html">Kontakt</a>
     </div>
+  </div>
 
-    <script src="js/lib/nav.js"></script>
+  <script src="js/lib/nav.js"></script>
 
-  </body>
+</body>
+
 </html>
