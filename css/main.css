@@ -348,6 +348,13 @@ a.link-button:hover {
   text-decoration: underline;
 }
 
+#noscript {
+  padding: 10px;
+  border: 1px solid #e00000; /* dark-red */
+  color: #e00000; /* dark-red */
+  margin-bottom: 3em !important;
+}
+
 /* smartphones */
 @media (max-width: 35em) {
 
