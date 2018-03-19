@@ -35,11 +35,18 @@
   <div id="content">
 
     <noscript>
-      <p id="noscript">
+      <p class="warning">
         Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen Browser mit
         aktiviertem JavaScript.
       </p>
     </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder
+      er ist voll. Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
 
     <h1 id="koans-title"></h1>
     <!-- IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements! -->

@@ -348,11 +348,15 @@ a.link-button:hover {
   text-decoration: underline;
 }
 
-#noscript {
+.warning {
   padding: 10px;
   border: 1px solid #e00000; /* dark-red */
   color: #e00000; /* dark-red */
   margin-bottom: 3em !important;
+}
+
+#no-storage-warning {
+  display: none;
 }
 
 /* smartphones */

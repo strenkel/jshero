@@ -12,51 +12,78 @@ jshero.storage = (function(lang) {
   // --- handle solutions ---
 
   var setSolution = function(koan, solution) {
-    localStorage.setItem(getSolutionKey(koan), solution);
+    setItem(getSolutionKey(koan), solution);
     removeShot(koan);
   };
 
   var getSolution = function(koan) {
-    return localStorage.getItem(getSolutionKey(koan));
+    return getItem(getSolutionKey(koan));
   };
 
   var removeSolution = function(koan) {
-    localStorage.removeItem(getSolutionKey(koan));
+    removeItem(getSolutionKey(koan));
   };
 
   // --- handle shots ---
 
   var setShot = function(koan, solution) {
     if (solution) {
-      localStorage.setItem(getShotKey(koan), solution);
+      setItem(getShotKey(koan), solution);
     } else {
       removeShot(koan);
     }
   };
 
   var getShot = function(koan) {
-    return localStorage.getItem(getShotKey(koan));
+    return getItem(getShotKey(koan));
   };
 
   var removeShot = function(koan) {
-    localStorage.removeItem(getShotKey(koan));
+    removeItem(getShotKey(koan));
   };
 
   // --- handle playground ---
 
   var setPlaygroundCode = function(code) {
-    localStorage.setItem(getPlaygroundKey(), code);
+    setItem(getPlaygroundKey(), code);
   };
 
   var getPlaygroundCode = function(code) {
-    return localStorage.getItem(getPlaygroundKey());
+    return getItem(getPlaygroundKey());
   };
 
   var removePlaygroundCode = function(code) {
-    localStorage.removeItem(getPlaygroundKey());
+    removeItem(getPlaygroundKey());
   };
 
+
+
   // --- private methods ---
+
+  /**
+   * See MDN.
+   */
+  var localStorageAvailable = function() {
+    try {
+      var x = '__storage_test__';
+      localStorage.setItem(x, x);
+      localStorage.removeItem(x);
+      return true;
+    }
+    catch (e) {
+      return false;
+    }
+  };
+
+  var checkLocalStorage = function() {
+    if (!localStorageAvailable()) {
+      var elm = document.getElementById("no-storage-warning");
+      if (elm) {
+        elm.style.display = "block";
+      }
+    }
+  };
+
 
   var getSolutionKey = function(koan) {
     return getKey("solution", koan.id);
@@ -85,6 +112,33 @@ jshero.storage = (function(lang) {
     return key;
   };
 
+  var setItem = function(key, value) {
+    try {
+      localStorage.setItem(key, value);
+    } catch (e) {
+      // nothing to do
+    }
+  };
+
+  var getItem = function(key) {
+    try {
+      return localStorage.getItem(key);
+    } catch (e) {
+      return undefined;
+    }
+  };
+
+  var removeItem = function(key) {
+    try {
+      localStorage.removeItem(key);
+    } catch (e) {
+      // nothing to do
+    }
+  };
+
+  // Code
+  checkLocalStorage();
+
   return {
     setSolution: setSolution,
     getSolution: getSolution,
@@ -94,7 +148,7 @@ jshero.storage = (function(lang) {
     removeShot: removeShot,
     setPlaygroundCode: setPlaygroundCode,
     getPlaygroundCode: getPlaygroundCode,
-    removePlaygroundCode: removePlaygroundCode
+    removePlaygroundCode: removePlaygroundCode,
   };
 
 })(jshero.i18n.getLang());
