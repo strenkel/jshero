@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: "Loggen und Strings",
 
-  lesson: "Nun wollen wir das Loggen zusammen mit dem Verketten von Strings üben.",
+  lesson: "Jetzt wollen wir das Loggen zusammen mit dem Verketten von Strings üben.",
 
   task: `Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt.
   Gleichzeitig soll die Rückgabe geloggt werden. Der Aufruf <code>rufe("Werder")</code>
