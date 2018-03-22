@@ -132,11 +132,12 @@
       return false;
     }
     try {
+      jshero.clearLogs();
       globalEval(code);
-      msg.log(i18n("noSyntaxError"), true);
+      msg.log(i18n("noSyntaxError"), true, null, jshero.getLogs());
       return true;
     } catch (e) {
-      msg.log(i18n("syntaxError"), false, e);
+      msg.log(i18n("syntaxError"), false, e, jshero.getLogs());
       return false;
     }
   };
