@@ -13,67 +13,63 @@
 
 <body id="success">
 
-  <div>
+  <div id="header">
+    <a id="next-button" class="control" href="playground.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="main.html?pos=last" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <div id="title" class="title">JavaScript Hero</div>
+    <div id="title-short" class="title">JS Hero</div>
+  </div>
 
-    <div id="header">
-      <a id="next-button" class="control" href="playground.html" title="Nächste Seite"></a>
-      <a id="success-button" class="control" href="success.html" title="Übersicht"></a>
-      <a id="prev-button" class="control" href="main.html?pos=last" title="Vorherige Seite"></a>
-      <div id="menu" class="menu" title="Menü"></div>
-      <div id="title" class="title">JavaScript Hero</div>
-      <div id="title-short" class="title">JS Hero</div>
-    </div>
+  <div id="nav">
+    <a href="home.html">Home</a>
+    <a href="intro.html">Einführung</a>
+    <a href="main.html">Start</a>
+    <a href="success.html">Übersicht</a>
+    <a href="playground.html">Playground</a>
+    <a href="links.html">Links</a>
+    <a href="en/success.html">--- English ---</a>
+  </div>
 
-    <div id="nav">
-      <a href="home.html">Home</a>
-      <a href="intro.html">Einführung</a>
-      <a href="main.html">Start</a>
-      <a href="success.html">Übersicht</a>
-      <a href="playground.html">Playground</a>
-      <a href="links.html">Links</a>
-      <a href="en/success.html">--- English ---</a>
-    </div>
+  <div id="content">
 
-    <div id="content">
-
-      <noscript>
-        <p class="warning">
-          Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen Browser mit
-          aktiviertem JavaScript.
-        </p>
-      </noscript>
-
-      <p id="no-storage-warning" class="warning">
-        Der Browser-Speicher
-        <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a> ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder
-        er ist voll. Ohne localStorage werden deine Lösungen nicht gespeichert.
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen Browser mit
+        aktiviertem JavaScript.
       </p>
+    </noscript>
 
-      <h1>Übersicht</h1>
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a> ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder
+      er ist voll. Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
 
-      <p class="extra-margin">
-        Hier findest du alle Übungen. Ungelöste Übungen sind rot, gelöste grün. Durch Klick oder Touch auf die Übung navigierst du
-        zu der Übung. Mit dem untenstehenden Button
-        <em>Übungen zurücksetzen</em> löscht du alle deine Lösungen. Alle Übungen sind danach rot und du kannst JavaScript Hero
-        von neuem beginnen.
+    <h1>Übersicht</h1>
+
+    <p class="extra-margin">
+      Hier findest du alle Übungen. Ungelöste Übungen sind rot, gelöste grün. Durch Klick oder Touch auf die Übung navigierst du
+      zu der Übung. Mit dem untenstehenden Button
+      <em>Übungen zurücksetzen</em> löscht du alle deine Lösungen. Alle Übungen sind danach rot und du kannst JavaScript Hero
+      von neuem beginnen.
+    </p>
+
+    <p id="koans"></p>
+
+    <p id="reset-exercises" class="paragraph5">
+      <button id="reset-button">Übungen zurücksetzen</button>
+    </p>
+
+    <div id="reset-confirmation" class="paragraph5">
+      <p>
+        Möchtest du wirklich alle Übungen zurücksetzen?
       </p>
-
-      <p id="koans"></p>
-
-      <p id="reset-exercises" class="paragraph5">
-        <button id="reset-button">Übungen zurücksetzen</button>
+      <p>
+        <button id="reset-no-button" class="reset-confirmation-button">Nein</button>
+        <button id="reset-yes-button" class="reset-confirmation-button">Ja</button>
       </p>
-
-      <div id="reset-confirmation" class="paragraph5">
-        <p>
-          Möchtest du wirklich alle Übungen zurücksetzen?
-        </p>
-        <p>
-          <button id="reset-no-button" class="reset-confirmation-button">Nein</button>
-          <button id="reset-yes-button" class="reset-confirmation-button">Ja</button>
-        </p>
-      </div>
-
     </div>
 
   </div>
