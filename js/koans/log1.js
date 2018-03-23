@@ -15,7 +15,7 @@ In JavaScript verwendet man dafür die Funktion <code>console.log</code>:
 Hier wird der String <code>"Hallo Konsole!"</code> mit <code>console.log</code> ausgegeben.
 Wo man die Ausgabe zu sehen bekommt, hängt von der JavaScript-Umgebung ab.
 In Browsern sieht man die Log-Ausgabe im normalen Betrieb nicht.
-Doch die meisten Desktop-Browser besitzen sogenannte Entwickler-Werkzeuge.
+Doch die meisten Desktop-Browser besitzen sogenannte <a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern"> Entwicklerwerkzeuge</a>.
 Das sind mächtige Tools zur Unterstützung von Webentwicklern. Eines dieser Tools ist die Konsole.
 Dort wird das Log ausgegeben. Wie man die Entwickler-Werkzeuge öffnet hängt vom jeweiligen Browser ab.
 Bei vielen Desktop-Browsern wird sie mit der Taste F12 geöffnet.
