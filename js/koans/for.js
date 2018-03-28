@@ -26,7 +26,7 @@ In unserem Beispiel hat <code>summe</code> zunächst den Wert <code>0</code>. In
 Die Schleifenbedingung <code>1 < 3</code> ist erfüllt, also wird der Schleifen-Code ausgeführt.
 <code>summe</code> erhält den Wert <code>0 + 1</code>, also <code>1</code>.
 Nun wird in der End-Anweisung <code>i</code> um <code>1</code> erhöht (<code>i++</code> ist identisch mit <code>i = i + 1</code>).
-Es erhällt also den Wert <code>2</code>. Der zweite Schleifendurchlauf startet mit Auswertung der Schleifenbedingung.
+Es erhält also den Wert <code>2</code>. Der zweite Schleifendurchlauf startet mit Auswertung der Schleifenbedingung.
 Diese Bedingung (<code>2 < 3</code>) ist immer noch erfüllt.
 Der Schleifen-Code wird erneut ausgeführt und <code>summe</code> erhält jetzt den Wert <code>1 + 2</code>, also <code>3</code>.
 <code>i</code> wird abermals erhöht und hat nun den Wert <code>3</code>.

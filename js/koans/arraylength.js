@@ -14,7 +14,7 @@ var l1 = sprachen.length;
 sprachen[1] = "C++";
 var l2 = sprachen.length;</code></pre>
 
-Das leere Array zu Anfang enthällt keine Elemente. <code>l0</code> ist also <code>0</code>.
+Das leere Array zu Anfang enthält keine Elemente. <code>l0</code> ist also <code>0</code>.
 Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>.
 Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index des Arrays.`,
 
