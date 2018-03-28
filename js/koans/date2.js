@@ -4,23 +4,24 @@ jshero.koans.add({
 
   title: 'Datum und Uhrzeit ausgeben',
 
-  lesson: 'Zur Ausgabe der Daten eines Date-Objekts gibt es sieben sogenannte Getter-Methoden:' +
-    '<pre><code>' +
-    'var startFastnacht = new Date(2017, 10, 11, 11, 11);<br>' +
-    'var jahr = startFastnacht.getFullYear();<br>' +
-    'var monat = startFastnacht.getMonth();<br>' +
-    'var tag = startFastnacht.getDate();<br>' +
-    'var stunde = startFastnacht.getHours();<br>' +
-    'var minute = startFastnacht.getMinutes();<br>' +
-    'var sekunde = startFastnacht.getSeconds();<br>' +
-    'var millisekunde = startFastnacht.getMilliseconds();<br>' +
-    '</code></pre>' +
-    'Man erhält die erwarteten Werte: <code>2017</code> für das Jahr, <code>10</code> für den Monat, <code>11</code> für den Tag, die Stunde und die Minute, ' +
-    'sowie <code>0</code> für die Sekunde und die Millisekunde. ' +
-    'Die Monatszählung beginnt wie beim Erzeugen eines Date-Objektes mit <code>0</code>. <code>10</code> steht für den November.',
+  lesson: `Zur Ausgabe der Daten eines Date-Objekts gibt es sieben sogenannte Getter-Methoden:
 
-  task: 'Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und dessen Datum im Format "d.M.YYYY" zurückgibt. ' +
-    'Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>"8.3.2017"</code> zurückgeben.',
+<pre><code>var startFastnacht = new Date(2017, 10, 11, 11, 11);
+var jahr = startFastnacht.getFullYear();
+var monat = startFastnacht.getMonth();
+var tag = startFastnacht.getDate();
+var stunde = startFastnacht.getHours();
+var minute = startFastnacht.getMinutes();
+var sekunde = startFastnacht.getSeconds();
+var millisekunde = startFastnacht.getMilliseconds();</code></pre>
+
+Man erhält die erwarteten Werte: <code>2017</code> für das Jahr, <code>10</code> für den Monat,
+<code>11</code> für den Tag, die Stunde und die Minute, sowie <code>0</code> für die Sekunde und die Millisekunde.
+Die Monatszählung beginnt wie beim Erzeugen eines Date-Objektes mit <code>0</code>.
+Die Zahl <code>10</code> steht also für den November.`,
+
+  task: `Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und dessen Datum im Format "d.M.YYYY" zurückgibt.
+Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>"8.3.2017"</code> zurückgeben.`,
 
   beforeTests: function() {
     if (typeof toGerman !== "undefined") {
