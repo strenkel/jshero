@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: 'Array: slice()',
 
-  lesson: `With <code>slice</code> you can copy a subarray from an array.:
+  lesson: `With <code>slice</code> you can copy a subarray from an array:
 
 <pre><code>var abcd = ["a", "b", "c", "d"];
 var ab = abcd.slice(0, 2);
