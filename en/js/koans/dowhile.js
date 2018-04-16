@@ -5,7 +5,7 @@ jshero.koans.add({
 
   title: 'do...while loop',
 
-  lesson: `The <code>do... while</code> loop works similarly to the <code>while</code> loop.
+  lesson: `The <code>do...while</code> loop works similarly to the <code>while</code> loop.
 The loop code is executed as long as the loop condition results in <code>true</code>.
 The only difference is that the loop condition is checked after the loop code.
 This ensures that the loop code is run through at least once.
