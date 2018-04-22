@@ -43,7 +43,7 @@ Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d.h. 
 <code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden. Diese Varainte ist jedoch nicht zu empfehlen,
 da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufweisen.`,
 
-  task: `Schreibe eine Funktion <code>nikolaus</code>, die eine Jahreangabe als Zahl entgegennimmt und  die ein Date-Objekt mit dem 6. Dezember
+  task: `Schreibe eine Funktion <code>nikolaus</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
 des übergebenen Jahres, 0:00 Uhr, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 Uhr zurückgeben.`,
 
   beforeTests: function() {
