@@ -37,6 +37,7 @@ Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> 
     function() {
       return jshero.testutil.assert_functionHasNumOfParameter('toGerman', 1);
     },
+
     function() {
       return jshero.testutil.assert_functionReturns('toGerman(new Date(2017, 2, 8))', '8.3.2017');
     },
