@@ -22,6 +22,7 @@ jshero.koans.initReorder(
     'stringsubstr',
     'replace',
     'number',
+    'fahrenheit',
     'modulo',
     'mean',
     'math',
@@ -66,6 +67,8 @@ jshero.koans.initReorder(
     'date',
     'date2',
     'date3',
+    'utc',
+    'gettime',
     'subfunction',
     'further'
     ]

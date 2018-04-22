@@ -185,7 +185,10 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
    * @param {function} f_call
    * @param {object} expectedReturnValue
    */
-  var assert_functionReturns = function(f_call, expectedReturnValue) {
+  var assert_functionReturns = function(f_call, expectedReturnValue, options) {
+
+    options = options || {};
+
     var ok, msg, e;
     try {
       var result = eval(f_call);
