@@ -50,19 +50,19 @@ sollte <code>yesterday(date)</code> ein Date-Objekt zurückgeben, das den 13.9.1
     },
 
     function() {
-      return jshero.testutil.assert_functionReturnsType('yesterday(new Date(1965, 8, 14))', 'Date');
+      return jshero.testutil.assert_functionReturnsType('yesterday(new Date(2015, 8, 14))', 'Date');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('yesterday(new Date(1965, 8, 14))', new Date(1965, 8, 13));
+      return jshero.testutil.assert_functionReturns('yesterday(new Date(2015, 8, 14))', new Date(2015, 8, 13));
     },
 
     function() {
-      return jshero.testutil.assert_functionReturnsType('yesterday(new Date(2000, 0, 1, 12))', 'Date');
+      return jshero.testutil.assert_functionReturnsType('yesterday(new Date(2018, 0, 1, 12))', 'Date');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('yesterday(new Date(2000, 0, 1, 12))', new Date(1999, 11, 31, 12));
+      return jshero.testutil.assert_functionReturns('yesterday(new Date(2018, 0, 1, 12))', new Date(2017, 11, 31, 12));
     }
 
   ]
