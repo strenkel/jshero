@@ -184,6 +184,7 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
    *
    * @param {function} f_call
    * @param {object} expectedReturnValue
+   * @param {object} options
    */
   var assert_functionReturns = function(f_call, expectedReturnValue, options) {
 
@@ -201,9 +202,11 @@ jshero.testutil = (function(i18n, jsheroDate, jsheroUtil, jsheroArray) {
       }
       if (jsheroDate.isDate(expectedReturnValue)) {
         if (ok) {
-          msg = jsheroUtil.formatMessage(i18n.get("functionReturnsDate"), [f_call, expectedReturnValue.toLocaleString()]);
+          msg = jsheroUtil.formatMessage(i18n.get("functionReturnsDate"),
+            [f_call, jsheroDate.toString(expectedReturnValue, options)]);
         } else {
-          msg = jsheroUtil.formatMessage(i18n.get("functionNotReturnsDate"), [f_call, expectedReturnValue.toLocaleString(), result.toLocaleString()]);
+          msg = jsheroUtil.formatMessage(i18n.get("functionNotReturnsDate"),
+            [f_call, jsheroDate.toString(expectedReturnValue, options), jsheroDate.toString(result, options)]);
         }
       } else {
         if (ok) {

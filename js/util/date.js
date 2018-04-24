@@ -18,9 +18,27 @@ jshero.date = (function() {
     return isDate(d1) && isDate(d2) && d1.getTime() === d2.getTime();
   };
 
+  /**
+   * Actually only support for local de-DE!
+   *
+   * @param {Date} date
+   * @param {Object} format
+   */
+  var toString = function(date, format) {
+
+
+    if (format.utc) {
+      return date.toLocaleString("de-DE", { "timeZone": "UTC" }) + " UTC";
+    }
+
+    // default
+    return date.toLocaleString();
+  };
+
   return {
     isDate: isDate,
-    isEqual: isEqual
+    isEqual: isEqual,
+    toString: toString
   };
 
 })();
