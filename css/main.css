@@ -321,6 +321,8 @@ a.link-button:hover {
   color: #0033ff; /* blue */
 }
 
+/* FOOTER */
+
 #footer {
   position: absolute;
   bottom: 0;
@@ -329,13 +331,7 @@ a.link-button:hover {
   color: white;
   height: 3em;
   line-height: 3em;
-}
-
-#footer-info {
-  color: white;
-  float: right;
-  padding: 0 0.5em;
-  margin-right: 3%;
+  text-align: center;
 }
 
 #footer a {
@@ -347,6 +343,8 @@ a.link-button:hover {
 #footer a:hover {
   text-decoration: underline;
 }
+
+/* WARNINGS */
 
 .warning {
   padding: 10px;
@@ -387,22 +385,22 @@ a.link-button:hover {
   }
 
   #content {
-    padding: 8em 1em;
+    padding: 8em 1em 14em 1em;
   }
 
   .control {
     width: 2.5em;
   }
 
-  #footer a {
-    padding: 0 0.2em;
-  }
-
   #footer {
-    text-align: center;
+    padding: 1em 0;
+    height: 6em;
+    line-height: 2em;
+
   }
 
-  #footer-info {
-    float: none;
+  #footer a {
+    display: block;
   }
+
 }
