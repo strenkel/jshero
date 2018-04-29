@@ -4,9 +4,8 @@ jshero.koans.add({
 
   title: "Logging",
 
-  lesson: `Wenn man Programme schreibt, laufen die Dinge manchmal nicht so wie man will.
-Es kommt nicht das gewünschte Ergebnis heraus und man weiß nicht warum.
-Eine Möglichkeit hier weiter zu kommen ist das <a href="https://de.wikipedia.org/wiki/Logging">Loggen</a>.
+  lesson: `Programmieren beinhaltet immer auch die Suche nach Fehlern.
+Eine Möglichkeit Fehler zu finden ist das <a href="https://de.wikipedia.org/wiki/Logging">Loggen</a>.
 Man macht während der Programmausführung gezielte Ausgaben.
 In JavaScript verwendet man dafür die Funktion <code>console.log</code>:
 
