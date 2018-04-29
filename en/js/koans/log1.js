@@ -28,7 +28,7 @@ If you are working with a desktop browser, open the developer tools to see the o
 
   beforeTests: function() {
     if (typeof log !== "undefined") {
-      logge = undefined;
+      log = undefined;
     }
   },
 

@@ -10,6 +10,7 @@ jshero.koans.initReorder(
     'parameter',
     'string',
     'log1',
+    'log2',
     'stringlength',
     'stringupper',
     'stringcharat',
