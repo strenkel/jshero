@@ -385,7 +385,7 @@ a.link-button:hover {
   }
 
   #content {
-    padding: 8em 1em 16em 1em;
+    padding: 8em 1em 17em 1em;
   }
 
   .control {
@@ -393,7 +393,7 @@ a.link-button:hover {
   }
 
   #footer {
-    padding: 1em 0;
+    padding: 1.5em 0;
     height: 8em;
     line-height: 2em;
   }
