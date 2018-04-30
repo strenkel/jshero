@@ -26,7 +26,6 @@ jshero.date = (function() {
    */
   var toString = function(date, format) {
 
-
     if (format.utc) {
       return date.toLocaleString("de-DE", { "timeZone": "UTC" }) + " UTC";
     }
