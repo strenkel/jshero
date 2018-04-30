@@ -33,7 +33,7 @@ The loop condition <code>3 < 3</code> is no longer fulfilled. The loop is termin
 Our code example has added all natural numbers smaller than 3.`,
 
   task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers smaller than the parameter.
-The result is to be returned. <code>addTo(4)</code> should return <code>6</code>.`,
+The result is to be returned. <code>addTo(4)</code> should return <code>1+2+3</code> = <code>6</code>.`,
 
   beforeTests: function() {
     addTo = undefined;

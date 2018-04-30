@@ -35,7 +35,7 @@ Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.`,
 
   task: `Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die
 alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
-<code>addiereBis(4)</code> sollte <code>6</code> ergeben.`,
+<code>addiereBis(4)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
 
   beforeTests: function() {
     if (typeof addiereBis !== "undefined") {
