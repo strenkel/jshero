@@ -26,13 +26,13 @@ dann den Wert <code>"grün"</code>.`,
   },
 
   tests: [
-      function() {
-        return jshero.testutil.assert_isFunction('hallo');
-      },
+    function() {
+      return jshero.testutil.assert_isFunction('hallo');
+    },
 
-      function() {
-        return jshero.testutil.assert_functionReturns('hallo()', "Hallo Welt!");
-      }
+    function() {
+      return jshero.testutil.assert_functionReturns('hallo()', "Hallo Welt!");
+    }
   ]
 
 });
