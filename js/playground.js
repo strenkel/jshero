@@ -5,6 +5,10 @@
   var exampleLink = document.getElementById("show-example");
 
   var runCode = function() {
+
+    // see main.js method testCode
+    testButton.focus();
+
     msg.clear();
     var code = codeArea.get();
     if (code.length === 0) {
@@ -28,6 +32,9 @@
       }
     }
     util.scrollToBottom();
+
+    // see main.js method testCode
+    return false;
   };
 
   var showExample = function() {
