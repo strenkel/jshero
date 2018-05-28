@@ -20,7 +20,7 @@ if (typeof jshero === "undefined") {
    */
   console.log = function() {
     logs.push(arguments[0]);
-    origConsoleLog.apply(null, arguments);
+    origConsoleLog.apply(console, arguments);
   }
 
   /**

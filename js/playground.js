@@ -5,6 +5,10 @@
   var exampleLink = document.getElementById("show-example");
 
   var runCode = function() {
+
+    // see main.js method testCode
+    testButton.focus();
+
     msg.clear();
     var code = codeArea.get();
     if (code.length === 0) {
@@ -19,7 +23,7 @@
         if (logs.length > 0) {
           msg.log("", true, null, logs);
         } else {
-          var message = "Benutze <code>jshero.log</code> zur Ausgabe!";
+          var message = "Benutze <code>console.log</code> zur Ausgabe!";
           msg.log(message, false);
         }
       } catch (e) {
@@ -28,6 +32,9 @@
       }
     }
     util.scrollToBottom();
+
+    // see main.js method testCode
+    return false;
   };
 
   var showExample = function() {
