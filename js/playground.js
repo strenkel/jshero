@@ -1,4 +1,4 @@
-(function(msg, codeArea, util, storage, i18n) {
+(function(msg, codeArea, util, storage, I18N) {
 
   var testButton = document.getElementById("test-button");
   var clearButton = document.getElementById("clear-button");
@@ -12,7 +12,7 @@
     msg.clear();
     var code = codeArea.get();
     if (code.length === 0) {
-      msg.log(i18n("writeCode"), false);
+      msg.log(I18N("writeCode"), false);
       storage.removePlaygroundCode();
     } else {
       storage.setPlaygroundCode(code);

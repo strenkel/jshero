@@ -4,8 +4,9 @@ if (typeof jshero === "undefined") {
 
 /**
  * Write messages and controls in the messages-Element.
+ * Singleton.
  */
-jshero.message = (function(i18n) {
+jshero.message = (function(I18N) {
 
   var messageRoot = document.getElementById('messages');
 
@@ -33,14 +34,13 @@ jshero.message = (function(i18n) {
       errormessage = errormessage + e; // converts e to String
       if (e.lineNumber != null && e.columnNumber != null) {
         // mozilla
-        errormessage = errormessage + " (" + i18n("line") + ": " + e.lineNumber + ", " + i18n("column") + ": " + e.columnNumber + ")";
+        errormessage = errormessage + " (" + I18N("line") + ": " + e.lineNumber + ", " + I18N("column") + ": " + e.columnNumber + ")";
       } else if (e.line != null) {
         // safari
         errormessage = errormessage + " (Zeile: " + e.line + ")";
       }
       errormessage = errormessage + ". ";
     }
-
 
     var messageElm = document.createElement('div');
     messageElm.innerHTML = errormessage + message;
@@ -59,7 +59,7 @@ jshero.message = (function(i18n) {
   var goto = function(url) {
     var link = document.createElement('a');
     link.href = url;
-    link.innerHTML = i18n("goon");
+    link.innerHTML = I18N("goon");
     link.className = "link-button";
     messageRoot.appendChild(link);
     link.focus();

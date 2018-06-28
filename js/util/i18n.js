@@ -2,9 +2,26 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
+/**
+ * Singleton.
+ */
 jshero.i18n = (function() {
 
-  var dictionary_de = {
+  var dic;
+
+  /**
+   * @param {String} lang, e.g. "de", "en" 
+   */
+  var setLanguage = function(language) {
+    if (language === "de") {
+      dic = dic_de;
+    } else {
+      dic = dic_en;
+    }
+  };
+
+  var dic_de = {
+
     writeCode: "Schreibe deinen Code in das Eingabefeld.",
     noSyntaxError: "Code erfolgreich eingelesen.",
     testError: "Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!",
@@ -32,7 +49,8 @@ jshero.i18n = (function() {
     functionReturnsWrongType: "<code>%0</code> gibt kein %1-Objekt zurück."
   };
 
-  var dictionary_en = {
+  var dic_en = {
+
     writeCode: "Write your code in the input field.",
     noSyntaxError: "Reading your code successfully.",
     testError: "Test-Error! Correct the error and re-run the tests!",
@@ -60,23 +78,12 @@ jshero.i18n = (function() {
     functionReturnsWrongType: "<code>%0</code> does not return a %1-objekt."
   };
 
-  var getLang = function() {
-    return document.URL.indexOf("/en/") === -1 ? "de" : "en";
-  };
-
   var get = function(key) {
-    return getDictionary()[key];
-  };
-
-  var getDictionary = function() {
-    if (getLang() === "de") {
-      return dictionary_de;
-    }
-    return dictionary_en;
+    return dic[key];
   };
 
   return {
-    getLang: getLang,
+    setLanguage: setLanguage,
     get: get
   };
 

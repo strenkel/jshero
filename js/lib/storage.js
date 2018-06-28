@@ -7,7 +7,7 @@ if (typeof jshero === "undefined") {
 // Therefore (and due to other reasons) it is recomended to redirect non-www to www (or vice versa).
 // See: https://stackoverflow.com/questions/12050590/redirect-non-www-to-www-in-htaccess
 
-jshero.storage = (function(lang) {
+jshero.storage = (function(LANGUAGE) {
 
   // --- handle solutions ---
 
@@ -103,8 +103,8 @@ jshero.storage = (function(lang) {
    */
   var getKey = function(prefix, id) {
     var key = prefix;
-    if (lang !== "de") {
-      key = key + "_" + lang;
+    if (LANGUAGE !== "de") {
+      key = key + "_" + LANGUAGE;
     }
     if (id) {
       key = key + "_" + id;
@@ -151,4 +151,4 @@ jshero.storage = (function(lang) {
     removePlaygroundCode: removePlaygroundCode,
   };
 
-})(jshero.i18n.getLang());
+})(jshero.language.LANGUAGE);

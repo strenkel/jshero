@@ -1,4 +1,7 @@
-(function(msg, koans, header, codeArea, util, i18n, lang) {
+(function(msg, koans, header, codeArea, util, i18n, LANGUAGE) {
+
+  i18n.setLanguage(LANGUAGE);
+  var I18N = i18n.get;
 
   /**
    * Cross Browser global eval. In particular for IE8.
@@ -54,7 +57,7 @@
 
     if (koans.hasPrev()) {
       prevButton.href = "main.html?koan=" + koans.prevId();
-    } else if (lang === "de") {
+    } else if (LANGUAGE === "de") {
       prevButton.href = "intro.html";
     } else {
       prevButton.href = "home.html";
@@ -89,7 +92,7 @@
         } catch (exc) {
           result = {
             ok: false,
-            msg: i18n("unknownError"),
+            msg: I18N("unknownError"),
             e: exc
           };
         }
@@ -110,12 +113,12 @@
     if (okAll) {
       koan.setSolution(code);
       header.toGreen();
-      msg.log(i18n("testsPassed"), true);
+      msg.log(I18N("testsPassed"), true);
       msg.goto(nextPageUrl());
     } else {
       koan.setShot(code);
       header.toRed();
-      msg.log(i18n("testError"), false);
+      msg.log(I18N("testError"), false);
     }
     util.scrollToBottom();
 
@@ -128,16 +131,16 @@
   var readCode = function() {
     var code = codeArea.get();
     if (code.length === 0) {
-      msg.log(i18n("writeCode"), false);
+      msg.log(I18N("writeCode"), false);
       return false;
     }
     try {
       jshero.clearLogs();
       globalEval(code);
-      msg.log(i18n("noSyntaxError"), true, null, jshero.getLogs());
+      msg.log(I18N("noSyntaxError"), true, null, jshero.getLogs());
       return true;
     } catch (e) {
-      msg.log(i18n("syntaxError"), false, e, jshero.getLogs());
+      msg.log(I18N("syntaxError"), false, e, jshero.getLogs());
       return false;
     }
   };
@@ -146,5 +149,10 @@
   testButton.ontouchstart = testCode;
   window.onload = write;
 
-})(jshero.message, jshero.koans, jshero.header, jshero.code, jshero.util, jshero.i18n.get, jshero.i18n.getLang());
-
+})(jshero.message,
+  jshero.koans,
+  jshero.header,
+  jshero.code,
+  jshero.util,
+  jshero.i18n,
+  jshero.language.LANGUAGE);
