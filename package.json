@@ -19,7 +19,6 @@
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
-    "escape-html": "^1.0.3"
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0"
   }
 }
