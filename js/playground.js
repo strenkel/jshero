@@ -1,4 +1,7 @@
-(function(msg, codeArea, util, storage, I18N) {
+(function(msg, codeArea, util, storage, i18n, LANGUAGE) {
+
+  i18n.setLanguage(LANGUAGE);
+  var I18N = i18n.get;
 
   var testButton = document.getElementById("test-button");
   var clearButton = document.getElementById("clear-button");
@@ -66,4 +69,4 @@
 
   window.onload = insertCodeFromStorage;
 
-})(jshero.message, jshero.code, jshero.util, jshero.storage, jshero.i18n.get);
+})(jshero.message, jshero.code, jshero.util, jshero.storage, jshero.i18n, jshero.language.LANGUAGE);
