@@ -82,4 +82,9 @@
 
   window.onload = insertCodeFromStorage;
 
-})(jshero.message, jshero.code, jshero.util, jshero.storage, jshero.i18n, jshero.language.LANGUAGE);
+})(jshero.message,
+  jshero.code,
+  jshero.util,
+  jshero.storage,
+  jshero.i18n,
+  jshero.language.LANGUAGE);
