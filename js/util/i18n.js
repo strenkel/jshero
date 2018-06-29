@@ -9,17 +9,6 @@ jshero.i18n = (function() {
 
   var dic;
 
-  /**
-   * @param {String} lang, e.g. "de", "en" 
-   */
-  var setLanguage = function(language) {
-    if (language === "de") {
-      dic = dic_de;
-    } else {
-      dic = dic_en;
-    }
-  };
-
   var dic_de = {
 
     writeCode: "Schreibe deinen Code in das Eingabefeld.",
@@ -78,11 +67,22 @@ jshero.i18n = (function() {
     functionReturnsWrongType: "<code>%0</code> does not return a %1-objekt."
   };
 
+  dic = dic_en; // default
+
+  /**
+     * @param {String} lang, e.g. "de", "en" 
+     */
+  var setLanguage = function(language) {
+    if (language === "de") {
+      dic = dic_de;
+    } else {
+      dic = dic_en;
+    }
+  };
+
   var get = function(key) {
     return dic[key];
   };
-
-  dic = dic_en;
 
   return {
     setLanguage: setLanguage,
