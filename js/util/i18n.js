@@ -82,6 +82,8 @@ jshero.i18n = (function() {
     return dic[key];
   };
 
+  dic = dic_en;
+
   return {
     setLanguage: setLanguage,
     get: get
