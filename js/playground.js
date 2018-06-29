@@ -12,7 +12,10 @@
     msg.clear();
     var code = codeArea.get();
     if (code.length === 0) {
-      msg.log(I18N("writeCode"), false);
+      msg.log({
+        ok: false,
+        msg: I18N("writeCode")
+      });
       storage.removePlaygroundCode();
     } else {
       storage.setPlaygroundCode(code);
@@ -21,14 +24,24 @@
         eval(code);
         var logs = jshero.getLogs();
         if (logs.length > 0) {
-          msg.log("", true, null, logs);
+          msg.log({
+            ok: true,
+            logs: logs
+          });
         } else {
           var message = "Benutze <code>console.log</code> zur Ausgabe!";
-          msg.log(message, false);
+          msg.log({
+            ok: false,
+            msg: message
+          });
         }
       } catch (e) {
-        var logs = jshero.getLogs();
-        msg.log("Fehler beim Ausführen des Codes!", false, e, logs);
+        msg.log({
+          ok: false,
+          msg: "Fehler beim Ausführen des Codes!",
+          e: e,
+          logs: jshero.getLogs()
+        });
       }
     }
     util.scrollToBottom();

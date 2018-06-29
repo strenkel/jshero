@@ -13,44 +13,22 @@ jshero.message = (function(I18N) {
   /**
    * Write a message-Element.
    *
-   * @param message, String
-   * @param type, Boolean, the color of the message, true: green, false: red
-   * @param e, Exception
-   * @param logs, [String]
+   * @param testResult: {
+   *   ok {Boolean}, // true = passed test
+   *   logs {[String]}, // log messages
+   *   e {Exception} // the compiler exception in case of an error
+   *   msg {String} // the i18n message
+   * }
    */
-  var log = function(message, type, e, logs) {
+  var log = function(testResult) {
 
-    logs = logs || [];
-    var logsElm = document.createElement('div');
-    logsElm.id = "logs";
-    for (var i = 0, l = logs.length; i < l; i++) {
-      var logElm = document.createElement('div');
-      logElm.innerHTML = "> " + logs[i];
-      logsElm.appendChild(logElm);
-    }
+    var errormessage = createErrorMessage(testResult.e);
+    var baseMessageElm = createBaseMessageElm(errormessage, testResult.msg);
+    var logsElm = createLogsElm(testResult.logs);
+    var messageElm = createMessageElm(logsElm, baseMessageElm);
 
-    var errormessage = "";
-    if (e) {
-      errormessage = errormessage + e; // converts e to String
-      if (e.lineNumber != null && e.columnNumber != null) {
-        // mozilla
-        errormessage = errormessage + " (" + I18N("line") + ": " + e.lineNumber + ", " + I18N("column") + ": " + e.columnNumber + ")";
-      } else if (e.line != null) {
-        // safari
-        errormessage = errormessage + " (Zeile: " + e.line + ")";
-      }
-      errormessage = errormessage + ". ";
-    }
-
-    var messageElm = document.createElement('div');
-    messageElm.innerHTML = errormessage + message;
-    var paragraph = document.createElement('p');
-    if (logs.length > 0) {
-      paragraph.appendChild(logsElm);
-    }
-    paragraph.appendChild(messageElm);
-    paragraph.className = type ? 'green' : 'red';
-    messageRoot.appendChild(paragraph);
+    messageElm.className = testResult.ok ? 'green' : 'red';
+    messageRoot.appendChild(messageElm);
   };
 
   /**
@@ -72,6 +50,57 @@ jshero.message = (function(I18N) {
     messageRoot.innerHTML = "";
   };
 
+  // --- private functions ---
+
+  var createLogsElm = function(logs) {
+    logs = logs || [];
+    if (logs.length > 0) {
+      var logsElm = document.createElement('div');
+      logsElm.id = "logs";
+      for (var i = 0, l = logs.length; i < l; i++) {
+        var logElm = document.createElement('div');
+        logElm.innerHTML = "> " + logs[i];
+        logsElm.appendChild(logElm);
+      }
+      return logsElm;
+    }
+    return null;
+  };
+
+  var createErrorMessage = function(e) {
+    var errormessage = "";
+    if (e) {
+      errormessage = errormessage + e; // converts e to String
+      if (e.lineNumber != null && e.columnNumber != null) {
+        // mozilla
+        errormessage = errormessage + " (" + I18N("line") + ": " + e.lineNumber +
+          ", " + I18N("column") + ": " + e.columnNumber + ")";
+      }
+      else if (e.line != null) {
+        // safari
+        errormessage = errormessage + " (Zeile: " + e.line + ")";
+      }
+      errormessage = errormessage + ". ";
+    }
+    return errormessage;
+  };
+
+  var createBaseMessageElm = function(errormessage, message) {
+    message = message || "";
+    var baseMessageElm = document.createElement('div');
+    baseMessageElm.innerHTML = errormessage + message;
+    return baseMessageElm;
+  };
+
+  var createMessageElm = function(logsElm, baseMessageElm) {
+    var messageElm = document.createElement('p');
+    if (logsElm) {
+      messageElm.appendChild(logsElm);
+    }
+    messageElm.appendChild(baseMessageElm);
+    return messageElm;
+  };
+
   return {
     log: log,
     goto: goto,
@@ -79,3 +108,4 @@ jshero.message = (function(I18N) {
   };
 
 })(jshero.i18n.get);
+

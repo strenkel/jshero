@@ -96,7 +96,8 @@
             e: exc
           };
         }
-        msg.log(result.msg, result.ok, result.e, jshero.getLogs());
+        result.logs = jshero.getLogs();
+        msg.log(result);
         if (!result.ok) {
           okAll = false;
           break;
@@ -113,12 +114,18 @@
     if (okAll) {
       koan.setSolution(code);
       header.toGreen();
-      msg.log(I18N("testsPassed"), true);
+      msg.log({
+        ok: true,
+        msg: I18N("testsPassed")
+      });
       msg.goto(nextPageUrl());
     } else {
       koan.setShot(code);
       header.toRed();
-      msg.log(I18N("testError"), false);
+      msg.log({
+        ok: false,
+        msg: I18N("testError")
+      });
     }
     util.scrollToBottom();
 
@@ -131,16 +138,28 @@
   var readCode = function() {
     var code = codeArea.get();
     if (code.length === 0) {
-      msg.log(I18N("writeCode"), false);
+      msg.log({
+        ok: false,
+        msg: I18N("writeCode")
+      });
       return false;
     }
     try {
       jshero.clearLogs();
       globalEval(code);
-      msg.log(I18N("noSyntaxError"), true, null, jshero.getLogs());
+      msg.log({
+        ok: true,
+        msg: I18N("noSyntaxError"),
+        logs: jshero.getLogs()
+      });
       return true;
     } catch (e) {
-      msg.log(I18N("syntaxError"), false, e, jshero.getLogs());
+      msg.log({
+        ok: false,
+        msg: I18N("syntaxError"),
+        e: e,
+        logs: jshero.getLogs()
+      });
       return false;
     }
   };
