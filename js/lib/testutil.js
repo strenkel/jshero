@@ -211,10 +211,10 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
       } else {
         if (ok) {
           msg = jsheroUtil.formatMessage(I18N("functionReturns"),
-            [f_call, escapeHtml(JSON.stringify(expectedReturnValue))]);
+            [escapeHtml(f_call), escapeHtml(JSON.stringify(expectedReturnValue))]);
         } else {
           msg = jsheroUtil.formatMessage(I18N("functionNotReturns"),
-            [f_call, escapeHtml(JSON.stringify(expectedReturnValue)), escapeHtml(JSON.stringify(result))]);
+            [escapeHtml(f_call), escapeHtml(JSON.stringify(expectedReturnValue)), escapeHtml(JSON.stringify(result))]);
         }
       }
     } catch (exc) {
