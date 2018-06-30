@@ -1,2 +1,1 @@
-Text is released under the GNU Free Documentation License, Version 1.3 (https://www.gnu.org/licenses/fdl-1.3.en.html).
-Code is released under the GNU Affero General Public License, Version 3 (https://www.gnu.org/licenses/agpl-3.0.en.html).
+Released under the GNU Affero General Public License, Version 3 (https://www.gnu.org/licenses/agpl-3.0.en.html).
