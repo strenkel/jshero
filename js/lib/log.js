@@ -4,19 +4,23 @@ if (typeof jshero === "undefined") {
 
 /**
  * Override console.log to test the logging and show it in the test output.
+ * Original console.log is unchanged.
  */
-(function() {
+jshero.log = (function() {
 
   var logs = [];
 
   if (typeof console === "undefined") {
-    console = { log: function() { } };
+    console = {
+      log: function() { }
+    };
   }
 
   var origConsoleLog = console.log;
 
   /**
    * console.log for usage in exercise code.
+   * Handles the the first argument for test output.
    */
   console.log = function() {
     logs.push(arguments[0]);
@@ -26,41 +30,40 @@ if (typeof jshero === "undefined") {
   /**
    * For usage in exercise code.
    *
-   * @param log, String
-   * @deprecated use console.log in exercise code
+   * @deprecated use console.log
    */
   jshero.log = function(log) {
     logs.push(log);
   };
 
-  /**
-   * For usage in management-code.
-   */
-  jshero.clearLogs = function() {
+  var clear = function() {
     logs = [];
   };
 
-  /**
-   * For usage in management-code.
-   */
-  jshero.getLogs = function() {
+  var getAll = function() {
     return logs;
   };
 
   /**
    * Tests whether log was loggt.
-   * For usage in management-code.
    *
    * @param {*} log
    * @returns true | false
    */
-  jshero.hasLog = function(log) {
-     for (var i =0, l = logs.length; i < l ; i++) {
-       if (logs[i] === log) {
-         return true;
-       }
-     }
-     return false;
-  }
+  var hasLog = function(log) {
+    for (var i = 0, l = logs.length; i < l; i++) {
+      if (logs[i] === log) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  // For usage in management-code.
+  return {
+    getAll: getAll,
+    clear: clear,
+    hasLog: hasLog
+  };
 
 })();

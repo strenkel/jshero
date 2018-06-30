@@ -42,7 +42,7 @@ If you are working with a desktop browser, open the developer tools to see the o
       var ok, msg, e;
       try {
         log();
-        if (jshero.hasLog("Hello Console!")) {
+        if (jshero.log.hasLog("Hello Console!")) {
           ok = true;
           msg = '<code>log()</code> is logging <code>"Hello Console!"</code>.';
         } else {

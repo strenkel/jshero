@@ -19,6 +19,10 @@ jshero.code = (function() {
     adjustCodeAreaHeight();
   };
 
+  var clear = function() {
+    set("");
+  };
+
   var adjustCodeAreaHeight = function() {
     if (codeArea.scrollHeight > codeArea.clientHeight) {
       codeArea.rows = codeArea.rows + 5;
@@ -30,7 +34,8 @@ jshero.code = (function() {
 
   return {
     get: get,
-    set: set
+    set: set,
+    clear: clear
   }
 
 })();

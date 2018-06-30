@@ -1,4 +1,4 @@
-(function(msg, koans, header, codeArea, util, i18n, LANGUAGE) {
+(function(msg, koans, header, codeArea, log, util, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
@@ -86,7 +86,7 @@
       okAll = true;
       var tests = koan.tests;
       for (var i = 0, l = tests.length; i < l; i++) {
-        jshero.clearLogs();
+        log.clear();
         try {
           result = tests[i]();
         } catch (exc) {
@@ -96,7 +96,7 @@
             e: exc
           };
         }
-        result.logs = jshero.getLogs();
+        result.logs = log.getAll();
         msg.log(result);
         if (!result.ok) {
           okAll = false;
@@ -145,12 +145,12 @@
       return false;
     }
     try {
-      jshero.clearLogs();
+      log.clear();
       globalEval(code);
       msg.log({
         ok: true,
         msg: I18N("noSyntaxError"),
-        logs: jshero.getLogs()
+        logs: log.getAll()
       });
       return true;
     } catch (e) {
@@ -158,7 +158,7 @@
         ok: false,
         msg: I18N("syntaxError"),
         e: e,
-        logs: jshero.getLogs()
+        logs: log.getAll()
       });
       return false;
     }
@@ -172,6 +172,7 @@
   jshero.koans,
   jshero.header,
   jshero.code,
+  jshero.log,
   jshero.util,
   jshero.i18n,
   jshero.language.LANGUAGE);

@@ -1,4 +1,4 @@
-(function(msg, codeArea, util, storage, i18n, LANGUAGE) {
+(function(msg, codeArea, util, storage, log, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
@@ -23,9 +23,9 @@
     } else {
       storage.setPlaygroundCode(code);
       try {
-        jshero.clearLogs();
-        eval(code);
-        var logs = jshero.getLogs();
+        log.clear();
+        evalCode(code);
+        var logs = log.getAll();
         if (logs.length > 0) {
           msg.log({
             ok: true,
@@ -43,7 +43,7 @@
           ok: false,
           msg: "Fehler beim Ausführen des Codes!",
           e: e,
-          logs: jshero.getLogs()
+          logs: log.getAll()
         });
       }
     }
@@ -51,6 +51,16 @@
 
     // see main.js method testCode
     return false;
+  };
+
+  /**
+   * Eval code in separate function scope.
+   * So we can't overwrite variables in management code with test code.
+   * 
+   * @param {String} code 
+   */
+  var evalCode = function(code) {
+    eval(code);
   };
 
   var showExample = function() {
@@ -68,7 +78,8 @@
 
   var clearCode = function() {
     storage.removePlaygroundCode();
-    codeArea.set("");
+    codeArea.clear();
+    msg.clear();
   }
 
   testButton.onclick = runCode;
@@ -86,5 +97,6 @@
   jshero.code,
   jshero.util,
   jshero.storage,
+  jshero.log,
   jshero.i18n,
   jshero.language.LANGUAGE);

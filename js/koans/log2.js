@@ -35,7 +35,7 @@ Der Aufruf von <code>logge("Ken Thompson")</code> sollte <code>"Ken Thompson"</c
       var ok, msg, e;
       try {
         logge("Ken Thompson");
-        if (jshero.hasLog("Ken Thompson")) {
+        if (jshero.log.hasLog("Ken Thompson")) {
           ok = true;
           msg = '<code>logge("Ken Thompson")</code> loggt <code>"Ken Thompson"</code>.';
         } else {
@@ -58,7 +58,7 @@ Der Aufruf von <code>logge("Ken Thompson")</code> sollte <code>"Ken Thompson"</c
       var ok, msg, e;
       try {
         logge("Dennis Ritchie");
-        if (jshero.hasLog("Dennis Ritchie")) {
+        if (jshero.log.hasLog("Dennis Ritchie")) {
           ok = true;
           msg = '<code>logge("Dennis Ritchie")</code> loggt <code>"Dennis Ritchie"</code>.';
         } else {

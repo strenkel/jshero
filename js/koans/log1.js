@@ -41,7 +41,7 @@ Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, 
       var ok, msg, e;
       try {
         logge();
-        if (jshero.hasLog("Hallo Konsole!")) {
+        if (jshero.log.hasLog("Hallo Konsole!")) {
           ok = true;
           msg = '<code>logge()</code> loggt <code>"Hallo Konsole!"</code>.';
         } else {

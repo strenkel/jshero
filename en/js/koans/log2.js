@@ -35,7 +35,7 @@ The console outputs <code>"Ken Thompson"</code>.`,
       var ok, msg, e;
       try {
         log("Ken Thompson");
-        if (jshero.hasLog("Ken Thompson")) {
+        if (jshero.log.hasLog("Ken Thompson")) {
           ok = true;
           msg = '<code>log("Ken Thompson")</code> is logging <code>"Ken Thompson"</code>.';
         } else {
@@ -58,7 +58,7 @@ The console outputs <code>"Ken Thompson"</code>.`,
       var ok, msg, e;
       try {
         log("Dennis Ritchie");
-        if (jshero.hasLog("Dennis Ritchie")) {
+        if (jshero.log.hasLog("Dennis Ritchie")) {
           ok = true;
           msg = '<code>log("Dennis Ritchie")</code> is logging <code>"Dennis Ritchie"</code>.';
         } else {

@@ -38,7 +38,7 @@ jshero.koans.add({
       var ok, msg, e;
       try {
         rufe("Werder");
-        if (jshero.hasLog("WerderWerder")) {
+        if (jshero.log.hasLog("WerderWerder")) {
           ok = true;
           msg = '<code>rufe("Werder")</code> loggt <code>"WerderWerder"</code>.';
         } else {
@@ -61,7 +61,7 @@ jshero.koans.add({
       var ok, msg, e;
       try {
         rufe("Kickers");
-        if (jshero.hasLog("KickersKickers")) {
+        if (jshero.log.hasLog("KickersKickers")) {
           ok = true;
           msg = '<code>rufe("Kickers")</code> loggt <code>"KickersKickers"</code>.';
         } else {
