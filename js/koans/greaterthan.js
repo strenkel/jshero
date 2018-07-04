@@ -5,7 +5,7 @@ jshero.koans.add({
   title: 'Zahlen vergleichen',
 
   lesson: `Zahlen kann man mit den aus der Mathematik bekannten Zeichen
-<code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> und <code>&gt;=</code>
+<code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code> und <code>&lt;=</code>
 auf größer, größer gleich, kleiner und kleiner gleich vergleichen.
 Im folgenden Beispiel liefern alle Ausdrücke den Wert <code>true</code>:
 <pre><code>var v1 = 5 > 4;
