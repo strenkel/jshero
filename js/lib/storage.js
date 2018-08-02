@@ -26,11 +26,13 @@ jshero.storage = (function(LANGUAGE) {
 
   // --- handle shots ---
 
-  var setShot = function(koan, solution) {
-    if (solution) {
-      setItem(getShotKey(koan), solution);
-    } else {
-      removeShot(koan);
+  var setShot = function(koan, shot) {
+    if (!hasSolution(koan)) {
+      if (shot) {
+        setItem(getShotKey(koan), shot);
+      } else {
+        removeShot(koan);
+      }
     }
   };
 
@@ -55,8 +57,6 @@ jshero.storage = (function(LANGUAGE) {
   var removePlaygroundCode = function(code) {
     removeItem(getPlaygroundKey());
   };
-
-
 
   // --- private methods ---
 
@@ -83,7 +83,6 @@ jshero.storage = (function(LANGUAGE) {
       }
     }
   };
-
 
   var getSolutionKey = function(koan) {
     return getKey("solution", koan.id);
@@ -135,6 +134,10 @@ jshero.storage = (function(LANGUAGE) {
       // nothing to do
     }
   };
+
+  var hasSolution = function(koan) {
+    return getSolution(koan) != null;
+  }
 
   // Code
   checkLocalStorage();
