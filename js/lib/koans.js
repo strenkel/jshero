@@ -32,7 +32,7 @@ jshero.koans = (function(storage) {
 
     if (idArray.length !== koans.length) {
       // This should not happend in production.
-      console.log("Koans-Order-Array length unequal to Koans length.");
+      console.log("ERROR: Koans-Order-Array length unequal to Koans length!");
     }
 
     var koan;
@@ -47,6 +47,8 @@ jshero.koans = (function(storage) {
       koan = koansIdMap[idArray[i]];
       if (koan != null) {
         koans.push(koan);
+      } else {
+        console.log("ERROR: No koan for koan-Id in order array!");
       }
     }
   }
