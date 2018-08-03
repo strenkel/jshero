@@ -2,24 +2,12 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-jshero.koans = (function(storage) {
+jshero.koans = (function() {
 
   var index = 0;
   var koans = [];
 
   var add = function(koan) {
-    koan.setSolution = function(solution) {
-      storage.setSolution(koan, solution);
-    };
-    koan.getSolution = function() {
-      return storage.getSolution(koan);
-    };
-    koan.setShot = function(solution) {
-      storage.setShot(koan, solution);
-    };
-    koan.getShot = function() {
-      return storage.getShot(koan);
-    };
     koans.push(koan);
   };
 
@@ -92,14 +80,6 @@ jshero.koans = (function(storage) {
     return koans;
   };
 
-  var clearSolutions = function() {
-    for (var i = 0, l = koans.length; i < l; i++) {
-      var koan = koans[i];
-      storage.removeSolution(koan);
-      storage.removeShot(koan);
-    }
-  };
-
   // --- private methods ---
 
   var getKoanIdFromUrl = function() {
@@ -133,8 +113,7 @@ jshero.koans = (function(storage) {
     getKoan: getKoan,
     setIndexByUrl: setIndexByUrl,
     getIndex: getIndex,
-    getKoans: getKoans,
-    clearSolutions: clearSolutions
+    getKoans: getKoans
   };
 
-})(jshero.storage);
+})();

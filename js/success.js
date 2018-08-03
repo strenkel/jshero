@@ -1,4 +1,4 @@
-(function(koans, util) {
+(function(koans, storage, util) {
 
   // --- write koans ---
 
@@ -14,7 +14,7 @@
   function writeKoan(koan, i) {
     var elm = document.createElement("a");
     elm.innerHTML = (i + 1) + ". " + koan.title;
-    if (koan.getSolution()) {
+    if (storage.getSolution(koan)) {
       elm.className = "green";
     } else {
       elm.className = "red";
@@ -47,7 +47,7 @@
   };
 
   function resetKoans() {
-    koans.clearSolutions();
+    storage.clearSolutions(koans.getKoans());
     rootElm.innerHTML = "";
     write();
   };
@@ -62,4 +62,4 @@
     resetConfiramtionRoot.style.display = "none";
   };
 
-})(jshero.koans, jshero.util);
+})(jshero.koans, jshero.storage, jshero.util);

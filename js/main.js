@@ -1,4 +1,4 @@
-(function(msg, koans, header, codeArea, log, util, i18n, LANGUAGE) {
+(function(msg, koans, header, codeArea, log, util, storage, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
@@ -43,12 +43,12 @@
     document.getElementById("koans-lesson").innerHTML = koan.lesson;
     document.getElementById("koans-task").innerHTML = koan.task;
 
-    var solution = koan.getSolution();
+    var solution = storage.getSolution(koan);
     if (solution) {
       codeArea.set(solution);
       header.toGreen();
     } else {
-      var shot = koan.getShot();
+      var shot = storage.getShot(koan);
       if (shot) {
         codeArea.set(shot);
       }
@@ -112,7 +112,7 @@
 
     var code = codeArea.get();
     if (okAll) {
-      koan.setSolution(code);
+      storage.setSolution(koan, code);
       header.toGreen();
       msg.log({
         ok: true,
@@ -120,7 +120,7 @@
       });
       msg.goto(nextPageUrl());
     } else {
-      koan.setShot(code);
+      storage.setShot(koan, code);
       header.toRed();
       msg.log({
         ok: false,
@@ -174,5 +174,6 @@
   jshero.code,
   jshero.log,
   jshero.util,
+  jshero.storage,
   jshero.i18n,
   jshero.language.LANGUAGE);

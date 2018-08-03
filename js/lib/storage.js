@@ -11,6 +11,12 @@ jshero.storage = (function(LANGUAGE) {
 
   // --- handle solutions ---
 
+  /**
+   * Save the correct solution.
+   * 
+   * @param {Koan} koan not null
+   * @param {String} solution not null, not empty 
+   */
   var setSolution = function(koan, solution) {
     setItem(getSolutionKey(koan), solution);
     removeShot(koan);
@@ -26,8 +32,14 @@ jshero.storage = (function(LANGUAGE) {
 
   // --- handle shots ---
 
+  /**
+   * Save a shot.
+   * 
+   * @param {Koan} koan not null
+   * @param {String} shot can be null or empty 
+   */
   var setShot = function(koan, shot) {
-    if (!hasSolution(koan)) {
+    if (!getSolution(koan)) {
       if (shot) {
         setItem(getShotKey(koan), shot);
       } else {
@@ -42,6 +54,16 @@ jshero.storage = (function(LANGUAGE) {
 
   var removeShot = function(koan) {
     removeItem(getShotKey(koan));
+  };
+
+  // --- clear koans ---
+
+  var clearSolutions = function(koans) {
+    for (var i = 0, l = koans.length; i < l; i++) {
+      var koan = koans[i];
+      removeSolution(koan);
+      removeShot(koan);
+    }
   };
 
   // --- handle playground ---
@@ -135,10 +157,6 @@ jshero.storage = (function(LANGUAGE) {
     }
   };
 
-  var hasSolution = function(koan) {
-    return getSolution(koan) != null;
-  }
-
   // Code
   checkLocalStorage();
 
@@ -149,6 +167,7 @@ jshero.storage = (function(LANGUAGE) {
     setShot: setShot,
     getShot: getShot,
     removeShot: removeShot,
+    clearSolutions: clearSolutions,
     setPlaygroundCode: setPlaygroundCode,
     getPlaygroundCode: getPlaygroundCode,
     removePlaygroundCode: removePlaygroundCode,
