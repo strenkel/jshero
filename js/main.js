@@ -1,4 +1,4 @@
-(function(msg, koans, header, codeArea, log, util, storage, i18n, LANGUAGE) {
+(function(msg, actualKoan, header, codeArea, log, util, storage, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
@@ -35,9 +35,8 @@
    * Setzt die Links fuer vorherige und naechste Seite.
    */
   var write = function() {
-    koans.setIndexByUrl();
-    var koan = koans.getKoan();
-    document.getElementById("koans-title").innerHTML = (koans.getIndex() + 1) + ". " + koan.title;
+    var koan = actualKoan.getKoan();
+    document.getElementById("koans-title").innerHTML = (actualKoan.getIndex() + 1) + ". " + koan.title;
 
     // IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements!
     document.getElementById("koans-lesson").innerHTML = koan.lesson;
@@ -55,19 +54,23 @@
       header.toRed();
     }
 
-    if (koans.hasPrev()) {
-      prevButton.href = "main.html?koan=" + koans.prevId();
-    } else if (LANGUAGE === "de") {
-      prevButton.href = "intro.html";
-    } else {
-      prevButton.href = "home.html";
-    }
+    prevButton.href = prevPageUrl();
     nextButton.href = nextPageUrl();
   };
 
+  var prevPageUrl = function() {
+    if (actualKoan.prevId()) {
+      return "main.html?koan=" + actualKoan.prevId();
+    } else if (LANGUAGE === "de") {
+      return "intro.html";
+    } else {
+      return "home.html";
+    }
+  };
+
   var nextPageUrl = function() {
-    if (koans.hasNext()) {
-      return "main.html?koan=" + koans.nextId();
+    if (actualKoan.nextId()) {
+      return "main.html?koan=" + actualKoan.nextId();
     } else {
       return "success.html";
     }
@@ -76,7 +79,7 @@
   var testCode = function(e) {
 
     msg.clear();
-    var koan = koans.getKoan();
+    var koan = actualKoan.getKoan();
     koan.beforeTests();
     var okAll = false;
     var ok = readCode();
@@ -169,7 +172,7 @@
   window.onload = write;
 
 })(jshero.message,
-  jshero.koans,
+  jshero.actualKoan,
   jshero.header,
   jshero.code,
   jshero.log,
