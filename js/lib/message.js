@@ -14,9 +14,9 @@ jshero.message = (function(I18N) {
    * Write a message-Element.
    *
    * @param testResult: {
-   *   ok {Boolean}, // true = passed test
+   *   ok {Boolean}, // true = test passed
    *   logs {[String]}, // log messages
-   *   e {Exception} // the compiler exception in case of an error
+   *   e {Exception} // the exception in case of an error
    *   msg {String} // the i18n message
    * }
    */
