@@ -15,8 +15,11 @@ jshero.tester = (function(actualKoan, log, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
+  var koan = actualKoan.getKoan();
 
-  var code;
+  var testNr = 0;
+  var results = [];
+  var callback;
 
 /**
    * Cross Browser global eval. In particular for IE8.
@@ -43,63 +46,77 @@ jshero.tester = (function(actualKoan, log, i18n, LANGUAGE) {
 
   /**
    * callback will be called with TestResult.
-   * 
-   * @param {String} code 
-   * @param {Function} callback 
+   *
+   * @param {String} code
+   * @param {Function} callback
    */
-  var run = function(code, callback) {
+  var run = function(code, runCallback) {
 
-    var results = [];
+    results = [];
+    testNr = 0;
+    callback = function() {
+      runCallback(results);
+    };
 
     if (code.length === 0) {
-      results.add({
+      results.push({
         ok: false,
         msg: I18N("writeCode")
       });
-      callback(results);
+      callback();
       return;
     }
+
+    koan.beforeTests();
 
     try {
       log.clear();
       globalEval(code);
-      callback({
+      results.push({
         ok: true,
         msg: I18N("noSyntaxError"),
         logs: log.getAll()
       });
-      return;
     } catch (e) {
-      callback({
+      results.push({
         ok: false,
         msg: I18N("syntaxError"),
         e: e,
         logs: log.getAll()
       });
+      callback();
       return;
     }
 
+    runActualTest(evalTestAndRunNext);
+
   };
 
-  /**
-   *  @see init 
-   */
-  var run = function(code, callback) {
-    var e, result;
+  var runActualTest = function(testCaseCallback) {
+
+    log.clear();
     try {
-      eval(codeToTest);
-      log.clear();
-      result = eval(code);
+      result = koan.tests[testNr]();
     } catch (exc) {
-      e = exc;
+      result = {
+        ok: false,
+        msg: I18N("unknownError"),
+        e: exc
+      };
     }
-    callback({
-      ok: !!e,
-      logs: log.getAll(),
-      e: e,
-      result: result
-    });
-  }
+    result.logs = log.getAll();
+    testCaseCallback(result);
+  };
+
+  var evalTestAndRunNext = function(result) {
+    results.push(result);
+    testNr++;
+    if (result.ok && testNr < koan.tests.length) {
+      runActualTest(evalTestAndRunNext);
+    } else {
+      callback();
+    }
+  };
 
   return {
     run: run

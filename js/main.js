@@ -55,34 +55,12 @@
 
   var testCode = function(e) {
 
+    var code = codeArea.get();
     msg.clear();
-    var koan = actualKoan.getKoan();
-    koan.beforeTests();
-    var okAll = false;
-    readCode(function(ok) {
+    tester.run(code, function(results) {
       var result;
-
-      if (ok) {
-        okAll = true;
-        var tests = koan.tests;
-        for (var i = 0, l = tests.length; i < l; i++) {
-          log.clear();
-          try {
-            result = tests[i]();
-          } catch (exc) {
-            result = {
-              ok: false,
-              msg: I18N("unknownError"),
-              e: exc
-            };
-          }
-          result.logs = log.getAll();
-          msg.log(result);
-          if (!result.ok) {
-            okAll = false;
-            break;
-          }
-        }
+      for (var i = 0, l = results.length; i < l; i++) {
+        msg.log(results[i]);
       }
 
       // Durch das 'return false' schliesst sich auf mobilen Geraeten das Keyboard nicht mehr.
@@ -91,6 +69,8 @@
       testButton.focus();
 
       var code = codeArea.get();
+      var koan = actualKoan.getKoan();
+      var okAll = results[results.length - 1].ok;
       if (okAll) {
         storage.setSolution(koan, code);
         header.toGreen();
@@ -114,14 +94,6 @@
     // auch gleich der Klick auf den Weiter-Button ausgeloest. 'return false' verhindert das.
     // 'return false' works like Event.preventDefault and Event.stopPropagation, but has better browser support.
     return false;
-  };
-
-  var readCode = function(callback) {
-    var code = codeArea.get();
-    tester.init(code, function(result) {
-      msg.log(result);
-      callback(result.ok);
-    });
   };
 
   testButton.onclick = testCode;
