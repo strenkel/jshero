@@ -16,7 +16,8 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
 
-  var testNr = 0;
+  var code;
+  var testNr = -1;
   var results = [];
   var callback;
 
@@ -49,10 +50,12 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
    * @param {String} code
    * @param {Function} callback
    */
-  var run = function(code, myCallback) {
+  var run = function(myCode, myCallback) {
 
+    // init global variables
+    code = myCode;
     results = [];
-    testNr = 0;
+    testNr = -1;
     callback = function() {
       myCallback(results);
     };
@@ -69,33 +72,37 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
     koan.beforeTests();
 
-    // read code
+    readCode(evalResultAndRunNextTest);
+
+  };
+
+  var readCode = function(testResultCallback) {
+
+    var result;
+    log.clear();
+
     try {
-      log.clear();
       globalEval(code);
-      results.push({
+      result = {
         ok: true,
-        msg: I18N("noSyntaxError"),
-        logs: log.getAll()
-      });
+        msg: I18N("noSyntaxError")
+      };
     } catch (e) {
-      results.push({
+      result = {
         ok: false,
         msg: I18N("syntaxError"),
-        e: e,
-        logs: log.getAll()
-      });
-      callback();
-      return;
+        e: e
+      };
     }
-
-    runActualTest(evalTestAndRunNext);
-
+    result.logs = log.getAll();
+    testResultCallback(result);
   };
 
   var runActualTest = function(testResultCallback) {
 
+    var result;
     log.clear();
+
     try {
       result = koan.tests[testNr]();
     } catch (exc) {
@@ -109,11 +116,11 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     testResultCallback(result);
   };
 
-  var evalTestAndRunNext = function(result) {
+  var evalResultAndRunNextTest = function(result) {
     results.push(result);
     testNr++;
     if (result.ok && testNr < koan.tests.length) {
-      runActualTest(evalTestAndRunNext);
+      runActualTest(evalResultAndRunNextTest);
     } else {
       callback();
     }
