@@ -11,23 +11,22 @@ if (typeof jshero === "undefined") {
  * }
  */
 
-jshero.tester = (function(actualKoan, log, i18n, LANGUAGE) {
+jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
-  var koan = actualKoan.getKoan();
 
   var testNr = 0;
   var results = [];
   var callback;
 
-/**
-   * Cross Browser global eval. In particular for IE8.
-   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
-   * Difference to Chris: Returns undefined if global eval or execScript is not available.
-   * The 'setTimeout' return form Chris would not work here without changing our code.
-   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
-   */
+  /**
+     * Cross Browser global eval. In particular for IE8.
+     * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
+     * Difference to Chris: Returns undefined if global eval or execScript is not available.
+     * The 'setTimeout' return form Chris would not work here without changing our code.
+     * See also: http://perfectionkills.com/global-eval-what-are-the-options/
+     */
   var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     try {
       eval('var Array={};');
@@ -58,6 +57,7 @@ jshero.tester = (function(actualKoan, log, i18n, LANGUAGE) {
       runCallback(results);
     };
 
+    // check no code
     if (code.length === 0) {
       results.push({
         ok: false,
@@ -69,6 +69,7 @@ jshero.tester = (function(actualKoan, log, i18n, LANGUAGE) {
 
     koan.beforeTests();
 
+    // read code
     try {
       log.clear();
       globalEval(code);
@@ -122,7 +123,7 @@ jshero.tester = (function(actualKoan, log, i18n, LANGUAGE) {
     run: run
   };
 
-})(jshero.actualKoan,
+})(jshero.actualKoan.getKoan(),
   jshero.log,
   jshero.i18n,
   jshero.language.LANGUAGE);
