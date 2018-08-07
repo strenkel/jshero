@@ -49,12 +49,12 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
    * @param {String} code
    * @param {Function} callback
    */
-  var run = function(code, runCallback) {
+  var run = function(code, myCallback) {
 
     results = [];
     testNr = 0;
     callback = function() {
-      runCallback(results);
+      myCallback(results);
     };
 
     // check no code
@@ -93,7 +93,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
   };
 
-  var runActualTest = function(testCaseCallback) {
+  var runActualTest = function(testResultCallback) {
 
     log.clear();
     try {
@@ -106,7 +106,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
       };
     }
     result.logs = log.getAll();
-    testCaseCallback(result);
+    testResultCallback(result);
   };
 
   var evalTestAndRunNext = function(result) {
