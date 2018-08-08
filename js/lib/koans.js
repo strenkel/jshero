@@ -13,6 +13,10 @@ jshero.koans = (function() {
     koansMap[koan.id] = koan;
   };
 
+  var getById = function(koanId) {
+    return koansMap[koanId];
+  };
+
   /**
    * Pass an array of all koan ids that should appear in the tutorial.
    * This order in the array will define
@@ -48,7 +52,8 @@ jshero.koans = (function() {
   return {
     add: add,
     initReorder: initReorder,
-    getKoans: getKoans
+    getKoans: getKoans,
+    getById: getById
   };
 
 })();

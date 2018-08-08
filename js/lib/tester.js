@@ -16,18 +16,19 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
 
+  var WORKER_URL = LANGUAGE === "de" ? "js/lib/testWorker.js" : "../js/lib/testWorker.js";
   var code;
   var testNr = -1;
   var results = [];
   var callback;
 
   /**
-     * Cross Browser global eval. In particular for IE8.
-     * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
-     * Difference to Chris: Returns undefined if global eval or execScript is not available.
-     * The 'setTimeout' return form Chris would not work here without changing our code.
-     * See also: http://perfectionkills.com/global-eval-what-are-the-options/
-     */
+   * Cross Browser global eval. In particular for IE8.
+   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
+   * Difference to Chris: Returns undefined if global eval or execScript is not available.
+   * The 'setTimeout' return form Chris would not work here without changing our code.
+   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
+   */
   var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     try {
       eval('var Array={};');
@@ -72,7 +73,23 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
     koan.beforeTests();
 
-    readCode(evalResultAndRunNextTest);
+    readCode2(evalResultAndRunNextTest);
+
+  };
+
+  var readCode2 = function(testResultCallback) {
+
+    var worker = new Worker(WORKER_URL);
+
+    worker.onmessage = function(event) {
+      console.log("init fertig", event);
+      testResultCallback(event.data);
+    }
+
+    worker.postMessage({
+      code: code,
+      language: LANGUAGE
+    });
 
   };
 
@@ -98,12 +115,30 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     testResultCallback(result);
   };
 
+  var runActualTest2 = function(testResultCallback) {
+    
+    var worker = new Worker(WORKER_URL);
+
+    worker.onmessage = function(event) {
+      console.log("test fertig", event);
+      testResultCallback(event.data);
+    }
+
+    worker.postMessage({
+      code: code,
+      language: LANGUAGE,
+      koanId: koan.id,
+      testIndex: testNr
+    });
+  };
+
   var runActualTest = function(testResultCallback) {
 
     var result;
     log.clear();
 
     try {
+      globalEval(code);
       result = koan.tests[testNr]();
     } catch (exc) {
       result = {
@@ -120,7 +155,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     results.push(result);
     testNr++;
     if (result.ok && testNr < koan.tests.length) {
-      runActualTest(evalResultAndRunNextTest);
+      runActualTest2(evalResultAndRunNextTest);
     } else {
       callback();
     }

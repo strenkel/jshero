@@ -70,7 +70,7 @@ jshero.message = (function(I18N) {
   var createErrorMessage = function(e) {
     var errormessage = "";
     if (e) {
-      errormessage = errormessage + e; // converts e to String
+      errormessage = errormessage + e.message;
       if (e.lineNumber != null && e.columnNumber != null) {
         // mozilla
         errormessage = errormessage + " (" + I18N("line") + ": " + e.lineNumber +
