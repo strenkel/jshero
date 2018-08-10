@@ -83,7 +83,15 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
     worker.onmessage = function(event) {
       finishRead(event.data);
-    }
+    };
+
+    worker.onerror = function(event) {
+      finishRead({
+        ok: false,
+        msg: I18N("unknownError"),
+        e: event
+      });
+    };
 
     worker.postMessage({
       code: code,
@@ -131,6 +139,14 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
     worker.onmessage = function(event) {
       finishTest(event.data);
+    };
+
+    worker.onerror = function(event) {
+      finishTest({
+        ok: false,
+        msg: I18N("unknownError"),
+        e: event
+      });
     };
 
     worker.postMessage({

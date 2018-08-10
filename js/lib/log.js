@@ -23,7 +23,7 @@ jshero.log = (function() {
    * Handles the the first argument for test output.
    */
   console.log = function() {
-    logs.push(arguments[0]);
+    logs.push("" + arguments[0]);
     origConsoleLog.apply(console, arguments);
   }
 
