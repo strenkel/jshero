@@ -23,7 +23,9 @@ jshero.i18n = (function() {
     isAFunction: "ist eine Funktion",
     isNotAFunction: "ist keine Funktion",
     errorAtCallOf: "Fehler beim Aufruf von",
+    endlessLoopOnRead: "Fehler beim Einlesen des Codes! Es kommt zu einer Endlosschleife!",
 
+    endlessLoopOnTest: "Fehler beim Testen des Codes! Es kommt zu einer Endlosschleife!",
     functionReturns: "<code>%0</code> gibt <code>%1</code> zurück.",
     functionNotReturns: "<code>%0</code> gibt nicht <code>%1</code>, sondern <code>%2</code> zurück.",
     functionReturnsDate: "<code>%0</code> gibt den %1 zurück.",
@@ -52,7 +54,9 @@ jshero.i18n = (function() {
     isAFunction: "is a function",
     isNotAFunction: "is not a function",
     errorAtCallOf: "Error on call of",
+    endlessLoopOnRead: "Endless loop while reading your code!",
 
+    endlessLoopOnTest: "Testerror due to endless loop!",
     functionReturns: "<code>%0</code> returns <code>%1</code>.",
     functionNotReturns: "<code>%0</code> does not return <code>%1</code>, but <code>%2</code>.",
     functionReturnsDate: "<code>%0</code> returns %1.",

@@ -2,20 +2,12 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-/**
- * TestResult: {
- *   ok {Boolean}, // succesfully or not
- *   logs {Array}, // console.log(firstArgument) logs
- *   e {Exception} // the exception in case of an error
- *   msg {String} // the i18n message
- * }
- */
-
 jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
 
+  var HAS_WORKER = typeof Worker !== "undefined";
   var WORKER_URL = LANGUAGE === "de" ? "js/lib/testWorker.js" : "../js/lib/testWorker.js";
   var code;
   var testNr = -1;
@@ -46,7 +38,8 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   })(this, Array, (2, eval));
 
   /**
-   * callback will be called with TestResult.
+   * Read in code and run all tests.
+   * callback will be called with [TestResult].
    *
    * @param {String} code
    * @param {Function} callback
@@ -73,17 +66,23 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
     koan.beforeTests();
 
-    readCode2(evalResultAndRunNextTest);
+    readCode(evalResultAndRunNextTest);
 
   };
 
-  var readCode2 = function(testResultCallback) {
+  var readCode = function(testResultCallback) {
 
     var worker = new Worker(WORKER_URL);
+    var endlessLoopTimeout;
+
+    var finishRead = function(result) {
+      clearTimeout(endlessLoopTimeout);
+      worker.terminate();
+      testResultCallback(result);
+    };
 
     worker.onmessage = function(event) {
-      console.log("init fertig", event);
-      testResultCallback(event.data);
+      finishRead(event.data);
     }
 
     worker.postMessage({
@@ -91,9 +90,11 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
       language: LANGUAGE
     });
 
+    endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishRead);
+
   };
 
-  var readCode = function(testResultCallback) {
+  var readCodeFallback = function(testResultCallback) {
 
     var result;
     log.clear();
@@ -115,14 +116,22 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     testResultCallback(result);
   };
 
-  var runActualTest2 = function(testResultCallback) {
-    
+  readCode = HAS_WORKER ? readCode : readCodeFallback;
+
+  var runTest = function(testResultCallback) {
+
     var worker = new Worker(WORKER_URL);
+    var endlessLoopTimeout;
+
+    var finishTest = function(result) {
+      clearTimeout(endlessLoopTimeout);
+      worker.terminate();
+      testResultCallback(result);
+    };
 
     worker.onmessage = function(event) {
-      console.log("test fertig", event);
-      testResultCallback(event.data);
-    }
+      finishTest(event.data);
+    };
 
     worker.postMessage({
       code: code,
@@ -130,9 +139,12 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
       koanId: koan.id,
       testIndex: testNr
     });
+
+    endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishTest);
+
   };
 
-  var runActualTest = function(testResultCallback) {
+  var runTestFallback = function(testResultCallback) {
 
     var result;
     log.clear();
@@ -151,14 +163,26 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     testResultCallback(result);
   };
 
+  runTest = HAS_WORKER ? runTest : runTestFallback;
+
   var evalResultAndRunNextTest = function(result) {
     results.push(result);
     testNr++;
     if (result.ok && testNr < koan.tests.length) {
-      runActualTest2(evalResultAndRunNextTest);
+      runTest(evalResultAndRunNextTest);
     } else {
       callback();
     }
+  };
+
+  var endlessLoopController = function(message, myCallback) {
+    return setTimeout(function() {
+      myCallback({
+        ok: false,
+        msg: message
+      }
+      );
+    }, 1000);
   };
 
   return {
