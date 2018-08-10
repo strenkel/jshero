@@ -8,7 +8,7 @@ jshero.koans.add({
 Im folgenden Beispiel werden die Elemente eines Arrays aufaddiert:
 
 <pre><code>var sum = 0;
-for (var i = 1; i < myArray.length; i++) {
+for (var i = 0; i < myArray.length; i++) {
   sum = sum + myArray[i];
 }</code></pre>`,
 
