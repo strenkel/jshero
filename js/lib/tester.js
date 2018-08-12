@@ -14,28 +14,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   var results = [];
   var callback;
 
-  /**
-   * Cross Browser global eval. In particular for IE8.
-   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
-   * Difference to Chris: Returns undefined if global eval or execScript is not available.
-   * The 'setTimeout' return form Chris would not work here without changing our code.
-   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
-   */
-  var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
-    try {
-      eval('var Array={};');
-      indirectEvalWorks = indirectEval('Array') == realArray;
-    } catch (err) { }
-
-    return indirectEvalWorks
-      ? indirectEval
-      : (global.execScript
-        ? function(expression) {
-          global.execScript(expression);
-        }
-        : undefined
-      );
-  })(this, Array, (2, eval));
+  // --- PUBLIC METHODS ---
 
   /**
    * Read in code and run all tests.
@@ -65,10 +44,33 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     }
 
     koan.beforeTests();
-
     readCode(evalResultAndRunNextTest);
-
   };
+
+  // --- PRIVATE METHODS ---
+
+  /**
+   * Cross Browser global eval. In particular for IE8.
+   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
+   * Difference to Chris: Returns undefined if global eval or execScript is not available.
+   * The 'setTimeout' return form Chris would not work here without changing our code.
+   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
+   */
+  var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
+    try {
+      eval('var Array={};');
+      indirectEvalWorks = indirectEval('Array') == realArray;
+    } catch (err) { }
+
+    return indirectEvalWorks
+      ? indirectEval
+      : (global.execScript
+        ? function(expression) {
+          global.execScript(expression);
+        }
+        : undefined
+      );
+  })(this, Array, (2, eval));
 
   var readCode = function(testResultCallback) {
 
@@ -99,9 +101,11 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     });
 
     endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishRead);
-
   };
 
+  /**
+   * Don't use Worker (IE<10). Can't stop endless loops.
+   */
   var readCodeFallback = function(testResultCallback) {
 
     var result;
@@ -160,6 +164,9 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
   };
 
+  /**
+     * Don't use Worker (IE<10). Can't stop endless loops.
+     */
   var runTestFallback = function(testResultCallback) {
 
     var result;
@@ -196,8 +203,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
       myCallback({
         ok: false,
         msg: message
-      }
-      );
+      });
     }, 1000);
   };
 
