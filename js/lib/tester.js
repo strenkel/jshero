@@ -72,39 +72,72 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
       );
   })(this, Array, (2, eval));
 
-  var readCode = function(testResultCallback) {
+  /**
+   * Create an initialized worker.
+   *
+   * @param {function(Worker)} successCallback
+   * @param {function(TestResult)} errorCallback
+   */
+  var createWorker = function(successCallback, errorCallback) {
 
     var worker = new Worker(WORKER_URL);
-    var endlessLoopTimeout;
-
-    var finishRead = function(result) {
-      clearTimeout(endlessLoopTimeout);
-      worker.terminate();
-      testResultCallback(result);
-    };
-
-    worker.onmessage = function(event) {
-      finishRead(event.data);
-    };
 
     worker.onerror = function(event) {
-      finishRead({
+      errorCallback({
         ok: false,
         msg: I18N("unknownError"),
         e: event
       });
     };
 
+    worker.onmessage = function() {
+      successCallback(worker);
+    };
+
     worker.postMessage({
-      code: code,
+      action: "init",
       language: LANGUAGE
     });
+  };
 
-    endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishRead);
+  var readCode = function(testResultCallback) {
+
+    createWorker(function(worker) {
+
+      var endlessLoopTimeout;
+
+      var finishRead = function(result) {
+        clearTimeout(endlessLoopTimeout);
+        worker.terminate();
+        testResultCallback(result);
+      };
+
+      worker.onmessage = function(event) {
+        finishRead(event.data);
+      };
+
+      worker.onerror = function(event) {
+        finishRead({
+          ok: false,
+          msg: I18N("unknownError"),
+          e: event
+        });
+      };
+
+      worker.postMessage({
+        action: "read",
+        code: code
+      });
+
+      endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishRead);
+    },
+      testResultCallback
+    )
   };
 
   /**
-   * Don't use Worker (IE<10). Can't stop endless loops.
+   * Fallback for browsers not supporting Worker (IE<10).
+   * Can't stop endless loops.
    */
   var readCodeFallback = function(testResultCallback) {
 
@@ -132,41 +165,46 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
 
   var runTest = function(testResultCallback) {
 
-    var worker = new Worker(WORKER_URL);
-    var endlessLoopTimeout;
+    createWorker(function(worker) {
 
-    var finishTest = function(result) {
-      clearTimeout(endlessLoopTimeout);
-      worker.terminate();
-      testResultCallback(result);
-    };
+      var endlessLoopTimeout;
 
-    worker.onmessage = function(event) {
-      finishTest(event.data);
-    };
+      var finishTest = function(result) {
+        clearTimeout(endlessLoopTimeout);
+        worker.terminate();
+        testResultCallback(result);
+      };
 
-    worker.onerror = function(event) {
-      finishTest({
-        ok: false,
-        msg: I18N("unknownError"),
-        e: event
+      worker.onmessage = function(event) {
+        finishTest(event.data);
+      };
+
+      worker.onerror = function(event) {
+        finishTest({
+          ok: false,
+          msg: I18N("unknownError"),
+          e: event
+        });
+      };
+
+      worker.postMessage({
+        action: "test",
+        code: code,
+        language: LANGUAGE,
+        koanId: koan.id,
+        testIndex: testNr
       });
-    };
 
-    worker.postMessage({
-      code: code,
-      language: LANGUAGE,
-      koanId: koan.id,
-      testIndex: testNr
-    });
-
-    endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishTest);
-
+      endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishTest);
+    },
+      testResultCallback
+    );
   };
 
   /**
-     * Don't use Worker (IE<10). Can't stop endless loops.
-     */
+   * Fallback for browsers not supporting Worker (IE<10).
+   * Can't stop endless loops.
+   */
   var runTestFallback = function(testResultCallback) {
 
     var result;
@@ -204,7 +242,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
         ok: false,
         msg: message
       });
-    }, 1000);
+    }, 2000);
   };
 
   return {

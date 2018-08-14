@@ -65,9 +65,6 @@ var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
 
   var testCode = function() {
 
-    var koansMinUrl = language === "de" ? "../koans-min/koans.js" : "../../en/js/koans-min/koans.js";
-    importScripts(koansMinUrl);
-
     var koan = koans.getById(koanId);
     var result;
 
@@ -105,9 +102,22 @@ var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     return clone;
   };
 
+  var init = function() {
+    initI18n();
+    initKoans();
+    return {
+      ok: true
+    };
+  };
+
   var initI18n = function() {
     i18n.setLanguage(language);
     I18N = i18n.get;
+  };
+
+  var initKoans = function() {
+    var koansMinUrl = language === "de" ? "../koans-min/koans.js" : "../../en/js/koans-min/koans.js";
+    importScripts(koansMinUrl);
   };
 
   onmessage = function(event) {
@@ -116,14 +126,15 @@ var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     testIndex = event.data.testIndex;
     koanId = event.data.koanId;
     language = event.data.language;
-
-    initI18n();
+    var action = event.data.action;
 
     var result;
-    if (koanId) {
-      result = testCode();
-    } else {
+    if (action === "init") {
+      result = init();
+    } else if (action === "read") {
       result = readCode();
+    } else if (action === "test") {
+      result = testCode();
     }
     postMessage(result);
   };
