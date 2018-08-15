@@ -129,7 +129,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
         code: code
       });
 
-      endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnTest"), finishRead);
+      endlessLoopTimeout = endlessLoopController(I18N("endlessLoopOnRead"), finishRead);
     },
       testResultCallback
     )
