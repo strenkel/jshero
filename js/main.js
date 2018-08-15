@@ -7,6 +7,9 @@
   var nextButton = document.getElementById("next-button");
   var prevButton = document.getElementById("prev-button");
 
+  // used to prevent double testing by double clicks
+  var testsAreRunning = false;
+
   /**
    * Schreibt die Aufgabe und ggf. die richtige Loesung in die Seite.
    * Setzt die Links fuer vorherige und naechste Seite.
@@ -54,7 +57,12 @@
   };
 
   var testCode = function(e) {
-
+    
+    if (testsAreRunning) {
+      return;
+    }
+    testsAreRunning = true;
+    
     var code = codeArea.get();
     msg.clear();
     tester.run(code, function(results) {
@@ -88,7 +96,7 @@
         });
       }
       util.scrollToBottom();
-
+      testsAreRunning = false;
     });
     // Auf touch Geraeten wird beim Betätigen des Test-Buttons bei richtiger Lösung
     // auch gleich der Klick auf den Weiter-Button ausgeloest. 'return false' verhindert das.
