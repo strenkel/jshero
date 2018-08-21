@@ -71,6 +71,7 @@ jshero.koans.initReorder(
     'utc',
     'gettime',
     'subfunction',
+    'regex1',
     'further'
     ]
 );
