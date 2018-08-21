@@ -72,6 +72,7 @@ jshero.koans.initReorder(
     'gettime',
     'subfunction',
     'regex1',
+    'regex2',
     'further'
     ]
 );
