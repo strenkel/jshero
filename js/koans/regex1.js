@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: "regex1",
 
-  title: "Regex: test()",
+  title: "Regex: Zeichenliterale",
 
   lesson: `<a href="https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck">Reguläre Ausdrücke</a>,
 kurz Regex (engl.: regular expression), sind Suchmuster für Strings.
@@ -14,8 +14,8 @@ In JavaScript werden reguläre Ausdrücke zwischen Schrägstrichen notiert:
 
 <pre><code>var pruefeAufOF = /OF/;</code></pre>
 
-Hier ist OF der regulärer Ausdruck. Er steht für sich selbst. Mit ihm kann man testen,
-ob ein anderer String die Zeichenfolge OF enthält:
+Hier ist OF der regulärer Ausdruck. Es ist ein sogenanntes Zeichenliteral und steht für sich selbst.
+Mit ihm kann man testen, ob ein anderer String die Zeichenfolge OF enthält:
 
 <pre><code>var t1 = /OF/.test("OF-C 79");
 var t2 = /OF/.test("B-OF 61")
