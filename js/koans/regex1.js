@@ -33,7 +33,7 @@ den Wert <code>true</code>. Der String <code>"HB-F 42"</code> enthält nicht OF.
 <code>enthaeltRose("ein Blatt")</code> sollte <code>false</code> ergeben.`,
 
   beforeTests: function() {
-    begruesse = undefined;
+    enthaeltRose = undefined;
   },
 
   tests: [
@@ -59,7 +59,7 @@ den Wert <code>true</code>. Der String <code>"HB-F 42"</code> enthält nicht OF.
     function() {
       return jshero.testutil.assert_functionReturns('enthaeltRose("zwei Blätter")', false);
     }
-    
+
   ]
 
 });
