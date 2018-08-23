@@ -73,6 +73,7 @@ jshero.koans.initReorder(
     'subfunction',
     'regex1',
     'regex2',
+    'regex3 ',
     'further'
     ]
 );

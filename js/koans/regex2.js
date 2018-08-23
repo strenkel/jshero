@@ -2,55 +2,63 @@ jshero.koans.add({
 
   id: "regex2",
 
-  title: "Regex: Zeichenauswahl",
+  title: "Regex: Beliebiges Zeichen",
 
-  lesson: `Die letzte Lektion führte einfache Zeichenketten, sogenannte Zeichenliterale,
-als reguläre Ausdrücke ein. Jetzt wollen wir die Zeichenauswahl kennenlernen.
-Sie wird durch eckige Klammern definiert:
+  lesson: `Neben den einfachen Zeichenliteralen kennen reguläre Ausdrücke eine
+Reihe von Zeichen mit besonderer Bedeutung, sogenannte Metazeichen.
+Ein solches Metazeichen ist der Punkt. Er steht für genau ein beliebiges Zeichen: 
 
-<pre><code>var pruefeAuf12oder3 = /[123]/;
-var t1 = pruefeAuf12oder3.test("917");
-var t2 = pruefeAuf12oder3.test("Hauptstr. 2");
-var t3 = pruefeAuf12oder3.test("blau");</code></pre>
+<pre><code>var t1 = /M.ier/.test("Maier");
+var t2 = /M.ier/.test("Die Meierei");
+var t3 = /M.ier/.test("Baier");
+var t4 = /M.ier/.test("Mier");
+var t5 = /M.ier/.test("M-ier");</code></pre>
 
-Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus dieser Auswahl.
-Der Regex <code>/[123]/</code> steht also für ein Zeichen, das eine 1, eine 2 oder eine 3 ist.
-Da <code>"917"</code> und <code>"Hauptstr. 2"</code> eine 1, 2 oder 3 enthalten,
-sind <code>t1</code> und <code>t2</code> beide <code>true</code>. Der String <code>"blau"</code>
-enthällt keine 1, 2 oder 3. <code>t3</code> ist also <code>false</code>.`,
+Unser regulärer Ausdruck ist hier <code>/M.ier/</code>. Er steht für alle Zeichenketten, die mit
+M beginnen, ein beliebiges zweites Zeichen besitzen und anschließend mit ier enden. Damit können
+wir testen, ob ein String Maier oder Meier enthält. Das ist in den ersten beiden Beispielzeilen der Fall.
+<code>t1</code> und <code>t2</code> sind also <code>true</code>. Der String <code>"Baier"</code> enthält
+kein Pattern, dass mit M beginnt. <code>t3</code> ist <code>false</code>.
+Auch <code>t4</code> ist <code>false</code>, da zwischen M und ier genau ein Zeichen liegen muss.
+Das ist hier nicht der Fall. Da der Punkt für jedes beliebige Zeichen steht, trifft <code>"M-ier"</code>
+auch auf unser Pattern zu. <code>t5</code> ist <code>true</code>.
+<br><br>
+Natürlich können wir den Punkt auch mehrmals in einem Pattern verwenden.
+<code>/H..s/</code> steht für alle Zeichenketten, die mit H beginnen, anschließend zwei beliebige Zeichen
+besitzen und mit s enden. "Hans" und "Haus" treffen auf dieses Pattern zu, "His" und "Heros" nicht.`,
 
-  task: `Schreibe eine Funktion <code>enthaeltNote</code>, die prüft, ob ein String eine Zahl
-zwischen 1 und 6 enthält. <code>enthaeltNote("Latein: 2)</code> sollte <code>true</code> und
-<code>enthaeltNote("Klasse 7b")</code> sollte <code>false</code> ergeben.`,
-
+  task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String zwei in
+einfache Anführungszeichen eingeschlossene Zeichen besitzt.  
+<code>pruefe("'Ja'")</code> sollte <code>true</code> und
+<code>pruefe("'Was'")</code> sollte <code>false</code> ergeben.`,
 
   beforeTests: function() {
-    enthaeltNote = undefined;
+    pruefe = undefined;
   },
 
   tests: [
     function() {
-      return jshero.testutil.assert_isFunction('enthaeltNote');
+      return jshero.testutil.assert_isFunction('pruefe');
     },
 
     function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('enthaeltNote', 1);
+      return jshero.testutil.assert_functionHasNumOfParameter('pruefe', 1);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Latein: 1")', true);
+      return jshero.testutil.assert_functionReturns('pruefe("\'Ja\'")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Mathe 6")', true);
+      return jshero.testutil.assert_functionReturns('pruefe("-\'Oh\'-")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Klasse 7")', false);
+      return jshero.testutil.assert_functionReturns('pruefe("\'A\'")', false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("0 Grad")', false);
+      return jshero.testutil.assert_functionReturns('pruefe("\'Was\'")', false);
     }
 
   ]
