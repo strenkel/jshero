@@ -19,14 +19,19 @@ Mit ihm kann man testen, ob ein anderer String die Zeichenfolge OF enthält:
 
 <pre><code>var t1 = /OF/.test("OF-C 79");
 var t2 = /OF/.test("B-OF 61")
-var t3 = /OF/.test("HB-F 42");</code></pre>
+var t3 = /OF/.test("HB-F 42");
+var t4 = /OF/.test("Ofen");</code></pre>
 
 <code>test()</code> ist eine Regex-Methode. Sie gibt <code>true</code> zurück, wenn
 der ihr übergebene String das durch den Regex beschriebene Muster enthält.
 In unserem Fall ist das Muster die Zeichenfolge OF. <code>"OF-C 79"</code> und
 <code>"B-OF 61"</code> enthalten OF, also erhalten <code>t1</code> und <code>t2</code>
 den Wert <code>true</code>. Der String <code>"HB-F 42"</code> enthält nicht OF.
-<code>t3</code> ist <code>false</code>.`,
+<code>t3</code> ist <code>false</code>.
+<br>
+Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
+<code>"Ofen"</code> enthält zwar Of, aber nicht OF. <code>t4</code> ist <code>false</code>.
+`,
 
   task: `Schreibe eine Funktion <code>enthaeltRose</code>, die prüft, ob ein String den Teilstring
 <code>"Rose"</code> enthält. <code>enthaeltRose("eine Rose")</code> sollte <code>true</code> und
