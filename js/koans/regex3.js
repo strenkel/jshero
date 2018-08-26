@@ -4,25 +4,28 @@ jshero.koans.add({
 
   title: "Regex: Zeichenauswahl",
 
-  lesson: `Die letzte Lektion führte einfache Zeichenketten, sogenannte Zeichenliterale,
-als reguläre Ausdrücke ein. Jetzt wollen wir die Zeichenauswahl kennenlernen.
-Sie wird durch eckige Klammern definiert:
+  lesson: `Die letzte Lektion führte als Metazeichen den Punkt ein.
+Er steht für ein beliebiges Zeichen. So steht <code>/M.ier/</code> sowohl für <code>Maier</code>
+als auch für <code>Meier</code>. Er steht aber auch für <code>Msier</code>.
+Möchte man letzteres ausschließen, so muss man die Zeichenauswahl auf <code>a</code>
+und <code>e</code> begrenzen. Dazu schreibt man die gewünschte Auswahl in eckige Klammern:
 
-<pre><code>var pruefeAuf12oder3 = /[123]/;
-var t1 = pruefeAuf12oder3.test("917");
-var t2 = pruefeAuf12oder3.test("Hauptstr. 2");
-var t3 = pruefeAuf12oder3.test("blau");</code></pre>
+<pre><code>var var t1 = /M[ae]ier/.test("Maier");
+var t2 = /M[ae]ier/.test("Meier");
+var t3 = /M[ae]ier/.test("Mxier");
+var t4 = /M[ae]ier/.test("Maeier");</code></pre>
 
-Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus dieser Auswahl.
-Der Regex <code>/[123]/</code> steht also für ein Zeichen, das eine 1, eine 2 oder eine 3 ist.
-Da <code>"917"</code> und <code>"Hauptstr. 2"</code> eine 1, 2 oder 3 enthalten,
-sind <code>t1</code> und <code>t2</code> beide <code>true</code>. Der String <code>"blau"</code>
-enthällt keine 1, 2 oder 3. <code>t3</code> ist also <code>false</code>.`,
+Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus diesem Ausdruck.
+<code>/[ae]/</code> steht also für ein Zeichen, das ein <code>a</code> oder ein <code>e</code> ist.
+<code>/M[ae]ier/</code> steht dann für <code>Maier</code> oder <code>Meier</code>.
+Die Variablen <code>t1</code> sowie <code>t2</code> sind <code>true</code> und <code>t3</code>
+ist <code>false</code>. Da <code>/[ae]/</code> für genau ein Zeichen steht, ist <code>t4</code>
+auch <code>false</code>.`,
 
-  task: `Schreibe eine Funktion <code>enthaeltNote</code>, die prüft, ob ein String eine Zahl
-zwischen 1 und 6 enthält. <code>enthaeltNote("Latein: 2)</code> sollte <code>true</code> und
-<code>enthaeltNote("Klasse 7b")</code> sollte <code>false</code> ergeben.`,
-
+  task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Namen
+Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
+<code>pruefe("Frau Mayer")</code> sollte <code>true</code> und
+<code>pruefe("Herr Mezer")</code> sollte <code>false</code> ergeben.`,
 
   beforeTests: function() {
     enthaeltNote = undefined;

@@ -4,7 +4,7 @@ jshero.koans.add({
 
   title: "Regex: Beliebiges Zeichen",
 
-  lesson: `Neben den einfachen Zeichenliteralen kennen reguläre Ausdrücke eine
+  lesson: `Neben einfachen Zeichenliteralen kennen reguläre Ausdrücke eine
 Reihe von Zeichen mit besonderer Bedeutung, sogenannte Metazeichen.
 Ein solches Metazeichen ist der Punkt. Er steht für genau ein beliebiges Zeichen: 
 
