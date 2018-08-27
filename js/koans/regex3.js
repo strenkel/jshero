@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `Die letzte Lektion führte als Metazeichen den Punkt ein.
 Er steht für ein beliebiges Zeichen. So steht <code>/M.ier/</code> sowohl für <code>Maier</code>
-als auch für <code>Meier</code>. Er steht aber auch für <code>Msier</code>.
+als auch für <code>Meier</code>. Er steht aber auch für <code>Mxier</code>.
 Möchte man letzteres ausschließen, so muss man die Zeichenauswahl auf <code>a</code>
 und <code>e</code> begrenzen. Dazu schreibt man die gewünschte Auswahl in eckige Klammern:
 
@@ -28,34 +28,41 @@ Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
 <code>pruefe("Herr Mezer")</code> sollte <code>false</code> ergeben.`,
 
   beforeTests: function() {
-    enthaeltNote = undefined;
+    pruefe = undefined;
   },
 
   tests: [
     function() {
-      return jshero.testutil.assert_isFunction('enthaeltNote');
+      return jshero.testutil.assert_isFunction('pruefe');
     },
 
     function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('enthaeltNote', 1);
+      return jshero.testutil.assert_functionHasNumOfParameter('pruefe', 1);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Latein: 1")', true);
+      return jshero.testutil.assert_functionReturns('pruefe("Maier")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Mathe 6")', true);
+      return jshero.testutil.assert_functionReturns('pruefe("Meier")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Klasse 7")', false);
+      return jshero.testutil.assert_functionReturns('pruefe("Mayer")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("0 Grad")', false);
+      return jshero.testutil.assert_functionReturns('pruefe("Meyer")', true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('pruefe("Mazer")', false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('pruefe("Moyer")', false);
     }
-
   ]
 
 });
