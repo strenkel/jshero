@@ -32,7 +32,10 @@ var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     );
 })(this, Array, (2, eval));
 
-(function(koans, log, i18n) {
+/**
+ * We use _varname to prevent overwriting of this variables.
+ */
+(function(koans, _log, i18n) {
 
   var I18N;
 
@@ -43,47 +46,47 @@ var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
 
   var readCode = function() {
 
-    var result;
-    log.clear();
+    var _result;
+    _log.clear();
 
     try {
       eval(code);
-      result = {
+      _result = {
         ok: true,
         msg: I18N("noSyntaxError")
       };
     } catch (e) {
-      result = {
+      _result = {
         ok: false,
         msg: I18N("syntaxError"),
         e: cloneError(e)
       };
     }
-    result.logs = log.getAll();
-    return result;
+    _result.logs = _log.getAll();
+    return _result;
   };
 
   var testCode = function() {
 
     var koan = koans.getById(koanId);
-    var result;
+    var _result;
 
     try {
       globalEval(code);
-      log.clear();
-      result = koan.tests[testIndex]();
+      _log.clear();
+      _result = koan.tests[testIndex]();
     } catch (exc) {
-      result = {
+      _result = {
         ok: false,
         msg: I18N("unknownError"),
         e: exc
       };
     }
-    if (result.e) {
-      result.e = cloneError(result.e);
+    if (_result.e) {
+      _result.e = cloneError(_result.e);
     }
-    result.logs = log.getAll();
-    return result;
+    _result.logs = _log.getAll();
+    return _result;
   };
 
   var cloneError = function(e) {
