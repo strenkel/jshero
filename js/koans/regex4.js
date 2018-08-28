@@ -2,55 +2,73 @@ jshero.koans.add({
 
   id: "regex4",
 
-  title: "Regex: Zeichenauswahl",
+  title: "Regex: Bereiche",
 
-  lesson: `Die letzte Lektion führte einfache Zeichenketten, sogenannte Zeichenliterale,
-als reguläre Ausdrücke ein. Jetzt wollen wir die Zeichenauswahl kennenlernen.
-Sie wird durch eckige Klammern definiert:
+  lesson: `Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
+dafür <code>/[0123456789]/</code> benutzen. Das ist aber recht umständlich. 
+Mit einem Bindestrich kann man größere, zusammenhängende Zeichenbereiche leicht darstellen:
 
-<pre><code>var pruefeAuf12oder3 = /[123]/;
-var t1 = pruefeAuf12oder3.test("917");
-var t2 = pruefeAuf12oder3.test("Hauptstr. 2");
-var t3 = pruefeAuf12oder3.test("blau");</code></pre>
+<pre><code>var pruefeZiffer = /[0-9]/;
+var pruefe1Bis6 = /[1-6]/;
+var pruefeABisZ = /[A-Z]/;
+var pruefeaBisz = /[a-z]/; 
+var pruefeDeutschesAlphabet = /[a-zäöüß]/;
+var pruefeABisz = /[A-Za-z]/;
+var pruefeMBisT = /[M-T]/;</code></pre>
 
-Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus dieser Auswahl.
-Der Regex <code>/[123]/</code> steht also für ein Zeichen, das eine 1, eine 2 oder eine 3 ist.
-Da <code>"917"</code> und <code>"Hauptstr. 2"</code> eine 1, 2 oder 3 enthalten,
-sind <code>t1</code> und <code>t2</code> beide <code>true</code>. Der String <code>"blau"</code>
-enthällt keine 1, 2 oder 3. <code>t3</code> ist also <code>false</code>.`,
+<code>/[0-9]/</code> steht wie der Regex oben für genau eine Ziffer.
+Den Ziffernbereich kann man, wie <code>/[1-6]/</code> zeigt, leicht auf eine gewünschte Auswahl
+(z.B. Schulnote) einschränken. Der Bindestrich funktioniert aber nicht nur für Ziffern,
+sondern auch für Buchstaben. Dabei muss man zwischen Klein- und
+Großbuchstaben unterscheiden. <code>/[A-Z]/</code> steht für einen der 26 Großbuchstaben und
+<code>/[a-z]/</code> für einen Kleinbuchstaben. Wichtig ist, dass hier
+ä, ö, ü und ß nicht mit erfasst werden. Möchte man das, so muss man diese Buchstaben gesondert
+aufführen. Dazu schreibt man die Umlaute und das Eszett wie bei einer gewöhnlichen Auswahl
+einfach vor oder hinter den Bereich (<code>/[a-zäöüß]/</code>). Ebenso kann man zwei Bereiche
+hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Buchstaben,
+egal ob in Groß- oder Kleinschreibung. Den Buchstabenbereich kann man wie bei Ziffern
+beliebig einschränken (<code>/[M-T]/</code>).`,
 
-  task: `Schreibe eine Funktion <code>enthaeltNote</code>, die prüft, ob ein String eine Zahl
-zwischen 1 und 6 enthält. <code>enthaeltNote("Latein: 2)</code> sollte <code>true</code> und
-<code>enthaeltNote("Klasse 7b")</code> sollte <code>false</code> ergeben.`,
+  task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String einen
+Teilstring wie <code>"Klasse 2b"</code> enthält. Dabei sind Klassen von 1 bis 6 und a bis d
+zulässig. <code>pruefe("In Klasse 1a")</code> sollte <code>true</code> ergeben.`,
 
 
   beforeTests: function() {
-    enthaeltNote = undefined;
+    pruefe = undefined;
   },
 
   tests: [
     function() {
-      return jshero.testutil.assert_isFunction('enthaeltNote');
+      return jshero.testutil.assert_isFunction('pruefe');
     },
 
     function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('enthaeltNote', 1);
+      return jshero.testutil.assert_functionHasNumOfParameter('pruefe', 1);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Latein: 1")', true);
+      return jshero.testutil.assert_functionReturns('pruefe("Klasse 1a")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Mathe 6")', true);
+      return jshero.testutil.assert_functionReturns('pruefe("Klasse 6d")', true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("Klasse 7")', false);
+      return jshero.testutil.assert_functionReturns('pruefe("Klasse 0a")', false);
+    },
+   
+    function() {
+      return jshero.testutil.assert_functionReturns('pruefe("Klasse 1e")', false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('enthaeltNote("0 Grad")', false);
+      return jshero.testutil.assert_functionReturns('pruefe("Klasse 7d")', false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('pruefe("Kasse 1a")', false);
     }
 
   ]
