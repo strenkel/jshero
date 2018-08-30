@@ -5,7 +5,7 @@ jshero.koans.add({
   title: "Regex: Bereiche",
 
   lesson: `Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
-dafür <code>/[0123456789]/</code> benutzen. Das ist aber recht umständlich. 
+dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich. 
 Mit einem Bindestrich kann man größere, zusammenhängende Zeichenbereiche leicht darstellen:
 
 <pre><code>var pruefeZiffer = /[0-9]/;
@@ -29,10 +29,9 @@ hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Buchst
 egal ob in Groß- oder Kleinschreibung. Den Buchstabenbereich kann man wie bei Ziffern
 beliebig einschränken (<code>/[M-T]/</code>).`,
 
-  task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String einen
-Teilstring wie <code>"Klasse 2b"</code> enthält. Dabei sind Klassen von 1 bis 6 und a bis d
-zulässig. <code>pruefe("In Klasse 1a")</code> sollte <code>true</code> ergeben.`,
-
+  task: `Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine
+Zeichenfolge wie "Klasse 2b" enthält. Dabei sind Klassen von 1 bis 6 und a bis d
+zulässig. <code>pruefe("Die Klasse 1a")</code> sollte <code>true</code> ergeben.`,
 
   beforeTests: function() {
     pruefe = undefined;
@@ -58,7 +57,7 @@ zulässig. <code>pruefe("In Klasse 1a")</code> sollte <code>true</code> ergeben.
     function() {
       return jshero.testutil.assert_functionReturns('pruefe("Klasse 0a")', false);
     },
-   
+
     function() {
       return jshero.testutil.assert_functionReturns('pruefe("Klasse 1e")', false);
     },
