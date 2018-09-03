@@ -19,6 +19,14 @@ dann den Wert <code>"grün"</code>.`,
 
   task: 'Deklariere eine Variable <code>hallo</code> und weise ihr eine Funktion zu, die <code>"Hallo Welt!"</code> zurückgibt.',
 
+  hint: `<pre><code>var hallo = function() {
+  ...
+};</code></pre>`,
+
+  solution: `<pre><code>var hallo = function() {
+  return "Hallo Welt!";
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof hallo !== "undefined") {
       hallo = undefined;
