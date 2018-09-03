@@ -357,6 +357,13 @@ a.link-button:hover {
   display: none;
 }
 
+#hint-link-root,  #solution-link-root {
+  text-decoration: underline;
+  text-align: right;
+  cursor: pointer;
+  font-style: italic;
+}
+
 /* smartphones */
 @media (max-width: 35em) {
 

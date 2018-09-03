@@ -11,6 +11,8 @@ jshero.i18n = (function() {
 
   var dic_de = {
 
+    hint: "Tipp",
+    solution: "Lösung",
     writeCode: "Schreibe deinen Code in das Eingabefeld.",
     noSyntaxError: "Code erfolgreich eingelesen.",
     testError: "Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!",
@@ -42,6 +44,8 @@ jshero.i18n = (function() {
 
   var dic_en = {
 
+    hint: "Hint",
+    solution: "Solution",
     writeCode: "Write your code in the input field.",
     noSyntaxError: "Reading your code successfully.",
     testError: "Test-Error! Correct the error and re-run the tests!",

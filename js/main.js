@@ -6,6 +6,10 @@
   var testButton = document.getElementById("test-button");
   var nextButton = document.getElementById("next-button");
   var prevButton = document.getElementById("prev-button");
+  var hintLink = document.getElementById("hint-link");
+  var hintArea = document.getElementById("hint-area");
+  var solutionLink = document.getElementById("solution-link");
+  var solutionArea = document.getElementById("solution-area");
 
   // used to prevent double testing by double clicks
   var testsAreRunning = false;
@@ -21,6 +25,10 @@
     // IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements!
     document.getElementById("koans-lesson").innerHTML = koan.lesson;
     document.getElementById("koans-task").innerHTML = koan.task;
+
+    if (koan.hint) {
+      showHintLink();
+    }
 
     var solution = storage.getSolution(koan);
     if (solution) {
@@ -102,6 +110,25 @@
     // auch gleich der Klick auf den Weiter-Button ausgeloest. 'return false' verhindert das.
     // 'return false' works like Event.preventDefault and Event.stopPropagation, but has better browser support.
     return false;
+  };
+
+  var showHintLink = function() {
+    hintLink.innerHTML = I18N("hint");
+    hintLink.onclick = showHint;
+  };
+
+  var showSolutionLink = function() {
+    solutionLink.innerHTML = I18N("solution");
+    solutionLink.onclick = showSolution;
+  };
+
+  var showHint = function() {
+    hintArea.innerHTML = actualKoan.getKoan().hint;
+    showSolutionLink();
+  };
+
+  var showSolution = function() {
+    solutionArea.innerHTML = actualKoan.getKoan().solution;
   };
 
   testButton.onclick = testCode;
