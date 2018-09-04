@@ -34,8 +34,12 @@ jshero.util = (function() {
   };
 
   var onclick = function(elm, func) {
-     elm.onclick = func;
-     elm.ontouchstart = func;
+    var myFunc = function() {
+      func();
+      return false;
+    }
+    elm.onclick = myFunc;
+    elm.ontouchstart = myFunc;
   };
 
   return {
