@@ -82,14 +82,9 @@
     msg.clear();
   }
 
-  testButton.onclick = runCode;
-  testButton.ontouchstart = runCode;
-
-  clearButton.onclick = clearCode;
-  clearButton.ontouchstart = clearCode;
-
-  exampleLink.onclick = showExample;
-  exampleLink.ontouchstart = showExample;
+  util.onclick(testButton, runCode);
+  util.onclick(clearButton, clearCode);
+  util.onclick(exampleLink, showExample);
 
   window.onload = insertCodeFromStorage;
 
