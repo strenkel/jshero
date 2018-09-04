@@ -17,6 +17,14 @@ jshero.koans.add({
     Übergibt man der Funktion <code>"Maria"</code>, so sollte die Funktion <code>"Hallo Maria!"</code> zurückgeben. Übergibt man der Funktion <code>"Franz"</code>,
     so sollte die Rückgabe <code>"Hallo Franz!"</code> sein.`,
 
+  hint: `<pre><code>var begruesse = function(name) {
+  return ...
+};`,
+
+  solution: `<pre><code>var begruesse = function(name) {
+  return "Hallo " + name + "!";
+};`,
+
   beforeTests: function() {
     begruesse = undefined;
   },

@@ -27,27 +27,39 @@ Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen
 2. Deklariere eine Variable <code>begruessung</code>. Rufe die Funktion <code>begruesse</code> auf und weise der Variablen
 <code>begruessung</code> die Rückgabe dieses Aufrufs zu.`,
 
+  hint: `<pre><code>var begruesse = function() {
+  ...
+};
+
+var begruessung = ...</code></pre>`,
+
+solution: `<pre><code>var begruesse = function() {
+  return "Moin!";
+};
+
+var begruessung = begruesse();</code></pre>`,
+
   beforeTests: function() {
-      begruesse = undefined;
-      begruessung = undefined;
+    begruesse = undefined;
+    begruessung = undefined;
   },
 
   tests: [
 
     function() {
-        return jshero.testutil.assert_isFunction('begruesse');
+      return jshero.testutil.assert_isFunction('begruesse');
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('begruesse()', 'Moin!');
+      return jshero.testutil.assert_functionReturns('begruesse()', 'Moin!');
     },
 
     function() {
-        return jshero.testutil.assert_variableDefined('begruessung');
+      return jshero.testutil.assert_variableDefined('begruessung');
     },
 
     function() {
-        return jshero.testutil.assert_variableHasValue(begruessung, 'begruessung', 'Moin!');
+      return jshero.testutil.assert_variableHasValue(begruessung, 'begruessung', 'Moin!');
     }
   ]
 

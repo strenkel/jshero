@@ -16,6 +16,14 @@ jshero.koans.add({
 
   task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
 
+  hint: `<pre><code>var echo = function(ton) {
+  ...
+};`,
+
+  solution: `<pre><code>var echo = function(ton) {
+  return ton;
+};`,
+
   beforeTests: function() {
     if (typeof echo !== "undefined") {
       echo = undefined;
