@@ -33,12 +33,17 @@ jshero.util = (function() {
     return result;
   };
 
+  var onclick = function(elm, func) {
+     elm.onclick = func;
+     elm.ontouchstart = func;
+  };
 
   return {
     isPhoneGap: isPhoneGap,
     scrollToBottom: scrollToBottom,
     scrollToTop: scrollToTop,
-    formatMessage: formatMessage
+    formatMessage: formatMessage,
+    onclick: onclick
   };
 
 })();

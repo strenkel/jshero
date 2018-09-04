@@ -27,7 +27,11 @@
     document.getElementById("koans-task").innerHTML = koan.task;
 
     if (koan.hint) {
-      showHintLink();
+      showHintOpenLink();
+    }
+
+    if (koan.solution) {
+      showSolutionOpenLink();
     }
 
     var solution = storage.getSolution(koan);
@@ -112,27 +116,47 @@
     return false;
   };
 
-  var showHintLink = function() {
-    hintLink.innerHTML = I18N("hint");
-    hintLink.onclick = showHint;
+  var showHintOpenLink = function() {
+    hintLink.innerHTML = "+ " + I18N("hint");
+    util.onclick(hintLink, showHint);
   };
 
-  var showSolutionLink = function() {
-    solutionLink.innerHTML = I18N("solution");
-    solutionLink.onclick = showSolution;
+  var showHintCloseLink = function() {
+    hintLink.innerHTML = "- " + I18N("hint");
+    util.onclick(hintLink, closeHint);
+  };
+
+  var showSolutionOpenLink = function() {
+    solutionLink.innerHTML = "+ " + I18N("solution");
+    util.onclick(solutionLink, showSolution);
+  };
+
+  var showSolutionCloseLink = function() {
+    solutionLink.innerHTML = "- " + I18N("solution");
+    util.onclick(solutionLink, closeSolution);
   };
 
   var showHint = function() {
     hintArea.innerHTML = actualKoan.getKoan().hint;
-    showSolutionLink();
+    showHintCloseLink();
+  };
+
+  var closeHint = function() {
+    hintArea.innerHTML = "";
+    showHintOpenLink();
   };
 
   var showSolution = function() {
     solutionArea.innerHTML = actualKoan.getKoan().solution;
+    showSolutionCloseLink();
   };
 
-  testButton.onclick = testCode;
-  testButton.ontouchstart = testCode;
+  var closeSolution = function() {
+    solutionArea.innerHTML = "";
+    showSolutionOpenLink();
+  };
+
+  util.onclick(testButton, testCode);
   window.onload = write;
 
 })(jshero.message,
