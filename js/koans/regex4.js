@@ -25,9 +25,8 @@ Großbuchstaben unterscheiden. <code>/[A-Z]/</code> steht für einen der 26 Gro�
 ä, ö, ü und ß nicht mit erfasst werden. Möchte man das, so muss man diese Buchstaben gesondert
 aufführen. Dazu schreibt man die Umlaute und das Eszett wie bei einer gewöhnlichen Auswahl
 einfach vor oder hinter den Bereich (<code>/[a-zäöüß]/</code>). Ebenso kann man zwei Bereiche
-hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Buchstaben,
-egal ob in Groß- oder Kleinschreibung. Den Buchstabenbereich kann man wie bei Ziffern
-beliebig einschränken (<code>/[M-T]/</code>).`,
+hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Klein- oder Großbuchstaben.
+Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M-T]/</code>).`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine
 Zeichenfolge wie "Klasse 2b" enthält. Dabei sind Klassen von 1 bis 6 und a bis d

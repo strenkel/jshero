@@ -10,6 +10,17 @@ jshero.koans.add({
   Gleichzeitig soll die Rückgabe geloggt werden. Der Aufruf <code>rufe("Werder")</code>
   sollte <code>"WerderWerder"</code> zurückgeben und er sollte <code>"WerderWerder"</code> loggen.`,
 
+  hint: `<pre><code>var rufe = function(name) {
+  var ruf = name + name;
+  ...
+};`,
+
+  solution: `<pre><code>var rufe = function(name) {
+  var ruf = name + name;
+  console.log(ruf);
+  return ruf;
+};`,
+
   beforeTests: function() {
     if (typeof rufe !== "undefined") {
       rufe = undefined;

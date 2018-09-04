@@ -15,6 +15,14 @@ In der Konsole erscheint <code>"Ken Thompson"</code>. Das ist der Wert der Varia
   task: `Schreibe eine Funktion <code>logge</code>, die einen Parameter entgegennimmt und diesen Parameter loggt.
 Der Aufruf von <code>logge("Ken Thompson")</code> sollte <code>"Ken Thompson"</code> loggen.`,
 
+  hint: `<pre><code>var logge = function(wert) {
+  ...
+};`,
+
+  solution: `<pre><code>var logge = function(wert) {
+  console.log(wert);
+};`,
+
   beforeTests: function() {
     if (typeof logge !== "undefined") {
       logge = undefined;
