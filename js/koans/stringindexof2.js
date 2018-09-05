@@ -22,6 +22,17 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
 <br/>Tipp: Falls Du Hilfe brauchst, lies dir auch die Beschreibung in
 <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String/indexOf">SELFHTML</a> durch.`,
 
+  hint: `<pre><code>var secondIndexOf = function(s1, s2) {
+// Verwende indexOf zweimal.
+// Zuerst ohne, dann mit
+// zweitem Parameter. 
+};`,
+
+  solution: `<pre><code>var secondIndexOf = function(s1, s2) {
+  var firstIndex = s1.indexOf(s2);
+  return s1.indexOf(s2, firstIndex + 1);
+};`,
+
   beforeTests: function() {
     if (typeof secondIndexOf !== "undefined") {
       secondIndexOf = undefined;
@@ -35,6 +46,10 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
 
     function() {
       return jshero.testutil.assert_functionHasNumOfParameter('secondIndexOf', 2);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('secondIndexOf("AA", "A")', 1);
     },
 
     function() {
