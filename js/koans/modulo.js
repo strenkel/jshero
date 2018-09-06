@@ -13,6 +13,14 @@ jshero.koans.add({
   task: 'Schreibe eine Funktion <code>einer</code>, die eine natürliche Zahl entgegenimmt und die Ziffer der Einer-Stelle zurückgibt. ' +
     '<code>einer(2674)</code> sollte <code>4</code> zurückgeben.',
 
+  hint: `<pre><code>var einer = function(n) {
+// Benutze Modulo 10.  
+};</code></pre>`,
+
+  solution: `<pre><code>var einer = function(n) {
+  return n%10;
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof einer !== "undefined") {
       einer = undefined;
@@ -29,7 +37,11 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('einer(2674)', 4);
+      return jshero.testutil.assert_functionReturns('einer(3)', 3);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('einer(17)', 7);
     },
 
     function() {
@@ -37,9 +49,8 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('einer(17)', 7);
+      return jshero.testutil.assert_functionReturns('einer(2674)', 4);
     }
-
   ]
 
 });
