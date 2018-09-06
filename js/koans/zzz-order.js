@@ -1,14 +1,14 @@
 /* This puts the koans in the desired order */
 
 jshero.koans.initReorder(
-    [
+  [
     'var',
     'var2',
     'function',
     'function2',
     'functioncall',
     'parameter',
-    'parameter2',
+    'parameter2a',
     'string',
     'log1',
     'log2',
@@ -76,5 +76,5 @@ jshero.koans.initReorder(
     'regex3',
     'regex4',
     'further'
-    ]
+  ]
 );
