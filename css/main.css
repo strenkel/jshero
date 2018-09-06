@@ -280,6 +280,10 @@ a.link-button:hover {
   color: #e00000; /* dark-red */
 }
 
+#success #koans a:hover {
+  text-decoration: underline;
+}
+
 #koans a {
   display: block;
   margin: 0.5em 0;
