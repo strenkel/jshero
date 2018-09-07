@@ -15,6 +15,14 @@ jshero.koans.add({
 
   task: 'Write a function <code>echo</code> that also returns the passed parameter.',
 
+  hint: `<pre><code>var echo = function(sound) {
+  ...
+};`,
+
+  solution: `<pre><code>var echo = function(sound) {
+  return sound;
+};`,
+
   beforeTests: function() {
     if (typeof echo !== "undefined") {
       echo = undefined;

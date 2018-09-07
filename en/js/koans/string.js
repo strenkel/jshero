@@ -10,11 +10,19 @@ jshero.koans.add({
     'You can work with strings. For example, they can be concatenated. This is done with the <code>+</code> sign. ' +
     '<code>"Java" + "Script"</code> results in the string <code>"JavaScript"</code>.<br>' +
     'The following function appends <code>" is great!"</code> to the passed parameter and returns the result:' +
-    '<pre><code>var praise = function(name) {<br>  return name + " is great!";<br>};</code></pre>' + 
-    '<code>praise("JavaScript")</code> will return <code>"JavaScript is great!"</code>.', 
-        
-  task: 'Write a function <code>greet</code> having one parameter and that returns <code>"Hello &lt;parameter&gt;!"</code>. ' +
+    '<pre><code>var praise = function(name) {<br>  return name + " is great!";<br>};</code></pre>' +
+    '<code>praise("JavaScript")</code> will return <code>"JavaScript is great!"</code>.',
+
+  task: 'Write a function <code>greet</code> having one parameter and returning <code>"Hello &lt;parameter&gt;!"</code>. ' +
     '<code>greet("Ada")</code> should return <code>"Hello Ada!"</code> and <code>greet("Tayo")</code> should return <code>"Hello Tayo!"</code>.',
+
+  hint: `<pre><code>var greet = function(name) {
+  return ...
+};`,
+
+  solution: `<pre><code>var greet = function(name) {
+  return "Hello " + name + "!";
+};`,
 
   beforeTests: function() {
     if (typeof greet !== "undefined") {
@@ -23,7 +31,7 @@ jshero.koans.add({
   },
 
   tests: [
-    
+
     function() {
       var ok = typeof greet === 'function';
       var msg;
@@ -37,7 +45,7 @@ jshero.koans.add({
         ok: ok
       };
     },
-    
+
     function() {
       var ok = greet.length === 1;
       var msg;
@@ -63,7 +71,7 @@ jshero.koans.add({
           ok = false;
           msg = '<code>greet("Ada")</code> does not return <code>"Hello Ada!"</code>, but <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(exc) {
+      } catch (exc) {
         ok = false;
         msg = 'Error when calling <code>greet("Ada")</code>.';
         e = exc;
@@ -74,7 +82,7 @@ jshero.koans.add({
         e: e
       };
     },
-    
+
     function() {
       var ok, msg, e;
       try {
@@ -86,7 +94,7 @@ jshero.koans.add({
           ok = false;
           msg = '<code>greet("Tayo")</code> does not return <code>"Hello Tayo!"</code>, but <code>' + JSON.stringify(result) + '</code>.';
         }
-      } catch(exc) {
+      } catch (exc) {
         ok = false;
         msg = 'Error when calling <code>greet("Tayo")</code>.';
         e = exc;
@@ -97,7 +105,7 @@ jshero.koans.add({
         e: e
       };
     }
-    
+
   ]
 
 });
