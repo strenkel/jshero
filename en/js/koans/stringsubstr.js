@@ -14,9 +14,21 @@ The first parameter specifies the position at which to start extracting.
 The second parameter specifies the number of characters to extract.
 If the second parameter is not set, all the characters from start position to the end of the string are extracted.`,
 
-  task: `Write a function <code>firstWord</code>, that accepts a string and returns the first word in that string.
-  The first word are all characters up to the first space.
+  task: `Write a function <code>firstWord</code>, taking a string and returning the first word in that string.
+The first word are all characters up to the first space.
 <code>firstWord("see and stop")</code> should return <code>"see"</code>.`,
+
+  hint: `<pre><code>var firstWord = function(s) {
+// Determine with indexOf
+// the position of the
+// first space. Then use
+// the substr method.
+};`,
+
+  solution: `<pre><code>var firstWord = function(s) {
+  var firstBlank = s.indexOf(" ");
+  return s.substr(0, firstBlank);
+};`,
 
   beforeTests: function() {
     if (typeof firstWord !== "undefined") {

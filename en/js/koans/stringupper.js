@@ -25,6 +25,14 @@ Now <code>output</code> has the value <code>"mthatha"</code>.`,
 lowercase and uppercase with <code>-</code> as delimiter.
 <code>toCase("Mthatha")</code> should return <code>"mthatha-MTHATHA"</code>.`,
 
+  hint: `<pre><code>var toCase = function(text) {
+  return ... + "-" + ...;
+};`,
+
+  solution: `<pre><code>var toCase = function(text) {
+  return text.toLowerCase() + "-" + text.toUpperCase();
+};`,
+
   beforeTests: function() {
     if (typeof toCase !== "undefined") {
       toCase = undefined;

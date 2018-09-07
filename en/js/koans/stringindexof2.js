@@ -15,10 +15,19 @@ Starting our search at position <code>1</code> it will be found. <code>n1</code>
 The second <code>"it"</code> in <code>"White Rabbit"</code> has the index <code>10</code>.
 Starting our search at position <code>3</code> it will be found. <code>n2</code> is <code>10</code>.`,
 
-  task: `Write a function <code>secondIndexOf</code>, that accepts two strings
-and determines the second occurrence of the second string in the first string.
+  task: `Write a function <code>secondIndexOf</code>, taking two strings
+and determining the second occurrence of the second string in the first string.
 If the search string does not occur twice, <code>-1</code> should be returned.
 <code>secondIndexOf("White Rabbit", "it")</code> should return <code>10</code>.`,
+
+  hint: `<pre><code>var secondIndexOf = function(s1, s2) {
+// Use indexOf twice. 
+};`,
+
+  solution: `<pre><code>var secondIndexOf = function(s1, s2) {
+  var firstIndex = s1.indexOf(s2);
+  return s1.indexOf(s2, firstIndex + 1);
+};`,
 
   beforeTests: function() {
     if (typeof secondIndexOf !== "undefined") {

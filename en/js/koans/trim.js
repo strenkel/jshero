@@ -15,6 +15,17 @@ Notice that <code>input</code> still contains the string <code>" Rosa Parks "</c
   task: `Write a function <code>firstChar</code>, which returns the first character that is not a space
 when a string is passed. <code>firstChar(" Rosa Parks ")</code> should return <code>"R"</code>.`,
 
+  hint: `<pre><code>var firstChar = function(text) {
+// Trim first.
+// Then use the
+// charAt method.
+};`,
+
+  solution: `<pre><code>var firstChar = function(text) {
+  var trimmedText = text.trim();
+  return trimmedText.charAt(0);
+};`,
+
   beforeTests: function() {
     if (typeof firstChar !== "undefined") {
       firstChar = undefined;

@@ -26,6 +26,14 @@ Therefore JS Hero writes the log additionally into the test output.`,
   task: `Write a function <code>log</code> that logs <code>"Hello Console!"</code>.
 If you are working with a desktop browser, open the developer tools to see the output there as well.`,
 
+  hint: `<pre><code>var log = function() {
+  console.log(...);
+};`,
+
+  solution: `<pre><code>var log = function() {
+  console.log("Hello Console!");
+};`,
+
   beforeTests: function() {
     if (typeof log !== "undefined") {
       log = undefined;

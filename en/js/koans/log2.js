@@ -15,6 +15,14 @@ The console outputs <code>"Ken Thompson"</code>.`,
   task: `Write a function <code>log</code>, that takes a parameter and logs this parameter.
 <code>log("Ken Thompson")</code> should log <code>"Ken Thompson"</code>.`,
 
+  hint: `<pre><code>var log = function(value) {
+  ...
+};`,
+
+  solution: `<pre><code>var log = function(value) {
+  console.log(value);
+};`,
+
   beforeTests: function() {
     if (typeof log !== "undefined") {
       log = undefined;
