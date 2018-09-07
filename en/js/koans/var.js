@@ -17,6 +17,10 @@ Note: JavaScript is case-sensitive. <code>city</code> and <code>City</code> are 
 
   task: 'Declare a variable <code>firstname</code> and initialize it with the value <code>"Lata"</ code>.',
 
+  hint: `<pre><code>var firstname = ...</code></pre>`,
+
+  solution: `<pre><code>var firstname = "Lata";</code></pre>`,
+
   beforeTests: function() {
     if (typeof firstname !== "undefined") {
       firstname = undefined;

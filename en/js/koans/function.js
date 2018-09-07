@@ -15,14 +15,22 @@ jshero.koans.add({
     '<pre><code>var result = color();</code></pre>' +
     'Now the function is executed. Its return is assigned to the variable <code>result</code>. <code>result</code> therefore has the value <code>"red"</code>.',
 
-  task: 'Declare a variable <code>hello</code>. Assign a function to it, that returns <code>"Hello world!"</code>.',
+  task: 'Declare a variable <code>hello</code>. Assign a function to it returning <code>"Hello world!"</code>.',
+
+  hint: `<pre><code>var hello = function() {
+  ...
+};</code></pre>`,
+
+  solution: `<pre><code>var hello = function() {
+  return "Hello world!";
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof hello !== "undefined") {
       hello = undefined;
     }
   },
-
+ 
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('hello');
