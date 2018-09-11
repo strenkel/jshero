@@ -76,9 +76,10 @@ code {
 }
 
 #nav a {
+  width: 8em;
   display: block;
   color: white;
-  margin: 1.2em;
+  margin: 1.2em auto;
   font-size: 1.2em;
 }
 
