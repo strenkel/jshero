@@ -14,7 +14,7 @@ var t3 = /M.ier/.test("Baier");
 var t4 = /M.ier/.test("Mier");
 var t5 = /M.ier/.test("M-ier");</code></pre>
 
-Der regulärer Ausdruck ist hier <code>/M.ier/</code>. Er steht für alle Zeichenketten, die mit
+Der regulärer Ausdruck <code>/M.ier/</code> steht für alle Zeichenketten, die mit
 <code>M</code> beginnen, ein beliebiges zweites Zeichen besitzen und anschließend mit
 <code>ier</code> enden. Damit können wir testen, ob ein String <code>Maier</code> oder
 <code>Meier</code> enthält. Das ist in den ersten beiden Beispielzeilen der Fall.
