@@ -32,6 +32,15 @@ Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M
 Zeichenfolge wie "Klasse 2b" enthält. Dabei sind Klassen von 1 bis 6 und a bis d
 zulässig. <code>pruefe("Die Klasse 1a")</code> sollte <code>true</code> ergeben.`,
 
+  hint: `<pre><code>var pruefe = function(s) {
+// Verwende Literale
+// und Bereiche.  
+};</code></pre>`,
+
+  solution: `<pre><code>var pruefe = function(s) {
+  return /Klasse [1-6][a-d]/.test(s);
+};</code></pre>`,
+
   beforeTests: function() {
     pruefe = undefined;
   },
