@@ -20,7 +20,9 @@ Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus diesem Ausdruc
 <code>/M[ae]ier/</code> steht dann für <code>Maier</code> oder <code>Meier</code>.
 Die Variablen <code>t1</code> sowie <code>t2</code> sind <code>true</code> und <code>t3</code>
 ist <code>false</code>. Da <code>/[ae]/</code> für genau ein Zeichen steht, ist <code>t4</code>
-auch <code>false</code>.`,
+auch <code>false</code>.<br><br>
+Die Auswahl kann beliebig viele Zeichen enthalten. <code>/[abc]/</code> steht für a, b oder c
+und <code>/[123456]/</code> steht für eine Ziffer von 1 bis 6.`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Namen
 Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
