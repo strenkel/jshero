@@ -16,6 +16,14 @@ jshero.koans.add({
   task: 'Schreibe eine Funktion <code>laenge</code>, die bei Übergabe eines Strings die Anzahl der Zeichen dieses Strings zurückgibt. ' +
     '<code>laenge("Franz")</code> sollte <code>5</code> zurückgeben.',
 
+  hint: `<pre><code>var laenge = function(s) {
+...
+};`,
+
+  solution: `<pre><code>var laenge = function(s) {
+  return s.length;
+};`,
+
   beforeTests: function() {
     if (typeof laenge !== "undefined") {
       laenge = undefined;
@@ -24,7 +32,7 @@ jshero.koans.add({
 
   tests: [
     function() {
-        return jshero.testutil.assert_isFunction('laenge');
+      return jshero.testutil.assert_isFunction('laenge');
     },
 
     function() {
@@ -32,11 +40,11 @@ jshero.koans.add({
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('laenge("Hallo Welt!")', 11);
+      return jshero.testutil.assert_functionReturns('laenge("Hallo Welt!")', 11);
     },
 
     function() {
-        return jshero.testutil.assert_functionReturns('laenge("")', 0);
+      return jshero.testutil.assert_functionReturns('laenge("")', 0);
     }
   ]
 

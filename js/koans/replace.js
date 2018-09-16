@@ -26,6 +26,18 @@ Kommt der zu ersetzende String nicht vor, so wird der urspr√ºngliche String zur√
 deutsche Schreibweise (20.05.2017) umwandet. Sowohl <code>convert("20-05-2017")</code> als auch <code>convert("20/05/2017")</code>
 sollten <code>"20.05.2017"</code> ergeben.`,
 
+  hint: `<pre><code>var convert = function(s1, s2) {
+// Verwende replace viermal.
+};`,
+
+  solution: `<pre><code>var var convert = function(dateEn) {
+  var dateDe = dateEn.replace("-", ".");
+  dateDe = dateDe.replace("-", ".");
+  dateDe = dateDe.replace("/", ".");
+  dateDe = dateDe.replace("/", ".");
+  return dateDe;
+}; `,
+
   beforeTests: function() {
     if (typeof convert !== "undefined") {
       convert = undefined;
