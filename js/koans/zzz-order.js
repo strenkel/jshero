@@ -76,6 +76,7 @@ jshero.koans.initReorder(
     'regex3',
     'regex4',
     'regex5',
+    'regex6',
     'further'
   ]
 );
