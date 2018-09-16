@@ -7,8 +7,8 @@ jshero.koans.add({
   lesson: `In vielen Pattern ist das Vorkommen eines Zeichens variabel. Autokennzeichen
 bestehen aus einer variablen Anzahl von Buchstaben und Ziffern. Für solche Pattern stehen eine Reihe
 sogenannter Quantoren bereit. Ein elementarer Quantor ist das <code>?</code>. Er bedeutet,
-dass der voranstehende Ausdruck null- oder einmal vorkommt. <code>/ab?c/</code> steht
-für <code>ac</code> (b kommt nullmal vor) oder für <code>abc</code> (b kommt einmal vor).
+dass der voranstehende Ausdruck kein- oder einmal vorkommt. <code>/ab?c/</code> steht
+für <code>ac</code> (b kommt keinmal vor) oder für <code>abc</code> (b kommt einmal vor).
 <code>/[1-9]?[0-9]/</code> steht für eine ein- oder zweistellige Zahl.`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den
@@ -77,7 +77,7 @@ ergeben.`,
     function() {
       return jshero.testutil.assert_functionReturns('pruefe("Mai")', false);
     },
-    
+
     function() {
       return jshero.testutil.assert_functionReturns('pruefe("Maior")', false);
     },
