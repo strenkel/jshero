@@ -30,13 +30,13 @@ sollten <code>"20.05.2017"</code> ergeben.`,
 // Verwende replace viermal.
 };`,
 
-  solution: `<pre><code>var var convert = function(dateEn) {
+  solution: `<pre><code>var convert = function(dateEn) {
   var dateDe = dateEn.replace("-", ".");
   dateDe = dateDe.replace("-", ".");
   dateDe = dateDe.replace("/", ".");
   dateDe = dateDe.replace("/", ".");
   return dateDe;
-}; `,
+};`,
 
   beforeTests: function() {
     if (typeof convert !== "undefined") {
