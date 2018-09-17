@@ -11,6 +11,14 @@ jshero.koans.add({
 <a href="https://de.wikipedia.org/wiki/Grad_Fahrenheit">Grad Fahrenheit</a> umrechnet. Ist C die Temperatur in Grad Celsius
 und F die Temperatur in Grad Fahrenheit, so gilt: F = 1.8 * C + 32. <code>toFahrenheit(0)</code> sollte <code>32</code> ergeben.`,
 
+  hint: `<pre><code>var toFahrenheit = function(celsius) {
+  return ...
+};`,
+
+  solution: `<pre><code>var toFahrenheit = function(celsius) {
+  return 1.8 * celsius + 32;
+};`,
+
   beforeTests: function() {
     if (typeof add !== "undefined") {
       add = undefined;
