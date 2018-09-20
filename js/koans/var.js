@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "var",
+  jshero.koans.add({
 
-  title: "Variablen",
+    id: "var",
 
-  lesson: `<a href="https://de.wikipedia.org/wiki/JavaScript">JavaScript</a>-Programme bestehen
+    title: "Variablen",
+
+    lesson: `<a href="https://de.wikipedia.org/wiki/JavaScript">JavaScript</a>-Programme bestehen
 aus einer Reihe von Anweisungen. Jede Anweisung führt eine elementare Operation durch.
 Durch das Ausführen vieler Anweisungen kann man schließlich komplexe Aufgaben lösen.
 Jede Anweisung schreibt man in eine Zeile und schließt sie mit einem Semikolon ab.<br><br>
@@ -20,26 +22,28 @@ Mit dem Gleichheitszeichen, dem Zuweisungsoperator, weist man der Variablen eine
 Beachte: JavaScript unterscheidet zwischen Groß- und Kleinschreibung. <code>stadt</code> und <code>Stadt</code> sind
 zwei verschiedene Variablen. Man sagt auch: JavaScript ist case sensitive.`,
 
-  task: 'Deklariere eine Variable <code>vorname</code> und initialisiere sie mit dem Wert <code>"Franz"</code>.',
+    task: 'Deklariere eine Variable <code>vorname</code> und initialisiere sie mit dem Wert <code>"Franz"</code>.',
 
-  hint: `<pre><code>var vorname = ...</code></pre>`,
+    hint: `<pre><code>var vorname = ...</code></pre>`,
 
-  solution: `<pre><code>var vorname = "Franz";</code></pre>`,
+    solution: `<pre><code>var vorname = "Franz";</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof vorname !== "undefined") {
-      vorname = undefined;
-    }
-  },
-
-  tests: [
-    function() {
-      return jshero.testutil.assert_variableDefined('vorname');
+    beforeTests: function() {
+      if (typeof vorname !== "undefined") {
+        vorname = undefined;
+      }
     },
 
-    function() {
-      return jshero.testutil.assert_variableHasValue(vorname, 'vorname', 'Franz');
-    }
-  ]
+    tests: [
+      function() {
+        return testutil.assert_variableDefined('vorname');
+      },
 
-});
+      function() {
+        return testutil.assert_variableHasValue(vorname, 'vorname', 'Franz');
+      }
+    ]
+
+  });
+
+})(jshero.testutil);
