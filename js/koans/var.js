@@ -34,6 +34,8 @@ zwei verschiedene Variablen. Man sagt auch: JavaScript ist case sensitive.`,
       }
     },
 
+    exports: ["vorname"],
+
     tests: [
       function() {
         return testutil.assert_variableDefined('vorname');

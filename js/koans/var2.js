@@ -1,44 +1,50 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "var2",
+  jshero.koans.add({
 
-  title: "Mehrere Variablen",
+    id: "var2",
 
-  lesson: `Möchte man mehrere Variablen deklarieren und initialisieren, so kann man das in zwei Programmzeilen tun:
+    title: "Mehrere Variablen",
+
+    lesson: `Möchte man mehrere Variablen deklarieren und initialisieren, so kann man das in zwei Programmzeilen tun:
 
 <pre><code>var stadt = "Prag";
 var land = "Tschechien";</code></pre>
 
 In jeder Zeile steht eine Anweisung. Jede Anweisung sollte mit einem Semikolon abgeschlossen werden.`,
 
-  task: `Deklariere eine Variable <code>blume</code> und weise ihr den Wert <code>"Rose"</code> zu.
+    task: `Deklariere eine Variable <code>blume</code> und weise ihr den Wert <code>"Rose"</code> zu.
 Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>"Käfer"</code> zu.`,
 
-  beforeTests: function() {
-    if (typeof blume !== "undefined") {
-      blume = undefined;
-    }
-    if (typeof tier !== "undefined") {
-      tier = undefined;
-    }
-  },
+    exports: ["blume", "tier"],
 
-  tests: [
-    function() {
-      return jshero.testutil.assert_variableDefined('blume');
+    beforeTests: function() {
+      if (typeof blume !== "undefined") {
+        blume = undefined;
+      }
+      if (typeof tier !== "undefined") {
+        tier = undefined;
+      }
     },
 
-    function() {
-      return jshero.testutil.assert_variableHasValue(blume, 'blume', 'Rose');
-    },
+    tests: [
+      function() {
+        return testutil.assert_variableDefined('blume');
+      },
 
-    function() {
-      return jshero.testutil.assert_variableDefined('tier');
-    },
+      function() {
+        return testutil.assert_variableHasValue(blume, 'blume', 'Rose');
+      },
 
-    function() {
-      return jshero.testutil.assert_variableHasValue(tier, 'tier', 'Käfer');
-    }
-  ]
+      function() {
+        return testutil.assert_variableDefined('tier');
+      },
 
-});
+      function() {
+        return testutil.assert_variableHasValue(tier, 'tier', 'Käfer');
+      }
+    ]
+
+  });
+
+})(jshero.testutil);

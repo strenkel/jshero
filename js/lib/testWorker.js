@@ -9,84 +9,49 @@ importScripts(
   "testutil.js"
 );
 
-/**
- * Cross Browser global eval. In particular for IE8.
- * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
- * Difference to Chris: Returns undefined if global eval or execScript is not available.
- * The 'setTimeout' return form Chris would not work here without changing our code.
- * See also: http://perfectionkills.com/global-eval-what-are-the-options/
- */
-var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
-  try {
-    eval('var Array={};');
-    indirectEvalWorks = indirectEval('Array') == realArray;
-  } catch (err) { }
+(function() {
 
-  return indirectEvalWorks
-    ? indirectEval
-    : (global.execScript
-      ? function(expression) {
-        global.execScript(expression);
-      }
-      : undefined
-    );
-})(this, Array, (2, eval));
+  // --- stateless util methods ---
 
-/**
- * We use _varname to prevent overwriting of this variables.
- */
-(function(koans, _log, i18n) {
-
-  var I18N;
-
-  var code;
-  var koanId;
-  var testIndex;
-  var language;
-
-  var readCode = function() {
-
-    var _result;
-    _log.clear();
-
+  /**
+   * Cross Browser global eval. In particular for IE8.
+   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
+   * Difference to Chris: Returns undefined if global eval or execScript is not available.
+   * The 'setTimeout' return form Chris would not work here without changing our code.
+   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
+   */
+  var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     try {
-      eval(code);
-      _result = {
-        ok: true,
-        msg: I18N("noSyntaxError")
-      };
-    } catch (e) {
-      _result = {
-        ok: false,
-        msg: I18N("syntaxError"),
-        e: cloneError(e)
-      };
-    }
-    _result.logs = _log.getAll();
-    return _result;
-  };
+      eval('var Array={};');
+      indirectEvalWorks = indirectEval('Array') == realArray;
+    } catch (err) { }
 
-  var testCode = function() {
+    return indirectEvalWorks
+      ? indirectEval
+      : (global.execScript
+        ? function(expression) {
+          global.execScript(expression);
+        }
+        : undefined
+      );
+  })(this, Array, (2, eval));
 
-    var koan = koans.getById(koanId);
-    var _result;
-
-    try {
-      globalEval(code);
-      _log.clear();
-      _result = koan.tests[testIndex]();
-    } catch (exc) {
-      _result = {
-        ok: false,
-        msg: I18N("unknownError"),
-        e: exc
-      };
+  /**
+   * Execute 'code' and export all variables in 'exports' to the global object.
+   * 
+   * @param {String} code 
+   * @param {[String]} exports 
+   */
+  var evalAndExport = function(code, exports) {
+    exports = exports || [];
+    var codeWithExports = code;
+    var myExport;
+    for (var i = 0, l = exports.length; i < l; i++) {
+      myExport = exports[i];
+      codeWithExports = codeWithExports + "; self['" + myExport + "']=" + myExport;
     }
-    if (_result.e) {
-      _result.e = cloneError(_result.e);
-    }
-    _result.logs = _log.getAll();
-    return _result;
+    // Can be replaced by eval when all koans have exports.
+    globalEval(codeWithExports);
   };
 
   var cloneError = function(e) {
@@ -105,43 +70,98 @@ var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
     return clone;
   };
 
-  var init = function() {
-    initI18n();
-    initKoans();
-    return {
-      ok: true
+  (function(koans, log, i18n) {
+
+    var I18N;
+    var code;
+    var koanId;
+    var testIndex;
+    var language;
+
+    var readCode = function() {
+
+      var result;
+      log.clear();
+
+      try {
+        eval(code);
+        result = {
+          ok: true,
+          msg: I18N("noSyntaxError")
+        };
+      } catch (e) {
+        result = {
+          ok: false,
+          msg: I18N("syntaxError"),
+          e: cloneError(e)
+        };
+      }
+      result.logs = log.getAll();
+      return result;
     };
-  };
 
-  var initI18n = function() {
-    i18n.setLanguage(language);
-    I18N = i18n.get;
-  };
+    var testCode = function() {
 
-  var initKoans = function() {
-    var koansMinUrl = language === "de" ? "../koans-min/koans.js" : "../../en/js/koans-min/koans.js";
-    importScripts(koansMinUrl);
-  };
+      var koan = koans.getById(koanId);
+      var result;
 
-  onmessage = function(event) {
+      try {
+        evalAndExport(code, koan.exports);
+        log.clear();
+        result = koan.tests[testIndex]();
+      } catch (exc) {
+        result = {
+          ok: false,
+          msg: I18N("unknownError"),
+          e: exc
+        };
+      }
+      if (result.e) {
+        result.e = cloneError(result.e);
+      }
+      result.logs = log.getAll();
+      return result;
+    };
 
-    code = event.data.code;
-    testIndex = event.data.testIndex;
-    koanId = event.data.koanId;
-    language = event.data.language;
-    var action = event.data.action;
+    var init = function() {
+      initI18n();
+      initKoans();
+      return {
+        ok: true
+      };
+    };
 
-    var result;
-    if (action === "init") {
-      result = init();
-    } else if (action === "read") {
-      result = readCode();
-    } else if (action === "test") {
-      result = testCode();
-    }
-    postMessage(result);
-  };
+    var initI18n = function() {
+      i18n.setLanguage(language);
+      I18N = i18n.get;
+    };
 
-})(jshero.koans,
-  jshero.log,
-  jshero.i18n);
+    var initKoans = function() {
+      var koansMinUrl = language === "de" ? "../koans-min/koans.js" : "../../en/js/koans-min/koans.js";
+      importScripts(koansMinUrl);
+    };
+
+    onmessage = function(event) {
+
+      code = event.data.code;
+      testIndex = event.data.testIndex;
+      koanId = event.data.koanId;
+      language = event.data.language;
+      var action = event.data.action;
+
+      var result;
+      if (action === "init") {
+        result = init();
+      } else if (action === "read") {
+        result = readCode();
+      } else if (action === "test") {
+        result = testCode();
+      }
+      postMessage(result);
+    };
+
+  })(jshero.koans,
+    jshero.log,
+    jshero.i18n);
+
+})();
