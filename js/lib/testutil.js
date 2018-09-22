@@ -230,7 +230,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
   };
 
   /**
-   * Test if a variable with the name 'name' is defined and is not undefined.
+   * Test if a variable with the name 'name' is defined or not undefined.
+   * 
+   * @param {String} name
    */
   var assert_variableDefined = function(name) {
 
@@ -254,15 +256,19 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
   };
 
   /**
-   * Prüfen, ob eine Variable einen Wert hat
+   * Prüfen, ob eine Variable den erwarteten Wert hat.
+   * 
+   * @param v {Object}
+   * @param name {String}
+   * @param expValue{Object} 
    */
-  var assert_variableHasValue = function(v, name, expValue) {
-    var ok = v === expValue;
+  var assert_variableHasValue = function(actValue, name, expValue) {
+    var ok = actValue === expValue;
     var msg;
     if (ok) {
-      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(JSON.stringify(v))]);
+      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(JSON.stringify(actValue))]);
     } else {
-      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(v))]);
+      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(actValue))]);
     }
     return {
       ok: ok,
