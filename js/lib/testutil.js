@@ -90,6 +90,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * jshero.testutil.assert_isFunction('a')
    *
    * We expect a function named "a".
+   * 
+   * @param {String} f_name
+   * @returns {TestResult}
    */
   var assert_isFunction = function(f_name) {
     var ok = false;
@@ -123,8 +126,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * Maybe its better to have special methods like
    * assert_functionReturnsDate, assert_functionReturnsArray, ...
    *
-   * @param {string} f_call
-   * @param {string} expectedReturnType
+   * @param {String} f_call
+   * @param {String} expectedReturnType
+   * @returns {TestResult}
    */
   var assert_functionReturnsType = function(f_call, expectedReturnType) {
     var ok, msg, e;
@@ -182,9 +186,10 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * Attention: If expectedReturnValue is a Date, f_call must return a Date too.
    * In this case, check the return type first.
    *
-   * @param {function} f_call
-   * @param {object} expectedReturnValue
-   * @param {object} options
+   * @param {String} f_call
+   * @param {Object} expectedReturnValue
+   * @param {Object} options
+   * @returns {TestResult}
    */
   var assert_functionReturns = function(f_call, expectedReturnValue, options) {
 
@@ -233,6 +238,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * Test if a variable with the name 'name' is defined or not undefined.
    * 
    * @param {String} name
+   * @returns {TestResult}
    */
   var assert_variableDefined = function(name) {
 
@@ -260,7 +266,8 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * 
    * @param v {Object}
    * @param name {String}
-   * @param expValue{Object} 
+   * @param expValue {Object}
+   * @returns {TestResult} 
    */
   var assert_variableHasValue = function(actValue, name, expValue) {
     var ok = actValue === expValue;
@@ -279,8 +286,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
   /**
    * Prüfen, ob die Function die geforderte Anzahl Parameter hat.
    *
-   * @param {string} f_name Name der Funktion.
+   * @param {String} f_name Name der Funktion.
    * @param {int} numOfParam Anzahl der geforderten Parameter.
+   * @returns {TestResult}
    */
   var assert_functionHasNumOfParameter = function(f_name, numOfParam) {
     var fun = eval(f_name);
