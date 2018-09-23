@@ -16,8 +16,6 @@ In jeder Zeile steht eine Anweisung. Jede Anweisung sollte mit einem Semikolon a
     task: `Deklariere eine Variable <code>blume</code> und weise ihr den Wert <code>"Rose"</code> zu.
 Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>"Käfer"</code> zu.`,
 
-    exports: ["blume", "tier"],
-
     beforeTests: function() {
       if (typeof blume !== "undefined") {
         blume = undefined;
@@ -33,7 +31,7 @@ Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>"
       },
 
       function() {
-        return testutil.assert_variableHasValue(blume, 'blume', 'Rose');
+        return testutil.assert_variableHasValue('blume', 'Rose');
       },
 
       function() {
@@ -41,7 +39,7 @@ Deklariere eine zweite Variable <code>tier</code> und weise ihr den Wert <code>"
       },
 
       function() {
-        return testutil.assert_variableHasValue(tier, 'tier', 'Käfer');
+        return testutil.assert_variableHasValue('tier', 'Käfer');
       }
     ]
 

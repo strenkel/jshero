@@ -1,51 +1,63 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "parameter",
+  jshero.koans.add({
 
-  title: "Parameter",
+    id: "parameter",
 
-  lesson: 'Jetzt lernen wir Funktionen mit Parametern kennen. Mit <pre><code>var gebe = function(eingabe) {<br>  return eingabe;<br>};</code></pre>' +
-    'definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt. ' +
-    'Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu ihrer Deklaration. ' +
-    'Mit <pre><code>var ergebnis = gebe("Apfel");</code></pre>' +
-    'wird die Funktion mit dem Argument <code>"Apfel"</code> aufgerufen. Jetzt wird unsere zuvor definierte Funktion ' +
-    'ausgeführt. Dabei wird zunächst das Argument <code>"Apfel"</code> dem Parameter <code>eingabe</code> zugewiesen. <code>eingabe</code> hat jetzt den ' +
-    'Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion wird nun die Variable <code>eingabe</code> mit der ' +
-    '<code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat ' +
-    'dann auch den Wert <code>"Apfel"</code>.',
+    title: "Parameter",
 
-  task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
+    lesson: `Jetzt lernen wir Funktionen mit Parametern kennen. Mit
 
-  hint: `<pre><code>var echo = function(ton) {
+  <pre><code>var gebe = function(eingabe) {
+  return eingabe;
+};</code></pre>
+
+definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt.
+Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu
+ihrer Deklaration. Mit
+
+<pre><code>var ergebnis = gebe("Apfel");</code></pre>
+
+wird die Funktion mit dem Argument <code>"Apfel"</code> aufgerufen. Jetzt wird unsere zuvor definierte Funktion
+ausgeführt. Dabei wird zunächst das Argument <code>"Apfel"</code> dem Parameter <code>eingabe</code> zugewiesen.
+<code>eingabe</code> hat jetzt den Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion wird nun die
+Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen
+<code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat dann auch den Wert <code>"Apfel"</code>.`,
+
+    task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
+
+    hint: `<pre><code>var echo = function(ton) {
   ...
 };`,
 
-  solution: `<pre><code>var echo = function(ton) {
+    solution: `<pre><code>var echo = function(ton) {
   return ton;
 };`,
 
-  beforeTests: function() {
-    if (typeof echo !== "undefined") {
-      echo = undefined;
-    }
-  },
-
-  tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('echo');
+    beforeTests: function() {
+      if (typeof echo !== "undefined") {
+        echo = undefined;
+      }
     },
 
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('echo', 1);
-    },
+    tests: [
+      function() {
+        return testutil.assert_isFunction('echo');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('echo("Hallo Welt!")', "Hallo Welt!");
-    },
+      function() {
+        return testutil.assert_functionHasNumOfParameter('echo', 1);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('echo("Franz")', "Franz");
-    }
-  ]
+      function() {
+        return testutil.assert_functionReturns('echo("Hallo Welt!")', "Hallo Welt!");
+      },
 
-});
+      function() {
+        return testutil.assert_functionReturns('echo("Franz")', "Franz");
+      }
+    ]
+
+  });
+
+})(jshero.testutil);

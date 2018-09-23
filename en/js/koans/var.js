@@ -33,7 +33,7 @@ Note: JavaScript is case-sensitive. <code>city</code> and <code>City</code> are 
     },
 
     function() {
-      return jshero.testutil.assert_variableHasValue(firstname, 'firstname', 'Lata');
+      return jshero.testutil.assert_variableHasValue('firstname', 'Lata');
     }
   ]
 

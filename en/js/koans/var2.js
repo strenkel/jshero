@@ -26,7 +26,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_variableHasValue(flower, 'flower', 'rose');
+      return jshero.testutil.assert_variableHasValue('flower', 'rose');
     },
 
     function() {
@@ -34,7 +34,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_variableHasValue(tree, 'tree', 'maple');
+      return jshero.testutil.assert_variableHasValue('tree', 'maple');
     }
   ]
 

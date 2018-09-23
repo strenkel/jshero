@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
+jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator) {
 
   'use strict';
 
@@ -95,12 +95,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * @returns {TestResult}
    */
   var assert_isFunction = function(f_name) {
-    var ok = false;
-    try {
-      ok = typeof eval(f_name) === 'function';
-    } catch (e) {
-      // nothing to do. f_name is not defined.
-    }
+    var ok = evaluator.evalTest("typeof " + f_name + "=== 'function';");
     var msg;
     if (ok) {
       msg = '<code>' + f_name + '</code> ' + I18N("isAFunction") + ".";
@@ -133,7 +128,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
   var assert_functionReturnsType = function(f_call, expectedReturnType) {
     var ok, msg, e;
     try {
-      var result = eval(f_call);
+      var result = evaluator.evalTest(f_call);
       var resultType = typeof result;
       switch (expectedReturnType) {
         case 'Array':
@@ -197,7 +192,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
 
     var ok, msg, e;
     try {
-      var result = eval(f_call);
+      var result = evaluator.evalTest(f_call);
       if (Array.isArray(result)) {
         ok = jsheroArray.isEqual(result, expectedReturnValue);
       } else if (jsheroDate.isDate(result)) {
@@ -242,13 +237,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    */
   var assert_variableDefined = function(name) {
 
-    var ok = false;
-    try {
-      ok = typeof eval(name) !== 'undefined';
-    } catch (e) {
-      // nothing to do. name is not defined.
-    }
-
+    var ok = evaluator.evalTest("typeof " + name + "!== 'undefined';");
     var msg;
     if (ok) {
       msg = jsheroUtil.formatMessage(I18N("varHasValue"), [name]);
@@ -269,7 +258,8 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * @param expValue {Object}
    * @returns {TestResult} 
    */
-  var assert_variableHasValue = function(actValue, name, expValue) {
+  var assert_variableHasValue = function(name, expValue) {
+    var actValue = evaluator.evalTest(name);
     var ok = actValue === expValue;
     var msg;
     if (ok) {
@@ -290,14 +280,14 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
    * @param {int} numOfParam Anzahl der geforderten Parameter.
    * @returns {TestResult}
    */
-  var assert_functionHasNumOfParameter = function(f_name, numOfParam) {
-    var fun = eval(f_name);
-    var ok = fun.length === numOfParam;
+  var assert_functionHasNumOfParameter = function(f_name, expectedNumOfParam) {
+    var actualNumOfParam = evaluator.evalTest(f_name + ".length;");
+    var ok = actualNumOfParam === expectedNumOfParam;
     var msg;
     if (ok) {
-      msg = jsheroUtil.formatMessage(I18N("correctNumOfParam"), [f_name, numOfParam]);
+      msg = jsheroUtil.formatMessage(I18N("correctNumOfParam"), [f_name, expectedNumOfParam]);
     } else {
-      msg = jsheroUtil.formatMessage(I18N("wrongNumOfParam"), [f_name, numOfParam, fun.length]);
+      msg = jsheroUtil.formatMessage(I18N("wrongNumOfParam"), [f_name, expectedNumOfParam, actualNumOfParam]);
     }
     return {
       ok: ok,
@@ -314,4 +304,4 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray) {
     assert_variableHasValue: assert_variableHasValue
   };
 
-})(jshero.i18n.get, jshero.date, jshero.util, jshero.array);
+})(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.evaluator);

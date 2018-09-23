@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "function2",
+  jshero.koans.add({
 
-  title: "Mehrere Funktionen",
+    id: "function2",
 
-  lesson: `Wir definieren nun mehr als eine Funktion.
+    title: "Mehrere Funktionen",
+
+    lesson: `Wir definieren nun mehr als eine Funktion.
   Zur Erinnerung: So wird eine Funktion mit Namen <code>farbe</code> definiert, die den Wert <code>"rot"</code>
   zurückgibt:
 
@@ -12,29 +14,31 @@ jshero.koans.add({
   return "rot";
 };</code></pre>`,
 
-  task: `Definiere zwei Funktionen. Die erste Funktion <code>a</code> soll <code>"Hallo a!"</code>
+    task: `Definiere zwei Funktionen. Die erste Funktion <code>a</code> soll <code>"Hallo a!"</code>
 zurückgeben. Die zweite Funktion <code>b</code> soll <code>"Hallo b!"</code> zurückgeben.`,
 
-  beforeTests: function() {
-    a = undefined;
-    b = undefined;
-  },
-
-  tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('a');
+    beforeTests: function() {
+      a = undefined;
+      b = undefined;
     },
 
-    function() {
-      return jshero.testutil.assert_isFunction('b');
-    },
+    tests: [
+      function() {
+        return testutil.assert_isFunction('a');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('a()', "Hallo a!");
-    },
+      function() {
+        return testutil.assert_isFunction('b');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('b()', "Hallo b!");
-    }
-  ]
-});
+      function() {
+        return testutil.assert_functionReturns('a()', "Hallo a!");
+      },
+
+      function() {
+        return testutil.assert_functionReturns('b()', "Hallo b!");
+      }
+    ]
+  });
+
+})(jshero.testutil);

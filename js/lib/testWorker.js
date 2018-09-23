@@ -6,53 +6,13 @@ importScripts(
   "../util/date.js",
   "log.js",
   "koans.js",
+  "evaluator.js",
   "testutil.js"
 );
 
 (function() {
 
   // --- stateless util methods ---
-
-  /**
-   * Cross Browser global eval. In particular for IE8.
-   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
-   * Difference to Chris: Returns undefined if global eval or execScript is not available.
-   * The 'setTimeout' return form Chris would not work here without changing our code.
-   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
-   */
-  var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
-    try {
-      eval('var Array={};');
-      indirectEvalWorks = indirectEval('Array') == realArray;
-    } catch (err) { }
-
-    return indirectEvalWorks
-      ? indirectEval
-      : (global.execScript
-        ? function(expression) {
-          global.execScript(expression);
-        }
-        : undefined
-      );
-  })(this, Array, (2, eval));
-
-  /**
-   * Execute 'code' and export all variables in 'exports' to the global object.
-   * 
-   * @param {String} code 
-   * @param {[String]} exports 
-   */
-  var evalAndExport = function(code, exports) {
-    exports = exports || [];
-    var codeWithExports = code;
-    var myExport;
-    for (var i = 0, l = exports.length; i < l; i++) {
-      myExport = exports[i];
-      codeWithExports = codeWithExports + "; self['" + myExport + "']=" + myExport;
-    }
-    // Can be replaced by eval when all koans have exports.
-    globalEval(codeWithExports);
-  };
 
   var cloneError = function(e) {
     var clone = {
@@ -70,7 +30,7 @@ importScripts(
     return clone;
   };
 
-  (function(koans, log, i18n) {
+  (function(koans, log, i18n, evaluator) {
 
     var I18N;
     var code;
@@ -84,7 +44,9 @@ importScripts(
       log.clear();
 
       try {
-        eval(code);
+        evaluator
+          .init(code)
+          .evalParse();
         result = {
           ok: true,
           msg: I18N("noSyntaxError")
@@ -106,7 +68,7 @@ importScripts(
       var result;
 
       try {
-        evalAndExport(code, koan.exports);
+        evaluator.init(code);
         log.clear();
         result = koan.tests[testIndex]();
       } catch (exc) {
@@ -162,6 +124,7 @@ importScripts(
 
   })(jshero.koans,
     jshero.log,
-    jshero.i18n);
+    jshero.i18n,
+    jshero.evaluator);
 
 })();

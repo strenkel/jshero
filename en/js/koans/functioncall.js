@@ -58,7 +58,7 @@ var salutation = greet();</code></pre>`,
     },
 
     function() {
-      return jshero.testutil.assert_variableHasValue(salutation, 'salutation', 'Haydo!');
+      return jshero.testutil.assert_variableHasValue('salutation', 'Haydo!');
     }
   ]
 
