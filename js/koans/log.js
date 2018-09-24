@@ -1,96 +1,62 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "log",
+  jshero.koans.add({
 
-  title: "Loggen und Strings",
+    id: "log",
 
-  lesson: "Jetzt wollen wir das Loggen zusammen mit dem Verketten von Strings üben.",
+    title: "Loggen und Strings",
 
-  task: `Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt.
+    lesson: "Jetzt wollen wir das Loggen zusammen mit dem Verketten von Strings üben.",
+
+    task: `Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt.
   Gleichzeitig soll die Rückgabe geloggt werden. Der Aufruf <code>rufe("Werder")</code>
   sollte <code>"WerderWerder"</code> zurückgeben und er sollte <code>"WerderWerder"</code> loggen.`,
 
-  hint: `<pre><code>var rufe = function(name) {
+    hint: `<pre><code>var rufe = function(name) {
   var ruf = name + name;
   ...
 };`,
 
-  solution: `<pre><code>var rufe = function(name) {
+    solution: `<pre><code>var rufe = function(name) {
   var ruf = name + name;
   console.log(ruf);
   return ruf;
 };`,
 
-  beforeTests: function() {
-    if (typeof rufe !== "undefined") {
-      rufe = undefined;
-    }
-  },
-
-  tests: [
-
-    function() {
-      return jshero.testutil.assert_isFunction('rufe');
-    },
-
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('rufe', 1);
-    },
-
-    function() {
-      return jshero.testutil.assert_functionReturns('rufe("Werder")', 'WerderWerder');
-    },
-
-    function() {
-      return jshero.testutil.assert_functionReturns('rufe("Kickers")', 'KickersKickers');
-    },
-
-    function() {
-      var ok, msg, e;
-      try {
-        rufe("Werder");
-        if (jshero.log.hasLog("WerderWerder")) {
-          ok = true;
-          msg = '<code>rufe("Werder")</code> loggt <code>"WerderWerder"</code>.';
-        } else {
-          ok = false;
-          msg = '<code>rufe("Werder")</code> loggt nicht <code>"WerderWerder"</code>.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>rufe("Werder")</code>.';
-        e = exc;
+    beforeTests: function() {
+      if (typeof rufe !== "undefined") {
+        rufe = undefined;
       }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
     },
 
-    function() {
-      var ok, msg, e;
-      try {
-        rufe("Kickers");
-        if (jshero.log.hasLog("KickersKickers")) {
-          ok = true;
-          msg = '<code>rufe("Kickers")</code> loggt <code>"KickersKickers"</code>.';
-        } else {
-          ok = false;
-          msg = '<code>rufe("Kickers")</code> loggt nicht <code>"KickersKickers"</code>.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>rufe("Kickers")</code>.';
-        e = exc;
+    tests: [
+
+      function() {
+        return testutil.assert_isFunction('rufe');
+      },
+
+      function() {
+        return testutil.assert_functionHasNumOfParameter('rufe', 1);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('rufe("Werder")', 'WerderWerder');
+      },
+
+      function() {
+        return testutil.assert_functionReturns('rufe("Kickers")', 'KickersKickers');
+      },
+
+      function() {
+        return testutil.assert_functionLogs('rufe("Werder")', "WerderWerder");
+      },
+
+      function() {
+        return testutil.assert_functionLogs('rufe("Kickers")', "KickersKickers");
       }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
-    }
 
-  ]
+    ]
 
-});
+  });
+
+})(jshero.testutil);

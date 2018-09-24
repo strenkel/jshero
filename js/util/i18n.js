@@ -41,7 +41,9 @@ jshero.i18n = (function() {
     functionReturnsAnArray: "<code>%0</code> gibt ein Array zurück.",
     functionNotReturnsAnArray: "<code>%0</code> gibt kein Array zurück.",
     functionReturnsADate: "<code>%0</code> gibt ein Date zurück.",
-    functionNotReturnsADate: "<code>%0</code> gibt kein Date zurück."
+    functionNotReturnsADate: "<code>%0</code> gibt kein Date zurück.",
+    doesLog: "<code>%0</code> loggt <code>%1</code>.",
+    doesNotLog: "<code>%0</code> loggt nicht <code>%1</code>."
   };
 
   var dic_en = {
@@ -76,7 +78,9 @@ jshero.i18n = (function() {
     functionReturnsAnArray: "<code>%0</code> returns an Array.",
     functionNotReturnsAnArray: "<code>%0</code> does not return an Array.",
     functionReturnsADate: "<code>%0</code> returns a Date.",
-    functionNotReturnsADate: "<code>%0</code> does not return a Date."
+    functionNotReturnsADate: "<code>%0</code> does not return a Date.",
+    doesLog: "<code>%0</code> does log <code>%1</code>.",
+    doesNotLog: "<code>%0</code> does not log <code>%1</code>."
   };
 
   dic = dic_en; // default

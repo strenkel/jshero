@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "log2",
+  jshero.koans.add({
 
-  title: "Logging variables",
+    id: "log2",
 
-  lesson: `Now let's log variables:
+    title: "Logging variables",
+
+    lesson: `Now let's log variables:
 
 <pre><code>var scientist = "Ken Thompson";
 console.log(scientist);</code></pre>
@@ -12,79 +14,43 @@ console.log(scientist);</code></pre>
 The variable <code>scientist</code> is logged.
 The console outputs <code>"Ken Thompson"</code>.`,
 
-  task: `Write a function <code>log</code>, that takes a parameter and logs this parameter.
+    task: `Write a function <code>log</code>, that takes a parameter and logs this parameter.
 <code>log("Ken Thompson")</code> should log <code>"Ken Thompson"</code>.`,
 
-  hint: `<pre><code>var log = function(value) {
+    hint: `<pre><code>var log = function(value) {
   ...
 };`,
 
-  solution: `<pre><code>var log = function(value) {
+    solution: `<pre><code>var log = function(value) {
   console.log(value);
 };`,
 
-  beforeTests: function() {
-    if (typeof log !== "undefined") {
-      log = undefined;
-    }
-  },
-
-  tests: [
-
-    function() {
-      return jshero.testutil.assert_isFunction('log');
-    },
-
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('log', 1);
-    },
-
-    function() {
-      var ok, msg, e;
-      try {
-        log("Ken Thompson");
-        if (jshero.log.hasLog("Ken Thompson")) {
-          ok = true;
-          msg = '<code>log("Ken Thompson")</code> is logging <code>"Ken Thompson"</code>.';
-        } else {
-          ok = false;
-          msg = '<code>log("Ken Thompson")</code> does not logging <code>"Ken Thompson"</code>.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Error on call of <code>log("Ken Thompson")</code>.';
-        e = exc;
+    beforeTests: function() {
+      if (typeof log !== "undefined") {
+        log = undefined;
       }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
     },
 
-    function() {
-      var ok, msg, e;
-      try {
-        log("Dennis Ritchie");
-        if (jshero.log.hasLog("Dennis Ritchie")) {
-          ok = true;
-          msg = '<code>log("Dennis Ritchie")</code> is logging <code>"Dennis Ritchie"</code>.';
-        } else {
-          ok = false;
-          msg = '<code>log("Dennis Ritchie")</code> does not logging <code>"Dennis Ritchie"</code>.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Error on call of <code>log("Dennis Ritchie")</code>.';
-        e = exc;
+    tests: [
+
+      function() {
+        return testutil.assert_isFunction('log');
+      },
+
+      function() {
+        return testutil.assert_functionHasNumOfParameter('log', 1);
+      },
+
+      function() {
+        return testutil.assert_functionLogs('log("Ken Thompson")', "Ken Thompson");
+      },
+
+      function() {
+        return testutil.assert_functionLogs('log("Dennis Ritchie")', "Dennis Ritchie");
       }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
-    }
 
-  ]
+    ]
 
-});
+  });
+
+})(jshero.testutil);

@@ -158,6 +158,31 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     };
   };
 
+  var assert_functionLogs = function(f_call, expectedLog) {
+    var ok, msg, e;
+    try {
+      evaluator.evalTest(f_call);
+      var fCallEscaped = escapeHtml(f_call);
+      var expectedLogExcaped = escapeHtml(JSON.stringify(expectedLog));
+      if (jshero.log.hasLog(expectedLog)) {
+        ok = true;
+        msg = jsheroUtil.formatMessage(I18N("doesLog"), [fCallEscaped, expectedLogExcaped]);
+      } else {
+        ok = false;
+        msg = jsheroUtil.formatMessage(I18N("doesNotLog"), [fCallEscaped, expectedLogExcaped]);
+      }
+    } catch (exc) {
+      ok = false;
+      msg = I18N("errorAtCallOf") + ' <code>' + f_call + '</code>.';
+      e = exc;
+    }
+    return {
+      msg: msg,
+      ok: ok,
+      e: e
+    };
+  };
+
   /**
    * We expect that calling a function
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
@@ -285,6 +310,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     assert_functionReturnsType: assert_functionReturnsType,
     assert_functionReturns: assert_functionReturns,
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
+    assert_functionLogs: assert_functionLogs,
     assert_variableDefined: assert_variableDefined,
     assert_variableHasValue: assert_variableHasValue
   };

@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "log1",
+  jshero.koans.add({
 
-  title: "Logging",
+    id: "log1",
 
-  lesson: `Programmieren beinhaltet immer auch die Suche nach Fehlern.
+    title: "Logging",
+
+    lesson: `Programmieren beinhaltet immer auch die Suche nach Fehlern.
 Eine Möglichkeit Fehler zu finden ist das <a href="https://de.wikipedia.org/wiki/Logging">Loggen</a>.
 Man macht während der Programmausführung gezielte Ausgaben.
 In JavaScript verwendet man dafür die Funktion <code>console.log</code>:
@@ -22,52 +24,35 @@ Die Konsole kannst du dann als Reiter auswählen. Alternativ kann man die Konsol
 Auf mobilen Geräten stehen die Entwickler-Werkzeuge nicht zur Verfügung.
 Deshalb schreibt JS Hero das Log zusätzlich in die Testausgabe.`,
 
-  task: `Schreibe eine Funktion <code>logge</code>, die den String <code>"Hallo Konsole!"</code> loggt.
+    task: `Schreibe eine Funktion <code>logge</code>, die den String <code>"Hallo Konsole!"</code> loggt.
 Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, um auch dort die Ausgabe zu sehen.`,
 
-  hint: `<pre><code>var logge = function() {
+    hint: `<pre><code>var logge = function() {
   console.log(...);
 };`,
 
-  solution: `<pre><code>var logge = function() {
+    solution: `<pre><code>var logge = function() {
   console.log("Hallo Konsole!");
 };`,
 
-  beforeTests: function() {
-    if (typeof logge !== "undefined") {
-      logge = undefined;
-    }
-  },
-
-  tests: [
-
-    function() {
-      return jshero.testutil.assert_isFunction('logge');
+    beforeTests: function() {
+      if (typeof logge !== "undefined") {
+        logge = undefined;
+      }
     },
 
-    function() {
-      var ok, msg, e;
-      try {
-        logge();
-        if (jshero.log.hasLog("Hallo Konsole!")) {
-          ok = true;
-          msg = '<code>logge()</code> loggt <code>"Hallo Konsole!"</code>.';
-        } else {
-          ok = false;
-          msg = '<code>logge()</code> loggt nicht <code>"Hallo Konsole!"</code>.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Fehler beim Aufruf von <code>logge()</code>.';
-        e = exc;
+    tests: [
+
+      function() {
+        return testutil.assert_isFunction('logge');
+      },
+
+      function() {
+        return testutil.assert_functionLogs('logge()', "Hallo Konsole!");
       }
-      return {
-        msg: msg,
-        ok: ok,
-        e: e
-      };
-    }
 
-  ]
+    ]
 
-});
+  });
+
+})(jshero.testutil);
