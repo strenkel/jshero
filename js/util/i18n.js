@@ -38,8 +38,10 @@ jshero.i18n = (function() {
     varHasNoValue: "<code>%0</code> hat keinen Wert.",
     varHasValueOf: "<code>%0</code> hat den Wert <code>%1</code>.",
     varHasWrongValue: "<code>%0</code> hat nicht den erwarteten Wert <code>%1</code>, sondern den Wert <code>%2</code>.",
-    functionReturnsType: "<code>%0</code> gibt ein %1-Objekt zurück.",
-    functionReturnsWrongType: "<code>%0</code> gibt kein %1-Objekt zurück."
+    functionReturnsAnArray: "<code>%0</code> gibt ein Array zurück.",
+    functionNotReturnsAnArray: "<code>%0</code> gibt kein Array zurück.",
+    functionReturnsADate: "<code>%0</code> gibt ein Date zurück.",
+    functionNotReturnsADate: "<code>%0</code> gibt kein Date zurück."
   };
 
   var dic_en = {
@@ -71,8 +73,10 @@ jshero.i18n = (function() {
     varHasNoValue: "<code>%0</code> has no value.",
     varHasValueOf: "<code>%0</code> has value of <code>%1</code>.",
     varHasWrongValue: "<code>%0</code> has not expected value <code>%1</code>, but the value <code>%2</code>.",
-    functionReturnsType: "<code>%0</code> returns a %1-object.",
-    functionReturnsWrongType: "<code>%0</code> does not return a %1-objekt."
+    functionReturnsAnArray: "<code>%0</code> returns an Array.",
+    functionNotReturnsAnArray: "<code>%0</code> does not return an Array.",
+    functionReturnsADate: "<code>%0</code> returns a Date.",
+    functionNotReturnsADate: "<code>%0</code> does not return a Date."
   };
 
   dic = dic_en; // default

@@ -115,12 +115,6 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
    * expectedReturnType can be a JavaScript data type or some picked object-types.
    * See switch-case for details. Watch out for upper/lower case.
    *
-   * Not sure if this function works correctly in all cases.
-   * In particular, the messages are not always correct (e.g. expectedReturnType='undefined').
-   * If f_call returns a function assert_functionReturnsType must be extended.
-   * Maybe its better to have special methods like
-   * assert_functionReturnsDate, assert_functionReturnsArray, ...
-   *
    * @param {String} f_call
    * @param {String} expectedReturnType
    * @returns {TestResult}
@@ -129,37 +123,28 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     var ok, msg, e;
     try {
       var result = evaluator.evalTest(f_call);
-      var resultType = typeof result;
       switch (expectedReturnType) {
         case 'Array':
           ok = Array.isArray(result);
+          if (ok) {
+            msg = jsheroUtil.formatMessage(I18N("functionReturnsAnArray"), [f_call]);
+          } else {
+            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsAnArray"), [f_call]);
+          }
           break;
         case 'Date':
           ok = jsheroDate.isDate(result);
-          break;
-        case 'NaN':
-          ok = isNaN(result);
-          break;
-        case 'undefined':
-        case 'boolean':
-        case 'string':
-        case 'number':
-        case 'object':
-        case 'symbol':
-          ok = resultType === expectedReturnType;
-          break;
-        case 'null':
-          ok = (result === null);
+          if (ok) {
+            msg = jsheroUtil.formatMessage(I18N("functionReturnsADate"), [f_call]);
+          } else {
+            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsADate"), [f_call]);
+          }
           break;
         default:
           ok = false;
-          console.log('testutil.assert_functionReturnsType: unkwown type');
+          msg = I18N("unknownError");
+          console.error('testutil.assert_functionReturnsType: unkwown type');
           break;
-      }
-      if (ok) {
-        msg = jsheroUtil.formatMessage(I18N("functionReturnsType"), [f_call, expectedReturnType]);
-      } else {
-        msg = jsheroUtil.formatMessage(I18N("functionReturnsWrongType"), [f_call, expectedReturnType, resultType]);
       }
     } catch (exc) {
       ok = false;

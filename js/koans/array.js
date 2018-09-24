@@ -27,6 +27,7 @@ Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen and
   },
 
   tests: [
+
     function() {
       return jshero.testutil.assert_isFunction('toArray');
     },
@@ -36,25 +37,7 @@ Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen and
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = toArray(1, 2);
-        ok = Array.isArray(result);
-        if (ok) {
-          msg = '<code>toArray(1, 2)</code> gibt ein Array zurück.';
-        } else {
-          msg = '<code>toArray(1, 2)</code> gibt kein Array zurück.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = jshero.i18n.get('errorAtCallOf') + ' <code>toArray(1, 2)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturnsType('toArray(1, 2)', 'Array');
     },
 
     function() {
