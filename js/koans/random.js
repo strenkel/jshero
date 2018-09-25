@@ -1,4 +1,8 @@
-(function() {
+(function(testutil, evaluator) {
+
+  var evalDice = function() {
+    return evaluator.evalTest("dice()");
+  };
 
   var isOneToSix = function(x) {
     return x === 1 || x === 2 || x === 3 || x === 4 || x === 5 || x === 6;
@@ -7,7 +11,7 @@
   var throwA = function(x) {
     var result;
     for (var i = 0; i < 1000; i++) {
-      result = dice();
+      result = evalDice();
       if (result === x) {
         return true;
       }
@@ -64,11 +68,11 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
 
     tests: [
       function() {
-          return jshero.testutil.assert_isFunction('dice');
+          return testutil.assert_isFunction('dice');
       },
 
       function() {
-        return jshero.testutil.assert_functionHasNumOfParameter('dice', 0);
+        return testutil.assert_functionHasNumOfParameter('dice', 0);
       },
 
       function() {
@@ -77,7 +81,7 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
           ok = true;
           var result;
           for (var i = 0; i < 1000; i++) {
-            result = dice();
+            result = evalDice();
             if (!isOneToSix(result)) {
               ok = false;
               break;
@@ -123,4 +127,4 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
 
   });
 
-})();
+})(jshero.testutil, jshero.evaluator);

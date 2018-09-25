@@ -83,6 +83,23 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
   /** ------------- copied and adpated from escape-html/index.js
    *  END ------------- */
 
+  var stringify = function(value) {
+
+    if (Number.isNaN(value)) {
+      return "NaN";
+    }
+
+    if (value === Infinity) {
+      return "Infinity";
+    }
+
+    if (value === -Infinity) {
+      return "-Infinity";
+    }
+
+    return JSON.stringify(value);
+  };
+
 
   /**
    * Example usage:
@@ -163,7 +180,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     try {
       evaluator.evalTest(f_call);
       var fCallEscaped = escapeHtml(f_call);
-      var expectedLogExcaped = escapeHtml(JSON.stringify(expectedLog));
+      var expectedLogExcaped = escapeHtml(stringify(expectedLog));
       if (jshero.log.hasLog(expectedLog)) {
         ok = true;
         msg = jsheroUtil.formatMessage(I18N("doesLog"), [fCallEscaped, expectedLogExcaped]);
@@ -207,6 +224,8 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
         ok = jsheroArray.isEqual(result, expectedReturnValue);
       } else if (jsheroDate.isDate(result)) {
         ok = jsheroDate.isEqual(result, expectedReturnValue);
+      } else if (Number.isNaN(expectedReturnValue)) {
+        ok = Number.isNaN(result);
       } else {
         ok = result === expectedReturnValue;
       }
@@ -221,10 +240,10 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
       } else {
         if (ok) {
           msg = jsheroUtil.formatMessage(I18N("functionReturns"),
-            [escapeHtml(f_call), escapeHtml(JSON.stringify(expectedReturnValue))]);
+            [escapeHtml(f_call), escapeHtml(stringify(expectedReturnValue))]);
         } else {
           msg = jsheroUtil.formatMessage(I18N("functionNotReturns"),
-            [escapeHtml(f_call), escapeHtml(JSON.stringify(expectedReturnValue)), escapeHtml(JSON.stringify(result))]);
+            [escapeHtml(f_call), escapeHtml(stringify(expectedReturnValue)), escapeHtml(stringify(result))]);
         }
       }
     } catch (exc) {
@@ -273,9 +292,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     var ok = actValue === expValue;
     var msg;
     if (ok) {
-      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(JSON.stringify(actValue))]);
+      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(stringify(actValue))]);
     } else {
-      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, JSON.stringify(expValue), escapeHtml(JSON.stringify(actValue))]);
+      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, stringify(expValue), escapeHtml(stringify(actValue))]);
     }
     return {
       ok: ok,
