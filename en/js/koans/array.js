@@ -34,25 +34,7 @@ var someValues = [a, b, c];</code></pre>`,
     },
 
     function() {
-      var ok, msg, e;
-      try {
-        var result = toArray(1, 2);
-        ok = Array.isArray(result);
-        if (ok) {
-          msg = '<code>toArray(1, 2)</code> returns an array.';
-        } else {
-          msg = '<code>toArray(1, 2)</code> does not return an array.';
-        }
-      } catch (exc) {
-        ok = false;
-        msg = 'Error when calling <code>toArray(1, 2)</code>.';
-        e = exc;
-      }
-      return {
-        ok: ok,
-        msg: msg,
-        e: e
-      };
+      return jshero.testutil.assert_functionReturnsType('toArray(1, 2)', 'Array');
     },
 
     function() {
