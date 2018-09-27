@@ -1,4 +1,8 @@
-(function() {
+(function(testutil, evaluator) {
+
+  var evalDice = function() {
+    return evaluator.evalTest("dice()");
+  };
 
   var isOneToSix = function(x) {
     return x === 1 || x === 2 || x === 3 || x === 4 || x === 5 || x === 6;
@@ -7,7 +11,7 @@
   var throwA = function(x) {
     var result;
     for (var i = 0; i < 1000; i++) {
-      result = dice();
+      result = evalDice();
       if (result === x) {
         return true;
       }
@@ -77,7 +81,7 @@ This should be practiced now.`,
           ok = true;
           var result;
           for (var i = 0; i < 1000; i++) {
-            result = dice();
+            result = evalDice();
             if (!isOneToSix(result)) {
               ok = false;
               break;
@@ -123,4 +127,4 @@ This should be practiced now.`,
 
   });
 
-})();
+})(jshero.testutil, jshero.evaluator);
