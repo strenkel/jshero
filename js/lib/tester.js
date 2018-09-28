@@ -2,13 +2,15 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-jshero.tester = (function(koan, log, i18n, LANGUAGE) {
+jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
-  var I18N = i18n.get;
 
+  // const
+  var I18N = i18n.get;
   var HAS_WORKER = typeof Worker !== "undefined";
   var WORKER_URL = LANGUAGE === "de" ? "js/lib/testWorker.js" : "../js/lib/testWorker.js";
+
   var code;
   var testNr = -1;
   var results = [];
@@ -48,29 +50,6 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   };
 
   // --- PRIVATE METHODS ---
-
-  /**
-   * Cross Browser global eval. In particular for IE8.
-   * By Chris West - MIT Licensed: http://cwestblog.com/2013/03/08/javascript-global-eval/
-   * Difference to Chris: Returns undefined if global eval or execScript is not available.
-   * The 'setTimeout' return form Chris would not work here without changing our code.
-   * See also: http://perfectionkills.com/global-eval-what-are-the-options/
-   */
-  var globalEval = (function(global, realArray, indirectEval, indirectEvalWorks) {
-    try {
-      eval('var Array={};');
-      indirectEvalWorks = indirectEval('Array') == realArray;
-    } catch (err) { }
-
-    return indirectEvalWorks
-      ? indirectEval
-      : (global.execScript
-        ? function(expression) {
-          global.execScript(expression);
-        }
-        : undefined
-      );
-  })(this, Array, (2, eval));
 
   /**
    * Create an initialized worker.
@@ -145,7 +124,9 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
     log.clear();
 
     try {
-      globalEval(code);
+      evaluator
+        .init(code)
+        .evalParse();
       result = {
         ok: true,
         msg: I18N("noSyntaxError")
@@ -208,10 +189,10 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   var runTestFallback = function(testResultCallback) {
 
     var result;
-    log.clear();
 
     try {
-      globalEval(code);
+      evaluator.init(code);
+      log.clear();
       result = koan.tests[testNr]();
     } catch (exc) {
       result = {
@@ -250,6 +231,7 @@ jshero.tester = (function(koan, log, i18n, LANGUAGE) {
   };
 
 })(jshero.actualKoan.getKoan(),
+  jshero.evaluator,
   jshero.log,
   jshero.i18n,
   jshero.language.LANGUAGE);
