@@ -31,11 +31,11 @@ und deren Summe zurückgibt. <code>add(1, 2)</code> sollte <code>3</code> ergebe
 
   hint: `<pre><code>var add = function(x, y) {
   return ...
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var add = function(x, y) {
   return x + y;
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof add !== "undefined") {

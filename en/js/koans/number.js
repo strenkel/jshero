@@ -23,6 +23,14 @@
       }
     },
 
+    hint: `<pre><code>var add = function(x, y) {
+  return ...
+};</code></pre>`,
+
+    solution: `<pre><code>var add = function(x, y) {
+  return x + y;
+};</code></pre>`,
+
     tests: [
 
       function() {
