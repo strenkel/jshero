@@ -1,3 +1,6 @@
+# 2.5.1
+Bugfix Koan "Zwei return-Anweisungen" (DE)
+
 # 2.5.0
 
 ### Neue Übungen
