@@ -1,4 +1,4 @@
-# 2.5.0-SNAPSHOT
+# 2.5.0
 
 ### Neue Übungen
 Folgende Übungen wurden hinzugefügt:<br>
