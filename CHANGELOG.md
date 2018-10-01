@@ -1,9 +1,7 @@
-# CHANGELOG
-
-## 2.5.0-SNAPSHOT
+# 2.5.0-SNAPSHOT
 
 ### Neue Übungen
-Folgende Übungen wurden hinzugefügt:
+Folgende Übungen wurden hinzugefügt\n
 DE: Zwei return-Anweisungen
 
 ### Tipp und Lösung
@@ -11,7 +9,7 @@ Für folgende Übungen wurden Tipp und Lösung hinzugefügt:
 DE: Wahrheitswerte, Strikte Gleichheit, if
 EN: Numbers, Modulo
 
-## 2.4.0
+# 2.4.0
 
 ### let und const
 Im Lösungscode kann jetzt auch "let" und "const" verwendet werden.
@@ -22,7 +20,7 @@ Positiver Nebeneffekt: Man kann im Lösungscode keine jshero Variable überschre
 ### Changelog
 Einführung des Changelogs.
 
-## 2.3.0
+# 2.3.0
 
 ### Endlosschleifen
 Endlosschleifen im Lösungscode werden jetzt abgefangen und als Testfehler gemeldet.
