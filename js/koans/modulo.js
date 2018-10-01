@@ -18,7 +18,7 @@ jshero.koans.add({
 };</code></pre>`,
 
   solution: `<pre><code>var einer = function(n) {
-  return n%10;
+  return n % 10;
 };</code></pre>`,
 
   beforeTests: function() {

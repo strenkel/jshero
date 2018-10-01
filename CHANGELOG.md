@@ -8,7 +8,7 @@ Zwei return-Anweisungen
 
 ### Tipp und Lösung
 Für folgende Übungen wurden Tipp und Lösung hinzugefügt:
-Wahrheitswerte, Strikte Gleichheit, if
+Wahrheitswerte, Strikte Gleichheit, if, Numbers (en), Modulo (en)
 
 ## 2.4.0
 

@@ -21,6 +21,14 @@
       }
     },
 
+    hint: `<pre><code>var firstDigit = function(n) {
+// Use modulo 10.  
+};</code></pre>`,
+
+    solution: `<pre><code>var firstDigit = function(n) {
+  return n % 10;
+};</code></pre>`,
+
     tests: [
 
       function() {
