@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2.5.0-SNAPSHOT
+
+### Neue Übungen
+Folgende Übungen wurden hinzugefügt:
+Zwei return-Anweisungen
+
+### Tipp und Lösung
+Für folgende Übungen wurden Tipp und Lösung hinzugefügt:
+Wahrheitswerte, Strikte Gleichheit, if
+
 ## 2.4.0
 
 ### let und const
