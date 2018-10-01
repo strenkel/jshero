@@ -1,12 +1,12 @@
 # 2.5.0-SNAPSHOT
 
 ### Neue Übungen
-Folgende Übungen wurden hinzugefügt\n
+Folgende Übungen wurden hinzugefügt:<br>
 DE: Zwei return-Anweisungen
 
 ### Tipp und Lösung
-Für folgende Übungen wurden Tipp und Lösung hinzugefügt:
-DE: Wahrheitswerte, Strikte Gleichheit, if
+Für folgende Übungen wurden Tipp und Lösung hinzugefügt:<br>
+DE: Wahrheitswerte, Strikte Gleichheit, if<br>
 EN: Numbers, Modulo
 
 # 2.4.0
