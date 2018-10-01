@@ -18,6 +18,16 @@ jshero.koans.add({
     'wenn beide Paramter <code>true</code> sind. In den anderen Fällen soll die Rückgabe <code>true</code> sein. <code>nand(true, true)</code> ' +
     'soll <code>false</code> liefern, <code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen <code>true</code> zurückgeben.',
 
+  hint: `<pre><code>var nand = function(a, b) {
+  var and = a && b;
+  ...
+};</code></pre>`,
+
+  solution: `<pre><code>var nand = function(a, b) {
+  var and = a && b;
+  return !and;
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof nand !== "undefined") {
       nand = undefined;

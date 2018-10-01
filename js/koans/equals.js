@@ -26,6 +26,14 @@ rechten Seite ein String.`,
 <code>gleich(1, 1)</code> soll <code>true</code> zurückgeben, <code>gleich(1, 2)</code> soll
 <code>false</code> ergeben.`,
 
+  hint: `<pre><code>var gleich = function(a, b) {
+  return ...
+};</code></pre>`,
+
+  solution: `<pre><code>var gleich = function(a, b) {
+  return a === b;
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof gleich !== "undefined") {
       gleich = undefined;
