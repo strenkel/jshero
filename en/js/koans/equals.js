@@ -24,6 +24,14 @@ On the left side of the comparison is a number, on the right side a string.`,
   task: `Write a function <code>equals</code> that checks two values for strict equality. <code>equals(1, 1)</code>
 should return <code>true</code> and <code>equals(1, 2)</code> should return <code>false</code>.`,
 
+  hint: `<pre><code>var equals = function(a, b) {
+  return ...
+};</code></pre>`,
+
+  solution: `<pre><code>var equals = function(a, b) {
+  return a === b;
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof equals !== "undefined") {
       equals = undefined;

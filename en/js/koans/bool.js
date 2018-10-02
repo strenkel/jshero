@@ -24,6 +24,16 @@ the result should be <code>false</code>. In the other cases the return should be
 The call <code>nand(true, true)</code> should return <code>false</code>. The calls <code>nand(true, false)</code>,
 <code>nand(false, true)</code> and <code>nand(false, false)</code> should return <code>true</code>.`,
 
+  hint: `<pre><code>var nand = function(a, b) {
+  var and = a && b;
+  ...
+};</code></pre>`,
+
+  solution: `<pre><code>var nand = function(a, b) {
+  var and = a && b;
+  return !and;
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof nand !== "undefined") {
       nand = undefined;

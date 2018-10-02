@@ -1,3 +1,8 @@
+# 2.6.0-SNAPSHOT
+
+### Add hint and solution
+en: equals.js, bool.js 
+
 # 2.5.1
 Bugfix Koan "Zwei return-Anweisungen" (DE)
 
