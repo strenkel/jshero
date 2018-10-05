@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `Neben einfachen Zeichenliteralen kennen reguläre Ausdrücke eine
 Reihe von Zeichen mit besonderer Bedeutung, sogenannte Metazeichen.
-Ein solches Metazeichen ist der Punkt. Er steht für genau ein beliebiges Zeichen: 
+Ein solches Metazeichen ist der Punkt. Er steht für genau ein beliebiges Zeichen ausgenommen den Zeilenumbruch: 
 
 <pre><code>var t1 = /M.ier/.test("Maier");
 var t2 = /M.ier/.test("Meierei");
