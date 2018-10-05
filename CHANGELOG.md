@@ -1,4 +1,4 @@
-# 2.6.0-SNAPSHOT
+# 2.6.0
 
 ### New koans
 de/regex7.js: Regex: beliebige Wiederholung
