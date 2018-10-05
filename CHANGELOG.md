@@ -1,5 +1,8 @@
 # 2.6.0-SNAPSHOT
 
+### New koans
+de/regex7.js: Regex: beliebige Wiederholung
+
 ### Add hint and solution
 en: equals.js, bool.js 
 
