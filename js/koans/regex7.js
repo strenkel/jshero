@@ -59,7 +59,7 @@ Ein Zeilenumbruch innerhalb des Zitats ist also nicht zulässig.
 
       function() {
         return testutil.assert_functionReturns('hasQuote("Ku\'damm")', false);
-      },
+      }
 
     ]
 
