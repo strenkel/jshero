@@ -6,7 +6,7 @@ de/regex8.js: Regex: {n,m}
 
 ### Add hint and solution
 de: mean.js, math.js
-en: mean.js 
+en: mean.js, math.js 
 
 # 2.6.0
 

@@ -20,6 +20,16 @@ triangle the Pythagorean theorem is valid. If a and b are the lengths of the two
 is the length of the hypotenuse, the following is true: a&sup2; + b&sup2; = c&sup2;.
 Since 3&sup2; + 4&sup2; = 5&sup2; applies, <code>hypotenuse(3,4)</code> should return <code>5</code>.`,
 
+hint: `<pre><code>var hypotenuse = function(a, b) {
+  var cQuadrat = a * a + b * b;
+  return ...
+};</code></pre>`,
+
+  solution: `<pre><code>var hypotenuse = function(a, b) {
+  var cQuadrat = a * a + b * b;
+  return Math.sqrt(cQuadrat);
+};</code></pre>`,
+
   beforeTests: function() {
     if (typeof hypotenuse !== "undefined") {
       hypotenuse = undefined;
