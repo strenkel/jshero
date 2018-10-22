@@ -5,7 +5,8 @@ de/regex5a.js: Regex: Anfangs- und Endezeichen
 de/regex8.js: Regex: {n,m}
 
 ### Add hint and solution
-de: mean.js, math.js 
+de: mean.js, math.js
+en: mean.js 
 
 # 2.6.0
 
