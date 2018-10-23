@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: 'arraypush',
+  jshero.koans.add({
 
-  title: 'Array: shift() und push()',
+    id: 'arraypush',
 
-  lesson: `Arrays besitzen eine Reihe von Methoden. Zwei dieser Methoden sind <code>shift</code> und <code>push</code>.
+    title: 'Array: shift() und push()',
+
+    lesson: `Arrays besitzen eine Reihe von Methoden. Zwei dieser Methoden sind <code>shift</code> und <code>push</code>.
 Zur Erinnerung: Methoden sind Funktionen, die auf einem Objekt, hier einem Array, ausgeführt werden. Methoden werden mit einem Punkt
 an das Objekt angehängt. Wie bei Funktionen üblich folgt dem Methodennamen die runden Klammern, ggf. gefüllt mit Parametern.
 <code>shift</code> hat keine Parameter und verschiebt die Elemente eines Arrays nach links.
@@ -31,37 +33,49 @@ Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt. A
 <code>sprachen[sprachen.length] = "PHP"</code> ist dasselbe wie <code>sprachen.push("PHP")</code>. Doch schon
 an der Länge des Codes sieht man, dass die Variante mit <code>push</code> eleganter ist.`,
 
-  task: `Schreibe eine Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert.
+    task: `Schreibe eine Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert.
 Alle Elemente des Arrays sollen um eine Position nach links verschoben werden.
 Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden.
 <code>rotiere(["a", "b", "c"])</code> sollte <code>["b", "c", "a"]</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof rotiere !== "undefined") {
-      rotiere = undefined;
-    }
-  },
+    hint: `<pre><code>Entferne mit shift das 0te Element.
+Füge mit push das 0te Element wieder hinzu.
+</code></pre>`,
 
-  tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('rotiere');
+    solution: `<pre><code>var rotiere = function(einArray) {
+  var element0 = einArray.shift();
+  einArray.push(element0);
+  return einArray;
+};</code></pre>`,
+
+    beforeTests: function() {
+      if (typeof rotiere !== "undefined") {
+        rotiere = undefined;
+      }
     },
 
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('rotiere', 1);
-    },
+    tests: [
+      function() {
+        return testutil.assert_isFunction('rotiere');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('rotiere([1, 2])', [2, 1]);
-    },
+      function() {
+        return testutil.assert_functionHasNumOfParameter('rotiere', 1);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('rotiere(["a", "b", "c"])', ["b", "c", "a"]);
-    },
+      function() {
+        return testutil.assert_functionReturns('rotiere([1, 2])', [2, 1]);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('rotiere([1, "b", "c", 37])', ["b", "c", 37, 1]);
-    }
-  ]
+      function() {
+        return testutil.assert_functionReturns('rotiere(["a", "b", "c"])', ["b", "c", "a"]);
+      },
 
-});
+      function() {
+        return testutil.assert_functionReturns('rotiere([1, "b", "c", 37])', ["b", "c", 37, 1]);
+      }
+    ]
+
+  });
+
+})(jshero.testutil);
