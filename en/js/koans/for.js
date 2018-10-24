@@ -1,11 +1,12 @@
+(function(testutil) {
 
-jshero.koans.add({
+  jshero.koans.add({
 
-  id: "for",
+    id: "for",
 
-  title: "for loop",
+    title: "for loop",
 
-  lesson: `Loops can execute code blocks several times. JavaScript knows different kinds of loops. The simplest one is
+    lesson: `Loops can execute code blocks several times. JavaScript knows different kinds of loops. The simplest one is
 the <code>for</code> loop.
 
 <pre><code>var sum = 0;
@@ -33,36 +34,38 @@ In the final expression <code>i</code> is increased again and gets the value <co
 The loop condition <code>3 < 3</code> is no longer fulfilled. The loop is terminated and the program execution continues
 after the loop. Our code example has added all natural numbers smaller than 3.`,
 
-  task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers
+    task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers
 smaller than the parameter. The result is to be returned. <code>addTo(4)</code> should return
 <code>1+2+3</code> = <code>6</code>.`,
 
-  beforeTests: function() {
-    addTo = undefined;
-  },
-
-  tests: [
-
-    function() {
-      return jshero.testutil.assert_isFunction('addTo');
+    beforeTests: function() {
+      addTo = undefined;
     },
 
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('addTo', 1);
-    },
+    tests: [
 
-    function() {
-      return jshero.testutil.assert_functionReturns('addTo(2)', 1);
-    },
+      function() {
+        return testutil.assert_isFunction('addTo');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('addTo(3)', 3);
-    },
+      function() {
+        return testutil.assert_functionHasNumOfParameter('addTo', 1);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('addTo(4)', 6);
-    }
+      function() {
+        return testutil.assert_functionReturns('addTo(2)', 1);
+      },
 
-  ]
+      function() {
+        return testutil.assert_functionReturns('addTo(3)', 3);
+      },
 
-});
+      function() {
+        return testutil.assert_functionReturns('addTo(4)', 6);
+      }
+
+    ]
+
+  });
+
+})(jshero.testutil);
