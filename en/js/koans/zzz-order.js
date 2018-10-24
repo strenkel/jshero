@@ -46,7 +46,7 @@ jshero.koans.initReorder(
     'concat',
     'slice',
     'join',
-    'for',
+    'for1',
     'for2',
     'while',
     'dowhile',

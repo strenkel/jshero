@@ -2,7 +2,7 @@
 
   jshero.koans.add({
 
-    id: "for",
+    id: "for1",
 
     title: "for loop",
 
