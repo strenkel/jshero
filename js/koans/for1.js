@@ -2,7 +2,7 @@
 
   jshero.koans.add({
 
-    id: 'for',
+    id: 'for1',
 
     title: 'for-Schleife',
 
@@ -36,8 +36,24 @@ Die Schleifenbedingung <code>3 < 3</code> ist jetzt nicht mehr erfüllt. Die Sch
 Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.`,
 
     task: `Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die
-alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
-<code>addiereBis(4)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
+alle natürlichen Zahlen kleiner gleich dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
+<code>addiereBis(3)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
+
+hint: `<pre><code>var addiereBis = function(n) {
+  var summe = 0;
+  for (var i = 0; i <= n; i++) {
+    ...
+  }
+  return summe;
+};</pre></code>`,
+
+solution: `<pre><code>var addiereBis = function(n) {
+  var summe = 0;
+  for (var i = 0; i <= n; i++) {
+    summe = summe + i;
+  }
+  return summe;
+};</pre></code>`,
 
     beforeTests: function() {
       if (typeof addiereBis !== "undefined") {
@@ -55,14 +71,23 @@ alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der 
       },
 
       function() {
-        return testutil.assert_functionReturns('addiereBis(2)', 1);
+        return testutil.assert_functionReturns('addiereBis(0)', 0);
       },
 
       function() {
-        return testutil.assert_functionReturns('addiereBis(4)', 6);
+        return testutil.assert_functionReturns('addiereBis(1)', 1);
       },
+
       function() {
-        return testutil.assert_functionReturns('addiereBis(15)', 105);
+        return testutil.assert_functionReturns('addiereBis(2)', 3);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('addiereBis(3)', 6);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('addiereBis(9)', 45);
       }
     ]
 
