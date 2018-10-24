@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: 'for',
+  jshero.koans.add({
 
-  title: 'for-Schleife',
+    id: 'for',
 
-  lesson: `Mit Schleifen können Code-Abschnitte mehrmals durchlaufen werden. JavaScript kennt mehrere Schleifenarten.
+    title: 'for-Schleife',
+
+    lesson: `Mit Schleifen können Code-Abschnitte mehrmals durchlaufen werden. JavaScript kennt mehrere Schleifenarten.
 Die einfachste ist die <code>for</code>-Schleife.
 
 <pre><code>var summe = 0;
@@ -33,35 +35,37 @@ Der Schleifen-Code wird erneut ausgeführt und <code>summe</code> erhält jetzt 
 Die Schleifenbedingung <code>3 < 3</code> ist jetzt nicht mehr erfüllt. Die Schleife wird beendet und die Programmausführung wird nach der Schleife fortgesetzt.
 Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.`,
 
-  task: `Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die
+    task: `Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die
 alle natürlichen Zahlen echt kleiner dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
 <code>addiereBis(4)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof addiereBis !== "undefined") {
-      addiereBis = undefined;
-    }
-  },
-
-  tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('addiereBis');
+    beforeTests: function() {
+      if (typeof addiereBis !== "undefined") {
+        addiereBis = undefined;
+      }
     },
 
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('addiereBis', 1);
-    },
+    tests: [
+      function() {
+        return testutil.assert_isFunction('addiereBis');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('addiereBis(2)', 1);
-    },
+      function() {
+        return testutil.assert_functionHasNumOfParameter('addiereBis', 1);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('addiereBis(4)', 6);
-    },
-    function() {
-      return jshero.testutil.assert_functionReturns('addiereBis(15)', 105);
-    }
-  ]
+      function() {
+        return testutil.assert_functionReturns('addiereBis(2)', 1);
+      },
 
-});
+      function() {
+        return testutil.assert_functionReturns('addiereBis(4)', 6);
+      },
+      function() {
+        return testutil.assert_functionReturns('addiereBis(15)', 105);
+      }
+    ]
+
+  });
+
+})(jshero.testutil);
