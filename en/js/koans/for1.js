@@ -35,8 +35,24 @@ The loop condition <code>3 < 3</code> is no longer fulfilled. The loop is termin
 after the loop. Our code example has added all natural numbers smaller than 3.`,
 
     task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers
-smaller than the parameter. The result is to be returned. <code>addTo(4)</code> should return
+smaller or equal than the parameter. The result is to be returned. <code>addTo(3)</code> should return
 <code>1+2+3</code> = <code>6</code>.`,
+
+    hint: `<pre><code>var addTo = function(n) {
+  var sum = 0;
+  for (var i = 0; i <= n; i++) {
+    ...
+  }
+  return sum;
+};</pre></code>`,
+
+    solution: `<pre><code>var addTo = function(n) {
+  var sum = 0;
+  for (var i = 0; i <= n; i++) {
+    sum = sum + i;
+  }
+  return sum;
+};</pre></code>`,
 
     beforeTests: function() {
       addTo = undefined;
@@ -53,15 +69,23 @@ smaller than the parameter. The result is to be returned. <code>addTo(4)</code> 
       },
 
       function() {
-        return testutil.assert_functionReturns('addTo(2)', 1);
+        return testutil.assert_functionReturns('addTo(0)', 0);
       },
 
       function() {
-        return testutil.assert_functionReturns('addTo(3)', 3);
+        return testutil.assert_functionReturns('addTo(1)', 1);
       },
 
       function() {
-        return testutil.assert_functionReturns('addTo(4)', 6);
+        return testutil.assert_functionReturns('addTo(2)', 3);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('addTo(3)', 6);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('addTo(9)', 45);
       }
 
     ]
