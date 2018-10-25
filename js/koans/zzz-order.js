@@ -56,6 +56,7 @@ jshero.koans.initReorder(
     'join',
     'comment',
     'for1',
+    'fakultaet',
     'for2',
     'while',
     'dowhile',
