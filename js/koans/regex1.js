@@ -1,10 +1,12 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: "regex1",
+  jshero.koans.add({
 
-  title: "Regex: Zeichenliterale",
+    id: "regex1",
 
-  lesson: `<a href="https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck">Reguläre Ausdrücke</a>,
+    title: "Regex: Zeichenliterale",
+
+    lesson: `<a href="https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck">Reguläre Ausdrücke</a>,
 kurz Regex (engl.: regular expression), sind Muster zum Beschreiben von Zeichenketten.
 Sie bilden eine kleine, eigenständige Sprache, die Teil von JavaScript
 und vielen weiteren Sprachen (Python, Perl, ...) und Programmen (LibreOffice, Emacs, ...) ist.
@@ -31,41 +33,49 @@ den Wert <code>true</code>. Der String <code>"HB-F 42"</code> enthält nicht <co
 <br>
 Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
 <code>"Ofen"</code> enthält zwar <code>Of</code>, aber nicht <code>OF</code>.
-<code>t4</code> ist <code>false</code>.
-`,
+<code>t4</code> ist <code>false</code>.`,
 
-  task: `Schreibe eine Funktion <code>enthaeltRose</code>, die prüft, ob ein String den Teilstring
+    task: `Schreibe eine Funktion <code>enthaeltRose</code>, die prüft, ob ein String den Teilstring
 <code>"Rose"</code> enthält. <code>enthaeltRose("eine Rose")</code> sollte <code>true</code> und
 <code>enthaeltRose("ein Blatt")</code> sollte <code>false</code> ergeben.`,
 
-  beforeTests: function() {
-    enthaeltRose = undefined;
-  },
+hint: `<pre><code>Benutze den Regex /Rose/.</pre></code>`,
 
-  tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('enthaeltRose');
+solution: `<pre><code>var enthaeltRose = function(s) {
+  return /Rose/.test(s);
+};</pre></code>`,
+
+    beforeTests: function() {
+      enthaeltRose = undefined;
     },
 
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('enthaeltRose', 1);
-    },
+    tests: [
+      function() {
+        return testutil.assert_isFunction('enthaeltRose');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('enthaeltRose("eine Rose")', true);
-    },
+      function() {
+        return testutil.assert_functionHasNumOfParameter('enthaeltRose', 1);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('enthaeltRose("zwei Rosen")', true);
-    },
+      function() {
+        return testutil.assert_functionReturns('enthaeltRose("eine Rose")', true);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('enthaeltRose("ein Blatt")', false);
-    },
-    function() {
-      return jshero.testutil.assert_functionReturns('enthaeltRose("zwei Blätter")', false);
-    }
+      function() {
+        return testutil.assert_functionReturns('enthaeltRose("zwei Rosen")', true);
+      },
 
-  ]
+      function() {
+        return testutil.assert_functionReturns('enthaeltRose("ein Blatt")', false);
+      },
 
-});
+      function() {
+        return testutil.assert_functionReturns('enthaeltRose("zwei Blätter")', false);
+      }
+
+    ]
+
+  });
+
+})(jshero.testutil);
