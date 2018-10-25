@@ -1,12 +1,13 @@
 # 2.7.0
 
 ### New koans
+de/fakultaet.js: Fakultät
 de/regex5a.js: Regex: Anfangs- und Endezeichen
 de/regex8.js: Regex: {n,m}
 
 ### Add hint and solution
-de: mean.js, math.js
-en: mean.js, math.js 
+de: mean.js, math.js, array.js, arraypush.js, for1.js, regex1.js
+en: mean.js, math.js, minmax.js, for1.js
 
 # 2.6.0
 
