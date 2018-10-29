@@ -4,8 +4,8 @@ jshero.koans.add({
 
   title: "NOR",
 
-  lesson: `In the last task you have coded a so-called NAND (Not AND) gate.
-NAND gates are a standard component in digital electronics. Any Boolean function can be implemented by using a combination of NAND gates.
+  lesson: `In the last task you have coded a so-called NAND (Not AND) gate. NAND gates are a standard component in
+digital electronics. Any Boolean function can be implemented by using a combination of NAND gates.
 Here you will get to know another standard gate, the NOR (Not OR) gate.`,
 
   task: `Write a function <code>nor</code> that takes two Boolean values.
