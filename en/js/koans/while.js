@@ -45,6 +45,10 @@ If <code>threeX</code> has the length 3, the loop is terminated.
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('spaces(2)', "  ");
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns('spaces(3)', "   ");
     }
   ]

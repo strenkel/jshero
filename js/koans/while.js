@@ -42,11 +42,15 @@ entgegennimmt und die einen String bestehend aus n Leerzeichen zurückgibt.
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('abstand(1)', " ");
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns('abstand(2)', "  ");
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('abstand(5)', "     ");
+      return jshero.testutil.assert_functionReturns('abstand(3)', "   ");
     }
   ]
 
