@@ -1,3 +1,7 @@
+# 2.7.1
+
+Kleinere Textkorrekturen / Textverbesserungen
+
 # 2.7.0
 
 ### New koans
