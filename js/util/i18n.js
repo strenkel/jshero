@@ -81,7 +81,7 @@ jshero.i18n = (function() {
     functionNotReturnsAnArray: "<code>%0</code> does not return an Array.",
     functionReturnsADate: "<code>%0</code> returns a Date.",
     functionNotReturnsADate: "<code>%0</code> does not return a Date.",
-    doesLog: "<code>%0</code> does log <code>%1</code>.",
+    doesLog: "<code>%0</code> logs <code>%1</code>.",
     doesNotLog: "<code>%0</code> does not log <code>%1</code>."
   };
 
