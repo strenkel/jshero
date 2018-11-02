@@ -83,6 +83,12 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
   /** ------------- copied and adpated from escape-html/index.js
    *  END ------------- */
 
+  /**
+   * JSON.stringify wandelt einige Werte wie NaN oder Infinity in null um. 
+   * Für die Testmessage ist das nicht sinnvoll. Deshalb werden hier diese Fälle
+   * gesondert behandelt. Komplexere Fälle wie [NaN] werden nicht berücksichtigt.
+   * Diese ergeben weiterhin [null]. 
+   */
   var stringify = function(value) {
 
     if (Number.isNaN(value)) {
@@ -95,6 +101,10 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
 
     if (value === -Infinity) {
       return "-Infinity";
+    }
+
+    if (jsheroDate.isInvalidDate(value)) {
+      return "Invalid Date";
     }
 
     return JSON.stringify(value);
@@ -138,23 +148,24 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
    */
   var assert_functionReturnsType = function(f_call, expectedReturnType) {
     var ok, msg, e;
+    var fCallEscaped = escapeHtml(f_call);
     try {
       var result = evaluator.evalTest(f_call);
       switch (expectedReturnType) {
         case 'Array':
           ok = Array.isArray(result);
           if (ok) {
-            msg = jsheroUtil.formatMessage(I18N("functionReturnsAnArray"), [f_call]);
+            msg = jsheroUtil.formatMessage(I18N("functionReturnsAnArray"), [fCallEscaped]);
           } else {
-            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsAnArray"), [f_call]);
+            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsAnArray"), [fCallEscaped]);
           }
           break;
         case 'Date':
           ok = jsheroDate.isDate(result);
           if (ok) {
-            msg = jsheroUtil.formatMessage(I18N("functionReturnsADate"), [f_call]);
+            msg = jsheroUtil.formatMessage(I18N("functionReturnsADate"), [fCallEscaped]);
           } else {
-            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsADate"), [f_call]);
+            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsADate"), [fCallEscaped]);
           }
           break;
         default:
@@ -165,7 +176,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
       }
     } catch (exc) {
       ok = false;
-      msg = I18N("errorAtCallOf") + ' <code>' + f_call + '</code>.';
+      msg = I18N("errorAtCallOf") + ' <code>' + fCallEscaped + '</code>.';
       e = exc;
     }
     return {
@@ -177,9 +188,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
 
   var assert_functionLogs = function(f_call, expectedLog) {
     var ok, msg, e;
+    var fCallEscaped = escapeHtml(f_call);
     try {
       evaluator.evalTest(f_call);
-      var fCallEscaped = escapeHtml(f_call);
       var expectedLogExcaped = escapeHtml(stringify(expectedLog));
       if (jshero.log.hasLog(expectedLog)) {
         ok = true;
@@ -190,7 +201,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
       }
     } catch (exc) {
       ok = false;
-      msg = I18N("errorAtCallOf") + ' <code>' + f_call + '</code>.';
+      msg = I18N("errorAtCallOf") + ' <code>' + fCallEscaped + '</code>.';
       e = exc;
     }
     return {
@@ -205,9 +216,6 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
    * returns the value expectedReturnValue.
    *
-   * Attention: If expectedReturnValue is a Date, f_call must return a Date too.
-   * In this case, check the return type first.
-   *
    * @param {String} f_call
    * @param {Object} expectedReturnValue
    * @param {Object} options
@@ -218,37 +226,43 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     options = options || {};
 
     var ok, msg, e;
+    var fCallEscaped = escapeHtml(f_call);
     try {
       var result = evaluator.evalTest(f_call);
-      if (Array.isArray(result)) {
+      if (Array.isArray(expectedReturnValue)) {
         ok = jsheroArray.isEqual(result, expectedReturnValue);
-      } else if (jsheroDate.isDate(result)) {
+      } else if (jsheroDate.isValidDate(expectedReturnValue)) {
         ok = jsheroDate.isEqual(result, expectedReturnValue);
       } else if (Number.isNaN(expectedReturnValue)) {
         ok = Number.isNaN(result);
       } else {
         ok = result === expectedReturnValue;
       }
-      if (jsheroDate.isDate(expectedReturnValue)) {
+      if (jsheroDate.isValidDate(expectedReturnValue)) {
         if (ok) {
           msg = jsheroUtil.formatMessage(I18N("functionReturnsDate"),
-            [f_call, jsheroDate.toString(expectedReturnValue, options)]);
+            [fCallEscaped, jsheroDate.toString(expectedReturnValue, options)]);
         } else {
-          msg = jsheroUtil.formatMessage(I18N("functionNotReturnsDate"),
-            [f_call, jsheroDate.toString(expectedReturnValue, options), jsheroDate.toString(result, options)]);
+          if (jsheroDate.isValidDate(result)) {
+            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsDate"),
+              [fCallEscaped, jsheroDate.toString(expectedReturnValue, options), jsheroDate.toString(result, options)]);
+          } else {
+            msg = jsheroUtil.formatMessage(I18N("functionNotReturnsValidDate"),
+              [fCallEscaped, jsheroDate.toString(expectedReturnValue, options), escapeHtml(stringify(result))]);
+          }
         }
       } else {
         if (ok) {
           msg = jsheroUtil.formatMessage(I18N("functionReturns"),
-            [escapeHtml(f_call), escapeHtml(stringify(expectedReturnValue))]);
+            [fCallEscaped, escapeHtml(stringify(expectedReturnValue))]);
         } else {
           msg = jsheroUtil.formatMessage(I18N("functionNotReturns"),
-            [escapeHtml(f_call), escapeHtml(stringify(expectedReturnValue)), escapeHtml(stringify(result))]);
+            [fCallEscaped, escapeHtml(stringify(expectedReturnValue)), escapeHtml(stringify(result))]);
         }
       }
     } catch (exc) {
       ok = false;
-      msg = I18N("errorAtCallOf") + ' <code>' + f_call + '</code>.';
+      msg = I18N("errorAtCallOf") + ' <code>' + fCallEscaped + '</code>.';
       e = exc;
     }
     return {
@@ -294,7 +308,8 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     if (ok) {
       msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(stringify(actValue))]);
     } else {
-      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, stringify(expValue), escapeHtml(stringify(actValue))]);
+      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"),
+        [name, escapeHtml(stringify(expValue)), escapeHtml(stringify(actValue))]);
     }
     return {
       ok: ok,
