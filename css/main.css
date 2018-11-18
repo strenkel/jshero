@@ -28,7 +28,7 @@ html {
 }
 
 html, body {
-  font-size: 18px;
+  font-size: 20px;
   font-family:  Arial, "Helvetica Neue", Helvetica, sans-serif;
   margin: 0;
 }
@@ -184,7 +184,7 @@ code {
 
 #content {
   margin: 0 auto;
-  max-width: 44em;
+  max-width: 700px;
   padding: 8em 6%;
 }
 
@@ -369,8 +369,17 @@ a.link-button:hover {
   font-style: italic;
 }
 
+/* Small screens and tablets */
+@media (max-width: 1200px) {
+
+  html, body {
+    font-size: 18px;
+  }
+
+}
+
 /* smartphones */
-@media (max-width: 35em) {
+@media (max-width: 630px) {
 
   html, body {
     font-size: 17px;
