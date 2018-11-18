@@ -32,7 +32,7 @@
             logs: logs
           });
         } else {
-          var message = "Benutze <code>console.log</code> zur Ausgabe!";
+          var message = I18N("useConsole");
           msg.log({
             ok: false,
             msg: message
@@ -41,7 +41,7 @@
       } catch (e) {
         msg.log({
           ok: false,
-          msg: "Fehler beim Ausführen des Codes!",
+          msg: I18N("runError"),
           e: e,
           logs: log.getAll()
         });
@@ -64,8 +64,9 @@
   };
 
   var showExample = function() {
-    var code = 'var hallo = function() {\n  return "Hallo Welt!";\n};\n\n';
-    code = code + 'console.log("Der Aufruf \'hallo()\' liefert:");\nconsole.log(hallo());';
+    var code = 'var hello = function() {\n  return "Hello world!";\n};\n\n';
+    code = code + 'console.log("hello() returns:");\n';
+    code = code + 'console.log(hello());';
     codeArea.set(code);
   };
 

@@ -18,6 +18,7 @@ jshero.i18n = (function() {
     testError: "Test-Fehler! Korrigiere den Fehler und führe die Tests erneut aus!",
     testsPassed: "Alle Tests bestanden!",
     syntaxError: "Fehler beim Einlesen des Codes!",
+    runError: "Fehler beim Ausführen des Codes!",
     unknownError: "Unbekannter Testfehler!",
     goon: "Weiter",
     line: "Zeile",
@@ -26,6 +27,7 @@ jshero.i18n = (function() {
     isNotAFunction: "ist keine Funktion",
     errorAtCallOf: "Fehler beim Aufruf von",
     endlessLoopOnRead: "Es kommt zu einer Endlosschleife. Fehler beim Einlesen des Codes!",
+    useConsole: "Benutze <code>console.log</code> zur Ausgabe!",
 
     endlessLoopOnTest: "Es kommt zu einer Endlosschleife. Fehler beim Testen des Codes!",
     functionReturns: "<code>%0</code> gibt <code>%1</code> zurück.",
@@ -56,6 +58,7 @@ jshero.i18n = (function() {
     testError: "Test-Error! Correct the error and re-run the tests!",
     testsPassed: "All tests passed!",
     syntaxError: "Error reading your code!",
+    runError: "Error executing your code!",
     unknownError: "Unknown test error!",
     goon: "Continue",
     line: "line",
@@ -64,6 +67,7 @@ jshero.i18n = (function() {
     isNotAFunction: "is not a function",
     errorAtCallOf: "Error on call of",
     endlessLoopOnRead: "Endless loop. Error reading your code!",
+    useConsole: "Use <code>console.log</code> for output!",
 
     endlessLoopOnTest: "Endless loop. Error testing your code!",
     functionReturns: "<code>%0</code> returns <code>%1</code>.",
