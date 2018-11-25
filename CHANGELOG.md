@@ -1,3 +1,16 @@
+# 2.8.1
+Add code week link
+
+# 2.8.0
+en: add playground
+Layout: cahnge font-size to 20px
+Shorten text on start page
+
+# 2.7.2
+Fix small isues
+Change html-head-title to JS Hero
+Add serlo link
+
 # 2.7.1
 
 Kleinere Textkorrekturen / Textverbesserungen
@@ -19,7 +32,7 @@ en: mean.js, math.js, minmax.js, for1.js
 de/regex7.js: Regex: beliebige Wiederholung
 
 ### Add hint and solution
-en: equals.js, bool.js 
+en: equals.js, bool.js
 
 # 2.5.1
 Bugfix Koan "Zwei return-Anweisungen" (DE)
