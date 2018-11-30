@@ -1,0 +1,116 @@
+/* --- general --- */
+
+#header {
+  background-color: #14A62C; /* standard green */
+  font-size: 1em;
+  color: white;
+  height: 3em;
+  line-height: 3em;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  }
+  
+#header.green {
+  background-color: #14A62C; /* standard green */
+}
+
+#header.red {
+  background-color:  #e33027; /* standard red */
+}
+
+/* --- controls & menu ---  */
+/* TODO: create new class for both. */
+
+#header .control, #menu {
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 2em;
+  height: 3em;
+  width: 3em;
+}
+
+#header .control:hover, #menu:hover {
+  background-color: #424242;
+}
+
+/* --- prev page, next page, overview --- */
+
+#header .control {
+  float: right;
+}
+
+#header > :first-child {
+  margin-right: 2%;
+}
+
+#prev-button {
+  background-image: url("../img/ic_navigate_before_white_18dp_2x.png");
+  background-image: url("../img/ic_navigate_before_white_24px.svg"), none;
+}
+
+#next-button {
+  background-image: url("../img/ic_navigate_next_white_18dp_2x.png");
+  background-image: url("../img/ic_navigate_next_white_24px.svg"), none;
+}
+
+#success-button {
+  background-image: url("../img/ic_more_vert_white_18dp_2x.png");
+  background-image: url("../img/ic_more_vert_white_24px.svg"), none;
+}
+
+/* --- menu --- */
+
+#menu {
+  float: left;
+  margin: 0 2em;
+}
+
+#menu.menu {
+  background-image: url("../img/ic_menu_white_18dp_2x.png");
+  background-image: url("../img/ic_menu_white_24px.svg"), none;
+}
+
+#menu.close {
+  background-image: url("../img/ic_close_white_18dp_2x.png");
+  background-image: url("../img/ic_close_white_24px.svg"), none;
+  background-color: #424242; /* grey 800 */
+}
+
+/* --- title --- */
+
+#header .title {
+  vertical-align: middle;
+  font-size: 1.3em;
+  float: left;
+}
+
+#title {
+  display: block;
+}
+
+#title-short {
+  display: none;
+}
+
+/* smartphones */
+@media (max-width: 630px) {
+
+  #title {
+    display: none;
+  }
+
+  #title-short {
+    display: block;
+  }
+
+  #menu {
+    margin: 0 0.7em;
+  }
+
+  #header .control {
+    width: 2.5em;
+  }
+
+}

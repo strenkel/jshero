@@ -12,6 +12,7 @@ h2 {
   font-size: 1.75em;
 }
 
+/* TODO: auf den content einschraenken? */
 a {
   color: #0033ff; /* blue */
 }
@@ -70,7 +71,7 @@ code {
   padding: 2em 0 2em 0;
 }
 
-#header a, #nav a, #messages a, .link-button, #koans a {
+#nav a, #messages a, .link-button, #koans a {
   text-decoration: none;
   color: black;
 }
@@ -91,95 +92,6 @@ code {
 #nav a:last-child {
   margin-top: 2.5em;
   font-style: italic;
-}
-
-#header {
-  background-color: #14A62C; /* standard-green */
-  font-size: 1em;
-  color: white;
-  height: 3em;
-  line-height: 3em;
-  position: absolute;
-  width: 100%;
-  top: 0;
-}
-
-#header.green {
-  background-color: #14A62C; /* standard-green */
-}
-
-#header.red {
-  background-color:  #e33027; /* standard-red */
-}
-
-.title {
-  vertical-align: middle;
-  font-size: 1.3em;
-  float: left;
-}
-
-#title {
-  display: block;
-}
-
-#title-short {
-  display: none;
-}
-
-#menu {
-  float: left;
-  margin: 0 2em;
-}
-
-.control, #menu {
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 2em;
-  height: 3em;
-  width: 3em;
-}
-
-#prev-button {
-  background-image: url("../img/ic_navigate_before_white_18dp_2x.png");
-  background-image: url("../img/ic_navigate_before_white_24px.svg"), none;
-}
-
-#next-button {
-  background-image: url("../img/ic_navigate_next_white_18dp_2x.png");
-  background-image: url("../img/ic_navigate_next_white_24px.svg"), none;
-}
-
-#success-button {
-  background-image: url("../img/ic_more_vert_white_18dp_2x.png");
-  background-image: url("../img/ic_more_vert_white_24px.svg"), none;
-}
-
-#menu.menu {
-  background-image: url("../img/ic_menu_white_18dp_2x.png");
-  background-image: url("../img/ic_menu_white_24px.svg"), none;
-}
-
-#menu.close {
-  background-image: url("../img/ic_close_white_18dp_2x.png");
-  background-image: url("../img/ic_close_white_24px.svg"), none;
-  background-color: #424242; /* grey 800 */
-}
-
-#menu:hover {
-  background-color: #424242; /* grey 800 */
-}
-
-#header .control {
-  float: right;
-}
-
-#header .control:hover {
-  background-color: #424242;
-}
-
-#header > :first-child {
-  margin-right: 2%;
 }
 
 #content {
@@ -385,18 +297,6 @@ a.link-button:hover {
     font-size: 17px;
   }
 
-  #title {
-    display: none;
-  }
-
-  #title-short {
-    display: block;
-  }
-
-  #menu {
-    margin: 0 0.7em;
-  }
-
   h1 {
     font-size: 1.8em;
   }
@@ -407,10 +307,6 @@ a.link-button:hover {
 
   #content {
     padding: 8em 1em 17em 1em;
-  }
-
-  .control {
-    width: 2.5em;
   }
 
   #footer {
