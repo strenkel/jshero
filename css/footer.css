@@ -1,0 +1,34 @@
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #424242; /* grey 800 */
+  height: 3em;
+  line-height: 3em;
+  text-align: center;
+}
+
+#footer a {
+  padding: 0 1em;
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover {
+  text-decoration: underline;
+}
+
+/* smartphones */
+@media (max-width: 630px) {
+
+  #footer {
+    padding: 1.5em 0;
+    height: 8em;
+    line-height: 2em;
+  }
+
+  #footer a {
+    display: block;
+  }
+
+}
