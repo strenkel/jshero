@@ -1,0 +1,29 @@
+#nav {
+  top: 3em;
+  border-bottom: 1px solid white;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  background-color: #424242; /* grey 800 */
+  display: none;
+  padding: 2em 0 2em 0;
+}
+
+#nav a {
+  width: 8em;
+  display: block;
+  color: white;
+  margin: 1.2em auto;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  text-decoration: underline;
+}
+
+/* Separates the language-link from the normal navigation links. */
+#nav a:last-child {
+  margin-top: 2.5em;
+  font-style: italic;
+}

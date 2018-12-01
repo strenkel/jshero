@@ -60,40 +60,6 @@ code {
   color: #0033ff; /* blue */
 }
 
-#nav {
-  top: 3em;
-  border-bottom: 1px solid white;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  background-color: #424242; /* grey 800 */
-  display: none;
-  padding: 2em 0 2em 0;
-}
-
-#nav a, #messages a, .link-button, #koans a {
-  text-decoration: none;
-  color: black;
-}
-
-#nav a {
-  width: 8em;
-  display: block;
-  color: white;
-  margin: 1.2em auto;
-  font-size: 1.2em;
-}
-
-#nav a:hover {
-  text-decoration: underline;
-}
-
-/* Separates the language-link from the normal navigation links. */
-#nav a:last-child {
-  margin-top: 2.5em;
-  font-style: italic;
-}
-
 #content {
   margin: 0 auto;
   max-width: 740px;
@@ -236,6 +202,11 @@ a.link-button:hover {
   text-decoration: underline;
   cursor: pointer;
   color: #0033ff; /* blue */
+}
+
+#messages a, .link-button, #koans a {
+  text-decoration: none;
+  color: black;
 }
 
 /* WARNINGS */
