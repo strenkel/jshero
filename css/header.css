@@ -10,7 +10,7 @@
   width: 100%;
   top: 0;
   }
-  
+
 #header.green {
   background-color: #14A62C; /* standard green */
 }
@@ -84,6 +84,12 @@
   vertical-align: middle;
   font-size: 1.3em;
   float: left;
+  color: white;
+  text-decoration: none;
+}
+
+#header .title:hover {
+  text-decoration: underline;
 }
 
 #title {
