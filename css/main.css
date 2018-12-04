@@ -1,28 +1,6 @@
 /* colors, icons: material.io */
 
-h1, h2 {
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 2em;
-}
-
-h2 {
-  font-size: 1.75em;
-}
-
-/* TODO: auf den content einschraenken? */
-a {
-  color: #0033ff; /* blue */
-}
-
-#content pre {
-  background-color: #f5f5f5; /* grey 100 */
-  padding: 1em 0.7em;
-  margin: 1em 0em;
-  overflow: auto;
-}
+/* --- HEAD & BODY --- */
 
 html {
   height: 100%;
@@ -37,6 +15,20 @@ html, body {
 body {
   position: relative;
   min-height: 100%
+}
+
+/* --- GENERAL TAGS --- */
+
+h1, h2 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.75em;
 }
 
 button {
@@ -60,10 +52,54 @@ code {
   color: #0033ff; /* blue */
 }
 
+/* --- SPECIAL TAGS --- */
+
+a.link-button {
+  width: 8em;
+  height: 2.5em;
+  line-height: 2.5em;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px solid black;
+  display: inline-block;
+  text-decoration: none;
+  color: black !important;
+}
+
+a.link-button:hover {
+  background-color: #424242; /* grey 800 */
+  color: white !important;
+}
+
+textarea.code-area {
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+  margin-top: 2em;
+  font-family: monospace;
+
+  /* due to bad textarea layout IE11/Win7 (shadow and scrollbar) */
+  border: solid 1px grey;
+  overflow: auto;
+}
+
+/* --- CONTENT --- */
+
 #content {
   margin: 0 auto;
   max-width: 740px;
   padding: 8em 6%;
+}
+
+#content a {
+  color: #0033ff; /* blue */
+}
+
+#content pre {
+  background-color: #f5f5f5; /* grey 100 */
+  padding: 1em 0.7em;
+  margin: 1em 0em;
+  overflow: auto;
 }
 
 #content h1 {
@@ -92,17 +128,7 @@ code {
   margin-bottom: 3em;
 }
 
-#code-area {
-  width: 100%;
-  margin-bottom: 1em;
-  font-size: 0.95em;
-  margin-top: 2em;
-  font-family: monospace;
-
-  /* due to bad textarea layout IE11/Win7 (shadow and scrollbar) */
-  border: solid 1px grey;
-  overflow: auto;
-}
+/* --- MESSAGES --- */
 
 #messages {
   margin-top: 3em;
@@ -125,21 +151,6 @@ code {
   color: #0f7820; /* dark-green */
 }
 
-.link-button {
-  width: 8em;
-  height: 2.5em;
-  line-height: 2.5em;
-  vertical-align: middle;
-  text-align: center;
-  border: 1px solid black;
-  display: inline-block;
-}
-
-a.link-button:hover {
-  background-color: #424242; /* grey 800 */
-  color: white !important;
-}
-
 #messages .link-button {
   margin-top: 2em;
 }
@@ -151,43 +162,7 @@ a.link-button:hover {
   padding: 0.5em 0 1em 1em;
 }
 
-#success .green {
-  color: #0f7820; /* dark-green */
-}
-
-#success .red {
-  color: #e00000; /* dark-red */
-}
-
-#success #koans a:hover {
-  text-decoration: underline;
-}
-
-#koans a {
-  display: block;
-  margin: 0.5em 0;
-}
-
-#koans {
-  margin-bottom: 5em;
-}
-
-#reset-confirmation {
-  margin-bottom: 4.4em;
-  display: none;
-}
-
-#reset-exercises {
-  margin-bottom: 7em;
-}
-
-.reset-confirmation-button {
-  margin-bottom: 0.5em;
-}
-
-#privacy {
-  font-size: 0.9em;
-}
+/* --- LINKS & PLAYGROUND PAGE --- */
 
 #links h2 {
   font-size: 1.1em;
@@ -204,12 +179,7 @@ a.link-button:hover {
   color: #0033ff; /* blue */
 }
 
-#messages a, .link-button, #koans a {
-  text-decoration: none;
-  color: black;
-}
-
-/* WARNINGS */
+/* --- WARNINGS, HINT & SOLUTION --- */
 
 .warning {
   padding: 10px;
