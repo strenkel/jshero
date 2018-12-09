@@ -11,7 +11,7 @@ jshero.evaluator = (function() {
   var userCode;
 
   /**
-   * @param {String} myCode 
+   * @param {String} myCode
    */
   var init = function(code) {
     userCode = code;
@@ -19,10 +19,10 @@ jshero.evaluator = (function() {
   };
 
   /**
-   * @param {String} testCode 
+   * @param {String} testCode
    */
   var evalTest = function(testCode) {
-    var userCodeWithTest = userCode + ";" + testCode;
+    var userCodeWithTest = userCode + ";\n" + testCode;
     return eval(userCodeWithTest);
   };
 
