@@ -1,3 +1,9 @@
+# 2.8.2
+Refactor css
+Add home link in page title
+Fix privacy text
+Fix 'line comment in last code area line' bug
+
 # 2.8.1
 Add code week link
 
