@@ -1,4 +1,4 @@
-(function(msg, actualKoan, header, codeArea, tester, log, util, storage, i18n, LANGUAGE) {
+(function(msg, actualKoan, header, codeArea, tester, util, storage, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
   var I18N = i18n.get;
@@ -69,12 +69,12 @@
   };
 
   var testCode = function(e) {
-    
+
     if (testsAreRunning) {
       return;
     }
     testsAreRunning = true;
-    
+
     var code = codeArea.get();
     msg.clear();
     tester.run(code, function(results) {
@@ -164,7 +164,6 @@
   jshero.header,
   jshero.code,
   jshero.tester,
-  jshero.log,
   jshero.util,
   jshero.storage,
   jshero.i18n,
