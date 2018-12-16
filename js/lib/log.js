@@ -20,21 +20,12 @@ jshero.log = (function() {
 
   /**
    * console.log for usage in exercise code.
-   * Handles the the first argument for test output.
+   * Handles the first argument for test output.
    */
   console.log = function() {
     logs.push("" + arguments[0]);
     origConsoleLog.apply(console, arguments);
   }
-
-  /**
-   * For usage in exercise code.
-   *
-   * @deprecated use console.log
-   */
-  jshero.log = function(log) {
-    logs.push(log);
-  };
 
   var clear = function() {
     logs = [];
