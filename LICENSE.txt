@@ -1,1 +1,3 @@
 Released under the GNU Affero General Public License, Version 3 (https://www.gnu.org/licenses/agpl-3.0.en.html).
+All texts are additionally covered by the Creative Commons Attribution-ShareAlike 4.0 International Public License
+(https://creativecommons.org/licenses/by-sa/4.0/legalcode).
