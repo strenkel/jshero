@@ -31,7 +31,7 @@ jshero.evaluator = (function() {
    * Throw an error if not.
    */
   var evalParse = function() {
-    eval(userCode);
+    return eval(userCode);
   };
 
   return {

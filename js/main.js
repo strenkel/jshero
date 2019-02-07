@@ -23,7 +23,9 @@
     document.getElementById("koans-title").innerHTML = (actualKoan.getIndex() + 1) + ". " + koan.title;
 
     // IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements!
-    document.getElementById("koans-lesson").innerHTML = koan.lesson;
+    if (koan.lesson) {
+      document.getElementById("koans-lesson").innerHTML = koan.lesson;
+    }
     document.getElementById("koans-task").innerHTML = koan.task;
 
     if (koan.hint) {

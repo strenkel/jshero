@@ -135,6 +135,21 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     };
   };
 
+  var assert_isValue = function(value) {
+    var answer = evaluator.evalParse();
+    var ok = answer === value;
+    var msg;
+    if (ok) {
+      msg = "Richtig!";
+    } else {
+      msg = "Falsch!"
+    }
+    return {
+      ok: ok,
+      msg: msg
+    };
+  }
+
   /**
    * We expect that calling a function
    * with the call f_call (e.g. 'f()' or 'f("Hallo")')
@@ -346,7 +361,8 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
     assert_functionLogs: assert_functionLogs,
     assert_variableDefined: assert_variableDefined,
-    assert_variableHasValue: assert_variableHasValue
+    assert_variableHasValue: assert_variableHasValue,
+    assert_isValue: assert_isValue
   };
 
 })(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.evaluator);
