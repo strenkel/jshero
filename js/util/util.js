@@ -4,16 +4,11 @@ if (typeof jshero === "undefined") {
 
 jshero.util = (function() {
 
-  // Does not work local with file:///...
-  var isPhoneGap = function() {
-    return document.URL.indexOf('http://') === -1 && document.URL.indexOf('https://') === -1;
-  };
-
   var scrollToBottom = function() {
     window.scrollTo(0, document.body.scrollHeight);
   };
 
-  function scrollToTop() {
+  var scrollToTop = function() {
     window.scrollTo(0, 0);
   };
 
@@ -43,7 +38,6 @@ jshero.util = (function() {
   };
 
   return {
-    isPhoneGap: isPhoneGap,
     scrollToBottom: scrollToBottom,
     scrollToTop: scrollToTop,
     formatMessage: formatMessage,
