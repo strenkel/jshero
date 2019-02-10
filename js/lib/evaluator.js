@@ -31,13 +31,25 @@ jshero.evaluator = (function() {
    * Throw an error if not.
    */
   var evalParse = function() {
-    return eval(userCode);
+    eval(userCode);
+  };
+
+  var equalsString = function(myString) {
+    return userCode === '"' + myString + '"'
+      || userCode === "'" + myString + "'"
+      || userCode === "`" + myString + "`";
+  };
+
+  var getCode = function() {
+    return userCode;
   };
 
   return {
     init: init,
     evalTest: evalTest,
-    evalParse: evalParse
+    evalParse: evalParse,
+    equalsString: equalsString,
+    getCode: getCode
   };
 
 })();

@@ -84,10 +84,10 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
    *  END ------------- */
 
   /**
-   * JSON.stringify wandelt einige Werte wie NaN oder Infinity in null um. 
+   * JSON.stringify wandelt einige Werte wie NaN oder Infinity in null um.
    * Für die Testmessage ist das nicht sinnvoll. Deshalb werden hier diese Fälle
    * gesondert behandelt. Komplexere Fälle wie [NaN] werden nicht berücksichtigt.
-   * Diese ergeben weiterhin [null]. 
+   * Diese ergeben weiterhin [null].
    */
   var stringify = function(value) {
 
@@ -117,7 +117,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
    * jshero.testutil.assert_isFunction('a')
    *
    * We expect a function named "a".
-   * 
+   *
    * @param {String} f_name
    * @returns {TestResult}
    */
@@ -135,14 +135,13 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     };
   };
 
-  var assert_isValue = function(value) {
-    var answer = evaluator.evalParse();
-    var ok = answer === value;
+  var assert_isString = function(value) {
+    var ok = evaluator.equalsString(value);
     var msg;
     if (ok) {
-      msg = "Richtig!";
+      msg = '<code>x</code> hat den Wert <code>' + evaluator.getCode()  + '</code>.';
     } else {
-      msg = "Falsch!"
+      msg = '<code>x</code> hat nicht den Wert <code>' + evaluator.getCode()  + '</code>.';
     }
     return {
       ok: ok,
@@ -289,7 +288,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
 
   /**
    * Test if a variable with the name 'name' is defined or not undefined.
-   * 
+   *
    * @param {String} name
    * @returns {TestResult}
    */
@@ -310,11 +309,11 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
 
   /**
    * Prüfen, ob eine Variable den erwarteten Wert hat.
-   * 
+   *
    * @param v {Object}
    * @param name {String}
    * @param expValue {Object}
-   * @returns {TestResult} 
+   * @returns {TestResult}
    */
   var assert_variableHasValue = function(name, expValue) {
     var actValue = evaluator.evalTest(name);
@@ -362,7 +361,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     assert_functionLogs: assert_functionLogs,
     assert_variableDefined: assert_variableDefined,
     assert_variableHasValue: assert_variableHasValue,
-    assert_isValue: assert_isValue
+    assert_isString: assert_isString
   };
 
 })(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.evaluator);
