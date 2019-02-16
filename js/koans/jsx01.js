@@ -6,7 +6,8 @@
 
     title: "Was ist x?",
 
-    lesson: "Bei dieser Aufgabe sollst du nicht Code schreiben, sondern Code lesen.",
+    lesson: `Das eben gelernt wollen wir nochmal üben. Während Du bei der ersten Aufgabe Code geschrieben hast,
+sollst du hier Code lesen.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>var x = "Josefine";</code></pre>`,
