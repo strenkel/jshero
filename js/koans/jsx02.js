@@ -13,11 +13,11 @@ farbe = "grün";</code></pre>
 Die Variable <code>farbe</code> wird mit dem Wert <code>"rot"</code> initialisiert. Danach erhält sie den Wert <code>"grün"</code>.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>var x = "Gregor";
-x = "Georg";
-x = "Josef";</code></pre>`,
+<pre><code>var x = "Georg";
+x = "Karl";
+x = "Gregor";</code></pre>`,
 
-    solution: `<pre><code>"Josef"</code></pre>`,
+    solution: `<pre><code>"Gregor"</code></pre>`,
 
     beforeTests: function() {
     },
@@ -25,7 +25,7 @@ x = "Josef";</code></pre>`,
     tests: [
 
       function() {
-        return testutil.assert_isString('Josef');
+        return testutil.assert_isString('Gregor');
       }
 
     ]

@@ -4,7 +4,7 @@
 
     id: "functioncall",
 
-    title: "Funktionsaufrufe",
+    title: "Funktionsaufruf",
 
     lesson: `Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion.
 Mit der Definition, z. B.
