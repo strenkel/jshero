@@ -7,8 +7,8 @@
     title: "Was ist x?",
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>var reply = function(call) {
-  return call;
+<pre><code>var reply = function(phrase) {
+  return phrase;
 };
 
 var x = reply("How do you do?");</code></pre>`,

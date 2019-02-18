@@ -10,12 +10,12 @@
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>var hello = function() {
-  return "Hello!";
+  return "Hello world!";
 };
 
 var x = hello();</code></pre>`,
 
-    solution: `<pre><code>"Hello!"</code></pre>`,
+    solution: `<pre><code>"Hello world!"</code></pre>`,
 
     beforeTests: function() {
     },
@@ -23,7 +23,7 @@ var x = hello();</code></pre>`,
     tests: [
 
       function() {
-        return testutil.assert_isString('Hello!');
+        return testutil.assert_isString('Hello world!');
       }
 
     ]
