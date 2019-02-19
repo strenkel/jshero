@@ -4,7 +4,7 @@
 
     id: "jsx03",
 
-    title: "Weitere Zuweisungen",
+    title: "Variablen zuweisen",
 
     lesson: `Einer Variablen kann man auch den Wert einer anderen Variablen zuweisen:
 <pre><code>var name1 = "Olga";
