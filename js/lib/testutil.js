@@ -139,9 +139,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     var ok = evaluator.equalsString(value);
     var msg;
     if (ok) {
-      msg = '<code>x</code> hat den Wert <code>' + evaluator.getCode()  + '</code>.';
+      msg = '<code>x</code> ' + I18N("hasValue") + ' <code>' + evaluator.getCode()  + '</code>.';
     } else {
-      msg = '<code>x</code> hat nicht den Wert <code>' + evaluator.getCode()  + '</code>.';
+      msg = '<code>x</code> ' + I18N("hasNotValue") + ' <code>' + evaluator.getCode()  + '</code>.';
     }
     return {
       ok: ok,

@@ -29,6 +29,8 @@ jshero.i18n = (function() {
     endlessLoopOnRead: "Es kommt zu einer Endlosschleife. Fehler beim Einlesen des Codes!",
     useConsole: "Benutze <code>console.log</code> zur Ausgabe!",
 
+    hasValue: "hat den Wert",
+    hasNotValue: "hat nicht den Wert",
     endlessLoopOnTest: "Es kommt zu einer Endlosschleife. Fehler beim Testen des Codes!",
     functionReturns: "<code>%0</code> gibt <code>%1</code> zurück.",
     functionNotReturns: "<code>%0</code> gibt nicht <code>%1</code>, sondern <code>%2</code> zurück.",
@@ -69,6 +71,8 @@ jshero.i18n = (function() {
     endlessLoopOnRead: "Endless loop. Error reading your code!",
     useConsole: "Use <code>console.log</code> for output!",
 
+    hasValue: "has the value",
+    hasNotValue: "has not the value",
     endlessLoopOnTest: "Endless loop. Error testing your code!",
     functionReturns: "<code>%0</code> returns <code>%1</code>.",
     functionNotReturns: "<code>%0</code> does not return <code>%1</code>, but <code>%2</code>.",
