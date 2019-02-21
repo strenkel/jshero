@@ -10,6 +10,7 @@ jshero.koans.initReorder(
     'function',
     'function2',
     'functioncall',
+    'jsx04',
     'parameter',
     'string',
     'log1',

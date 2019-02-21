@@ -6,7 +6,7 @@
 
     title: "Assign variables",
 
-    lesson: `A variable can be assigned the value of another variable:
+    lesson: `A variable can be assigned the value of another variable.
 <pre><code>var name1 = "Olga";
 var name2 = name1;
 name1 = "Clara";</code></pre>
