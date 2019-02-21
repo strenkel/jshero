@@ -28,6 +28,7 @@ jshero.koans.initReorder(
     'stringsubstr',
     'replace',
     'number',
+    'fahrenheit',
     'modulo',
     'mean',
     'math',
