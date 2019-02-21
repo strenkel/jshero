@@ -14,6 +14,8 @@ jshero.koans.initReorder(
     'parameter',
     'jsx05',
     'string',
+    'jsx06',
+    'jsx06b',
     'log1',
     'log2',
     'stringlength',
