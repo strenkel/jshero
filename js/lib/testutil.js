@@ -137,17 +137,13 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
 
   var assert_isString = function(value) {
     var ok = evaluator.equalsString(value);
-    var msg;
-    if (ok) {
-      msg = '<code>x</code> ' + I18N("hasValue") + ' <code>' + evaluator.getCode()  + '</code>.';
-    } else {
-      msg = '<code>x</code> ' + I18N("hasNotValue") + ' <code>' + evaluator.getCode()  + '</code>.';
-    }
-    return {
-      ok: ok,
-      msg: msg
-    };
-  }
+    return createEqualsResult(ok);
+  };
+
+  var assert_isValue = function(value) {
+    var ok = evaluator.equalsValue(value);
+    return createEqualsResult(ok);
+  };
 
   /**
    * We expect that calling a function
@@ -353,6 +349,21 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     };
   };
 
+  // --- PRIVATE ---
+
+  var createEqualsResult = function(ok) {
+    var msg;
+    if (ok) {
+      msg = '<code>x</code> ' + I18N("hasValue") + ' <code>' + evaluator.getCode()  + '</code>.';
+    } else {
+      msg = '<code>x</code> ' + I18N("hasNotValue") + ' <code>' + evaluator.getCode()  + '</code>.';
+    }
+    return {
+      ok: ok,
+      msg: msg
+    };
+  };
+
   return {
     assert_isFunction: assert_isFunction,
     assert_functionReturnsType: assert_functionReturnsType,
@@ -361,7 +372,8 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     assert_functionLogs: assert_functionLogs,
     assert_variableDefined: assert_variableDefined,
     assert_variableHasValue: assert_variableHasValue,
-    assert_isString: assert_isString
+    assert_isString: assert_isString,
+    assert_isValue: assert_isValue
   };
 
 })(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.evaluator);

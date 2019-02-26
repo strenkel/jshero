@@ -8,6 +8,7 @@ if (typeof jshero === "undefined") {
  */
 jshero.evaluator = (function() {
 
+  // {String} User input.
   var userCode;
 
   /**
@@ -40,6 +41,10 @@ jshero.evaluator = (function() {
       || userCode === "`" + myString + "`";
   };
 
+  var equalsValue = function(myValue) {
+    return userCode === myValue;
+  };
+
   var getCode = function() {
     return userCode;
   };
@@ -49,6 +54,7 @@ jshero.evaluator = (function() {
     evalTest: evalTest,
     evalParse: evalParse,
     equalsString: equalsString,
+    equalsValue: equalsValue,
     getCode: getCode
   };
 

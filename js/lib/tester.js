@@ -44,8 +44,9 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
       callback();
       return;
     }
-
-    koan.beforeTests();
+    if (koan.beforeTests) {
+      koan.beforeTests();
+    }
     readCode(evalResultAndRunNextTest);
   };
 
