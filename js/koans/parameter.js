@@ -24,7 +24,9 @@ ausgeführt. Dabei wird zunächst das Argument <code>"Apfel"</code> dem Paramete
 Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen
 <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat dann auch den Wert <code>"Apfel"</code>.`,
 
-    task: 'Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.',
+    task: `Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.
+<code>echo("Greta")</code> sollte <code>"Greta"</code> und <code>echo("CO2")</code> sollte <code>"CO2"</code>
+zurückgeben.`,
 
     hint: `<pre><code>var echo = function(ton) {
   ...
@@ -50,11 +52,11 @@ Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeb
       },
 
       function() {
-        return testutil.assert_functionReturns('echo("Hallo Welt!")', "Hallo Welt!");
+        return testutil.assert_functionReturns('echo("Greta")', "Greta");
       },
 
       function() {
-        return testutil.assert_functionReturns('echo("Franz")', "Franz");
+        return testutil.assert_functionReturns('echo("CO2")', "CO2");
       }
     ]
 
