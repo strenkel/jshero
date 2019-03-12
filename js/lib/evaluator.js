@@ -27,6 +27,12 @@ jshero.evaluator = (function() {
     return eval(userCodeWithTest);
   };
 
+  var evalNumOfCalls = function(fCall, fToCall) {
+    var numOfCallsCode = "var numOfCalls = 0;" + fToCall + "=function() {numOfCalls++;" + fToCall + ".apply(null,arguments);};";
+    var userCodeWithCallNumber = userCode + ";\n" + numOfCallsCode + fCall + ";numOfCalls;"
+    return eval(userCodeWithCallNumber);
+  };
+
   /**
    * Test, if the user code is executable.
    * Throw an error if not.
@@ -53,6 +59,7 @@ jshero.evaluator = (function() {
     init: init,
     evalTest: evalTest,
     evalParse: evalParse,
+    evalNumOfCalls: evalNumOfCalls,
     equalsString: equalsString,
     equalsValue: equalsValue,
     getCode: getCode

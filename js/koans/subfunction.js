@@ -1,4 +1,4 @@
-(function(testutil) {
+(function(testutil, evaluator) {
 
   jshero.koans.add({
 
@@ -90,9 +90,18 @@ Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabe
 
       function() {
         return testutil.assert_functionReturns('mean([-2, -4, 17, 34])', 11.25);
+      },
+
+      function() {
+        var numOfCalls = evaluator.evalNumOfCalls("mean[1,2]", "sum");
+        var ok = numOfCalls >= 1;
+        var message
+        if (ok) {
+          message = "mean ruft sum auf.";
+        }
       }
     ]
 
   });
 
-})(jshero.testutil);
+})(jshero.testutil, jshero.evaluator);
