@@ -28,7 +28,8 @@ jshero.evaluator = (function() {
   };
 
   var evalNumOfCalls = function(fCall, fToCall) {
-    var numOfCallsCode = "var numOfCalls = 0;" + fToCall + "=function() {numOfCalls++;" + fToCall + ".apply(null,arguments);};";
+    var numOfCallsCode = "var numOfCalls=0; var originalFToCall=" + fToCall + ";" +
+      fToCall + "=function() {numOfCalls++; originalFToCall.apply(null,arguments);};";
     var userCodeWithCallNumber = userCode + ";\n" + numOfCallsCode + fCall + ";numOfCalls;"
     return eval(userCodeWithCallNumber);
   };

@@ -4,7 +4,7 @@
 
     id: 'subfunction',
 
-    title: 'Funktionen benutzen Funktionen',
+    title: 'Funktionen rufen Funktionen auf',
 
     lesson: `Funktionen können weitere Funktionen aufrufen:
 <pre><code>var brutto = function(netto) {
@@ -91,14 +91,22 @@ Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabe
       function() {
         return testutil.assert_functionReturns('mean([-2, -4, 17, 34])', 11.25);
       },
+      
+      // --- test mean calls sum ---
 
       function() {
-        var numOfCalls = evaluator.evalNumOfCalls("mean[1,2]", "sum");
+        var numOfCalls = evaluator.evalNumOfCalls("mean([1, 2])", "sum");
         var ok = numOfCalls >= 1;
-        var message
+        var msg;
         if (ok) {
-          message = "mean ruft sum auf.";
+          msg = "<code>mean</code> ruft <code>sum</code> auf.";
+        } else {
+          msg = "<code>mean</code> ruft <code>sum</code> nicht auf.";
         }
+        return {
+          ok: ok,
+          msg: msg
+        };
       }
     ]
 
