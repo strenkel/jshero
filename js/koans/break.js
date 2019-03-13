@@ -7,8 +7,7 @@ jshero.koans.add({
   lesson: `Mit <code>break</code> wird eine Schleife beendet. Das Programm wird nach der Schleife fortgesetzt.
 
 <pre><code>var woerter = "blau weiß rot";
-var i;
-for (i = 0; i < woerter.length; i++) {
+for (var i = 0; i < woerter.length; i++) {
   if (woerter.charAt(i) === " ") {
     break;
   }
