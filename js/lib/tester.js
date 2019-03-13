@@ -44,6 +44,7 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
       callback();
       return;
     }
+    // TODO: noch noetig?
     if (koan.beforeTests) {
       koan.beforeTests();
     }
