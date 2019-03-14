@@ -1,16 +1,23 @@
 # jshero
+
 JS Hero: JavaScript-Tutorial mit Übungen/Koans
 
-Website: <http://www.jshero.net><br>
+Website: <https://www.jshero.net><br>
 Playstore: <https://play.google.com/store/apps/details?id=net.jshero>
 
-Statische Website: läuft lokal oder auf jedem Webserver.
+Statische Websites: laufen lokal oder in jedem Webserver.
 Lokal nur in Browsern, die auch lokal local storage unterstuetzen (Firefix, nicht Chrome, ...).
 Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Website.
 
+## Verzeichnisstruktur
+
+www: das gebaute Projekt
+src: Sourcen, um das Projekt zu bauen
+Dateien, die nicht gebaut werden müssen, stehen direkt in wwww
+
 ## Lokal starten
 
-Die index.html im Browser öffnen.
+Die www/index.html im Browser öffnen.
 
 ## Bauen
 
