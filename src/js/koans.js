@@ -57,3 +57,8 @@ jshero.koans = (function() {
   };
 
 })();
+
+// Needed for build to export koans
+if (typeof module !== "undefined") {
+  module.exports = jshero.koans;
+}

@@ -5,12 +5,14 @@
   "author": "jshero authors",
   "private": true,
   "scripts": {
-    "build_comment_0": "Minifies all koans in one file (per language). Transpile template literals.",
-    "build": "babel -o www/js/koans-min/koans.js src/koans/de/ && babel -o www/en/js/koans-min/koans.js src/koans/en/"
+    "build": "npm run buildKoansDe & npm run buildKoansEn && node build/build.js",
+    "buildKoansDe": "babel src/js/koans.js src/koans/de/ -o www/js/koans.js",
+    "buildKoansEn": "babel src/js/koans.js src/koans/en/ -o www/en/js/koans.js"
   },
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-plugin-transform-es2015-template-literals": "^6.22.0"
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
+    "ejs": "^2.6.1"
   }
 }

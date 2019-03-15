@@ -26,10 +26,6 @@ jshero.storage = (function(LANGUAGE) {
     return getItem(getSolutionKey(koan));
   };
 
-  var removeSolution = function(koan) {
-    removeItem(getSolutionKey(koan));
-  };
-
   // --- handle shots ---
 
   /**
@@ -56,14 +52,10 @@ jshero.storage = (function(LANGUAGE) {
     removeItem(getShotKey(koan));
   };
 
-  // --- clear koans ---
+  // --- clear storage ---
 
-  var clearSolutions = function(koans) {
-    for (var i = 0, l = koans.length; i < l; i++) {
-      var koan = koans[i];
-      removeSolution(koan);
-      removeShot(koan);
-    }
+  var clear = function() {
+    localStorage.clear();
   };
 
   // --- handle playground ---
@@ -163,11 +155,10 @@ jshero.storage = (function(LANGUAGE) {
   return {
     setSolution: setSolution,
     getSolution: getSolution,
-    removeSolution: removeSolution,
     setShot: setShot,
     getShot: getShot,
     removeShot: removeShot,
-    clearSolutions: clearSolutions,
+    clear: clear,
     setPlaygroundCode: setPlaygroundCode,
     getPlaygroundCode: getPlaygroundCode,
     removePlaygroundCode: removePlaygroundCode,

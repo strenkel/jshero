@@ -1,29 +1,25 @@
-(function(koans, storage, util) {
+(function(storage, util) {
 
-  // --- write koans ---
+  // --- add green/red to koan links ---
 
-  var rootElm = document.getElementById("koans");
+  var koanLinks = document.getElementById("koans").children;;
 
-  function write() {
-    var myKoans = koans.getKoans();
-    for (var i = 0, l = myKoans.length; i < l; i++) {
-      writeKoan(myKoans[i], i);
+  function addClasses() {
+    for (var i = 0, l = koanLinks.length; i < l; i++) {
+      addClass(koanLinks[i]);
     }
   };
 
-  function writeKoan(koan, i) {
-    var elm = document.createElement("a");
-    elm.innerHTML = (i + 1) + ". " + koan.title;
-    if (storage.getSolution(koan)) {
-      elm.className = "green";
+  function addClass(link) {
+    var koanId = link.href.split("=")[1];
+    if (storage.getSolution({id: koanId})) {
+      link.className = "green";
     } else {
-      elm.className = "red";
+      link.className = "red";
     }
-    elm.href = "main.html?koan=" + koan.id;
-    rootElm.appendChild(elm);
   };
 
-  window.onload = write;
+  window.onload = addClasses;
 
   // --- reset ---
 
@@ -47,9 +43,8 @@
   };
 
   function resetKoans() {
-    storage.clearSolutions(koans.getKoans());
-    rootElm.innerHTML = "";
-    write();
+    storage.clear();
+    addClasses();
   };
 
   function showConfirmation() {
@@ -62,4 +57,4 @@
     resetConfiramtionRoot.style.display = "none";
   };
 
-})(jshero.koans, jshero.storage, jshero.util);
+})(jshero.storage, jshero.util);

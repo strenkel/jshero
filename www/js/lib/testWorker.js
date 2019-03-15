@@ -5,7 +5,6 @@ importScripts(
   "../util/array.js",
   "../util/date.js",
   "log.js",
-  "koans.js",
   "evaluator.js",
   "testutil.js"
 );
@@ -30,7 +29,7 @@ importScripts(
     return clone;
   };
 
-  (function(koans, log, i18n, evaluator) {
+  (function(log, i18n, evaluator) {
 
     var I18N;
     var code;
@@ -64,7 +63,7 @@ importScripts(
 
     var testCode = function() {
 
-      var koan = koans.getById(koanId);
+      var koan = jshero.koans.getById(koanId);
       var result;
 
       try {
@@ -99,8 +98,8 @@ importScripts(
     };
 
     var initKoans = function() {
-      var koansMinUrl = language === "de" ? "../koans-min/koans.js" : "../../en/js/koans-min/koans.js";
-      importScripts(koansMinUrl);
+      var koansUrl = language === "de" ? "../koans.js" : "../../en/js/koans.js";
+      importScripts(koansUrl);
     };
 
     onmessage = function(event) {
@@ -122,8 +121,7 @@ importScripts(
       postMessage(result);
     };
 
-  })(jshero.koans,
-    jshero.log,
+  })(jshero.log,
     jshero.i18n,
     jshero.evaluator);
 

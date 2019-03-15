@@ -13,22 +13,22 @@ Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Websi
 
 www: das gebaute Projekt
 src: Sourcen, um das Projekt zu bauen
+build: Build-Skrite
 Dateien, die nicht gebaut werden müssen, stehen direkt in wwww
 
 ## Lokal starten
 
-Die www/index.html im Browser öffnen.
+www/index.html im Browser öffnen.
 
 ## Bauen
 
+Voraussetzung: node
 Nach Änderungen an den Koans muss JS Hero mit npm neu gebaut werden.
-Die Datei package.json definiert die dazu nötigen Module.
+Die Datei package.json definiert die dazu nötigen Schritte und Module.
 
 Mit `npm install` die Module einmalig installieren.
 Mit `npm run build` das Projekt bauen.
-Diesen Befehl immer dann aufrufen, wenn etwas an den Koans geändert wurde.
-
-Dadurch werden die Dateien js/koans-min/koans.js und en/js/koans-min/koans.js neu erstellt.
+Diesen Befehl immer dann aufrufen, wenn etwas geändert wurde (Details siehe package.json)
 Erst dann werden die Änderungen im Browser sichtbar.
 
 ## Ein neues Koan hinzufügen
