@@ -53,21 +53,80 @@
     <h1>Overview</h1>
 
     <p class="extra-margin">
-      Here you find all exercises. Unsolved exercises are red, solved green. Click or touch the exercise to navigate to the exercise.
-      Use the
-      <em>Reset Exercises</em> button to reset all your solutions. All exercises will be red and you can start JavaScript Hero
+      Here you find all exercises. Unsolved exercises are red, solved green. With click or touch you navigate to
+      the exercise. Reset JS Hero with the button below. All exercises will be red and you can start JS Hero
       again.
     </p>
 
-    <p id="koans"></p>
+    <p id="koans">
+      <a href="main.html?koan=var">1. Variables</a>
+      <a href="main.html?koan=jsx01">2. What is x?</a>
+      <a href="main.html?koan=var2">3. Several variables</a>
+      <a href="main.html?koan=jsx02">4. Reassignment</a>
+      <a href="main.html?koan=jsx03">5. Assign variables</a>
+      <a href="main.html?koan=function">6. Functions</a>
+      <a href="main.html?koan=function2">7. Multiple functions</a>
+      <a href="main.html?koan=functioncall">8. Function calls</a>
+      <a href="main.html?koan=jsx04">9. What is x?</a>
+      <a href="main.html?koan=parameter">10. Parameters</a>
+      <a href="main.html?koan=jsx05">11. What is x?</a>
+      <a href="main.html?koan=string">12. Strings</a>
+      <a href="main.html?koan=jsx06">13. What is x?</a>
+      <a href="main.html?koan=jsx06b">14. What is x?</a>
+      <a href="main.html?koan=log1">15. Logging</a>
+      <a href="main.html?koan=log2">16. Logging variables</a>
+      <a href="main.html?koan=jsx07">17. What is x?</a>
+      <a href="main.html?koan=stringlength">18. String: length</a>
+      <a href="main.html?koan=stringupper">19. String: toUpperCase()</a>
+      <a href="main.html?koan=stringcharat">20. String: charAt()</a>
+      <a href="main.html?koan=trim">21. String: trim()</a>
+      <a href="main.html?koan=stringindexof">22. String: indexOf()</a>
+      <a href="main.html?koan=stringindexof2">23. String: indexOf() with from index</a>
+      <a href="main.html?koan=stringsubstr">24. String: substr()</a>
+      <a href="main.html?koan=replace">25. String: replace()</a>
+      <a href="main.html?koan=number">26. Numbers</a>
+      <a href="main.html?koan=fahrenheit">27. Fahrenheit</a>
+      <a href="main.html?koan=modulo">28. Modulo</a>
+      <a href="main.html?koan=mean">29. Parentheses</a>
+      <a href="main.html?koan=math">30. Math</a>
+      <a href="main.html?koan=minmax">31. min and max</a>
+      <a href="main.html?koan=pi">32. Math.PI</a>
+      <a href="main.html?koan=round">33. Rounding</a>
+      <a href="main.html?koan=random">34. Random numbers</a>
+      <a href="main.html?koan=bool">35. Boolean</a>
+      <a href="main.html?koan=nor">36. NOR</a>
+      <a href="main.html?koan=xor">37. XOR</a>
+      <a href="main.html?koan=equals">38. Strict equality</a>
+      <a href="main.html?koan=equals2">39. Three identical values</a>
+      <a href="main.html?koan=even">40. Even numbers</a>
+      <a href="main.html?koan=notequals">41. Strict inequality</a>
+      <a href="main.html?koan=greaterthan">42. Compare numbers</a>
+      <a href="main.html?koan=if">43. if</a>
+      <a href="main.html?koan=else">44. if...else</a>
+      <a href="main.html?koan=array">45. Creating arrays</a>
+      <a href="main.html?koan=array2">46. Get array elements</a>
+      <a href="main.html?koan=array3">47. Set array elements</a>
+      <a href="main.html?koan=arraylength">48. Array: length</a>
+      <a href="main.html?koan=arraysort">49. Sorting arrays</a>
+      <a href="main.html?koan=arraypush">50. Array: shift() and push()</a>
+      <a href="main.html?koan=concat">51. Array: concat()</a>
+      <a href="main.html?koan=slice">52. Array: slice()</a>
+      <a href="main.html?koan=join">53. Array: join()</a>
+      <a href="main.html?koan=for1">54. for loop</a>
+      <a href="main.html?koan=factorial">55. Factorial</a>
+      <a href="main.html?koan=for2">56. Loops and arrays</a>
+      <a href="main.html?koan=while">57. while loop</a>
+      <a href="main.html?koan=dowhile">58. do...while loop</a>
+      <a href="main.html?koan=ggt">59. gcd</a>
+      <a href="main.html?koan=further">60. To be continued ...</a></p>
 
     <p id="reset-exercises" class="paragraph5">
-      <button id="reset-button">Reset Exercises</button>
+      <button id="reset-button">Reset JS Hero</button>
     </p>
 
     <div id="reset-confirmation" class="paragraph5">
       <p>
-        Do you really want to reset all exercises?
+        Do you really want to reset JS Hero?
       </p>
       <p>
         <button id="reset-no-button" class="reset-confirmation-button">No</button>
@@ -90,7 +149,6 @@
   <script src="../js/lib/nav.js"></script>
   <script src="../js/lib/header.js"></script>
   <script src="../js/lib/storage.js"></script>
-  <script src="js/koans.js"></script>
   <script src="../js/success.js"></script>
 
 </body>
