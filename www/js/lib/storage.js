@@ -2,7 +2,7 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-// Note for hosting: local storage is regulated by the same origin police. http://www.jshero.net and http://jshero.net
+// Note for hosting: local storage is regulated by the same origin police. https://www.jshero.net and http://jshero.net
 // are different origins. The local storage under www.jshero.net and jshero.net will not be shared.
 // Therefore (and due to other reasons) it is recomended to redirect non-www to www (or vice versa).
 // See: https://stackoverflow.com/questions/12050590/redirect-non-www-to-www-in-htaccess
