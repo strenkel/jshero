@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="equals.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="nor.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="../intro.html">Einführung</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Übersicht</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../en/koans/var.html">--- English ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+        Browser mit aktiviertem JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+      Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
+
+    <h1 id="koans-title">42. XOR</h1>
+    
+    <div id="koans-lesson" class="paragraph">Die logischen Operatoren kennen, ähnlich der Punkt- vor Strich-Rechnung, eine Reihenfolge:
+NICHT zuerst, anschließend UND, zuletzt ODER. Möchte man diese Reihenfolge ändern, verwendet man Klammern:
+
+<pre><code>var x1 = true || false && false;
+var x2 = (true || false) && false;
+var x3 = !false && false;
+var x4 = !(false && false);</code></pre>
+
+In der ersten Zeile wird zuerst UND ausgewertet. <code>x1</code> wird <code>true</code>.
+In der zweiten Zeile wird zuerst ODER ausgewertet. <code>x2</code> wird <code>false</code>.
+In der dritten Zeile wird zuerst NICHT ausgewertet. <code>x3</code> wird <code>false</code>.
+Und in der vierten Zeile wird zuerst UND ausgewertet. <code>x4</code> wird <code>true</code>.<br><br>
+In der folgenden Aufgabe sollst du ein weiteres wichtiges Gatter, das XOR-Gatter (engl.: eXclusive OR - exklusives oder), programmieren.</div>
+    
+    <h2>Aufgabe</h2>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>xor</code>, die zwei boolesche Werte als Parameter entgegennimmt.
+Die Rückgabe der Funktion soll <code>true</code> sein, wenn beide Paramter verschieden sind.
+In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>xor(true, false)</code> und
+<code>xor(false, true)</code> sollen <code>true</code> liefern, <code>xor(true, true)</code> und
+<code>xor(false, false)</code> sollen <code>false</code> zurückgeben.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Datenschutz</a>
+    <a href="../info.html">Kontakt</a>
+  </div>
+
+  <script src="../js/util/polyfill.js"></script>
+  <script src="../js/util/array.js"></script>
+  <script src="../js/util/date.js"></script>
+  <script src="../js/util/util.js"></script>
+  <script src="../js/util/cordova.js"></script>
+  <script src="../js/util/language.js"></script>
+  <script src="../js/util/i18n.js"></script>
+  <script src="../js/lib/evaluator.js"></script>
+  <script src="../js/lib/nav.js"></script>
+  <script src="../js/lib/header.js"></script>
+  <script src="../js/lib/storage.js"></script>
+  <script src="../js/lib/code.js"></script>
+  <script src="../js/lib/message.js"></script>
+  <script src="../js/lib/log.js"></script>
+  <script src="../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../js/lib/actualkoan.js"></script>
+  <script src="../js/lib/tester.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

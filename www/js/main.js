@@ -15,18 +15,11 @@
   var testsAreRunning = false;
 
   /**
-   * Schreibt die Aufgabe und ggf. die richtige Loesung in die Seite.
-   * Setzt die Links fuer vorherige und naechste Seite.
+   * Schreibt ggf. die richtige Loesung in die Seite.
+   * Initialisiert Tipp- und Lösungs-Bereich.
    */
   var write = function() {
     var koan = actualKoan.getKoan();
-    document.getElementById("koans-title").innerHTML = (actualKoan.getIndex() + 1) + ". " + koan.title;
-
-    // IE8: '...innerHTML = koan.lesson' works with <div> but not with <p> elements!
-    if (koan.lesson) {
-      document.getElementById("koans-lesson").innerHTML = koan.lesson;
-    }
-    document.getElementById("koans-task").innerHTML = koan.task;
 
     if (koan.hint) {
       showHintOpenLink();
@@ -48,23 +41,11 @@
       header.toRed();
     }
 
-    prevButton.href = prevPageUrl();
-    nextButton.href = nextPageUrl();
-  };
-
-  var prevPageUrl = function() {
-    if (actualKoan.prevId()) {
-      return "main.html?koan=" + actualKoan.prevId();
-    } else if (LANGUAGE === "de") {
-      return "intro.html";
-    } else {
-      return "home.html";
-    }
   };
 
   var nextPageUrl = function() {
     if (actualKoan.nextId()) {
-      return "main.html?koan=" + actualKoan.nextId();
+      return actualKoan.nextId() + ".html";
     } else {
       return "success.html";
     }

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="regex5.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="regex3.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="../intro.html">Einführung</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Übersicht</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../en/koans/var.html">--- English ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+        Browser mit aktiviertem JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+      Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
+
+    <h1 id="koans-title">85. Regex: Bereiche</h1>
+    
+    <div id="koans-lesson" class="paragraph">Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
+dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich. 
+Mit einem Bindestrich kann man größere, zusammenhängende Zeichenbereiche leicht darstellen:
+
+<pre><code>var pruefeZiffer = /[0-9]/;
+var pruefe1Bis6 = /[1-6]/;
+var pruefeABisZ = /[A-Z]/;
+var pruefeaBisz = /[a-z]/; 
+var pruefeDeutschesAlphabet = /[a-zäöüß]/;
+var pruefeABisz = /[A-Za-z]/;
+var pruefeMBisT = /[M-T]/;</code></pre>
+
+<code>/[0-9]/</code> steht wie der Regex oben für genau eine Ziffer.
+Den Ziffernbereich kann man, wie <code>/[1-6]/</code> zeigt, leicht auf eine gewünschte Auswahl
+(z.B. Schulnote) einschränken. Der Bindestrich funktioniert aber nicht nur für Ziffern,
+sondern auch für Buchstaben. Dabei muss man zwischen Klein- und
+Großbuchstaben unterscheiden. <code>/[A-Z]/</code> steht für einen der 26 Großbuchstaben und
+<code>/[a-z]/</code> für einen Kleinbuchstaben. Wichtig ist, dass hier
+ä, ö, ü und ß nicht mit erfasst werden. Möchte man das, so muss man diese Buchstaben gesondert
+aufführen. Dazu schreibt man die Umlaute und das Eszett wie bei einer gewöhnlichen Auswahl
+einfach vor oder hinter den Bereich (<code>/[a-zäöüß]/</code>). Ebenso kann man zwei Bereiche
+hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Klein- oder Großbuchstaben.
+Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M-T]/</code>).</div>
+    
+    <h2>Aufgabe</h2>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine
+Zeichenfolge wie "Klasse 2b" enthält. Dabei sind Klassen von 1 bis 6 und a bis d
+zulässig. <code>pruefe("Die Klasse 1a")</code> sollte <code>true</code> ergeben.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Datenschutz</a>
+    <a href="../info.html">Kontakt</a>
+  </div>
+
+  <script src="../js/util/polyfill.js"></script>
+  <script src="../js/util/array.js"></script>
+  <script src="../js/util/date.js"></script>
+  <script src="../js/util/util.js"></script>
+  <script src="../js/util/cordova.js"></script>
+  <script src="../js/util/language.js"></script>
+  <script src="../js/util/i18n.js"></script>
+  <script src="../js/lib/evaluator.js"></script>
+  <script src="../js/lib/nav.js"></script>
+  <script src="../js/lib/header.js"></script>
+  <script src="../js/lib/storage.js"></script>
+  <script src="../js/lib/code.js"></script>
+  <script src="../js/lib/message.js"></script>
+  <script src="../js/lib/log.js"></script>
+  <script src="../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../js/lib/actualkoan.js"></script>
+  <script src="../js/lib/tester.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

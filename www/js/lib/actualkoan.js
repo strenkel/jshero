@@ -49,15 +49,9 @@ jshero.actualKoan = (function(koansArray) {
   };
 
   var getKoanIdFromUrl = function() {
-    var parts = window.location.search.split("=");
-    if (parts.length === 2) {
-      if (parts[0] === "?koan") {
-        return parts[1];
-      } else if (parts[0] === "?pos" && parts[1] === "last") {
-        return koansArray[koansArray.length - 1].id;
-      }
-    }
-    return null;
+    var parts = window.location.href.split("/");
+    var lastPart = parts[parts.length -1];
+    return lastPart.split(".")[0];
   };
 
   var setIndexById = function(id) {

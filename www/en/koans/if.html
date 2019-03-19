@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Tutorial Course Exercises Learning Tests Koans Programming Language Hour-Of-Code JSHero">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/nav.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="else.html" title="Next page"></a>
+    <a id="success-button" class="control" href="../success.html" title="Overview"></a>
+    <a id="prev-button" class="control" href="greaterthan.html" title="Previous page"></a>
+    <div id="menu" class="menu" title="Menu"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Overview</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../../koans/var.html">--- German ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        You have disabled JavaScript or your browser does not support JavaScript. JavaScript Hero need a browser with enabled JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      The browser storage
+      <a href="https://en.wikipedia.org/wiki/Web_storage">localStorage</a>
+      is not available. Either your browser does not support it or you have disabled it or the maximum memory size is exceeded.
+      Without localStorage your solutions will not be stored.
+    </p>
+
+    <h1 id="koans-title">43. if</h1>
+    
+    <div id="koans-lesson" class="paragraph">Often code should only be executed if a certain condition is true.
+To do this, use the <code>if</code> statement.
+
+<pre><code>var win = 0;
+if (dice === 6) {
+  win = 100;
+}</code></pre>
+
+This statement consists of the keyword <code>if</code> followed by parentheses.
+The parentheses contain an expression - the condition - that is evaluated to <code>true</code> or <code>false</code>.
+If the condition results in <code>true</code>, all statements in the block delimited by the curly brackets will be executed.
+If the condition results in <code>false</code>, the block bounded by the curly brackets will be skipped.
+In our example, if <code>dice</code> has the value <code>6</code>, then <code>win</code> is set to <code>100</code>.
+If <code>dice</code> does not have the value <code>6</code>, then <code>win</code> remains at <code>0</code>.</div>
+    
+    <h2>Exercise</h2>
+    <div id="koans-task" class="paragraph">Write a function <code>equals</code> that checks two values for strict equality.
+If the two values are equal, the string <code>"EQUAL"</code> should be returned.
+If they are unequal, you should get <code>"UNEQUAL"</code>.
+The call <code>equals(1, 1)</code> should return <code>"EQUAL"</code>,
+the call <code>equals(1, 2)</code> should return <code>"UNEQUAL"</code>.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
+      rows="10"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../info.html">Contact</a>
+  </div>
+
+  <script src="../../js/util/polyfill.js"></script>
+  <script src="../../js/util/array.js"></script>
+  <script src="../../js/util/date.js"></script>
+  <script src="../../js/util/util.js"></script>
+  <script src="../../js/util/language.js"></script>
+  <script src="../../js/util/i18n.js"></script>
+  <script src="../../js/util/cordova.js"></script>
+  <script src="../../js/lib/evaluator.js"></script>
+  <script src="../../js/lib/nav.js"></script>
+  <script src="../../js/lib/header.js"></script>
+  <script src="../../js/lib/storage.js"></script>
+  <script src="../../js/lib/code.js"></script>
+  <script src="../../js/lib/message.js"></script>
+  <script src="../../js/lib/log.js"></script>
+  <script src="../../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../../js/lib/actualkoan.js"></script>
+  <script src="../../js/lib/tester.js"></script>
+  <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

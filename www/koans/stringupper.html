@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="stringcharat.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="stringlength.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="../intro.html">Einführung</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Übersicht</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../en/koans/var.html">--- English ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+        Browser mit aktiviertem JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+      Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
+
+    <h1 id="koans-title">21. String: toUpperCase()</h1>
+    
+    <div id="koans-lesson" class="paragraph">Neben der Eigenschaft <code>length</code> besitzen Strings noch eine Reihe von Methoden.
+Das sind Funktionen, die direkt auf dem String angewendet werden. Wie die Eigenschaft <code>length</code>
+werden diese Methoden mit einem Punkt direkt dem String oder einer Variablen, die einen String enthält, angehängt.
+Da Methoden Funktionen sind, folgen in runden Klammern eingeschlossen die Argumente.
+Zwei dieser String-Methoden sind die parameterlosen Methoden <code>toUpperCase</code> und <code>toLowerCase</code>.
+Sie geben den String, auf dem sie angewendet werden, in Groß- bzw. Kleinbuchstaben zurück. Wichtig ist,
+dass der eigentliche String unverändert bleibt. Die Rückgabe dieser Methoden ist der in Groß- bzw. Kleinbuchstaben
+umgewandelte String.
+<pre><code>var stadt = "Prag";
+var ausgabe = stadt.toUpperCase();</code/></pre>
+<code>ausgabe</code> erhält den Wert <code>"PRAG"</code>. <code>stadt</code> hat weiterhin den Wert <code>"Prag"</code>.
+<pre><code>ausgabe = stadt.toLowerCase();</code/></pre>
+Jetzt hat <code>ausgabe</code> den Wert <code>"prag"</code>.
+<pre><code>ausgabe = "Flug 714".toUpperCase();</code/></pre>
+Hier wird <code>toUpperCase()</code> direkt auf einen String angewendet. Der Wert von <code>ausgabe</code> ist
+<code>"FLUG 714"</code>. Zahlen und auch Sonderzeichen werden nicht verändert.</div>
+    
+    <h2>Aufgabe</h2>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toCase</code>, die bei Übergabe eines Strings diesen aneinandergehängt
+in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klein- und Großschreibung soll
+<code>-</code> sein. <code>toCase("Ida")</code> sollte <code>"ida-IDA"</code> zurückgeben.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Datenschutz</a>
+    <a href="../info.html">Kontakt</a>
+  </div>
+
+  <script src="../js/util/polyfill.js"></script>
+  <script src="../js/util/array.js"></script>
+  <script src="../js/util/date.js"></script>
+  <script src="../js/util/util.js"></script>
+  <script src="../js/util/cordova.js"></script>
+  <script src="../js/util/language.js"></script>
+  <script src="../js/util/i18n.js"></script>
+  <script src="../js/lib/evaluator.js"></script>
+  <script src="../js/lib/nav.js"></script>
+  <script src="../js/lib/header.js"></script>
+  <script src="../js/lib/storage.js"></script>
+  <script src="../js/lib/code.js"></script>
+  <script src="../js/lib/message.js"></script>
+  <script src="../js/lib/log.js"></script>
+  <script src="../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../js/lib/actualkoan.js"></script>
+  <script src="../js/lib/tester.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

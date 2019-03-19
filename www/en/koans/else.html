@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Tutorial Course Exercises Learning Tests Koans Programming Language Hour-Of-Code JSHero">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../../css/nav.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="array.html" title="Next page"></a>
+    <a id="success-button" class="control" href="../success.html" title="Overview"></a>
+    <a id="prev-button" class="control" href="if.html" title="Previous page"></a>
+    <div id="menu" class="menu" title="Menu"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Overview</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../../koans/var.html">--- German ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        You have disabled JavaScript or your browser does not support JavaScript. JavaScript Hero need a browser with enabled JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      The browser storage
+      <a href="https://en.wikipedia.org/wiki/Web_storage">localStorage</a>
+      is not available. Either your browser does not support it or you have disabled it or the maximum memory size is exceeded.
+      Without localStorage your solutions will not be stored.
+    </p>
+
+    <h1 id="koans-title">44. if...else</h1>
+    
+    <div id="koans-lesson" class="paragraph">If a code block should be executed if an <code>if</code> condition
+is not fulfilled, an <code>else</code> is added.
+
+<pre><code>var message;
+if (amount > 1000) {
+  message = "No payout possible!";
+} else {
+  message = "The amount will be paid out!";
+}</code></pre>
+
+Depending on whether <code>amount</code> is greater or smaller <code>1000</code>,
+either the <code>if</code> branch or the <code>else</code> branch is executed.</div>
+    
+    <h2>Exercise</h2>
+    <div id="koans-task" class="paragraph">Write a function <code>addWithSurcharge</code> that adds two amounts with surcharge.
+For each amount less than or equal to <code>10</code>, the surcharge is <code>1</code>.
+For each amount greater than <code>10</code>, the surcharge is <code>2</code>.
+The call <code>addWithSurcharge(5, 15)</code> should return <code>23</code>.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
+      rows="10"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Privacy</a>
+    <a href="../info.html">Contact</a>
+  </div>
+
+  <script src="../../js/util/polyfill.js"></script>
+  <script src="../../js/util/array.js"></script>
+  <script src="../../js/util/date.js"></script>
+  <script src="../../js/util/util.js"></script>
+  <script src="../../js/util/language.js"></script>
+  <script src="../../js/util/i18n.js"></script>
+  <script src="../../js/util/cordova.js"></script>
+  <script src="../../js/lib/evaluator.js"></script>
+  <script src="../../js/lib/nav.js"></script>
+  <script src="../../js/lib/header.js"></script>
+  <script src="../../js/lib/storage.js"></script>
+  <script src="../../js/lib/code.js"></script>
+  <script src="../../js/lib/message.js"></script>
+  <script src="../../js/lib/log.js"></script>
+  <script src="../../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../../js/lib/actualkoan.js"></script>
+  <script src="../../js/lib/tester.js"></script>
+  <script src="../../js/main.js"></script>
+
+</body>
+
+</html>

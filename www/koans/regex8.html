@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="further.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="regex7.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="../intro.html">Einführung</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Übersicht</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../en/koans/var.html">--- English ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+        Browser mit aktiviertem JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+      Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
+
+    <h1 id="koans-title">90. Regex: {n, m}</h1>
+    
+    <div id="koans-lesson" class="paragraph">Mit einen Ausdruck der Form <code>{n}</code>, <code>{n,m}</code> oder <code>{n,}</code> kann man die
+Anzahl der Wiederholungen genauer festlegen. <code>{n}</code> steht für genau n Wiederholungen, <code>{n,m}</code>
+für mindestens n und höchstens m Wiederholungen und <code>{n,}</code> für mindestens n Wiederholungen.
+So steht <code>/\d{5}/</code> für genau 5 aufeinanderfolgende Ziffern, <code>/.{6,20}/</code> für mindestens 6 und
+höchsten 20 beliebige Zeichen und <code>/\[a-zA-Z]{5,}/</code> für mindestens 5 aufeinanderfolgende Buchstaben.</div>
+    
+    <h2>Aufgabe</h2>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String ein deutsches
+Kfz-Kennzeichen ist. Ein solches Kennzeichen soll dem Schema 'XXX YY NNNN' genügen. Dabei steht XXX für 1 bis 3
+beliebige Großbuchstaben, YY für 1 bis 2 beliebige Großbuchstaben und NNNN für eine maximal 4stellige Zahl. Führende
+Nullen sind bei der Zahl nicht zugelassen. <code>pruefe("OF C 709")</code> sollte <code>true</code> und
+<code>pruefe("OF 709")</code> sollte <code>false</code> ergeben.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Datenschutz</a>
+    <a href="../info.html">Kontakt</a>
+  </div>
+
+  <script src="../js/util/polyfill.js"></script>
+  <script src="../js/util/array.js"></script>
+  <script src="../js/util/date.js"></script>
+  <script src="../js/util/util.js"></script>
+  <script src="../js/util/cordova.js"></script>
+  <script src="../js/util/language.js"></script>
+  <script src="../js/util/i18n.js"></script>
+  <script src="../js/lib/evaluator.js"></script>
+  <script src="../js/lib/nav.js"></script>
+  <script src="../js/lib/header.js"></script>
+  <script src="../js/lib/storage.js"></script>
+  <script src="../js/lib/code.js"></script>
+  <script src="../js/lib/message.js"></script>
+  <script src="../js/lib/log.js"></script>
+  <script src="../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../js/lib/actualkoan.js"></script>
+  <script src="../js/lib/tester.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

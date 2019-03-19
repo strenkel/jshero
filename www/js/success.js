@@ -11,7 +11,7 @@
   };
 
   function addClass(link) {
-    var koanId = link.href.split("=")[1];
+    var koanId = link.id;
     if (storage.getSolution({id: koanId})) {
       link.className = "green";
     } else {

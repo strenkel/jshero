@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="date2.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="stringsplit.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="../intro.html">Einführung</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Übersicht</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../en/koans/var.html">--- English ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+        Browser mit aktiviertem JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+      Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
+
+    <h1 id="koans-title">75. Datum und Uhrzeit</h1>
+    
+    <div id="koans-lesson" class="paragraph">Um mit Datum und Uhrzeit zu arbeiten, verwendet man <code>Date</code>-Objekte. Ein <code>Date</code>-Objekt repräsentiert
+einen Zeitpunkt, also ein Datum zusammen mit einer Uhrzeit. Die Uhrzeit wird dabei auf die Millisekunde genau festgelegt.
+Ein Date-Objekt erzeugt man mit <code>new Date()</code>. Es gibt 4 mögliche Aufrufe:
+
+<pre><code>// aktueller Zeitpunkt
+var d1 = new Date();</code></pre>
+
+Ohne Parameter erzeugt <code>new Date()</code> ein Date-Objekt, das dem Zeitpunkt seines Aufrufs entspricht. Wird obiges Beispiel
+am 1. Mai 2017 um 8:15 Uhr aufgerufen, so enthält <code>d1</code> eben diesen Zeitpunkt.
+
+<pre><code>// Aufruf mit Jahr, Monat, Tag, Stunde,
+// Stunde, Minute, Sekunde, Millisekunde
+var d2 = new Date(2017, 2, 8, 16, 31, 10, 117);</code></pre>
+
+Möchte man ein Date-Objekt zu einem bestimmten Zeitpunkt erstellen, verwendet man am besten die zweite Möglichkeit.
+Hier übergibt man als Parameter das Jahr, den Monat, den Tag, die Stunde, die Minute, die Sekunde und die Millisekunde.
+Das Jahr muss in voller Länge übergeben werden. <code>17</code> ergibt das Jahr 17 n. Chr. und <code>2017</code> das Jahr 2017 n. Chr.
+Bei dem Monat muss man aufpassen. JavaScript nummeriert die Monate von 0 (Januar) bis 11 (Dezember).
+Alle weiteren Zahlen entsprechen der üblichen Bedeutung. <code>d2</code> repräsentiert also den
+Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden.<br>
+Die Parameter Millisekunde, Sekunde, Minute, Stunde und Tag sind - in dieser Reihenfolge - optional. Man kann sie weglassen.
+Gibt man sie nicht an, werden die Zeitangaben automatisch auf 0 gesetzt. Der Tag wird auf den Monatsersten gesetzt.
+Das ist besonders praktisch, wenn man nur mit einem Datum arbeiten möchte.
+Dann läßt man einfach alle Zeitangaben weg. <code>new&nbsp;Date(2017, 5, 2)</code> ist der 2.6.2017, 0:00 Uhr.
+
+<pre><code>// Millisekunden seit dem 1.1.1970
+var d3 = new Date(86400000);</code></pre>
+
+Bei der dritten Variante übergibt man die vergangenen Millisekunden seit dem 1.1.1970, 0:00 Uhr.
+Der Bezugspunkt 1.1.1970 für Datumsangaben ist seit den Tagen von Unix und der Programmiersprache C in der IT üblich geworden.
+Ein Tag hat 24 * 60 * 60 * 1000 = 86400000 Millisekunden. <code>d3</code> ist also der 2.1.1970, 0:00 Uhr.
+
+<pre><code>// Übergabe eines Datumsstrings
+var d4 = new Date("2017-3-8T16:31:10.117");</code></pre>
+
+Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d.h. in einer bestimmten Schreibweise, übergeben.
+<code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden. Diese Varainte ist jedoch nicht zu empfehlen,
+da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufweisen.</div>
+    
+    <h2>Aufgabe</h2>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>nikolaus</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
+des übergebenen Jahres, 0:00 Uhr, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 Uhr zurückgeben.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Datenschutz</a>
+    <a href="../info.html">Kontakt</a>
+  </div>
+
+  <script src="../js/util/polyfill.js"></script>
+  <script src="../js/util/array.js"></script>
+  <script src="../js/util/date.js"></script>
+  <script src="../js/util/util.js"></script>
+  <script src="../js/util/cordova.js"></script>
+  <script src="../js/util/language.js"></script>
+  <script src="../js/util/i18n.js"></script>
+  <script src="../js/lib/evaluator.js"></script>
+  <script src="../js/lib/nav.js"></script>
+  <script src="../js/lib/header.js"></script>
+  <script src="../js/lib/storage.js"></script>
+  <script src="../js/lib/code.js"></script>
+  <script src="../js/lib/message.js"></script>
+  <script src="../js/lib/log.js"></script>
+  <script src="../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../js/lib/actualkoan.js"></script>
+  <script src="../js/lib/tester.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>

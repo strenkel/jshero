@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width" name="viewport">
+  <title>JS Hero</title>
+  <meta name="description" content="Learn to Code">
+  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+  <meta name="author" content="Stefan Trenkel">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/nav.css">
+  <link rel="stylesheet" href="../css/footer.css">
+</head>
+
+<body id="main">
+
+  <div id="header">
+    <a id="next-button" class="control" href="nan.html" title="Nächste Seite"></a>
+    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+    <a id="prev-button" class="control" href="arguments.html" title="Vorherige Seite"></a>
+    <div id="menu" class="menu" title="Menü"></div>
+    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+  </div>
+
+  <div id="google-play-teaser">
+    <a href='https://play.google.com/store/apps/details?id=net.jshero'>
+      <img alt='Get it on Google Play' src='../img/google-play-badge.png' />
+    </a>
+  </div>
+
+  <div id="nav">
+    <a href="../home.html">Home</a>
+    <a href="../intro.html">Einführung</a>
+    <a href="var.html">Start</a>
+    <a href="../success.html">Übersicht</a>
+    <a href="../playground.html">Playground</a>
+    <a href="../links.html">Links</a>
+    <a href="../en/koans/var.html">--- English ---</a>
+  </div>
+
+  <div id="content">
+
+    <noscript>
+      <p class="warning">
+        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+        Browser mit aktiviertem JavaScript.
+      </p>
+    </noscript>
+
+    <p id="no-storage-warning" class="warning">
+      Der Browser-Speicher
+      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+      Ohne localStorage werden deine Lösungen nicht gespeichert.
+    </p>
+
+    <h1 id="koans-title">72. undefined</h1>
+    
+    <div id="koans-lesson" class="paragraph">Bisher hatten wir Variablen bei der Deklaration immer auch initialisiert.
+
+<pre><code>// Deklaration und Initialisierung
+var x = 1;</code></pre>
+
+Man kann eine Varialbe aber auch deklarieren und ihr später einen Wert zuweisen.
+
+<pre><code>var x; // Deklaration
+x = 1; // Initialisierung</code></pre>
+
+Variablen, die nicht initialisiert wurden, haben den Wert <code>undefined</code> (engl.: nicht definiert).
+In der Praxis kommt das bei Funktionsaufrufen am häufigsten vor. Ruft man eine Funktion, die einen Parameter erwartet, ohne Argument auf,
+dann erhält der Funktionsparameter den Wert <code>undefined</code>.
+
+<pre><code>var echo = function(x) {
+  return x;
+};
+// Aufruf ohne Argument
+var y = echo();</code></pre>
+
+<code>echo</code> wird ohne Argument aufgerufen. Dem Parameter <code>x</code> wird so kein Wert zugewiesen,
+er erhält den Wert <code>undefined</code>.
+Da <code>echo</code> den Parameter <code>x</code> einfach nur zurückgibt,
+erhält auch <code>y</code> den Wert <code>undefined</code>. <br><br>
+Eine Funktion, die einen Parameter erwartet, kann immer auch ohne Argument aufgerufen werden.
+Man sollte sich beim Schreiben von Funktionen also immer überlegen,
+was in diesem Fall passieren soll. Gute Praxis ist es, in einem solchen Fall dem Parameter einen Default-Wert (engl.: Vorgabe) zuzuweisen.
+Das hatten wir schon bei der String-Methode <code>charAt(index)</code> kennen gelernt.
+Normalerweise gibt diese Methode den Buchstaben an der Stelle <code>index</code>
+zurück. Rufen wir <code>charAt</code> ohne Argument auf, erhält <code>index</code> den Default <code>0</code>.
+Es wird der Buchstabe an der Stelle <code>0</code> zurückgegeben.
+Um eine Varaible auf <code>undefined</code> zu überprüfen, verwendet man wie üblich die strikte Gleichkeit.
+Die Methode <code>charAt</code> könnte also folgenden Code-Ausschnitt enthalten:
+
+<pre><code>if (index === undefined) {
+  index = 0;
+}</code></pre></div>
+    
+    <h2>Aufgabe</h2>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>hallo</code>, die einen String als Parameter entgegennimmt und <code>"Hallo &lt;Parameter&gt;!"</code> zurückgibt.
+<code>hallo("Akgün")</code> sollte <code>"Hallo Akgün!"</code> zurückgeben.
+Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>"Hallo Welt!"</code> zurückgegeben werden.</div>
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link"></span>
+    </div>
+    <div id="hint-area" class="paragraph"></div>
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link"></span>
+    </div>
+    <div id="solution-area" class="paragraph"></div>
+
+    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+
+    <p>
+      <button id="test-button">Tests</button>
+    </p>
+
+    <div id="messages"></div>
+
+  </div>
+
+  <div id="footer">
+    <a href="http://www.jshero.net">Web App</a>
+    <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+    <a href="../privacy.html">Datenschutz</a>
+    <a href="../info.html">Kontakt</a>
+  </div>
+
+  <script src="../js/util/polyfill.js"></script>
+  <script src="../js/util/array.js"></script>
+  <script src="../js/util/date.js"></script>
+  <script src="../js/util/util.js"></script>
+  <script src="../js/util/cordova.js"></script>
+  <script src="../js/util/language.js"></script>
+  <script src="../js/util/i18n.js"></script>
+  <script src="../js/lib/evaluator.js"></script>
+  <script src="../js/lib/nav.js"></script>
+  <script src="../js/lib/header.js"></script>
+  <script src="../js/lib/storage.js"></script>
+  <script src="../js/lib/code.js"></script>
+  <script src="../js/lib/message.js"></script>
+  <script src="../js/lib/log.js"></script>
+  <script src="../js/lib/testutil.js"></script>
+  <script src="../js/koans.js"></script>
+  <script src="../js/lib/actualkoan.js"></script>
+  <script src="../js/lib/tester.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
