@@ -17,7 +17,7 @@ Dieser Wert wird zurückgegeben, wenn sich das übergebene Element nicht im Arra
 
   task: `Schreibe eine Funktion <code>add</code>, die ein Element an das Ende eines Arrays hängt.
 Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Array befindet.
-<code>add([1, 2], 3)</code> sollte <code>[1, 2, 3]</code> und <code>add([1, 2], 2)</code>sollte
+<code>add([1, 2], 3)</code> sollte <code>[1, 2, 3]</code> und <code>add([1, 2], 2)</code> sollte
 <code>[1, 2]</code> zurückgeben.`,
 
   beforeTests: function() {

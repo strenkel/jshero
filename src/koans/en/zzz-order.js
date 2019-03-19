@@ -50,6 +50,7 @@ jshero.koans.initReorder(
     'array2',
     'array3',
     'arraylength',
+    'arrayindexof',
     'arraysort',
     'arraypush',
     'concat',

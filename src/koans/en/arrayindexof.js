@@ -16,10 +16,10 @@ For a complete reference see
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf">
 MDN&nbsp;web&nbsp;docs</a>.`,
 
-  task: `Schreibe eine Funktion <code>add</code>, die ein Element an das Ende eines Arrays hängt.
-Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Array befindet.
-<code>add([1, 2], 3)</code> sollte <code>[1, 2, 3]</code> und <code>add([1, 2], 2)</code>sollte
-<code>[1, 2]</code> zurückgeben.`,
+  task: `Write a function <code>add</code> that adds an element to the end of an array.
+However, the element should only be added if it is not already in the array.
+<code>add([1, 2], 3)</code> should return <code>[1, 2, 3]</code> and <code>add([1, 2], 2)</code> should return
+<code>[1, 2]</code>.`,
 
   beforeTests: function() {
     if (typeof add !== "undefined") {
