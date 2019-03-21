@@ -2,15 +2,15 @@
 
   jshero.koans.add({
 
-    id: 'romannumbers1',
+    id: 'roman1',
 
     title: 'Römische Zahlen I',
 
     lesson: `Die folgende Aufgabe ist anspruchsvoll. Du musst vieles von dem zuvor Gelernten benutzen.
-Versuche eine iterative (for-Schleife) und eine rekursive Lösung zu finden.`,
+Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
 
     task: `Schreibe eine Funktion <code>roman</code>, die eine
-<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> in eine arabische Zahl umwandelt.
+<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> in eine arabische umwandelt.
 <code>roman("CDLXXVI")</code> sollte <code>476</code> ergeben.`,
 
     beforeTests: function() {
@@ -46,27 +46,27 @@ Versuche eine iterative (for-Schleife) und eine rekursive Lösung zu finden.`,
       },
 
       function() {
-        return testutil.assert_functionReturns('roman(5)', "V");
+        return testutil.assert_functionReturns('roman("V")', 5);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman(6)', "VI");
+        return testutil.assert_functionReturns('roman("VI")', 6);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman(10)', "X");
+        return testutil.assert_functionReturns('roman("X")', 10);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman(483)', "CDLXXXIII");
-      },
-     
-      function() {
-        return testutil.assert_functionReturns('roman(999)', "CMXCIX");
+        return testutil.assert_functionReturns('roman("CDLXXXIII")', 483);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman(1666)', "MDCLXVI");
+        return testutil.assert_functionReturns('roman("CMXCIX")', 999);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('roman("MDCLXVI")', 1666);
       }
 
     ]

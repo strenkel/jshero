@@ -17,9 +17,9 @@
 <body id="main">
 
   <div id="header">
-    <a id="next-button" class="control" href="regex7.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="roman2.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regex5a.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="recursion.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -57,21 +57,15 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">90. Regex: ?</h1>
+    <h1 id="koans-title">82. Römische Zahlen I</h1>
     
-    <div id="koans-lesson" class="paragraph">In vielen Pattern ist das Vorkommen eines Zeichens variabel. Autokennzeichen
-bestehen aus einer variablen Anzahl von Buchstaben und Ziffern. Für solche Pattern stehen eine Reihe
-sogenannter Quantoren bereit. Ein elementarer Quantor ist das <code>?</code>. Er bedeutet,
-dass der voranstehende Ausdruck kein- oder einmal vorkommt. <code>/ab?c/</code> steht
-für <code>ac</code> (b kommt keinmal vor) oder für <code>abc</code> (b kommt einmal vor).
-<code>/[1-9]?[0-9]/</code> steht für eine ein- oder zweistellige Zahl.</div>
+    <div id="koans-lesson" class="paragraph">Die folgende Aufgabe ist anspruchsvoll. Du musst vieles von dem zuvor Gelernten benutzen.
+Versuche eine iterative (for-Schleife) und eine rekursive Lösung zu finden.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den
-<a href="https://de.wikipedia.org/wiki/Meier_(Familienname)">Familiennamen Meier</a> in einer
-der 8 Schreibweisen Maier, Meier, Mayer, Meyer, Mair, Meir, Mayr oder Meyr enthält.
-<code>pruefe("Mayer")</code> und <code>pruefe("Mayr")</code> sollte <code>true</code>
-ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>roman</code>, die eine
+<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> in eine arabische Zahl umwandelt.
+<code>roman("CDLXXVI")</code> sollte <code>476</code> ergeben.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>

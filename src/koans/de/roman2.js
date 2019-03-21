@@ -2,13 +2,13 @@
 
   jshero.koans.add({
 
-    id: 'romannumbers2',
+    id: 'roman2',
 
     title: 'Römische Zahlen II',
 
-    lesson: `Und nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung.`,
+    lesson: `Und nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung zu finden.`,
 
-    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl in eine 
+    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl in eine
 <a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> umwandelt.
 <code>roman(476)</code> sollte <code>"CDLXXVI"</code> ergeben.`,
 
@@ -59,7 +59,7 @@
       function() {
         return testutil.assert_functionReturns('roman(483)', "CDLXXXIII");
       },
-     
+
       function() {
         return testutil.assert_functionReturns('roman(999)', "CMXCIX");
       },
