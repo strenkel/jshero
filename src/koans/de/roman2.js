@@ -6,11 +6,11 @@
 
     title: 'Römische Zahlen II',
 
-    lesson: `Und nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung zu finden.`,
+    lesson: `Nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung zu finden.`,
 
-    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl in eine
+    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl (bis 1000) in eine
 <a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> umwandelt.
-<code>roman(476)</code> sollte <code>"CDLXXVI"</code> ergeben.`,
+<code>roman(483)</code> sollte <code>"CDLXXXVIII"</code> ergeben.`,
 
     beforeTests: function() {
       if (typeof roman !== "undefined") {
@@ -61,11 +61,15 @@
       },
 
       function() {
+        return testutil.assert_functionReturns('roman(666)', "DCLXVI");
+      },
+
+      function() {
         return testutil.assert_functionReturns('roman(999)', "CMXCIX");
       },
 
       function() {
-        return testutil.assert_functionReturns('roman(1666)', "MDCLXVI");
+        return testutil.assert_functionReturns('roman(1000)', "M");
       }
 
     ]

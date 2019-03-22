@@ -10,8 +10,8 @@
 Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
 
     task: `Schreibe eine Funktion <code>roman</code>, die eine
-<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> in eine arabische umwandelt.
-<code>roman("CDLXXVI")</code> sollte <code>476</code> ergeben.`,
+<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> (bis 1000) in eine arabische umwandelt.
+<code>roman("CDLXXXIII")</code> sollte <code>483</code> ergeben.`,
 
     beforeTests: function() {
       if (typeof roman !== "undefined") {
@@ -62,11 +62,15 @@ Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
       },
 
       function() {
+        return testutil.assert_functionReturns('roman("DCLXVI")', 666);
+      },
+
+      function() {
         return testutil.assert_functionReturns('roman("CMXCIX")', 999);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("MDCLXVI")', 1666);
+        return testutil.assert_functionReturns('roman("M")', 1000);
       }
 
     ]
