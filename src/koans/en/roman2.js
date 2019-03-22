@@ -1,4 +1,4 @@
-(function(testutil, evaluator) {
+(function(testutil) {
 
   jshero.koans.add({
 
@@ -6,15 +6,15 @@
 
     title: 'Roman numerals II',
 
-    lesson: `Nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung zu finden.`,
+    lesson: `Now let's try it vice-versa.`,
 
-    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl (bis 1000) in eine
-<a href="https://en.wikipedia.org/wiki/Roman_numerals">römische Zahl</a> umwandelt.
-<code>roman(483)</code> sollte <code>"CDLXXXVIII"</code> ergeben.`,
+    task: `Write a function <code>roman</code> that converts an Arabic number (up to 1000) into a
+    <a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman numeral</a>.
+    <code>roman(483)</code> should return <code>"CDLXXXIII"</code>.`,
 
     beforeTests: function() {
       if (typeof roman !== "undefined") {
-        reverse = undefined;
+        roman = undefined;
       }
     },
 

@@ -6,16 +6,15 @@
 
     title: 'Roman numerals I',
 
-    lesson: `Die folgende Aufgabe ist anspruchsvoll. Du musst vieles von dem zuvor Gelernten benutzen.
-Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
+    lesson: `The following task is challenging.`,
 
-    task: `Schreibe eine Funktion <code>roman</code>, die eine
-<a href="https://en.wikipedia.org/wiki/Roman_numerals">römische Zahl</a> (bis 1000) in eine arabische umwandelt.
-<code>roman("CDLXXXIII")</code> sollte <code>483</code> ergeben.`,
+    task: `Write a function <code>roman</code> that converts a
+<a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman number</a> (up to 1000) into an Arabic.
+<code>roman("CDLXXXIII")</code> should return <code>483</code>.`,
 
     beforeTests: function() {
       if (typeof roman !== "undefined") {
-        reverse = undefined;
+        roman = undefined;
       }
     },
 

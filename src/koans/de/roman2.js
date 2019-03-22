@@ -1,4 +1,4 @@
-(function(testutil, evaluator) {
+(function(testutil) {
 
   jshero.koans.add({
 
@@ -14,7 +14,7 @@
 
     beforeTests: function() {
       if (typeof roman !== "undefined") {
-        reverse = undefined;
+        roman = undefined;
       }
     },
 

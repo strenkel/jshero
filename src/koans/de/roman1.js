@@ -1,4 +1,4 @@
-(function(testutil, evaluator) {
+(function(testutil) {
 
   jshero.koans.add({
 
@@ -6,8 +6,7 @@
 
     title: 'Römische Zahlen I',
 
-    lesson: `Die folgende Aufgabe ist anspruchsvoll. Du musst vieles von dem zuvor Gelernten benutzen.
-Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
+    lesson: `Die folgende Aufgabe ist anspruchsvoll. Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
 
     task: `Schreibe eine Funktion <code>roman</code>, die eine
 <a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> (bis 1000) in eine arabische umwandelt.
@@ -15,7 +14,7 @@ Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
 
     beforeTests: function() {
       if (typeof roman !== "undefined") {
-        reverse = undefined;
+        roman = undefined;
       }
     },
 
