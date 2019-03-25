@@ -9,7 +9,8 @@
     lesson: `The following task is challenging.`,
 
     task: `Write a function <code>roman</code> that converts a
-<a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman number</a> (up to 1000) into an Arabic.
+<a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman number</a> (up to 1000) into an
+<a href="https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system">Arabic</a>.
 <code>roman("CDLXXXIII")</code> should return <code>483</code>.`,
 
     beforeTests: function() {

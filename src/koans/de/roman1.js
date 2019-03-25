@@ -9,7 +9,8 @@
     lesson: `Die folgende Aufgabe ist anspruchsvoll. Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
 
     task: `Schreibe eine Funktion <code>roman</code>, die eine
-<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> (bis 1000) in eine arabische umwandelt.
+<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> (bis 1000) in eine
+<a href="https://de.wikipedia.org/wiki/Arabische_Zahlschrift">arabische</a> umwandelt.
 <code>roman("CDLXXXIII")</code> sollte <code>483</code> ergeben.`,
 
     beforeTests: function() {
