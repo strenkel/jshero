@@ -8,8 +8,7 @@
 
     lesson: `Now let's try it vice-versa.`,
 
-    task: `Write a function <code>roman</code> that converts an Arabic number (up to 1000) into a
-    <a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman numeral</a>.
+    task: `Write a function <code>roman</code> that converts an Arabic number (up to 1000) into a Roman numeral.
     <code>roman(483)</code> should return <code>"CDLXXXIII"</code>.`,
 
     beforeTests: function() {

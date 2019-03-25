@@ -8,8 +8,7 @@
 
     lesson: `Nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung zu finden.`,
 
-    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl (bis 1000) in eine
-<a href="https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift">römische Zahl</a> umwandelt.
+    task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl (bis 1000) in eine römische Zahl umwandelt.
 <code>roman(483)</code> sollte <code>"CDLXXXVIII"</code> ergeben.`,
 
     beforeTests: function() {
