@@ -17,8 +17,13 @@ var d = Math.ceil(4.01);</code></pre>
 erhalten also alle den Wert <code>5</code>.`,
 
   task: `Schreibe eine Funktion <code>round100</code>, die eine Dezimalzahl kaufmännisch auf die Hunderterstelle rundet.
-<code>round100(1749)</code> sollte <code>1700</code> und <code>round100(856.123)</code> sollte <code>900</code> ergeben.
-Tipp:&nbsp;Verwende neben <code>Math.round()</code> noch Multiplikation und Division.`,
+<code>round100(1749)</code> sollte <code>1700</code> und <code>round100(856.123)</code> sollte <code>900</code> ergeben.`,
+
+  hint: `Verwende neben <code>Math.round()</code> noch Multiplikation und Division.`,
+
+  solution: `<pre><code>var round = function(x) {
+  return Math.round(x / 100) * 100;
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof round100 !== "undefined") {
