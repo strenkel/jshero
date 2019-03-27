@@ -1,54 +1,73 @@
-jshero.koans.add({
+(function(testutil) {
 
-  id: 'dimarray',
+  jshero.koans.add({
 
-  title: 'Mehrdimensionale Arrays',
+    id: 'dimarray',
 
-  lesson: `Bisher haben wir in Arrays Zahlen, Strings und boolsche Werte gespeichert. Man kann aber auch Arrays in Arrays speichern.
+    title: 'Mehrdimensionale Arrays',
 
-<pre><code>teams = [
-  ["Ruby", "Angel", "Elif"],
-  ["Zeynep", "Pari", "Merve"],
-  ["Saanvi", "Giulia", " Mia"]
-];
+    lesson: `Bisher haben wir in Arrays Zahlen, Strings und boolsche Werte gespeichert. Man kann aber auch Arrays in Arrays speichern.
 
-var zeile1 = [1, 2, 3];
-var zeile2 = [];
+  <pre><code>teams = [
+    ["Ruby", "Angel"],
+    ["Mia", "Yui", "Merve", "Elif"],
+    ["Saanvi", "Giulia", "Zeynep"]
+  ];
 
-</code></pre>
+  var zeile1 = [4, 9, 2];
+  var zeile2 = [3, 5, 7];
+  var zeile3 = [8, 1, 6];
+  var loshu = [zeile1, zeile2, zeile3];</code></pre>
 
-Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt.`,
+  Im ersten Beispiel werden 3 Teams in einem Array gespeichert. Jedes Team ist wiederum ein Array aus Namen.
+  Die einzelnen Teams sind verschieden groß. Mit <code>var team = teams[0];</code> greift man auf ein Team zu
+  und mit <code>var member = teams[0][0];</code> kann man auf die einzelnen Teammitglieder zugreifen.<br>
+  Arrays, die Arrays enthalten, nennt man auch zweidimensionals Arrays. Treibt man dies weiter, erhält man
+  drei- bzw. mehrdimensionale Arrays.<br> 
+  Im zweiten Beispiel wird das magische Quadrat Loshu in einem zweidimensionalen Array gespeichert.`,
 
-  task: `Schreibe eine Funktion <code>setFirstElement</code>, die ein Array und eine beliebige Variable entgegennimmt.
-Die Variable soll als erstes Element in das Array geschrieben werden. Das Array soll dann zurückgegeben werden.
-<code>setFirstElement([1, 2], 3)</code> sollte <code>[3, 2]</code> zurückgeben.`,
+    task: `Schreibe eine Funktion <code>flat</code>, die ein zweidimensionales Array mit 3 Einträgen in einen
+  einfaches ('flaches') Array überführt. <code>flat(loshu)</code> sollte <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code> ergeben.
+  Dabei ist <code>loshu</code> das magische Quadrat aus dem obigen Beispiel.`,
 
-  beforeTests: function() {
-    if (typeof setFirstElement !== "undefined") {
-      setFirstElement = undefined;
-    }
-  },
-
-  tests: [
-    function() {
-      return jshero.testutil.assert_isFunction('setFirstElement');
+    beforeTests: function() {
+      if (typeof flat !== "undefined") {
+        flat = undefined;
+      }
     },
 
-    function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('setFirstElement', 2);
-    },
+    tests: [
+      function() {
+        return testutil.assert_isFunction('flat');
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('setFirstElement([1, 2], 3)', [3, 2]);
-    },
+      function() {
+        return testutil.assert_functionHasNumOfParameter('flat', 1);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('setFirstElement(["Hein", "Gretel"], "Hänsel")', ["Hänsel", "Gretel"]);
-    },
+      function() {
+        return testutil.assert_functionReturns('flat([], [], [])', []);
+      },
 
-    function() {
-      return jshero.testutil.assert_functionReturns('setFirstElement([1, "Maus"], "kleine")', ["kleine", "Maus"]);
-    }
-  ]
+      function() {
+        return testutil.assert_functionReturns('flat([1], [], [])', [1]);
+      },
 
-});
+      function() {
+        return testutil.assert_functionReturns('flat([1], [2], [2])', [1, 2, 3]);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('flat([1, 2], [3, 4], [5, 6])', [1, 2, 3, 4, 5, 6]);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('flat(["a"], ["b", "c"], ["d", "e", "f"])', ["a", "b", "c", "d", "e", "f"]);
+      }
+      
+    ]
+
+  });
+
+})(jshero.testutil);
+
