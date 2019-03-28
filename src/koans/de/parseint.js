@@ -38,7 +38,7 @@ Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.`
   solution: `<pre><code>var add = function(s) {
   var summand1 = parseInt(s);
   var positionPlus = s.indexOf("+");
-  var sNachPlus = s.substring(positionPlus);
+  var sNachPlus = s.substring(positionPlus + 1);
   var summand2 = parseInt(sNachPlus);
   return summand1 + summand2;
 };</code></pre>`,
