@@ -17,9 +17,9 @@
 <body id="main">
 
   <div id="header">
-    <a id="next-button" class="control" href="gettime.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="comment.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="date3.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="join.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -57,32 +57,33 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">79. Weltzeit</h1>
+    <h1 id="koans-title">62. Mehrdimensionale Arrays</h1>
     
-    <div id="koans-lesson" class="paragraph">Wenn man mit Datum und Uhrzeit arbeitet, muss man zwischen
-<a href="https://de.wikipedia.org/wiki/Koordinierte_Weltzeit">koordinierter Weltzeit</a> (UTC, engl. Coordinated Universal Time) und
-<a href="https://de.wikipedia.org/wiki/Zonenzeit">Zonenzeit</a> unterscheiden.
-Die koordinierte Weltzeit stellt weltweit eine einheitliche Zeitangabe her.
-Die Zonenzeit ist die in einer Zeitzone geltende Zeit.
-Von der koordinierten Weltzeit werden die verschiedenen Zonenzeiten abgeleitet.
-So ergibt sich die <a href="https://de.wikipedia.org/wiki/Mitteleurop%C3%A4ische_Zeit">Mitteleuropäische Zeit (MEZ)</a>
-aus der koordinierten Weltzeit durch Addition von einer Stunde (kurz UTC+1). Die Mitteleuropäische Sommerzeit (MESZ) entspricht
-UTC+2. UTC selbst ist die Zonenzeit der Westeuropäischen Zeit (WEZ).<br><br>
-Was wir bisher über das Date-Objekt gelernt haben, bezog sich im Wesentlichen auf die Zonenzeit. So liefert der Ausdruck
-<code>new Date(2018, 4, 5)</code> ein Date-Objekt, das dem Zeitpunkt 5.5.2018, 0:00 Uhr in lokaler Zeit entspricht.
-Macht man diesen Aufruf in Deutschland, erhält man den Zeitpunkt 5.5.2018, 0:00 UTC+2 (Sommerzeit!). In Japan liefert derselbe Aufruf
-den Zeitpunkt 5.5.2018, 0:00 UTC+9. Zwischen beiden Zeitpunkten liegt eine Differenz von 7 Stunden.
-Möchte man weltweit einen einheitlichen Zeitpunkt erzeugen, so muss man die Weltzeit verwenden:
-<pre><code>var millis = Date.UTC(2018, 4, 5);
-var datum = new Date(millis);</code></pre>
-Mit <code>Date.UTC</code> erhält man zunächst die vergangenen Millisekunden seit dem 1.1.1970, 0:00 UTC.
-Mit dieser Zahl und <code>new Date()</code> erzeugt man anschließend das gewünschte Date-Objekt
-(siehe <a href="main.html?koan=date">Datum und Uhrzeit</a>). Die Variable <code>datum</code> repräsentiert den
-5.5.2018, 0:00 UTC.</div>
+    <div id="koans-lesson" class="paragraph">Bisher haben wir in Arrays Zahlen, Strings und boolsche Werte gespeichert. Man kann aber auch Arrays in Arrays speichern.
+
+<pre><code>var teams = [
+  ["Ruby", "Angel"],
+  ["Mia", "Yui", "Merve", "Elif"],
+  ["Saanvi", "Giulia", "Zeynep"]
+];
+
+var zeile1 = [4, 9, 2];
+var zeile2 = [3, 5, 7];
+var zeile3 = [8, 1, 6];
+var loshu = [zeile1, zeile2, zeile3];</code></pre>
+
+Im ersten Beispiel werden 3 Teams in einem Array gespeichert. Jedes Team ist wiederum ein Array aus Namen.
+Die einzelnen Teams sind verschieden groß. Mit <pre><code>var team = teams[0];</code></pre> greift man auf ein Team zu
+und mit <pre><code>var member = teams[0][0];</code></pre> kann man auf die einzelnen Teammitglieder zugreifen.<br><br>
+Arrays, die Arrays enthalten, nennt man auch zweidimensionals Arrays. Treibt man dies weiter, erhält man
+drei- bzw. mehrdimensionale Arrays.<br>
+Im zweiten Beispiel wird das <a href="https://de.wikipedia.org/wiki/Magisches_Quadrat">magische Quadrat</a> Lo-Shu in einem
+zweidimensionalen Array gespeichert.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>nikolausUTC</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
-des übergebenen Jahres, 0:00 UTC, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 UTC zurückgeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>flat</code>, die ein zweidimensionales Array mit 3 Einträgen in einen
+einfaches Array überführt. <code>flat(loshu)</code> sollte <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code> ergeben.
+Dabei ist <code>loshu</code> das magische Quadrat aus dem obigen Beispiel.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>

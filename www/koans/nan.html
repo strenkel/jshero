@@ -57,7 +57,7 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">73. NaN</h1>
+    <h1 id="koans-title">74. NaN</h1>
     
     <div id="koans-lesson" class="paragraph"><code>NaN</code> repräsentiert den Wert Not-A-Number (engl.: Keine-Zahl). Numerische Operationen oder Funktionen geben <code>NaN</code> zurück, wenn sie keinen Wert berechnen können. Wir hatten dies bei <code><a href="main.html?koan=parseint">parseInt</a></code> kennengelernt. <code>parseInt</code> gibt <code>NaN</code> zurück, wenn es keine Zahl parsen kann. Ein weiteres Beispiel ist die Berechnung der Wurzel aus einer negativen Zahl. <pre><code>var age = parseInt("Babylon");<br>var length = Math.sqrt(-1);</code></pre>Sowohl <code>age</code> als auch <code>length</code> haben den Wert <code>NaN</code>. Möchte man testen, ob <code>NaN</code> vorliegt, kann man leider nicht <code>===</code> verwenden. <code>age === NaN</code> ergibt auch dann <code>false</code>, wenn <code>age</code> den Wert <code>NaN</code> besitzt. <code>NaN</code> ist der einzige Wert in JavaScript, der nicht mit sich selbst gleich ist. Stattdessen verwendet man die Funktion <code>isNaN</code>.<pre><code>var message;<br>var age = parseInt("Babylon");<br>if ( isNaN(alter) ) {<br>  message = "Du hast keine Zahl eingegeben.";<br>}</code></pre></div>
     

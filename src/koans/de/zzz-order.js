@@ -63,6 +63,7 @@ jshero.koans.initReorder(
     'concat',
     'slice',
     'join',
+    'dimarray',
     'comment',
     'for1',
     'fakultaet',

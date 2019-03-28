@@ -5,7 +5,7 @@
   "author": "jshero authors",
   "private": true,
   "scripts": {
-    "build": "npm run buildKoansDe & npm run buildKoansEn && node build/build.js",
+    "build": "npm run buildKoansDe && npm run buildKoansEn && node build/build.js",
     "buildKoansDe": "babel src/js/koans.js src/koans/de/ -o www/js/koans.js",
     "buildKoansEn": "babel src/js/koans.js src/koans/en/ -o www/en/js/koans.js"
   },

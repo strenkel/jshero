@@ -38,7 +38,7 @@ jshero.koans = (function() {
       if (koan != null) {
         koans.push(koan);
       } else {
-        console.log("ERROR: No koan for koan-Id in order array!");
+        console.log("ERROR: No koan for koan-Id in koansMap!");
       }
     }
   };
