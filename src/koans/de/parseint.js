@@ -24,7 +24,7 @@ Kann <code>parseInt</code> keine Zahl einlesen, gibt sie den Wert <code>NaN</cod
 <pre><code>var n1 = parseInt("Nur Text", 10);
 var n2 = parseInt("Nr. 8", 10);</code></pre>
 Im ersten Fall ist überhaupt keine Zahl vorhanden. Im zweiten Fall gibt es nicht-numerische Zeichen vor der eigentlichen Zahl.
-Auch das ist nicht zulässig und führt zur Rückgabe<code>NaN</code>.`,
+Auch das ist nicht zulässig und führt zur Rückgabe <code>NaN</code>.`,
 
   task: `Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das Ergebnis
 der Addition als Zahl zurückgibt. Es sollen zwei natürliche Zahlen addiert werden. Die Additionsaufgabe ist ein String der Form "zahl1+zahl2".
@@ -36,10 +36,10 @@ Bestimme mit <code>substring</code> den Teilstring nach dem Plus-Zeichen.
 Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.`,
 
   solution: `<pre><code>var add = function(s) {
-  var summand1 = parseInt(s);
+  var summand1 = parseInt(s, 10);
   var positionPlus = s.indexOf("+");
   var sNachPlus = s.substring(positionPlus + 1);
-  var summand2 = parseInt(sNachPlus);
+  var summand2 = parseInt(sNachPlus, 10);
   return summand1 + summand2;
 };</code></pre>`,
 
