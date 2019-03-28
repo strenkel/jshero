@@ -21,7 +21,7 @@ erhalten also alle den Wert <code>5</code>.`,
 
   hint: `Verwende neben <code>Math.round()</code> noch Multiplikation und Division.`,
 
-  solution: `<pre><code>var round = function(x) {
+  solution: `<pre><code>var round100 = function(x) {
   return Math.round(x / 100) * 100;
 };</code></pre>`,
 
