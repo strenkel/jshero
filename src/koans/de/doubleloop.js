@@ -11,13 +11,13 @@ var sum = 0;
 for (var i = 0; i < 3; i++) {
   for (var j = 0; j < 3; j++) {
     sum = sum + a[i][j];
-  } 
+  }
 }
 </code></pre>
 
-Dieser Codeschnipsel berechnet die Summe aller Einträge eines zweidimensionalen Arrays.`,
+Im Codeschnipsel wird die Summe aller Elemente eines zweidimensionalen Arrays berechnet.`,
 
-  task: `Schreibe eine Funktion <code>sum</code>, die die Summe aller Einträge eines zweidimensionalen, nummerischen Arrays berechnet.
+  task: `Schreibe eine Funktion <code>sum</code>, die die Summe aller Elemente eines zweidimensionalen, numerischen Arrays berechnet.
 <code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.`,
 
   beforeTests: function() {

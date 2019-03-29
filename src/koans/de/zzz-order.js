@@ -73,6 +73,7 @@ jshero.koans.initReorder(
     'ggt',
     'break',
     'bubblesort',
+    'doubleloop',
     'arguments',
     'undefined',
     'nan',

@@ -17,9 +17,9 @@
 <body id="main">
 
   <div id="header">
-    <a id="next-button" class="control" href="regex4.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="arguments.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regex2.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="bubblesort.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -57,33 +57,24 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">88. Regex: Zeichenauswahl</h1>
+    <h1 id="koans-title">72. Geschachtelte Schleifen</h1>
     
-    <div id="koans-lesson" class="paragraph">Die letzte Lektion führte als Metazeichen den Punkt ein.
-Er steht für ein beliebiges Zeichen. So steht <code>/M.ier/</code> sowohl für <code>Maier</code>
-als auch für <code>Meier</code>. Er steht aber auch für <code>Mxier</code>.
-Möchte man letzteres ausschließen, so muss man die Zeichenauswahl auf <code>a</code>
-und <code>e</code> begrenzen. Dazu schreibt man die gewünschte Auswahl in eckige Klammern:
+    <div id="koans-lesson" class="paragraph">Scheifen kann man auch ineinander schachteln. Im Falle einer for-Schleife muss man zwei verschiedene Laufindizes benutzen.
 
-<pre><code>var var t1 = /M[ae]ier/.test("Maier");
-var t2 = /M[ae]ier/.test("Meier");
-var t3 = /M[ae]ier/.test("Mxier");
-var t4 = /M[ae]ier/.test("Maeier");</code></pre>
+<pre><code>var a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
+var sum = 0;
+for (var i = 0; i < 3; i++) {
+  for (var j = 0; j < 3; j++) {
+    sum = sum + a[i][j];
+  }
+}
+</code></pre>
 
-Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus diesem Ausdruck.
-<code>/[ae]/</code> steht also für ein Zeichen, das ein <code>a</code> oder ein <code>e</code> ist.
-<code>/M[ae]ier/</code> steht dann für <code>Maier</code> oder <code>Meier</code>.
-Die Variablen <code>t1</code> sowie <code>t2</code> sind <code>true</code> und <code>t3</code>
-ist <code>false</code>. Da <code>/[ae]/</code> für genau ein Zeichen steht, ist <code>t4</code>
-auch <code>false</code>.<br><br>
-Die Auswahl kann beliebig viele Zeichen enthalten. <code>/[abc]/</code> steht für a, b oder c
-und <code>/[123456]/</code> steht für eine Ziffer von 1 bis 6.</div>
+Im Codeschnipsel wird die Summe aller Elemente eines zweidimensionalen Arrays berechnet.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Namen
-Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
-<code>pruefe("Frau Mayer")</code> sollte <code>true</code> und
-<code>pruefe("Herr Mezer")</code> sollte <code>false</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>sum</code>, die die Summe aller Elemente eines zweidimensionalen, numerischen Arrays berechnet.
+<code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
