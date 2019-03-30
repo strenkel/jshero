@@ -40,14 +40,13 @@ for (var i = 0, l = koansDe.length; i < l; i++) {
     links.next = koansDe[i + 1].id + ".html";;
   }
 
-  (function(no) {
-    ejs.renderFile("src/html/de/main.html", { no: no, koan: koan, links: links }, function(err, koanHtml) {
+  ejs.renderFile("src/html/de/main.html", { koan: koan, links: links }, function(err, koanHtml) {
+    if (err) throw err;
+    fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
       if (err) throw err;
-      fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
-        if (err) throw err;
-      });
     });
-  })(i + 1);
+  });
+
 }
 console.log("build koans (de)");
 
@@ -67,14 +66,13 @@ for (var i = 0, l = koansEn.length; i < l; i++) {
     links.next = koansEn[i + 1].id + ".html";;
   }
 
-  (function(no) {
-    ejs.renderFile("src/html/en/main.html", { no: no, koan: koan, links: links }, function(err, koanHtml) {
+  ejs.renderFile("src/html/en/main.html", { koan: koan, links: links }, function(err, koanHtml) {
+    if (err) throw err;
+    fs.writeFile("www/en/koans/" + koan.id + ".html", koanHtml, function(err) {
       if (err) throw err;
-      fs.writeFile("www/en/koans/" + koan.id + ".html", koanHtml, function(err) {
-        if (err) throw err;
-      });
     });
-  })(i + 1);
+  });
+
 }
 console.log("build koans (en)");
 
