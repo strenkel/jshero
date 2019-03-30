@@ -76,11 +76,16 @@ If the search string does not occur twice, <code>-1</code> should be returned.
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
+// Use indexOf twice. 
+};</div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
+  var firstIndex = s1.indexOf(s2);
+  return s1.indexOf(s2, firstIndex + 1);
+};</div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

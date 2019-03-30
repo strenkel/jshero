@@ -88,11 +88,26 @@ durch identische Ziffern dargestellt wird.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var schnapszahl = function(n) {
+// Berechne die Einerstelle
+// von n mit Modulo 10.
+// Berechne die Zehnerstelle
+// von n mit Division
+// durch 10 und Abrunden.
+// Vergleiche Einer- und
+// Zehnerstelle.
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var schnapszahl = function(n) {
+  var einer = n % 10;
+  var zehner = Math.floor(n / 10);
+  if (einer === zehner) {
+    return "Schnaps!";
+  }
+  return "Kein Schnaps!";
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

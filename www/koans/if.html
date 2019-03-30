@@ -82,11 +82,23 @@ gleich, so soll der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var gleich = function(a, b) {
+// Initialisiere eine Variable
+// mit "UNGLEICH". Verwende "if",
+// um die Variable ggf. auf
+// "GLEICH" zu setzen. Gebe die
+// Variable zurück.
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var gleich = function(a, b) {
+  var ergebnis = "UNGLEICH";
+  if (a === b) {
+    ergebnis = "GLEICH";
+  }
+  return ergebnis;
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

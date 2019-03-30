@@ -21,11 +21,11 @@ This return is assigned to the variable <code>result</code>. Finally, <code>resu
 
   hint: `<pre><code>var echo = function(sound) {
   ...
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var echo = function(sound) {
   return sound;
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof echo !== "undefined") {

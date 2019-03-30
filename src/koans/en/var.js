@@ -15,7 +15,7 @@ The variable is declared with the keyword <code>var</code>.
 Use the equals sign, the assignment operator, to assign a value to the variable.
 Note: JavaScript is case-sensitive. <code>city</code> and <code>City</code> are two different variables.`,
 
-  task: 'Declare a variable <code>firstname</code> and initialize it with the value <code>"Lata"</ code>.',
+  task: 'Declare a variable <code>firstname</code> and initialize it with the value <code>"Lata"</code>.',
 
   hint: `<pre><code>var firstname = ...</code></pre>`,
 

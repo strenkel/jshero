@@ -68,11 +68,23 @@ For example, 3! = 1*2*3 = 6. By definition, 0! = 1.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var factorial = function(n) {
+      var result = 1;
+      for (...) {
+        ...
+      }
+      return result;
+    };</pre></code></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var factorial = function(n) {
+  var result = 1;
+  for (var i = 1; i <= n; i++) {
+    result = result * i;
+  }
+  return result;
+};</pre></code></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

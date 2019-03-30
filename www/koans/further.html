@@ -67,11 +67,25 @@ Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var quersumme = function(zahl) {
+// Extrahiere in einer Schleife
+// mit Modulo jeweils die
+// Einer-Stelle und addiere 
+// sie auf.
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var quersumme = function(zahl) {
+  var sum = 0;
+  var rest = zahl;
+  while (rest > 0) {
+    var einer = rest % 10;
+    sum = sum + einer;
+    rest = (rest - einer)/10;
+  }
+  return sum;
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

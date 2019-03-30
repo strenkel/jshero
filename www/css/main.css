@@ -213,6 +213,10 @@ textarea.code-area {
   font-style: italic;
 }
 
+#hint-area, #solution-area {
+  display: none;
+}
+
 /* Small screens and tablets */
 @media (max-width: 1200px) {
 

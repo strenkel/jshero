@@ -75,11 +75,16 @@ führende Null obligatorisch. <code>isTime("02:15:25")</code> sollte <code>true<
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var isTime = function(s) {
+// Verwende ^, $ und
+// Bereiche.
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var isTime = function(s) {
+  return /^\d\d:[0-5]\d:[0-5]\d$/.test(s);      
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

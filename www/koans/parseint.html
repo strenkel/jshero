@@ -88,11 +88,20 @@ So soll <code>add("100+19")</code> die Zahl <code>119</code> zurückgeben.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph">Bestimme mit <code>parseInt</code> den ersten Summanden.
+Bestimme mit <code>indexOf</code> die Position des Plus-Zeichens.
+Bestimme mit <code>substring</code> den Teilstring nach dem Plus-Zeichen.
+Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.</div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var add = function(s) {
+  var summand1 = parseInt(s, 10);
+  var positionPlus = s.indexOf("+");
+  var sNachPlus = s.substring(positionPlus + 1);
+  var summand2 = parseInt(sNachPlus, 10);
+  return summand1 + summand2;
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

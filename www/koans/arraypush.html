@@ -94,11 +94,17 @@ Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array sol
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>Entferne mit shift das 0te Element.
+Füge mit push das 0te Element wieder hinzu.
+</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var rotiere = function(einArray) {
+  var element0 = einArray.shift();
+  einArray.push(element0);
+  return einArray;
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

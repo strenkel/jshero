@@ -76,11 +76,20 @@ in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ers
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var firstWord = function(s) {
+// Bestimme mit indexOf
+// die Position des
+// ersten Leerzeichens.
+// Verwende dann die
+// substr-Methode.
+};</div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var firstWord = function(s) {
+  var firstBlank = s.indexOf(" ");
+  return s.substr(0, firstBlank);
+};</div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

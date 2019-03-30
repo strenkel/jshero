@@ -95,11 +95,23 @@ alle natürlichen Zahlen kleiner gleich dem Paramter aufaddiert. Das Ergebnis de
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var addiereBis = function(n) {
+  var summe = 0;
+  for (var i = 0; i <= n; i++) {
+    ...
+  }
+  return summe;
+};</pre></code></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var addiereBis = function(n) {
+  var summe = 0;
+  for (var i = 0; i <= n; i++) {
+    summe = summe + i;
+  }
+  return summe;
+};</pre></code></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

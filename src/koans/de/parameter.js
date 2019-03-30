@@ -30,11 +30,11 @@ zurückgeben.`,
 
     hint: `<pre><code>var echo = function(ton) {
   ...
-};`,
+};</code></pre>`,
 
     solution: `<pre><code>var echo = function(ton) {
   return ton;
-};`,
+};</code></pre>`,
 
     beforeTests: function() {
       if (typeof echo !== "undefined") {

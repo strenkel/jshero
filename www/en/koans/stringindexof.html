@@ -74,11 +74,20 @@ and determining the first occurrence of the second string in the first string. T
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var indexOfIgnoreCase = function(s1, s2) {
+// Change s1 and s2
+// first to lowercase.
+// Then use the
+// indexOf method. 
+};</div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var indexOfIgnoreCase = function(s1, s2) {
+  var s1Lower = s1.toLowerCase();
+  var s2Lower = s2.toLowerCase();
+  return s1Lower.indexOf(s2Lower);
+};</div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

@@ -92,11 +92,23 @@ smaller or equal than the parameter. The result is to be returned. <code>addTo(3
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var addTo = function(n) {
+  var sum = 0;
+  for (var i = 0; i <= n; i++) {
+    ...
+  }
+  return sum;
+};</pre></code></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var addTo = function(n) {
+  var sum = 0;
+  for (var i = 0; i <= n; i++) {
+    sum = sum + i;
+  }
+  return sum;
+};</pre></code></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

@@ -120,22 +120,22 @@
   };
 
   var showHint = function() {
-    hintArea.innerHTML = actualKoan.getKoan().hint;
+    hintArea.style.display = "block";
     showHintCloseLink();
   };
 
   var closeHint = function() {
-    hintArea.innerHTML = "";
+    hintArea.style.display = "none";
     showHintOpenLink();
   };
 
   var showSolution = function() {
-    solutionArea.innerHTML = actualKoan.getKoan().solution;
+    solutionArea.style.display = "block";
     showSolutionCloseLink();
   };
 
   var closeSolution = function() {
-    solutionArea.innerHTML = "";
+    solutionArea.style.display = "none";
     showSolutionOpenLink();
   };
 
