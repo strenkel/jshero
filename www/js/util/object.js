@@ -7,11 +7,11 @@ jshero.object = (function() {
   /**
    * Flat comparison of two ojects.
    * Two object are equals if all own and enumerable properties are strict equals.
-   * 
-   * @param {Object} o1 
-   * @param {Object} o1 
+   *
+   * @param {Object} o1
+   * @param {Object} o1
    */
-  var flatEquals = function(o1, o1) {
+  var flatEquals = function(o1, o2) {
 
     for (var p in o1) {
       if (o1.hasOwnProperty(p)) {

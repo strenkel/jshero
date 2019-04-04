@@ -3,6 +3,7 @@ importScripts(
   "../util/util.js",
   "../util/i18n.js",
   "../util/array.js",
+  "../util/object.js",
   "../util/date.js",
   "log.js",
   "evaluator.js",

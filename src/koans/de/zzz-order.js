@@ -96,6 +96,7 @@ jshero.koans.initReorder(
     'regex6',
     'regex7',
     'regex8',
+    'object1',
     'further'
   ]
 );

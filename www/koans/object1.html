@@ -17,9 +17,9 @@
 <body id="main">
 
   <div id="header">
-    <a id="next-button" class="control" href="for1.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="further.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="dimarray.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="regex8.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -57,61 +57,45 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Kommentare</h1>
+    <h1 id="koans-title">Objekte</h1>
     
-    <div id="koans-lesson" class="paragraph">Neben dem eigentlichen Code kann man Kommentare schreiben. Kommentare dienen dazu, Programme zu erklären.
-Sie helfen uns Menschen, Programme zu verstehen und zu verwenden.
-Computer, die Programme ausführen, ignorieren Kommentare. In JavaScript gibt zwei Möglichkeiten, Kommentare zu schreiben:
-Zeilen-Kommentare werden mit <code>//</code> eingeleitet und gelten immer bis zum Ende der Zeile.
-Block-Kommentare werden mit <code>/*</code> eingeleitet und mit <code>*/</code> beendet.
-Alles dazwischen ist Kommentar. Hier ein paar Beispiele:
-<pre><code>// Das ist ein Zeilenkommentar.
+    <div id="koans-lesson" class="paragraph">Um komplexere Sachverhalte abzubilden, verwendet man Objekte. Eine Person hat einen Namen und ein Alter.
+Diese beiden Daten könnte man in zwei Variablen speichern. Besser ist es, dafür ein Objekt zu benutzen.
+Objekte sind eine Sammlung von Eigenschaften. Jede Eigenschaft besteht aus einem Namen und ihrem Wert.
+Objekte werden am einfachsten mit der Mengenklammer erzeugt:
 
-// Dieser Zeilenkommentar geht
-// über 2 Zeilen.
-
-/* Das ist ein Blockkommentar. */
-
-/* Dieser Blockkommentar geht
-über mehrere Zeilen. */
-
-/**
- * Auch dies ist ein Blockkommentar.
- * Die zusätzlichen Sterne zwischen
- * dem Beginn und dem Ende des
- * Blockkommentars dienen nur zur
- * Verzierung. So sieht ein längerer
- * Blockkommentar übersichtlicher aus.
- */</code></pre>
-
- Block-Kommentare schreibt man gerne über Funktionen, Zeilen-Kommentare in den Code-Fluss.
-
- <pre><code>/**
- * Prüft, ob eine String kein Zeichen
- * außer Leerzeichen enthält.
- */
-var isEmpty = function(string) {
-  // Die Methode trim() entfernt Leerzeichen
-  // am Anfang und am Ende einer Zeichenfolge.
-  var trimmedString = string.trim();
-  return trimmedString.length === 0;
+<pre><code>var person = {
+  name: "Toni Morrison",
+  alter: 88
 };</code></pre>
 
-Da Kommentare mit den hier verwendeten Tests nicht überprüfen werden können, eine Aufgabe, bei der man vieles von dem bisher Gelernten anwenden muss.</div>
+Hier haben wir ein Objekt mit den beiden Eigenschaften <code>name</code> und <code>alter</code> erzeugt.
+Das Objekt wurde der Variablen <code>person</code> zugewiesen.
+Auf dem Namen einer Eigenschaft folgt ein Doppelpunkt und anschließend ihr Wert.
+Die Eigenschaft <code>name</code> hat den Wert <code>"Toni Morrison"</code> und die Eigenschaft <code>alter</code> den Wert <code>52</code>.
+Jede Eigenschaft wird mit einem Komma beendet. Bei der letzten Eigenschaft kann man das Komma weglassen.
+Man kann alle Eigenschaften zusammen mit ihren Werten in einer Zeile notieren.
+Übersichtlicher ist es, wenn man wie hier für jede Eigenschaft eine neue Zeile verwendet.<br><br>
+Mit der folgenden Aufgabe wollen wir einen Punkt in einer Ebene modellieren.
+Dieser Punkt könnte zum Beispiel die Position einer Figur in einem 2-dimensionalen Computerspiel sein.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>median</code>, die ein Array von aufsteigend sortierten Zahlen entgegennimmt und die den Median dieser Zahlen zurückgibt.
-<code>median([1, 2, 10])</code> sollte <code>2</code> ergeben; <code>median([1, 2, 10, 100])</code> sollte <code>6</code> ergeben.
-Der Median einer sortierten Zahlenreihe ist der Wert, der an der mittleren Stelle steht. Ist die Anzahl der Werte gerade, so ist der Median der Mittelwert
-der beiden mittleren Zahlen.</div>
+    <div id="koans-task" class="paragraph">Erzeuge ein Objekt mit den beiden Eigenschaften <code>x</code> und <code>y</code>.
+<code>x</code> soll den Wert <code>1</code> und <code>y</code> den Wert <code>2</code> erhalten.
+Weise das Objekt der Variablen <code>point</code> zu.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"></div>
+    <div id="hint-area" class="paragraph"><pre><code>var point = {
+  ...
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"></div>
+    <div id="solution-area" class="paragraph"><pre><code>var point = {
+  x: 1,
+  y: 2
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

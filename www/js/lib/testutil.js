@@ -136,7 +136,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
   };
 
   /**
-   * @param {String} value 
+   * @param {String} value
    */
   var assert_isString = function(value) {
     var ok = evaluator.equalstSring(value);
@@ -144,7 +144,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
   };
 
   /**
-   * @param {String} value 
+   * @param {String} value
    */
   var assert_isValue = function(value) {
     var ok = evaluator.equalsValue(value);
@@ -322,13 +322,13 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
   var assert_variableHasValue = function(name, expValue) {
     var actValue = evaluator.evalTest(name);
     var ok = actValue === expValue;
-    return createVariableHasValueResult(ok);
+    return createVariableHasValueResult(ok, name, actValue, expValue);
   };
 
   var assert_variableIsObject = function(name, expObject) {
     var actObject = evaluator.evalTest(name);
     var ok = jsheroObject.flatEquals(actObject, expObject);
-    return createVariableHasValueResult(ok);
+    return createVariableHasValueResult(ok, name, actObject, expObject);
   };
 
   /**
@@ -368,10 +368,10 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
     };
   };
 
-  var createVariableHasValueResult = function(ok) {
+  var createVariableHasValueResult = function(ok, name, actValue, expValue) {
     var msg;
     if (ok) {
-      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(stringify(actValue))]);
+      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(stringify(expValue))]);
     }
     else {
       msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, escapeHtml(stringify(expValue)), escapeHtml(stringify(actValue))]);
