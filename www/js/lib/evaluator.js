@@ -42,12 +42,23 @@ jshero.evaluator = (function() {
     eval(userCode);
   };
 
+  /**
+   * Test, if the user code is the specified string.
+   * The user code can use ", ' or `.
+   * 
+   * @param {String} myString 
+   */
   var equalsString = function(myString) {
     return userCode === '"' + myString + '"'
       || userCode === "'" + myString + "'"
       || userCode === "`" + myString + "`";
   };
 
+  /**
+   * Test, if the user code is identical with the passed value.
+   * 
+   * @param {String} myValue 
+   */
   var equalsValue = function(myValue) {
     return userCode === myValue;
   };

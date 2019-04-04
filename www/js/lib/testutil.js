@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator) {
+jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObject, evaluator) {
 
   'use strict';
 
@@ -135,14 +135,20 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     };
   };
 
+  /**
+   * @param {String} value 
+   */
   var assert_isString = function(value) {
-    var ok = evaluator.equalsString(value);
-    return createEqualsResult(ok);
+    var ok = evaluator.equalstSring(value);
+    return createXHasValueResult(ok);
   };
 
+  /**
+   * @param {String} value 
+   */
   var assert_isValue = function(value) {
     var ok = evaluator.equalsValue(value);
-    return createEqualsResult(ok);
+    return createXHasValueResult(ok);
   };
 
   /**
@@ -304,7 +310,9 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
   };
 
   /**
-   * Prüfen, ob eine Variable den erwarteten Wert hat.
+   * Prüft, ob eine Variable den erwarteten Wert hat.
+   * Es wird auf strikte Gleichheit ueberprueft.
+   * expValue ist i.d.R. ein elementarer Typ wie String, Number oder Boolean.
    *
    * @param v {Object}
    * @param name {String}
@@ -314,17 +322,13 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
   var assert_variableHasValue = function(name, expValue) {
     var actValue = evaluator.evalTest(name);
     var ok = actValue === expValue;
-    var msg;
-    if (ok) {
-      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(stringify(actValue))]);
-    } else {
-      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"),
-        [name, escapeHtml(stringify(expValue)), escapeHtml(stringify(actValue))]);
-    }
-    return {
-      ok: ok,
-      msg: msg
-    };
+    return createVariableHasValueResult(ok);
+  };
+
+  var assert_variableIsObject = function(name, expObject) {
+    var actObject = evaluator.evalTest(name);
+    var ok = jsheroObject.flatEquals(actObject, expObject);
+    return createVariableHasValueResult(ok);
   };
 
   /**
@@ -351,7 +355,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
 
   // --- PRIVATE ---
 
-  var createEqualsResult = function(ok) {
+  var createXHasValueResult = function(ok) {
     var msg;
     if (ok) {
       msg = '<code>x</code> ' + I18N("hasValue") + ' <code>' + evaluator.getCode()  + '</code>.';
@@ -364,6 +368,20 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     };
   };
 
+  var createVariableHasValueResult = function(ok) {
+    var msg;
+    if (ok) {
+      msg = jsheroUtil.formatMessage(I18N("varHasValueOf"), [name, escapeHtml(stringify(actValue))]);
+    }
+    else {
+      msg = jsheroUtil.formatMessage(I18N("varHasWrongValue"), [name, escapeHtml(stringify(expValue)), escapeHtml(stringify(actValue))]);
+    }
+    return {
+      ok: ok,
+      msg: msg
+    };
+  }
+
   return {
     assert_isFunction: assert_isFunction,
     assert_functionReturnsType: assert_functionReturnsType,
@@ -372,8 +390,11 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, evaluator
     assert_functionLogs: assert_functionLogs,
     assert_variableDefined: assert_variableDefined,
     assert_variableHasValue: assert_variableHasValue,
+    assert_variableIsObject: assert_variableIsObject,
     assert_isString: assert_isString,
     assert_isValue: assert_isValue
   };
 
-})(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.evaluator);
+})(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.object, jshero.evaluator);
+
+
