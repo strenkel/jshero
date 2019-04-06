@@ -17,8 +17,8 @@ var person = {
 
 Hier wird ein Objekt mit den Eigenschaften <code>name</code> und <code>alter</code> erzeugt.
 <code>name</code> erhält den Wert <code>"Demet Demir"</code> und <code>alter</code> den Wert <code>58</code>.
-In der Zeile <code>name: name</code> bezeichnet vor dem Doppelpunkt <code>name</code> den Namen der Objekt-Eigenschaft
-und nach dem Doppelpunkt steht die Variable <code>name</code>.`,
+In der Zeile <code>name: name</code> ist <code>name</code> vor dem Doppelpunkt die Objekt-Eigenschaft
+und nach dem Doppelpunkt die zuvor definierte Variable.`,
 
     task: `Schreibe eine Funktion <code>createPoint</code>, die die Koordinaten eines Punkts entgegennimmt
 und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten zurückgibt.
@@ -52,7 +52,7 @@ und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten 
       },
 
       function() {
-        return testutil.assert_functionHasNumOfParameter('createPoint(1, 2)', {x: 1, y: 2});
+        return testutil.assert_functionReturnsObject('createPoint(1, 2)', {x: 1, y: 2});
       }
     ]
 

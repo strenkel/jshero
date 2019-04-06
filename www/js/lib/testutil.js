@@ -288,6 +288,31 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
     };
   };
 
+  var assert_functionReturnsObject = function(f_call, expectedReturnValue) {
+    var ok, msg, e;
+    var fCallEscaped = escapeHtml(f_call);
+    try {
+      var result = evaluator.evalTest(f_call);
+      ok = jsheroObject.flatEquals(result, expectedReturnValue);
+      if (ok) {
+        msg = jsheroUtil.formatMessage(I18N("functionReturns"),
+          [fCallEscaped, escapeHtml(stringify(expectedReturnValue))]);
+      } else {
+        msg = jsheroUtil.formatMessage(I18N("functionNotReturns"),
+          [fCallEscaped, escapeHtml(stringify(expectedReturnValue)), escapeHtml(stringify(result))]);
+      }
+    } catch (exc) {
+      ok = false;
+      msg = I18N("errorAtCallOf") + ' <code>' + fCallEscaped + '</code>.';
+      e = exc;
+    }
+    return {
+      ok: ok,
+      msg: msg,
+      e: e
+    };
+  };
+
   /**
    * Test if a variable with the name 'name' is defined or not undefined.
    *
