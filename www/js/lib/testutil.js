@@ -411,6 +411,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
     assert_isFunction: assert_isFunction,
     assert_functionReturnsType: assert_functionReturnsType,
     assert_functionReturns: assert_functionReturns,
+    assert_functionReturnsObject: assert_functionReturnsObject,
     assert_functionHasNumOfParameter: assert_functionHasNumOfParameter,
     assert_functionLogs: assert_functionLogs,
     assert_variableDefined: assert_variableDefined,
