@@ -26,7 +26,7 @@ wie oben <code>person</code> von uns definiert, sondern sind Teil der Programmie
     task: `Schreibe eine Funktion <code>distance</code>, die den Abstand eines Punkts zum Nullpunkt berechnet.
 <code>distance({x:&nbsp3,&nbspy:&nbsp;4})</code> sollte <code>5</code> zurückgeben.`,
 
-    hint: `Der Abstand eines  Punkts (x, y) zum Nullpunkt berechnet sich wie folgt: %radic;(x&sup2;+y&sup2;)</code></pre>`,
+    hint: `Der Abstand eines  Punkts (x, y) zum Nullpunkt berechnet sich wie folgt: %radic;(x&sup2;+y&sup2;)`,
 
     solution: `<pre><code>var distance = function(point) {
   var xSquare = point.x ** 2;

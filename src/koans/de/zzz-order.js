@@ -99,6 +99,7 @@ jshero.koans.initReorder(
     'object1',
     'object2',
     'object3',
+    'object4',
     'further'
   ]
 );
