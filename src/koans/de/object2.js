@@ -8,7 +8,7 @@
 
     lesson: `Die Werte von Objekt-Eigenschaften kann man auch mithilfe von Variablen festlegen:
 
-    <pre><code>var title = "Clean Code";
+<pre><code>var title = "Clean Code";
 var author = "Robert C. Martin";
 var book = {
   title: title,
@@ -34,7 +34,7 @@ entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebene
     x: x,
     y: y
   };
-}</code></pre>`,
+};</code></pre>`,
 
     beforeTests: function() {
       if (typeof createPoint !== "undefined") {

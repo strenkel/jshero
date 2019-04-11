@@ -4,61 +4,64 @@
 
     id: "object3",
 
-    title: "Objekte auslesen",
+    title: "Eigenschaften auslesen",
 
-    lesson: `Die Werte von Objekt-Eigenschaften kann man auch mithilfe von Variablen festlegen:
+    lesson: `Auf Objekt-Eigenschaften kann man mit der Punkt-Notation zugreifen:
 
-    <pre><code>var title = "Clean Code";
-var author = "Robert C. Martin";
-var book = {
-  title: title,
-  author: author
-};</code></pre>
+<pre><code>var person = {
+  name: "Constanze Kurz",
+  geburtstag: new Date(1974, 2, 2),
+  geburtsort: "Ost-Berlin"
+};
+var pName = person.name;
+var pGeburtstag = person.geburtstag;
+var pGeburtsort = person.geburtsort;</code></pre>
 
-Hier wird ein Objekt mit den Eigenschaften <code>title</code> und <code>author</code> erzeugt.
-<code>title</code> erhält den Wert <code>"Clean Code"</code> und <code>author</code> den Wert
-<code>"Robert C. Martin"</code>.
-In der Zeile <code>title: title</code> ist <code>title</code> vor dem Doppelpunkt die Objekt-Eigenschaft
-und nach dem Doppelpunkt die zuvor definierte Variable.`,
+Hier werden die drei Eigenschaften des Objekts <code>person</code> in drei Variablen gespeichert.<br><br>
+Die Punkt-Notation haben wir schon bei Strings und Arrays kennengelernt. Dort konnte man mit <code>aString.length</code>
+auf die Anzahl der Zeichen eines Strings und mit <code>anArray.length</code> auf die Anzahl der Elemente in einem Array
+zugreifen. Das ist kein Zufall. String und Array sind ebenfalls Objekte. Diese Objekte werden nicht
+wie oben <code>person</code> von uns definiert, sondern sind Teil der Programmiersprache JavaScript.`,
 
-    task: `Schreibe eine Funktion <code>createPoint</code>, die die Koordinaten eines Punkts in der Ebene
-entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten zurückgibt.
-<code>createPoint(1,&nbsp;2)</code> sollte <code>{x:&nbsp;1,&nbsp;y:&nbsp;2}</code> zurückgeben.`,
+    task: `Schreibe eine Funktion <code>distance</code>, die den Abstand eines Punkts zum Nullpunkt berechnet.
+<code>distance({x:&nbsp3,&nbspy:&nbsp;4})</code> sollte <code>5</code> zurückgeben.`,
 
-    hint: `<pre><code>var createPoint = function(x, y) {
-  return ...
-}</code></pre>`,
+    hint: `Der Abstand eines  Punkts (x, y) zum Nullpunkt berechnet sich wie folgt: %radic;(x&sup2;+y&sup2;)</code></pre>`,
 
-    solution: `<pre><code>var createPoint = function(x, y) {
-  return {
-    x: x,
-    y: y
-  };
-}</code></pre>`,
+    solution: `<pre><code>var distance = function(point) {
+  var xSquare = point.x ** 2;
+  var xSquare = point.y ** 2;
+  return Math.sqrt(xSquare + ySquare);
+};</code></pre>`,
 
     beforeTests: function() {
-      if (typeof createPoint !== "undefined") {
-        createPoint = undefined;
+      if (typeof distance !== "undefined") {
+        distance = undefined;
       }
     },
 
     tests: [
 
       function() {
-        return testutil.assert_isFunction('createPoint');
+        return testutil.assert_isFunction('distance');
       },
 
       function() {
-        return testutil.assert_functionHasNumOfParameter('createPoint', 2);
+        return testutil.assert_functionHasNumOfParameter('distance', 1);
       },
 
       function() {
-        return testutil.assert_functionReturnsObject('createPoint(1, 2)', { x: 1, y: 2 });
+        return testutil.assert_functionReturns('distance({x: 2, y: 0})', 2);
       },
 
       function() {
-        return testutil.assert_functionReturnsObject('createPoint(-5, 18)', { x: -5, y: 18 });
+        return testutil.assert_functionReturns('distance({x: 0, y: -3})', 3);
+      },
+      
+      function() {
+        return testutil.assert_functionReturns('distance({x: 3, y: 4})', 5);
       }
+
     ]
 
   });
