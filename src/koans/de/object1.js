@@ -8,7 +8,7 @@
 
     lesson: `Um komplexere Sachverhalte abzubilden, verwendet man Objekte. Eine Person hat einen Namen und ein Alter.
 Diese beiden Daten könnte man in zwei Variablen speichern. Besser ist es, dafür ein Objekt zu benutzen.
-Objekte sind eine Sammlung von Eigenschaften. Jede Eigenschaft besteht aus einem Namen und ihrem Wert.
+Objekte in JavaScript sind eine Sammlung von Eigenschaften. Jede Eigenschaft besteht aus einem Namen und ihrem Wert.
 Objekte werden am einfachsten mit der Mengenklammer erzeugt:
 
 <pre><code>var person = {
