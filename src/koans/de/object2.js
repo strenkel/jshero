@@ -27,7 +27,7 @@ entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebene
 
     hint: `<pre><code>var createPoint = function(x, y) {
   return ...
-}</code></pre>`,
+};</code></pre>`,
 
     solution: `<pre><code>var createPoint = function(x, y) {
   return {
