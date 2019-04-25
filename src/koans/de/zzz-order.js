@@ -100,6 +100,7 @@ jshero.koans.initReorder(
     'object2',
     'object3',
     'object4',
+    'method1',
     'further'
   ]
 );

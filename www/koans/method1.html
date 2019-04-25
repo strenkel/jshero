@@ -17,9 +17,9 @@
 <body id="main">
 
   <div id="header">
-    <a id="next-button" class="control" href="../success.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="further.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="method1.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="object4.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -57,34 +57,45 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Fortsetzung folgt ...</h1>
+    <h1 id="koans-title">Methoden</h1>
     
-    <div id="koans-lesson" class="paragraph">JS Hero wird fortgesetzt. Weitere Übungen folgen. Zum Abschluss noch eine Aufgabe aus dem Gebiet der Mathematik.</div>
+    <div id="koans-lesson" class="paragraph">Bisher waren die Werte von Objekt-Eigenschaften Daten wie Strings oder Zahlen.
+Objekt-Eigenschaften können aber auch Funktionen sein. Solche Objekt-Eigenschaften nennt man
+Methoden. Methoden operieren auf den Daten eines Objekts.
+
+<pre><code>var ware = {
+  name: "Äpfel",
+  preis: 2.15,
+  erhoehePreis: function(erhoehung) {
+    this.preis = this.preis + erhoehung;
+  };
+};
+
+var alterPreis = ware.preis;
+ware.erhoehePreis(0.05);
+var neuerPreis = ware.preis;</code></pre>
+
+Das Objekt <code>ware</code> besitzt die Methode <code>erhoehePreis</code>. Diese Methode greift Mithilfe von
+<code>this</code> auf die Objekt-Eigenschaft <code>preis</code> zu. <code>this</code> steht innerhalb eines Objekts für
+das Objekt selbst. Mit der bekannten Punkt-Notation kann man nun auf die Objekt-Eigenschaften zugreifen.<br>
+Von außen wird eine Methode über die zugeordnete Variable und der Punkt-Notation aufgerufen. </div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>quersumme</code>, die die Quersumme einer natürlichen Zahl berechnet.
-Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)</code> sollte <code>18</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>moveX</code>, die einen Punkt um 1 nach rechts verschiebt.
+<code>moveX({x:&nbsp;2,&nbsp;y:&nbsp;5})</code> sollte <code>{x:&nbsp;3,&nbsp;y:&nbsp;5}</code> zurückgeben.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var quersumme = function(zahl) {
-// Extrahiere in einer Schleife
-// mit Modulo jeweils die
-// Einer-Stelle und addiere 
-// sie auf.
+    <div id="hint-area" class="paragraph"><pre><code>var moveX = function(point) {
+  ...
+  return point;
 };</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var quersumme = function(zahl) {
-  var sum = 0;
-  var rest = zahl;
-  while (rest > 0) {
-    var einer = rest % 10;
-    sum = sum + einer;
-    rest = (rest - einer)/10;
-  }
-  return sum;
+    <div id="solution-area" class="paragraph"><pre><code>var moveX = function(point) {
+  point.x = point.x + 1;
+  return point;
 };</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
