@@ -1,4 +1,5 @@
 importScripts(
+  "../util/nodeutil.js",
   "../util/polyfill.js",
   "../util/util.js",
   "../util/i18n.js",

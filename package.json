@@ -5,14 +5,16 @@
   "author": "jshero authors",
   "private": true,
   "scripts": {
-    "build": "npm run buildKoansDe && npm run buildKoansEn && node build/build.js",
+    "build": "npm run buildNodeUtil && npm run buildKoansDe && npm run buildKoansEn && node build/build.js",
     "buildKoansDe": "babel src/js/koans.js src/koans/de/ -o www/js/koans.js",
-    "buildKoansEn": "babel src/js/koans.js src/koans/en/ -o www/en/js/koans.js"
+    "buildKoansEn": "babel src/js/koans.js src/koans/en/ -o www/en/js/koans.js",
+    "buildNodeUtil": "browserify src/js/nodeutil.js -o www/js/util/nodeutil.js"
   },
   "dependencies": {},
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-es2015-template-literals": "^6.22.0",
-    "ejs": "^2.6.1"
+    "ejs": "^2.6.1",
+    "browserify": "^16.2.3"
   }
 }

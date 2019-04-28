@@ -5,7 +5,7 @@ if (typeof jshero === "undefined") {
 /**
  * Contains frequently used test cases.
  */
-jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObject, evaluator) {
+jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObject, evaluator, stringify) {
 
   'use strict';
 
@@ -84,34 +84,6 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
    *  END ------------- */
 
   /**
-   * JSON.stringify wandelt einige Werte wie NaN oder Infinity in null um.
-   * Für die Testmessage ist das nicht sinnvoll. Deshalb werden hier diese Fälle
-   * gesondert behandelt. Komplexere Fälle wie [NaN] werden nicht berücksichtigt.
-   * Diese ergeben weiterhin [null].
-   */
-  var stringify = function(value) {
-
-    if (Number.isNaN(value)) {
-      return "NaN";
-    }
-
-    if (value === Infinity) {
-      return "Infinity";
-    }
-
-    if (value === -Infinity) {
-      return "-Infinity";
-    }
-
-    if (jsheroDate.isInvalidDate(value)) {
-      return "Invalid Date";
-    }
-
-    return JSON.stringify(value);
-  };
-
-
-  /**
    * Example usage:
    *
    * jshero.testutil.assert_isFunction('a')
@@ -139,7 +111,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
    * @param {String} value
    */
   var assert_isString = function(value) {
-    var ok = evaluator.equalstSring(value);
+    var ok = evaluator.equalsString(value);
     return createXHasValueResult(ok);
   };
 
@@ -421,6 +393,12 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
     assert_isValue: assert_isValue
   };
 
-})(jshero.i18n.get, jshero.date, jshero.util, jshero.array, jshero.object, jshero.evaluator);
+})(jshero.i18n.get,
+  jshero.date,
+  jshero.util,
+  jshero.array,
+  jshero.object,
+  jshero.evaluator,
+  jshero.nodeutil.inspect);
 
 
