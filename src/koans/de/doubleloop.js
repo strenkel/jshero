@@ -21,7 +21,7 @@ Im Codeschnipsel wird die Summe aller Elemente eines zweidimensionalen Arrays be
 <code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof sum !== "undefined") {
+    if (typeof sum !== 'undefined') {
       sum = undefined;
     }
   },

@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "further",
+  id: 'further',
 
-  title: "Fortsetzung folgt ...",
+  title: 'Fortsetzung folgt ...',
 
   lesson: 'JS Hero wird fortgesetzt. Weitere Übungen folgen. Zum Abschluss noch eine Aufgabe aus dem Gebiet der Mathematik.',
 
@@ -10,7 +10,7 @@ jshero.koans.add({
 Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)</code> sollte <code>18</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof quersumme !== "undefined") {
+    if (typeof quersumme !== 'undefined') {
       quersumme = undefined;
     }
   },

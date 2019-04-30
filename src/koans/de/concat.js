@@ -19,7 +19,7 @@ so soll das zweite Array dem ersten Array angehängt werden. <code>concatUp([5, 
 und <code>concatUp([5, 7], [6, 8])</code> sollte <code>[5, 7, 6, 8]</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof concatUp !== "undefined") {
+    if (typeof concatUp !== 'undefined') {
       concatUp = undefined;
     }
   },
@@ -38,7 +38,7 @@ und <code>concatUp([5, 7], [6, 8])</code> sollte <code>[5, 7, 6, 8]</code> ergeb
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('concatUp(["x"], ["a", "b"])', ["x", "a", "b"]);
+      return jshero.testutil.assert_functionReturns("concatUp(['x'], ['a', 'b'])", ['x', 'a', 'b']);
     },
 
     function() {

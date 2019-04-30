@@ -56,7 +56,7 @@ solution: `<pre><code>var addiereBis = function(n) {
 };</pre></code>`,
 
     beforeTests: function() {
-      if (typeof addiereBis !== "undefined") {
+      if (typeof addiereBis !== 'undefined') {
         addiereBis = undefined;
       }
     },

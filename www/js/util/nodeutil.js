@@ -808,12 +808,12 @@ function hasOwnProperty(obj, prop) {
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./support/isBuffer":3,"_process":2,"inherits":1}],5:[function(require,module,exports){
 /**
- * Provides the Node module 'util' for the browser.
- * Built with browserify.
+ * Provides the Node.js module 'util'.
+ * Being built with browserify (see package.json).
  * 
- * We use util.inspect to log test results.
- * Node use util.inspect to log console outputs.
- * Has better results compared to JSON.stringify.
+ * util.inspect is used to log test results.
+ * Node.js use util.inspect to log console outputs.
+ * util.inspect has better log results compared to JSON.stringify.
  */
 if (typeof jshero === "undefined") {
   jshero = {};

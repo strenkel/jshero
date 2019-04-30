@@ -38,7 +38,7 @@ Nun können wir <code>add</code> mit einer beliebigen Anzahl von Argumenten aufr
 <code>maximum(12, 68, 3, 52)</code> sollte <code>68</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof maximum !== "undefined") {
+    if (typeof maximum !== 'undefined') {
       maximum = undefined;
     }
   },

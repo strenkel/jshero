@@ -9,9 +9,9 @@
     lesson: `Bisher haben wir in Arrays Zahlen, Strings und boolsche Werte gespeichert. Man kann aber auch Arrays in Arrays speichern.
 
 <pre><code>var teams = [
-  ["Ruby", "Angel"],
-  ["Mia", "Yui", "Merve", "Elif"],
-  ["Saanvi", "Giulia", "Zeynep"]
+  ['Ruby', 'Angel'],
+  ['Mia', 'Yui', 'Merve', 'Elif'],
+  ['Saanvi', 'Giulia', 'Zeynep']
 ];
 
 var zeile1 = [4, 9, 2];
@@ -24,7 +24,7 @@ Die einzelnen Teams sind verschieden groß. Mit <pre><code>var team = teams[0];<
 und mit <pre><code>var member = teams[0][0];</code></pre> kann man auf die einzelnen Teammitglieder zugreifen.<br><br>
 Arrays, die Arrays enthalten, nennt man auch zweidimensionals Arrays. Treibt man dies weiter, erhält man
 drei- bzw. mehrdimensionale Arrays.<br>
-Im zweiten Beispiel wird das <a href="https://de.wikipedia.org/wiki/Magisches_Quadrat">magische Quadrat</a> Lo-Shu in einem
+Im zweiten Beispiel wird das <a href='https://de.wikipedia.org/wiki/Magisches_Quadrat'>magische Quadrat</a> Lo-Shu in einem
 zweidimensionalen Array gespeichert.`,
 
     task: `Schreibe eine Funktion <code>flat</code>, die ein zweidimensionales Array mit 3 Einträgen in einen
@@ -32,7 +32,7 @@ einfaches Array überführt. <code>flat(loshu)</code> sollte <code>[4, 9, 2, 3, 
 Dabei ist <code>loshu</code> das magische Quadrat aus dem obigen Beispiel.`,
 
     beforeTests: function() {
-      if (typeof flat !== "undefined") {
+      if (typeof flat !== 'undefined') {
         flat = undefined;
       }
     },
@@ -63,7 +63,7 @@ Dabei ist <code>loshu</code> das magische Quadrat aus dem obigen Beispiel.`,
       },
 
       function() {
-        return testutil.assert_functionReturns('flat([["a"], ["b", "c"], ["d", "e", "f"]])', ["a", "b", "c", "d", "e", "f"]);
+        return testutil.assert_functionReturns("flat([['a'], ['b', 'c'], ['d', 'e', 'f']])", ['a', 'b', 'c', 'd', 'e', 'f']);
       }
 
     ]

@@ -18,7 +18,7 @@ mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen.
 <code>mean([1, 2, 3])</code> sollte <code>(1+2+3)/3</code> = <code>2</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof mean !== "undefined") {
+    if (typeof mean !== 'undefined') {
       mean = undefined;
     }
   },

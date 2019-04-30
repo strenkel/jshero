@@ -15,9 +15,9 @@ der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente z
 
 <pre><code>var sprachen = [];
 var l0 = sprachen.length;
-sprachen[0] = "C";
+sprachen[0] = 'C';
 var l1 = sprachen.length;
-sprachen[1] = "C++";
+sprachen[1] = 'C++';
 var l2 = sprachen.length;</code></pre>
 
 Das leere Array zu Anfang enthält keine Elemente. <code>l0</code> ist also <code>0</code>.
@@ -28,7 +28,7 @@ Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index 
 <code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.`,
 
     beforeTests: function() {
-      if (typeof getLastElement !== "undefined") {
+      if (typeof getLastElement !== 'undefined') {
         getLastElement = undefined;
       }
     },
@@ -47,15 +47,15 @@ Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index 
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('getLastElement(["Hänsel", "Gretel"])', 'Gretel');
+        return jshero.testutil.assert_functionReturns("getLastElement(['Hänsel', 'Gretel'])", 'Gretel');
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('getLastElement(["a", "b", "c"])', 'c');
+        return jshero.testutil.assert_functionReturns("getLastElement(['a', 'b', 'c'])", 'c');
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('getLastElement(["Maus", 1])', 1);
+        return jshero.testutil.assert_functionReturns("getLastElement(['Maus', 1])", 1);
       },
 
       function() {

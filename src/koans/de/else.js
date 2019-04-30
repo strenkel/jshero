@@ -9,9 +9,9 @@ nicht erfüllt ist, verwendet man zusätzlich zum <code>if</code> ein <code>else
 
 <pre><code>var mitteilung;
 if (betrag > 1000) {
-  mitteilung = "Keine Auszahlung möglich!";
+  mitteilung = 'Keine Auszahlung möglich!';
 } else {
-  mitteilung = "Der Betrag wird ausgezahlt!";
+  mitteilung = 'Der Betrag wird ausgezahlt!';
 }</code></pre>
 
 Je nachdem, ob <code>betrag</code> größer oder kleiner <code>1000</code> ist, wird entweder der
@@ -23,7 +23,7 @@ Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code
 Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof addiereMitZuschlag !== "undefined") {
+    if (typeof addiereMitZuschlag !== 'undefined') {
       addiereMitZuschlag = undefined;
     }
   },

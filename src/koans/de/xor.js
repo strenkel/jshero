@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "xor",
+  id: 'xor',
 
-  title: "XOR",
+  title: 'XOR',
 
   lesson: `Die logischen Operatoren kennen, ähnlich der Punkt- vor Strich-Rechnung, eine Reihenfolge:
 NICHT zuerst, anschließend UND, zuletzt ODER. Möchte man diese Reihenfolge ändern, verwendet man Klammern:
@@ -25,7 +25,7 @@ In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>xor(tru
 <code>xor(false, false)</code> sollen <code>false</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof xor !== "undefined") {
+    if (typeof xor !== 'undefined') {
       xor = undefined;
     }
   },

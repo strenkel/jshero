@@ -2,15 +2,15 @@
 
   jshero.koans.add({
 
-    id: "functioncall",
+    id: 'functioncall',
 
-    title: "Funktionsaufruf",
+    title: 'Funktionsaufruf',
 
     lesson: `Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion.
 Mit der Definition, z. B.
 
 <pre><code>var f = function() {
-  return "hallo";
+  return 'hallo';
 };</code></pre>
 
 wird festgelegt, was die Funktion machen soll. Sie wird dabei nicht ausgeführt. Sie wird lediglich zur Ausführung bereitgestellt.
@@ -24,7 +24,7 @@ Definiert werden Funktionen mit dem Schlüsselwort <code>function</code>.
 Ist die Funktion einer Variablen zugewiesen, geschieht der Aufruf der Funktion über diese Variable.
 Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen durch ihren Aufruf mehrfach zu benutzen.`,
 
-    task: `1. Definiere eine Funktion <code>begruesse</code>, die den Wert <code>"Moin!"</code> zurückgibt.
+    task: `1. Definiere eine Funktion <code>begruesse</code>, die den Wert <code>'Moin!'</code> zurückgibt.
 <br/>
 2. Deklariere eine Variable <code>begruessung</code>. Rufe die Funktion <code>begruesse</code> auf und weise der Variablen
 <code>begruessung</code> die Rückgabe dieses Aufrufs zu.`,
@@ -36,7 +36,7 @@ Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen
 var begruessung = ...</code></pre>`,
 
     solution: `<pre><code>var begruesse = function() {
-  return "Moin!";
+  return 'Moin!';
 };
 
 var begruessung = begruesse();</code></pre>`,

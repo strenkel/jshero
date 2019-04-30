@@ -6,14 +6,14 @@ jshero.koans.add({
   title: 'ggT',
 
   lesson: `Das Gegenstück zum kleinsten gemeinsamen Vielfachen (kgV) ist der
-<a href="https://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fter_gemeinsamer_Teiler">größte gemeinsamer Teiler (ggT)</a>.
+<a href='https://de.wikipedia.org/wiki/Gr%C3%B6%C3%9Fter_gemeinsamer_Teiler'>größte gemeinsamer Teiler (ggT)</a>.
 Der größte gemeinsame Teiler zweier Zahlen a und b ist die größte Zahl, durch die sich sowohl a als auch b teilen läßt.`,
 
   task: `Schreibe eine Funktion <code>ggT</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren ggT berechnet.
 <code>ggT(6, 15)</code> sollte <code>3</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof ggT !== "undefined") {
+    if (typeof ggT !== 'undefined') {
       ggT = undefined;
     }
   },

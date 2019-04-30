@@ -76,7 +76,7 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('sort(["c", "a", "b"])', ["a", "b", "c"]);
+      return jshero.testutil.assert_functionReturns("sort(['c', 'a', 'b'])" , ['a', 'b', 'c']);
     }
   ]
 

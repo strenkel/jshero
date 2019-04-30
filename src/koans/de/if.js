@@ -21,27 +21,27 @@ Hat in unserem Beispiel die Variable <code>wuerfelzahl</code> den Wert <code>6</
 <code>0</code>.`,
 
   task: `Schreibe eine Funktion <code>gleich</code>, die 2 Werte auf strikte Gleichheit überprüft. Sind die beiden Werte
-gleich, so soll der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie ungleich, so soll man
-<code>"UNGLEICH"</code> erhalten.`,
+gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie ungleich, so soll man
+<code>'UNGLEICH'</code> erhalten.`,
 
   hint: `<pre><code>var gleich = function(a, b) {
 // Initialisiere eine Variable
-// mit "UNGLEICH". Verwende "if",
+// mit 'UNGLEICH'. Verwende 'if',
 // um die Variable ggf. auf
-// "GLEICH" zu setzen. Gebe die
+// 'GLEICH' zu setzen. Gebe die
 // Variable zurück.
 };</code></pre>`,
 
   solution: `<pre><code>var gleich = function(a, b) {
-  var ergebnis = "UNGLEICH";
+  var ergebnis = 'UNGLEICH';
   if (a === b) {
-    ergebnis = "GLEICH";
+    ergebnis = 'GLEICH';
   }
   return ergebnis;
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof gleich !== "undefined") {
+    if (typeof gleich !== 'undefined') {
       gleich = undefined;
     }
   },
@@ -64,15 +64,15 @@ gleich, so soll der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich(1, "1")', 'UNGLEICH');
+      return jshero.testutil.assert_functionReturns("gleich(1, '1')", 'UNGLEICH');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich("klein", "klein")', 'GLEICH');
+      return jshero.testutil.assert_functionReturns("gleich('klein', 'klein')", 'GLEICH');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich("Links", "Rechts")', 'UNGLEICH');
+      return jshero.testutil.assert_functionReturns("gleich('Links', 'Rechts')", 'UNGLEICH');
     }
   ]
 

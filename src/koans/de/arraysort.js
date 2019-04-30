@@ -10,7 +10,7 @@ jshero.koans.add({
 <code>sortiere([2,&nbsp;3,&nbsp;1])</code> sollte <code>[1,&nbsp;2,&nbsp;3]</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof sortiere !== "undefined") {
+    if (typeof sortiere !== 'undefined') {
       sortiere = undefined;
     }
   },

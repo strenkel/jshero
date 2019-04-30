@@ -34,7 +34,7 @@ und dann dieses Date-Objekt zurückgibt. Die Uhrzeit soll dabei nicht verändert
 sollte <code>yesterday(date)</code> ein Date-Objekt zurückgeben, das den 13.9.1965 repräsentiert.`,
 
   beforeTests: function() {
-    if (typeof yesterday !== "undefined") {
+    if (typeof yesterday !== 'undefined') {
       yesterday = undefined;
     }
   },

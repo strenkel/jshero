@@ -6,9 +6,9 @@ jshero.koans.add({
 
   lesson: `Mit <code>break</code> wird eine Schleife beendet. Das Programm wird nach der Schleife fortgesetzt.
 
-<pre><code>var woerter = "blau weiß rot";
+<pre><code>var woerter = 'blau weiß rot';
 for (var i = 0; i < woerter.length; i++) {
-  if (woerter.charAt(i) === " ") {
+  if (woerter.charAt(i) === ' ') {
     break;
   }
 }
@@ -42,7 +42,7 @@ Der Aufruf <code>isPrime(2)</code> soll <code>true</code> zurückgeben, <code>is
 Eine Primzahl ist eine natürliche Zahl, die größer als 1 und nur durch sich selbst und durch 1 teilbar ist.`,
 
   beforeTests: function() {
-    if (typeof isPrime !== "undefined") {
+    if (typeof isPrime !== 'undefined') {
       isPrime = undefined;
     }
   },

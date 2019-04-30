@@ -7,11 +7,11 @@ jshero.koans.add({
   lesson: `Mit der <code>indexOf</code> Methode kann man die Positions des übergebenen Elements innerhalb eines
 Arrays bestimmen. Die Zählung beginnt mit 0:
 
-<pre><code>var systems = ["Debian", "Ubuntu", "Mint"];
-var i1 = systems.indexOf("Mint");
-var i2 = systems.indexOf("Windows");</code></pre>
+<pre><code>var systems = ['Debian', 'Ubuntu', 'Mint'];
+var i1 = systems.indexOf('Mint');
+var i2 = systems.indexOf('Windows');</code></pre>
 
-<code>i1</code> erhält den Wert <code>2</code>, da <code>"Mint"</code> das 2te Element in
+<code>i1</code> erhält den Wert <code>2</code>, da <code>'Mint'</code> das 2te Element in
 <code>systems</code> ist. <code>i2</code> erhält den Wert <code>-1</code>.
 Dieser Wert wird zurückgegeben, wenn sich das übergebene Element nicht im Array befindet.`,
 
@@ -21,7 +21,7 @@ Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Ar
 <code>[1, 2]</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof add !== "undefined") {
+    if (typeof add !== 'undefined') {
       add = undefined;
     }
   },
@@ -36,11 +36,11 @@ Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Ar
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('add(["J"], "S")', ["J", "S"]);
+      return jshero.testutil.assert_functionReturns("add(['J'], 'S')", ['J', 'S']);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('add(["J"], "J")', ["J"]);
+      return jshero.testutil.assert_functionReturns("add(['J'], 'J')", ['J']);
     },
 
     function() {

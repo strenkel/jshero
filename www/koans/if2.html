@@ -79,11 +79,11 @@ Andernfalls wird der Code unübersichtlich.</div>
     
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>schnapszahl</code>, die feststellt, ob eine zweistellige Zahl eine Schnapszahl ist
-oder nicht. Ist die Zahl eine Schnapszahl, soll <code>"Schnaps!"</code> zurückgegeben werden, andernfalls
-<code>"Kein Schnaps!"</code>. <code>schnapszahl(22)</code> sollte <code>"Schnaps!"</code> und
-<code>schnapszahl(23)</code> sollte <code>"Kein Schnaps!"</code> zurückgeben.
+oder nicht. Ist die Zahl eine Schnapszahl, soll <code>'Schnaps!'</code> zurückgegeben werden, andernfalls
+<code>'Kein Schnaps!'</code>. <code>schnapszahl(22)</code> sollte <code>'Schnaps!'</code> und
+<code>schnapszahl(23)</code> sollte <code>'Kein Schnaps!'</code> zurückgeben.
 <br><br>
-Eine <a href="https://de.wikipedia.org/wiki/Schnapszahl">Schnapszahl</a> ist eine mehrstellige Zahl, die ausschließlich
+Eine <a href='https://de.wikipedia.org/wiki/Schnapszahl'>Schnapszahl</a> ist eine mehrstellige Zahl, die ausschließlich
 durch identische Ziffern dargestellt wird.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
@@ -104,9 +104,9 @@ durch identische Ziffern dargestellt wird.</div>
   var einer = n % 10;
   var zehner = Math.floor(n / 10);
   if (einer === zehner) {
-    return "Schnaps!";
+    return 'Schnaps!';
   }
-  return "Kein Schnaps!";
+  return 'Kein Schnaps!';
 };</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"

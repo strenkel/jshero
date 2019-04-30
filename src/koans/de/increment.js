@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "increment",
+    id: 'increment',
 
-    title: "Inkrement",
+    title: 'Inkrement',
 
     lesson: `In der Programmierung möchte man häufig einen Zähler um eins erhöhen oder verringern.
 Das kann man leicht mit dem Inkrement- bzw. dem Dekrementoperator tun.
@@ -23,12 +23,12 @@ x++;
 x = x * 2;
 x--;</code></pre>`,
 
-    solution: "7",
+    solution: '7',
 
     tests: [
 
       function() {
-        return testutil.assert_isValue("7");
+        return testutil.assert_isValue('7');
       }
 
     ]

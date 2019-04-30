@@ -8,10 +8,10 @@ jshero.koans.add({
 Dabei spielt es keine Rolle, ob das Array vorher gefüllt oder leer war.
 
 <pre><code>var sprachen = [];
-sprachen[0] = "C";
-sprachen[1] = "C++";
-sprachen[2] = "Java";
-sprachen[3] = "JavaScript";</code></pre>
+sprachen[0] = 'C';
+sprachen[1] = 'C++';
+sprachen[2] = 'Java';
+sprachen[3] = 'JavaScript';</code></pre>
 
 Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt.`,
 
@@ -20,7 +20,7 @@ Die Variable soll als erstes Element in das Array geschrieben werden. Das Array 
 <code>setFirstElement([1, 2], 3)</code> sollte <code>[3, 2]</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof setFirstElement !== "undefined") {
+    if (typeof setFirstElement !== 'undefined') {
       setFirstElement = undefined;
     }
   },
@@ -39,11 +39,11 @@ Die Variable soll als erstes Element in das Array geschrieben werden. Das Array 
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('setFirstElement(["Hein", "Gretel"], "Hänsel")', ["Hänsel", "Gretel"]);
+      return jshero.testutil.assert_functionReturns("setFirstElement(['Hein', 'Gretel'], 'Hänsel')", ['Hänsel', 'Gretel']);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('setFirstElement([1, "Maus"], "kleine")', ["kleine", "Maus"]);
+      return jshero.testutil.assert_functionReturns("setFirstElement([1, 'Maus'], 'kleine')", ['kleine', 'Maus']);
     }
   ]
 

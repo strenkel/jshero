@@ -11,7 +11,7 @@ jshero.koans.add({
     '<code>true</code> zurückgeben, <code>gleich(1, 1, 2)</code> soll <code>false</code> ergeben.',
 
   beforeTests: function() {
-    if (typeof gleich !== "undefined") {
+    if (typeof gleich !== 'undefined') {
       gleich = undefined;
     }
   },
@@ -34,23 +34,23 @@ jshero.koans.add({
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich("1", 1, 1)', false);
+      return jshero.testutil.assert_functionReturns("gleich('1', 1, 1)", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich(1, "1", 1)', false);
+      return jshero.testutil.assert_functionReturns("gleich(1, '1', 1)", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich(1, 1, "1")', false);
+      return jshero.testutil.assert_functionReturns("gleich(1, 1, '1')", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich("klein", "klein", "klein")', true);
+      return jshero.testutil.assert_functionReturns("gleich('klein', 'klein', 'klein')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('gleich("klein", "klein", "groß")', false);
+      return jshero.testutil.assert_functionReturns("gleich('klein', 'klein', 'groß')", false);
     }
   ]
 

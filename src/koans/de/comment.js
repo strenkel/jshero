@@ -50,7 +50,7 @@ Der Median einer sortierten Zahlenreihe ist der Wert, der an der mittleren Stell
 der beiden mittleren Zahlen.`,
 
   beforeTests: function() {
-    if (typeof median !== "undefined") {
+    if (typeof median !== 'undefined') {
       median = undefined;
     }
   },

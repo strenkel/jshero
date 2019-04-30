@@ -6,7 +6,7 @@
     title: 'Fakultät',
 
     lesson: `Die <code>for</code>-Schleife soll nochmal anhand der in der Mathematik verwendeten Funktion
-<a href="https://de.wikipedia.org/wiki/Fakult%C3%A4t_(Mathematik)">Fakultät</a> geübt werden.
+<a href='https://de.wikipedia.org/wiki/Fakult%C3%A4t_(Mathematik)'>Fakultät</a> geübt werden.
 Die Fakultät einer natürlichen Zahl n ist das Produkt aller natürlichen Zahlen (ohne Null) kleiner oder gleich n.
 Sie wird durch ein nachgestelltes Ausrufezeichen abgekürzt: 3! = 1*2*3 = 6. Per Definition gilt 0! = 1.`,
 
@@ -30,7 +30,7 @@ Sie wird durch ein nachgestelltes Ausrufezeichen abgekürzt: 3! = 1*2*3 = 6. Per
 };</pre></code>`,
 
     beforeTests: function() {
-      if (typeof fakultaet !== "undefined") {
+      if (typeof fakultaet !== 'undefined') {
         addiereBis = undefined;
       }
     },

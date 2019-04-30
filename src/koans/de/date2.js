@@ -20,11 +20,11 @@ Man erhält die erwarteten Werte: <code>2017</code> für das Jahr, <code>10</cod
 Die Monatszählung beginnt wie beim Erzeugen eines Date-Objektes mit <code>0</code>.
 Die Zahl <code>10</code> steht also für den November.`,
 
-  task: `Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und dessen Datum im Format "d.M.YYYY" zurückgibt.
-Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>"8.3.2017"</code> zurückgeben.`,
+  task: `Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und dessen Datum im Format 'd.M.YYYY' zurückgibt.
+Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>'8.3.2017'</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof toGerman !== "undefined") {
+    if (typeof toGerman !== 'undefined') {
       toGerman = undefined;
     }
   },

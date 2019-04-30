@@ -16,7 +16,7 @@ zurückgeben.`,
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof istGerade !== "undefined") {
+    if (typeof istGerade !== 'undefined') {
       istGerade = undefined;
     }
   },

@@ -77,25 +77,25 @@ Hat in unserem Beispiel die Variable <code>wuerfelzahl</code> den Wert <code>6</
     
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>gleich</code>, die 2 Werte auf strikte Gleichheit überprüft. Sind die beiden Werte
-gleich, so soll der String <code>"GLEICH"</code> zurückgegeben werden. Sind sie ungleich, so soll man
-<code>"UNGLEICH"</code> erhalten.</div>
+gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie ungleich, so soll man
+<code>'UNGLEICH'</code> erhalten.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var gleich = function(a, b) {
 // Initialisiere eine Variable
-// mit "UNGLEICH". Verwende "if",
+// mit 'UNGLEICH'. Verwende 'if',
 // um die Variable ggf. auf
-// "GLEICH" zu setzen. Gebe die
+// 'GLEICH' zu setzen. Gebe die
 // Variable zurück.
 };</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var gleich = function(a, b) {
-  var ergebnis = "UNGLEICH";
+  var ergebnis = 'UNGLEICH';
   if (a === b) {
-    ergebnis = "GLEICH";
+    ergebnis = 'GLEICH';
   }
   return ergebnis;
 };</code></pre></div>

@@ -23,11 +23,11 @@ Aber Achtung: Zwei oder auch mehr <code>return</code>-Anweisungen in einer Funkt
 Andernfalls wird der Code unübersichtlich.`,
 
   task: `Schreibe eine Funktion <code>schnapszahl</code>, die feststellt, ob eine zweistellige Zahl eine Schnapszahl ist
-oder nicht. Ist die Zahl eine Schnapszahl, soll <code>"Schnaps!"</code> zurückgegeben werden, andernfalls
-<code>"Kein Schnaps!"</code>. <code>schnapszahl(22)</code> sollte <code>"Schnaps!"</code> und
-<code>schnapszahl(23)</code> sollte <code>"Kein Schnaps!"</code> zurückgeben.
+oder nicht. Ist die Zahl eine Schnapszahl, soll <code>'Schnaps!'</code> zurückgegeben werden, andernfalls
+<code>'Kein Schnaps!'</code>. <code>schnapszahl(22)</code> sollte <code>'Schnaps!'</code> und
+<code>schnapszahl(23)</code> sollte <code>'Kein Schnaps!'</code> zurückgeben.
 <br><br>
-Eine <a href="https://de.wikipedia.org/wiki/Schnapszahl">Schnapszahl</a> ist eine mehrstellige Zahl, die ausschließlich
+Eine <a href='https://de.wikipedia.org/wiki/Schnapszahl'>Schnapszahl</a> ist eine mehrstellige Zahl, die ausschließlich
 durch identische Ziffern dargestellt wird.`,
 
   hint: `<pre><code>var schnapszahl = function(n) {
@@ -44,13 +44,13 @@ durch identische Ziffern dargestellt wird.`,
   var einer = n % 10;
   var zehner = Math.floor(n / 10);
   if (einer === zehner) {
-    return "Schnaps!";
+    return 'Schnaps!';
   }
-  return "Kein Schnaps!";
+  return 'Kein Schnaps!';
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof schnapszahl !== "undefined") {
+    if (typeof schnapszahl !== 'undefined') {
       schnapszahl = undefined;
     }
   },
@@ -65,27 +65,27 @@ durch identische Ziffern dargestellt wird.`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('schnapszahl(11)', "Schnaps!");
+      return jshero.testutil.assert_functionReturns('schnapszahl(11)', 'Schnaps!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('schnapszahl(55)', "Schnaps!");
+      return jshero.testutil.assert_functionReturns('schnapszahl(55)', 'Schnaps!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('schnapszahl(99)', "Schnaps!");
+      return jshero.testutil.assert_functionReturns('schnapszahl(99)', 'Schnaps!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('schnapszahl(10)', "Kein Schnaps!");
+      return jshero.testutil.assert_functionReturns('schnapszahl(10)', 'Kein Schnaps!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('schnapszahl(12)', "Kein Schnaps!");
+      return jshero.testutil.assert_functionReturns('schnapszahl(12)', 'Kein Schnaps!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('schnapszahl(98)', "Kein Schnaps!");
+      return jshero.testutil.assert_functionReturns('schnapszahl(98)', 'Kein Schnaps!');
     }
   ]
 
