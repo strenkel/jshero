@@ -1,24 +1,26 @@
 jshero.koans.add({
 
-  id: "numbertostring",
+  id: 'numbertostring',
 
-  title: "Number: toString()",
+  title: 'Number: toString()',
 
-  lesson: 'Die Number-Methode <code>toString</code> wandelt eine Zahl in den entsprechenden String um. Der Dezimalpunkt wird dabei als Punkt dargestellt. ' +
-    'Das kann man z.B. dazu verwenden, eine Zahl im deutschen Format, also mit Komma als Dezimalpunkt, auszugeben:' +
-    '<code><pre>' +
-    'var number = 7.25;<br>' +
-    'var numberInEnglish = number.toString();<br>' +
-    'var numberInGerman = numberInEnglish.replace(".", ",");' +
-    '</code></pre>' +
-    '<code>numberInEnglish</code> enthält den String <code>"7.25"</code>. Da wir jetzt unsere Zahl als String vorliegen haben, können wir auf ihr die String-Methode ' +
-    '<code>replace</code> anwenden. <code>numberInGerman</code> enthält so den String <code>"7,25"</code>.',
+  lesson: `Die Number-Methode <code>toString</code> wandelt eine Zahl in den entsprechenden String um.
+Der Dezimalpunkt wird dabei als Punkt dargestellt. Das kann man z.B. dazu verwenden, eine Zahl im deutschen Format,
+also mit Komma als Dezimalpunkt, auszugeben:
 
-  task: 'Schreibe eine Funktion <code>digitLength</code>, die eine natürliche Zahl entgegennimmt und die Anzahl der Ziffern zurückgibt. ' +
-    '<code>digitLength(709)</code> sollte 3 zurückgeben.',
+<code><pre>var number = 7.25;
+var numberInEnglish = number.toString();
+var numberInGerman = numberInEnglish.replace('.', ',');</code></pre>
+
+<code>numberInEnglish</code> enthält den String <code>'7.25'</code>. Da wir jetzt unsere Zahl als String vorliegen haben,
+können wir auf ihr die String-Methode <code>replace</code> anwenden. <code>numberInGerman</code> enthält so den String
+<code>'7,25'</code>.`,
+
+  task: `Schreibe eine Funktion <code>digitLength</code>, die die Anzahl der Ziffern einer natürlichen Zahl berechnet.
+<code>digitLength(709)</code> sollte 3 zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof digitLength !== "undefined") {
+    if (typeof digitLength !== 'undefined') {
       digitLength = undefined;
     }
   },

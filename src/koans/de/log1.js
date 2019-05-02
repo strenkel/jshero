@@ -2,21 +2,21 @@
 
   jshero.koans.add({
 
-    id: "log1",
+    id: 'log1',
 
-    title: "Logging",
+    title: 'Logging',
 
     lesson: `Programmieren beinhaltet immer auch die Suche nach Fehlern.
-Eine Möglichkeit Fehler zu finden ist das <a href="https://de.wikipedia.org/wiki/Logging">Loggen</a>.
+Eine Möglichkeit Fehler zu finden ist das <a href='https://de.wikipedia.org/wiki/Logging'>Loggen</a>.
 Man macht während der Programmausführung gezielte Ausgaben.
 In JavaScript verwendet man dafür die Funktion <code>console.log</code>:
 
-<pre><code>console.log("Hallo Konsole!");</code></pre>
+<pre><code>console.log('Hallo Konsole!');</code></pre>
 
-Hier wird der String <code>"Hallo Konsole!"</code> mit <code>console.log</code> ausgegeben.
+Hier wird der String <code>'Hallo Konsole!'</code> mit <code>console.log</code> ausgegeben.
 Wo man die Ausgabe zu sehen bekommt, hängt von der JavaScript-Umgebung ab.
 In Browsern sieht man die Log-Ausgabe im normalen Betrieb nicht.
-Doch die meisten Desktop-Browser besitzen sogenannte <a href="https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern"> Entwicklerwerkzeuge</a>.
+Doch die meisten Desktop-Browser besitzen sogenannte <a href='https://de.wikipedia.org/wiki/Entwicklerwerkzeuge_in_Webbrowsern'> Entwicklerwerkzeuge</a>.
 Das sind mächtige Tools zur Unterstützung von Webentwicklern. Eines dieser Tools ist die Konsole.
 Dort wird das Log ausgegeben. Wie man die Entwickler-Werkzeuge öffnet hängt vom jeweiligen Browser ab.
 Bei vielen Desktop-Browsern wird sie mit der Taste F12 geöffnet.
@@ -24,7 +24,7 @@ Die Konsole kannst du dann als Reiter auswählen. Alternativ kann man die Konsol
 Auf mobilen Geräten stehen die Entwickler-Werkzeuge nicht zur Verfügung.
 Deshalb schreibt JS Hero das Log zusätzlich in die Testausgabe.`,
 
-    task: `Schreibe eine Funktion <code>logge</code>, die den String <code>"Hallo Konsole!"</code> loggt.
+    task: `Schreibe eine Funktion <code>logge</code>, die den String <code>'Hallo Konsole!'</code> loggt.
 Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, um auch dort die Ausgabe zu sehen.`,
 
     hint: `<pre><code>var logge = function() {
@@ -32,11 +32,11 @@ Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, 
 };`,
 
     solution: `<pre><code>var logge = function() {
-  console.log("Hallo Konsole!");
+  console.log('Hallo Konsole!');
 };`,
 
     beforeTests: function() {
-      if (typeof logge !== "undefined") {
+      if (typeof logge !== 'undefined') {
         logge = undefined;
       }
     },
@@ -48,7 +48,7 @@ Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, 
       },
 
       function() {
-        return testutil.assert_functionLogs('logge()', "Hallo Konsole!");
+        return testutil.assert_functionLogs('logge()', 'Hallo Konsole!');
       }
 
     ]

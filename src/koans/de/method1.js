@@ -2,16 +2,16 @@
 
   jshero.koans.add({
 
-    id: "method1",
+    id: 'method1',
 
-    title: "Methoden",
+    title: 'Methoden',
 
     lesson: `Bisher waren die Werte von Objekt-Eigenschaften Daten wie Strings oder Zahlen.
 Objekt-Eigenschaften können aber auch Funktionen sein. Solche Objekt-Eigenschaften nennt man
 Methoden. Methoden operieren auf den Daten eines Objekts.
 
 <pre><code>var ware = {
-  name: "Äpfel",
+  name: 'Äpfel',
   preis: 2.15,
   erhoehePreis: function(erhoehung) {
     this.preis = this.preis + erhoehung;
@@ -41,7 +41,7 @@ Von außen wird eine Methode über die zugeordnete Variable und der Punkt-Notati
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof moveX !== "undefined") {
+      if (typeof moveX !== 'undefined') {
         moveX = undefined;
       }
     },

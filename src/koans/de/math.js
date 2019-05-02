@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "math",
+  id: 'math',
 
-  title: "Math",
+  title: 'Math',
 
   lesson: `Viele mathematische Funktionen sind in dem Objekt <code>Math</code> zusammengefasst.
 So gibt <code>Math.sqrt(x)</code> die Quadratwurzel (engl.: square root) zurück
@@ -29,7 +29,7 @@ Da 3&sup2; + 4&sup2; = 5&sup2; gilt, sollte <code>hypotenuse(3,&nbsp;4)</code> d
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof hypotenuse !== "undefined") {
+    if (typeof hypotenuse !== 'undefined') {
       hypotenuse = undefined;
     }
   },

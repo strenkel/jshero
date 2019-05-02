@@ -2,18 +2,18 @@
 
   jshero.koans.add({
 
-    id: "jsx07",
+    id: 'jsx07',
 
-    title: "Was ist x?",
+    title: 'Was ist x?',
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>var bleiben = function(name) {
-  return name + " bleibt " + name;
+  return name + ' bleibt ' + name;
 };
 
-var x = bleiben("Mainz");</code></pre>`,
+var x = bleiben('Mainz');</code></pre>`,
 
-    solution: `<pre><code>"Mainz bleibt Mainz"</code></pre>`,
+    solution: `<pre><code>'Mainz bleibt Mainz'</code></pre>`,
 
     beforeTests: function() {
     },

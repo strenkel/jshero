@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "modulo",
+  id: 'modulo',
 
-  title: "Modulo",
+  title: 'Modulo',
 
   lesson: 'Ein weiterer arithmetischer Operator ist Modulo. Er berechnet den Rest einer Division und wird mit dem Prozentzeichen <code>%</code> notiert.' +
     '<pre><code>var x = 7 % 2;<br>' +
@@ -22,7 +22,7 @@ jshero.koans.add({
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof einer !== "undefined") {
+    if (typeof einer !== 'undefined') {
       einer = undefined;
     }
   },

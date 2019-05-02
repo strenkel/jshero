@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "number",
+  id: 'number',
 
-  title: "Zahlen",
+  title: 'Zahlen',
 
   lesson: `Zahlen werden in JavaScript durch einfache Ziffern dargestellt. Sie können einen
 Dezimalpunkt und ein Minuszeichen besitzen.
@@ -38,7 +38,7 @@ und deren Summe zurückgibt. <code>add(1, 2)</code> sollte <code>3</code> ergebe
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof add !== "undefined") {
+    if (typeof add !== 'undefined') {
       add = undefined;
     }
   },

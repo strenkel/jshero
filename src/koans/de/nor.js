@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "nor",
+  id: 'nor',
 
-  title: "NOR",
+  title: 'NOR',
 
   lesson: `In der letzten Aufgabe hast du ein sogenanntes NAND-Gatter (engl.: Not AND - nicht und) programmiert.
 NAND-Gatter sind in der Digitaltechnik ein sogenannter Standardbaustein.
@@ -15,7 +15,7 @@ In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>nor(fal
 <code>nor(false, true)</code>, <code>nor(true, false)</code> und <code>nor(true, true)</code> sollen <code>false</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof nor !== "undefined") {
+    if (typeof nor !== 'undefined') {
       nor = undefined;
     }
   },

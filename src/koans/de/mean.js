@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "mean",
+  id: 'mean',
 
-  title: "Klammern",
+  title: 'Klammern',
 
   lesson: `Ebenso wie in der Mathematik gilt in JavaScript die Punkt-vor-Strichrechnung. Multiplikation und Division
 werden vor Addition und Subtraktion ausgeführt. Möchte man zuerst die Strichrechnung ausführen, verwendet man genauso
@@ -24,7 +24,7 @@ x und y ist (x + y) / 2.</code></pre>`,
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof mittelwert !== "undefined") {
+    if (typeof mittelwert !== 'undefined') {
       mittelwert = undefined;
     }
   },

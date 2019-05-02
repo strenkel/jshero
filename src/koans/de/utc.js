@@ -17,12 +17,12 @@ Was wir bisher über das Date-Objekt gelernt haben, bezog sich im Wesentlichen a
 <code>new Date(2018, 4, 5)</code> ein Date-Objekt, das dem Zeitpunkt 5.5.2018, 0:00 Uhr in lokaler Zeit entspricht.
 Macht man diesen Aufruf in Deutschland, erhält man den Zeitpunkt 5.5.2018, 0:00 UTC+2 (Sommerzeit!). In Japan liefert derselbe Aufruf
 den Zeitpunkt 5.5.2018, 0:00 UTC+9. Zwischen beiden Zeitpunkten liegt eine Differenz von 7 Stunden.
-Möchte man weltweit einen einheitlichen Zeitpunkt erzeugen, so muss man die Weltzeit verwenden:
+Möchte man weltweit einen einheitlichen Zeitpunkt erzeugen, so muss man die koordinierte Weltzeit verwenden:
 <pre><code>var millis = Date.UTC(2018, 4, 5);
 var datum = new Date(millis);</code></pre>
 Mit <code>Date.UTC</code> erhält man zunächst die vergangenen Millisekunden seit dem 1.1.1970, 0:00 UTC.
 Mit dieser Zahl und <code>new Date()</code> erzeugt man anschließend das gewünschte Date-Objekt
-(siehe <a href="main.html?koan=date">Datum und Uhrzeit</a>). Die Variable <code>datum</code> repräsentiert den
+(siehe <a href="date.html">Datum und Uhrzeit</a>). Die Variable <code>datum</code> repräsentiert den
 5.5.2018, 0:00 UTC.`,
 
   task: `Schreibe eine Funktion <code>nikolausUTC</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember

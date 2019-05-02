@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: `Mit <code>!==</code> vergleicht man zwei Werte auf strikte Ungleichheit.
 
-<pre><code>var v1 = "lauf" !== "Lauf";
-var v2 = 10 !== "10";</code></pre>
+<pre><code>var v1 = 'lauf' !== 'Lauf';
+var v2 = 10 !== '10';</code></pre>
 
 Beide Vergleiche ergeben <code>true</code>. Der erste, weil sich die beiden
 Strings in der Groß- und Kleinschreibung unterscheiden.
@@ -19,7 +19,7 @@ Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter u
 <code>false</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof ungleich !== "undefined") {
+    if (typeof ungleich !== 'undefined') {
       ungleich = undefined;
     }
   },
@@ -46,19 +46,19 @@ Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter u
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('ungleich("2", 2, 2)', false);
+      return jshero.testutil.assert_functionReturns("ungleich('2', 2, 2)", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('ungleich("kLein", "klein", "kleiN")', true);
+      return jshero.testutil.assert_functionReturns("ungleich('kLein', 'klein', 'kleiN')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('ungleich("1", 1, true)', true);
+      return jshero.testutil.assert_functionReturns("ungleich('1', 1, true)", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('ungleich("klein", "klein", "kIein")', false);
+      return jshero.testutil.assert_functionReturns("ungleich('klein', 'klein', 'kIein')", false);
     }
   ]
 

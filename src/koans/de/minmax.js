@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "minmax",
+  id: 'minmax',
 
-  title: "Min und Max",
+  title: 'Min und Max',
 
   lesson: `Das Minimum und Maximum einer Reihe von Zahlen bestimmt man mit
 <code>Math.min()</code> und <code>Math.max()</code>:
@@ -14,12 +14,12 @@ var max = Math.max(3, 9, 2);</code></pre>
 Das Besondere: Beide Funktionen können mit einer beliebigen Anzahl von Argumenten aufgerufen werden.`,
 
   task: `Schreibe eine Funktion <code>bereichsmittel</code>, die das Bereichsmittel von 3 Zahlen berechnet.
-Das <a href="https://de.wikipedia.org/wiki/Mittelwert#Bereichsmittel">Bereichsmittel</a>
+Das <a href='https://de.wikipedia.org/wiki/Mittelwert#Bereichsmittel'>Bereichsmittel</a>
 einer Reihe von Zahlen ist der Mittelwert der kleinsten und größten Zahl.
 <code>bereichsmittel(3, 9, 1)</code> sollte <code>(9+1)/2</code> = <code>5</code> ergeben.`,
 
   beforeTests: function() {
-    if (typeof bereichsmittel !== "undefined") {
+    if (typeof bereichsmittel !== 'undefined') {
       bereichsmittel = undefined;
     }
   },
