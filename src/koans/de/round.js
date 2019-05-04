@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "round",
+  id: 'round',
 
-  title: "Runden",
+  title: 'Runden',
 
   lesson: `Möchte man eine Dezimalzahl auf- oder abrunden, stehen einem die Funktionen <code>Math.round()</code>,
 <code>Math.floor()</code> (engl.: Boden) und <code>Math.ceil()</code> (engl: Decke) zur Verfügung.
@@ -26,7 +26,7 @@ erhalten also alle den Wert <code>5</code>.`,
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof round100 !== "undefined") {
+    if (typeof round100 !== 'undefined') {
       round100 = undefined;
     }
   },

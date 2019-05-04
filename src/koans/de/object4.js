@@ -2,14 +2,14 @@
 
   jshero.koans.add({
 
-    id: "object4",
+    id: 'object4',
 
-    title: "Eigenschaften setzen",
+    title: 'Eigenschaften setzen',
 
     lesson: `Um Objekt-Eigenschaften zu ändern, verwendet man ebenfalls die Punkt-Notation:
 
 <pre><code>var ware = {
-  name: "Äpfel",
+  name: 'Äpfel',
   preis: 2.15
 };
 
@@ -33,7 +33,7 @@ Zunächst legen wir eine Ware mit dem Preis <code>2.15</code> an. Irgendwann sp�
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof moveX !== "undefined") {
+      if (typeof moveX !== 'undefined') {
         moveX = undefined;
       }
     },

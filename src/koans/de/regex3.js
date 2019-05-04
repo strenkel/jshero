@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "regex3",
+  id: 'regex3',
 
-  title: "Regex: Zeichenauswahl",
+  title: 'Regex: Zeichenauswahl',
 
   lesson: `Die letzte Lektion führte als Metazeichen den Punkt ein.
 Er steht für ein beliebiges Zeichen. So steht <code>/M.ier/</code> sowohl für <code>Maier</code>
@@ -10,10 +10,10 @@ als auch für <code>Meier</code>. Er steht aber auch für <code>Mxier</code>.
 Möchte man letzteres ausschließen, so muss man die Zeichenauswahl auf <code>a</code>
 und <code>e</code> begrenzen. Dazu schreibt man die gewünschte Auswahl in eckige Klammern:
 
-<pre><code>var var t1 = /M[ae]ier/.test("Maier");
-var t2 = /M[ae]ier/.test("Meier");
-var t3 = /M[ae]ier/.test("Mxier");
-var t4 = /M[ae]ier/.test("Maeier");</code></pre>
+<pre><code>var var t1 = /M[ae]ier/.test('Maier');
+var t2 = /M[ae]ier/.test('Meier');
+var t3 = /M[ae]ier/.test('Mxier');
+var t4 = /M[ae]ier/.test('Maeier');</code></pre>
 
 Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus diesem Ausdruck.
 <code>/[ae]/</code> steht also für ein Zeichen, das ein <code>a</code> oder ein <code>e</code> ist.
@@ -26,8 +26,8 @@ und <code>/[123456]/</code> steht für eine Ziffer von 1 bis 6.`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Namen
 Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
-<code>pruefe("Frau Mayer")</code> sollte <code>true</code> und
-<code>pruefe("Herr Mezer")</code> sollte <code>false</code> ergeben.`,
+<code>pruefe('Frau Mayer')</code> sollte <code>true</code> und
+<code>pruefe('Herr Mezer')</code> sollte <code>false</code> ergeben.`,
 
   hint: `<pre><code>var pruefe = function(s) {
 // Verwende die Zeichenauswahl
@@ -52,27 +52,27 @@ Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Maier")', true);
+      return jshero.testutil.assert_functionReturns("pruefe('Maier')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Meier")', true);
+      return jshero.testutil.assert_functionReturns("pruefe('Meier')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Mayer")', true);
+      return jshero.testutil.assert_functionReturns("pruefe('Mayer')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Meyer")', true);
+      return jshero.testutil.assert_functionReturns("pruefe('Meyer')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Mazer")', false);
+      return jshero.testutil.assert_functionReturns("pruefe('Mazer')", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Moyer")', false);
+      return jshero.testutil.assert_functionReturns("pruefe('Moyer')", false);
     }
   ]
 

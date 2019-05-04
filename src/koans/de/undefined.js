@@ -44,12 +44,12 @@ Die Methode <code>charAt</code> könnte also folgenden Code-Ausschnitt enthalten
   index = 0;
 }</code></pre>`,
 
-    task: `Schreibe eine Funktion <code>hallo</code>, die einen String als Parameter entgegennimmt und <code>"Hallo &lt;Parameter&gt;!"</code> zurückgibt.
-<code>hallo("Akgün")</code> sollte <code>"Hallo Akgün!"</code> zurückgeben.
-Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>"Hallo Welt!"</code> zurückgegeben werden.`,
+    task: `Schreibe eine Funktion <code>hallo</code>, die einen String als Parameter entgegennimmt und <code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt.
+<code>hallo('Akgün')</code> sollte <code>'Hallo Akgün!'</code> zurückgeben.
+Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>'Hallo Welt!'</code> zurückgegeben werden.`,
 
     beforeTests: function() {
-      if (typeof hallo !== "undefined") {
+      if (typeof hallo !== 'undefined') {
         hallo = undefined;
       }
     },
@@ -64,11 +64,11 @@ Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>"Hallo Welt!"</c
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('hallo("Melek")', 'Hallo Melek!');
+        return jshero.testutil.assert_functionReturns("hallo('Melek')", 'Hallo Melek!');
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('hallo("Stefan")', 'Hallo Stefan!');
+        return jshero.testutil.assert_functionReturns("hallo('Badu')", 'Hallo Badu!');
       },
 
       function() {

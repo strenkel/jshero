@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "object1",
+    id: 'object1',
 
-    title: "Objekte",
+    title: 'Objekte',
 
     lesson: `Um komplexere Sachverhalte abzubilden, verwendet man Objekte. Eine Person hat einen Namen und ein Alter.
 Diese beiden Daten könnte man in zwei Variablen speichern. Besser ist es, dafür ein Objekt zu benutzen.
@@ -12,16 +12,16 @@ Objekte in JavaScript sind eine Sammlung von Eigenschaften. Jede Eigenschaft bes
 Objekte werden am einfachsten mit der Mengenklammer erzeugt:
 
 <pre><code>var person = {
-  name: "Toni Morrison",
+  name: 'Toni Morrison',
   alter: 88
 };</code></pre>
 
 Hier haben wir ein Objekt mit den beiden Eigenschaften <code>name</code> und <code>alter</code> erzeugt.
 Das Objekt wurde der Variablen <code>person</code> zugewiesen.
 Auf dem Namen einer Eigenschaft folgt ein Doppelpunkt und anschließend ihr Wert.
-Die Eigenschaft <code>name</code> hat den Wert <code>"Toni Morrison"</code> und die Eigenschaft <code>alter</code> den Wert <code>52</code>.
-Jede Eigenschaft wird mit einem Komma beendet. Bei der letzten Eigenschaft kann man das Komma weglassen.
-Man kann alle Eigenschaften zusammen mit ihren Werten in einer Zeile notieren.
+Die Eigenschaft <code>name</code> hat den Wert <code>'Toni Morrison'</code> und die Eigenschaft <code>alter</code>
+den Wert <code>52</code>. Jede Eigenschaft wird mit einem Komma beendet. Bei der letzten Eigenschaft kann man das
+Komma weglassen. Man kann alle Eigenschaften zusammen mit ihren Werten in einer Zeile notieren.
 Übersichtlicher ist es, wenn man wie hier für jede Eigenschaft eine neue Zeile verwendet.<br><br>
 Mit der folgenden Aufgabe wollen wir einen Punkt in einer Ebene modellieren.
 Dieser Punkt könnte zum Beispiel die Position einer Figur in einem 2-dimensionalen Computerspiel sein.`,
@@ -40,7 +40,7 @@ Weise das Objekt der Variablen <code>point</code> zu.`,
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof point !== "undefined") {
+      if (typeof point !== 'undefined') {
         point = undefined;
       }
     },

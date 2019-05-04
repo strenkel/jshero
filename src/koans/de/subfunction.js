@@ -30,10 +30,10 @@ Zahlen zurückgibt. Schreibe eine Funktion <code>mean</code>, die ein Array gef�
 Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabei die Funktion <code>sum</code> benutzen.`,
 
     beforeTests: function() {
-      if (typeof sum !== "undefined") {
+      if (typeof sum !== 'undefined') {
         mean = undefined;
       }
-      if (typeof mean !== "undefined") {
+      if (typeof mean !== 'undefined') {
         mean = undefined;
       }
     },
@@ -95,13 +95,13 @@ Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabe
       // --- test mean calls sum ---
 
       function() {
-        var numOfCalls = evaluator.evalNumOfCalls("mean([1, 2])", "sum");
+        var numOfCalls = evaluator.evalNumOfCalls('mean([1, 2])', 'sum');
         var ok = numOfCalls >= 1;
         var msg;
         if (ok) {
-          msg = "<code>mean</code> ruft <code>sum</code> auf.";
+          msg = '<code>mean</code> ruft <code>sum</code> auf.';
         } else {
-          msg = "<code>mean</code> ruft <code>sum</code> nicht auf.";
+          msg = '<code>mean</code> ruft <code>sum</code> nicht auf.';
         }
         return {
           ok: ok,

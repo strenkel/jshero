@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "regex4",
+  id: 'regex4',
 
-  title: "Regex: Bereiche",
+  title: 'Regex: Bereiche',
 
   lesson: `Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
 dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich. 
@@ -29,8 +29,8 @@ hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Klein-
 Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M-T]/</code>).`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine
-Zeichenfolge wie "Klasse 2b" enthält. Dabei sind Klassen von 1 bis 6 und a bis d
-zulässig. <code>pruefe("Die Klasse 1a")</code> sollte <code>true</code> ergeben.`,
+Zeichenfolge wie 'Klasse 2b' enthält. Dabei sind Klassen von 1 bis 6 und a bis d
+zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben.`,
 
   hint: `<pre><code>var pruefe = function(s) {
 // Verwende Literale
@@ -55,27 +55,27 @@ zulässig. <code>pruefe("Die Klasse 1a")</code> sollte <code>true</code> ergeben
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Klasse 1a")', true);
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 1a')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Klasse 6d")', true);
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 6d')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Klasse 0a")', false);
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 0a')", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Klasse 1e")', false);
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 1e')", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Klasse 7d")', false);
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 7d')", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('pruefe("Kasse 1a")', false);
+      return jshero.testutil.assert_functionReturns("pruefe('Kasse 1a')", false);
     }
 
   ]

@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "regex8",
+    id: 'regex8',
 
-    title: "Regex: {n, m}",
+    title: 'Regex: {n, m}',
 
     lesson: `Mit einen Ausdruck der Form <code>{n}</code>, <code>{n,m}</code> oder <code>{n,}</code> kann man die
 Anzahl der Wiederholungen genauer festlegen. <code>{n}</code> steht für genau n Wiederholungen, <code>{n,m}</code>
@@ -15,8 +15,8 @@ höchsten 20 beliebige Zeichen und <code>/\\[a-zA-Z]{5,}/</code> für mindestens
     task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String ein deutsches
 Kfz-Kennzeichen ist. Ein solches Kennzeichen soll dem Schema 'XXX YY NNNN' genügen. Dabei steht XXX für 1 bis 3
 beliebige Großbuchstaben, YY für 1 bis 2 beliebige Großbuchstaben und NNNN für eine maximal 4stellige Zahl. Führende
-Nullen sind bei der Zahl nicht zugelassen. <code>pruefe("OF C 709")</code> sollte <code>true</code> und
-<code>pruefe("OF 709")</code> sollte <code>false</code> ergeben.`,
+Nullen sind bei der Zahl nicht zugelassen. <code>pruefe('OF C 709')</code> sollte <code>true</code> und
+<code>pruefe('OF 709')</code> sollte <code>false</code> ergeben.`,
 
     hint: `<pre><code>var pruefe = function(s) {
   return /^[A-Z]{1,3}...
@@ -40,47 +40,47 @@ Nullen sind bei der Zahl nicht zugelassen. <code>pruefe("OF C 709")</code> sollt
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F A 1")', true);
+        return testutil.assert_functionReturns("pruefe('F A 1')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F A 9999")', true);
+        return testutil.assert_functionReturns("pruefe('F A 9999')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F AA 1")', true);
+        return testutil.assert_functionReturns("pruefe('F AA 1')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("LUP A 1")', true);
+        return testutil.assert_functionReturns("pruefe('LUP A 1')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F A 0")', false);
+        return testutil.assert_functionReturns("pruefe('F A 0')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F A 01")', false);
+        return testutil.assert_functionReturns("pruefe('F A 01')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F A 12345")', false);
+        return testutil.assert_functionReturns("pruefe('F A 12345')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F A")', false);
+        return testutil.assert_functionReturns("pruefe('F A')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F 1")', false);
+        return testutil.assert_functionReturns("pruefe('F 1')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("F AAA 1")', false);
+        return testutil.assert_functionReturns("pruefe('F AAA 1')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("FFFF A 1")', false);
+        return testutil.assert_functionReturns("pruefe('FFFF A 1')", false);
       }
 
     ]

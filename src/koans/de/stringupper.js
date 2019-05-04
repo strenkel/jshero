@@ -12,29 +12,29 @@ Zwei dieser String-Methoden sind die parameterlosen Methoden <code>toUpperCase</
 Sie geben den String, auf dem sie angewendet werden, in Groß- bzw. Kleinbuchstaben zurück. Wichtig ist,
 dass der eigentliche String unverändert bleibt. Die Rückgabe dieser Methoden ist der in Groß- bzw. Kleinbuchstaben
 umgewandelte String.
-<pre><code>var stadt = "Prag";
+<pre><code>var stadt = 'Prag';
 var ausgabe = stadt.toUpperCase();</code/></pre>
-<code>ausgabe</code> erhält den Wert <code>"PRAG"</code>. <code>stadt</code> hat weiterhin den Wert <code>"Prag"</code>.
+<code>ausgabe</code> erhält den Wert <code>'PRAG'</code>. <code>stadt</code> hat weiterhin den Wert <code>'Prag'</code>.
 <pre><code>ausgabe = stadt.toLowerCase();</code/></pre>
-Jetzt hat <code>ausgabe</code> den Wert <code>"prag"</code>.
-<pre><code>ausgabe = "Flug 714".toUpperCase();</code/></pre>
+Jetzt hat <code>ausgabe</code> den Wert <code>'prag'</code>.
+<pre><code>ausgabe = 'Flug 714'.toUpperCase();</code/></pre>
 Hier wird <code>toUpperCase()</code> direkt auf einen String angewendet. Der Wert von <code>ausgabe</code> ist
-<code>"FLUG 714"</code>. Zahlen und auch Sonderzeichen werden nicht verändert.`,
+<code>'FLUG 714'</code>. Zahlen und auch Sonderzeichen werden nicht verändert.`,
 
   task: `Schreibe eine Funktion <code>toCase</code>, die bei Übergabe eines Strings diesen aneinandergehängt
 in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klein- und Großschreibung soll
-<code>-</code> sein. <code>toCase("Ida")</code> sollte <code>"ida-IDA"</code> zurückgeben.`,
+<code>-</code> sein. <code>toCase('Ida')</code> sollte <code>'ida-IDA'</code> zurückgeben.`,
 
   hint: `<pre><code>var toCase = function(text) {
-  return ... + "-" + ...;
+  return ... + '-' + ...;
 };`,
 
   solution: `<pre><code>var toCase = function(text) {
-  return text.toLowerCase() + "-" + text.toUpperCase();
+  return text.toLowerCase() + '-' + text.toUpperCase();
 };`,
 
   beforeTests: function() {
-    if (typeof toCase !== "undefined") {
+    if (typeof toCase !== 'undefined') {
       toCase = undefined;
     }
   },
@@ -49,11 +49,11 @@ in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klei
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('toCase("Ida")', 'ida-IDA');
+      return jshero.testutil.assert_functionReturns("toCase('Ida')", 'ida-IDA');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('toCase("Paris")', 'paris-PARIS');
+      return jshero.testutil.assert_functionReturns("toCase('Paris')", 'paris-PARIS');
     }
   ]
 

@@ -1,7 +1,7 @@
 (function(testutil, evaluator) {
 
   var evalDice = function() {
-    return evaluator.evalTest("dice()");
+    return evaluator.evalTest('dice()');
   };
 
   var isOneToSix = function(x) {
@@ -30,7 +30,7 @@
       }
     } catch (exc) {
       ok = false;
-      msg = "Fehler beim Aufruf von <code>dice()</code>.";
+      msg = 'Fehler beim Aufruf von <code>dice()</code>.';
       e = exc;
     }
     return {
@@ -61,7 +61,7 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
     task: 'Schreibe eine Funktion <code>dice</code>, die wie ein Würfel eine Zufallszahl zwischen 1 und 6 zurückgibt.',
 
     beforeTests: function() {
-      if (typeof dice !== "undefined") {
+      if (typeof dice !== 'undefined') {
         dice = undefined;
       }
     },
@@ -94,7 +94,7 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
           }
         } catch (exc) {
           ok = false;
-          msg = "Fehler beim Aufruf von <code>dice()</code>.";
+          msg = 'Fehler beim Aufruf von <code>dice()</code>.';
           e = exc;
         }
         return {

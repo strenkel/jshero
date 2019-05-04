@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "regex5",
+  id: 'regex5',
 
-  title: "Regex: Zeichenklassen",
+  title: 'Regex: Zeichenklassen',
 
   lesson: `Für einige besondere Zeichenbereiche gibt es Buchstaben als Abkürzung.
 <code>/\\d/</code> steht für eine Ziffer (engl.: digit) und ist identisch mit
@@ -14,7 +14,7 @@ gelesen wird. Abkürzungen kann man auch innerhalb einer Zeichenauswahl verwende
 
   task: `Schreibe eine Funktion <code>hatPLZ</code>, die prüft, ob ein String eine
 deutsche Postleitzahl enthällt. Eine deutsche Postleitzahl ist eine Zahl mit 5 Ziffern.
-<code>hatPLZ("28205")</code> sollte <code>true</code> ergeben.`,
+<code>hatPLZ('28205')</code> sollte <code>true</code> ergeben.`,
 
   hint: `<pre><code>var hatPLZ = function(s) {
 // Verwende \\d fünfmal.
@@ -38,19 +38,19 @@ deutsche Postleitzahl enthällt. Eine deutsche Postleitzahl ist eine Zahl mit 5 
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('hatPLZ("28205 Bremen")', true);
+      return jshero.testutil.assert_functionReturns("hatPLZ('28205 Bremen')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('hatPLZ("06493 Neudorf")', true);
+      return jshero.testutil.assert_functionReturns("hatPLZ('06493 Neudorf')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('hatPLZ("2805 Bremen")', false);
+      return jshero.testutil.assert_functionReturns("hatPLZ('2805 Bremen')", false);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('hatPLZ("06 493 Neudorf")', false);
+      return jshero.testutil.assert_functionReturns("hatPLZ('006493 Neudorf')", false);
     }
 
   ]

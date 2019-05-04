@@ -6,7 +6,7 @@
 
     title: 'Rekursion',
 
-    lesson: `Funktionen können sich auch selbst aufrufen. Das nennt man <a href="https://de.wikipedia.org/wiki/Rekursive_Programmierung">Rekursion</a>.
+    lesson: `Funktionen können sich auch selbst aufrufen. Das nennt man <a href='https://de.wikipedia.org/wiki/Rekursive_Programmierung'>Rekursion</a>.
 Das bekannteste Beispiel ist die Berechnung der Fakultät:
 
 <pre><code>var fakultaet = function(n) {
@@ -16,7 +16,7 @@ Das bekannteste Beispiel ist die Berechnung der Fakultät:
   return fakultaet(n - 1) * n;
 };</code></pre>
 
-Die <a href="https://de.wikipedia.org/wiki/Fakult%C3%A4t_(Mathematik)">Fakultät</a> einer natürlichen Zahl ist das Produkt aller
+Die <a href='https://de.wikipedia.org/wiki/Fakult%C3%A4t_(Mathematik)'>Fakultät</a> einer natürlichen Zahl ist das Produkt aller
 natürlichen Zahlen (ohne Null) kleiner oder gleich dieser Zahl. Sie wird durch ein nachgestelltes Ausrufezeichen abgekürzt:
 n! = 1 * 2 * 3 ... (n-1) * n. Man sieht, dass man für die Berechnung der Fakultät von n die Fakultät von n-1 benutzen kann: n! = (n-1)! * n.
 Das Beispielprogramm ist die Umsetzung dieser Formel. Um die Fakultät von n zu berechnen, muss man die Fakultät von n-1 berechnen und
@@ -26,10 +26,10 @@ Nun benötigt man noch eine Abbruchbedingung, damit die Rekursion nicht unendlic
 sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
 
     task: `Schreibe eine Funktion <code>reverse</code>, die die Reihenfolge der Zeichen in einem String umkehrt.
-<code>reverse("Nebel")</code> sollte <code>"lebeN"</code> zurückgeben. Die Funktion soll rekursiv sein.`,
+<code>reverse('Nebel')</code> sollte <code>'lebeN'</code> zurückgeben. Die Funktion soll rekursiv sein.`,
 
     beforeTests: function() {
-      if (typeof reverse !== "undefined") {
+      if (typeof reverse !== 'undefined') {
         reverse = undefined;
       }
     },
@@ -47,29 +47,29 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
       },
 
       function() {
-        return testutil.assert_functionReturns('reverse("")', "");
+        return testutil.assert_functionReturns("reverse('')", '');
       },
 
       function() {
-        return testutil.assert_functionReturns('reverse("X")', "X");
+        return testutil.assert_functionReturns("reverse('X')", 'X');
       },
 
       function() {
-        return testutil.assert_functionReturns('reverse("az")', "za");
+        return testutil.assert_functionReturns("reverse('az')", 'za');
       },
 
       function() {
-        return testutil.assert_functionReturns('reverse("Nebel")', "lebeN");
+        return testutil.assert_functionReturns("reverse('Nebel')", 'lebeN');
       },
 
       function() {
-        var numOfCalls = evaluator.evalNumOfCalls('reverse("Nebel")', 'reverse');
+        var numOfCalls = evaluator.evalNumOfCalls("reverse('Nebel')", 'reverse');
         var ok = numOfCalls >= 1;
         var msg;
         if (ok) {
-          msg = "<code>reverse</code> ruft sich selbst auf.";
+          msg = '<code>reverse</code> ruft sich selbst auf.';
         } else {
-          msg = "<code>reverse</code> ruft sich nicht selbst auf.";
+          msg = '<code>reverse</code> ruft sich nicht selbst auf.';
         }
         return {
           ok: ok,

@@ -63,16 +63,16 @@
 der voranstehende Ausdruck beliebig oft vorkommen darf. Bei <code>*</code> darf er auch keinmal vorkommen.
 Bei <code>+</code> muss er mindestens einmal vorkommen.
 <code>bäh*</code> steht für bä, bäh, bähh und so weiter. <code>[01]+</code> steht für
-eine beliebige <a href="https://de.wikipedia.org/wiki/Dualsystem">binäre Zahl</a> wie zum Beispiel
+eine beliebige <a href='https://de.wikipedia.org/wiki/Dualsystem'>binäre Zahl</a> wie zum Beispiel
 0, 1, 001, 10111 oder 11001100.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>hasQuote</code>, die feststellt, ob ein String ein mit einfachen
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>hasQuote</code>, die feststellt, ob ein String ein mit doppelten
 Anführungszeichen gekennzeichnetes Zitat enthält. Innerhalb des Zitats sind beliebige Zeichen
 zulässig. Ein leeres Zitat ist auch zugelassen. Das Zitat soll nicht über mehrere Zeilen gehen.
 Ein Zeilenumbruch innerhalb des Zitats ist also nicht zulässig.
-<code>hasQuote("'Ja!'")</code> sollte <code>true</code> und
-<code>hasQuote("Ku'damm")</code> sollte <code>false</code> ergeben.</div>
+<code>hasQuote('"Ja!")</code> sollte <code>true</code> und
+<code>hasQuote('Nein')</code> sollte <code>false</code> ergeben.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
@@ -83,7 +83,7 @@ Ein Zeilenumbruch innerhalb des Zitats ist also nicht zulässig.
       <span id="solution-link"></span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var hasQuote = function(s) {
-  return /'.*'/.test(s);
+  return /".*"/.test(s);
 };</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"

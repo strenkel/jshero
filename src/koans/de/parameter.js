@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "parameter",
+    id: 'parameter',
 
-    title: "Parameter",
+    title: 'Parameter',
 
     lesson: `Jetzt lernen wir Funktionen mit Parametern kennen. Mit
 
@@ -16,16 +16,16 @@ definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code
 Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu
 ihrer Deklaration. Mit
 
-<pre><code>var ergebnis = gebe("Apfel");</code></pre>
+<pre><code>var ergebnis = gebe('Apfel');</code></pre>
 
-wird die Funktion mit dem Argument <code>"Apfel"</code> aufgerufen. Jetzt wird unsere zuvor definierte Funktion
-ausgeführt. Dabei wird zunächst das Argument <code>"Apfel"</code> dem Parameter <code>eingabe</code> zugewiesen.
-<code>eingabe</code> hat jetzt den Wert <code>"Apfel"</code>. In der einzigen Codezeile der Funktion wird nun die
+wird die Funktion mit dem Argument <code>'Apfel'</code> aufgerufen. Jetzt wird unsere zuvor definierte Funktion
+ausgeführt. Dabei wird zunächst das Argument <code>'Apfel'</code> dem Parameter <code>eingabe</code> zugewiesen.
+<code>eingabe</code> hat jetzt den Wert <code>'Apfel'</code>. In der einzigen Codezeile der Funktion wird nun die
 Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen
-<code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat dann auch den Wert <code>"Apfel"</code>.`,
+<code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat dann auch den Wert <code>'Apfel'</code>.`,
 
     task: `Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.
-<code>echo("Greta")</code> sollte <code>"Greta"</code> und <code>echo("CO2")</code> sollte <code>"CO2"</code>
+<code>echo('Greta')</code> sollte <code>'Greta'</code> und <code>echo('CO2')</code> sollte <code>'CO2'</code>
 zurückgeben.`,
 
     hint: `<pre><code>var echo = function(ton) {
@@ -37,7 +37,7 @@ zurückgeben.`,
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof echo !== "undefined") {
+      if (typeof echo !== 'undefined') {
         echo = undefined;
       }
     },
@@ -52,11 +52,11 @@ zurückgeben.`,
       },
 
       function() {
-        return testutil.assert_functionReturns('echo("Greta")', "Greta");
+        return testutil.assert_functionReturns("echo('Greta')", 'Greta');
       },
 
       function() {
-        return testutil.assert_functionReturns('echo("CO2")', "CO2");
+        return testutil.assert_functionReturns("echo('CO2')", 'CO2');
       }
     ]
 

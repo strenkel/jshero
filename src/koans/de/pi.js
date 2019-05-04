@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "pi",
+  id: 'pi',
 
-  title: "Math.PI",
+  title: 'Math.PI',
 
   lesson: 'Neben Funktionen bietet <code>Math</code> auch einige mathematische Konstanten an. ' +
     '<code>Math.PI</code> liefert die Kreiszahl &pi; (gerundet 3.14) und <code>Math.E</code> die Eulersche Zahl e (gerundet 2.71). ' +
@@ -13,7 +13,7 @@ jshero.koans.add({
     'Dabei ist r der Radius des Kreises.',
 
   beforeTests: function() {
-    if (typeof flaeche !== "undefined") {
+    if (typeof flaeche !== 'undefined') {
       flaeche = undefined;
     }
   },

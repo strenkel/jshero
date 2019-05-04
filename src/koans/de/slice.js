@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `Mit <code>slice</code> kopiert man aus einem Array ein Teilarray:
 
-<pre><code>var abcd = ["a", "b", "c", "d"];
+<pre><code>var abcd = ['a', 'b', 'c', 'd'];
 var ab = abcd.slice(0, 2);
 var bc = abcd.slice(1, 3);
 var bcd = abcd.slice(1, 4);</code></pre>
@@ -19,7 +19,7 @@ Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der 
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> sollte <code>[1,&nbsp;2]</code> zurückgeben.`,
 
   beforeTests: function() {
-    if (typeof halve !== "undefined") {
+    if (typeof halve !== 'undefined') {
       halve = undefined;
     }
   },

@@ -2,22 +2,22 @@
 
   jshero.koans.add({
 
-    id: "object2",
+    id: 'object2',
 
-    title: "Objekte erzeugen",
+    title: 'Objekte erzeugen',
 
     lesson: `Die Werte von Objekt-Eigenschaften kann man auch mithilfe von Variablen festlegen:
 
-<pre><code>var title = "Clean Code";
-var author = "Robert C. Martin";
+<pre><code>var title = 'Clean Code';
+var author = 'Robert C. Martin';
 var book = {
   title: title,
   author: author
 };</code></pre>
 
 Hier wird ein Objekt mit den Eigenschaften <code>title</code> und <code>author</code> erzeugt.
-<code>title</code> erhält den Wert <code>"Clean Code"</code> und <code>author</code> den Wert
-<code>"Robert C. Martin"</code>.
+<code>title</code> erhält den Wert <code>'Clean Code'</code> und <code>author</code> den Wert
+<code>'Robert C. Martin'</code>.
 In der Zeile <code>title: title</code> ist <code>title</code> vor dem Doppelpunkt die Objekt-Eigenschaft
 und nach dem Doppelpunkt die zuvor definierte Variable.`,
 
@@ -37,7 +37,7 @@ entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebene
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof createPoint !== "undefined") {
+      if (typeof createPoint !== 'undefined') {
         createPoint = undefined;
       }
     },

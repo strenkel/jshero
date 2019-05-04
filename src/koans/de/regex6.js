@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "regex6",
+    id: 'regex6',
 
-    title: "Regex: ?",
+    title: 'Regex: ?',
 
     lesson: `In vielen Pattern ist das Vorkommen eines Zeichens variabel. Autokennzeichen
 bestehen aus einer variablen Anzahl von Buchstaben und Ziffern. Für solche Pattern stehen eine Reihe
@@ -14,9 +14,9 @@ für <code>ac</code> (b kommt keinmal vor) oder für <code>abc</code> (b kommt e
 <code>/[1-9]?[0-9]/</code> steht für eine ein- oder zweistellige Zahl.`,
 
     task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den
-<a href="https://de.wikipedia.org/wiki/Meier_(Familienname)">Familiennamen Meier</a> in einer
+<a href='https://de.wikipedia.org/wiki/Meier_(Familienname)'>Familiennamen Meier</a> in einer
 der 8 Schreibweisen Maier, Meier, Mayer, Meyer, Mair, Meir, Mayr oder Meyr enthält.
-<code>pruefe("Mayer")</code> und <code>pruefe("Mayr")</code> sollte <code>true</code>
+<code>pruefe('Mayer')</code> und <code>pruefe('Mayr')</code> sollte <code>true</code>
 ergeben.`,
 
     hint: `<pre><code>var pruefe = function(s) {
@@ -41,51 +41,51 @@ ergeben.`,
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Maier")', true);
+        return testutil.assert_functionReturns("pruefe('Maier')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Mair")', true);
+        return testutil.assert_functionReturns("pruefe('Mair')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Mayer")', true);
+        return testutil.assert_functionReturns("pruefe('Mayer')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Mayr")', true);
+        return testutil.assert_functionReturns("pruefe('Mayr')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Meier")', true);
+        return testutil.assert_functionReturns("pruefe('Meier')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Meir")', true);
+        return testutil.assert_functionReturns("pruefe('Meir')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Meyer")', true);
+        return testutil.assert_functionReturns("pruefe('Meyer')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Meyr")', true);
+        return testutil.assert_functionReturns("pruefe('Meyr')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("aye")', false);
+        return testutil.assert_functionReturns("pruefe('aye')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Mai")', false);
+        return testutil.assert_functionReturns("pruefe('Mai')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Maior")', false);
+        return testutil.assert_functionReturns("pruefe('Maior')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns('pruefe("Mayeer")', false);
+        return testutil.assert_functionReturns("pruefe('Mayeer')", false);
       }
 
     ]

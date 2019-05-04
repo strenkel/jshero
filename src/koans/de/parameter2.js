@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "parameter2a",
+  id: 'parameter2a',
 
-  title: "Parameternamen",
+  title: 'Parameternamen',
 
   lesson: `Bitte achte darauf, dass du eventuelle Parameter deiner Funktion anders nennst als die Funktion selbst.
 Die Funktion <code>f1</code> zum Beispiel
@@ -37,11 +37,11 @@ Achte darauf, dass der Parameter anders heißt, als die Funktion selbst.`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('ping("Test")', "Test");
+      return jshero.testutil.assert_functionReturns("ping('Test')", 'Test');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('ping("Hallo Welt!")', "Hallo Welt!");
+      return jshero.testutil.assert_functionReturns("ping('Hallo Welt!')", 'Hallo Welt!');
     }
   ]
 
