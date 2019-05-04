@@ -10,7 +10,7 @@
 Anzahl der Wiederholungen genauer festlegen. <code>{n}</code> steht für genau n Wiederholungen, <code>{n,m}</code>
 für mindestens n und höchstens m Wiederholungen und <code>{n,}</code> für mindestens n Wiederholungen.
 So steht <code>/\\d{5}/</code> für genau 5 aufeinanderfolgende Ziffern, <code>/.{6,20}/</code> für mindestens 6 und
-höchsten 20 beliebige Zeichen und <code>/\\[a-zA-Z]{5,}/</code> für mindestens 5 aufeinanderfolgende Buchstaben.`,
+höchsten 20 beliebige Zeichen und <code>/[a-zA-Z]{5,}/</code> für mindestens 5 aufeinanderfolgende Buchstaben.`,
 
     task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String ein deutsches
 Kfz-Kennzeichen ist. Ein solches Kennzeichen soll dem Schema 'XXX YY NNNN' genügen. Dabei steht XXX für 1 bis 3
