@@ -27,11 +27,11 @@ in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klei
 
   hint: `<pre><code>var toCase = function(text) {
   return ... + '-' + ...;
-};`,
+};</code/></pre>`,
 
   solution: `<pre><code>var toCase = function(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
-};`,
+};</code/></pre>`,
 
   beforeTests: function() {
     if (typeof toCase !== 'undefined') {

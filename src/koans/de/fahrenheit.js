@@ -13,11 +13,11 @@ und F die Temperatur in Grad Fahrenheit, so gilt: F = 1.8 * C + 32. <code>toFahr
 
   hint: `<pre><code>var toFahrenheit = function(celsius) {
   return ...
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var toFahrenheit = function(celsius) {
   return 1.8 * celsius + 32;
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof add !== "undefined") {

@@ -21,12 +21,12 @@ das kein Leerzeichen ist, zurückgibt. <code>firstChar(' Rosa')</code> sollte <c
 // Trimme zuerst text.
 // Verwende dann die
 // charAt-Methode.
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var firstChar = function(text) {
   var textGetrimmt = text.trim();
   return textGetrimmt.charAt(0);
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof firstChar !== 'undefined') {

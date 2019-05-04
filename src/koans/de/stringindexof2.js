@@ -26,12 +26,12 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
 // Verwende indexOf zweimal.
 // Zuerst ohne, dann mit
 // zweitem Parameter. 
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var secondIndexOf = function(s1, s2) {
   var firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof secondIndexOf !== "undefined") {

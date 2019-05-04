@@ -25,13 +25,13 @@ hint: `<pre><code>var indexOfIgnoreCase = function(s1, s2) {
 // in Kleinbuchstaben um.
 // Verwende dann die
 // indexOf-Methode. 
-};`,
+};</code></pre>`,
 
 solution: `<pre><code>var indexOfIgnoreCase = function(s1, s2) {
   var s1Klein = s1.toLowerCase();
   var s2Klein = s2.toLowerCase();
   return s1Klein.indexOf(s2Klein);
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof indexOfIgnoreCase !== 'undefined') {

@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "function",
+    id: 'function',
 
-    title: "Funktionen",
+    title: 'Funktionen',
 
     lesson: `Eine Funktion ist ein Block von Anweisungen, der beliebig oft ausgeführt werden kann. Eine Funktion kann
 Parameter entgegennehmen und eine Funktion kann einen Wert zurückgeben. Funktionen werden mit dem Schlüsselwort
@@ -14,30 +14,30 @@ zurückgegeben werden. Gleichzeitig beendet <code>return</code> die Funktion. An
 werden nicht mehr ausgeführt. Funktionen kann man Variablen zuordnen. Mit
 
 <pre><code>var farbe = function() {
-  return "grün";
+  return 'grün';
 };</code></pre>
 
-definieren wir eine Funktion, die <code>"grün"</code> zurückgibt. Die Funktion nimmt keine Paramter entgegen
+definieren wir eine Funktion, die <code>'grün'</code> zurückgibt. Die Funktion nimmt keine Paramter entgegen
 (die runde Klammer ist leer) und sie enthält genau eine Anweisung, die Rückgabe. Die Funktion wird der Variablen
 <code>farbe</code> zugeordnet. Über diese Variable wird die Funktion aufgerufen:
 
 <pre><code>var ergebnis = farbe();</code></pre>
 
 Jetzt wird die Funktion ausgeführt. Ihre Rückgabe wird der Variablen <code>ergebnis</code> zugewiesen.
-<code>ergebnis</code> hat dann den Wert <code>"grün"</code>.`,
+<code>ergebnis</code> hat dann den Wert <code>'grün'</code>.`,
 
-    task: 'Deklariere eine Variable <code>hallo</code> und weise ihr eine Funktion zu, die <code>"Hallo Welt!"</code> zurückgibt.',
+    task: `Deklariere eine Variable <code>hallo</code> und weise ihr eine Funktion zu, die <code>'Hallo Welt!'</code> zurückgibt.`,
 
     hint: `<pre><code>var hallo = function() {
   ...
 };</code></pre>`,
 
     solution: `<pre><code>var hallo = function() {
-  return "Hallo Welt!";
+  return 'Hallo Welt!';
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof hallo !== "undefined") {
+      if (typeof hallo !== 'undefined') {
         hallo = undefined;
       }
     },
@@ -48,7 +48,7 @@ Jetzt wird die Funktion ausgeführt. Ihre Rückgabe wird der Variablen <code>erg
       },
 
       function() {
-        return testutil.assert_functionReturns('hallo()', "Hallo Welt!");
+        return testutil.assert_functionReturns('hallo()', 'Hallo Welt!');
       }
     ]
 

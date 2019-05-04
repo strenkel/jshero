@@ -26,11 +26,11 @@ so sollte die Rückgabe <code>'Hallo Franz!'</code> sein.`,
 
   hint: `<pre><code>var begruesse = function(name) {
   return ...
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var begruesse = function(name) {
   return 'Hallo ' + name + '!';
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     begruesse = undefined;

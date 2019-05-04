@@ -28,7 +28,7 @@ sollten <code>'20.05.2017'</code> ergeben.`,
 
   hint: `<pre><code>var convert = function(s1, s2) {
 // Verwende replace viermal.
-};`,
+};</code></pre>`,
 
   solution: `<pre><code>var convert = function(dateEn) {
   var dateDe = dateEn.replace('-', '.');
@@ -36,7 +36,7 @@ sollten <code>'20.05.2017'</code> ergeben.`,
   dateDe = dateDe.replace('/', '.');
   dateDe = dateDe.replace('/', '.');
   return dateDe;
-};`,
+};</code></pre>`,
 
   beforeTests: function() {
     if (typeof convert !== 'undefined') {

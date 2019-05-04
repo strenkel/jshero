@@ -29,11 +29,11 @@ Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, 
 
     hint: `<pre><code>var logge = function() {
   console.log(...);
-};`,
+};</code></pre>`,
 
     solution: `<pre><code>var logge = function() {
   console.log('Hallo Konsole!');
-};`,
+};</code></pre>`,
 
     beforeTests: function() {
       if (typeof logge !== 'undefined') {

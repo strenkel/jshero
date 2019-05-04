@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "jsx05",
+    id: 'jsx05',
 
-    title: "Was ist x?",
+    title: 'Was ist x?',
 
     lesson: `Auch bei Funktionen mit Parametern wollen wir den Funktionsaufruf üben.`,
 
@@ -13,9 +13,9 @@
   return phrase;
 };
 
-var x = reply("How do you do?");</code></pre>`,
+var x = reply('How do you do?');</code></pre>`,
 
-    solution: `<pre><code>"How do you do?"</code></pre>`,
+    solution: `<pre><code>'How do you do?'</code></pre>`,
 
     beforeTests: function() {
     },
