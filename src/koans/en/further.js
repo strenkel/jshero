@@ -8,7 +8,7 @@ jshero.koans.add({
 
   task: `Write a function <code>digitsum</code> that calculates the digit sum of an integer.
 The digit sum of an integer is the sum of all its digits.
-<code>digitsum(192)</code> should returm <code>12</code>.`,
+<code>digitsum(192)</code> should return <code>12</code>.`,
 
   beforeTests: function() {
     if (typeof digitsum !== "undefined") {
