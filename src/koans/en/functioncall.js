@@ -1,17 +1,17 @@
 jshero.koans.add({
 
-  id: "functioncall",
+  id: 'functioncall',
 
-  title: "Function calls",
+  title: 'Function calls',
 
   lesson: `The difference between the definition and the call of a function is important.
 The following definition of a function
 
 <pre><code>var f = function() {
-  return "hello";
+  return 'hello';
 };</code></pre>
 
-says what the function will do: Return "hello", if called. The function will not be executed, but only provided.
+says what the function will do: Return 'hello', if called. The function will not be executed, but only provided.
 Only with its call
 
 <pre><code>var x = f();</code></pre>
@@ -22,7 +22,7 @@ To define a function use the keyword <code>function</code>.
 If the function is assigned to a variable, the function is called via this variable.
 Functions are defined once so that they can be used multiple times at different program points by calling them.`,
 
-  task: `1. Define a function <code>greet</code> returning the value <code>"Haydo!"</code>.<br/>
+  task: `1. Define a function <code>greet</code> returning the value <code>'Haydo!'</code>.<br/>
 2. Declare a variable <code>salutation</code>. Call the function <code>greet</code> and assign the
 result of the call to the variable <code>salutation</code>.`,
 
@@ -33,7 +33,7 @@ result of the call to the variable <code>salutation</code>.`,
 var salutation = ...</code></pre>`,
 
   solution: `<pre><code>var greet = function() {
-  return "Haydo!";
+  return 'Haydo!';
 };
 
 var salutation = greet();</code></pre>`,

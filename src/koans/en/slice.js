@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `With <code>slice</code> you can copy a subarray from an array:
 
-<pre><code>var abcd = ["a", "b", "c", "d"];
+<pre><code>var abcd = ['a', 'b', 'c', 'd'];
 var ab = abcd.slice(0, 2);
 var bc = abcd.slice(1, 3);
 var bcd = abcd.slice(1, 4);</code></pre>
@@ -19,7 +19,7 @@ With an odd number of array elements, the middle element should belong to the fi
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.`,
 
   beforeTests: function() {
-    if (typeof halve !== "undefined") {
+    if (typeof halve !== 'undefined') {
       halve = undefined;
     }
   },

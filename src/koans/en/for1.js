@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "for1",
+    id: 'for1',
 
-    title: "for loop",
+    title: 'for loop',
 
     lesson: `Loops can execute code blocks several times. JavaScript knows different kinds of loops. The simplest one is
 the <code>for</code> loop.

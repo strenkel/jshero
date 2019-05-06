@@ -59,20 +59,20 @@
     
     <div id="koans-lesson" class="paragraph">With <code>join</code> you join all elements of an array into a string:
 
-<pre><code>var words = ["Sex", "Drugs", "Rock", "Roll"];
+<pre><code>var words = ['Sex', 'Drugs', 'Rock', 'Roll'];
 var s1 = words.join();
-var s2 = words.join(" & ");
-var s3 = words.join(" and ");</code></pre>
+var s2 = words.join(' & ');
+var s3 = words.join(' and ');</code></pre>
 
 Without an argument <code>join</code> joins the elements separated by commas.
-<code>s1</code> has the value <code>"Sex,Drugs,Rock,Roll"</code>.
+<code>s1</code> has the value <code>'Sex,Drugs,Rock,Roll'</code>.
 Otherwise, the passed argument specifies the separator.
-<code>s2</code> has the value <code>"Sex & Drugs & Rock & Roll"</code> and
-<code>s3</code> has the value  <code>"Sex and Drugs and Rock and Roll"</code>.</div>
+<code>s2</code> has the value <code>'Sex & Drugs & Rock & Roll'</code> and
+<code>s3</code> has the value  <code>'Sex and Drugs and Rock and Roll'</code>.</div>
     
     <h2>Exercise</h2>
     <div id="koans-task" class="paragraph">Write a function <code>list</code> that joins words in an array into a list.
-<code>list(["Huey", "Dewey", "Louie"])</code> should return <code>"Huey, Dewey and Louie"</code>.
+<code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.
 The passed array contains at least two words.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>

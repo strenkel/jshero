@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "round",
+  id: 'round',
 
-  title: "Rounding",
+  title: 'Rounding',
 
   lesson: `If you want to round a number, you can use the
 <code>Math.round()</code>, <code>Math.floor()</code> and <code>Math.ceil()</code> functions.
@@ -21,7 +21,7 @@ Therefore, the variables <code>a</code> to <code>d</code> all get the value <cod
 <code>round100(1749)</code> should return <code>1700</code> and <code>round100(856.12)</code> should return <code>900</code>.`,
 
   beforeTests: function() {
-    if (typeof round100 !== "undefined") {
+    if (typeof round100 !== 'undefined') {
       round100 = undefined;
     }
   },

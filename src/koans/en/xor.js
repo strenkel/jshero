@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "xor",
+  id: 'xor',
 
-  title: "XOR",
+  title: 'XOR',
 
   lesson: `The Boolean operators have an order: First NOT, then AND, last OR.
 If you want to change this order, use parentheses:
@@ -25,7 +25,7 @@ If both values are the same, the result should be <code>false</code>. The calls 
 The calls <code>xor(true, true)</code> and <code>xor(false, false)</code> should return <code>false</code>.`,
 
   beforeTests: function() {
-    if (typeof xor !== "undefined") {
+    if (typeof xor !== 'undefined') {
       xor = undefined;
     }
   },

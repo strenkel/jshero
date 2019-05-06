@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "nor",
+  id: 'nor',
 
-  title: "NOR",
+  title: 'NOR',
 
   lesson: `In the last task you have coded a so-called NAND (Not AND) gate. NAND gates are a standard component in
 digital electronics. Any Boolean function can be implemented by using a combination of NAND gates.
@@ -15,7 +15,7 @@ should return <code>true</code>. The calls <code>nor(true, false)</code>, <code>
 and <code>nor(true, true)</code> should return <code>false</code>.`,
 
   beforeTests: function() {
-    if (typeof nor !== "undefined") {
+    if (typeof nor !== 'undefined') {
       nor = undefined;
     }
   },

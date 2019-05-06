@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "minmax",
+    id: 'minmax',
 
-    title: "min and max",
+    title: 'min and max',
 
     lesson: `The minimum and maximum of a set of numbers can be calculated with
 <code>Math.min()</code> and <code>Math.max()</code>:
@@ -16,7 +16,7 @@ var max = Math.max(3, 9, 2);</code></pre>
 The special: Both functions can be called with an arbitrary number of arguments.`,
 
     task: `Write a function <code>midrange</code>, that calculates the midrange of 3 numbers.
-The <a href="https://en.wikipedia.org/wiki/Mid-range">midrange</a>
+The <a href='https://en.wikipedia.org/wiki/Mid-range'>midrange</a>
 is the mean of the smallest and largest number.
 <code>midrange(3, 9, 1)</code> should return <code>(9+1)/2</code> = <code>5</code>.`,
 
@@ -34,7 +34,7 @@ is the mean of the smallest and largest number.
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof midrange !== "undefined") {
+      if (typeof midrange !== 'undefined') {
         midrange = undefined;
       }
     },

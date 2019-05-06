@@ -9,12 +9,12 @@
     lesson: `The following task is challenging.`,
 
     task: `Write a function <code>roman</code> that converts a
-<a href="https://en.wikipedia.org/wiki/Roman_numerals">Roman number</a> (up to 1000) into an
-<a href="https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system">Arabic</a>.
-<code>roman("CDLXXXIII")</code> should return <code>483</code>.`,
+<a href='https://en.wikipedia.org/wiki/Roman_numerals'>Roman number</a> (up to 1000) into an
+<a href='https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system'>Arabic</a>.
+<code>roman('CDLXXXIII')</code> should return <code>483</code>.`,
 
     beforeTests: function() {
-      if (typeof roman !== "undefined") {
+      if (typeof roman !== 'undefined') {
         roman = undefined;
       }
     },
@@ -30,47 +30,47 @@
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("I")', 1);
+        return testutil.assert_functionReturns("roman('I')", 1);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("II")', 2);
+        return testutil.assert_functionReturns("roman('II')", 2);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("III")', 3);
+        return testutil.assert_functionReturns("roman('III')", 3);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("IV")', 4);
+        return testutil.assert_functionReturns("roman('IV')", 4);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("V")', 5);
+        return testutil.assert_functionReturns("roman('V')", 5);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("VI")', 6);
+        return testutil.assert_functionReturns("roman('VI')", 6);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("X")', 10);
+        return testutil.assert_functionReturns("roman('X')", 10);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("CDLXXXIII")', 483);
+        return testutil.assert_functionReturns("roman('CDLXXXIII')", 483);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("DCLXVI")', 666);
+        return testutil.assert_functionReturns("roman('DCLXVI')", 666);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("CMXCIX")', 999);
+        return testutil.assert_functionReturns("roman('CMXCIX')", 999);
       },
 
       function() {
-        return testutil.assert_functionReturns('roman("M")', 1000);
+        return testutil.assert_functionReturns("roman('M')", 1000);
       }
 
     ]

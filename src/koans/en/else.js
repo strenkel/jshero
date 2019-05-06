@@ -9,9 +9,9 @@ is not fulfilled, an <code>else</code> is added.
 
 <pre><code>var message;
 if (amount > 1000) {
-  message = "No payout possible!";
+  message = 'No payout possible!';
 } else {
-  message = "The amount will be paid out!";
+  message = 'The amount will be paid out!';
 }</code></pre>
 
 Depending on whether <code>amount</code> is greater or smaller <code>1000</code>,
@@ -23,7 +23,7 @@ For each amount greater than <code>10</code>, the surcharge is <code>2</code>.
 The call <code>addWithSurcharge(5, 15)</code> should return <code>23</code>.`,
 
   beforeTests: function() {
-    if (typeof addWithSurcharge !== "undefined") {
+    if (typeof addWithSurcharge !== 'undefined') {
       addWithSurcharge = undefined;
     }
   },

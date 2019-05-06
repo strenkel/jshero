@@ -1,20 +1,20 @@
 jshero.koans.add({
 
-  id: "function2",
+  id: 'function2',
 
-  title: "Multiple functions",
+  title: 'Multiple functions',
 
   lesson: `Now we define more then one function.
 As a reminder: A function with name <code>color</code> returning the value
-<code>"red"</code> is defined as followed:
+<code>'red'</code> is defined as followed:
 
 <pre><code>var color = function() {
-  return "red";
+  return 'red';
 };</code></pre>`,
 
   task: `Define two functions. The first function <code>a</code> should return
-<code>"Hello a!"</code> and the second function <code>b</code> should return
- <code>"Hello b!"</code>.`,
+<code>'Hello a!'</code> and the second function <code>b</code> should return
+ <code>'Hello b!'</code>.`,
 
   beforeTests: function() {
     a = undefined;

@@ -6,14 +6,14 @@ jshero.koans.add({
   title: 'gcd',
 
   lesson: `The counterpart to the least common multiple is the
-<a href="https://en.wikipedia.org/wiki/Greatest_common_divisor">greatest common divisor (gcd)</a>.
+<a href='https://en.wikipedia.org/wiki/Greatest_common_divisor'>greatest common divisor (gcd)</a>.
 The greatest common divisor of two natural numbers a and b is the largest natural numbers that divides a and b.`,
 
   task: `Write a function <code>gcd</code> that takes two natural numbers and calculates their gcd.
 <code>gcd(6, 15)</code> should return <code>3</code>.`,
 
   beforeTests: function() {
-    if (typeof gcd !== "undefined") {
+    if (typeof gcd !== 'undefined') {
       gcd = undefined;
     }
   },

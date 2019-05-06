@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "mean",
+    id: 'mean',
 
-    title: "Parentheses",
+    title: 'Parentheses',
 
     lesson: `Just as in mathematics, the order of operations rules are valid in JavaScript. Multiplication and
 division are performed before addition and subtraction. With parentheses you can specify the order of operations.
@@ -25,7 +25,7 @@ x and y is (x + y) / 2.</code></pre>`,
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof mean !== "undefined") {
+      if (typeof mean !== 'undefined') {
         mean = undefined;
       }
     },

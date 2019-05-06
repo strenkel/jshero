@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "pi",
+    id: 'pi',
 
-    title: "Math.PI",
+    title: 'Math.PI',
 
     lesson: 'Besides functions <code>Math</code> offers some mathematical constants. ' +
       '<code>Math.PI</code> gives &#960; (roughly 3.14) and <code>Math.E</code> gives Euler\'s number e (roughly 2.71).',
@@ -13,7 +13,7 @@
       'The function is given the radius of the circle. <code>area(1)</code> should return <code>&#960;</code> and <code>area(2)</code> should return <code>4 * &#960;</code>.',
 
     beforeTests: function() {
-      if (typeof area !== "undefined") {
+      if (typeof area !== 'undefined') {
         area = undefined;
       }
     },

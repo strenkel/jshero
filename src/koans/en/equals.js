@@ -8,14 +8,14 @@ jshero.koans.add({
 the two values are equal, or <code>false</code>, the two values are not equal. The operator for strict equality
 is&nbsp;<code>===</code>.
 
-<pre><code>var language = "JavaScript";
+<pre><code>var language = 'JavaScript';
 var x = 10;
-var c1 = language === "Java";
+var c1 = language === 'Java';
 var c2 = x === 10;
-var c3 = x === "10";</code></pre>
+var c3 = x === '10';</code></pre>
 
 The first comparison results in <code>false</code>, because <code>language</code> does not have the value
-<code>"Java"</code>. So <code>c1</code> is <code>false</code>. The second comparison results in <code>true</code>,
+<code>'Java'</code>. So <code>c1</code> is <code>false</code>. The second comparison results in <code>true</code>,
 because the value of <code>x</code> equals <code>10</code>. So <code>c2</code> is <code>true</code>.
 In the case of strict equality, it is also important that the two compared values have the same data type.
 <code>c3</code> is <code>false</code>, because different data types are compared here.
@@ -33,7 +33,7 @@ should return <code>true</code> and <code>equals(1, 2)</code> should return <cod
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof equals !== "undefined") {
+    if (typeof equals !== 'undefined') {
       equals = undefined;
     }
   },
@@ -53,7 +53,7 @@ should return <code>true</code> and <code>equals(1, 2)</code> should return <cod
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('equals(1, "1")', false);
+      return jshero.testutil.assert_functionReturns("equals(1, '1')", false);
     },
 
     function() {
@@ -61,11 +61,11 @@ should return <code>true</code> and <code>equals(1, 2)</code> should return <cod
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('equals("sun", "sun")', true);
+      return jshero.testutil.assert_functionReturns("equals('sun', 'sun')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('equals("left", "right")', false);
+      return jshero.testutil.assert_functionReturns("equals('left', 'right')", false);
     }
 
   ]

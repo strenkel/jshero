@@ -1,7 +1,7 @@
 (function(testutil, evaluator) {
 
   var evalDice = function() {
-    return evaluator.evalTest("dice()");
+    return evaluator.evalTest('dice()');
   };
 
   var isOneToSix = function(x) {
@@ -30,7 +30,7 @@
       }
     } catch (exc) {
       ok = false;
-      msg = "Error when calling <code>dice()</code>.";
+      msg = 'Error when calling <code>dice()</code>.';
       e = exc;
     }
     return {
@@ -61,7 +61,7 @@ This should be practiced now.`,
     task: 'Write a function <code>dice</code> that returns like a dice a random number between 1 and 6.',
 
     beforeTests: function() {
-      if (typeof dice !== "undefined") {
+      if (typeof dice !== 'undefined') {
         dice = undefined;
       }
     },
@@ -94,7 +94,7 @@ This should be practiced now.`,
           }
         } catch (exc) {
           ok = false;
-          msg = "Error when calling <code>dice()</code>.";
+          msg = 'Error when calling <code>dice()</code>.';
           e = exc;
         }
         return {

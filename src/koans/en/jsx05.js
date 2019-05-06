@@ -2,18 +2,18 @@
 
   jshero.koans.add({
 
-    id: "jsx05",
+    id: 'jsx05',
 
-    title: "What is x?",
+    title: 'What is x?',
 
     task: `Which value does <code>x</code> have after execution of the following code?
 <pre><code>var reply = function(phrase) {
   return phrase;
 };
 
-var x = reply("How do you do?");</code></pre>`,
+var x = reply('How do you do?');</code></pre>`,
 
-    solution: `<pre><code>"How do you do?"</code></pre>`,
+    solution: `<pre><code>'How do you do?'</code></pre>`,
 
     beforeTests: function() {
     },

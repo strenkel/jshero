@@ -62,13 +62,13 @@ One way to find errors is logging.
 During program execution, selective outputs are made.
 To do this in JavaScript, use the <code>console.log</code> function:
 
-<pre><code>console.log("Hello console!");</code></pre>
+<pre><code>console.log('Hello console!');</code></pre>
 
-Here, <code>console.log</code> outputs <code>"Hello console!"</code>.
+Here, <code>console.log</code> outputs <code>'Hello console!'</code>.
 Where you can see the output depends on your JavaScript environment.
 In browsers you do not see the log normally.
 But most desktop browsers have so-called
-<a href="https://en.wikipedia.org/wiki/Web_development_tools">developer tools</a>.
+<a href='https://en.wikipedia.org/wiki/Web_development_tools'>developer tools</a>.
 These are powerful tools to support web developers. One of these tools is the console.
 The log is displayed there. How to open the developer tools depends on your browser.
 On many desktop browsers, they are opened with the F12 key.
@@ -77,20 +77,20 @@ The developer tools are not available on mobile devices.
 Therefore JS Hero writes the log additionally into the test output.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>log</code> that logs <code>"Hello Console!"</code>.
+    <div id="koans-task" class="paragraph">Write a function <code>log</code> that logs <code>'Hello Console!'</code>.
 If you are working with a desktop browser, open the developer tools to see the output there as well.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var log = function() {
   console.log(...);
-};</div>
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var log = function() {
-  console.log("Hello Console!");
-};</div>
+  console.log('Hello Console!');
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

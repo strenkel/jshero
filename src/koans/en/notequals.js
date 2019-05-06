@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: `With <code>!==</code> two values are compared for strict inequality.
 
-<pre><code>var c1 = "rose" !== "Rose";
-var c2 = 10 !== "10";</code></pre>
+<pre><code>var c1 = 'rose' !== 'Rose';
+var c2 = 10 !== '10';</code></pre>
 
 Both comparisons result in <code>true</code>.
 The first one, because the two strings differ in upper and lower case.
@@ -19,7 +19,7 @@ Otherwise <code>false</code>. The call <code>unequal(1, 2, 3)</code> should retu
 and <code>unequal(1, 1, 2)</code> should return <code>false</code>.`,
 
   beforeTests: function() {
-    if (typeof unequal !== "undefined") {
+    if (typeof unequal !== 'undefined') {
       unequal = undefined;
     }
   },
@@ -50,11 +50,11 @@ and <code>unequal(1, 1, 2)</code> should return <code>false</code>.`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('unequal("rose", "Rose", "ROSE")', true);
+      return jshero.testutil.assert_functionReturns("unequal('rose', 'Rose', 'ROSE')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('unequal("1", 1, true)', true);
+      return jshero.testutil.assert_functionReturns("unequal('1', 1, true)", true);
     }
   ]
 

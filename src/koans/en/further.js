@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "further",
+  id: 'further',
 
-  title: "To be continued ...",
+  title: 'To be continued ...',
 
   lesson: 'JS Hero will be continued. Here\'s one last exercise.',
 
@@ -11,7 +11,7 @@ The digit sum of an integer is the sum of all its digits.
 <code>digitsum(192)</code> should returm <code>12</code>.`,
 
   beforeTests: function() {
-    if (typeof digitsum !== "undefined") {
+    if (typeof digitsum !== 'undefined') {
       digitsum = undefined;
     }
   },

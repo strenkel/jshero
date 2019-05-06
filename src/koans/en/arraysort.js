@@ -10,7 +10,7 @@ jshero.koans.add({
 <code>sort([2,&nbsp;3,&nbsp;1])</code> should return <code>[1,&nbsp;2,&nbsp;3]</code>.`,
 
   beforeTests: function() {
-    if (typeof sort !== "undefined") {
+    if (typeof sort !== 'undefined') {
       sort = undefined;
     }
   },

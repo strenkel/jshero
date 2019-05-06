@@ -1,8 +1,8 @@
 jshero.koans.add({
 
-  id: "bool",
+  id: 'bool',
 
-  title: "Boolean",
+  title: 'Boolean',
 
   lesson: `Another important data type next to String and Number is Boolean. It has only two possible values:
 <code>true</code> and <code>false</code>. You can calculate with Boolean values similar to numbers. JavaScript
@@ -35,7 +35,7 @@ The call <code>nand(true, true)</code> should return <code>false</code>. The cal
 };</code></pre>`,
 
   beforeTests: function() {
-    if (typeof nand !== "undefined") {
+    if (typeof nand !== 'undefined') {
       nand = undefined;
     }
   },

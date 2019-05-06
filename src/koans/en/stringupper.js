@@ -11,30 +11,30 @@ The arguments enclosed in parentheses follow. Two of these string methods are th
 methods <code>toUpperCase</code> and <code>toLowerCase</code>. They return the string in
 uppercase or lowercase.
 
-<pre><code>var town = "Mthatha";
+<pre><code>var town = 'Mthatha';
 var output = town.toUpperCase();</code/></pre>
 
-<code>output</code> has the value <code>"MTHATHA"</code>.
-<code>town</code> still has the value <code>"Mthatha"</code>.
+<code>output</code> has the value <code>'MTHATHA'</code>.
+<code>town</code> still has the value <code>'Mthatha'</code>.
 
 <pre><code>output = town.toLowerCase();</code/></pre>
 
-Now <code>output</code> has the value <code>"mthatha"</code>.`,
+Now <code>output</code> has the value <code>'mthatha'</code>.`,
 
   task: `Write a function <code>toCase</code> that takes a string and returns that string in
 lowercase and uppercase with <code>-</code> as delimiter.
-<code>toCase("Mthatha")</code> should return <code>"mthatha-MTHATHA"</code>.`,
+<code>toCase('Mthatha')</code> should return <code>'mthatha-MTHATHA'</code>.`,
 
   hint: `<pre><code>var toCase = function(text) {
-  return ... + "-" + ...;
-};`,
+  return ... + '-' + ...;
+};</code></pre>`,
 
   solution: `<pre><code>var toCase = function(text) {
-  return text.toLowerCase() + "-" + text.toUpperCase();
-};`,
+  return text.toLowerCase() + '-' + text.toUpperCase();
+};</code></pre>`,
 
   beforeTests: function() {
-    if (typeof toCase !== "undefined") {
+    if (typeof toCase !== 'undefined') {
       toCase = undefined;
     }
   },
@@ -50,11 +50,11 @@ lowercase and uppercase with <code>-</code> as delimiter.
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('toCase("Mthatha")', "mthatha-MTHATHA");
+      return jshero.testutil.assert_functionReturns("toCase('Mthatha')", 'mthatha-MTHATHA');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('toCase("Johannesburg")', "johannesburg-JOHANNESBURG");
+      return jshero.testutil.assert_functionReturns("toCase('Johannesburg')", 'johannesburg-JOHANNESBURG');
     }
 
   ]

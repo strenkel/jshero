@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `The elements of an array are accessed by an index beginning with 0.
 
-<pre><code>var languages = ["C", "C++", "Java"];
+<pre><code>var languages = ['C', 'C++', 'Java'];
 var c = languages[0];
 var cPlusPlus = languages[1];
 var java = languages[2];</code></pre>`,
@@ -15,7 +15,7 @@ var java = languages[2];</code></pre>`,
 <code>getFirstElement([1, 2])</code> should return <code>1</code>.`,
 
   beforeTests: function() {
-    if (typeof getFirstElement !== "undefined") {
+    if (typeof getFirstElement !== 'undefined') {
       getFirstElement = undefined;
     }
   },
@@ -35,7 +35,7 @@ var java = languages[2];</code></pre>`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('getFirstElement(["Firefox", "Chrome"])', "Firefox");
+      return jshero.testutil.assert_functionReturns("getFirstElement(['Firefox', 'Chrome'])", 'Firefox');
     }
 
   ]
