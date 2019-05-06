@@ -59,9 +59,9 @@
     
     <div id="koans-lesson" class="paragraph">The <code>substr</code> method extracts a substring from a string:
 
-<pre><code>var see = "see and stop".substr(0, 3);
-var and = "see and stop".substr(4, 3);
-var stop = "see and stop".substr(8);</code></pre>
+<pre><code>var see = 'see and stop'.substr(0, 3);
+var and = 'see and stop'.substr(4, 3);
+var stop = 'see and stop'.substr(8);</code></pre>
 
 The first parameter specifies the position at which to start extracting.
 The second parameter specifies the number of characters to extract.
@@ -70,7 +70,7 @@ If the second parameter is not set, all the characters from start position to th
     <h2>Exercise</h2>
     <div id="koans-task" class="paragraph">Write a function <code>firstWord</code>, taking a string and returning the first word in that string.
 The first word are all characters up to the first space.
-<code>firstWord("see and stop")</code> should return <code>"see"</code>.</div>
+<code>firstWord('see and stop')</code> should return <code>'see'</code>.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
@@ -79,14 +79,14 @@ The first word are all characters up to the first space.
 // the position of the
 // first space. Then use
 // the substr method.
-};</div>
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var firstWord = function(s) {
-  var firstBlank = s.indexOf(" ");
+  var firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
-};</div>
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

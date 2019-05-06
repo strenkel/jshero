@@ -1,21 +1,21 @@
 jshero.koans.add({
 
-  id: "var2",
+  id: 'var2',
 
-  title: "Several variables",
+  title: 'Several variables',
 
-  lesson: 'Several variables are declared and initialized in 2 program lines:' +
-    '<pre><code>var city = "Lubumbashi";<br>' +
-    'var country = "Congo";</code></pre>',
+  lesson: `Several variables are declared and initialized in 2 program lines:
+<pre><code>var city = 'Lubumbashi';
+var country = 'Congo';</code></pre>`,
 
-  task: 'Declare a variable <code>flower</code> and assign it the value <code>"rose"</code>. ' +
-    'Declare a second variable <code>tree</code> and assign it the value <code>"maple"</code>.',
+  task: `Declare a variable <code>flower</code> and assign it the value <code>'rose'</code>.
+Declare a second variable <code>tree</code> and assign it the value <code>'maple'</code>.`,
 
   beforeTests: function() {
-    if (typeof flower !== "undefined") {
+    if (typeof flower !== 'undefined') {
       flower = undefined;
     }
-    if (typeof tree !== "undefined") {
+    if (typeof tree !== 'undefined') {
       tree = undefined;
     }
   },

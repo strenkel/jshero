@@ -16,7 +16,7 @@ for (var i = 0; i < myArray.length; i++) {
 and returns the arithmetic mean of those numbers. <code>mean([1, 2, 3])</code> should return <code>(1+2+3)/3</code> = <code>2</code>.`,
 
   beforeTests: function() {
-    if (typeof mean !== "undefined") {
+    if (typeof mean !== 'undefined') {
       mean = undefined;
     }
   },

@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "math",
+    id: 'math',
 
-    title: "Math",
+    title: 'Math',
 
     lesson: `Many mathematical functions are grouped together in the <code>Math</code> object.
 For example, <code>Math.sqrt(x)</code> returns the square root
@@ -33,7 +33,7 @@ Since 3&sup2; + 4&sup2; = 5&sup2; applies, <code>hypotenuse(3,&nbsp;4)</code> sh
 };</code></pre>`,
 
     beforeTests: function() {
-      if (typeof hypotenuse !== "undefined") {
+      if (typeof hypotenuse !== 'undefined') {
         hypotenuse = undefined;
       }
     },

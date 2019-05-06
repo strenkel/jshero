@@ -60,32 +60,32 @@
     <div id="koans-lesson" class="paragraph">The <code>indexOf</code> method allows you to specify the position
 from which the search should start. This is done with a second parameter.
 
-<pre><code>var n1 = "White Rabbit".indexOf("it", 1);
-var n2 = "White Rabbit".indexOf("it", 3);</code></pre>
+<pre><code>var n1 = 'White Rabbit'.indexOf('it', 1);
+var n2 = 'White Rabbit'.indexOf('it', 3);</code></pre>
 
-The first <code>"it"</code> in <code>"White Rabbit"</code> has the index <code>2</code>.
+The first <code>'it'</code> in <code>'White Rabbit'</code> has the index <code>2</code>.
 Starting our search at position <code>1</code> it will be found. <code>n1</code> is <code>2</code>.
-The second <code>"it"</code> in <code>"White Rabbit"</code> has the index <code>10</code>.
+The second <code>'it'</code> in <code>'White Rabbit'</code> has the index <code>10</code>.
 Starting our search at position <code>3</code> it will be found. <code>n2</code> is <code>10</code>.</div>
     
     <h2>Exercise</h2>
     <div id="koans-task" class="paragraph">Write a function <code>secondIndexOf</code>, taking two strings
 and determining the second occurrence of the second string in the first string.
 If the search string does not occur twice, <code>-1</code> should be returned.
-<code>secondIndexOf("White Rabbit", "it")</code> should return <code>10</code>.</div>
+<code>secondIndexOf('White Rabbit', 'it')</code> should return <code>10</code>.</div>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link"></span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
 // Use indexOf twice. 
-};</div>
+};</code></pre></div>
     <div id="solution-link-root" class="paragraph">
       <span id="solution-link"></span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
   var firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
-};</div>
+};</code></pre></div>
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

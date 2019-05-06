@@ -6,10 +6,10 @@ jshero.koans.add({
 
   lesson: `Arrays are objects for storing multiple values. Arrays are preferably created with square brackets.
 
-<pre><code>var languages = ["C", "C++", "Java"];
+<pre><code>var languages = ['C', 'C++', 'Java'];
 var primes = [2, 3, 5, 7, 11];
 var emptyArray = [];
-var a = "Douglas";
+var a = 'Douglas';
 var b = 12;
 var c = true;
 var someValues = [a, b, c];</code></pre>`,
@@ -18,7 +18,7 @@ var someValues = [a, b, c];</code></pre>`,
 <code>toArray(5,&nbsp;9)</code> should return the array <code>[5,&nbsp;9]</code>.`,
 
   beforeTests: function() {
-    if (typeof toArray !== "undefined") {
+    if (typeof toArray !== 'undefined') {
       toArray = undefined;
     }
   },
@@ -42,7 +42,7 @@ var someValues = [a, b, c];</code></pre>`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('toArray("Tom", "Huck")', ["Tom", "Huck"]);
+      return jshero.testutil.assert_functionReturns("toArray('Tom', 'Huck')", ['Tom', 'Huck']);
     }
 
   ]

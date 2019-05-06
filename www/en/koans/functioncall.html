@@ -61,10 +61,10 @@
 The following definition of a function
 
 <pre><code>var f = function() {
-  return "hello";
+  return 'hello';
 };</code></pre>
 
-says what the function will do: Return "hello", if called. The function will not be executed, but only provided.
+says what the function will do: Return 'hello', if called. The function will not be executed, but only provided.
 Only with its call
 
 <pre><code>var x = f();</code></pre>
@@ -76,7 +76,7 @@ If the function is assigned to a variable, the function is called via this varia
 Functions are defined once so that they can be used multiple times at different program points by calling them.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">1. Define a function <code>greet</code> returning the value <code>"Haydo!"</code>.<br/>
+    <div id="koans-task" class="paragraph">1. Define a function <code>greet</code> returning the value <code>'Haydo!'</code>.<br/>
 2. Declare a variable <code>salutation</code>. Call the function <code>greet</code> and assign the
 result of the call to the variable <code>salutation</code>.</div>
     <div id="hint-link-root" class="paragraph">
@@ -91,7 +91,7 @@ var salutation = ...</code></pre></div>
       <span id="solution-link"></span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var greet = function() {
-  return "Haydo!";
+  return 'Haydo!';
 };
 
 var salutation = greet();</code></pre></div>

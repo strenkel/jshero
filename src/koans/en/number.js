@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "number",
+    id: 'number',
 
-    title: "Numbers",
+    title: 'Numbers',
 
     lesson: 'Numbers are represented by simple numerals. They can have a decimal point and a minus sign.' +
       '<pre><code>var x1 = 1;<br>var x2 = 1.0;<br>var x3 = 3.14;<br>var x4 = -1;</code></pre>' +
@@ -18,7 +18,7 @@
       '<code>add(1,&nbsp;2)</code> should return <code>3</code>.',
 
     beforeTests: function() {
-      if (typeof add !== "undefined") {
+      if (typeof add !== 'undefined') {
         add = undefined;
       }
     },

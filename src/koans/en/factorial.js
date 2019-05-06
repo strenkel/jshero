@@ -7,7 +7,7 @@
     title: 'Factorial',
 
     lesson: `Let us practice the <code>for</code> loop with the
-<a href="https://en.wikipedia.org/wiki/Factorial">factorial</a> used in mathematics.
+<a href='https://en.wikipedia.org/wiki/Factorial'>factorial</a> used in mathematics.
 The factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n.
 For example, 3! = 1*2*3 = 6. By definition, 0! = 1.`,
 
@@ -31,7 +31,7 @@ For example, 3! = 1*2*3 = 6. By definition, 0! = 1.`,
 };</pre></code>`,
 
     beforeTests: function() {
-      if (typeof fakultaet !== "undefined") {
+      if (typeof fakultaet !== 'undefined') {
         addiereBis = undefined;
       }
     },

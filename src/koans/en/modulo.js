@@ -2,9 +2,9 @@
 
   jshero.koans.add({
 
-    id: "modulo",
+    id: 'modulo',
 
-    title: "Modulo",
+    title: 'Modulo',
 
     lesson: 'Another arithmetic operator is modulo. It calculates the remainder of a division and is represented by <code>%</code>.' +
       '<pre><code>var x = 7 % 2;<br>' +
@@ -16,7 +16,7 @@
       '<code>firstDigit(2674)</code> should return <code>4</code>.',
 
     beforeTests: function() {
-      if (typeof einer !== "undefined") {
+      if (typeof einer !== 'undefined') {
         einer = undefined;
       }
     },

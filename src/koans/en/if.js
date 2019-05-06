@@ -20,13 +20,13 @@ In our example, if <code>dice</code> has the value <code>6</code>, then <code>wi
 If <code>dice</code> does not have the value <code>6</code>, then <code>win</code> remains at <code>0</code>.`,
 
   task: `Write a function <code>equals</code> that checks two values for strict equality.
-If the two values are equal, the string <code>"EQUAL"</code> should be returned.
-If they are unequal, you should get <code>"UNEQUAL"</code>.
-The call <code>equals(1, 1)</code> should return <code>"EQUAL"</code>,
-the call <code>equals(1, 2)</code> should return <code>"UNEQUAL"</code>.`,
+If the two values are equal, the string <code>'EQUAL'</code> should be returned.
+If they are unequal, you should get <code>'UNEQUAL'</code>.
+The call <code>equals(1, 1)</code> should return <code>'EQUAL'</code>,
+the call <code>equals(1, 2)</code> should return <code>'UNEQUAL'</code>.`,
 
   beforeTests: function() {
-    if (typeof equals !== "undefined") {
+    if (typeof equals !== 'undefined') {
       equals = undefined;
     }
   },
@@ -50,15 +50,15 @@ the call <code>equals(1, 2)</code> should return <code>"UNEQUAL"</code>.`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('equals(1, "1")', 'UNEQUAL');
+      return jshero.testutil.assert_functionReturns("equals(1, '1')", 'UNEQUAL');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('equals("JS", "JS")', 'EQUAL');
+      return jshero.testutil.assert_functionReturns("equals('JS', 'JS')", 'EQUAL');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('equals("left", "right")', 'UNEQUAL');
+      return jshero.testutil.assert_functionReturns("equals('left', 'right')", 'UNEQUAL');
     }
 
   ]

@@ -1,28 +1,28 @@
 jshero.koans.add({
 
-  id: "var",
+  id: 'var',
 
-  title: "Variables",
+  title: 'Variables',
 
-  lesson: `<a href="https://en.wikipedia.org/wiki/JavaScript">JavaScript</a> programs consist of a series of statements.
+  lesson: `<a href='https://en.wikipedia.org/wiki/JavaScript'>JavaScript</a> programs consist of a series of statements.
 Each statement performs an elementary operation.
 By executing many instructions you can finally solve complex tasks.
 Each statement is written in a line and closed with a semicolon.<br><br>
 An elementary statement is the declaration and initialization of a variable. A variable is a container for a value. The statement
-<pre><code>var city = "Porbandar";</code></pre>
-declares a variable with the name <code>city</code> and initializes it with the value <code>"Porbandar"</code>.
+<pre><code>var city = 'Porbandar';</code></pre>
+declares a variable with the name <code>city</code> and initializes it with the value <code>'Porbandar'</code>.
 The variable is declared with the keyword <code>var</code>.
 Use the equals sign, the assignment operator, to assign a value to the variable.
 Note: JavaScript is case-sensitive. <code>city</code> and <code>City</code> are two different variables.`,
 
-  task: 'Declare a variable <code>firstname</code> and initialize it with the value <code>"Lata"</code>.',
+  task: `Declare a variable <code>firstname</code> and initialize it with the value <code>'Lata'</code>.`,
 
   hint: `<pre><code>var firstname = ...</code></pre>`,
 
-  solution: `<pre><code>var firstname = "Lata";</code></pre>`,
+  solution: `<pre><code>var firstname = 'Lata';</code></pre>`,
 
   beforeTests: function() {
-    if (typeof firstname !== "undefined") {
+    if (typeof firstname !== 'undefined') {
       firstname = undefined;
     }
   },
