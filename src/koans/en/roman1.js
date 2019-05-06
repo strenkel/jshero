@@ -8,69 +8,69 @@
 
     lesson: `The following task is challenging.`,
 
-    task: `Write a function <code>roman</code> that converts a
+    task: `Write a function <code>arabic</code> that converts a
 <a href='https://en.wikipedia.org/wiki/Roman_numerals'>Roman number</a> (up to 1000) into an
 <a href='https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system'>Arabic</a>.
-<code>roman('CDLXXXIII')</code> should return <code>483</code>.`,
+<code>arabic('CDLXXXIII')</code> should return <code>483</code>.`,
 
     beforeTests: function() {
-      if (typeof roman !== 'undefined') {
-        roman = undefined;
+      if (typeof arabic !== 'undefined') {
+        arabic = undefined;
       }
     },
 
     tests: [
 
       function() {
-        return testutil.assert_isFunction('roman');
+        return testutil.assert_isFunction('arabic');
       },
 
       function() {
-        return testutil.assert_functionHasNumOfParameter('roman', 1);
+        return testutil.assert_functionHasNumOfParameter('arabic', 1);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('I')", 1);
+        return testutil.assert_functionReturns("arabic('I')", 1);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('II')", 2);
+        return testutil.assert_functionReturns("arabic('II')", 2);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('III')", 3);
+        return testutil.assert_functionReturns("arabic('III')", 3);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('IV')", 4);
+        return testutil.assert_functionReturns("arabic('IV')", 4);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('V')", 5);
+        return testutil.assert_functionReturns("arabic('V')", 5);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('VI')", 6);
+        return testutil.assert_functionReturns("arabic('VI')", 6);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('X')", 10);
+        return testutil.assert_functionReturns("arabic('X')", 10);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('CDLXXXIII')", 483);
+        return testutil.assert_functionReturns("arabic('CDLXXXIII')", 483);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('DCLXVI')", 666);
+        return testutil.assert_functionReturns("arabic('DCLXVI')", 666);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('CMXCIX')", 999);
+        return testutil.assert_functionReturns("arabic('CMXCIX')", 999);
       },
 
       function() {
-        return testutil.assert_functionReturns("roman('M')", 1000);
+        return testutil.assert_functionReturns("arabic('M')", 1000);
       }
 
     ]
