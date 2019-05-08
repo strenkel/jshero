@@ -73,22 +73,30 @@
 
       var code = codeArea.get();
       var koan = actualKoan.getKoan();
-      var okAll = results[results.length - 1].ok;
-      if (okAll) {
-        storage.setSolution(koan, code);
-        header.toGreen();
-        msg.log({
-          ok: true,
-          msg: I18N("testsPassed")
-        });
-        msg.goto(nextPageUrl());
-      } else {
-        storage.setShot(koan, code);
+      var lastResult = results[results.length - 1];
+
+      if (lastResult.oldBrowser) {
+        // Due to backwarts compability.
+        // Can be removed later on (e.g. 2020). 
         header.toRed();
-        msg.log({
-          ok: false,
-          msg: I18N("testError")
-        });
+      } else {
+        var okAll = lastResult.ok;
+        if (okAll) {
+          storage.setSolution(koan, code);
+          header.toGreen();
+          msg.log({
+            ok: true,
+            msg: I18N("testsPassed")
+          });
+          msg.goto(nextPageUrl());
+        } else {
+          storage.setShot(koan, code);
+          header.toRed();
+          msg.log({
+            ok: false,
+            msg: I18N("testError")
+          });
+        }
       }
       util.scrollToBottom();
       testsAreRunning = false;

@@ -7,6 +7,12 @@ if (typeof jshero === "undefined") {
  */
 jshero.i18n = (function() {
 
+  var oldBrowser_de = "Dein Browser unterstützt kein aktuelles JavaScript."
+    + " Verwende einen Browser, der aktuelles JavaScript unterstützt!";
+
+  var oldBrowser_en = "Your browser doesn't support up-to-date JavaScript."
+    + " Use a browser that supports up-to-date JavaScript!";
+
   var dic;
 
   var dic_de = {
@@ -28,6 +34,7 @@ jshero.i18n = (function() {
     errorAtCallOf: "Fehler beim Aufruf von",
     endlessLoopOnRead: "Es kommt zu einer Endlosschleife. Fehler beim Einlesen des Codes!",
     useConsole: "Benutze <code>console.log</code> zur Ausgabe!",
+    oldBrowser: oldBrowser_de,
 
     hasValue: "hat den Wert",
     hasNotValue: "hat nicht den Wert",
@@ -70,6 +77,7 @@ jshero.i18n = (function() {
     errorAtCallOf: "Error on call of",
     endlessLoopOnRead: "Endless loop. Error reading your code!",
     useConsole: "Use <code>console.log</code> for output!",
+    oldBrowser: oldBrowser_en,
 
     hasValue: "has the value",
     hasNotValue: "has not the value",

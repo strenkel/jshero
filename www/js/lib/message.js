@@ -18,6 +18,7 @@ jshero.message = (function(I18N) {
    *   logs {[String]}, // log messages
    *   e {Exception} // the exception in case of an error
    *   msg {String} // the i18n message
+   *   oldBrowser {Boolean} // true = JS feature detection failed (e.g. no Worker support)
    * }
    */
   var log = function(testResult) {

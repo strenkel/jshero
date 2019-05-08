@@ -2,18 +2,18 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
+jshero.tester = (function(koan, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
 
   // const
   var I18N = i18n.get;
-  var HAS_WORKER = typeof Worker !== "undefined";
+  var NO_WORKER = typeof Worker !== "undefined";
   var WORKER_URL = LANGUAGE === "de" ? "../js/lib/testWorker.js" : "../../js/lib/testWorker.js";
 
-  var code;
-  var testNr = -1;
-  var results = [];
+  var code; // String
+  var testNr; // Integer
+  var results; // [TestResult]
   var callback;
 
   // --- PUBLIC METHODS ---
@@ -34,6 +34,17 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
     callback = function() {
       myCallback(results);
     };
+    
+    // check Worker
+    if (NO_WORKER) {
+      results.push({
+        ok: false,
+        oldBrowser: true,
+        msg: I18N("oldBrowser")
+      });
+      callback();
+      return;
+    }
 
     // check no code
     if (code.length === 0) {
@@ -44,10 +55,7 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
       callback();
       return;
     }
-    // TODO: noch noetig?
-    if (koan.beforeTests) {
-      koan.beforeTests();
-    }
+
     readCode(evalResultAndRunNextTest);
   };
 
@@ -116,36 +124,6 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
     )
   };
 
-  /**
-   * Fallback for browsers not supporting Worker (IE<10).
-   * Can't stop endless loops.
-   */
-  var readCodeFallback = function(testResultCallback) {
-
-    var result;
-    log.clear();
-
-    try {
-      evaluator
-        .init(code)
-        .evalParse();
-      result = {
-        ok: true,
-        msg: I18N("noSyntaxError")
-      };
-    } catch (e) {
-      result = {
-        ok: false,
-        msg: I18N("syntaxError"),
-        e: e
-      };
-    }
-    result.logs = log.getAll();
-    testResultCallback(result);
-  };
-
-  readCode = HAS_WORKER ? readCode : readCodeFallback;
-
   var runTest = function(testResultCallback) {
 
     createWorker(function(worker) {
@@ -184,31 +162,6 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
     );
   };
 
-  /**
-   * Fallback for browsers not supporting Worker (IE<10).
-   * Can't stop endless loops.
-   */
-  var runTestFallback = function(testResultCallback) {
-
-    var result;
-
-    try {
-      evaluator.init(code);
-      log.clear();
-      result = koan.tests[testNr]();
-    } catch (exc) {
-      result = {
-        ok: false,
-        msg: I18N("unknownError"),
-        e: exc
-      };
-    }
-    result.logs = log.getAll();
-    testResultCallback(result);
-  };
-
-  runTest = HAS_WORKER ? runTest : runTestFallback;
-
   var evalResultAndRunNextTest = function(result) {
     results.push(result);
     testNr++;
@@ -233,7 +186,5 @@ jshero.tester = (function(koan, evaluator, log, i18n, LANGUAGE) {
   };
 
 })(jshero.actualKoan.getKoan(),
-  jshero.evaluator,
-  jshero.log,
   jshero.i18n,
   jshero.language.LANGUAGE);
