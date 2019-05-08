@@ -8,9 +8,11 @@ if (typeof jshero === "undefined") {
 jshero.i18n = (function() {
 
   var oldBrowser_de = "Dein Browser unterstützt kein aktuelles JavaScript."
+    + " Möglicherweise ist er veraltet."
     + " Verwende einen Browser, der aktuelles JavaScript unterstützt!";
 
   var oldBrowser_en = "Your browser doesn't support up-to-date JavaScript."
+    + " Maybe it's outdated."
     + " Use a browser that supports up-to-date JavaScript!";
 
   var dic;
