@@ -83,20 +83,6 @@ textarea.code-area {
   overflow: auto;
 }
 
-.android #google-play-teaser {
-  display: none;
-}
-
-#google-play-teaser {
-  position: absolute;
-  top: 4em;
-  right: 2%;
-}
-
-#google-play-teaser img {
-  width: 12em;
-}
-
 /* --- CONTENT --- */
 
 #content {
@@ -224,10 +210,6 @@ textarea.code-area {
     font-size: 18px;
   }
 
-  #google-play-teaser img {
-    width: 10em;
-  }
-
 }
 
 /* smartphones */
@@ -247,10 +229,6 @@ textarea.code-area {
 
   #content {
     padding: 8em 1em 17em 1em;
-  }
-
-  #google-play-teaser {
-    display: none;
   }
 
 }
