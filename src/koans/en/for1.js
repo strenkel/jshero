@@ -54,10 +54,6 @@ smaller or equal than the parameter. The result is to be returned. <code>addTo(3
   return sum;
 };</pre></code>`,
 
-    beforeTests: function() {
-      addTo = undefined;
-    },
-
     tests: [
 
       function() {

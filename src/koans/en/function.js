@@ -33,12 +33,6 @@ has the value <code>'red'</code>.`,
   solution: `<pre><code>var hello = function() {
   return 'Hello world!';
 };</code></pre>`,
-
-  beforeTests: function() {
-    if (typeof hello !== 'undefined') {
-      hello = undefined;
-    }
-  },
  
   tests: [
     function() {

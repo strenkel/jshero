@@ -36,12 +36,6 @@ If you are working with a desktop browser, open the developer tools to see the o
   console.log('Hello Console!');
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof log !== 'undefined') {
-        log = undefined;
-      }
-    },
-
     tests: [
 
       function() {

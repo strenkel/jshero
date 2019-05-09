@@ -14,12 +14,6 @@ var java = languages[2];</code></pre>`,
   task: `Write a function <code>getFirstElement</code> that takes an array and returns the first element of the array.
 <code>getFirstElement([1, 2])</code> should return <code>1</code>.`,
 
-  beforeTests: function() {
-    if (typeof getFirstElement !== 'undefined') {
-      getFirstElement = undefined;
-    }
-  },
-
   tests: [
 
     function() {

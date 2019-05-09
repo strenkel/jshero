@@ -19,9 +19,6 @@ x = 'Toe';</code></pre>`,
 
     solution: `<pre><code>'Toe'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

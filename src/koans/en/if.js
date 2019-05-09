@@ -25,12 +25,6 @@ If they are unequal, you should get <code>'UNEQUAL'</code>.
 The call <code>equals(1, 1)</code> should return <code>'EQUAL'</code>,
 the call <code>equals(1, 2)</code> should return <code>'UNEQUAL'</code>.`,
 
-  beforeTests: function() {
-    if (typeof equals !== 'undefined') {
-      equals = undefined;
-    }
-  },
-
   tests: [
 
     function() {

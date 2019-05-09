@@ -11,12 +11,6 @@ The function should only return <code>true</code> if all 3 values are equal.
 <code>equals(1, 1, 1)</code> should return <code>true</code> and
 <code>equals(1, 2, 1)</code> should return <code>false</code>.`,
 
-  beforeTests: function() {
-    if (typeof equals !== 'undefined') {
-      equals = undefined;
-    }
-  },
-
   tests: [
 
     function() {

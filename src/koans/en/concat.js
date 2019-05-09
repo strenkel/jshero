@@ -19,12 +19,6 @@ If both arrays are equally long, the second array should be appended to the firs
 <code>concatUp([1, 2], [3])</code> should return <code>[3, 1, 2]</code>
 and <code>concatUp([5, 7], [6, 8])</code> should return <code>[5, 7, 6, 8]</code>.`,
 
-  beforeTests: function() {
-    if (typeof concatUp !== 'undefined') {
-      concatUp = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('concatUp');

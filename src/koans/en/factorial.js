@@ -30,12 +30,6 @@ For example, 3! = 1*2*3 = 6. By definition, 0! = 1.`,
   return result;
 };</pre></code>`,
 
-    beforeTests: function() {
-      if (typeof fakultaet !== 'undefined') {
-        addiereBis = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('factorial');

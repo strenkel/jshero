@@ -10,12 +10,6 @@ jshero.koans.add({
 The digit sum of an integer is the sum of all its digits.
 <code>digitsum(192)</code> should return <code>12</code>.`,
 
-  beforeTests: function() {
-    if (typeof digitsum !== 'undefined') {
-      digitsum = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('digitsum');

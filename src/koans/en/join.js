@@ -21,12 +21,6 @@ Otherwise, the passed argument specifies the separator.
 <code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.
 The passed array contains at least two words.`,
 
-  beforeTests: function() {
-    if (typeof list !== 'undefined') {
-      list = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('list');

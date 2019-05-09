@@ -17,9 +17,6 @@ var x = hello();</code></pre>`,
 
     solution: `<pre><code>'Hi!'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

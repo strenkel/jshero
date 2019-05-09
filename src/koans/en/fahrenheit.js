@@ -18,12 +18,6 @@ F the temperature in Fahrenheit, the following applies: F = 1.8 * C + 32. <code>
   return 1.8 * celsius + 32;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof add !== 'undefined') {
-      add = undefined;
-    }
-  },
-
   tests: [
 
     function() {

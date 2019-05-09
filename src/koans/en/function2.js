@@ -16,11 +16,6 @@ As a reminder: A function with name <code>color</code> returning the value
 <code>'Hello a!'</code> and the second function <code>b</code> should return
  <code>'Hello b!'</code>.`,
 
-  beforeTests: function() {
-    a = undefined;
-    b = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('a');

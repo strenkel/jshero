@@ -12,12 +12,6 @@ The greatest common divisor of two natural numbers a and b is the largest natura
   task: `Write a function <code>gcd</code> that takes two natural numbers and calculates their gcd.
 <code>gcd(6, 15)</code> should return <code>3</code>.`,
 
-  beforeTests: function() {
-    if (typeof gcd !== 'undefined') {
-      gcd = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('gcd');

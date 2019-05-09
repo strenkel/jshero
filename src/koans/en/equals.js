@@ -32,12 +32,6 @@ should return <code>true</code> and <code>equals(1, 2)</code> should return <cod
   return a === b;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof equals !== 'undefined') {
-      equals = undefined;
-    }
-  },
-
   tests: [
 
     function() {

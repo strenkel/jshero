@@ -11,12 +11,6 @@ If the given number is even, <code>true</code> should be returned, otherwise <co
 The call <code>isEven(2)</code> should return <code>true</code> and
 <code>isEven(3)</code> should return <code>false</code>.`,
 
-  beforeTests: function() {
-    if (typeof isEven !== 'undefined') {
-      isEven = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('isEven');

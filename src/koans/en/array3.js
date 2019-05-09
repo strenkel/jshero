@@ -18,12 +18,6 @@ Here an empty array is filled successively with the listed values.`,
 The variable should be inserted as the first element in the array. The array should be returned.
 <code>setFirstElement([1, 2], 3)</code> should return <code>[3, 2]</code>.`,
 
-  beforeTests: function() {
-    if (typeof setFirstElement !== 'undefined') {
-      setFirstElement = undefined;
-    }
-  },
-
   tests: [
 
     function() {

@@ -38,11 +38,6 @@ var salutation = ...</code></pre>`,
 
 var salutation = greet();</code></pre>`,
 
-  beforeTests: function() {
-    greet = undefined;
-    salutation = undefined;
-  },
-
   tests: [
 
     function() {

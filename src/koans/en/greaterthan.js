@@ -15,10 +15,6 @@ var v4 = 5 <= 5;</code></pre>`,
 or equal to 100 and less than 1000. <code>isThreeDigit(500)</code> should return <code>true</code>.
 The call <code>isThreeDigit(50)</code> should return <code>false</code>.`,
 
-  beforeTests: function() {
-    isThreeDigit = undefined;
-  },
-
   tests: [
 
     function() {

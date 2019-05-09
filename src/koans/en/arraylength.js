@@ -21,12 +21,6 @@ Now we fill the array step by step. <code>l1</code> is <code>1</code> and <code>
     task: `Write a function <code>getLastElement</code> that takes an array and returns the last element of the array.
 <code>getLastElement([1, 2])</code> should return <code>2</code>.`,
 
-    beforeTests: function() {
-      if (typeof setFirstElement !== 'undefined') {
-        setFirstElement = undefined;
-      }
-    },
-
     tests: [
 
       function() {

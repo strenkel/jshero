@@ -33,12 +33,6 @@ All elements should be moved one position to the left.
 The 0th element should be placed at the end of the array. The rotated array should be returned.
 <code>rotate(['a', 'b', 'c'])</code> should return <code>['b', 'c', 'a']</code>.`,
 
-  beforeTests: function() {
-    if (typeof rotate !== 'undefined') {
-      rotate = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('rotate');

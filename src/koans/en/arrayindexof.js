@@ -21,12 +21,6 @@ However, the element should only be added if it is not already in the array.
 <code>add([1, 2], 3)</code> should return <code>[1, 2, 3]</code> and <code>add([1, 2], 2)</code> should return
 <code>[1, 2]</code>.`,
 
-  beforeTests: function() {
-    if (typeof add !== 'undefined') {
-      add = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('add');

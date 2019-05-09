@@ -15,9 +15,6 @@ var x = whereIs('Jacky');</code></pre>`,
 
     solution: `<pre><code>'Where is Jacky?'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

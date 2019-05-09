@@ -34,12 +34,6 @@ The call <code>nand(true, true)</code> should return <code>false</code>. The cal
   return !and;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof nand !== 'undefined') {
-      nand = undefined;
-    }
-  },
-
   tests: [
 
     function() {

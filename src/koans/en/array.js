@@ -17,12 +17,6 @@ var someValues = [a, b, c];</code></pre>`,
   task: `Write a function <code>toArray</code> that takes 2 values and returns these values in an array.
 <code>toArray(5,&nbsp;9)</code> should return the array <code>[5,&nbsp;9]</code>.`,
 
-  beforeTests: function() {
-    if (typeof toArray !== 'undefined') {
-      toArray = undefined;
-    }
-  },
-
   tests: [
 
     function() {

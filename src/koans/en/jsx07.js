@@ -15,9 +15,6 @@ var x = double('Roy');</code></pre>`,
 
     solution: `<pre><code>'Roy and Roy'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

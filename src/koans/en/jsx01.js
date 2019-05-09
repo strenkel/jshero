@@ -13,9 +13,6 @@
 
     solution: `<pre><code>'Geeta'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {
