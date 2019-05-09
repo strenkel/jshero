@@ -49,12 +49,6 @@ Da Kommentare mit den hier verwendeten Tests nicht überprüfen werden können, 
 Der Median einer sortierten Zahlenreihe ist der Wert, der an der mittleren Stelle steht. Ist die Anzahl der Werte gerade, so ist der Median der Mittelwert
 der beiden mittleren Zahlen.`,
 
-  beforeTests: function() {
-    if (typeof median !== 'undefined') {
-      median = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('median');

@@ -19,12 +19,6 @@ und F die Temperatur in Grad Fahrenheit, so gilt: F = 1.8 * C + 32. <code>toFahr
   return 1.8 * celsius + 32;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof add !== "undefined") {
-      add = undefined;
-    }
-  },
-
   tests: [
 
     function() {

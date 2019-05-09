@@ -15,12 +15,6 @@ zurückgeben.`,
   return n % 2 === 0;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof istGerade !== 'undefined') {
-      istGerade = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('istGerade');

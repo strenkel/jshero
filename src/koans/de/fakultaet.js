@@ -29,12 +29,6 @@ Sie wird durch ein nachgestelltes Ausrufezeichen abgekürzt: 3! = 1*2*3 = 6. Per
   return result;
 };</pre></code>`,
 
-    beforeTests: function() {
-      if (typeof fakultaet !== 'undefined') {
-        addiereBis = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('fakultaet');

@@ -17,11 +17,6 @@
     task: `Definiere zwei Funktionen. Die erste Funktion <code>a</code> soll <code>'Hallo a!'</code>
 zurückgeben. Die zweite Funktion <code>b</code> soll <code>'Hallo b!'</code> zurückgeben.`,
 
-    beforeTests: function() {
-      a = undefined;
-      b = undefined;
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('a');

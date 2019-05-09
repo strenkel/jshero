@@ -9,12 +9,6 @@ jshero.koans.add({
   task: `Schreibe eine Funktion <code>quersumme</code>, die die Quersumme einer natürlichen Zahl berechnet.
 Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)</code> sollte <code>18</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof quersumme !== 'undefined') {
-      quersumme = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('quersumme');

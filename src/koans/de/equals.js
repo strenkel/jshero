@@ -34,12 +34,6 @@ rechten Seite ein String.`,
   return a === b;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof gleich !== 'undefined') {
-      gleich = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('gleich');

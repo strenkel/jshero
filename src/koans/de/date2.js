@@ -23,12 +23,6 @@ Die Zahl <code>10</code> steht also für den November.`,
   task: `Schreibe eine Funktion <code>toGerman</code>, die ein Date-Objekt entgegennimmt und dessen Datum im Format 'd.M.YYYY' zurückgibt.
 Mit <code>date = new Date(2017, 2, 8)</code> sollte <code>toGerman(date)</code> den String <code>'8.3.2017'</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof toGerman !== 'undefined') {
-      toGerman = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('toGerman');

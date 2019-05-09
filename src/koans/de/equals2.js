@@ -10,12 +10,6 @@ jshero.koans.add({
     'dann <code>true</code> ergeben, wenn alle 3 Werte strikt gleich sind. <code>gleich(1, 1, 1)</code> soll ' +
     '<code>true</code> zurückgeben, <code>gleich(1, 1, 2)</code> soll <code>false</code> ergeben.',
 
-  beforeTests: function() {
-    if (typeof gleich !== 'undefined') {
-      gleich = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('gleich');

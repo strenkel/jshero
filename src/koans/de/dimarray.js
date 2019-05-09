@@ -31,12 +31,6 @@ zweidimensionalen Array gespeichert.`,
 einfaches Array überführt. <code>flat(loshu)</code> sollte <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code> ergeben.
 Dabei ist <code>loshu</code> das magische Quadrat aus dem obigen Beispiel.`,
 
-    beforeTests: function() {
-      if (typeof flat !== 'undefined') {
-        flat = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('flat');

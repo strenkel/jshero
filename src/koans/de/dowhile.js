@@ -34,12 +34,6 @@ erneut durchlaufen. Ergeben beide Modulo-Berechnungen <code>0</code>, ist die Sc
   task: `Schreibe eine Funktion <code>kgV</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren kgV berechnet.
 <code>kgV(6, 8)</code> sollte <code>24</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof kgV !== 'undefined') {
-      kgV = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('kgV');

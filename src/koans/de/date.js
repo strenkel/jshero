@@ -46,12 +46,6 @@ da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufwe
   task: `Schreibe eine Funktion <code>nikolaus</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
 des übergebenen Jahres, 0:00 Uhr, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 Uhr zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof nikolaus !== 'undefined') {
-      nikolaus = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('nikolaus');

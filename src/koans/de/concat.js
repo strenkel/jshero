@@ -18,12 +18,6 @@ Dabei soll das längere Array an das kürzere Array angehängt werden. Sind beid
 so soll das zweite Array dem ersten Array angehängt werden. <code>concatUp([5, 7], [6])</code> sollte <code>[6, 5, 7]</code>
 und <code>concatUp([5, 7], [6, 8])</code> sollte <code>[5, 7, 6, 8]</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof concatUp !== 'undefined') {
-      concatUp = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('concatUp');

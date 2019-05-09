@@ -41,11 +41,6 @@ var begruessung = ...</code></pre>`,
 
 var begruessung = begruesse();</code></pre>`,
 
-    beforeTests: function() {
-      begruesse = undefined;
-      begruessung = undefined;
-    },
-
     tests: [
 
       function() {

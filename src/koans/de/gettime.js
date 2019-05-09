@@ -20,12 +20,6 @@ Es sollen nur volle Tage gezählt werden.
 <code>days(new Date(2018, 0, 1), new Date(2018, 0, 2))</code> und
 <code>days(new Date(2018, 0, 1), new Date(2018, 0, 2, 12))</code> sollten <code>1</code> zurückgeben.`,
 
-    beforeTests: function() {
-      if (typeof days !== 'undefined') {
-        days = undefined;
-      }
-    },
-
     tests: [
 
       function() {

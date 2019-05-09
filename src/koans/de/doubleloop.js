@@ -20,12 +20,6 @@ Im Codeschnipsel wird die Summe aller Elemente eines zweidimensionalen Arrays be
   task: `Schreibe eine Funktion <code>sum</code>, die die Summe aller Elemente eines zweidimensionalen, numerischen Arrays berechnet.
 <code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof sum !== 'undefined') {
-      sum = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('sum');

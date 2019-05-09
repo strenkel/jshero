@@ -55,12 +55,6 @@ solution: `<pre><code>var addiereBis = function(n) {
   return summe;
 };</pre></code>`,
 
-    beforeTests: function() {
-      if (typeof addiereBis !== 'undefined') {
-        addiereBis = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('addiereBis');

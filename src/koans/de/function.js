@@ -36,12 +36,6 @@ Jetzt wird die Funktion ausgeführt. Ihre Rückgabe wird der Variablen <code>erg
   return 'Hallo Welt!';
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof hallo !== 'undefined') {
-        hallo = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('hallo');

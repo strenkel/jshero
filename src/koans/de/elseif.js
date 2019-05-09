@@ -27,12 +27,6 @@ Betrag, der größer <code>10</code> und kleiner gleich <code>20</code> ist, bet
 Für jeden Betrag, der größer <code>20</code> ist, beträgt der Zuschlag <code>3</code>. <code>addiereMitZuschlag(10, 30)</code>
 sollte <code>44</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof addiereMitZuschlag !== 'undefined') {
-      addiereMitZuschlag = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('addiereMitZuschlag');

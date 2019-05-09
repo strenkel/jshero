@@ -33,12 +33,6 @@ Da der April 30 Tage hat, entspricht das dem 2.5.2020. Wird nun der Tag auf 0 ge
 und dann dieses Date-Objekt zurückgibt. Die Uhrzeit soll dabei nicht verändert werden. Mit <code>date = new Date(1965, 8, 14)</code>
 sollte <code>yesterday(date)</code> ein Date-Objekt zurückgeben, das den 13.9.1965 repräsentiert.`,
 
-  beforeTests: function() {
-    if (typeof yesterday !== 'undefined') {
-      yesterday = undefined;
-    }
-  },
-
   tests: [
 
     function() {
