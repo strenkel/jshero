@@ -28,12 +28,6 @@ jshero.koans.add({
   return !and;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof nand !== "undefined") {
-      nand = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('nand');

@@ -27,12 +27,6 @@ Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index 
     task: `Schreibe eine Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element des Arrays zurückgibt.
 <code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.`,
 
-    beforeTests: function() {
-      if (typeof getLastElement !== 'undefined') {
-        getLastElement = undefined;
-      }
-    },
-
     tests: [
       function() {
         return jshero.testutil.assert_isFunction('getLastElement');

@@ -41,12 +41,6 @@ Ist die Zahl prim, so soll <code>true</code> zurückgegeben werden, im anderen F
 Der Aufruf <code>isPrime(2)</code> soll <code>true</code> zurückgeben, <code>isPrime(4)</code> soll <code>false</code> ergeben.
 Eine Primzahl ist eine natürliche Zahl, die größer als 1 und nur durch sich selbst und durch 1 teilbar ist.`,
 
-  beforeTests: function() {
-    if (typeof isPrime !== 'undefined') {
-      isPrime = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('isPrime');

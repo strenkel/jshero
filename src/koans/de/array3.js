@@ -19,12 +19,6 @@ Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt.`,
 Die Variable soll als erstes Element in das Array geschrieben werden. Das Array soll dann zurückgegeben werden.
 <code>setFirstElement([1, 2], 3)</code> sollte <code>[3, 2]</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof setFirstElement !== 'undefined') {
-      setFirstElement = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('setFirstElement');

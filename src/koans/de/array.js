@@ -30,12 +30,6 @@ Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen and
   return [a, b];
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof toArray !== 'undefined') {
-        toArray = undefined;
-      }
-    },
-
     tests: [
 
       function() {

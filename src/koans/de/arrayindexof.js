@@ -20,12 +20,6 @@ Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Ar
 <code>add([1, 2], 3)</code> sollte <code>[1, 2, 3]</code> und <code>add([1, 2], 2)</code> sollte
 <code>[1, 2]</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof add !== 'undefined') {
-      add = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('add');

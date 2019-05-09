@@ -37,12 +37,6 @@ Nun können wir <code>add</code> mit einer beliebigen Anzahl von Argumenten aufr
   task: `Schreibe eine Funktion <code>maximum</code>, die beliebig viele Zahlen entgegennimmt und das Maximum dieser Zahlen liefert.
 <code>maximum(12, 68, 3, 52)</code> sollte <code>68</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof maximum !== 'undefined') {
-      maximum = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('maximum');

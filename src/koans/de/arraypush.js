@@ -48,12 +48,6 @@ Füge mit push das 0te Element wieder hinzu.
   return einArray;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof rotiere !== 'undefined') {
-        rotiere = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('rotiere');
