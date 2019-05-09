@@ -31,12 +31,6 @@ and determining the first occurrence of the second string in the first string. T
   return s1Lower.indexOf(s2Lower);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof indexOfIgnoreCase !== 'undefined') {
-      indexOfIgnoreCase = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('indexOfIgnoreCase');

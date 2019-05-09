@@ -20,12 +20,6 @@ Therefore, the variables <code>a</code> to <code>d</code> all get the value <cod
   task: `Write a function <code>round100</code> that rounds a number to the nearest hundred.
 <code>round100(1749)</code> should return <code>1700</code> and <code>round100(856.12)</code> should return <code>900</code>.`,
 
-  beforeTests: function() {
-    if (typeof round100 !== 'undefined') {
-      round100 = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('round100');

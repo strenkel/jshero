@@ -19,12 +19,6 @@ The original string remains unchanged. Only the first occurrence is replaced:
   task: `Write a function <code>normalize</code>, that replaces <code>'-'</code> with <code>'/'</code> in a date string.
 <code>normalize('20-05-2017')</code> should return <code>'20/05/2017'</code>.`,
 
-  beforeTests: function() {
-    if (typeof convert !== 'undefined') {
-      convert = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('normalize');

@@ -33,12 +33,6 @@ is the mean of the smallest and largest number.
   return (min + max) / 2;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof midrange !== 'undefined') {
-        midrange = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('midrange');

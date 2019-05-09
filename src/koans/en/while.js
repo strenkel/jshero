@@ -21,12 +21,6 @@ If <code>threeX</code> has the length 3, the loop is terminated.
   task: `Write a function <code>spaces</code> that takes a natural number n and returns a string of n spaces.
 <code>spaces(1)</code> should return <code>' '</code>.`,
 
-  beforeTests: function() {
-    if (typeof spaces !== 'undefined') {
-      abstand = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('spaces');

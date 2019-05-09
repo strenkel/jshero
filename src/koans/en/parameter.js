@@ -27,12 +27,6 @@ This return is assigned to the variable <code>result</code>. Finally, <code>resu
   return sound;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof echo !== 'undefined') {
-      echo = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('echo');

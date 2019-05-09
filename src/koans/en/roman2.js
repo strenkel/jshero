@@ -11,12 +11,6 @@
     task: `Write a function <code>roman</code> that converts an Arabic number (up to 1000) into a Roman numeral.
     <code>roman(483)</code> should return <code>'CDLXXXIII'</code>.`,
 
-    beforeTests: function() {
-      if (typeof roman !== 'undefined') {
-        roman = undefined;
-      }
-    },
-
     tests: [
 
       function() {

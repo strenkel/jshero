@@ -32,12 +32,6 @@ Since 3&sup2; + 4&sup2; = 5&sup2; applies, <code>hypotenuse(3,&nbsp;4)</code> sh
   return Math.sqrt(cSquare);
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof hypotenuse !== 'undefined') {
-        hypotenuse = undefined;
-      }
-    },
-
     tests: [
 
       function() {

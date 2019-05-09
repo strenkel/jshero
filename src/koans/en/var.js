@@ -21,12 +21,6 @@ Note: JavaScript is case-sensitive. <code>city</code> and <code>City</code> are 
 
   solution: `<pre><code>var firstname = 'Lata';</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof firstname !== 'undefined') {
-      firstname = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_variableDefined('firstname');

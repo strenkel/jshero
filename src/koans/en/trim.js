@@ -26,12 +26,6 @@ when a string is passed. <code>firstChar(' Rosa Parks ')</code> should return <c
   return trimmedText.charAt(0);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof firstChar !== 'undefined') {
-      firstChar = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('firstChar');

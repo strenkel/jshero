@@ -25,12 +25,6 @@ The console outputs <code>'Ken Thompson'</code>.`,
   console.log(value);
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof log !== 'undefined') {
-        log = undefined;
-      }
-    },
-
     tests: [
 
       function() {

@@ -18,12 +18,6 @@ The original array will not be modified.`,
 With an odd number of array elements, the middle element should belong to the first half.
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.`,
 
-  beforeTests: function() {
-    if (typeof halve !== 'undefined') {
-      halve = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('halve');

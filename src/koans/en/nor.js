@@ -14,12 +14,6 @@ In the other cases the return should be <code>false</code>. The call <code>nor(f
 should return <code>true</code>. The calls <code>nor(true, false)</code>, <code>nor(false, true)</code>
 and <code>nor(true, true)</code> should return <code>false</code>.`,
 
-  beforeTests: function() {
-    if (typeof nor !== 'undefined') {
-      nor = undefined;
-    }
-  },
-
   tests: [
 
     function() {

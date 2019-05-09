@@ -33,12 +33,6 @@ lowercase and uppercase with <code>-</code> as delimiter.
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof toCase !== 'undefined') {
-      toCase = undefined;
-    }
-  },
-
   tests: [
 
     function() {

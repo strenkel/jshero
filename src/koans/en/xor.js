@@ -24,12 +24,6 @@ If both values are the same, the result should be <code>false</code>. The calls 
 <code>xor(false, true)</code> should return <code>true</code>.
 The calls <code>xor(true, true)</code> and <code>xor(false, false)</code> should return <code>false</code>.`,
 
-  beforeTests: function() {
-    if (typeof xor !== 'undefined') {
-      xor = undefined;
-    }
-  },
-
   tests: [
 
     function() {

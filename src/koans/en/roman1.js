@@ -13,12 +13,6 @@
 <a href='https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system'>Arabic</a>.
 <code>arabic('CDLXXXIII')</code> should return <code>483</code>.`,
 
-    beforeTests: function() {
-      if (typeof arabic !== 'undefined') {
-        arabic = undefined;
-      }
-    },
-
     tests: [
 
       function() {

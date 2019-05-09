@@ -18,12 +18,6 @@ The function should return <code>true</code> if all three parameters are strict 
 Otherwise <code>false</code>. The call <code>unequal(1, 2, 3)</code> should return <code>true</code>
 and <code>unequal(1, 1, 2)</code> should return <code>false</code>.`,
 
-  beforeTests: function() {
-    if (typeof unequal !== 'undefined') {
-      unequal = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('unequal');

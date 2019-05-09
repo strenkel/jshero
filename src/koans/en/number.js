@@ -17,12 +17,6 @@
     task: 'Write a function <code>add</code> that takes two numbers and returns their sum. ' +
       '<code>add(1,&nbsp;2)</code> should return <code>3</code>.',
 
-    beforeTests: function() {
-      if (typeof add !== 'undefined') {
-        add = undefined;
-      }
-    },
-
     hint: `<pre><code>var add = function(x, y) {
   return ...
 };</code></pre>`,

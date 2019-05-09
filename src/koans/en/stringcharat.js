@@ -24,12 +24,6 @@ If the index is larger than the index of the last character, the empty string is
   return s1.charAt(0) + s2.charAt(0);
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof shortcut !== 'undefined') {
-        shortcut = undefined;
-      }
-    },
-
     tests: [
 
       function() {

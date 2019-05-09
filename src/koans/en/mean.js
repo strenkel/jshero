@@ -24,12 +24,6 @@ x and y is (x + y) / 2.</code></pre>`,
   return (x + y) / 2;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof mean !== 'undefined') {
-        mean = undefined;
-      }
-    },
-
     tests: [
 
       function() {

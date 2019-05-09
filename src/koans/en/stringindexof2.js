@@ -29,11 +29,6 @@ If the search string does not occur twice, <code>-1</code> should be returned.
   return s1.indexOf(s2, firstIndex + 1);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof secondIndexOf !== 'undefined') {
-      secondIndexOf = undefined;
-    }
-  },
 
   tests: [
     function() {

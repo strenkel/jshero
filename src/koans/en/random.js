@@ -60,12 +60,6 @@ This should be practiced now.`,
 
     task: 'Write a function <code>dice</code> that returns like a dice a random number between 1 and 6.',
 
-    beforeTests: function() {
-      if (typeof dice !== 'undefined') {
-        dice = undefined;
-      }
-    },
-
     tests: [
       function() {
         return jshero.testutil.assert_isFunction('dice');

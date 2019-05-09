@@ -30,12 +30,6 @@ The first word are all characters up to the first space.
   return s.substr(0, firstBlank);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof firstWord !== 'undefined') {
-      firstWord = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('firstWord');

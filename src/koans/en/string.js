@@ -31,12 +31,6 @@ The following function appends <code>' is great!'</code> to the passed parameter
   return 'Hello ' + name + '!';
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof greet !== 'undefined') {
-        greet = undefined;
-      }
-    },
-
     tests: [
 
       function() {

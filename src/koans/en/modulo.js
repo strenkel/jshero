@@ -15,12 +15,6 @@
     task: 'Write a function <code>firstDigit</code> that takes a natural number and returns the first digit of that number. ' +
       '<code>firstDigit(2674)</code> should return <code>4</code>.',
 
-    beforeTests: function() {
-      if (typeof einer !== 'undefined') {
-        einer = undefined;
-      }
-    },
-
     hint: `<pre><code>var firstDigit = function(n) {
 // Use modulo 10.  
 };</code></pre>`,
