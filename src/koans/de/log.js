@@ -23,12 +23,6 @@
   return ruf;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof rufe !== 'undefined') {
-        rufe = undefined;
-      }
-    },
-
     tests: [
 
       function() {

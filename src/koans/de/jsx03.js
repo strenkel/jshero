@@ -23,9 +23,6 @@ x = z;</code></pre>`,
 
     solution: `<pre><code>'grün'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

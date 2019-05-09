@@ -26,10 +26,6 @@ Nullen sind bei der Zahl nicht zugelassen. <code>pruefe('OF C 709')</code> sollt
   return /^[A-Z]{1,3} [A-Z]{1,2} [1-9][0-9]{0,3}$/.test(s);
 };</code></pre>`,
 
-    beforeTests: function() {
-      hasQuote = undefined;
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('pruefe');

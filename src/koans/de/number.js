@@ -37,12 +37,6 @@ und deren Summe zurückgibt. <code>add(1, 2)</code> sollte <code>3</code> ergebe
   return x + y;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof add !== 'undefined') {
-      add = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('add');

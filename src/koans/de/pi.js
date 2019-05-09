@@ -4,21 +4,16 @@ jshero.koans.add({
 
   title: 'Math.PI',
 
-  lesson: 'Neben Funktionen bietet <code>Math</code> auch einige mathematische Konstanten an. ' +
-    '<code>Math.PI</code> liefert die Kreiszahl &pi; (gerundet 3.14) und <code>Math.E</code> die Eulersche Zahl e (gerundet 2.71). ' +
-    'Beachte: Die Konstanten werden im Gegensatz zu Funktionen ohne anschließende Klammern aufgerufen.',
+  lesson: `Neben Funktionen bietet <code>Math</code> auch einige mathematische Konstanten an.
+<code>Math.PI</code> liefert die Kreiszahl &pi; (gerundet 3.14) und <code>Math.E</code> die Eulersche Zahl e (gerundet 2.71).
+Beachte: Die Konstanten werden im Gegensatz zu Funktionen ohne anschließende Klammern aufgerufen.`,
 
-  task: 'Schreibe eine Funktion <code>flaeche</code>, die die Fläche eines Kreises berechnet. ' +
-    'Übergeben wird der Funktion als Parameter der Radius des Kreises. Tipp: Die Fläche eines Kreises ist &pi; * r&sup2;. ' +
-    'Dabei ist r der Radius des Kreises.',
-
-  beforeTests: function() {
-    if (typeof flaeche !== 'undefined') {
-      flaeche = undefined;
-    }
-  },
+  task: `Schreibe eine Funktion <code>flaeche</code>, die die Fläche eines Kreises berechnet.
+Übergeben wird der Funktion als Parameter der Radius des Kreises. Tipp: Die Fläche eines Kreises ist &pi; * r&sup2;.
+Dabei ist r der Radius des Kreises.`,
 
   tests: [
+
     function() {
       return jshero.testutil.assert_isFunction('flaeche');
     },

@@ -28,12 +28,6 @@ zwei verschiedene Variablen. Man sagt auch: JavaScript ist case sensitive.`,
 
     solution: `<pre><code>var vorname = 'Franz';</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof vorname !== 'undefined') {
-        vorname = undefined;
-      }
-    },
-
     tests: [
 
       function() {

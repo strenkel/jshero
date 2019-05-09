@@ -24,10 +24,6 @@ deutsche Postleitzahl enthällt. Eine deutsche Postleitzahl ist eine Zahl mit 5 
   return /\\d\\d\\d\\d\\d/.test(s);
 };</code></pre>`,
 
-  beforeTests: function() {
-    hatPLZ = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('hatPLZ');

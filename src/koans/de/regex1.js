@@ -45,10 +45,6 @@ solution: `<pre><code>var enthaeltRose = function(s) {
   return /Rose/.test(s);
 };</pre></code>`,
 
-    beforeTests: function() {
-      enthaeltRose = undefined;
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('enthaeltRose');

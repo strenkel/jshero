@@ -36,12 +36,6 @@ zurückgeben.`,
   return ton;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof echo !== 'undefined') {
-        echo = undefined;
-      }
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('echo');

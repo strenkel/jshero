@@ -43,12 +43,6 @@ Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.`
   return summand1 + summand2;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof add !== 'undefined') {
-      add = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('add');

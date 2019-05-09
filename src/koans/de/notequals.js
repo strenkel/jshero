@@ -18,12 +18,6 @@ Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter u
 <code>ungleich(1, 2, 3)</code> soll <code>true</code> liefern, <code>ungleich(1, 1, 2)</code> soll
 <code>false</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof ungleich !== 'undefined') {
-      ungleich = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('ungleich');

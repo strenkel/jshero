@@ -14,12 +14,6 @@ Die Rückgabe der Funktion soll genau dann <code>true</code> sein, wenn beide Pa
 In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>nor(false, false)</code> soll <code>true</code> liefern,
 <code>nor(false, true)</code>, <code>nor(true, false)</code> und <code>nor(true, true)</code> sollen <code>false</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof nor !== 'undefined') {
-      nor = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('nor');

@@ -34,10 +34,6 @@ doppelte Anführungszeichen eingeschlossene Zeichen besitzt.
 <code>pruefe('"Wo"')</code> sollte <code>true</code> und
 <code>pruefe('"Was"')</code> sollte <code>false</code> ergeben.`,
 
-  beforeTests: function() {
-    pruefe = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('pruefe');

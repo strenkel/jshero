@@ -25,12 +25,6 @@ erhalten also alle den Wert <code>5</code>.`,
   return Math.round(x / 100) * 100;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof round100 !== 'undefined') {
-      round100 = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('round100');

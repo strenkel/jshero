@@ -39,12 +39,6 @@ Weise das Objekt der Variablen <code>point</code> zu.`,
   y: 2
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof point !== 'undefined') {
-        point = undefined;
-      }
-    },
-
     tests: [
 
       function() {

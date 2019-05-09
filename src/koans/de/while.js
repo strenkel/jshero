@@ -22,12 +22,6 @@ Hat <code>dreiX</code> die Länge 3, wird die Schleife beendet.
 entgegennimmt und die einen String bestehend aus n Leerzeichen zurückgibt.
 <code>abstand(1)</code> sollte <code>' '</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof abstand !== 'undefined') {
-      abstand = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('abstand');

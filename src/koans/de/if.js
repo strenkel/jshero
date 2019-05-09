@@ -40,12 +40,6 @@ gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie
   return ergebnis;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof gleich !== 'undefined') {
-      gleich = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('gleich');

@@ -60,12 +60,6 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
 
     task: 'Schreibe eine Funktion <code>dice</code>, die wie ein Würfel eine Zufallszahl zwischen 1 und 6 zurückgibt.',
 
-    beforeTests: function() {
-      if (typeof dice !== 'undefined') {
-        dice = undefined;
-      }
-    },
-
     tests: [
       function() {
           return testutil.assert_isFunction('dice');

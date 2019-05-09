@@ -28,10 +28,6 @@ führende Null obligatorisch. <code>isTime('02:15:25')</code> sollte <code>true<
   return /^\\d\\d:[0-5]\\d:[0-5]\\d$/.test(s);      
 };</code></pre>`,
 
-    beforeTests: function() {
-      isTime = undefined;
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('isTime');

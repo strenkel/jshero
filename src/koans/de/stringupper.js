@@ -33,12 +33,6 @@ in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klei
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code/></pre>`,
 
-  beforeTests: function() {
-    if (typeof toCase !== 'undefined') {
-      toCase = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('toCase');

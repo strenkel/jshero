@@ -38,12 +38,6 @@ sollten <code>'20.05.2017'</code> ergeben.`,
   return dateDe;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof convert !== 'undefined') {
-      convert = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('convert');

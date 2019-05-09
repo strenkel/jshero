@@ -36,12 +36,6 @@ entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebene
   };
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof createPoint !== 'undefined') {
-        createPoint = undefined;
-      }
-    },
-
     tests: [
 
       function() {

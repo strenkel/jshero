@@ -13,12 +13,6 @@
 <a href='https://de.wikipedia.org/wiki/Arabische_Zahlschrift'>arabische</a> umwandelt.
 <code>roman('CDLXXXIII')</code> sollte <code>483</code> ergeben.`,
 
-    beforeTests: function() {
-      if (typeof roman !== 'undefined') {
-        roman = undefined;
-      }
-    },
-
     tests: [
 
       function() {

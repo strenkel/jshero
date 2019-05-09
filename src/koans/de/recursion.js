@@ -28,12 +28,6 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
     task: `Schreibe eine Funktion <code>reverse</code>, die die Reihenfolge der Zeichen in einem String umkehrt.
 <code>reverse('Nebel')</code> sollte <code>'lebeN'</code> zurückgeben. Die Funktion soll rekursiv sein.`,
 
-    beforeTests: function() {
-      if (typeof reverse !== 'undefined') {
-        reverse = undefined;
-      }
-    },
-
     tests: [
 
       // --- test sum ---

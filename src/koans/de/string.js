@@ -32,10 +32,6 @@ so sollte die Rückgabe <code>'Hallo Franz!'</code> sein.`,
   return 'Hallo ' + name + '!';
 };</code></pre>`,
 
-  beforeTests: function() {
-    begruesse = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('begruesse');

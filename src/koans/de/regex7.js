@@ -28,10 +28,6 @@ Ein Zeilenumbruch innerhalb des Zitats ist also nicht zulässig.
   return /".*"/.test(s);
 };</code></pre>`,
 
-    beforeTests: function() {
-      hasQuote = undefined;
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('hasQuote');

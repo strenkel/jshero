@@ -24,12 +24,6 @@ In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>xor(tru
 <code>xor(false, true)</code> sollen <code>true</code> liefern, <code>xor(true, true)</code> und
 <code>xor(false, false)</code> sollen <code>false</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof xor !== 'undefined') {
-      xor = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('xor');

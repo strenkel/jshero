@@ -41,10 +41,6 @@ zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben
   return /Klasse [1-6][a-d]/.test(s);
 };</code></pre>`,
 
-  beforeTests: function() {
-    pruefe = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('pruefe');

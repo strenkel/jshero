@@ -16,10 +16,6 @@ var v4 = 5 <= 5;</code></pre>`,
   task: `Schreibe eine Funktion <code>istDreistellig</code>, die prüft, ob eine Zahl größer gleich 100 und kleiner 1000 ist.
 <code>istDreistellig(500)</code> sollte <code>true</code> zurückgeben, <code>istDreistellig(50)</code> sollte <code>false</code> ergeben.`,
 
-  beforeTests: function() {
-    istDreistellig = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('istDreistellig');

@@ -28,12 +28,6 @@ Mit dieser Zahl und <code>new Date()</code> erzeugt man anschließend das gewün
   task: `Schreibe eine Funktion <code>nikolausUTC</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
 des übergebenen Jahres, 0:00 UTC, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 UTC zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof nikolausUTC !== 'undefined') {
-      nikolausUTC = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('nikolausUTC');

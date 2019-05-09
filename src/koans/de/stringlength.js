@@ -31,12 +31,6 @@ Strings zurückgibt. <code>laenge('Franz')</code> sollte <code>5</code> zurückg
   return s.length;
 };</code/></pre>`,
 
-  beforeTests: function() {
-    if (typeof laenge !== 'undefined') {
-      laenge = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('laenge');

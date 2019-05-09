@@ -15,9 +15,6 @@ var x = bleiben('Mainz');</code></pre>`,
 
     solution: `<pre><code>'Mainz bleibt Mainz'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

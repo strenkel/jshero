@@ -14,9 +14,6 @@ sollst du hier Code lesen.`,
 
     solution: `<pre><code>'Josefine'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

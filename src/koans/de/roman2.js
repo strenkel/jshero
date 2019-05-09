@@ -11,12 +11,6 @@
     task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl (bis 1000) in eine römische Zahl umwandelt.
 <code>roman(483)</code> sollte <code>'CDLXXXVIII'</code> ergeben.`,
 
-    beforeTests: function() {
-      if (typeof roman !== 'undefined') {
-        roman = undefined;
-      }
-    },
-
     tests: [
 
       function() {

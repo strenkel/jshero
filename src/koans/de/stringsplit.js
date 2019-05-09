@@ -22,12 +22,6 @@ die das Ergebnis der Addition als Zahl zurückgibt. Es sollen endlich viele nat�
 Die Additionsaufgabe ist ein String der Form '1+19+...+281'. So soll <code>add('7+12+100')</code> die Zahl
 <code>119</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof add !== 'undefined') {
-      add = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('add');

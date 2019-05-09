@@ -49,12 +49,6 @@ durch identische Ziffern dargestellt wird.`,
   return 'Kein Schnaps!';
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof schnapszahl !== 'undefined') {
-      schnapszahl = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('schnapszahl');

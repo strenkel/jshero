@@ -18,12 +18,6 @@ Das ursprüngliche Array wird nicht verändert.`,
 Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der ersten Hälfte gehören.
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> sollte <code>[1,&nbsp;2]</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof halve !== 'undefined') {
-      halve = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('halve');

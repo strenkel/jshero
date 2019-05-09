@@ -17,9 +17,6 @@ var x = reply('How do you do?');</code></pre>`,
 
     solution: `<pre><code>'How do you do?'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

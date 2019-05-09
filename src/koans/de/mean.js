@@ -23,12 +23,6 @@ x und y ist (x + y) / 2.</code></pre>`,
   return (x + y) / 2;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof mittelwert !== 'undefined') {
-      mittelwert = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('mittelwert');

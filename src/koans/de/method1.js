@@ -40,12 +40,6 @@ Von außen wird eine Methode über die zugeordnete Variable und der Punkt-Notati
   return point;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof moveX !== 'undefined') {
-        moveX = undefined;
-      }
-    },
-
     tests: [
 
       function() {

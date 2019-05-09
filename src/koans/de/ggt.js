@@ -12,12 +12,6 @@ Der größte gemeinsame Teiler zweier Zahlen a und b ist die größte Zahl, durc
   task: `Schreibe eine Funktion <code>ggT</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren ggT berechnet.
 <code>ggT(6, 15)</code> sollte <code>3</code> zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof ggT !== 'undefined') {
-      ggT = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('ggT');

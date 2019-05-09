@@ -32,12 +32,6 @@ Zun√§chst legen wir eine Ware mit dem Preis <code>2.15</code> an. Irgendwann sp√
   return point;
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof moveX !== 'undefined') {
-        moveX = undefined;
-      }
-    },
-
     tests: [
 
       function() {

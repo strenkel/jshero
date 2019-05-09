@@ -48,12 +48,6 @@ Die Methode <code>charAt</code> könnte also folgenden Code-Ausschnitt enthalten
 <code>hallo('Akgün')</code> sollte <code>'Hallo Akgün!'</code> zurückgeben.
 Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>'Hallo Welt!'</code> zurückgegeben werden.`,
 
-    beforeTests: function() {
-      if (typeof hallo !== 'undefined') {
-        hallo = undefined;
-      }
-    },
-
     tests: [
       function() {
         return jshero.testutil.assert_isFunction('hallo');

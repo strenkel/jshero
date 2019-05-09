@@ -35,12 +35,6 @@ Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, 
   console.log('Hallo Konsole!');
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof logge !== 'undefined') {
-        logge = undefined;
-      }
-    },
-
     tests: [
 
       function() {

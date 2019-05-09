@@ -27,10 +27,6 @@ ergeben.`,
   return /M[ae][iy]e?r/.test(s);
 };</code></pre>`,
 
-    beforeTests: function() {
-      pruefe = undefined;
-    },
-
     tests: [
       function() {
         return testutil.assert_isFunction('pruefe');

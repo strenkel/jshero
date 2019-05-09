@@ -25,12 +25,6 @@ Der Aufruf von <code>logge('Ken Thompson')</code> sollte <code>'Ken Thompson'</c
   console.log(wert);
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof logge !== 'undefined') {
-        logge = undefined;
-      }
-    },
-
     tests: [
 
       function() {

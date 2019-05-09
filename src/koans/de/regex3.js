@@ -38,10 +38,6 @@ Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
   return /M[ae][iy]er/.test(s);
 };</code></pre>`,
 
-  beforeTests: function() {
-    pruefe = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('pruefe');

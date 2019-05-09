@@ -33,12 +33,6 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
   return s1.indexOf(s2, firstIndex + 1);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof secondIndexOf !== "undefined") {
-      secondIndexOf = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('secondIndexOf');

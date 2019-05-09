@@ -28,12 +28,6 @@ Da 3&sup2; + 4&sup2; = 5&sup2; gilt, sollte <code>hypotenuse(3,&nbsp;4)</code> d
   return Math.sqrt(cQuadrat);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof hypotenuse !== 'undefined') {
-      hypotenuse = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('hypotenuse');

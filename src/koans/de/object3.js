@@ -32,12 +32,6 @@ Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.
   return Math.sqrt(xSquare + ySquare);
 };</code></pre>`,
 
-    beforeTests: function() {
-      if (typeof distance !== 'undefined') {
-        distance = undefined;
-      }
-    },
-
     tests: [
 
       function() {

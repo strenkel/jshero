@@ -19,12 +19,6 @@ können wir auf ihr die String-Methode <code>replace</code> anwenden. <code>numb
   task: `Schreibe eine Funktion <code>digitLength</code>, die die Anzahl der Ziffern einer natürlichen Zahl berechnet.
 <code>digitLength(709)</code> sollte 3 zurückgeben.`,
 
-  beforeTests: function() {
-    if (typeof digitLength !== 'undefined') {
-      digitLength = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('digitLength');

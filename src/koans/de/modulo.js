@@ -21,12 +21,6 @@ jshero.koans.add({
   return n % 10;
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof einer !== 'undefined') {
-      einer = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('einer');

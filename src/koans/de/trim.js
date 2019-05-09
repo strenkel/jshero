@@ -28,12 +28,6 @@ das kein Leerzeichen ist, zurückgibt. <code>firstChar(' Rosa')</code> sollte <c
   return textGetrimmt.charAt(0);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof firstChar !== 'undefined') {
-      firstChar = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('firstChar');

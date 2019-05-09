@@ -18,12 +18,6 @@ Das <a href='https://de.wikipedia.org/wiki/Mittelwert#Bereichsmittel'>Bereichsmi
 einer Reihe von Zahlen ist der Mittelwert der kleinsten und größten Zahl.
 <code>bereichsmittel(3, 9, 1)</code> sollte <code>(9+1)/2</code> = <code>5</code> ergeben.`,
 
-  beforeTests: function() {
-    if (typeof bereichsmittel !== 'undefined') {
-      bereichsmittel = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('bereichsmittel');

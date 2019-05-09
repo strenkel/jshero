@@ -30,12 +30,6 @@ if ( isNaN(age) ) {
 String vorkommende ganze Zahl zurückgibt. <code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code>
 zurückgeben. <code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> ergeben.`,
 
-    beforeTests: function() {
-      if (typeof parseFirstInt !== 'undefined') {
-        parseFirstInt = undefined;
-      }
-    },
-
     tests: [
 
       function() {

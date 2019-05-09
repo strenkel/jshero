@@ -29,15 +29,6 @@ an einer Stelle durchgeführt.`,
 Zahlen zurückgibt. Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den
 Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabei die Funktion <code>sum</code> benutzen.`,
 
-    beforeTests: function() {
-      if (typeof sum !== 'undefined') {
-        mean = undefined;
-      }
-      if (typeof mean !== 'undefined') {
-        mean = undefined;
-      }
-    },
-
     tests: [
 
       // --- test sum ---

@@ -23,10 +23,6 @@ und damit anders als die Funktion selbst.`,
   task: `Schreibe eine Funktion <code>ping</code>, die einen Parameter hat und dessen Wert einfach zurückgibt.
 Achte darauf, dass der Parameter anders heißt, als die Funktion selbst.`,
 
-  beforeTests: function() {
-    ping = undefined;
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('ping');

@@ -17,9 +17,6 @@ var x = h1 + ' ' + h2;</code></pre>`,
 
     solution: `<pre><code>'Hi Selva! Hi Pola!'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

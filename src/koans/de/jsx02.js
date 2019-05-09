@@ -19,9 +19,6 @@ x = 'Gregor';</code></pre>`,
 
     solution: `<pre><code>'Gregor'</code></pre>`,
 
-    beforeTests: function() {
-    },
-
     tests: [
 
       function() {

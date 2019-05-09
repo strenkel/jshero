@@ -21,12 +21,6 @@ Ansonsten gibt das übergebene Argument das Trennzeichen vor.
 <code>list(['Sonne', 'Mond', 'Sterne'])</code> soll <code>'Sonne, Mond und Sterne'</code> ergeben.
 Das übergebene Array enthält mindestens zwei Wörter.`,
 
-  beforeTests: function() {
-    if (typeof list !== 'undefined') {
-      list = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('list');

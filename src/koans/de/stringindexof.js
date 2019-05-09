@@ -33,12 +33,6 @@ solution: `<pre><code>var indexOfIgnoreCase = function(s1, s2) {
   return s1Klein.indexOf(s2Klein);
 };</code></pre>`,
 
-  beforeTests: function() {
-    if (typeof indexOfIgnoreCase !== 'undefined') {
-      indexOfIgnoreCase = undefined;
-    }
-  },
-
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('indexOfIgnoreCase');
