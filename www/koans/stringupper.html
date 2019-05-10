@@ -74,19 +74,26 @@ Hier wird <code>toUpperCase()</code> direkt auf einen String angewendet. Der Wer
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toCase</code>, die bei Übergabe eines Strings diesen aneinandergehängt
 in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klein- und Großschreibung soll
 <code>-</code> sein. <code>toCase('Ida')</code> sollte <code>'ida-IDA'</code> zurückgeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var toCase = function(text) {
   return ... + '-' + ...;
 };</code/></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var toCase = function(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code/></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

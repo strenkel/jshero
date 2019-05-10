@@ -67,19 +67,27 @@ Starting our search at position <code>3</code> it will be found. <code>n2</code>
 and determining the second occurrence of the second string in the first string.
 If the search string does not occur twice, <code>-1</code> should be returned.
 <code>secondIndexOf('White Rabbit', 'it')</code> should return <code>10</code>.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
 // Use indexOf twice. 
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
   var firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
 };</code></pre></div>
+    
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

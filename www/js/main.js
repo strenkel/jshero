@@ -4,11 +4,11 @@
   var I18N = i18n.get;
 
   var testButton = document.getElementById("test-button");
-  var nextButton = document.getElementById("next-button");
-  var prevButton = document.getElementById("prev-button");
   var hintLink = document.getElementById("hint-link");
+  var hintOpenClose = document.getElementById("hint-open-close");
   var hintArea = document.getElementById("hint-area");
   var solutionLink = document.getElementById("solution-link");
+  var solutionOpenClose = document.getElementById("solution-open-close");
   var solutionArea = document.getElementById("solution-area");
 
   // used to prevent double testing by double clicks
@@ -19,13 +19,14 @@
    * Initialisiert Tipp- und Lösungs-Bereich.
    */
   var write = function() {
+
     var koan = actualKoan.getKoan();
 
-    if (koan.hint) {
+    if (hintLink) {
       showHintOpenLink();
     }
 
-    if (koan.solution) {
+    if (solutionLink) {
       showSolutionOpenLink();
     }
 
@@ -108,22 +109,22 @@
   };
 
   var showHintOpenLink = function() {
-    hintLink.innerHTML = "+ " + I18N("hint");
+    hintOpenClose.innerHTML = "+";
     util.onclick(hintLink, showHint);
   };
 
   var showHintCloseLink = function() {
-    hintLink.innerHTML = "- " + I18N("hint");
+    hintOpenClose.innerHTML = "-";
     util.onclick(hintLink, closeHint);
   };
 
   var showSolutionOpenLink = function() {
-    solutionLink.innerHTML = "+ " + I18N("solution");
+    solutionOpenClose.innerHTML = "+";
     util.onclick(solutionLink, showSolution);
   };
 
   var showSolutionCloseLink = function() {
-    solutionLink.innerHTML = "- " + I18N("solution");
+    solutionOpenClose.innerHTML = "-";
     util.onclick(solutionLink, closeSolution);
   };
 

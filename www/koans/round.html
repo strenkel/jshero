@@ -68,17 +68,24 @@ erhalten also alle den Wert <code>5</code>.</div>
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>round100</code>, die eine Dezimalzahl kaufmännisch auf die Hunderterstelle rundet.
 <code>round100(1749)</code> sollte <code>1700</code> und <code>round100(856.123)</code> sollte <code>900</code> ergeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph">Verwende neben <code>Math.round()</code> noch Multiplikation und Division.</div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var round100 = function(x) {
   return Math.round(x / 100) * 100;
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

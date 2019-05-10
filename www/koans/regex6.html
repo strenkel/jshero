@@ -66,19 +66,26 @@ für <code>ac</code> (b kommt keinmal vor) oder für <code>abc</code> (b kommt e
 der 8 Schreibweisen Maier, Meier, Mayer, Meyer, Mair, Meir, Mayr oder Meyr enthält.
 <code>pruefe('Mayer')</code> und <code>pruefe('Mayr')</code> sollte <code>true</code>
 ergeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var pruefe = function(s) {
 // Benutze e?
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var pruefe = function(s) {
   return /M[ae][iy]e?r/.test(s);
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

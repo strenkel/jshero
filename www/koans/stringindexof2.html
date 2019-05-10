@@ -71,22 +71,29 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
 <code>secondIndexOf("Ida-Ida", "Ida")</code> soll <code>4</code> zurückgeben.
 <br/>Tipp: Falls Du Hilfe brauchst, lies dir auch die Beschreibung in
 <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String/indexOf">SELFHTML</a> durch.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
 // Verwende indexOf zweimal.
 // Zuerst ohne, dann mit
 // zweitem Parameter. 
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var secondIndexOf = function(s1, s2) {
   var firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

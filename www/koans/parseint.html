@@ -79,15 +79,22 @@ Auch das ist nicht zulässig und führt zur Rückgabe <code>NaN</code>.</div>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das Ergebnis
 der Addition als Zahl zurückgibt. Es sollen zwei natürliche Zahlen addiert werden. Die Additionsaufgabe ist ein String der Form 'zahl1+zahl2'.
 So soll <code>add('100+19')</code> die Zahl <code>119</code> zurückgeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph">Bestimme mit <code>parseInt</code> den ersten Summanden.
 Bestimme mit <code>indexOf</code> die Position des Plus-Zeichens.
 Bestimme mit <code>substring</code> den Teilstring nach dem Plus-Zeichen.
 Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.</div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var add = function(s) {
   var summand1 = parseInt(s, 10);
@@ -96,7 +103,7 @@ Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.<
   var summand2 = parseInt(sNachPlus, 10);
   return summand1 + summand2;
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

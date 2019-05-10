@@ -65,19 +65,26 @@ gelesen wird. Abkürzungen kann man auch innerhalb einer Zeichenauswahl verwende
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>hatPLZ</code>, die prüft, ob ein String eine
 deutsche Postleitzahl enthällt. Eine deutsche Postleitzahl ist eine Zahl mit 5 Ziffern.
 <code>hatPLZ('28205')</code> sollte <code>true</code> ergeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var hatPLZ = function(s) {
 // Verwende \d fünfmal.
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var hatPLZ = function(s) {
   return /\d\d\d\d\d/.test(s);
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

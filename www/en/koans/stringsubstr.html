@@ -65,8 +65,11 @@ If the second parameter is not set, all the characters from start position to th
     <div id="koans-task" class="paragraph">Write a function <code>firstWord</code>, taking a string and returning the first word in that string.
 The first word are all characters up to the first space.
 <code>firstWord('see and stop')</code> should return <code>'see'</code>.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var firstWord = function(s) {
 // Determine with indexOf
@@ -74,13 +77,18 @@ The first word are all characters up to the first space.
 // first space. Then use
 // the substr method.
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var firstWord = function(s) {
   var firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
 };</code></pre></div>
+    
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

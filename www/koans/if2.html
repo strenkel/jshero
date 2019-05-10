@@ -79,8 +79,11 @@ oder nicht. Ist die Zahl eine Schnapszahl, soll <code>'Schnaps!'</code> zurückg
 <br><br>
 Eine <a href='https://de.wikipedia.org/wiki/Schnapszahl'>Schnapszahl</a> ist eine mehrstellige Zahl, die ausschließlich
 durch identische Ziffern dargestellt wird.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var schnapszahl = function(n) {
 // Berechne die Einerstelle
@@ -91,8 +94,12 @@ durch identische Ziffern dargestellt wird.</div>
 // Vergleiche Einer- und
 // Zehnerstelle.
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var schnapszahl = function(n) {
   var einer = n % 10;
@@ -102,7 +109,7 @@ durch identische Ziffern dargestellt wird.</div>
   }
   return 'Kein Schnaps!';
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

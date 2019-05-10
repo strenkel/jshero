@@ -57,21 +57,28 @@
     
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>nand</code>, die zwei boolesche Werte als Parameter entgegennimmt. Die Rückgabe der Funktion soll <code>false</code> sein, wenn beide Paramter <code>true</code> sind. In den anderen Fällen soll die Rückgabe <code>true</code> sein. <code>nand(true, true)</code> soll <code>false</code> liefern, <code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen <code>true</code> zurückgeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var nand = function(a, b) {
   var and = a && b;
   ...
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var nand = function(a, b) {
   var and = a && b;
   return !and;
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

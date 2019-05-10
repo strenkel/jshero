@@ -75,14 +75,21 @@ Kommt der zu ersetzende String nicht vor, so wird der ursprüngliche String zur�
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>convert</code>, die einen Datumsstring in englischer Schreibweise (20-05-2017 oder 20/05/2017) in
 deutsche Schreibweise (20.05.2017) umwandet. Sowohl <code>convert('20-05-2017')</code> als auch <code>convert('20/05/2017')</code>
 sollten <code>'20.05.2017'</code> ergeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var convert = function(s1, s2) {
 // Verwende replace viermal.
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var convert = function(dateEn) {
   var dateDe = dateEn.replace('-', '.');
@@ -91,7 +98,7 @@ sollten <code>'20.05.2017'</code> ergeben.</div>
   dateDe = dateDe.replace('/', '.');
   return dateDe;
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

@@ -59,22 +59,29 @@
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt.
   Gleichzeitig soll die Rückgabe geloggt werden. Der Aufruf <code>rufe('Werder')</code>
   sollte <code>'WerderWerder'</code> zurückgeben und er sollte <code>'WerderWerder'</code> loggen.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var rufe = function(name) {
   var ruf = name + name;
   ...
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var rufe = function(name) {
   var ruf = name + name;
   console.log(ruf);
   return ruf;
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 

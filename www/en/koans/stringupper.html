@@ -72,18 +72,26 @@ Now <code>output</code> has the value <code>'mthatha'</code>.</div>
     <div id="koans-task" class="paragraph">Write a function <code>toCase</code> that takes a string and returns that string in
 lowercase and uppercase with <code>-</code> as delimiter.
 <code>toCase('Mthatha')</code> should return <code>'mthatha-MTHATHA'</code>.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var toCase = function(text) {
   return ... + '-' + ...;
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var toCase = function(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code></pre></div>
+    
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
       rows="10"></textarea>

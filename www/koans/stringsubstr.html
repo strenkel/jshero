@@ -67,8 +67,11 @@ Ist der zweite Paramter nicht angegeben, so wird immer bis zum Ende des ursprüg
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>firstWord</code>, die einen String entgegennimmt und das erste Wort
 in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ersten Leerzeichen.
 <code>firstWord('Wo ist hier')</code> sollte <code>'Wo'</code> zurückgeben.</div>
+    
     <div id="hint-link-root" class="paragraph">
-      <span id="hint-link"></span>
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
     </div>
     <div id="hint-area" class="paragraph"><pre><code>var firstWord = function(s) {
 // Bestimme mit indexOf
@@ -77,14 +80,18 @@ in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ers
 // Verwende dann die
 // substr-Methode.
 };</code></pre></div>
+    
+    
     <div id="solution-link-root" class="paragraph">
-      <span id="solution-link"></span>
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var firstWord = function(s) {
   var firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
 };</code></pre></div>
-
+    
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 
