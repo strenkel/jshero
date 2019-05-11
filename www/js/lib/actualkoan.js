@@ -3,7 +3,7 @@ if (typeof jshero === "undefined") {
 }
 
 /**
- * For usuage in pages with koanId in url.
+ * For usuage in pages build from main.html.
  */
 jshero.actualKoan = (function(koansArray) {
 
@@ -25,10 +25,6 @@ jshero.actualKoan = (function(koansArray) {
       return koansArray[index - 1].id;
     }
     return null;
-  };
-
-  var getIndex = function() {
-    return index;
   };
 
   // --- private methods ---
@@ -69,8 +65,7 @@ jshero.actualKoan = (function(koansArray) {
   return {
     nextId: nextId,
     prevId: prevId,
-    getKoan: getKoan,
-    getIndex: getIndex
+    getKoan: getKoan
   };
 
 })(jshero.koans.getKoans());
