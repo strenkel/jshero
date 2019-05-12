@@ -6,7 +6,7 @@ jshero.koans.add({
 
   lesson: `The following task is taken from the <a href='https://www.freecodecamp.org'>freeCodeCamp</a>.`,
 
-  task: `Write a function toFahrenheit that converts a temperature from <a href='https://en.wikipedia.org/wiki/Celsius'>Celsius</a>
+  task: `Write a function <code>toFahrenheit</code> that converts a temperature from <a href='https://en.wikipedia.org/wiki/Celsius'>Celsius</a>
 to <a href='https://en.wikipedia.org/wiki/Fahrenheit'>Fahrenheit</a>. If C is the temperature in Celsius and
 F the temperature in Fahrenheit, the following applies: F = 1.8 * C + 32. <code>toFahrenheit(0)</code> should return <code>32</code>.`,
 
