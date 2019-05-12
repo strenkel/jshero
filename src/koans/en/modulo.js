@@ -12,37 +12,37 @@
       '7 divided by 2 is 3 with remainder 1. <code>x</code> is <code>1</code>.<br>' +
       '20 divided by 3 is 6 with remainder 2. <code>y</code> is <code>2</code>.',
 
-    task: 'Write a function <code>firstDigit</code> that takes a natural number and returns the first digit of that number. ' +
-      '<code>firstDigit(2674)</code> should return <code>4</code>.',
+    task: 'Write a function <code>onesDigit</code> that takes a natural number and returns the ones digit of that number. ' +
+      '<code>onesDigit(2674)</code> should return <code>4</code>.',
 
-    hint: `<pre><code>var firstDigit = function(n) {
+    hint: `<pre><code>var onesDigit = function(n) {
 // Use modulo 10.  
 };</code></pre>`,
 
-    solution: `<pre><code>var firstDigit = function(n) {
+    solution: `<pre><code>var onesDigit = function(n) {
   return n % 10;
 };</code></pre>`,
 
     tests: [
 
       function() {
-        return testutil.assert_isFunction('firstDigit');
+        return testutil.assert_isFunction('onesDigit');
       },
 
       function() {
-        return testutil.assert_functionHasNumOfParameter('firstDigit', 1);
+        return testutil.assert_functionHasNumOfParameter('onesDigit', 1);
       },
 
       function() {
-        return testutil.assert_functionReturns('firstDigit(0)', 0);
+        return testutil.assert_functionReturns('onesDigit(0)', 0);
       },
 
       function() {
-        return testutil.assert_functionReturns('firstDigit(82)', 2);
+        return testutil.assert_functionReturns('onesDigit(82)', 2);
       },
 
       function() {
-        return testutil.assert_functionReturns('firstDigit(119)', 9);
+        return testutil.assert_functionReturns('onesDigit(119)', 9);
       }
 
     ]
