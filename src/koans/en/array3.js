@@ -8,9 +8,9 @@ jshero.koans.add({
 It does not matter whether the array was previously filled or empty.
 
 <pre><code>var languages = [];
-sprachen[0] = 'C';
-sprachen[1] = 'C++';
-sprachen[2] = 'Java';</code></pre>
+languages[0] = 'C';
+languages[1] = 'C++';
+languages[2] = 'Java';</code></pre>
 
 Here an empty array is filled successively with the listed values.`,
 
