@@ -81,6 +81,8 @@ importScripts(
       }
       if (result.e) {
         result.e = cloneError(result.e);
+      } else {
+        result.isLast = testIndex === koan.tests.length - 1;
       }
       result.logs = log.getAll();
       return result;
@@ -104,13 +106,19 @@ importScripts(
       importScripts(koansUrl);
     };
 
+    /**
+     * Parameter for the three actions:
+     * init: language
+     * read: code
+     * test: code, koanId, testIndex
+     */
     onmessage = function(event) {
 
-      code = event.data.code;
-      testIndex = event.data.testIndex;
-      koanId = event.data.koanId;
-      language = event.data.language;
-      var action = event.data.action;
+      code = event.data.code; // {String}
+      testIndex = event.data.testIndex; // {0, 1, 2, ...}
+      koanId = event.data.koanId; // {String}
+      language = event.data.language; // "de" | "en"
+      var action = event.data.action; // "init" | "read" | "test"
 
       var result;
       if (action === "init") {

@@ -165,7 +165,7 @@ jshero.tester = (function(koan, i18n, LANGUAGE) {
   var evalResultAndRunNextTest = function(result) {
     results.push(result);
     testNr++;
-    if (result.ok && testNr < koan.tests.length) {
+    if (result.ok && !result.isLast) {
       runTest(evalResultAndRunNextTest);
     } else {
       callback();
