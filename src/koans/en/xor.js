@@ -17,7 +17,7 @@ In the 2nd line <code>||</code> is evaluated first. <code>x2</code> is <code>fal
 In the 3rd line <code>!</code> is evaluated first. <code>x3</code> is <code>false</code>.
 In the 4th line <code>&&</code> is evaluated first. <code>x4</code> is <code>true</code>.<br><br>
 
-In the following task you should code another important gate, the XOR (eXlusive OR) gate.`,
+In the following task you should code another important gate, the XOR (eXclusive OR) gate.`,
 
   task: `Write a function <code>xor</code> that takes two Boolean values. If both values are different, the result should be <code>true</code>.
 If both values are the same, the result should be <code>false</code>. The calls <code>xor(true, false)</code> and
