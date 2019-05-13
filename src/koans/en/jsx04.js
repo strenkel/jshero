@@ -6,7 +6,7 @@
 
     title: 'What is x?',
 
-    lesson: 'Just practice this agian.',
+    lesson: 'Just practice this again.',
 
     task: `Which value does <code>x</code> have after execution of the following code?
 <pre><code>var hello = function() {
