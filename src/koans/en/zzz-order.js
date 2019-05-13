@@ -18,6 +18,7 @@ jshero.koans.initReorder(
     'jsx06b',
     'log1',
     'log2',
+    'log',
     'jsx07',
     'stringlength',
     'stringupper',

@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="log.html" title="Next page"></a>
+    <a id="next-button" class="control" href="jsx07.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="log1.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="log2.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,26 +49,22 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">Logging variables</h1>
+    <h1 id="koans-title">Logging and Strings</h1>
     
-    <div id="koans-lesson" class="paragraph">Now let's log variables:
-
-<pre><code>var scientist = 'Ken Thompson';
-console.log(scientist);</code></pre>
-
-The variable <code>scientist</code> is logged.
-The console outputs <code>'Ken Thompson'</code>.</div>
+    <div id="koans-lesson" class="paragraph">Now we want to practice logging together with string concatenation.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>log</code>, that takes a parameter and logs this parameter.
-<code>log('Ken Thompson')</code> should log <code>'Ken Thompson'</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>shout</code> that takes a string and
+returns this string duplicated. In addition, the return should be logged.
+The call <code>shout('Fire')</code> should return <code>'FireFire'</code> and should log <code>'FireFire'</code>.</div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var log = function(value) {
+    <div id="hint-area" class="paragraph"><pre><code>var shout = function(word) {
+  var result = word + word;
   ...
 };</code></pre></div>
     
@@ -78,8 +74,10 @@ The console outputs <code>'Ken Thompson'</code>.</div>
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var log = function(value) {
-  console.log(value);
+    <div id="solution-area" class="paragraph"><pre><code>var shout = function(word) {
+  var result = word + word;
+  console.log(result);
+  return result;
 };</code></pre></div>
     
 
