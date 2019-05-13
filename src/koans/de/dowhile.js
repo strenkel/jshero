@@ -16,7 +16,7 @@ do {
   kgV++;
   restDurch6 = kgV % 6;
   restDurch8 = kgV % 8;
-} while (restDurch6 !== 0 || restDurch8 !== 0)</code></pre>
+} while (restDurch6 !== 0 || restDurch8 !== 0);</code></pre>
 
 Dieser Codeabschnitt berechnet das
 <a href='https://de.wikipedia.org/wiki/Kleinstes_gemeinsames_Vielfaches'>kleinste gemeinsame Vielfache (kgV)</a> von 6 und 8.
