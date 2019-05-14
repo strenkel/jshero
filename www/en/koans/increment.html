@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="increment.html" title="Next page"></a>
+    <a id="next-button" class="control" href="fahrenheit.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="replace.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="number.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,21 +49,26 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">Numbers</h1>
+    <h1 id="koans-title">Increment</h1>
     
-    <div id="koans-lesson" class="paragraph">Numbers are represented by simple numerals. They can have a decimal point and a minus sign.<pre><code>var x1 = 1;<br>var x2 = 1.0;<br>var x3 = 3.14;<br>var x4 = -1;</code></pre><code>1</code> and <code>1.0</code> are the same number. You can calculate with numbers. The four basic arithmetics adding, subtracting, multiplying and dividing are represented by <code> + - * </code> and <code>/</code>.<pre><code>var x1 = 6;<br>var x2 = 2;<br>var x3 = x1 + x2;<br>var x4 = x1 - x2;<br>var x5 = x1 * x2;<br>var x6 = x1 / x2;</code></pre>The variables <code>x3</code> to <code>x6</code> thus have the values <code>8</code>, <code>4</code>, <code>12</code> and <code>3</code>.</div>
+    <div id="koans-lesson" class="paragraph">In programming, you often want to increase or decrease a counter by one.
+    This can easily be done with the increment or decrement operator.
+
+<pre><code>var x = 1;
+x++;
+var y = 10;
+y--;</code></pre>
+
+<code>x++</code> is the same as <code>x = x + 1</code> and <code>y--</code> is the same as <code>y = y - 1</code>.
+After executing the example code, <code>x</code> has the value <code>2</code> and <code>y</code> has the value
+<code>9</code>.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>add</code> that takes two numbers and returns their sum. <code>add(1,&nbsp;2)</code> should return <code>3</code>.</div>
-    
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Hint
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph"><pre><code>var add = function(x, y) {
-  return ...
-};</code></pre></div>
+    <div id="koans-task" class="paragraph">Which value does x have after execution of the following code? 
+<pre><code>var x = 3;
+x++;
+x = x * 2;
+x--;</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -71,9 +76,7 @@
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var add = function(x, y) {
-  return x + y;
-};</code></pre></div>
+    <div id="solution-area" class="paragraph"><pre><code>7</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

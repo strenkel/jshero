@@ -23,7 +23,7 @@ x++;
 x = x * 2;
 x--;</code></pre>`,
 
-    solution: '7',
+    solution: '<pre><code>7</code></pre>',
 
     tests: [
 
