@@ -48,6 +48,7 @@ jshero.koans.initReorder(
     'greaterthan',
     'if',
     'else',
+    'elseif',
     'array',
     'array2',
     'array3',

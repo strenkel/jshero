@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="elseif.html" title="Next page"></a>
+    <a id="next-button" class="control" href="array.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="if.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="else.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,26 +49,32 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">if...else</h1>
+    <h1 id="koans-title">else if</h1>
     
-    <div id="koans-lesson" class="paragraph">If a code block should be executed if an <code>if</code> condition
-is not fulfilled, an <code>else</code> is added.
+    <div id="koans-lesson" class="paragraph">If you want to distinguish multiple cases, you can supplement an <code>if</code> with any number of
+<code>else if</code>. Finally, a single <code>else</code> can be added.
 
 <pre><code>var message;
 if (amount > 1000) {
-  message = 'No payout possible!';
+  message = 'Too high. No payout possible!';
+} else if (amount < 10) {
+  message = 'Too low. No payout possible!';
 } else {
   message = 'The amount will be paid out!';
 }</code></pre>
 
-Depending on whether <code>amount</code> is greater or smaller <code>1000</code>,
-either the <code>if</code> branch or the <code>else</code> branch is executed.</div>
+First it is checked whether <code>amount</code> is greater than <code>1000</code>.
+If so, the 'Too high ...' message is set and the code will be continued at the end of the entire block.
+If not, it is checked whether <code>amount</code> is less than <code>10</code>.
+If so, the 'Too low ...' message is set and the code will be continued at the end of the entire block.
+If no condition is met, the final <code>else</code> block is executed.</div>
     
     <h2>Exercise</h2>
     <div id="koans-task" class="paragraph">Write a function <code>addWithSurcharge</code> that adds two amounts with surcharge.
 For each amount less than or equal to <code>10</code>, the surcharge is <code>1</code>.
-For each amount greater than <code>10</code>, the surcharge is <code>2</code>.
-The call <code>addWithSurcharge(5, 15)</code> should return <code>23</code>.</div>
+For each amount greater than <code>10</code> and less than or equal to <code>20</code>, the surcharge is <code>2</code>.
+For each amount greater than <code>20</code>, the surcharge is <code>3</code>.
+The call <code>addWithSurcharge(10, 30)</code> should return <code>44</code>.</div>
     
     
 
