@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="dimarray.html" title="Next page"></a>
+    <a id="next-button" class="control" href="for1.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="slice.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="join.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,25 +49,34 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">Array: join()</h1>
+    <h1 id="koans-title">Array of arrays</h1>
     
-    <div id="koans-lesson" class="paragraph">With <code>join</code> you join all elements of an array into a string:
+    <div id="koans-lesson" class="paragraph">So far we have stored numbers, strings and boolean values in arrays.
+But you can also store arrays in arrays:
 
-<pre><code>var words = ['Sex', 'Drugs', 'Rock', 'Roll'];
-var s1 = words.join();
-var s2 = words.join(' & ');
-var s3 = words.join(' and ');</code></pre>
+<pre><code>var teams = [
+  ['Ruby', 'Angel'],
+  ['Mia', 'Yui', 'Merve', 'Elif'],
+  ['Saanvi', 'Giulia', 'Zeynep']
+];
 
-Without an argument <code>join</code> joins the elements separated by commas.
-<code>s1</code> has the value <code>'Sex,Drugs,Rock,Roll'</code>.
-Otherwise, the passed argument specifies the separator.
-<code>s2</code> has the value <code>'Sex & Drugs & Rock & Roll'</code> and
-<code>s3</code> has the value  <code>'Sex and Drugs and Rock and Roll'</code>.</div>
+var row1 = [4, 9, 2];
+var row2 = [3, 5, 7];
+var row3 = [8, 1, 6];
+var loshu = [row1, row2, row3];</code></pre>
+
+In the first example, 3 teams are stored in an array. Each team itself is an array of names.
+The individual teams have different sizes. With <pre><code>var team = teams[0];</code></pre> you can access a team and
+with <pre><code>var member = teams[0][0];</code></pre> you can access an individual team member.<br><br>
+Arrays that contain arrays are also called two-dimensional arrays.
+Carrying this on, you get three- or multidimensional arrays.<br><br>
+In the second example, the <a href='https://en.wikipedia.org/wiki/Lo_Shu_Square'>Lo Shu Square</a>
+is stored in a two-dimensional array.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>list</code> that joins words in an array into a list.
-<code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.
-The passed array contains at least two words.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>flat</code> that flattens a two-dimensional array with 3 entries.
+<code>flat(loshu)</code> should return <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code>.
+Thereby <code>loshu</code> is the magic square from the example above.</div>
     
     
 
