@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="factorial.html" title="Next page"></a>
+    <a id="next-button" class="control" href="for1.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="comment.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="dimarray.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,67 +49,62 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">for loop</h1>
+    <h1 id="koans-title">Comments</h1>
     
-    <div id="koans-lesson" class="paragraph">Loops can execute code blocks several times. JavaScript knows different kinds of loops. The simplest one is
-the <code>for</code> loop.
+    <div id="koans-lesson" class="paragraph">If needed, you can add comments to a program. Comments are used to explain programs.
+They help us humans to understand programs. Computers ignore comments.<br><br>
+In JavaScript there are two ways to write comments:
+Line comments are introduced with <code>//</code> and are valid until the end of the line.
+Block comments start with <code>/*</code> and end with <code>*/</code>.
+Any text in between is a comment.
 
-<pre><code>var sum = 0;
-for (var i = 1; i < 3; i++) {
-  sum = sum + i;
-}</code></pre>
+<pre><code>// That's a line comment.
 
-The <code>for</code> loop consists of three control expressions and the loop code.
-The three control expressions follow the <code>for</code> keyword in parentheses.
-They are separated by semicolons. The first expression is the start expression. It is executed once at the beginning
-of the loop. The so-called loop variable is normally initialized here. The second expression is the loop condition.
-It is evaluated to <code>true</code> or <code>false</code> before each loop iteration. If this expression evaluates
-to <code>true</code>, the loop code is executed. If this expression evaluates to <code>false</code>, the loop is
-terminated and the program execution continues after the loop. The third expression, called the final expression,
-is executed after each loop iteration. The loop variable is normally increased here. Then a new loop iteration is
-started with a new evaluation of the loop condition. The loop code follows the three control expressions in brackets.
-In our example <code>sum</code> has the value <code>0</code> initially. In the start expression <code>i</code> is
-initialized with <code>1</code>. The loop condition <code>1 < 3</code> is fulfilled, so the loop code is executed.
-<code>sum</code> receives the value <code>0 + 1</code>, i. e. <code>1</code>. Now in the final expression
-<code>i</code> is increased by <code>1</code>. (<code>i++</code> is identical to <code>i = i + 1</code>).
-<code>i</code> thus receives the value <code>2</code>. The second loop starts with the evaluation of the loop condition.
-This condition (<code>2 < 3</code>) is still fulfilled.
-The loop code is executed again and <code>sum</code> is now given the value <code>1 + 2</code>, that is <code>3</code>.
-In the final expression <code>i</code> is increased again and gets the value <code>3</code>.
-The loop condition <code>3 < 3</code> is no longer fulfilled. The loop is terminated and the program execution continues
-after the loop. Our code example has added all natural numbers smaller than 3.</div>
+// This line comment
+// covers 2 lines.
+
+/* That's a block comment. */
+
+/* This line comment
+covers 2 lines. */
+
+/**
+ * This is also a block comment.
+ * The additional stars between
+ * the beginning and the end of the
+ * block comment are only for decoration.
+ */</code></pre>
+
+ Block comments are often used to explain functions. Line comments explain the code flow.
+
+ <pre><code>/**
+ * Checks whether a string contains
+ * any characters other than spaces.
+ */
+var isEmpty = function(string) {
+  // The method trim() removes spaces at 
+  // the beginning and the end of a string.
+  var trimmedString = string.trim();
+  return trimmedString.length === 0;
+};</code></pre>
+
+Comments can't be checked with the tests used here.
+It follows a task where you have to apply much of what you have learned so far.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers
-smaller or equal than the parameter. The result is to be returned. <code>addTo(3)</code> should return
-<code>1+2+3</code> = <code>6</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>median</code> that takes an array of ascending numbers and returns the
+<a href='https://en.wikipedia.org/wiki/Median'>median</a> of that numbers.
+<code>median([1, 2, 10])</code> should return <code>2</code> and <code>median([1, 2, 10, 100])</code> should return
+<code>6</code>.</div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var addTo = function(n) {
-  var sum = 0;
-  for (var i = 0; i <= n; i++) {
-    ...
-  }
-  return sum;
-};</pre></code></div>
+    <div id="hint-area" class="paragraph">The median of a sorted series of numbers is the value in the middle.
+If the number of values is even, the median is the mean of the two middle numbers.</div>
     
-    
-    <div id="solution-link-root" class="paragraph">
-      <span id="solution-link">
-        <span id="solution-open-close">+</span> Solution
-      </span>
-    </div>
-    <div id="solution-area" class="paragraph"><pre><code>var addTo = function(n) {
-  var sum = 0;
-  for (var i = 0; i <= n; i++) {
-    sum = sum + i;
-  }
-  return sum;
-};</pre></code></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
