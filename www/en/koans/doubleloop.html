@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="doubleloop.html" title="Next page"></a>
+    <a id="next-button" class="control" href="roman1a.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="dowhile.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="ggt.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,15 +49,24 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">gcd</h1>
+    <h1 id="koans-title">Nested loops</h1>
     
-    <div id="koans-lesson" class="paragraph">The counterpart to the least common multiple is the
-<a href='https://en.wikipedia.org/wiki/Greatest_common_divisor'>greatest common divisor (gcd)</a>.
-The greatest common divisor of two natural numbers a and b is the largest natural numbers that divides a and b.</div>
+    <div id="koans-lesson" class="paragraph">Loops can be nested into each other. In case of a <code>for</code> loop you have to use two different
+loop variables.
+
+<pre><code>var a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
+var sum = 0;
+for (var i = 0; i < 3; i++) {
+  for (var j = 0; j < 3; j++) {
+    sum = sum + a[i][j];
+  }
+}</code></pre>
+
+The code snippet calculates the sum of all elements of a two-dimensional array.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>gcd</code> that takes two natural numbers and calculates their gcd.
-<code>gcd(6, 15)</code> should return <code>3</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>sum</code> that calculates the sum of all elements of a two-dimensional array.
+<code>sum([[1, 2], [3]])</code> should return <code>6</code>.</div>
     
     
 

@@ -67,6 +67,7 @@ jshero.koans.initReorder(
     'while',
     'dowhile',
     'ggt',
+    'doubleloop',
     'roman1a',
     'roman2',
     'further'

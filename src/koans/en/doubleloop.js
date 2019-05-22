@@ -2,10 +2,10 @@ jshero.koans.add({
 
   id: 'doubleloop',
 
-  title: 'Geschachtelte Schleifen',
+  title: 'Nested loops',
 
-  lesson: `Schleifen kann man auch ineinander schachteln. Im Falle einer for-Schleife muss man zwei verschiedene
-Laufindizes benutzen.
+  lesson: `Loops can be nested into each other. In case of a <code>for</code> loop you have to use two different
+loop variables.
 
 <pre><code>var a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
 var sum = 0;
@@ -15,10 +15,10 @@ for (var i = 0; i < 3; i++) {
   }
 }</code></pre>
 
-Im Codeschnipsel wird die Summe aller Elemente eines zweidimensionalen Arrays berechnet.`,
+The code snippet calculates the sum of all elements of a two-dimensional array.`,
 
-  task: `Schreibe eine Funktion <code>sum</code>, die die Summe aller Elemente eines zweidimensionalen,
-numerischen Arrays berechnet. <code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.`,
+  task: `Write a function <code>sum</code> that calculates the sum of all elements of a two-dimensional array.
+<code>sum([[1, 2], [3]])</code> should return <code>6</code>.`,
 
   tests: [
     function() {
