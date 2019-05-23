@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="roman2.html" title="Next page"></a>
+    <a id="next-button" class="control" href="roman1a.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="arguments.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="doubleloop.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,15 +49,43 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">Roman numerals I</h1>
+    <h1 id="koans-title">The arguments object</h1>
     
-    <div id="koans-lesson" class="paragraph">The following task is challenging.</div>
+    <div id="koans-lesson" class="paragraph">Inside every function an <code>arguments</code> object is accessible. 
+It is an Array-like object that contains the values of the arguments passed to the function.
+
+<pre><code>var add = function() {
+  var arg0 = arguments[0];
+  var arg1 = arguments[1];
+  return arg0 + arg1;
+};
+
+var sum = add(1, 2);</code></pre>
+
+<code>add</code> is called with arguments <code>1</code> and <code>2</code>.
+So <code>arguments[0]</code> contains the value <code>1</code> and <code>arguments[1]</code> contains the value
+<code>2</code>.<br><br>
+With the <code>arguments</code> object you can access the passed arguments without parameters.
+This is useful, for example, if you want to write a function that processes an arbitrary number of arguments. 
+
+<pre><code>var add = function() {
+  var sum = 0;
+  for (var i = 0; i < arguments.length; i++) {
+    sum = sum + arguments[i];
+  }
+  return sum;
+};
+
+var s1 = add(2, 4);
+var s2 = add(2, 3, 5, 7);</code></pre>
+
+We iterate over all passed arguments and sum them up.
+Thereby <code>arguments.length</code> returns the number of passed arguments.
+Now we can call <code>add</code> with an arbitrary number of arguments.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>arabic</code> that converts a
-<a href='https://en.wikipedia.org/wiki/Roman_numerals'>Roman number</a> (up to 1000) into an
-<a href='https://en.wikipedia.org/wiki/Hindu%E2%80%93Arabic_numeral_system'>Arabic</a>.
-<code>arabic('CDLXXXIII')</code> should return <code>483</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>max</code> that calculates the maximum of an arbitrary number of numbers.
+<code>max(1, 2)</code> should return <code>2</code> and <code>max(2, 3, 1)</code> should return <code>3</code>.</div>
     
     
 
