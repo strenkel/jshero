@@ -2,7 +2,7 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-jshero.tester = (function(koan, i18n, LANGUAGE) {
+jshero.tester = (function(koanId, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);
 
@@ -21,6 +21,7 @@ jshero.tester = (function(koan, i18n, LANGUAGE) {
   /**
    * Read in code and run all tests.
    * callback will be called with [TestResult].
+   * TestResult is defined in message.js.
    *
    * @param {String} code
    * @param {Function} callback
@@ -152,7 +153,7 @@ jshero.tester = (function(koan, i18n, LANGUAGE) {
         action: "test",
         code: code,
         language: LANGUAGE,
-        koanId: koan.id,
+        koanId: koanId,
         testIndex: testNr
       });
 
@@ -185,6 +186,6 @@ jshero.tester = (function(koan, i18n, LANGUAGE) {
     run: run
   };
 
-})(jshero.actualKoan.getKoan(),
+})(jshero.actualKoan.getId(),
   jshero.i18n,
   jshero.language.LANGUAGE);

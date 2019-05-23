@@ -20,6 +20,12 @@ jshero.actualKoan = (function(koansArray) {
     return null;
   };
 
+  var getId = function() {
+    var parts = window.location.href.split("/");
+    var lastPart = parts[parts.length -1];
+    return lastPart.split(".")[0];
+  };
+
   // --- private methods ---
 
   var hasNext = function() {
@@ -27,16 +33,10 @@ jshero.actualKoan = (function(koansArray) {
   };
 
   var setIndexByUrl = function() {
-    var id = getKoanIdFromUrl();
+    var id = getId();
     if (id) {
       setIndexById(id);
     }
-  };
-
-  var getKoanIdFromUrl = function() {
-    var parts = window.location.href.split("/");
-    var lastPart = parts[parts.length -1];
-    return lastPart.split(".")[0];
   };
 
   var setIndexById = function(id) {
@@ -52,6 +52,7 @@ jshero.actualKoan = (function(koansArray) {
   setIndexByUrl();
 
   return {
+    getId: getId,
     nextId: nextId,
     getKoan: getKoan
   };
