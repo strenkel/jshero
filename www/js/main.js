@@ -11,7 +11,7 @@
   var solutionOpenClose = document.getElementById("solution-open-close");
   var solutionArea = document.getElementById("solution-area");
 
-  // used to prevent double testing by double clicks
+  // used to prevent double testrun by double clicks
   var testsAreRunning = false;
 
   /**

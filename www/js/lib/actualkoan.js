@@ -20,21 +20,10 @@ jshero.actualKoan = (function(koansArray) {
     return null;
   };
 
-  var prevId = function() {
-    if (hasPrev()) {
-      return koansArray[index - 1].id;
-    }
-    return null;
-  };
-
   // --- private methods ---
 
   var hasNext = function() {
     return index + 1 < koansArray.length;
-  };
-
-  var hasPrev = function() {
-    return index > 0;
   };
 
   var setIndexByUrl = function() {
@@ -64,7 +53,6 @@ jshero.actualKoan = (function(koansArray) {
 
   return {
     nextId: nextId,
-    prevId: prevId,
     getKoan: getKoan
   };
 
