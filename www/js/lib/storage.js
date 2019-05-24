@@ -2,7 +2,7 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-// Note for hosting: local storage is regulated by the same origin police. https://www.jshero.net and http://jshero.net
+// Note for hosting: local storage is regulated by the same origin police. https://www.jshero.net and https://jshero.net
 // are different origins. The local storage under www.jshero.net and jshero.net will not be shared.
 // Therefore (and due to other reasons) it is recomended to redirect non-www to www (or vice versa).
 // See: https://stackoverflow.com/questions/12050590/redirect-non-www-to-www-in-htaccess
@@ -14,42 +14,39 @@ jshero.storage = (function(LANGUAGE) {
   /**
    * Save the correct solution.
    * 
-   * @param {Koan} koan not null
+   * @param {String} koanId not null
    * @param {String} solution not null, not empty 
    */
-  var setSolution = function(koan, solution) {
-    setItem(getSolutionKey(koan), solution);
-    removeShot(koan);
+  var setSolution = function(koanId, solution) {
+    setItem(getSolutionKey(koanId), solution);
+    removeShot(koanId);
   };
 
-  var getSolution = function(koan) {
-    return getItem(getSolutionKey(koan));
+  var getSolution = function(koanId) {
+    return getItem(getSolutionKey(koanId));
   };
 
   // --- handle shots ---
 
   /**
    * Save a shot.
+   * If shot is null or undefined, the shot under koanId will be removed.
    * 
-   * @param {Koan} koan not null
+   * @param {String} koanId not null
    * @param {String} shot can be null or empty 
    */
-  var setShot = function(koan, shot) {
-    if (!getSolution(koan)) {
-      if (shot) {
-        setItem(getShotKey(koan), shot);
+  var setShot = function(koanId, shot) {
+    if (!getSolution(koanId)) {
+      if (shot != null) {
+        setItem(getShotKey(koanId), shot);
       } else {
-        removeShot(koan);
+        removeShot(koanId);
       }
     }
   };
 
-  var getShot = function(koan) {
-    return getItem(getShotKey(koan));
-  };
-
-  var removeShot = function(koan) {
-    removeItem(getShotKey(koan));
+  var getShot = function(koanId) {
+    return getItem(getShotKey(koanId));
   };
 
   // --- clear storage ---
@@ -98,12 +95,16 @@ jshero.storage = (function(LANGUAGE) {
     }
   };
 
-  var getSolutionKey = function(koan) {
-    return getKey("solution", koan.id);
+  var removeShot = function(koanId) {
+    removeItem(getShotKey(koanId));
   };
 
-  var getShotKey = function(koan) {
-    return getKey("shot", koan.id);
+  var getSolutionKey = function(koanId) {
+    return getKey("solution", koanId);
+  };
+
+  var getShotKey = function(koanId) {
+    return getKey("shot", koanId);
   };
 
   var getPlaygroundKey = function() {
@@ -111,8 +112,8 @@ jshero.storage = (function(LANGUAGE) {
   };
 
   /**
-   *@param {String} prefix ; not null/undefined
-   * @param {String} id; can be null/undefined
+   * @param {String} prefix not null/undefined
+   * @param {String} id can be null/undefined
    */
   var getKey = function(prefix, id) {
     var key = prefix;
@@ -157,7 +158,6 @@ jshero.storage = (function(LANGUAGE) {
     getSolution: getSolution,
     setShot: setShot,
     getShot: getShot,
-    removeShot: removeShot,
     clear: clear,
     setPlaygroundCode: setPlaygroundCode,
     getPlaygroundCode: getPlaygroundCode,

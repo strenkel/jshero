@@ -2,6 +2,9 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
+/**
+ * Only for usuage in pages build from main.html!
+ */
 jshero.tester = (function(koanId, i18n, LANGUAGE) {
 
   i18n.setLanguage(LANGUAGE);

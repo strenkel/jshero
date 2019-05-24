@@ -20,7 +20,7 @@
    */
   var write = function() {
 
-    var koan = actualKoan.getKoan();
+    var koanId = actualKoan.getId();
 
     if (hintLink) {
       showHintOpenLink();
@@ -30,26 +30,18 @@
       showSolutionOpenLink();
     }
 
-    var solution = storage.getSolution(koan);
+    var solution = storage.getSolution(koanId);
     if (solution) {
       codeArea.set(solution);
       header.toGreen();
     } else {
-      var shot = storage.getShot(koan);
+      var shot = storage.getShot(koanId);
       if (shot) {
         codeArea.set(shot);
       }
       header.toRed();
     }
 
-  };
-
-  var nextPageUrl = function() {
-    if (actualKoan.nextId()) {
-      return actualKoan.nextId() + ".html";
-    } else {
-      return "success.html";
-    }
   };
 
   var testCode = function(e) {
@@ -73,7 +65,7 @@
       testButton.focus();
 
       var code = codeArea.get();
-      var koan = actualKoan.getKoan();
+      var koanId = actualKoan.getId();
       var lastResult = results[results.length - 1];
 
       if (lastResult.oldBrowser) {
@@ -83,15 +75,15 @@
       } else {
         var okAll = lastResult.ok;
         if (okAll) {
-          storage.setSolution(koan, code);
+          storage.setSolution(koanId, code);
           header.toGreen();
           msg.log({
             ok: true,
             msg: I18N("testsPassed")
           });
-          msg.goto(nextPageUrl());
+          msg.goto(actualKoan.nextPageUrl());
         } else {
-          storage.setShot(koan, code);
+          storage.setShot(koanId, code);
           header.toRed();
           msg.log({
             ok: false,

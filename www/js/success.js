@@ -12,7 +12,7 @@
 
   function addClass(link) {
     var koanId = link.id;
-    if (storage.getSolution({id: koanId})) {
+    if (storage.getSolution(koanId)) {
       link.className = "green";
     } else {
       link.className = "red";
