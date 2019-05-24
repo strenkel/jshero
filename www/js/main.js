@@ -11,14 +11,16 @@
   var solutionOpenClose = document.getElementById("solution-open-close");
   var solutionArea = document.getElementById("solution-area");
 
-  // used to prevent double testrun by double clicks
+  // used to prevent double testruns by double clicks
   var testsAreRunning = false;
 
   /**
-   * Schreibt ggf. die richtige Loesung in die Seite.
-   * Initialisiert Tipp- und Lösungs-Bereich.
+   * Do some initializations:
+   * - init hint and solution link
+   * - write shot or solution
+   * - init green or red header
    */
-  var write = function() {
+  var initPage = function() {
 
     var koanId = actualKoan.getId();
 
@@ -141,7 +143,7 @@
   };
 
   util.onclick(testButton, testCode);
-  window.onload = write;
+  window.onload = initPage;
 
 })(jshero.message,
   jshero.actualKoan,
