@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="arguments.html" title="Next page"></a>
+    <a id="next-button" class="control" href="doubleloop.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="break.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="ggt.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,24 +49,47 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">Nested loops</h1>
+    <h1 id="koans-title">break and continue</h1>
     
-    <div id="koans-lesson" class="paragraph">Loops can be nested into each other. In case of a <code>for</code> loop you have to use two different
-loop variables.
+    <div id="koans-lesson" class="paragraph"><code>break</code> terminates the current loop. The program continues after the loop.
 
-<pre><code>var a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
-var sum = 0;
-for (var i = 0; i < 3; i++) {
-  for (var j = 0; j < 3; j++) {
-    sum = sum + a[i][j];
+<pre><code>var words = 'blue white red';
+var indexFirstSpace = -1;
+for (var i = 0; i < words.length; i++) {
+  if (words.charAt(i) === ' ') {
+    indexFirstSpace = i;
+    break;
   }
 }</code></pre>
 
-The code snippet calculates the sum of all elements of a two-dimensional array.</div>
+If the character with the index <code>i</code> in <code>words</code> is a space, the <code>if</code> condition is fulfilled. 
+<code>indexFirstSpace</code> gets the value of the loop variable <code>i</code>. Now, <code>break</code> will be
+executed. The loop will be terminated and the program execution continues after the loop.<br><br>
+
+<code>continue</code> terminates the current loop iteration. The program execution jumps to the loop head.
+
+<pre><code>var sum = 0;
+for (var i = 0; i < 10; i++) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  sum = sum + i;
+}</code></pre>
+
+If <code>i</code> is an odd number, the following applies: i modulo 2 = 1. The <code>if</code> condition is not fulfilled. 
+Code execution continues after <code>if</code> and <code>i</code> is added to <code>sum</code>. 
+If <code>i</code> is an even number, the following applies: i modulo 2 = 0. The <code>if</code> condition is fulfilled and 
+<code>continue</code> will be excecuted. The code execution jumps directly to the loop head.
+<code>i</code> is not added to <code>sum</code>. So all odd numbers smaller than 10 are added up.<br><br>
+
+<code>break</code> and <code>continue</code> can be used in all loops (for, while, do...while).</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>sum</code> that calculates the sum of all elements of a two-dimensional array.
-<code>sum([[1, 2], [3]])</code> should return <code>6</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>isPrime</code> that checks whether a passed number is
+<a href="https://en.wikipedia.org/wiki/Prime_number">prime</a>.
+In case of a prime number it should return <code>true</code>, otherwise <code>false</code>.
+The call <code>isPrime(2)</code> should return <code>true</code> and <code>isPrime(4)</code> should return
+<code>false</code>.</div>
     
     
 
