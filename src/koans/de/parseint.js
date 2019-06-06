@@ -21,15 +21,16 @@ In allen Beispielen ist der zweite an <code>parseInt</code> übergebene Paramete
 Dieser Paramter gibt an, zu welcher Basis die Zahl interpretiert werden soll. <code>10</code> steht für das
 übliche Dezimalsystem. Läßt man den zweiten Paramter weg, wird normalerweise das Dezimalsystem als Default verwendet.
 Da es aber von dieser Regel Ausnahmen gibt und diese Ausnahmen in verschiedenen Browsern auch noch unterschiedlich
-gehandhabt werden, sollte man immer die Basis mit angeben! Eine ausführliche Dokumentation findet sich bei
-<a href='https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/parseInt'>Mozilla web docs</a>.
-
+gehandhabt werden, sollte man immer die Basis mit angeben!
 <br><br>
 Kann <code>parseInt</code> keine Zahl einlesen, gibt sie den Wert <code>NaN</code> (engl.: Not a Number) zurück:
 <pre><code>var n1 = parseInt('Nur Text', 10);
 var n2 = parseInt('Nr. 8', 10);</code></pre>
 Im ersten Fall ist überhaupt keine Zahl vorhanden. Im zweiten Fall gibt es nicht-numerische Zeichen vor der
-eigentlichen Zahl. Auch das ist nicht zulässig und führt zur Rückgabe <code>NaN</code>.`,
+eigentlichen Zahl. Auch das ist nicht zulässig und führt zur Rückgabe <code>NaN</code>.
+<br><br>
+Eine ausführliche Dokumentation von <code>parseInt</code> findest du bei
+<a href='https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/parseInt'>Mozilla web docs</a>.`,
 
   task: `Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das
 Ergebnis der Addition als Zahl zurückgibt. Es sollen zwei natürliche Zahlen addiert werden. Die Additionsaufgabe ist

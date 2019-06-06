@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="nor.html" title="Next page"></a>
+    <a id="next-button" class="control" href="bool.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="parseint.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="random.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,38 +49,53 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">Boolean</h1>
+    <h1 id="koans-title">parseInt</h1>
     
-    <div id="koans-lesson" class="paragraph">Another important data type next to String and Number is Boolean. It has only two possible values:
-<code>true</code> and <code>false</code>. You can calculate with Boolean values similar to numbers. JavaScript
-has three Boolean operators: <code>&&</code> (and), <code>||</code> (or) and <code>!</code> (not).
-<code>&&</code> links two Boolean values. If both values are <code>true</code>, the result is <code>true</code>.
-In all other cases it is <code>false</code>. With <code>||</code> the result is <code>true</code>,
-if at least one of the two input values is <code>true</code>. If both input values are <code>false</code>,
-the result is <code>false</code>. <code>!</code> is applied to a single Boolean value and inverts this value:
-<code>!true</code> is <code>false</code> and <code>!false</code> is <code>true</code>.
+    <div id="koans-lesson" class="paragraph">Sometimes you want to read a number from a string. In case of an integer (..., -2, -1, 0, 1, 2, ..) you can
+use the <code>parseInt</code> function. The following examples return <code>19</code> or <code>-19</code>:
 
-<pre><code>var x1 = true && false;
-var x2 = !x1;
-var x3 = x1 || x2;</code></pre>
+<pre><code>var n1 = parseInt('19', 10);
+var n2 = parseInt('+19', 10);
+var n3 = parseInt('-19', 10);
+var n4 = parseInt('19 Grad', 10);
+var n5 = parseInt('19.1', 10);
+var n6 = parseInt('019', 10);
+var n7 = parseInt(' 19', 10);</code></pre>
 
-<code>x1</code> is <code>false</code>, <code>x2</code> is <code>true</code> and <code>x3</code> is <code>true</code>.</div>
+Besides the direct reading of integers with or without sign (n1, n2, n3), <code>parseInt</code> can also handle some
+more complex cases. Non-numeric characters after (n4, n5) as well as zeros (n6) and spaces (n7) before the integer
+will be ignored.<br><br>
+
+In all examples, the second parameter passed to <code>parseInt</code> is <code>10</code>.
+This parameter specifies the radix (the base in mathematical numeral systems) on which the number is to be interpreted.
+<code>10</code> represents the usual decimal system. If you omit the second parameter, the decimal system is normally
+used as default. Since there are exceptions to this rule, you should always specify the radix!<br><br>
+
+If <code>parseInt</code> cannot read an integer, it returns <code>NaN</code> (Not a Number).
+
+<pre><code>var n1 = parseInt('text', 10);
+var n2 = parseInt('No. 10', 10);</code></pre>
+
+In the first case there is no number at all. In the second case, there are non-numeric characters before the number.
+This is not allowed and results in <code>NaN</code>.<br><br>
+
+A detailed documentation of <code>parseInt</code> can be found at
+<a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt'>Mozilla web docs</a>.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>nand</code> that takes two Boolean values. If both values are <code>true</code>,
-the result should be <code>false</code>. In the other cases the return should be <code>true</code>.
-The call <code>nand(true, true)</code> should return <code>false</code>. The calls <code>nand(true, false)</code>,
-<code>nand(false, true)</code> and <code>nand(false, false)</code> should return <code>true</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>add</code> that takes a string with a summation task and returns its result as a number.
+Two natural numbers should be added. The summation task is a string of the form '102+17'.
+<code>add('102+17')</code> should return <code>119</code>.</div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var nand = function(a, b) {
-  var and = a && b;
-  ...
-};</code></pre></div>
+    <div id="hint-area" class="paragraph">Determine the first summand with <code>parseInt</code>.
+Use <code>indexOf</code> to determine the position of the plus sign.
+Determine with <code>substring</code> the substring after the plus sign.
+Use <code>parseInt</code> to determine the second summand from this substring.</div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -88,9 +103,12 @@ The call <code>nand(true, true)</code> should return <code>false</code>. The cal
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var nand = function(a, b) {
-  var and = a && b;
-  return !and;
+    <div id="solution-area" class="paragraph"><pre><code>var add = function(s) {
+  var summand1 = parseInt(s, 10);
+  var positionPlus = s.indexOf('+');
+  var sAfterPlus = s.substring(positionPlus + 1);
+  var summand2 = parseInt(sAfterPlus, 10);
+  return summand1 + summand2;
 };</code></pre></div>
     
 
