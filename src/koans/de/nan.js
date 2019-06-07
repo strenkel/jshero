@@ -20,14 +20,16 @@ Möchte man testen, ob <code>NaN</code> vorliegt, kann man leider nicht <code>==
 <code>NaN</code> ist der einzige Wert in JavaScript, der nicht mit sich selbst gleich ist.
 Stattdessen verwendet man die Funktion <code>isNaN</code>.
 
-<pre><code>var message;
-var age = parseInt('Babylon');
+<pre><code>var input = 'Babylon';
+var message;
+var age = parseInt(input);
 if ( isNaN(age) ) {
   message = 'Du hast keine Zahl eingegeben.';
 }</code></pre>`,
 
     task: `Schreibe eine Funktion <code>parseFirstInt</code>, die einen String entgegennimmt und die die erste in dem
-String vorkommende ganze Zahl zurückgibt. <code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code>
+String vorkommende ganze Zahl zurückgibt. Enthält der String keine ganze Zahl, soll man <code>NaN</code> erhalten.
+<code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code>
 zurückgeben. <code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> ergeben.`,
 
     tests: [
@@ -50,6 +52,10 @@ zurückgeben. <code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> erge
 
       function() {
         return testutil.assert_functionReturns("parseFirstInt('Willi ist 22 Jahre alt.')", 22);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("parseFirstInt('Temperatur: -12 Grad')", -12);
       },
 
       function() {
