@@ -71,6 +71,7 @@ jshero.koans.initReorder(
     'break',
     'doubleloop',
     'arguments',
+    'nan',
     'stringsplit',
     'roman1a',
     'roman2',

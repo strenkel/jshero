@@ -9,21 +9,22 @@
     lesson: `<code>NaN</code> repräsentiert den Wert Not-A-Number (engl.: Keine-Zahl). Numerische Operationen oder
 Funktionen geben <code>NaN</code> zurück, wenn sie keinen Wert berechnen können. Wir hatten dies bei
 <code><a href='parseint.html'>parseInt</a></code> kennengelernt. <code>parseInt</code> gibt <code>NaN</code>
-zurück, wenn es keine Zahl parsen kann. Ein weiteres Beispiel ist die Berechnung der Wurzel aus einer negativen Zahl.
+zurück, wenn es keine Zahl parsen kann. Ein weiteres Beispiel ist die Berechnung der Wurzel aus einer negativen Zahl:
 
 <pre><code>var age = parseInt('Babylon');
 var length = Math.sqrt(-1);</code></pre>
 
-Sowohl <code>age</code> als auch <code>length</code> haben den Wert <code>NaN</code>.
+Sowohl <code>age</code> als auch <code>length</code> haben den Wert <code>NaN</code>.<br><br>
 Möchte man testen, ob <code>NaN</code> vorliegt, kann man leider nicht <code>===</code> verwenden.
-<code>age === NaN</code> ergibt auch dann <code>false</code>, wenn <code>age</code> den Wert <code>NaN</code> besitzt.
 <code>NaN</code> ist der einzige Wert in JavaScript, der nicht mit sich selbst gleich ist.
-Stattdessen verwendet man die Funktion <code>isNaN</code>.
+<code>NaN&nbsp;===&nbsp;NaN</code> ergibt <code>false</code>.
+
+Um auf <code>NaN</code> zu testen, sollte man die Funktion <code>Number.isNaN</code> verwenden:
 
 <pre><code>var input = 'Babylon';
 var message;
 var age = parseInt(input);
-if ( isNaN(age) ) {
+if ( Number.isNaN(age) ) {
   message = 'Du hast keine Zahl eingegeben.';
 }</code></pre>`,
 

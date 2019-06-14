@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="nan.html" title="Next page"></a>
+    <a id="next-button" class="control" href="stringsplit.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="doubleloop.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="arguments.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,43 +49,34 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">The arguments object</h1>
+    <h1 id="koans-title">NaN</h1>
     
-    <div id="koans-lesson" class="paragraph">Inside every function an <code>arguments</code> object is accessible. 
-It is an Array-like object that contains the values of the arguments passed to the function.
+    <div id="koans-lesson" class="paragraph"><code>NaN</code> is a value representing Not-A-Number. Numeric operations or functions return
+<code>NaN</code> if they cannot calculate a value. We had seen this with
+<code><a href='parseint.html'>parseInt</a></code>. It returns <code>NaN</code>, if it can't parse a number. 
+Another example is the calculation of the square root from a negative number:
 
-<pre><code>var add = function() {
-  var arg0 = arguments[0];
-  var arg1 = arguments[1];
-  return arg0 + arg1;
-};
+<pre><code>var age = parseInt('Babylon');
+var length = Math.sqrt(-1);</code></pre>
 
-var sum = add(1, 2);</code></pre>
+Both <code>age</code> and <code>length</code> get the value <code>NaN</code>.<br><br>
+If you want to test for <code>NaN</code>, you unfortunately can't use <a href='equals.html'>strict equality</a>.
+<code>NaN</code> is the only value in JavaScript that when compared to itself returns <code>false</code>.
+That is, <code>NaN&nbsp;===&nbsp;NaN</code> results in <code>false</code>. 
+To check if a value is <code>NaN</code> use the <code>Number.isNaN</code> function:
 
-<code>add</code> is called with arguments <code>1</code> and <code>2</code>.
-So <code>arguments[0]</code> contains the value <code>1</code> and <code>arguments[1]</code> contains the value
-<code>2</code>.<br><br>
-With the <code>arguments</code> object you can access the passed arguments without parameters.
-This is useful, for example, if you want to write a function that processes an arbitrary number of arguments. 
-
-<pre><code>var add = function() {
-  var sum = 0;
-  for (var i = 0; i < arguments.length; i++) {
-    sum = sum + arguments[i];
-  }
-  return sum;
-};
-
-var s1 = add(2, 4);
-var s2 = add(2, 3, 5, 7);</code></pre>
-
-We iterate over all passed arguments and sum them up.
-Thereby <code>arguments.length</code> returns the number of passed arguments.
-Now we can call <code>add</code> with an arbitrary number of arguments.</div>
+<pre><code>var input = 'Babylon';
+var message;
+var age = parseInt(input);
+if ( Number.isNaN(age) ) {
+  message = 'Input is not a number!';
+}</code></pre></div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>max</code> that calculates the maximum of an arbitrary number of numbers.
-<code>max(1, 2)</code> should return <code>2</code> and <code>max(2, 3, 1)</code> should return <code>3</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>parseFirstInt</code> that takes a string and returns the first integer present in the
+string. If the string does not contain an integer, you should get <code>NaN</code>.
+<code>parseFirstInt('No. 10')</code> should return <code>10</code> and <code>parseFirstInt('Babylon')</code> should
+return <code>NaN</code>.</div>
     
     
 
