@@ -1,4 +1,4 @@
-(function(dateUtil) {
+(function(testutil) {
 
   jshero.koans.add({
 
@@ -16,9 +16,9 @@ Man kann eine Varialbe aber auch deklarieren und ihr später einen Wert zuweisen
 <pre><code>var x; // Deklaration
 x = 1; // Initialisierung</code></pre>
 
-Variablen, die nicht initialisiert wurden, haben den Wert <code>undefined</code> (engl.: nicht definiert).
-In der Praxis kommt das bei Funktionsaufrufen am häufigsten vor. Ruft man eine Funktion, die einen Parameter erwartet, ohne Argument auf,
-dann erhält der Funktionsparameter den Wert <code>undefined</code>.
+Variablen, die nicht initialisiert wurden, haben den Wert <code>undefined</code> (engl.: nicht definiert).<br><br>
+Nicht initialisierte Variablen können auch bei Funktionsaufrufen vorkommen. Ruft man eine Funktion, die einen Parameter
+erwartet, ohne Argument auf, dann erhält der Funktionsparameter den Wert <code>undefined</code>.
 
 <pre><code>var echo = function(x) {
   return x;
@@ -33,7 +33,7 @@ erhält auch <code>y</code> den Wert <code>undefined</code>. <br><br>
 Eine Funktion, die einen Parameter erwartet, kann immer auch ohne Argument aufgerufen werden.
 Man sollte sich beim Schreiben von Funktionen also immer überlegen,
 was in diesem Fall passieren soll. Gute Praxis ist es, in einem solchen Fall dem Parameter einen Default-Wert (engl.: Vorgabe) zuzuweisen.
-Das hatten wir schon bei der String-Methode <code>charAt(index)</code> kennen gelernt.
+Das hatten wir schon bei der String-Methode <code><a href="stringcharat.html">charAt(index)</a></code> kennen gelernt.
 Normalerweise gibt diese Methode den Buchstaben an der Stelle <code>index</code>
 zurück. Rufen wir <code>charAt</code> ohne Argument auf, erhält <code>index</code> den Default <code>0</code>.
 Es wird der Buchstabe an der Stelle <code>0</code> zurückgegeben.
@@ -50,26 +50,26 @@ Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>'Hallo Welt!'</c
 
     tests: [
       function() {
-        return jshero.testutil.assert_isFunction('hallo');
+        return testutil.assert_isFunction('hallo');
       },
 
       function() {
-        return jshero.testutil.assert_functionHasNumOfParameter('hallo', 1);
+        return testutil.assert_functionHasNumOfParameter('hallo', 1);
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns("hallo('Melek')", 'Hallo Melek!');
+        return testutil.assert_functionReturns("hallo('Melek')", 'Hallo Melek!');
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns("hallo('Badu')", 'Hallo Badu!');
+        return testutil.assert_functionReturns("hallo('Badu')", 'Hallo Badu!');
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('hallo()', 'Hallo Welt!');
+        return testutil.assert_functionReturns('hallo()', 'Hallo Welt!');
       }
     ]
 
   });
 
-})(jshero.date);
+})(jshero.testutil);
