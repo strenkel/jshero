@@ -1,7 +1,7 @@
 /* This puts the koans in the desired order */
 
 jshero.koans.initReorder(
-    [
+  [
     'var',
     'jsx01',
     'var2',
@@ -71,10 +71,11 @@ jshero.koans.initReorder(
     'break',
     'doubleloop',
     'arguments',
+    'undefined',
     'nan',
     'stringsplit',
     'roman1a',
     'roman2',
     'further'
-    ]
+  ]
 );

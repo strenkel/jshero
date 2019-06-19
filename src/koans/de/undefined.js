@@ -11,7 +11,7 @@
 <pre><code>// Deklaration und Initialisierung
 var x = 1;</code></pre>
 
-Man kann eine Varialbe aber auch deklarieren und ihr später einen Wert zuweisen.
+Man kann eine Variable aber auch deklarieren und ihr später einen Wert zuweisen.
 
 <pre><code>var x; // Deklaration
 x = 1; // Initialisierung</code></pre>
@@ -23,21 +23,23 @@ erwartet, ohne Argument auf, dann erhält der Funktionsparameter den Wert <code>
 <pre><code>var echo = function(x) {
   return x;
 };
+
 // Aufruf ohne Argument
 var y = echo();</code></pre>
 
 <code>echo</code> wird ohne Argument aufgerufen. Dem Parameter <code>x</code> wird so kein Wert zugewiesen,
 er erhält den Wert <code>undefined</code>.
-Da <code>echo</code> den Parameter <code>x</code> einfach nur zurückgibt,
-erhält auch <code>y</code> den Wert <code>undefined</code>. <br><br>
+Da <code>echo</code> den Parameter <code>x</code> einfach zurückgibt,
+erhält auch <code>y</code> den Wert <code>undefined</code>.<br><br>
 Eine Funktion, die einen Parameter erwartet, kann immer auch ohne Argument aufgerufen werden.
-Man sollte sich beim Schreiben von Funktionen also immer überlegen,
-was in diesem Fall passieren soll. Gute Praxis ist es, in einem solchen Fall dem Parameter einen Default-Wert (engl.: Vorgabe) zuzuweisen.
+Man sollte sich beim Schreiben von Funktionen also immer überlegen, was in diesem Fall passieren soll.
+Gute Praxis ist es, in einem solchen Fall dem Parameter einen Default-Wert (engl.: Vorgabe) zuzuweisen.
 Das hatten wir schon bei der String-Methode <code><a href="stringcharat.html">charAt(index)</a></code> kennen gelernt.
-Normalerweise gibt diese Methode den Buchstaben an der Stelle <code>index</code>
+Normalerweise gibt diese Methode das Zeichen an der Stelle <code>index</code>
 zurück. Rufen wir <code>charAt</code> ohne Argument auf, erhält <code>index</code> den Default <code>0</code>.
-Es wird der Buchstabe an der Stelle <code>0</code> zurückgegeben.
-Um eine Varaible auf <code>undefined</code> zu überprüfen, verwendet man wie üblich die strikte Gleichkeit.
+Es wird das Zeichen an der Stelle <code>0</code> zurückgegeben.<br><br>
+Um eine Varaible auf <code>undefined</code> zu überprüfen, verwendet man wie üblich die
+<a href='equals.html'>strikte&nbsp;Gleichkeit</a>.
 Die Methode <code>charAt</code> könnte also folgenden Code-Ausschnitt enthalten:
 
 <pre><code>if (index === undefined) {
