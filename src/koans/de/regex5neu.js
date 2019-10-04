@@ -1,6 +1,6 @@
 jshero.koans.add({
 
-  id: 'regex5',
+  id: 'regex5neu',
 
   title: 'Regex: Zeichenklassen',
 

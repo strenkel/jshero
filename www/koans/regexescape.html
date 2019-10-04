@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regex5neu.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="regex5a.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regex3.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="regex5neu.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,56 +51,33 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Regex: Bereiche</h1>
+    <h1 id="koans-title">Regex: Escape</h1>
     
-    <div id="koans-lesson" class="paragraph">Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
-dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich. 
-Mit einem Bindestrich kann man größere, zusammenhängende Zeichenbereiche leicht darstellen:
+    <div id="koans-lesson" class="paragraph">Wie wir gesehen haben, besitzen reguläre Ausdrücke eine Reihe von Zeichen mit besonderer Bedeutung.
+So steht <code>.</code> nicht für einen Punkt, sondern für ein beliebiges Zeichen.
+Möchte man nach einen Punkt suchen, so muss man die besondere Bedeutung gewissermaßen
+ausschalten. Das macht man mit einen vorangestellten Backslash: 
 
-<pre><code>var pruefeZiffer = /[0-9]/;
-var pruefe1Bis6 = /[1-6]/;
-var pruefeABisZ = /[A-Z]/;
-var pruefeaBisz = /[a-z]/; 
-var pruefeDeutschesAlphabet = /[a-zäöüß]/;
-var pruefeABisz = /[A-Za-z]/;
-var pruefeMBisT = /[M-T]/;</code></pre>
+<pre><code>var t1 = /\./.test('Z. B.');
+var t2 = /\./.test('ZB');</code></pre>
 
-<code>/[0-9]/</code> steht wie der Regex oben für genau eine Ziffer.
-Den Ziffernbereich kann man, wie <code>/[1-6]/</code> zeigt, leicht auf eine gewünschte Auswahl
-(z.B. Schulnote) einschränken. Der Bindestrich funktioniert aber nicht nur für Ziffern,
-sondern auch für Buchstaben. Dabei muss man zwischen Klein- und
-Großbuchstaben unterscheiden. <code>/[A-Z]/</code> steht für einen der 26 Großbuchstaben und
-<code>/[a-z]/</code> für einen Kleinbuchstaben. Wichtig ist, dass hier
-ä, ö, ü und ß nicht mit erfasst werden. Möchte man das, so muss man diese Buchstaben gesondert
-aufführen. Dazu schreibt man die Umlaute und das Eszett wie bei einer gewöhnlichen Auswahl
-einfach vor oder hinter den Bereich (<code>/[a-zäöüß]/</code>). Ebenso kann man zwei Bereiche
-hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Klein- oder Großbuchstaben.
-Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M-T]/</code>).</div>
+Der erste Ausdruck ergibt <code>true</code>, der zweite <code>false</code>.
+Ohne den Backslash würden beide Ausdrücke <code>true</code> ergeben.
+Ein solches 'Ausschalten' nennt man maskieren oder escapen.
+
+Möchte man nach dem Backslash suchen, so muss man diesen ebenfalls maskieren:
+
+<pre><code>var t = /\\/.test('A \ B');
+// t ist true</code></pre>
+
+Insgesamt gibt es 15 Zeichen, die man maskieren muss, wenn man nach ihnen suchen möchte:
+* + ? . ( ) [ ] { }  / | ^ $</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine
-Zeichenfolge wie 'Klasse 2b' enthält. Dabei sind Klassen von 1 bis 6 und a bis d
-zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Teilstring
+<code>'(x)'</code> enhält. <code>pruefe('f(x)')</code> sollte <code>true</code> und
+<code>pruefe('f(n)')</code> sollte <code>false</code> ergeben.</div>
     
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Tipp
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph"><pre><code>var pruefe = function(s) {
-// Verwende Literale
-// und Bereiche.  
-};</code></pre></div>
-    
-    
-    <div id="solution-link-root" class="paragraph">
-      <span id="solution-link">
-        <span id="solution-open-close">+</span> Lösung
-      </span>
-    </div>
-    <div id="solution-area" class="paragraph"><pre><code>var pruefe = function(s) {
-  return /Klasse [1-6][a-d]/.test(s);
-};</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
