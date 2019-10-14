@@ -17,7 +17,7 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regex6.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="regexword.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
     <a id="prev-button" class="control" href="regexescape.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
@@ -55,10 +55,14 @@
     
     <div id="koans-lesson" class="paragraph">Pattern, die wir bisher betrachtet haben, konnten an jeder beliebigen Stelle im zu durchsuchenden String
 stehen. Mit <code>^</code> und <code>$</code> kann man festlegen, dass das Pattern am Anfang bzw. am Ende des zu
-durchsuchenden Strings stehen soll. <code>/^\d/</code> trifft auf alle Zeichenketten zu, die mit einer Ziffer beginnen und
-<code>/\d$/</code> trifft auf alle Zeichenketten zu, die mit einer Ziffer enden. Verwendet man sowohl das Anfangs-
-als auch das Endezeichen, beschreibt das Pattern den zu untersuchenden String vollständig. <code>/^\d\d$/</code> trifft
-auf alle Zeichenketten zu, die aus genau zwei Ziffern bestehen.</div>
+durchsuchenden Strings stehen soll. <code>/^Hans/</code> trifft auf alle Zeichenketten zu, die mit <code>Hans</code>
+beginnen und <code>/\d$/</code> trifft auf alle Zeichenketten zu, die mit einer Ziffer enden. Verwendet man sowohl
+das Anfangs- als auch das Endezeichen, beschreibt das Pattern den zu untersuchenden String vollständig.
+<code>/^\d[a-z]$/</code> trifft auf alle Zeichenketten zu, die aus genau einer Ziffer gefolgt von einem
+Kleinbuchstaben bestehen.
+<br><br>
+<code>^</code> und <code>$</code> legen die Stelle fest, an der das Suchpattern stehen soll. Solche Zeichen nennt man
+Anker.</div>
     
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>isTime</code>, die prüft, ob ein String eine Zeitangabe der Form

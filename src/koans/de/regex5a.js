@@ -8,10 +8,14 @@
 
     lesson: `Pattern, die wir bisher betrachtet haben, konnten an jeder beliebigen Stelle im zu durchsuchenden String
 stehen. Mit <code>^</code> und <code>$</code> kann man festlegen, dass das Pattern am Anfang bzw. am Ende des zu
-durchsuchenden Strings stehen soll. <code>/^\\d/</code> trifft auf alle Zeichenketten zu, die mit einer Ziffer beginnen und
-<code>/\\d$/</code> trifft auf alle Zeichenketten zu, die mit einer Ziffer enden. Verwendet man sowohl das Anfangs-
-als auch das Endezeichen, beschreibt das Pattern den zu untersuchenden String vollständig. <code>/^\\d\\d$/</code> trifft
-auf alle Zeichenketten zu, die aus genau zwei Ziffern bestehen.`,
+durchsuchenden Strings stehen soll. <code>/^\Hans/</code> trifft auf alle Zeichenketten zu, die mit <code>Hans</code>
+beginnen und <code>/\\d$/</code> trifft auf alle Zeichenketten zu, die mit einer Ziffer enden. Verwendet man sowohl
+das Anfangs- als auch das Endezeichen, beschreibt das Pattern den zu untersuchenden String vollständig.
+<code>/^\\d[a-z]$/</code> trifft auf alle Zeichenketten zu, die aus genau einer Ziffer gefolgt von einem
+Kleinbuchstaben bestehen.
+<br><br>
+<code>^</code> und <code>$</code> legen die Stelle fest, an der das Suchpattern stehen soll. Solche Zeichen nennt man
+Anker.`,
 
     task: `Schreibe eine Funktion <code>isTime</code>, die prüft, ob ein String eine Zeitangabe der Form
 hh:mm:ss ist. hh steht dabei für die Stunden, mm für die Minuten und ss für die Sekunden.
