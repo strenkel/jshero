@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Möchte man nach Alternativen suchen, kann man dafür den <code>|</code> Operator verwenden.
 <code>/Tom|Jerry/</code> sucht nach <code>Tom</code> oder <code>Jerry</code>. Der <code>|</code> Operator
 gilt für den kompletten Regex. <code>/\\bTom|Jerry\\b/</code> sucht nach Wörtern, die mit <code>Tom</code>
-beginnen oder mit <code>Jerry</code> enden. <code>Tomme</code> wird auch gefunden.
+beginnen oder mit <code>Jerry</code> enden. <code>Tomme</code> wird so auch gefunden.
 Möchte man, dass beide Wortgrenzen für beide Namen gelten, kann man Klammern verwenden.
 <code>/\\b(Tom|Jerry)\\b/</code> sucht nach den Wörtern <code>Tom</code> oder <code>Jerry</code>. Der 
 <code>|</code> Operator gilt jetzt nur für die Klammer. <code>Tomme</code> wird nicht mehr gefunden.`,
