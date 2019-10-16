@@ -11,7 +11,8 @@ der voranstehende Ausdruck beliebig oft vorkommen darf. Bei <code>*</code> darf 
 Bei <code>+</code> muss er mindestens einmal vorkommen.
 <code>bäh*</code> steht für bä, bäh, bähh und so weiter. <code>[01]+</code> steht für
 eine beliebige <a href='https://de.wikipedia.org/wiki/Dualsystem'>binäre Zahl</a> wie zum Beispiel
-0, 1, 001, 10111 oder 11001100.`,
+0, 1, 001, 10111 oder 11001100. Soll das Pattern die Wiederholung einer Zeichenfolge beschreiben, so muss man
+Klammern verwenden. <code>(ha)+</code> steht für ha, haha, hahaha und so weiter.`,
 
     task: `Schreibe eine Funktion <code>hasQuote</code>, die feststellt, ob ein String ein mit doppelten
 Anführungszeichen gekennzeichnetes Zitat enthält. Innerhalb des Zitats sind beliebige Zeichen
