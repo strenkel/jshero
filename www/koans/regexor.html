@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regex5a.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="regex6.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regex5neu.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="regexword.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,32 +51,22 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Regex: Escape</h1>
+    <h1 id="koans-title">Regex: Alternativen</h1>
     
-    <div id="koans-lesson" class="paragraph">Wie wir gesehen haben, besitzen reguläre Ausdrücke eine Reihe von Zeichen mit besonderer Bedeutung.
-So steht <code>.</code> nicht für einen Punkt, sondern für ein beliebiges Zeichen.
-Möchte man nach einen Punkt suchen, so muss man die besondere Bedeutung gewissermaßen
-ausschalten. Das macht man mit einen vorangestellten Backslash: 
-
-<pre><code>var t1 = /\./.test('Z. B.');
-var t2 = /\./.test('ZB');</code></pre>
-
-Der erste Ausdruck ergibt <code>true</code>, der zweite <code>false</code>.
-Ohne den Backslash würden beide Ausdrücke <code>true</code> ergeben.
-Ein solches 'Ausschalten' nennt man maskieren oder escapen.
-
-Möchte man nach dem Backslash suchen, so muss man diesen ebenfalls maskieren:
-
-<pre><code>var t = /\\/.test('A \ B');
-// t ist true</code></pre>
-
-Insgesamt gibt es 15 Zeichen, die man maskieren muss, wenn man nach ihnen suchen möchte:
-<code>* + ? . ( ) [ ] { } \ / | ^ $</code></div>
+    <div id="koans-lesson" class="paragraph">Möchte man nach Alternativen suchen, kann man dafür den <code>|</code> Operator verwenden.
+<code>/Tom|Jerry/</code> sucht nach <code>Tom</code> oder <code>Jerry</code>. Der <code>|</code> Operator
+gilt für den kompletten Regex. <code>/\bTom|Jerry\b/</code> sucht nach Wörtern, die mit <code>Tom</code>
+beginnen oder mit <code>Jerry</code> enden. <code>Tomme</code> wird auch gefunden.
+Möchte man, dass beide Wortgrenzen für beide Namen gelten, kann man Klammern verwenden.
+<code>/\b(Tom|Jerry)\b/</code> sucht nach den Wörtern <code>Tom</code> oder <code>Jerry</code>. Der 
+<code>|</code> Operator gilt jetzt nur für die Klammer. <code>Tomme</code> wird nicht mehr gefunden.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Teilstring
-<code>'(x)'</code> enhält. <code>pruefe('f(x)')</code> sollte <code>true</code> und
-<code>pruefe('f(n)')</code> sollte <code>false</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>isTime</code>, die feststellt, ob ein String eine Zeitangabe der Form
+<code>hh:mm</code> ist. Für <code>hh</code> sind alle Werte von <code>00</code> bis <code>23</code> und für
+<code>mm</code> alle Werte von <code>00</code> bis <code>59</code> zugelassen.
+<code>isTime('23:27')</code> sollte <code>true</code> und <code>isTime('24:12')</code> sollte
+<code>false</code> ergeben.</div>
     
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"

@@ -22,7 +22,7 @@ Möchte man nach dem Backslash suchen, so muss man diesen ebenfalls maskieren:
 // t ist true</code></pre>
 
 Insgesamt gibt es 15 Zeichen, die man maskieren muss, wenn man nach ihnen suchen möchte:
-* + ? . ( ) [ ] { } \ / | ^ $`,
+<code>* + ? . ( ) [ ] { } \\ / | ^ $</code>`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Teilstring
 <code>'(x)'</code> enhält. <code>pruefe('f(x)')</code> sollte <code>true</code> und

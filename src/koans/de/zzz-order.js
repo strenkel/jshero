@@ -95,6 +95,7 @@ jshero.koans.initReorder(
     'regexescape',
     'regex5a',
     'regexword',
+    'regexor',
     'regex6',
     'regex7',
     'regex8',
