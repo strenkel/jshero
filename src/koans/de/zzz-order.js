@@ -87,6 +87,11 @@ jshero.koans.initReorder(
     'recursion',
     'roman1',
     'roman2',
+    'object1',
+    'object2',
+    'object3',
+    'object4',
+    'method1',
     'regex1',
     'regex2',
     'regex3',
@@ -100,11 +105,6 @@ jshero.koans.initReorder(
     'regex6',
     'regex7',
     'regex8',
-    'object1',
-    'object2',
-    'object3',
-    'object4',
-    'method1',
     'further'
   ]
 );
