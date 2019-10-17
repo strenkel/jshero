@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regexescape.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="regex5neu.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regexnot.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="regex4.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,44 +51,18 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Regex: Zeichenklassen</h1>
+    <h1 id="koans-title">Regex: Negation</h1>
     
-    <div id="koans-lesson" class="paragraph">Für einige besondere Zeichenbereiche gibt es Buchstaben als Abkürzung.
-<code>/\d/</code> steht für eine Ziffer (engl.: digit) und ist identisch mit
-<code>/[0-9]/</code>. Der Regex <code>/\w/</code> steht für ein alphanumerisches Zeichen oder
-den Unterstrich (engl.: word character). <code>/\w/</code> ist identisch mit <code>/[0-9a-zA-Z_]/</code>.
-Der Abkürzung ist ein Backslash vorangestellt, damit sie nicht als normaler Buchstabe
-gelesen wird. Abkürzungen kann man auch innerhalb einer Zeichenauswahl verwenden.
-<code>/[\da-z]/</code> steht für eine Ziffer oder einen Kleinbuchstaben.<br><br>
-Ein weitere nützliche Zeichenklasse ist <code>\s</code>. Sie steht für ein sogenannten Leerraum-Zeichen
-(engl.: whitespace character). Sie umfasst das gewöhnliche Leerzeichen, das Tabulator-Zeichen, den Zeilenumbruch
-und weitere ähnliche Zeichen.<br><br>
-Verwendet man anstelle des Kleinbuchstaben den Großbuchstaben, kann man die negierte Zeichenklasse darstellen.
-<code>\D</code> steht für alle Zeichen, die keine Ziffer sind, <code>\W</code> für alle Zeichen, die kein
-Word Character sind und <code>\S</code> steht für alle Zeichen, die kein Leerraum-Zeichen sind.</div>
+    <div id="koans-lesson" class="paragraph">Möchte man alle Zeichen bis auf einige Ausnahmen zulassen, kann man mit <code>^</code> die Zeichenauswahl
+negieren. <code>^</code> ist als Negation nur innerhalb einer Zeichenauswahl gültig. Es muss an erster Stelle der
+Zeichenauswahl stehen und negiert die komplette Auswahl. <code>[^ab]</code> steht für alle Zeichen außer einem 
+<code>a</code> oder <code>b</code> und <code>[^0-9]</code> steht für alle Zeichen außer einer Ziffer.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>test</code>, die prüft, ob ein String 5 aufeinanderfolgende
-Ziffern enthällt. <code>test('28205')</code> sollte <code>true</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>test</code>, die prüft, ob ein String nur Zeichen des englischen
+Alphabets enthällt. <code>test('Blue')</code> sollte <code>true</code> und <code>test('Blue sea')</code> sollte
+<code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).</div>
     
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Tipp
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph"><pre><code>var test = function(s) {
-// Verwende \d fünfmal.
-};</code></pre></div>
-    
-    
-    <div id="solution-link-root" class="paragraph">
-      <span id="solution-link">
-        <span id="solution-open-close">+</span> Lösung
-      </span>
-    </div>
-    <div id="solution-area" class="paragraph"><pre><code>var test = function(s) {
-  return /\d\d\d\d\d/.test(s);
-};</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
