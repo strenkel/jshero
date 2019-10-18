@@ -12,7 +12,7 @@ Flags werden dem Regex einfach angehängt:
 
 <pre><code>var t1 = /es/i.test("Was es"); // true
 var t2 = /es/i.test("Es war"); // true
-var t3 = /es/i.test("ES"); //  true</code></pre>`,
+var t3 = /es/i.test("ES"); // true</code></pre>`,
 
     task: `Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String das Wort <code>JavaScript</code>
 oder <code>JS</code> enthält. Dabei soll Groß- oder Kleinschreibung keine Rolle spielen.`,
