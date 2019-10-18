@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regex5a.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="regex6.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regex4.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="regexor.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,38 +51,20 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Regex: Zeichenklassen</h1>
+    <h1 id="koans-title">Regex: case-insensitive</h1>
     
-    <div id="koans-lesson" class="paragraph">Für einige besondere Zeichenbereiche gibt es Buchstaben als Abkürzung.
-<code>/\d/</code> steht für eine Ziffer (engl.: digit) und ist identisch mit
-<code>/[0-9]/</code>. Der Regex <code>/\w/</code> steht für ein alphanumerisches Zeichen oder
-den Unterstrich (engl.: word character). <code>/\w/</code> ist identisch mit <code>/[0-9a-zA-Z_]/</code>.
-Der Abkürzung ist ein Backslash vorangestellt, damit sie nicht als normaler Buchstabe
-gelesen wird. Abkürzungen kann man auch innerhalb einer Zeichenauswahl verwenden.
-<code>/[\da-z]/</code> steht für eine Ziffer oder einen Kleinbuchstaben.</div>
+    <div id="koans-lesson" class="paragraph">Reguläre Ausdrücke kann man durch Flags ergänzen. Eines dieser Flags ist <code>i</code>.
+Ist es gesetzt, unterscheidet das Pattern nicht zwischen Groß- und Kleinschreibung. Der Regex ist case-insensitive.
+Flags werden dem Regex einfach angehängt:
+
+<pre><code>var t1 = /es/i.test("Was es"); // true
+var t2 = /es/i.test("Es war"); // true
+var t3 = /es/i.test("ES"); //  true</code></pre></div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>test</code>, die prüft, ob ein String 5 aufeinanderfolgende
-Ziffern enthällt. <code>test('28205')</code> sollte <code>true</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String das Wort <code>JavaScript</code>
+oder <code>JS</code> enthält. Dabei soll Groß- oder Kleinschreibung keine Rolle spielen.</div>
     
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Tipp
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph"><pre><code>var test = function(s) {
-// Verwende \d fünfmal.
-};</code></pre></div>
-    
-    
-    <div id="solution-link-root" class="paragraph">
-      <span id="solution-link">
-        <span id="solution-open-close">+</span> Lösung
-      </span>
-    </div>
-    <div id="solution-area" class="paragraph"><pre><code>var test = function(s) {
-  return /\d\d\d\d\d/.test(s);
-};</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
@@ -120,7 +102,7 @@ Ziffern enthällt. <code>test('28205')</code> sollte <code>true</code> ergeben.<
   <script src="../js/lib/log.js"></script>
   <script src="../js/lib/testutil.js"></script>
   <script src="../js/lib/actualkoan.js"></script>
-  <script src="../js/lib/tester.js"></script>
+  <script src="../js/lib/tester.js?v=304"></script>
   <script src="../js/main.js"></script>
 
 </body>

@@ -10,7 +10,7 @@ Zeichenauswahl stehen und negiert die komplette Auswahl. <code>[^ab]</code> steh
 <code>a</code> oder <code>b</code> und <code>[^0-9]</code> steht für alle Zeichen außer einer Ziffer.`,
 
   task: `Schreibe eine Funktion <code>test</code>, die prüft, ob ein String nur Zeichen des englischen
-Alphabets enthällt. <code>test('Blue')</code> sollte <code>true</code> und <code>test('Blue sea')</code> sollte
+Alphabets enthält. <code>test('Blue')</code> sollte <code>true</code> und <code>test('Blue sea')</code> sollte
 <code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).`,
 
   tests: [

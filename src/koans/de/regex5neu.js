@@ -19,7 +19,7 @@ Verwendet man anstelle des Kleinbuchstaben den Großbuchstaben, kann man die neg
 Word Character sind und <code>\\S</code> steht für alle Zeichen, die kein Leerraum-Zeichen sind.`,
 
   task: `Schreibe eine Funktion <code>test</code>, die prüft, ob ein String 5 aufeinanderfolgende
-Ziffern enthällt. <code>test('28205')</code> sollte <code>true</code> ergeben.`,
+Ziffern enthält. <code>test('28205')</code> sollte <code>true</code> ergeben.`,
 
   hint: `<pre><code>var test = function(s) {
 // Verwende \\d fünfmal.

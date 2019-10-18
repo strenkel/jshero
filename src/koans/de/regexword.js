@@ -26,7 +26,8 @@ Alle deutschen Umlaute gelten somit als Wortgrenze. Hier muss man aufpassen.
 <code>/bei\\b/</code> findet sich in <code>beißen</code>, da <code>ß</code> als Wortgrenze angesehen wird.`,
 
     task: `Schreibe eine Funktion <code>hatLauf</code>, die prüft, ob ein String eine Wort enthält, dass mit
-<code>lauf</code> beginnt. Dabei soll es keine Rolle spielen, ob <code>lauf</code> groß- oder kleingeschrieben wird.`,
+<code>lauf</code> beginnt. Dabei soll es keine Rolle spielen, ob <code>lauf</code> mit großem oder kleinem
+<code>l</code> beginnt.`,
 
     tests: [
       function() {
@@ -42,11 +43,11 @@ Alle deutschen Umlaute gelten somit als Wortgrenze. Hier muss man aufpassen.
       },
 
       function() {
-        return testutil.assert_functionReturns("hatLauf('weglaufen')", false);
+        return testutil.assert_functionReturns("hatLauf('Wir laufen da lang!')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns("hatLauf('Wir laufen da lang!')", true);
+        return testutil.assert_functionReturns("hatLauf('weglaufen')", false);
       },
 
       function() {
