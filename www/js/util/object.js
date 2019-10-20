@@ -13,6 +13,10 @@ jshero.object = (function() {
    */
   var flatEquals = function(o1, o2) {
 
+    if (o1 == null || o2 == null) {
+      return false;
+    }
+
     for (var p in o1) {
       if (o1.hasOwnProperty(p)) {
         if (o1[p] !== o2[p]) {

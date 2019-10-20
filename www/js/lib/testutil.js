@@ -108,7 +108,12 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
   };
 
   /**
+   * Assert true, if the user input is the passed string.
+   * The user input can use ", ' or `.
+   * Designed for "What is x?" excersices.
+   * 
    * @param {String} value
+   * @returns {TestResult}
    */
   var assert_isString = function(value) {
     var ok = evaluator.equalsString(value);
@@ -116,7 +121,11 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
   };
 
   /**
+   * Assert true, if the user input is value.
+   * Designed for "What is x?" excersices.
+   * 
    * @param {String} value
+   * @returns {TestResult}
    */
   var assert_isValue = function(value) {
     var ok = evaluator.equalsValue(value);
@@ -286,14 +295,14 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
   };
 
   /**
-   * Test if a variable with the name 'name' is defined or not undefined.
+   * Test if a variable with the name 'name' is not undefined.
    *
    * @param {String} name
    * @returns {TestResult}
    */
   var assert_variableDefined = function(name) {
 
-    var ok = evaluator.evalTest("typeof " + name + "!== 'undefined';");
+    var ok = evaluator.evalTest("typeof " + name + " !== 'undefined';");
     var msg;
     if (ok) {
       msg = jsheroUtil.formatMessage(I18N("varHasValue"), [name]);

@@ -1,4 +1,4 @@
-(function(testutil) {
+(function(testutil, evaluator) {
 
   jshero.koans.add({
 
@@ -22,44 +22,86 @@ var alterPreis = ware.preis;
 ware.erhoehePreis(0.05);
 var neuerPreis = ware.preis;</code></pre>
 
-Das Objekt <code>ware</code> besitzt die Methode <code>erhoehePreis</code>. Diese Methode greift Mithilfe von
+Das Objekt <code>ware</code> besitzt die Methode <code>erhoehePreis</code>. Diese Methode greift mithilfe von
 <code>this</code> auf die Objekt-Eigenschaft <code>preis</code> zu. <code>this</code> steht innerhalb eines Objekts für
-das Objekt selbst. Mit der bekannten Punkt-Notation kann man nun auf die Objekt-Eigenschaften zugreifen.<br>
-Von außen wird eine Methode über die zugeordnete Variable und der Punkt-Notation aufgerufen. `,
+das Objekt selbst. Mit der bekannten Punkt-Notation kann man nun auf die Objekt-Eigenschaften zugreifen und sie
+verändern.<br>
+Von außen wird eine Methode über die zugeordnete Variable und der Punkt-Notation aufgerufen.`,
 
-    task: `Schreibe eine Funktion <code>moveX</code>, die einen Punkt um 1 nach rechts verschiebt.
-<code>moveX({x:&nbsp;2,&nbsp;y:&nbsp;5})</code> sollte <code>{x:&nbsp;3,&nbsp;y:&nbsp;5}</code> zurückgeben.`,
-
-    hint: `<pre><code>var moveX = function(point) {
-  ...
-  return point;
-};</code></pre>`,
-
-    solution: `<pre><code>var moveX = function(point) {
-  point.x = point.x + 1;
-  return point;
-};</code></pre>`,
+    task: `Definiere ein Objekt mit den beiden Eigenschaften <code>x</code> und <code>y</code> sowie einer Methode
+<code>moveX</code>. <code>x</code> und <code>y</code> sollen den Wert <code>0</code> erhalten. <code>moveX</code>
+soll den Wert von <code>x</code> um <code>1</code> erhöhen. Weise das Objekt einer Variablen <code>point</code> zu.`,
 
     tests: [
 
       function() {
-        return testutil.assert_isFunction('moveX');
+        return testutil.assert_variableDefined('point');
       },
 
       function() {
-        return testutil.assert_functionHasNumOfParameter('moveX', 1);
+        var out = evaluator.evalTest("point");
+        var ok, msg;
+        if (out === null) {
+          ok = false;
+          msg = "<code>point</code> ist <code>null</code>.";
+        } else if (out.x === 0) {
+          ok = true;
+          msg = "<code>point.x</code> hat den Wert <code>0</code>."
+        } else {
+          ok = false;
+          msg = "<code>point.x</code> hat nicht den Wert <code>0</code>, sondern <code>" + out.x + "</code>.";
+        }
+
+        return {
+          ok: ok,
+          msg: msg
+        }
+
       },
 
       function() {
-        return testutil.assert_functionReturnsObject('moveX({x: 2, y: 0})', {x: 3, y: 0});
+        var out = evaluator.evalTest("point");
+        var ok, msg;
+        if (out.y === 0) {
+          ok = true;
+          msg = "<code>point.y</code> hat den Wert <code>0</code>."
+        } else {
+          ok = false;
+          msg = "<code>point.y</code> hat nicht den Wert <code>0</code>, sondern <code>" + out.y + "</code>.";
+        }
+
+        return {
+          ok: ok,
+          msg: msg
+        }
+
       },
 
       function() {
-        return testutil.assert_functionReturnsObject('moveX({x: 3, y: 5})', {x: 4, y: 5});
+        return testutil.assert_isFunction("point.moveX");
+      },
+
+      function() {
+        var out = evaluator.evalTest("point");
+        var ok, msg;
+        out.moveX();
+        if (out.x === 1 && out.y === 0) {
+          ok = true;
+          msg = "<code>moveX</code> verschiebt den Punkt von (0, 0) nach (1, 0).";
+        } else {
+          ok = false;
+          msg = "<code>moveX</code> verschiebt den Punkt von (0, 0) nicht nach (1, 0), sondern nach (" +
+            out.x + ", " + out.y + ").";
+        }
+
+        return {
+          ok: ok,
+          msg: msg
+        };
       }
 
     ]
 
   });
 
-})(jshero.testutil);
+})(jshero.testutil, jshero.evaluator);
