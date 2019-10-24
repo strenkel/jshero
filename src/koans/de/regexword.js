@@ -25,7 +25,7 @@ Das bezieht sich allerdings auf das englische Alphabet.
 Alle deutschen Umlaute gelten somit als Wortgrenze. Hier muss man aufpassen.
 <code>/bei\\b/</code> findet sich in <code>beißen</code>, da <code>ß</code> als Wortgrenze angesehen wird.`,
 
-    task: `Schreibe eine Funktion <code>hatLauf</code>, die prüft, ob ein String eine Wort enthält, dass mit
+    task: `Schreibe eine Funktion <code>hatLauf</code>, die prüft, ob ein String ein Wort enthält, dass mit
 <code>lauf</code> beginnt. Dabei soll es keine Rolle spielen, ob <code>lauf</code> mit großem oder kleinem
 <code>l</code> beginnt.`,
 
