@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regexexec.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="further.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regex8.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="regexgroup.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,24 +51,29 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Regex: Gruppen</h1>
+    <h1 id="koans-title">Regex: exec</h1>
     
-    <div id="koans-lesson" class="paragraph">Klammern hatten wir schon kennengelernt. Sie begrenzen die Anwendung eines Operators auf den eingeklammerten
-Bereich. Klammern haben aber noch eine weitere wichtige Funktion. Eingeklammerte Bereiche definieren eine Gruppe.
-Diese Gruppen werden von 1 bis 9 durchnummeriert (mehr Gruppen kann man nicht definieren).
-Mit <code>\1</code> bis <code>\9</code> kann man innerhalb des Regex auf eine Gruppe zugreifen.
-Damit kann man nach Wiederholungen suchen.<br>
-<code>/([a-z])\1/</code> findet doppelte Kleinbuchstaben und <code>/(\d)(\d).*\1\2/</code>
-findet doppelte zweistellige Zahlen.
+    <div id="koans-lesson" class="paragraph">Neben der Methode <code>test</code> besitzen reguläre Ausdrücke noch die Methode <code>exec</code>.
+Während <code>test</code> feststellt, ob ein Regex in einem String gefunden wir, gibt <code>exec</code>
+auch den gefundenen String und alle gefundenen Gruppen zurück. Das geschiet in Form eines Arrays.
+Dieses Array hat darüber hinaus die beiden Eigenschaften <code>index</code> und <code>input</code>.
+<code>index</code> enthält den 0-basierten Index des gefundenen Strings und <code>input</code>
+den originalen String.<br> 
 
-<pre><code>var t1 = /([a-z])\1/.test('Affe'); // true
-var t2 = /(\d)(\d).*\1\2/.test(12 mal 12'); // true</code></pre></div>
+<pre><code>var resultat = /(d+):(d+)/.exec("Kiel-Flensburg 23:25");
+var endstand = resultat[0]; // "23:25"
+var toreKiel = resultat[1]; // "23"
+var toreFlensburg = resultat[2]; // "25"
+var index = resultat.index; // 18</code></pre>
+
+Wird der reguläre Ausdruck nicht gefunden, gibt <code>exec</code> <code>null</code> zurück.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String ein doppeltes Wort enthält.
-Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet.
-Klein- oder Großschreibung soll keine Rolle spielen. <code>test('Apfel Birne Apfel')</code> sollte true und
-<code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>parseDate</code>, die einen String mit einem Datum entgegennimmt und die dieses
+Datum als Date mit UTC 0:00 Uhr zurückgibt. Das Datum liegt im deutschen Format dd.mm.yyyy vor. Führende Nullen sind
+optional. Das Datum kann mitten im String stehen. Enthält der String kein gültiges Datum, soll <code>null</code>
+zurückgegeben werden.<br>
+<code>parseDate("Geburt: 12.07.2001")</code> sollte ein Date-Objekt mit dem Zeitpunkt 12.07.2001 0:00 UTC zurückgeben.</div>
     
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"

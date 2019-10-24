@@ -107,6 +107,7 @@ jshero.koans.initReorder(
     'regex7',
     'regex8',
     'regexgroup',
+    'regexexec',
     'further'
   ]
 );
