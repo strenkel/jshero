@@ -32,11 +32,19 @@ Möchte man, dass beide Wortgrenzen für beide Namen gelten, kann man Klammern v
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("isTime('02:08')", true);
+      return jshero.testutil.assert_functionReturns("isTime('01:01')", true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("isTime('09:19')", true);
     },
 
     function() {
       return jshero.testutil.assert_functionReturns("isTime('12:27')", true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("isTime('18:47')", true);
     },
 
     function() {
