@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="null.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="nan.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="arguments.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="undefined.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,52 +51,25 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">undefined</h1>
+    <h1 id="koans-title">null</h1>
     
-    <div id="koans-lesson" class="paragraph">Bisher hatten wir Variablen bei der Deklaration immer auch initialisiert.
+    <div id="koans-lesson" class="paragraph">Neben <code>undefined</code> kennt JavaScript einen weiteren Wert für die Abwesentheit eines sinnvollen
+Werts: <code>null</code>. Man kann einer Variablen den Wert <code>null</code> zuordnen und testet mit strikter
+Gleichheit auf diesen Wert:
 
-<pre><code>// Deklaration und Initialisierung
-var x = 1;</code></pre>
+<pre><code>var foo = null;
+if (foo === null) {
+  foo = 1;
+}</code></pre>
 
-Man kann eine Variable aber auch deklarieren und ihr später einen Wert zuweisen.
-
-<pre><code>var x; // Deklaration
-x = 1; // Initialisierung</code></pre>
-
-Variablen, die nicht initialisiert wurden, haben den Wert <code>undefined</code> (engl.: nicht definiert).<br><br>
-Nicht initialisierte Variablen können auch bei Funktionsaufrufen vorkommen. Ruft man eine Funktion, die einen Parameter
-erwartet, ohne Argument auf, dann erhält der Funktionsparameter den Wert <code>undefined</code>.
-
-<pre><code>var echo = function(x) {
-  return x;
-};
-
-// Aufruf ohne Argument
-var y = echo();</code></pre>
-
-<code>echo</code> wird ohne Argument aufgerufen. Dem Parameter <code>x</code> wird so kein Wert zugewiesen,
-er erhält den Wert <code>undefined</code>.
-Da <code>echo</code> den Parameter <code>x</code> einfach zurückgibt,
-erhält auch <code>y</code> den Wert <code>undefined</code>.<br><br>
-Eine Funktion, die einen Parameter erwartet, kann immer auch ohne Argument aufgerufen werden.
-Man sollte sich beim Schreiben von Funktionen immer überlegen, was in diesem Fall passieren soll.
-Gute Praxis ist es, in einem solchen Fall dem Parameter einen Default-Wert (engl.: Vorgabe) zuzuweisen.
-Das hatten wir schon bei der String-Methode <code><a href="stringcharat.html">charAt(index)</a></code> kennen gelernt.
-Normalerweise gibt diese Methode das Zeichen an der Stelle <code>index</code>
-zurück. Rufen wir <code>charAt</code> ohne Argument auf, erhält <code>index</code> den Default <code>0</code>.
-Es wird das Zeichen an der Stelle <code>0</code> zurückgegeben.<br><br>
-Um eine deklarierte Varaible auf <code>undefined</code> zu überprüfen, verwendet man wie üblich die
-<a href='equals.html'>strikte&nbsp;Gleichkeit</a>.
-Die Methode <code>charAt</code> könnte also folgenden Code-Ausschnitt enthalten:
-
-<pre><code>if (index === undefined) {
-  index = 0;
-}</code></pre></div>
+Es ist ein Design-Fehler, dass JavaScript zwei Werte für "kein Wert" besitzt. Wenn möglich, sollte man
+<code>undefined</code> und <code>null</code> gleich behandeln.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>hallo</code>, die einen String als Parameter entgegennimmt und <code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt.
-<code>hallo('Akgün')</code> sollte <code>'Hallo Akgün!'</code> zurückgeben.
-Wird <code>hallo</code> ohne Argument aufgerufen, so soll <code>'Hallo Welt!'</code> zurückgegeben werden.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>cutComment</code>, die eine Zeile JavaScript entgegennimmt
+und einen möglichen Zeilenkommentar getrimmt zurückgibt. Enthält die Zeile keinen Kommentar, soll <code>null</code>
+zurückgegeben werden. <code>cutCommt('var i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
+Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb eines Strings enthält.</div>
     
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"

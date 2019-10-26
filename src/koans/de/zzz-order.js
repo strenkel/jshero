@@ -76,6 +76,7 @@ jshero.koans.initReorder(
     'doubleloop',
     'arguments',
     'undefined',
+    'null',
     'nan',
     'stringsplit',
     'date',
