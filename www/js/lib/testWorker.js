@@ -104,7 +104,7 @@ importScripts(
     var initKoans = function() {
       var koansUrl = language === "de" ? "../koans.js" : "../../en/js/koans.js";
       // add dummy version to prevent caching after new release
-      koansUrl += "?v=305"; 
+      koansUrl += "?v=306"; 
       importScripts(koansUrl);
     };
 
