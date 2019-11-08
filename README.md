@@ -31,6 +31,9 @@ Mit `npm run build` das Projekt bauen.
 Diesen Befehl immer dann aufrufen, wenn etwas geändert wurde (Details siehe package.json)
 Erst dann werden die Änderungen im Browser sichtbar.
 
+`npm run build` ist (leider) vom Betriebssystem abhänigig. Es läuft nur unter Linux (ggf. iOS).
+Lässt sich aber leicht für Windows anpassen.
+
 ## Ein neues Koan hinzufügen
 
 1. Kopiere ein vorhandens Koan und passe es an allen Stellen sinnvoll an (was genau sinnvoll ist, wird noch beschrieben).
