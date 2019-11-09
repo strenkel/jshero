@@ -1,5 +1,5 @@
 // Run from JS Hero root: node build/build.js
-// koans.js has to be build before
+// build.sh has to be run before
 // All pathes relative to JS Hero root directory
 const fs = require('fs');
 const ejs = require('ejs');

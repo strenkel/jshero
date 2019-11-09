@@ -1,0 +1,21 @@
+#koans a {
+  display: block;
+  margin: 0.5em 0;
+  text-decoration: none;
+}
+
+#koans a:hover {
+  text-decoration: underline;
+}
+
+#koans a.green {
+  color: #0f7820; /* dark-green */
+}
+
+#koans a.red {
+  color: #e00000; /* dark-red */
+}
+
+#reset-confirmation {
+  display: none;
+}
