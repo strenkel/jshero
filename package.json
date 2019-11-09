@@ -5,6 +5,7 @@
   "author": "jshero authors",
   "private": true,
   "scripts": {
+    "test": "mocha",
     "build": "sh build/build.sh && node build/build.js"
   },
   "dependencies": {},
@@ -12,7 +13,8 @@
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-template-literals": "^7.0.0",
+    "browserify": "^16.5.0",
     "ejs": "^2.7.1",
-    "browserify": "^16.5.0"
+    "mocha": "^6.2.2"
   }
 }
