@@ -2,7 +2,7 @@ const fs = require('fs');
 const assert = require('assert');
 
 // Read in testcode.
-eval(fs.readFileSync('www/js/util/date.js').toString());
+eval(fs.readFileSync('src/www/js/util/date.js').toString());
 
 
 describe('jshero.date', function() {

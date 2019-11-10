@@ -2,7 +2,7 @@ const fs = require('fs');
 const assert = require('assert');
 
 // Read in testcode.
-eval(fs.readFileSync('www/js/util/array.js').toString());
+eval(fs.readFileSync('src/www/js/util/array.js').toString());
 
 describe('jshero.array', function() {
   describe('#isEqual()', function() {

@@ -5,8 +5,11 @@ if (typeof jshero === "undefined") {
 jshero.array = (function() {
 
   /**
-   * Ergibt true, wenn a und b gleichlange Arrays sind und
-   * wenn die entsprechenden Array-Elemente strikt gleich sind.
+   * Returns true, if a and b are arrays with same length and
+   * all elements are strict equal.
+   * 
+   * @param a {*}
+   * @param b {*}
    */
   var isEqual = function(a, b) {
     if (!Array.isArray(a) || !Array.isArray(b)) {

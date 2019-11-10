@@ -6,6 +6,8 @@ jshero.date = (function() {
 
   /**
      * Check whether obj is a Date object.
+     * 
+     * @param obj {*}
      */
   var isDate = function(obj) {
     return Object.prototype.toString.call(obj) === "[object Date]";
@@ -13,6 +15,8 @@ jshero.date = (function() {
 
   /**
    * Check whether obj is a valid Date object.
+   * 
+   * @param obj {*}
    */
   var isValidDate = function(obj) {
     return isDate(obj) && !isNaN(obj.getTime());
@@ -27,6 +31,9 @@ jshero.date = (function() {
 
   /**
    * Returns true if d1 and d2 are Date objects and represent the same timestamp.
+   * 
+   * @param d1 {*}
+   * @param d2 {*}
    */
   var isEqual = function(d1, d2) {
     return isDate(d1) && isDate(d2) &&
