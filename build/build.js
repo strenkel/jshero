@@ -11,7 +11,7 @@ ejs.renderFile("src/html/de/success.html", { koans: koansDe }, function(err, suc
   if (err) throw err;
   fs.writeFile("www/success.html", successHtml, function(err) {
     if (err) throw err;
-    console.log("Build success.html (de)");
+    console.log("Successfully build success.html (de).");
   });
 });
 
@@ -20,11 +20,12 @@ ejs.renderFile("src/html/en/success.html", { koans: koansEn }, function(err, suc
   if (err) throw err;
   fs.writeFile("www/en/success.html", successHtml, function(err) {
     if (err) throw err;
-    console.log("Build success.html (en)");
+    console.log("Successfully build success.html (en).");
   });
 });
 
 // build de/koans html
+console.log("Start building HTML koans files (de/en).");
 for (var i = 0, l = koansDe.length; i < l; i++) {
   var koan = koansDe[i];
 
@@ -48,7 +49,6 @@ for (var i = 0, l = koansDe.length; i < l; i++) {
   });
 
 }
-console.log("build koans (de)");
 
 // build en/koans html
 for (var i = 0, l = koansEn.length; i < l; i++) {
@@ -74,7 +74,3 @@ for (var i = 0, l = koansEn.length; i < l; i++) {
   });
 
 }
-console.log("build koans (en)");
-
-
-
