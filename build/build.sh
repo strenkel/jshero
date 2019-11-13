@@ -1,7 +1,7 @@
 # clean target, tmp
 rm -r -f www/*
 rm -r -f src/tmp/*
-echo "Successfully cleaned target (www)."
+echo "Successfully cleaned target and tmp."
 
 # copy unmodified files from src/www (except js)
 cp src/www/*.html www/
