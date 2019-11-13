@@ -4,8 +4,8 @@
 // Other pathes relative to JS Hero root directory.
 const fs = require('fs');
 const ejs = require('ejs');
-const koansDe = require("../src/tmp/de/core/koans.js").getKoans();
-const koansEn = require("../src/tmp/en/core/koans.js").getKoans();
+const koansDe = require("../src/tmp/koans-core-de.js").getKoans();
+const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
 
 // build de/success.html
 ejs.renderFile("src/html/de/success.html", { koans: koansDe }, function(err, successHtml) {
