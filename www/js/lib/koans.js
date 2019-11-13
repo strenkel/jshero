@@ -1,0 +1,1 @@
+if(typeof jshero==="undefined"){var jshero={}}jshero.koans=function(){var koan;var add=function(myKoan){koan=myKoan};var get=function(){return koan};return{add:add,get:get}}();

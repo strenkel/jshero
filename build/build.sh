@@ -1,5 +1,6 @@
-# clean target
+# clean target, tmp
 rm -r -f www/*
+rm -r -f src/tmp/*
 echo "Successfully cleaned target (www)."
 
 # copy unmodified files from src/www (except js)
@@ -16,6 +17,8 @@ babel src/www/js -d www/js
 browserify src/js/nodeutil.js -o www/js/util/nodeutil.js
 echo "Successfully browserified nodeutil."
 
-babel src/js/koans.js src/koans/de/ -o www/js/koans.js
-babel src/js/koans.js src/koans/en/ -o www/en/js/koans.js
+babel src/js/koans.js src/koans/de/ -o src/tmp/de/core/koans.js
+babel src/js/koans.js src/koans/en/ -o src/tmp/en/core/koans.js
+babel src/koans/de/ -d www/js/koans
+babel src/koans/en/ -d www/en/js/koans
 echo "Successfully create koans.js (de/en) with Babel."

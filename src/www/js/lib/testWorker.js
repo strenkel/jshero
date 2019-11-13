@@ -6,6 +6,7 @@ importScripts(
   "../util/array.js",
   "../util/object.js",
   "../util/date.js",
+  "koans.js",
   "log.js",
   "evaluator.js",
   "testutil.js"
@@ -64,8 +65,8 @@ importScripts(
     };
 
     var testCode = function() {
-
-      var koan = jshero.koans.getById(koanId);
+      importKoan();
+      var koan = jshero.koans.get();
       var result;
 
       try {
@@ -90,7 +91,6 @@ importScripts(
 
     var init = function() {
       initI18n();
-      initKoans();
       return {
         ok: true
       };
@@ -101,11 +101,10 @@ importScripts(
       I18N = i18n.get;
     };
 
-    var initKoans = function() {
-      var koansUrl = language === "de" ? "../koans.js" : "../../en/js/koans.js";
-      // add dummy version to prevent caching after new release
-      koansUrl += "?v=306"; 
-      importScripts(koansUrl);
+    var importKoan = function() {
+      var koanUrl = language === "de" ? "../koans/" : "../../en/js/koans/";
+      koanUrl += koanId + ".js?v=306"; // add dummy version to prevent caching after new release
+      importScripts(koanUrl);
     };
 
     /**

@@ -2,6 +2,10 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
+/**
+ * There are two jshero.koans classes!
+ * See the other class for more information!
+ */
 jshero.koans = (function() {
 
   var index = 0;
