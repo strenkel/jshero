@@ -8,7 +8,8 @@ cp src/www/*.html www/
 cp -r src/www/css/ www/css
 cp -r src/www/en/ www/en
 cp -r src/www/img www/img
-cp -r src/www/koans www/koans
+mkdir www/koans
+mkdir www/en/koans
 echo "Successfully copied base files."
 
 # minify and copy js
