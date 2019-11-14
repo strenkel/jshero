@@ -18,8 +18,8 @@ babel src/www/js -d www/js
 browserify src/js/nodeutil.js -o www/js/util/nodeutil.js
 echo "Successfully browserified nodeutil."
 
-babel src/js/koans.js src/koans/de/ -o src/tmp/koans-core-de.js
-babel src/js/koans.js src/koans/en/ -o src/tmp/koans-core-en.js
-babel src/koans/de/ -d www/js/koans
-babel src/koans/en/ -d www/en/js/koans
+babel src/js/koans.js src/koans/core/de/ -o src/tmp/koans-core-de.js
+babel src/js/koans.js src/koans/core/en/ -o src/tmp/koans-core-en.js
+babel src/koans/core/de/ -d www/js/koans
+babel src/koans/core/en/ -d www/en/js/koans
 echo "Successfully create js koans files with Babel."
