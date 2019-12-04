@@ -1,10 +1,12 @@
 // Run from JS Hero root: node build/build.js
-// build.sh has to be run before
+// build.sh has to be run before.
 // Require pathes relative to build directory.
 // Other pathes relative to JS Hero root directory.
 const fs = require('fs');
 const ejs = require('ejs');
-const koansDe = require("../src/tmp/koans-core-de.js").getKoans();
+const koansCoreDe = require("../src/tmp/koans-core-de.js").getKoans();
+const koansDomDe = require("../src/tmp/koans-dom-de.js").getKoans();
+const koansDe = koansCoreDe.concat(koansDomDe);
 const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
 
 // build de/success.html
@@ -27,22 +29,46 @@ ejs.renderFile("src/html/en/success.html", { koans: koansEn }, function(err, suc
 
 // build de/koans html
 console.log("Start building HTML koans files (de/en).");
-for (var i = 0, l = koansDe.length; i < l; i++) {
-  var koan = koansDe[i];
+for (var i = 0, l = koansCoreDe.length; i < l; i++) {
+  var koan = koansCoreDe[i];
 
   var links = {};
   if (i === 0) {
     links.prev = "../intro.html";
   } else {
-    links.prev = koansDe[i - 1].id + ".html";
+    links.prev = koansCoreDe[i - 1].id + ".html";
+  }
+  if (i === l - 1) {
+    links.next = koansDomDe[0].id + ".html";
+  } else {
+    links.next = koansCoreDe[i + 1].id + ".html";;
+  }
+
+  ejs.renderFile("src/html/de/main.html", { koan: koan, links: links }, function(err, koanHtml) {
+    if (err) throw err;
+    fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
+      if (err) throw err;
+    });
+  });
+
+}
+
+for (var i = 0, l = koansDomDe.length; i < l; i++) {
+  var koan = koansDomDe[i];
+
+  var links = {};
+  if (i === 0) {
+    links.prev = koansCoreDe[koansCoreDe.length - 1].id + ".html";
+  } else {
+    links.prev = koansDomDe[i - 1].id + ".html";
   }
   if (i === l - 1) {
     links.next = "../success.html"
   } else {
-    links.next = koansDe[i + 1].id + ".html";;
+    links.next = koansDomDe[i + 1].id + ".html";;
   }
 
-  ejs.renderFile("src/html/de/main.html", { koan: koan, links: links }, function(err, koanHtml) {
+  ejs.renderFile("src/html/de/main-dom.html", { koan: koan, links: links }, function(err, koanHtml) {
     if (err) throw err;
     fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
       if (err) throw err;

@@ -20,6 +20,9 @@ jshero.evaluator = (function() {
   };
 
   /**
+   * Run testCode against the user code.
+   * Returns the result of testCode. 
+   * 
    * @param {String} testCode
    */
   var evalTest = function(testCode) {
@@ -37,6 +40,7 @@ jshero.evaluator = (function() {
   /**
    * Test, if the user code is executable.
    * Throw an error if not.
+   * Execute the user code with eval.
    */
   var evalParse = function() {
     eval(userCode);

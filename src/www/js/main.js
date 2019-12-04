@@ -44,6 +44,8 @@
       header.toRed();
     }
 
+    refreshFixMe();
+
   };
 
   var testCode = function(e) {
@@ -55,6 +57,7 @@
 
     var code = codeArea.get();
     msg.clear();
+    refreshFixMe();
     tester.run(code, function(results) {
       var result;
       for (var i = 0, l = results.length; i < l; i++) {
@@ -100,6 +103,27 @@
     // auch gleich der Klick auf den Weiter-Button ausgeloest. 'return false' verhindert das.
     // 'return false' works like Event.preventDefault and Event.stopPropagation, but has better browser support.
     return false;
+  };
+
+  var refreshFixMe = function() {
+    var oldFixMe = document.getElementById("fixme");
+    if (oldFixMe) {
+      var newFixMe = createFixMe();
+      oldFixMe.parentNode.replaceChild(newFixMe, oldFixMe);
+    }
+  };
+
+  var createFixMe = function() {
+    var fixMe = document.createElement("div");
+    fixMe.id = "fixme";
+    fixMe.innerHTML = "#fixme";
+    fixMe.style.height = "3em";
+    fixMe.style.lineHeight = "3em";
+    fixMe.style.textAlign = "center";
+    fixMe.style.fontSize = "1.5em";
+    fixMe.style.color = "white";
+    fixMe.style.backgroundColor = "grey";
+    return fixMe;
   };
 
   var showHintOpenLink = function() {

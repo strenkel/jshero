@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="backgroundcolor.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="../success.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="regexexec.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="further.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,27 +51,52 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Quersumme</h1>
+    <h1 id="koans-title">Dynamische Webseiten</h1>
     
-    <div id="koans-lesson" class="paragraph">Mit dieser Lektion endet die Einführung in der Sprachkern von JavaScript.
- Die folgenden Lektionen behandeln das sogenannte clientseitige JavaScript.
- Zum Abschluss der Einführung in den Sprachkern noch eine Aufgabe aus dem Gebiet der Mathematik:</div>
+    <div id="koans-lesson" class="paragraph">Webseiten basieren auf HTML, der Hypertext Markup Language. HTML-Seiten bestehen aus Text und werden
+durch sogenannte Tags strukturiert. Tags stellen meist einen rechteckigen Bereich der Webseite dar.
+Diese Bereiche können mit CSS, den Cascading Style Sheets, formatiert werden. Mit CSS kann man die
+Position, die Größe, die Farbe und vieles mehr der einzelnen Tags festlegen. Eine gute Einführung in HTML
+und CSS findest Du auf <a href="https://wiki.selfhtml.org">SELFHTML</a>.<br><br>
+
+Hier lernst Du, wie Du Webseiten mit Hilfe von JavaScript verändern kannst.
+Solche Webseiten nennt man auch dynamische Webseiten. Ein gutes Beispiel für eine dynamische Webseite ist JS Hero.
+Sind auf einer Seite alle Tests grün, wechselt die Farbe der oberen Titelleiste von rot auf grün.
+Das geschiet mit Hilfe von JavaScript. Einen solchen Farbwechsel wollen wir jetzt programmieren.<br><br>
+
+Um einzelne Tags einer Webseite verändern zu können, benötigt JavaScript eine gesonderte Bibliothek,
+das Document Object Model (DOM). Diese Bibliothek steht in jedem Browser über das
+<code>document</code> Objekt zur Verfügung. Um auf ein Tag, auch HTML-Element genannt, zugreifen zu können,
+muss man es identifizieren. Das geht am besten, wenn man dem Tag im HTML Code eine ID zuweist.
+Hat ein Tag die ID <code>content</code>, so sieht der Zugriff wie folgt aus:  
+
+<pre><code>var elm = document.getElementById("content");</code></pre>
+
+<code>document</code> besitzt die Methode <code>getElementById</code>. Übergibt man dieser Methode eine ID,
+so liefert sie ein Objekt zurück, dass das entsprechende HTML-Element repräsentiert.
+Dieses Objekt besitzt nun Eigenschaften und Methoden, mit denen man das HTML-Element verändern kann.
+Eine dieser Eigenschaften ist <code>style</code>. Es ist ein Objekt, dass alle CSS-Eigenschaften
+des HTML-Elements repräsentiert. Mit diesem Objekt können wir nun die Hintergrundfarbe eines HTML-Elements
+verändern:
+
+<pre><code>var elm = document.getElementById("content");
+elm.style.backgroundColor = 'blue';</code></pre>
+
+Im ersten Schritt holen wir uns mit der bekannten Methode <code>getElementById</code> das HTML-Element.
+Im zweiten Schritt setzen wir die Eigenschaft <code>backgroundColor</code> des <code>style</code>-Objekts
+auf <code>'blue'</code>. Das HTML-Element wir augenblicklich blau.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>quersumme</code>, die die Quersumme einer natürlichen Zahl berechnet.
-Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)</code> sollte <code>18</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Unterhalb der Aufgabe befindet sich ein grauer Streifen. Der Streifen ist ein HTML-Element
+mit der ID <code>fixme</code>. Setze die Hintergrundfarbe dieses Streifens auf orange.</div>
+    <div id="fixme"></div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var quersumme = function(zahl) {
-// Extrahiere in einer Schleife
-// mit Modulo jeweils die
-// Einer-Stelle und addiere 
-// sie auf.
-};</code></pre></div>
+    <div id="hint-area" class="paragraph">Setze <code>backgroundColor</code> auf <code>'orange'</code>.</div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -79,20 +104,11 @@ Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var quersumme = function(zahl) {
-  var sum = 0;
-  var rest = zahl;
-  while (rest > 0) {
-    var einer = rest % 10;
-    sum = sum + einer;
-    rest = (rest - einer)/10;
-  }
-  return sum;
-};</code></pre></div>
+    <div id="solution-area" class="paragraph"><pre><code>var elm = document.getElementById('fixme');
+elm.style.backgroundColor = 'orange';</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
-
     <p>
       <button id="test-button">Tests</button>
     </p>
@@ -126,7 +142,9 @@ Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)
   <script src="../js/lib/log.js"></script>
   <script src="../js/lib/testutil.js"></script>
   <script src="../js/lib/actualkoan.js"></script>
-  <script src="../js/lib/tester.js?v=306"></script>
+  <script src="../js/lib/koans.js"></script>
+  <script src="../js/lib/domtester.js?v=306"></script>
+  <script src="../js/koans/backgroundcolor.js"></script>
   <script src="../js/main.js"></script>
 
 </body>
