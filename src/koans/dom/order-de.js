@@ -2,6 +2,7 @@
 
 jshero.koans.initReorder(
   [
-    'backgroundcolor'
+    'backgroundcolor',
+    'color'
   ]
 );
