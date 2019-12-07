@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="textcontent.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="../success.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="backgroundcolor.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="color.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,23 +51,18 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Textfarbe</h1>
+    <h1 id="koans-title">Text ändern</h1>
     
-    <div id="koans-lesson" class="paragraph">Die Textfarbe wird mit der <code>style</code> Eigenschaft <code>color</code> gesetzt:
+    <div id="koans-lesson" class="paragraph">Mit der Eigenschaft <code>textContent</code> kann man Text in ein HTML-Element schreiben:
 
 <pre><code>var elm = document.getElementById("content");
-elm.style.color = 'green';</code></pre></div>
+elm.textContent = 'New content!';</code></pre>
+
+Der alte Inhalt des HTML-Elements wird mit dem zugewiesenen String überschrieben.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Setze die Textfarbe des <code>fixme</code>-Elements auf gelb.</div>
+    <div id="koans-task" class="paragraph">Setze den Text des <code>fixme</code>-Elements auf <code>Hello HTML!</code>.</div>
     <div id="fixme"></div>
-    
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Tipp
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph">Setze <code>color</code> auf <code>'yellow'</code>.</div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -76,7 +71,7 @@ elm.style.color = 'green';</code></pre></div>
       </span>
     </div>
     <div id="solution-area" class="paragraph"><pre><code>var elm = document.getElementById('fixme');
-elm.style.color = 'yellow';</code></pre></div>
+elm.textContent = 'Hello HTML!';</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
@@ -115,7 +110,7 @@ elm.style.color = 'yellow';</code></pre></div>
   <script src="../js/lib/actualkoan.js"></script>
   <script src="../js/lib/koans.js"></script>
   <script src="../js/lib/domtester.js?v=306"></script>
-  <script src="../js/koans/color.js"></script>
+  <script src="../js/koans/textcontent.js"></script>
   <script src="../js/main.js"></script>
 
 </body>
