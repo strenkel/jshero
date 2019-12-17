@@ -4,6 +4,7 @@ jshero.koans.initReorder(
   [
     'backgroundcolor',
     'color',
+    'rgb',
     'textcontent'
   ]
 );

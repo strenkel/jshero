@@ -88,7 +88,7 @@ textarea.code-area {
 #content {
   margin: 0 auto;
   max-width: 740px;
-  padding: 8em 6%;
+  padding: 8em 6% 5em 6%;
 }
 
 #content a {
@@ -228,7 +228,7 @@ textarea.code-area {
   }
 
   #content {
-    padding: 8em 1em 17em 1em;
+    padding: 8em 1em 14em 1em;
   }
 
 }

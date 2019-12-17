@@ -57,7 +57,6 @@
     <% } %>
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph"><%- koan.task %></div>
-    <div id="fixme"></div>
     <% if (koan.hint) { %>
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
@@ -75,11 +74,11 @@
     <div id="solution-area" class="paragraph"><%- koan.solution %></div>
     <% } %>
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
-      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>   
+    <div id="fixme"></div>
     <p>
       <button id="test-button">Tests</button>
     </p>
-
     <div id="messages"></div>
 
   </div>
