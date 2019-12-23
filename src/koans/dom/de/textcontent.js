@@ -29,7 +29,7 @@ elm.textContent = 'Hello HTML!';</code></pre>`,
         return {
           ok: false,
           msg: `Das <code>fixme</code>-Element enthält nicht den Text <code>Hello HTML!</code>, sondern den Text
-          <code>${text}</code>`
+<code>${text}</code>.`
         }
       }
     }

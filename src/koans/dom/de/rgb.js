@@ -45,7 +45,7 @@ style.color = 'rgb(10, 30, 230)';</code></pre>`,
       } else {
         return {
           ok: false,
-          msg: "Die Hintergrundfarbe ist nicht <code>'rgb(190, 220, 200)'</code>, sondern <code>'" + color + "'."
+          msg: `Die Hintergrundfarbe ist nicht <code>'rgb(190, 220, 200)'</code>, sondern <code>'${color}'</code>.`
         }
       }
     },
@@ -61,7 +61,7 @@ style.color = 'rgb(10, 30, 230)';</code></pre>`,
       } else {
         return {
           ok: false,
-          msg: "Die Textfarbe ist nicht <code>'rgb(10, 30, 230)'</code>, sondern <code>'" + color + "'."
+          msg: `Die Textfarbe ist nicht <code>'rgb(10, 30, 230)'</code>, sondern <code>'${color}'</code>.`
         }
       }
     }

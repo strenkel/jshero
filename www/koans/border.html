@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="../success.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="textcontent.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="border.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="rgb.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -51,17 +51,33 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Text ändern</h1>
+    <h1 id="koans-title">Rahmen</h1>
     
-    <div id="koans-lesson" class="paragraph">Mit der Eigenschaft <code>textContent</code> kann man Text in ein HTML-Element schreiben:
+    <div id="koans-lesson" class="paragraph">HTML-Elementen kann man einen Rahmen geben. Ein Rahmen wird durch drei Eigenschaften beschrieben:
+seine Breite, seine Farbe und sein Aussehen:
 
 <pre><code>var elm = document.getElementById("content");
-elm.textContent = 'New content!';</code></pre>
+elm.style.borderWidth = '1px';
+elm.style.borderColor = 'purple';
+elm.style.borderStyle = 'dotted';</code></pre>
 
-Der alte Inhalt des HTML-Elements wird mit dem zugewiesenen String überschrieben.</div>
+Die Breite des Rahmens wird über die style-Eigenschaft <code>borderWidth</code> festgelegt. Um die Breite anzugeben,
+benötigt man neben einer Zahl noch eine Einheit. Eine einfache Einheit ist
+<a href="https://de.wikipedia.org/wiki/Pixel">Pixel</a> (px). Ein Pixel ist meist einem Bildpunkt
+auf dem Bildschirm. Je nach Bildschirm entspricht 1 px etwa 0,3 mm.<br><br>
+
+Die Farbe des Rahmens wird über die style-Eigenschaft <code>borderColor</code> angegben. Hier kann man ein
+Farbschlüsselwort oder eine RGB-Farbe angeben.<br><br>
+
+Das Aussehen des Rahmens wird über die style-Eigenschaft
+<code>borderStyle</code> festgelegt.
+Hier stehen die Schlüsselwörter <code>dotted</code> (gepunkted), <code>dashed</code> (gestrichelt),
+<code>solid</code> (durchgezogem), <code>double</code> (doppelt), <code>groove</code>, <code>ridge</code>,
+<code>inset</code> und <code>outset</code> zur Verfügung. Die letzten 4 Werte beschreiben verschiedene 3-D Effekte.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Setze den Text des <code>fixme</code>-Elements auf <code>Hello HTML!</code>.</div>
+    <div id="koans-task" class="paragraph">Versehe das <code>fixme</code>-Element mit einem Rahmen. Der Rahmen soll durchgezogen und indigo sein sowie
+eine Breite von 5 Pixel besitzen.</div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -69,8 +85,10 @@ Der alte Inhalt des HTML-Elements wird mit dem zugewiesenen String überschriebe
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var elm = document.getElementById('fixme');
-elm.textContent = 'Hello HTML!';</code></pre></div>
+    <div id="solution-area" class="paragraph"><pre><code>var style = document.getElementById('fixme').style;
+style.borderWidth = '5px';
+style.borderColor = 'indigo';
+style.borderStyle = 'solid';</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>   
@@ -109,7 +127,7 @@ elm.textContent = 'Hello HTML!';</code></pre></div>
   <script src="../js/lib/actualkoan.js"></script>
   <script src="../js/lib/koans.js"></script>
   <script src="../js/lib/domtester.js?v=306"></script>
-  <script src="../js/koans/textcontent.js"></script>
+  <script src="../js/koans/border.js"></script>
   <script src="../js/main.js"></script>
 
 </body>

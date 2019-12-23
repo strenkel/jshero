@@ -28,7 +28,7 @@ elm.style.color = 'yellow';</code></pre>`,
       } else {
         return {
           ok: false,
-          msg: "Die Textfarbe ist nicht <code>'yellow'</code>, sondern <code>'" + color + "'."
+          msg: `Die Textfarbe ist nicht <code>'yellow'</code>, sondern <code>'${color}'</code>.`
         }
       }
     }

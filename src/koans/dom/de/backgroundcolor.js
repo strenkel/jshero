@@ -58,8 +58,8 @@ elm.style.backgroundColor = 'orange';</code></pre>`,
       } else {
         return {
           ok: false,
-          msg: "Die Hintergrundfarbe des Streifens ist nicht <code>'orange'</code>, sondern <code>'" +
-            backgroundColor + "'."
+          msg: `Die Hintergrundfarbe des Streifens ist nicht <code>'orange'</code>,
+sondern <code>'${backgroundColor}'</code>.`
         }
       }
     }
