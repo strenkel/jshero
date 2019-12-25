@@ -4,8 +4,8 @@ jshero.koans.add({
 
   title: 'Quersumme',
 
-  lesson: `Mit dieser Lektion endet die Einführung in der Sprachkern von JavaScript.
- Die folgenden Lektionen behandeln das sogenannte clientseitige JavaScript.
+  lesson: `Mit dieser Lektion endet die Einführung in den Sprachkern von JavaScript.
+ Die folgenden Lektionen bieten einen kleinen Einstieg in das sogenannte clientseitige JavaScript.
  Zum Abschluss der Einführung in den Sprachkern noch eine Aufgabe aus dem Gebiet der Mathematik:`,
 
   task: `Schreibe eine Funktion <code>quersumme</code>, die die Quersumme einer natürlichen Zahl berechnet.
