@@ -4,11 +4,11 @@ if (typeof jshero === "undefined") {
 
 /**
  * There are two jshero.koans classes!
+ * This one is used for building the app.
  * See the other class for more information!
  */
 jshero.koans = (function() {
 
-  var index = 0;
   var koans = [];
   var koansMap = {};
 
@@ -42,7 +42,7 @@ jshero.koans = (function() {
       if (koan != null) {
         koans.push(koan);
       } else {
-        console.log("ERROR: No koan for koan-Id in koansMap!");
+        throw `ERROR: No koan for koan-Id ${order[i]} in koansMap!`;
       }
     }
   };

@@ -3,7 +3,7 @@ if (typeof jshero === "undefined") {
 }
 /**
  * There are two jshero.koans classes!
- * This one for use in the browser and one for building the app.
+ * This one for use in the browser and the other for building the app.
  * This one is simple and handle only one koan.
  * The koans class for building handle all koans at once.
  * Both classes must implement an add method!

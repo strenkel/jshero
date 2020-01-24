@@ -74,7 +74,7 @@ jshero.koans.initReorder(
     'undefined',
     'nan',
     'stringsplit',
-    'roman1a',
+    'roman1',
     'roman2',
     'further'
   ]

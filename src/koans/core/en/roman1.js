@@ -2,7 +2,7 @@
 
   jshero.koans.add({
 
-    id: 'roman1a',
+    id: 'roman1',
 
     title: 'Roman numerals I',
 
