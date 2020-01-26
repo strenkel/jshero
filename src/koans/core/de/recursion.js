@@ -58,7 +58,7 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
 
       function() {
         var numOfCalls = evaluator.evalNumOfCalls("reverse('Nebel')", 'reverse');
-        var ok = numOfCalls >= 1;
+        var ok = numOfCalls > 1;
         var msg;
         if (ok) {
           msg = '<code>reverse</code> ruft sich selbst auf.';
