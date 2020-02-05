@@ -27,7 +27,7 @@ an einer Stelle durchgeführt.`,
 
     task: `Schreibe eine Funktion <code>sum</code>, die ein Array gefüllt mit Zahlen entgegennimmt und die Summe dieser
 Zahlen zurückgibt. Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den
-Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabei die Funktion <code>sum</code> benutzen.`,
+Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> sollte die Funktion <code>sum</code> benutzen.`,
 
     tests: [
 
@@ -81,24 +81,8 @@ Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> soll dabe
 
       function() {
         return testutil.assert_functionReturns('mean([-2, -4, 17, 34])', 11.25);
-      },
-      
-      // --- test mean calls sum ---
-
-      function() {
-        var numOfCalls = evaluator.evalNumOfCalls('mean([1, 2])', 'sum');
-        var ok = numOfCalls >= 1;
-        var msg;
-        if (ok) {
-          msg = '<code>mean</code> ruft <code>sum</code> auf.';
-        } else {
-          msg = '<code>mean</code> ruft <code>sum</code> nicht auf.';
-        }
-        return {
-          ok: ok,
-          msg: msg
-        };
       }
+      
     ]
 
   });

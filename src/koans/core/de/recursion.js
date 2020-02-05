@@ -26,7 +26,7 @@ Nun benötigt man noch eine Abbruchbedingung, damit die Rekursion nicht unendlic
 sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
 
     task: `Schreibe eine Funktion <code>reverse</code>, die die Reihenfolge der Zeichen in einem String umkehrt.
-<code>reverse('Nebel')</code> sollte <code>'lebeN'</code> zurückgeben. Die Funktion soll rekursiv sein.`,
+<code>reverse('Nebel')</code> sollte <code>'lebeN'</code> zurückgeben. Die Funktion sollte rekursiv sein.`,
 
     tests: [
 
@@ -54,23 +54,7 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
 
       function() {
         return testutil.assert_functionReturns("reverse('Nebel')", 'lebeN');
-      },
-
-      function() {
-        var numOfCalls = evaluator.evalNumOfCalls("reverse('Nebel')", 'reverse');
-        var ok = numOfCalls > 1;
-        var msg;
-        if (ok) {
-          msg = '<code>reverse</code> ruft sich selbst auf.';
-        } else {
-          msg = '<code>reverse</code> ruft sich nicht selbst auf.';
-        }
-        return {
-          ok: ok,
-          msg: msg
-        };
       }
-
       
     ]
 
