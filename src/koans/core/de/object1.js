@@ -20,7 +20,7 @@ Hier haben wir ein Objekt mit den beiden Eigenschaften <code>name</code> und <co
 Das Objekt wurde der Variablen <code>person</code> zugewiesen.
 Auf dem Namen einer Eigenschaft folgt ein Doppelpunkt und anschließend ihr Wert.
 Die Eigenschaft <code>name</code> hat den Wert <code>'Toni Morrison'</code> und die Eigenschaft <code>alter</code>
-den Wert <code>52</code>. Jede Eigenschaft wird mit einem Komma beendet. Bei der letzten Eigenschaft kann man das
+den Wert <code>52</code>. Jede Eigenschaft wird mit einem Komma beendet. Bei der letzten Eigenschaft wird das
 Komma weglassen. Man kann alle Eigenschaften zusammen mit ihren Werten in einer Zeile notieren.
 Übersichtlicher ist es, wenn man wie hier für jede Eigenschaft eine neue Zeile verwendet.<br><br>
 Mit der folgenden Aufgabe wollen wir einen Punkt in einer Ebene modellieren.
