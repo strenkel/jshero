@@ -6,6 +6,7 @@ jshero.koans.initReorder(
     'color',
     'rgb',
     'border',
-    'textcontent'
+    'textcontent',
+    'goodbye'
   ]
 );
