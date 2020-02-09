@@ -14,8 +14,8 @@ console.log(informatiker);</code></pre>
 Hier wird die Variable <code>informatiker</code> mit <code>console.log</code> geloggt.
 In der Konsole erscheint <code>'Ken Thompson'</code>. Das ist der Wert der Variablen <code>informatiker</code>.`,
 
-    task: `Schreibe eine Funktion <code>logge</code>, die einen Parameter entgegennimmt und diesen Parameter loggt.
-Der Aufruf von <code>logge('Ken Thompson')</code> sollte <code>'Ken Thompson'</code> loggen.`,
+    task: `Schreibe eine Funktion <code>logge</code>, die einen Parameter entgegennimmt und diesen Parameter loggt.<br><br>
+Zum Beispiel: Der Aufruf <code>logge('Ken Thompson')</code> sollte <code>'Ken Thompson'</code> loggen.`,
 
     hint: `<pre><code>var logge = function(wert) {
   ...

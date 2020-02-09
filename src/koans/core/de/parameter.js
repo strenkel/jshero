@@ -24,9 +24,7 @@ ausgeführt. Dabei wird zunächst das Argument <code>'Apfel'</code> dem Paramete
 Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeben. Diese Rückgabe wird der Variablen
 <code>ergebnis</code> zugewiesen. <code>ergebnis</code> hat dann auch den Wert <code>'Apfel'</code>.`,
 
-    task: `Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.
-<code>echo('Greta')</code> sollte <code>'Greta'</code> und <code>echo('CO2')</code> sollte <code>'CO2'</code>
-zurückgeben.`,
+    task: `Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.`,
 
     hint: `<pre><code>var echo = function(ton) {
   ...

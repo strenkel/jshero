@@ -9,7 +9,8 @@
     lesson: 'Jetzt wollen wir das Loggen zusammen mit dem Verketten von Strings üben.',
 
     task: `Schreibe eine Funktion <code>rufe</code>, die einen String als Parameter entgegennimmt und diesen String verdoppelt zurückgibt.
-  Gleichzeitig soll die Rückgabe geloggt werden. Der Aufruf <code>rufe('Werder')</code>
+  Gleichzeitig soll die Rückgabe geloggt werden.<br><br>
+  Zum Beispiel: Der Aufruf <code>rufe('Werder')</code>
   sollte <code>'WerderWerder'</code> zurückgeben und er sollte <code>'WerderWerder'</code> loggen.`,
 
     hint: `<pre><code>var rufe = function(name) {

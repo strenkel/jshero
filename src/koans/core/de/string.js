@@ -20,9 +20,9 @@ an und gibt den zusammengesetzten Text zurück:
 So liefert <code>lobe('JavaScript')</code> den Wert <code>'JavaScript ist toll!'</code>.`,
 
   task: `Schreibe eine Funktion <code>begruesse</code>, die einen Parameter entgegennimmt und die
-<code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt. Übergibt man der Funktion <code>'Maria'</code>,
-so sollte die Funktion <code>'Hallo Maria!'</code> zurückgeben. Übergibt man der Funktion <code>'Franz'</code>,
-so sollte die Rückgabe <code>'Hallo Franz!'</code> sein.`,
+<code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt.<br><br>
+Zum Beispiel: Übergibt man der Funktion <code>begruesse</code> den Wert <code>'Ada'</code>,
+so sollte die Funktion <code>'Hallo Ada!'</code> zurückgeben.`,
 
   hint: `<pre><code>var begruesse = function(name) {
   return ...
@@ -47,6 +47,10 @@ so sollte die Rückgabe <code>'Hallo Franz!'</code> sein.`,
 
     function() {
       return jshero.testutil.assert_functionReturns("begruesse('Franz')", 'Hallo Franz!');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("begruesse('Ada')", 'Hallo Ada!');
     }
   ]
 
