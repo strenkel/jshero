@@ -17,8 +17,9 @@ Die Methode <code>indexOf()</code> unterscheidet zwischen Groß- und Kleinschrei
 
   task: `Schreibe eine Funktion <code>indexOfIgnoreCase</code>, die 2 Strings entgegennimmt und wie die Methode
 <code>indexOf</code> die Position des zweiten Strings im ersten String bestimmt. Im Unterschied zur Methode
-<code>indexOf</code> soll die Groß- oder Kleinschreibung keine Rolle spielen. Sowohl <code>indexOfIgnoreCase('JS', 'JS')</code>
-als auch <code>indexOfIgnoreCase('JS', 'js')</code> sollten <code>0</code> ergeben.`,
+<code>indexOf</code> soll die Groß- oder Kleinschreibung keine Rolle spielen.<br><br>Zum Beispiel:
+Sowohl <code>indexOfIgnoreCase('JS', 'JS')</code> als auch <code>indexOfIgnoreCase('JS', 'js')</code> sollten
+<code>0</code> ergeben.`,
 
 hint: `<pre><code>var indexOfIgnoreCase = function(s1, s2) {
 // Wandle s1 und s2 zuerst

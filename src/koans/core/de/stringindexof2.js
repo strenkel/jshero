@@ -18,8 +18,8 @@ ist also 2. Das zweite <code>"e"</code> in <code>"Fred Feuerstein"</code> befind
 
   task: `Schreibe eine Funktion <code>secondIndexOf</code>, die 2 Strings entgegennimmt und die zweite Position des
 zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vor, so soll <code>-1</code> zurückgegeben werden.
-<code>secondIndexOf("Ida-Ida", "Ida")</code> soll <code>4</code> zurückgeben.
-<br/>Tipp: Falls Du Hilfe brauchst, lies dir auch die Beschreibung in
+<br><br>Zum Beispiel: <code>secondIndexOf("Ida-Ida", "Ida")</code> soll <code>4</code> zurückgeben.
+<br><br>Tipp: Falls Du Hilfe brauchst, lies dir auch die Beschreibung in
 <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String/indexOf">SELFHTML</a> durch.`,
 
   hint: `<pre><code>var secondIndexOf = function(s1, s2) {

@@ -19,7 +19,7 @@ Wird kein Parameter übergeben, so wird das Zeichen mit dem Index <code>0</code>
 für <code>index</code> ist <code>0</code>. Der Wert von <code>n4</code> ist also auch <code>'M'</code>.`,
 
   task: `Schreibe eine Funktion <code>abkuerzung</code>, die zwei Strings als Parameter entgegennimmt und als Rückgabe die Anfangsbuchstaben
-dieser Strings zurückgibt. <code>abkuerzung('Hansestadt', 'Bremen')</code> sollte <code>'HB'</code> zurückliefern.`,
+dieser Strings zurückgibt.<br><br>Zum Beispiel: <code>abkuerzung('Hansestadt', 'Bremen')</code> sollte <code>'HB'</code> zurückliefern.`,
 
   hint: `<pre><code>var abkuerzung = function(s1, s2) {
   ...

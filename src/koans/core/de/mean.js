@@ -14,7 +14,7 @@ var x2 = (3 + 4) * 2;</code></pre>
 <code>x1</code> hat den Wert <code>11</code>, der Wert von <code>x2</code> ist <code>14</code>.`,
 
   task: `Schreibe eine Funktion <code>mittelwert</code>, die zwei Zahlen als Parameter entgegennimmt und deren
-Mittelwert zurückgibt. <code>mittelwert(1, 2)</code> sollte <code>1.5</code> ergeben.`,
+Mittelwert zurückgibt.<br><br>Zum Beispiel: <code>mittelwert(1, 2)</code> sollte <code>1.5</code> ergeben.`,
 
   hint: `<pre><code>Der Mittelwert zweier Zahlen
 x und y ist (x + y) / 2.</code></pre>`,
