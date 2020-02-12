@@ -15,7 +15,7 @@ var name = eingabe.trim();</code></pre>
 Wie angedeutet werden häufig Benutzereingaben vor der Verarbeitung getrimmt.`,
 
   task: `Schreibe eine Funktion <code>firstChar</code>, die bei Übergabe eines Strings das erste Zeichen,
-das kein Leerzeichen ist, zurückgibt.<br><br>Zum Beispiel: <code>firstChar(' Rosa')</code> sollte <code>'R'</code>
+das kein Leerzeichen ist, zurückgibt.<br><br>Beispiel: <code>firstChar(' Rosa')</code> sollte <code>'R'</code>
 zurückgeben.`,
 
   hint: `<pre><code>var firstChar = function(text) {

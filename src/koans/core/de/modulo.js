@@ -11,7 +11,7 @@ jshero.koans.add({
     '20 geteilt durch 3 ergibt 6 Rest 2. <code>y</code> ist also <code>2</code>.',
 
   task: `Schreibe eine Funktion <code>einer</code>, die eine natürliche Zahl entgegenimmt und die Ziffer der
-Einer-Stelle zurückgibt.<br><br>Zum Beispiel: <code>einer(2674)</code> sollte <code>4</code> zurückgeben.`,
+Einer-Stelle zurückgibt.<br><br>Beispiel: <code>einer(2674)</code> sollte <code>4</code> zurückgeben.`,
 
   hint: `<pre><code>var einer = function(n) {
 // Benutze Modulo 10.  

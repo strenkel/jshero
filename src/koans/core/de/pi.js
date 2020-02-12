@@ -9,8 +9,8 @@ jshero.koans.add({
 Beachte: Die Konstanten werden im Gegensatz zu Funktionen ohne anschließende Klammern aufgerufen.`,
 
   task: `Schreibe eine Funktion <code>flaeche</code>, die die Fläche eines Kreises berechnet.
-Übergeben wird der Funktion als Parameter der Radius des Kreises. Tipp: Die Fläche eines Kreises ist &pi; * r&sup2;.
-Dabei ist r der Radius des Kreises.`,
+Übergeben wird der Funktion als Parameter der Radius des Kreises.
+<br><br>Tipp: Die Fläche eines Kreises ist &pi; * r&sup2;. Dabei ist r der Radius des Kreises.`,
 
   tests: [
 

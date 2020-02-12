@@ -14,9 +14,9 @@ var max = Math.max(3, 9, 2);</code></pre>
 Das Besondere: Beide Funktionen können mit einer beliebigen Anzahl von Argumenten aufgerufen werden.`,
 
   task: `Schreibe eine Funktion <code>bereichsmittel</code>, die das Bereichsmittel von 3 Zahlen berechnet.
-Das <a href='https://de.wikipedia.org/wiki/Mittelwert#Bereichsmittel'>Bereichsmittel</a>
+<br><br>Tipp: Das <a href='https://de.wikipedia.org/wiki/Mittelwert#Bereichsmittel'>Bereichsmittel</a>
 einer Reihe von Zahlen ist der Mittelwert der kleinsten und größten Zahl.
-<code>bereichsmittel(3, 9, 1)</code> sollte <code>(9+1)/2</code> = <code>5</code> ergeben.`,
+<br><br>Beispiel: <code>bereichsmittel(3, 9, 1)</code> sollte <code>(9+1)/2</code> = <code>5</code> ergeben.`,
 
   tests: [
     function() {

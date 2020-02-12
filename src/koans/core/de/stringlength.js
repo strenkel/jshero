@@ -21,7 +21,7 @@ anzahl = stadt.length;</code/></pre>
 Der Leerstring besitzt keine Zeichen. Der Wert von <code>anzahl</code> ist jetzt <code>0</code>.`,
 
   task: `Schreibe eine Funktion <code>laenge</code>, die bei Übergabe eines Strings die Anzahl der Zeichen dieses
-Strings zurückgibt.<br><br>Zum Beispiel: <code>laenge('Franz')</code> sollte <code>5</code> zurückgeben.`,
+Strings zurückgibt.<br><br>Beispiel: <code>laenge('Franz')</code> sollte <code>5</code> zurückgeben.`,
 
   hint: `<pre><code>var laenge = function(s) {
 ...

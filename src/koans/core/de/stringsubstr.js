@@ -15,7 +15,7 @@ Der zweite Parameter gibt an, wieviel Zeichen ab der festgelegten Stelle extrahi
 Ist der zweite Paramter nicht angegeben, so wird immer bis zum Ende des ursprüglichen Strings extrahiert.`,
 
   task: `Schreibe eine Funktion <code>firstWord</code>, die einen String entgegennimmt und das erste Wort
-in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ersten Leerzeichen.<br><br>Zum Beispiel:
+in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ersten Leerzeichen.<br><br>Beispiel:
 <code>firstWord('Wo ist hier')</code> sollte <code>'Wo'</code> zurückgeben.`,
 
   hint: `<pre><code>var firstWord = function(s) {

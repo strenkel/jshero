@@ -23,7 +23,7 @@ Der zu ersetzende String wird entfernt. <code>nurso</code> enthält den Wert <co
 Kommt der zu ersetzende String nicht vor, so wird der ursprüngliche String zurückgegeben.`,
 
   task: `Schreibe eine Funktion <code>convert</code>, die einen Datumsstring in englischer Schreibweise (20-05-2017 oder
-20/05/2017) in deutsche Schreibweise (20.05.2017) umwandet.<br><br>Zum Beispiel: Sowohl
+20/05/2017) in deutsche Schreibweise (20.05.2017) umwandet.<br><br>Beispiel: Sowohl
 <code>convert('20-05-2017')</code> als auch <code>convert('20/05/2017')</code> sollten <code>'20.05.2017'</code> ergeben.`,
 
   hint: `<pre><code>var convert = function(s1, s2) {

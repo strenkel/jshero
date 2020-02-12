@@ -21,7 +21,7 @@ So liefert <code>lobe('JavaScript')</code> den Wert <code>'JavaScript ist toll!'
 
   task: `Schreibe eine Funktion <code>begruesse</code>, die einen Parameter entgegennimmt und die
 <code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt.<br><br>
-Zum Beispiel: Übergibt man der Funktion <code>begruesse</code> den Wert <code>'Ada'</code>,
+Beispiel: Übergibt man der Funktion <code>begruesse</code> den Wert <code>'Ada'</code>,
 so sollte die Funktion <code>'Hallo Ada!'</code> zurückgeben.`,
 
   hint: `<pre><code>var begruesse = function(name) {

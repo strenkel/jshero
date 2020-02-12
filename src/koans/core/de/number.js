@@ -27,7 +27,7 @@ Die Variablen <code>x3</code> bis <code>x6</code> haben so die Werte <code>8</co
 <code>4</code>, <code>12</code> und <code>3</code>.`,
 
   task: `Schreibe eine Funktion <code>add</code>, die zwei Zahlen als Parameter entgegennimmt
-und deren Summe zurückgibt.<br><br>Zum Beispiel: <code>add(1, 2)</code> sollte <code>3</code> ergeben.`,
+und deren Summe zurückgibt.<br><br>Beispiel: <code>add(1, 2)</code> sollte <code>3</code> ergeben.`,
 
   hint: `<pre><code>var add = function(x, y) {
   return ...

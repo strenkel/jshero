@@ -23,7 +23,7 @@ Hier wird <code>toUpperCase()</code> direkt auf einen String angewendet. Der Wer
 
   task: `Schreibe eine Funktion <code>toCase</code>, die bei Übergabe eines Strings diesen aneinandergehängt
 in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klein- und Großschreibung soll
-<code>-</code> sein.<br><br>Zum Beispiel: <code>toCase('Ida')</code> sollte <code>'ida-IDA'</code> zurückgeben.`,
+<code>-</code> sein.<br><br>Beispiel: <code>toCase('Ida')</code> sollte <code>'ida-IDA'</code> zurückgeben.`,
 
   hint: `<pre><code>var toCase = function(text) {
   return ... + '-' + ...;
