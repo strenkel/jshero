@@ -17,7 +17,7 @@ können wir auf ihr die String-Methode <code>replace</code> anwenden. <code>numb
 <code>'7,25'</code>.`,
 
   task: `Schreibe eine Funktion <code>digitLength</code>, die die Anzahl der Ziffern einer natürlichen Zahl berechnet.
-<code>digitLength(709)</code> sollte 3 zurückgeben.`,
+<br><br>Beispiel: <code>digitLength(709)</code> sollte 3 zurückgeben.`,
 
   tests: [
     function() {

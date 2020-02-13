@@ -16,8 +16,9 @@ var d = Math.ceil(4.01);</code></pre>
 <code>Math.floor()</code> rundet immer ab und <code>Math.ceil()</code> rundet immer auf. Die Variablen <code>a</code> bis <code>d</code>
 erhalten also alle den Wert <code>5</code>.`,
 
-  task: `Schreibe eine Funktion <code>round100</code>, die eine Dezimalzahl kaufmännisch auf die Hunderterstelle rundet.
-<code>round100(1749)</code> sollte <code>1700</code> und <code>round100(856.123)</code> sollte <code>900</code> ergeben.`,
+  task: `Schreibe eine Funktion <code>round100</code>, die eine Dezimalzahl kaufmännisch auf die Hunderterstelle
+rundet.<br><br>Beispiel: <code>round100(1749)</code> sollte <code>1700</code> und <code>round100(856.123)</code>
+sollte <code>900</code> ergeben.`,
 
   hint: `Verwende neben <code>Math.round()</code> noch Multiplikation und Division.`,
 

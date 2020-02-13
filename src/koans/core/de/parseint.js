@@ -35,7 +35,7 @@ Eine ausführliche Dokumentation von <code>parseInt</code> findest du bei
   task: `Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und die das
 Ergebnis der Addition als Zahl zurückgibt. Es sollen zwei natürliche Zahlen addiert werden. Die Additionsaufgabe ist
 ein String der Form <code>'102+17'</code>.
-Der Aufruf <code>add('102+17')</code> soll die Zahl <code>119</code> zurückgeben.`,
+<br><br>Beispiel: Der Aufruf <code>add('102+17')</code> soll die Zahl <code>119</code> zurückgeben.`,
 
   hint: `Bestimme mit <code>parseInt</code> den ersten Summanden.
 Bestimme mit <code>indexOf</code> die Position des Plus-Zeichens.
