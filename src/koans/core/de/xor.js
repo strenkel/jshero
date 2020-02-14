@@ -16,11 +16,12 @@ In der ersten Zeile wird zuerst UND ausgewertet. <code>x1</code> wird <code>true
 In der zweiten Zeile wird zuerst ODER ausgewertet. <code>x2</code> wird <code>false</code>.
 In der dritten Zeile wird zuerst NICHT ausgewertet. <code>x3</code> wird <code>false</code>.
 Und in der vierten Zeile wird zuerst UND ausgewertet. <code>x4</code> wird <code>true</code>.<br><br>
-In der folgenden Aufgabe sollst du ein weiteres wichtiges Gatter, das XOR-Gatter (engl.: eXclusive OR - exklusives oder), programmieren.`,
+In der folgenden Aufgabe sollst du ein weiteres wichtiges Gatter, das XOR-Gatter (engl.: eXclusive OR - exklusives oder),
+programmieren.`,
 
   task: `Schreibe eine Funktion <code>xor</code>, die zwei boolesche Werte als Parameter entgegennimmt.
 Die Rückgabe der Funktion soll <code>true</code> sein, wenn beide Paramter verschieden sind.
-In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>xor(true, false)</code> und
+In den anderen Fällen soll die Rückgabe <code>false</code> sein.<br><br>D.h.: <code>xor(true, false)</code> und
 <code>xor(false, true)</code> sollen <code>true</code> liefern, <code>xor(true, true)</code> und
 <code>xor(false, false)</code> sollen <code>false</code> zurückgeben.`,
 

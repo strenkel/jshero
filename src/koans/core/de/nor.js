@@ -11,8 +11,9 @@ Hier sollst du einen weiteren Standardbaustein, das NOR-Gatter (engl.: Not OR - 
 
   task: `Schreibe eine Funktion <code>nor</code>, die zwei boolesche Werte als Parameter entgegennimmt.
 Die Rückgabe der Funktion soll genau dann <code>true</code> sein, wenn beide Paramter <code>false</code> sind.
-In den anderen Fällen soll die Rückgabe <code>false</code> sein. <code>nor(false, false)</code> soll <code>true</code> liefern,
-<code>nor(false, true)</code>, <code>nor(true, false)</code> und <code>nor(true, true)</code> sollen <code>false</code> zurückgeben.`,
+In den anderen Fällen soll die Rückgabe <code>false</code> sein.<br><br>D. h.: <code>nor(false, false)</code> soll
+<code>true</code> liefern, <code>nor(false, true)</code>, <code>nor(true, false)</code> und <code>nor(true, true)</code>
+sollen <code>false</code> zurückgeben.`,
 
   tests: [
     function() {

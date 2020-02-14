@@ -22,7 +22,7 @@ auch darauf an, dass die Datentypen der beiden verglichenen Werte gleich sind. <
 da hier unterschiedliche Typen verglichen werden. Auf der linken Seite des Vergleichs steht eine Zahl, auf der
 rechten Seite ein String.`,
 
-  task: `Schreibe eine Funktion <code>gleich</code>, die zwei Werte auf strikte Gleichheit überprüft.
+  task: `Schreibe eine Funktion <code>gleich</code>, die zwei Werte auf strikte Gleichheit überprüft.<br><br>Beispiel:
 <code>gleich(1, 1)</code> soll <code>true</code> zurückgeben, <code>gleich(1, 2)</code> soll
 <code>false</code> ergeben.`,
 
