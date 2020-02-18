@@ -18,8 +18,8 @@ Ansonsten gibt das übergebene Argument das Trennzeichen vor.
 <code>l3</code> den String <code>'Sex and Drugs and Rock and Roll'</code>.`,
 
   task: `Schreibe eine Funktion <code>list</code>, die Wörter in einem Array zu einer Aufzählung zusammenführt.
-<code>list(['Sonne', 'Mond', 'Sterne'])</code> soll <code>'Sonne, Mond und Sterne'</code> ergeben.
-Das übergebene Array enthält mindestens zwei Wörter.`,
+Ein leeres Array soll den Leerstring ergeben.
+<br><br>Beispiel: <code>list(['Sonne', 'Mond', 'Sterne'])</code> soll <code>'Sonne, Mond und Sterne'</code> ergeben.`,
 
   tests: [
     function() {
@@ -40,6 +40,14 @@ Das übergebene Array enthält mindestens zwei Wörter.`,
 
     function() {
       return jshero.testutil.assert_functionReturns("list(['C', 'C++', 'Python', 'PHP'])", 'C, C++, Python und PHP');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("list(['Apfel'])", 'Apfel');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("list([])", '');
     }
 
   ]

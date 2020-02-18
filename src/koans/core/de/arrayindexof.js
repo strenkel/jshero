@@ -16,7 +16,7 @@ var i2 = systems.indexOf('Windows');</code></pre>
 Dieser Wert wird zurückgegeben, wenn sich das übergebene Element nicht im Array befindet.`,
 
   task: `Schreibe eine Funktion <code>add</code>, die ein Element an das Ende eines Arrays hängt.
-Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Array befindet.
+Das Element soll aber nur dann angehängt werden, wenn es sich nicht schon im Array befindet.<br><br>Beispiel:
 <code>add([1, 2], 3)</code> sollte <code>[1, 2, 3]</code> und <code>add([1, 2], 2)</code> sollte
 <code>[1, 2]</code> zurückgeben.`,
 

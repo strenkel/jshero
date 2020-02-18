@@ -24,8 +24,8 @@ Erst wenn keine Bedingung erfüllt ist, wird der abschließenden <code>else</cod
   task: `Schreibe eine Funktion <code>addiereMitZuschlag</code>, die zwei Beträge mit Zuschlag addiert.
 Für jeden Betrag, der kleiner gleich <code>10</code> ist, beträgt der Zuschlag <code>1</code>. Für jeden
 Betrag, der größer <code>10</code> und kleiner gleich <code>20</code> ist, beträgt der Zuschlag <code>2</code>.
-Für jeden Betrag, der größer <code>20</code> ist, beträgt der Zuschlag <code>3</code>. <code>addiereMitZuschlag(10, 30)</code>
-sollte <code>44</code> ergeben.`,
+Für jeden Betrag, der größer <code>20</code> ist, beträgt der Zuschlag <code>3</code>.<br><br>Beispiel:
+<code>addiereMitZuschlag(10, 30)</code> sollte <code>44</code> ergeben.`,
 
   tests: [
     function() {

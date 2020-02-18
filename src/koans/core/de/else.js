@@ -19,7 +19,7 @@ Je nachdem, ob <code>betrag</code> größer oder kleiner <code>1000</code> ist, 
 
   task: `Schreibe eine Funktion <code>addiereMitZuschlag</code>, die zwei Beträge mit Zuschlag addiert.
 Für jeden Betrag, der kleiner gleich <code>10</code> ist, beträgt der Zuschlag <code>1</code>.
-Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>.
+Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>.<br><br>Beispiel:
 Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben.`,
 
   tests: [

@@ -14,7 +14,7 @@ Strings in der Groß- und Kleinschreibung unterscheiden.
 Der zweite, weil sich die beiden Werte von Typ her unterscheiden.`,
 
   task: `Schreibe eine Funktion <code>ungleich</code>, die 3 Werte auf strikte Ungleichheit überprüft.
-Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter unterschiedlich sind.
+Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter unterschiedlich sind.<br><br>Beispiel:
 <code>ungleich(1, 2, 3)</code> soll <code>true</code> liefern, <code>ungleich(1, 1, 2)</code> soll
 <code>false</code> ergeben.`,
 

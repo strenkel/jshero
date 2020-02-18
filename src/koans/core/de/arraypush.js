@@ -35,7 +35,7 @@ an der Länge des Codes sieht man, dass die Variante mit <code>push</code> elega
 
     task: `Schreibe eine Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert.
 Alle Elemente des Arrays sollen um eine Position nach links verschoben werden.
-Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden.
+Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden.<br><br>Beispiel:
 <code>rotiere(['a', 'b', 'c'])</code> sollte <code>['b', 'c', 'a']</code> ergeben.`,
 
     hint: `<pre><code>Entferne mit shift das 0te Element.

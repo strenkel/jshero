@@ -15,7 +15,7 @@ Der erste Parameter gibt den Startindex (einschließlich), der zweite den Endind
 Das ursprüngliche Array wird nicht verändert.`,
 
   task: `Schreibe eine Funktion <code>halve</code>, die aus einem Array die erste Hälfte kopiert.
-Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der ersten Hälfte gehören.
+Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der ersten Hälfte gehören.<br><br>Beispiel:
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> sollte <code>[1,&nbsp;2]</code> zurückgeben.`,
 
   tests: [

@@ -15,8 +15,8 @@ Wichtig ist, dass die beiden ursprünglichen Arrays <code>a1</code> und <code>a2
 
   task: `Schreibe eine Funktion <code>concatUp</code>, die zwei Arrays zu einem zusammenführt.
 Dabei soll das längere Array an das kürzere Array angehängt werden. Sind beide Arrays gleich lang,
-so soll das zweite Array dem ersten Array angehängt werden. <code>concatUp([5, 7], [6])</code> sollte <code>[6, 5, 7]</code>
-und <code>concatUp([5, 7], [6, 8])</code> sollte <code>[5, 7, 6, 8]</code> ergeben.`,
+so soll das zweite Array dem ersten Array angehängt werden.<br><br>Beispiel: <code>concatUp([5, 7], [6])</code> sollte
+<code>[6, 5, 7]</code> und <code>concatUp([5, 7], [6, 8])</code> sollte <code>[5, 7, 6, 8]</code> ergeben.`,
 
   tests: [
     function() {

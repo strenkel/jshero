@@ -24,11 +24,10 @@ Andernfalls wird der Code unübersichtlich.`,
 
   task: `Schreibe eine Funktion <code>schnapszahl</code>, die feststellt, ob eine zweistellige Zahl eine Schnapszahl ist
 oder nicht. Ist die Zahl eine Schnapszahl, soll <code>'Schnaps!'</code> zurückgegeben werden, andernfalls
-<code>'Kein Schnaps!'</code>. <code>schnapszahl(22)</code> sollte <code>'Schnaps!'</code> und
-<code>schnapszahl(23)</code> sollte <code>'Kein Schnaps!'</code> zurückgeben.
-<br><br>
-Eine <a href='https://de.wikipedia.org/wiki/Schnapszahl'>Schnapszahl</a> ist eine mehrstellige Zahl, die ausschließlich
-durch identische Ziffern dargestellt wird.`,
+<code>'Kein Schnaps!'</code>. <br><br>Eine <a href='https://de.wikipedia.org/wiki/Schnapszahl'>Schnapszahl</a>
+ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargestellt wird.
+<br><br>Beispiel: <code>schnapszahl(22)</code> sollte <code>'Schnaps!'</code> und
+<code>schnapszahl(23)</code> sollte <code>'Kein Schnaps!'</code> zurückgeben.`,
 
   hint: `<pre><code>var schnapszahl = function(n) {
 // Berechne die Einerstelle
