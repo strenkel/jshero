@@ -9,7 +9,7 @@
     lesson: `Nun wollen wir es andersherum probieren. Versuche auch hier eine iterative und eine rekursive Lösung zu finden.`,
 
     task: `Schreibe eine Funktion <code>roman</code>, die eine arabische Zahl (bis 1000) in eine römische Zahl umwandelt.
-<code>roman(483)</code> sollte <code>'CDLXXXIII'</code> ergeben.`,
+<br><br>Beispiel: <code>roman(483)</code> sollte <code>'CDLXXXIII'</code> ergeben.`,
 
     tests: [
 
