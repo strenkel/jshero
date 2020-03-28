@@ -25,6 +25,15 @@ In den anderen Fällen soll die Rückgabe <code>false</code> sein.<br><br>D.h.: 
 <code>xor(false, true)</code> sollen <code>true</code> liefern, <code>xor(true, true)</code> und
 <code>xor(false, false)</code> sollen <code>false</code> zurückgeben.`,
 
+  hint: `Schreibe einen Ausdruck, der nur dann <code>true</code> ergibt, wenn der erste Parameter <code>true</code> und
+der zweite <code>false</code> ist. Schreibe dann einen Ausdruck, der nur dann <code>true</code> ergibt, wenn der erste
+Parameter <code>false</code> und der zweite <code>true</code> ist. Verknüpfe beide Ausdrücke angemessen.
+Klammern sind bei der Lösung nicht nötig.`,
+
+  solution: `<pre><code>var xor = function(a, b) {
+  return a && !b || !a && b;
+};</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('xor');
