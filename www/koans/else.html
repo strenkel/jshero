@@ -72,6 +72,48 @@ Für jeden Betrag, der kleiner gleich <code>10</code> ist, beträgt der Zuschlag
 Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>.<br><br>Beispiel:
 Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph"><pre><code>var addiereMitZuschlag = function(a, b) {
+
+  var zuschlag = 0;
+  
+  if (a <= 10) {
+    zuschlag = zuschlag + 1;
+  } else ...
+  
+  ...
+
+  return a + b + zuschlag;
+};</code></pre></div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>var addiereMitZuschlag = function(a, b) {
+
+  var zuschlag = 0;
+  
+  if (a <= 10) {
+    zuschlag = zuschlag + 1;
+  } else {
+    zuschlag = zuschlag + 2;
+  }
+  
+  if (b <= 10) {
+    zuschlag = zuschlag + 1;
+  } else {
+    zuschlag = zuschlag + 2;
+  }
+  
+  return a + b + zuschlag;
+};</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
