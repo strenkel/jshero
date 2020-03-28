@@ -17,6 +17,14 @@ var v4 = 5 <= 5;</code></pre>`,
 ist.<br><br>Beispiel: <code>istDreistellig(500)</code> sollte <code>true</code> zurückgeben,
 <code>istDreistellig(50)</code> sollte <code>false</code> ergeben.`,
 
+  hint: `<pre><code>var istDreistellig = function(x) {
+  return x >= 100 && ...
+};</code></pre>`,
+
+  solution: `<pre><code>var istDreistellig = function(x) {
+  return x >= 100 && x < 1000;
+};</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('istDreistellig');
@@ -28,6 +36,10 @@ ist.<br><br>Beispiel: <code>istDreistellig(500)</code> sollte <code>true</code> 
 
     function() {
       return jshero.testutil.assert_functionReturns('istDreistellig(100)', true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('istDreistellig(709)', true);
     },
 
     function() {

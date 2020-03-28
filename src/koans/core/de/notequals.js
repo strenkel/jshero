@@ -18,7 +18,7 @@ Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter u
 <code>ungleich(1, 2, 3)</code> soll <code>true</code> liefern, <code>ungleich(1, 1, 2)</code> soll
 <code>false</code> ergeben.`,
 
-hint: `<pre><code>var ungleich = function (a, b, c) {
+  hint: `<pre><code>var ungleich = function (a, b, c) {
   return a !== b && ...
 };</code></pre>`,
 
