@@ -27,6 +27,14 @@ Beachte: Die Länge eines Arrays ist immer um 1 größer als der höchste Index 
     task: `Schreibe eine Funktion <code>getLastElement</code>, die ein Array entgegennimmt und die das letzte Element
 des Arrays zurückgibt.<br><br>Beispiel: <code>getLastElement([1, 2])</code> sollte <code>2</code> zurückgeben.`,
 
+    hint: `Bestimme den Index des letzten Elements mit der Array-Eigenschaft <code>length</code>.
+Beachte, dass das erste Element im Array den Index <code>0</code> besitzt.`,
+
+    solution: `<pre><code>var getLastElement = function(anArray) {
+  var lastIndex = anArray.length - 1;
+  return anArray[lastIndex];
+};</code></pre>`,
+
     tests: [
       function() {
         return jshero.testutil.assert_isFunction('getLastElement');
