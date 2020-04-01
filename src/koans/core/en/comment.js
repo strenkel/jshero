@@ -18,7 +18,7 @@ Any text in between is a comment.
 
 /* That's a block comment. */
 
-/* This line comment
+/* This block comment
 covers 2 lines. */
 
 /**
