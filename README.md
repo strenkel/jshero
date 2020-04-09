@@ -5,7 +5,7 @@ JS Hero: JavaScript-Tutorial mit Übungen/Koans
 Website: <https://www.jshero.net><br>
 Playstore: <https://play.google.com/store/apps/details?id=net.jshero>
 
-Statische Websites: laufen lokal oder in jedem Webserver.
+Statische Websites: laufen lokal (nur eingeschränkt) oder in jedem Webserver.
 Lokal nur in Browsern, die auch lokal local storage unterstuetzen (Firefix, nicht Chrome, ...).
 Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Website.
 
@@ -18,7 +18,7 @@ test: Unit tests
 
 ## Deployen
 
-Den Inhalt des Verzeichnisses www (nur statische Webseiten) in einem Webserver hinterlegen.
+Den Inhalt des Verzeichnisses www in einem Webserver hinterlegen.
 
 ## Lokal starten
 
