@@ -11,11 +11,11 @@ Dieses Array hat darüber hinaus die beiden Eigenschaften <code>index</code> und
 <code>index</code> enthält den 0-basierten Index des gefundenen Strings und <code>input</code>
 den originalen String.<br> 
 
-<pre><code>var resultat = /(\d+):(\d+)/.exec("Kiel-Flensburg 23:25");
+<pre><code>var resultat = /(\\d+):(\\d+)/.exec("Kiel-Flensburg 23:25");
 var endstand = resultat[0]; // "23:25"
 var toreKiel = resultat[1]; // "23"
 var toreFlensburg = resultat[2]; // "25"
-var index = resultat.index; // 18</code></pre>
+var index = resultat.index; // 15</code></pre>
 
 Wird der reguläre Ausdruck nicht gefunden, gibt <code>exec</code> <code>null</code> zurück.`,
 
