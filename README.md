@@ -13,12 +13,12 @@ Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Websi
 
 www: das gebaute Projekt  
 src: Sourcen, um das Projekt zu bauen  
-build: Build-Skrite  
+build: Build-Skripte  
 test: Unit tests  
 
 ## Deployen
 
-Das Verzeichnis www (nur statische Webseiten) in einem Webserver hinterlegen.
+Den Inhalt des Verzeichnisses www (nur statische Webseiten) in einem Webserver hinterlegen.
 
 ## Lokal starten
 
