@@ -11,10 +11,10 @@ Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Websi
 
 ## Verzeichnisstruktur
 
-www: das gebaute Projekt
-src: Sourcen, um das Projekt zu bauen
-build: Build-Skrite
-test: Unit tests
+www: das gebaute Projekt  
+src: Sourcen, um das Projekt zu bauen  
+build: Build-Skrite  
+test: Unit tests  
 
 ## Deployen
 
