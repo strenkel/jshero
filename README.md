@@ -16,9 +16,13 @@ src: Sourcen, um das Projekt zu bauen
 build: Build-Skrite
 test: Unit tests
 
+## Deployen
+
+Das Verzeichnis www (nur statische Webseiten) in einem Webserver hinterlegen.
+
 ## Lokal starten
 
-www/index.html im Browser öffnen.
+www/index.html im Browser öffnen. Funktioniert nur eingeschränkt.
 
 ## Bauen
 
