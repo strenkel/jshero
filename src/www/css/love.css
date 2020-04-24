@@ -1,0 +1,44 @@
+#content {
+  padding-bottom: 14em;
+}
+
+
+#love {
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
+  background-color: #eeeeee; /* grey 200 */
+  height: 8em;
+}
+
+#love-title {
+  position: relative;
+  top: 1em;
+  font-size: 0.6em;
+  color:  #424242; /* grey 800 */
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#love-links {
+  margin-top: 1em;
+  text-align: center;
+}
+
+#love a {
+  padding: 0 4%;
+  opacity: 1;
+}
+
+#love a:hover {
+  opacity: 0.7;
+}
+
+/* smartphones */
+@media (max-width: 630px) {
+
+  #love {
+    display: none;
+  }
+
+}
