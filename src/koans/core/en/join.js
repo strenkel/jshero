@@ -17,9 +17,11 @@ Otherwise, the passed argument specifies the separator.
 <code>s2</code> has the value <code>'Sex & Drugs & Rock & Roll'</code> and
 <code>s3</code> has the value  <code>'Sex and Drugs and Rock and Roll'</code>.`,
 
-  task: `Write a function <code>list</code> that joins words in an array into a list.
-<code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.
-The passed array contains at least two words.`,
+  task: `Write a function <code>list</code> that takes an array of words and returns a string by
+concatenating the words in the array, separated by commas and - the last word - by an 'and'.
+An empty array should return an empty string.<br><br>
+Example: <code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.
+`,
 
   tests: [
     function() {
@@ -28,6 +30,14 @@ The passed array contains at least two words.`,
 
     function() {
       return jshero.testutil.assert_functionHasNumOfParameter('list', 1);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("list([])", '');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("list(['love'])", 'love');
     },
 
     function() {
