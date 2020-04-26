@@ -6,7 +6,7 @@
 
     title: 'Römische Zahlen I',
 
-    lesson: `Die folgende Aufgabe ist anspruchsvoll. Versuche eine iterative (Scheife) und eine rekursive Lösung zu finden.`,
+    lesson: `Die folgende Aufgabe ist anspruchsvoll. Versuche eine iterative (Schleife) und eine rekursive Lösung zu finden.`,
 
     task: `Schreibe eine Funktion <code>roman</code>, die eine
 <a href='https://de.wikipedia.org/wiki/R%C3%B6mische_Zahlschrift'>römische Zahl</a> (bis 1000) in eine
