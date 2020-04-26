@@ -88,6 +88,7 @@ jshero.koans.initReorder(
     'recursion',
     'roman1',
     'roman2',
+    'euler1',
     'object1',
     'object2',
     'object3',
