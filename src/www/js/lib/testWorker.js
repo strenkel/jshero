@@ -103,7 +103,7 @@ importScripts(
 
     var importKoan = function() {
       var koanUrl = language === "de" ? "../koans/" : "../../en/js/koans/";
-      koanUrl += koanId + ".js?v=320"; // add dummy version to prevent caching after new release
+      koanUrl += koanId + ".js?v=401"; // add dummy version to prevent caching after new release
       importScripts(koanUrl);
     };
 

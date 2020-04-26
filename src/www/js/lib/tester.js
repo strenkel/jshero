@@ -13,7 +13,7 @@ jshero.tester = (function(koanId, i18n, LANGUAGE) {
   var I18N = i18n.get;
   var NO_WORKER = typeof Worker === "undefined";
   var WORKER_URL = LANGUAGE === "de" ? "../js/lib/testWorker.js" : "../../js/lib/testWorker.js";
-  WORKER_URL += "?v=320";
+  WORKER_URL += "?v=401";
 
   var code; // String
   var testNr; // Integer
@@ -39,7 +39,7 @@ jshero.tester = (function(koanId, i18n, LANGUAGE) {
     callback = function() {
       myCallback(results);
     };
-    
+
     // check Worker
     if (NO_WORKER) {
       results.push({
