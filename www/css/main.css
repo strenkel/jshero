@@ -88,7 +88,8 @@ textarea.code-area {
 #content {
   margin: 0 auto;
   max-width: 740px;
-  padding: 8em 6% 5em 6%;
+  /* Content height determine page height. */
+  padding: 8em 6% 8em 6%;
 }
 
 #content a {
