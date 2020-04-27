@@ -15,7 +15,7 @@ Methoden. Methoden operieren auf den Daten eines Objekts.
   preis: 2.15,
   erhoehePreis: function(erhoehung) {
     this.preis = this.preis + erhoehung;
-  };
+  }
 };
 
 var alterPreis = ware.preis;
