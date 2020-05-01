@@ -12,8 +12,8 @@ und Informatik. Nach Anlegen eines Account kannst Du auch dort deine Lösung üb
 
     task: `Schreibe eine Funktion <code>sumMultiples</code>, die eine natürliche Zahl n übergeben bekommt und die die Summe
 aller Vielfachen von 3 und von 5, die echt kleiner als n sind, zurückgibt.<br><br>
-Beispiel: Alle Vielfachen von 3 und 5 kleiner als 10 sind 3, 5, 6 und 9. Ihre Summe ist 23. <code>sumMultiples(10)</code>
-sollte also <code>23</code> ergeben.`,
+Beispiel: Alle Vielfachen von 3 und 5 kleiner als 20 sind 3, 5, 6, 9, 10, 12, 15 und 18. Ihre Summe ist 78.
+<code>sumMultiples(20)</code> sollte also <code>78</code> ergeben.`,
 
     tests: [
 
