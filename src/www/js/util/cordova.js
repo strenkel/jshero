@@ -1,8 +1,5 @@
-if (typeof jshero === "undefined") {
-  var jshero = {};
-}
-
-jshero.cordova = (function() {
+// Add a css class to the body element to distinguish web-app from android-app.
+(function() {
 
   // The cordova android build gets:
   // document.URL == "file:///android_asset/wwww/..." (02/2019)
@@ -11,10 +8,14 @@ jshero.cordova = (function() {
   };
 
   var addAndroidCSS = function() {
+    var bodyClass;
     if (isAndroidApp()) {
-      var body = document.getElementsByTagName("BODY")[0];
-      body.classList.add("android");
+      bodyClass = "android-app";
+    } else {
+      bodyClass = "web-app";
     }
+    var body = document.getElementsByTagName("BODY")[0];
+    body.classList.add(bodyClass);
   }
 
   // --- CODE TO EXCECUTE IMMEDIATELY ---
