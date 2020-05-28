@@ -35,6 +35,10 @@
     line-height: 2em;
   }
 
+  .en #footer {
+    height: 6em;
+  }
+
   #footer a {
     display: block;
   }
