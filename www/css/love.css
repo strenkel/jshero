@@ -2,7 +2,6 @@
   padding-bottom: 18em;
 }
 
-
 #love {
   position: absolute;
   bottom: 3em;
@@ -34,11 +33,32 @@
   opacity: 0.7;
 }
 
+/* tables */
+@media (max-width: 800px) {
+
+  #love-links a:nth-child(1), #love-links a:nth-child(3) {
+    display: none;
+  }
+
+  #love-links {
+    margin-top: 2.5em;
+  }
+
+}
+
 /* smartphones */
 @media (max-width: 630px) {
 
+  #content {
+    padding-bottom: 24em;
+  }
+
   #love {
-    display: none;
+    bottom: 11em;
+  }
+
+  .en #love {
+    bottom: 9em;
   }
 
 }
