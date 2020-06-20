@@ -33,7 +33,7 @@
   opacity: 0.7;
 }
 
-/* tables */
+/* tablets */
 @media (max-width: 800px) {
 
   #love-links a:nth-child(1), #love-links a:nth-child(3) {
