@@ -8,7 +8,7 @@
 
     lesson: `Nun wollen wir Variablen loggen:
 
-<pre><code>var informatiker = 'Ken Thompson';
+<pre><code>let informatiker = 'Ken Thompson';
 console.log(informatiker);</code></pre>
 
 Hier wird die Variable <code>informatiker</code> mit <code>console.log</code> geloggt.
@@ -17,11 +17,11 @@ In der Konsole erscheint <code>'Ken Thompson'</code>. Das ist der Wert der Varia
     task: `Schreibe eine Funktion <code>logge</code>, die einen Parameter entgegennimmt und diesen Parameter loggt.<br><br>
 Beispiel: Der Aufruf <code>logge('Ken Thompson')</code> sollte <code>'Ken Thompson'</code> loggen.`,
 
-    hint: `<pre><code>var logge = function(wert) {
+    hint: `<pre><code>let logge = function(wert) {
   ...
 };</code></pre>`,
 
-    solution: `<pre><code>var logge = function(wert) {
+    solution: `<pre><code>let logge = function(wert) {
   console.log(wert);
 };</code></pre>`,
 

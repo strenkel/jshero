@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Often code should only be executed if a certain condition is true.
 To do this, use the <code>if</code> statement.
 
-<pre><code>var win = 0;
+<pre><code>let win = 0;
 if (dice === 6) {
   win = 100;
 }</code></pre>

@@ -53,8 +53,8 @@
     
     <div id="koans-lesson" class="paragraph">The <code>trim</code> method removes whitespaces from both ends of a string.
 
-<pre><code>var input = ' Rosa Parks ';
-var name = input.trim();</code></pre>
+<pre><code>let input = ' Rosa Parks ';
+let name = input.trim();</code></pre>
 
 <code>name</code> contains the string <code>'Rosa Parks'</code>.
 Notice that <code>input</code> still contains the string <code>' Rosa Parks '</code>.</div>
@@ -68,7 +68,7 @@ when a string is passed. <code>firstChar(' Rosa Parks ')</code> should return <c
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var firstChar = function(text) {
+    <div id="hint-area" class="paragraph"><pre><code>let firstChar = function(text) {
 // Trim first.
 // Then use the
 // charAt method.
@@ -80,8 +80,8 @@ when a string is passed. <code>firstChar(' Rosa Parks ')</code> should return <c
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var firstChar = function(text) {
-  var trimmedText = text.trim();
+    <div id="solution-area" class="paragraph"><pre><code>let firstChar = function(text) {
+  let trimmedText = text.trim();
   return trimmedText.charAt(0);
 };</code></pre></div>
     

@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Möchte man mehrere Fälle unterscheiden, kann man ein <code>if</code> mit beliebig vielen <code>else if</code>
 ergänzen. Zum Schluss kann bei Bedarf noch ein einzelnes <code>else</code> stehen.
 
-<pre><code>var mitteilung;
+<pre><code>let mitteilung;
 if (betrag > 1000) {
   mitteilung = 'Zu groß. Keine Auszahlung möglich!';
 } else if (betrag < 10) {

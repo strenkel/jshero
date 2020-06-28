@@ -6,20 +6,20 @@ jshero.koans.add({
 
   lesson: `Mit der Eigenschaft <code>textContent</code> kann man Text in ein HTML-Element schreiben:
 
-<pre><code>var elm = document.getElementById("content");
+<pre><code>let elm = document.getElementById("content");
 elm.textContent = 'New content!';</code></pre>
 
 Der alte Inhalt des HTML-Elements wird mit dem zugewiesenen String überschrieben.`,
 
   task: `Setze den Text des <code>fixme</code>-Elements auf <code>Hello HTML!</code>.`,
 
-  solution: `<pre><code>var elm = document.getElementById('fixme');
+  solution: `<pre><code>let elm = document.getElementById('fixme');
 elm.textContent = 'Hello HTML!';</code></pre>`,
 
   tests: [
     function() {
-      var root = document.getElementById("fixme");
-      var text = root.textContent;
+      let root = document.getElementById("fixme");
+      let text = root.textContent;
       if (text === 'Hello HTML!') {
         return {
           ok: true,

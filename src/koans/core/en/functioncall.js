@@ -7,14 +7,14 @@ jshero.koans.add({
   lesson: `The difference between the definition and the call of a function is important.
 The following definition of a function
 
-<pre><code>var f = function() {
+<pre><code>let f = function() {
   return 'hello';
 };</code></pre>
 
 says what the function will do: Return 'hello', if called. The function will not be executed, but only provided.
 Only with its call
 
-<pre><code>var x = f();</code></pre>
+<pre><code>let x = f();</code></pre>
 
 the function is executed. Every instruction in the function block is executed in order.
 The result of the function in the example above will be assigned to the variable <code>x</code>.
@@ -26,17 +26,17 @@ Functions are defined once so that they can be used multiple times at different 
 2. Declare a variable <code>salutation</code>. Call the function <code>greet</code> and assign the
 result of the call to the variable <code>salutation</code>.`,
 
-  hint: `<pre><code>var greet = function() {
+  hint: `<pre><code>let greet = function() {
   ...
 };
 
-var salutation = ...</code></pre>`,
+let salutation = ...</code></pre>`,
 
-  solution: `<pre><code>var greet = function() {
+  solution: `<pre><code>let greet = function() {
   return 'Haydo!';
 };
 
-var salutation = greet();</code></pre>`,
+let salutation = greet();</code></pre>`,
 
   tests: [
 

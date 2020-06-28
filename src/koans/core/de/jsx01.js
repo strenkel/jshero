@@ -10,7 +10,7 @@
 sollst du hier Code lesen.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>var x = 'Josefine';</code></pre>`,
+<pre><code>let x = 'Josefine';</code></pre>`,
 
     solution: `<pre><code>'Josefine'</code></pre>`,
 

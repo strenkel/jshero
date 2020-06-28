@@ -10,8 +10,8 @@ To remind you: Methods are functions that are applied to an object, here an arra
 The array method <code>shift</code> removes the first element from an array and returns that element.
 The length of the array is reduced by 1.
 
-<pre><code>var languages = ['C', 'Java', 'JavaScript'];
-var firstLanguage = languages.shift();</code></pre>
+<pre><code>let languages = ['C', 'Java', 'JavaScript'];
+let firstLanguage = languages.shift();</code></pre>
 
 The array <code>languages</code> is created with 3 programming languages.
 After <code>shift</code> the array <code>languages</code> contains only 2 items,
@@ -20,7 +20,7 @@ viz. <code>['Java', 'JavaScript']</code>. The value <code>'C'</code> is stored i
 The method <code>push</code> adds a new element to an array.
 The new element is passed as a parameter and is added to the end of the array.
 
-<pre><code>var languages = [];
+<pre><code>let languages = [];
 languages.push('C');
 languages.push('Java');
 languages.push('JavaScript');</code></pre>

@@ -11,7 +11,7 @@ Diese beiden Daten könnte man in zwei Variablen speichern. Besser ist es, dafü
 Objekte in JavaScript sind eine Sammlung von Eigenschaften. Jede Eigenschaft besteht aus einem Namen und ihrem Wert.
 Objekte werden am einfachsten mit der Mengenklammer erzeugt:
 
-<pre><code>var person = {
+<pre><code>let person = {
   name: 'Toni Morrison',
   alter: 88
 };</code></pre>
@@ -30,11 +30,11 @@ Dieser Punkt könnte zum Beispiel die Position einer Figur in einem 2-dimensiona
 <code>x</code> soll den Wert <code>1</code> und <code>y</code> den Wert <code>2</code> erhalten.
 Weise das Objekt der Variablen <code>point</code> zu.`,
 
-    hint: `<pre><code>var point = {
+    hint: `<pre><code>let point = {
   ...
 };</code></pre>`,
 
-    solution: `<pre><code>var point = {
+    solution: `<pre><code>let point = {
   x: 1,
   y: 2
 };</code></pre>`,

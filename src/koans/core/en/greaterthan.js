@@ -6,10 +6,10 @@ jshero.koans.add({
 
   lesson: `Numbers can be compared with the well-known mathematical symbols.
 In the following examples, all expressions return the value <code>true</code>.
-<pre><code>var v1 = 5 > 4;
-var v2 = 5 >= 5;
-var v3 = 5 < 6;
-var v4 = 5 <= 5;</code></pre>`,
+<pre><code>let v1 = 5 > 4;
+let v2 = 5 >= 5;
+let v3 = 5 < 6;
+let v4 = 5 <= 5;</code></pre>`,
 
   task: `Write a function <code>isThreeDigit</code> that checks if a number is greater than
 or equal to 100 and less than 1000. <code>isThreeDigit(500)</code> should return <code>true</code>.

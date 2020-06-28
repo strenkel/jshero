@@ -6,10 +6,10 @@ jshero.koans.add({
 
   lesson: `Mit <code>slice</code> kopiert man aus einem Array ein Teilarray:
 
-<pre><code>var abcd = ['a', 'b', 'c', 'd'];
-var ab = abcd.slice(0, 2);
-var bc = abcd.slice(1, 3);
-var bcd = abcd.slice(1, 4);</code></pre>
+<pre><code>let abcd = ['a', 'b', 'c', 'd'];
+let ab = abcd.slice(0, 2);
+let bc = abcd.slice(1, 3);
+let bcd = abcd.slice(1, 4);</code></pre>
 
 Der erste Parameter gibt den Startindex (einschließlich), der zweite den Endindex (ausschließlich) an.
 Das ursprüngliche Array wird nicht verändert.`,

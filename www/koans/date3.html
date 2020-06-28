@@ -59,7 +59,7 @@
 <code>setSeconds</code> und <code>setMilliseconds</code>.
 Mit diesen 7 Methoden kann man den entsprechenden Date-Eintrag setzen:
 
-<pre><code>var today = new Date();
+<pre><code>let today = new Date();
 today.setHours(0);
 today.setMinutes(0);
 today.setSeconds(0);
@@ -71,7 +71,7 @@ So enthält <code>today</code> das aktuelle Tagesdatum mit zurückgesetzter Uhrz
 Überschreitet oder unterschreitet man bei einer dieser Methoden den zulässigen Wertebereich,
 dann rechnen diese Methoden den Über- oder Untertrag automatisch um:
 
-<pre><code>var someDay = new Date(2020, 3, 1);
+<pre><code>let someDay = new Date(2020, 3, 1);
 someDay.setDate(32);
 someDay.setDate(0);</code></pre>
 

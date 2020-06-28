@@ -53,9 +53,9 @@
     
     <div id="koans-lesson" class="paragraph">The <code>substr</code> method extracts a substring from a string:
 
-<pre><code>var see = 'see and stop'.substr(0, 3);
-var and = 'see and stop'.substr(4, 3);
-var stop = 'see and stop'.substr(8);</code></pre>
+<pre><code>let see = 'see and stop'.substr(0, 3);
+let and = 'see and stop'.substr(4, 3);
+let stop = 'see and stop'.substr(8);</code></pre>
 
 The first parameter specifies the position at which to start extracting.
 The second parameter specifies the number of characters to extract.
@@ -71,7 +71,7 @@ The first word are all characters up to the first space.
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var firstWord = function(s) {
+    <div id="hint-area" class="paragraph"><pre><code>let firstWord = function(s) {
 // Determine with indexOf
 // the position of the
 // first space. Then use
@@ -84,8 +84,8 @@ The first word are all characters up to the first space.
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var firstWord = function(s) {
-  var firstBlank = s.indexOf(' ');
+    <div id="solution-area" class="paragraph"><pre><code>let firstWord = function(s) {
+  let firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
 };</code></pre></div>
     

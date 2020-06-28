@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Mit der <code>if</code>-Anweisung hat man die Möglichkeit, Funktionen mit zwei <code>return</code>-Anweisungen
 zu schreiben:
 
-<pre><code>var gewinn = function(zahl) {
+<pre><code>let gewinn = function(zahl) {
   if (zahl === 6) {
     return 100;
   }
@@ -29,7 +29,7 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
 <br><br>Beispiel: <code>schnapszahl(22)</code> sollte <code>'Schnaps!'</code> und
 <code>schnapszahl(23)</code> sollte <code>'Kein Schnaps!'</code> zurückgeben.`,
 
-  hint: `<pre><code>var schnapszahl = function(n) {
+  hint: `<pre><code>let schnapszahl = function(n) {
 // Berechne die Einerstelle
 // von n mit Modulo 10.
 // Berechne die Zehnerstelle
@@ -39,9 +39,9 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
 // Zehnerstelle.
 };</code></pre>`,
 
-  solution: `<pre><code>var schnapszahl = function(n) {
-  var einer = n % 10;
-  var zehner = Math.floor(n / 10);
+  solution: `<pre><code>let schnapszahl = function(n) {
+  let einer = n % 10;
+  let zehner = Math.floor(n / 10);
   if (einer === zehner) {
     return 'Schnaps!';
   }

@@ -56,9 +56,9 @@
     
     <div id="koans-lesson" class="paragraph">Mit <code>break</code> wird eine Schleife beendet. Das Programm wird nach der Schleife fortgesetzt.
 
-<pre><code>var words = 'blau weiß rot';
-var indexFirstSpace = -1;
-for (var i = 0; i < words.length; i++) {
+<pre><code>let words = 'blau weiß rot';
+let indexFirstSpace = -1;
+for (let i = 0; i < words.length; i++) {
   if (words.charAt(i) === ' ') {
     indexFirstSpace = i;
     break;
@@ -74,8 +74,8 @@ bekommt <code>indexFirstSpace</code> den Wert <code>4</code> zugewiesen und die 
 
 Mit <code>continue</code> wird der aktuelle Schleifendurchlauf beendet. Die Programmausführung springt zum Schleifenkopf.
 
-<pre><code>var sum = 0;
-for (var i = 0; i < 10; i++) {
+<pre><code>let sum = 0;
+for (let i = 0; i < 10; i++) {
   if (i % 2 === 0) {
     continue;
   }

@@ -8,8 +8,8 @@ jshero.koans.add({
 werden vor Addition und Subtraktion ausgeführt. Möchte man zuerst die Strichrechnung ausführen, verwendet man genauso
 wie in der Mathematik Klammern.
 
-<pre><code>var x1 = 3 + 4 * 2;
-var x2 = (3 + 4) * 2;</code></pre>
+<pre><code>let x1 = 3 + 4 * 2;
+let x2 = (3 + 4) * 2;</code></pre>
 
 <code>x1</code> hat den Wert <code>11</code>, der Wert von <code>x2</code> ist <code>14</code>.`,
 
@@ -19,7 +19,7 @@ Mittelwert zurückgibt.<br><br>Beispiel: <code>mittelwert(1, 2)</code> sollte <c
   hint: `<pre><code>Der Mittelwert zweier Zahlen
 x und y ist (x + y) / 2.</code></pre>`,
 
-  solution: `<pre><code>var mittelwert = function(x, y) {
+  solution: `<pre><code>let mittelwert = function(x, y) {
   return (x + y) / 2;
 };</code></pre>`,
 

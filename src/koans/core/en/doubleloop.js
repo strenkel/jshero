@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `Loops can be nested into each other. In case of a <code>for</code> loop you have to use two different
 loop variables.
 
-<pre><code>var a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
-var sum = 0;
-for (var i = 0; i < 3; i++) {
-  for (var j = 0; j < 3; j++) {
+<pre><code>let a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
+let sum = 0;
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
     sum = sum + a[i][j];
   }
 }</code></pre>

@@ -8,11 +8,11 @@ jshero.koans.add({
 <code>true</code>, die beiden Werte sind gleich, oder <code>false</code>, die beiden Werte sind ungleich.
 Der Operator für strikte Gleichheit ist <code>===</code>.
 
-<pre><code>var sprache = 'JavaScript';
-var x = 10;
-var v1 = sprache === 'Java';
-var v2 = x === 10;
-var v3 = x === '10';</code></pre>
+<pre><code>let sprache = 'JavaScript';
+let x = 10;
+let v1 = sprache === 'Java';
+let v2 = x === 10;
+let v3 = x === '10';</code></pre>
 
 <code>v1</code> bekommt das Ergebnis des Vergleichs der Variablen <code>sprache</code> mit dem Wert
 <code>'Java'</code> zugewiesen. Da <code>sprache</code> zuvor den Wert <code>JavaScript</code> erhalten hat und
@@ -26,11 +26,11 @@ rechten Seite ein String.`,
 <code>gleich(1, 1)</code> soll <code>true</code> zurückgeben, <code>gleich(1, 2)</code> soll
 <code>false</code> ergeben.`,
 
-  hint: `<pre><code>var gleich = function(a, b) {
+  hint: `<pre><code>let gleich = function(a, b) {
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>var gleich = function(a, b) {
+  solution: `<pre><code>let gleich = function(a, b) {
   return a === b;
 };</code></pre>`,
 

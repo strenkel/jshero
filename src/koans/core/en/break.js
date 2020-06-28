@@ -6,32 +6,32 @@ jshero.koans.add({
 
   lesson: `<code>break</code> terminates the current loop. The program continues after the loop.
 
-<pre><code>var words = 'blue white red';
-var indexFirstSpace = -1;
-for (var i = 0; i < words.length; i++) {
+<pre><code>let words = 'blue white red';
+let indexFirstSpace = -1;
+for (let i = 0; i < words.length; i++) {
   if (words.charAt(i) === ' ') {
     indexFirstSpace = i;
     break;
   }
 }</code></pre>
 
-If the character with the index <code>i</code> in <code>words</code> is a space, the <code>if</code> condition is fulfilled. 
+If the character with the index <code>i</code> in <code>words</code> is a space, the <code>if</code> condition is fulfilled.
 <code>indexFirstSpace</code> gets the value of the loop variable <code>i</code>. Now, <code>break</code> will be
 executed. The loop will be terminated and the program execution continues after the loop.<br><br>
 
 <code>continue</code> terminates the current loop iteration. The program execution jumps to the loop head.
 
-<pre><code>var sum = 0;
-for (var i = 0; i < 10; i++) {
+<pre><code>let sum = 0;
+for (let i = 0; i < 10; i++) {
   if (i % 2 === 0) {
     continue;
   }
   sum = sum + i;
 }</code></pre>
 
-If <code>i</code> is an odd number, the following applies: i modulo 2 = 1. The <code>if</code> condition is not fulfilled. 
-Code execution continues after <code>if</code> and <code>i</code> is added to <code>sum</code>. 
-If <code>i</code> is an even number, the following applies: i modulo 2 = 0. The <code>if</code> condition is fulfilled and 
+If <code>i</code> is an odd number, the following applies: i modulo 2 = 1. The <code>if</code> condition is not fulfilled.
+Code execution continues after <code>if</code> and <code>i</code> is added to <code>sum</code>.
+If <code>i</code> is an even number, the following applies: i modulo 2 = 0. The <code>if</code> condition is fulfilled and
 <code>continue</code> will be excecuted. The code execution jumps directly to the loop head.
 <code>i</code> is not added to <code>sum</code>. So all odd numbers smaller than 10 are added up.<br><br>
 
@@ -79,7 +79,7 @@ The call <code>isPrime(2)</code> should return <code>true</code> and <code>isPri
     function() {
       return jshero.testutil.assert_functionReturns('isPrime(351)', false);
     }
-    
+
   ]
 
 });

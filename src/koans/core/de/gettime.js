@@ -9,8 +9,8 @@
     lesson: `Die Date-Methode <code>getTime</code> liefert die Millisekunden, die zwischen dem 1.1.1970, 0:00 UTC
 und dem Zeitpunkt des Datumsobjekts liegen.
 
-<pre><code>var date = new Date(Date.UTC(1970, 0, 1, 0, 0, 1));
-var time = date.getTime();</code></pre>
+<pre><code>let date = new Date(Date.UTC(1970, 0, 1, 0, 0, 1));
+let time = date.getTime();</code></pre>
 
 Zwischen dem 1.1.1970, 0:00:00 UTC und dem 1.1.1970, 0:00:01 UTC liegen 1000 Millisekunden.
 <code>time</code> erhält den Wert <code>1000</code>.`,

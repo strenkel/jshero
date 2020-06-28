@@ -57,7 +57,7 @@
     <div id="koans-lesson" class="paragraph">Soll ein Codeblock nur dann ausgeführt werden, wenn eine <code>if</code>-Bedingung
 nicht erfüllt ist, verwendet man zusätzlich zum <code>if</code> ein <code>else</code> (engl.: sonst).
 
-<pre><code>var mitteilung;
+<pre><code>let mitteilung;
 if (betrag > 1000) {
   mitteilung = 'Keine Auszahlung möglich!';
 } else {
@@ -78,14 +78,14 @@ Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var addiereMitZuschlag = function(a, b) {
+    <div id="hint-area" class="paragraph"><pre><code>let addiereMitZuschlag = function(a, b) {
 
-  var zuschlag = 0;
-  
+  let zuschlag = 0;
+
   if (a <= 10) {
     zuschlag = zuschlag + 1;
   } else ...
-  
+
   ...
 
   return a + b + zuschlag;
@@ -97,22 +97,22 @@ Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var addiereMitZuschlag = function(a, b) {
+    <div id="solution-area" class="paragraph"><pre><code>let addiereMitZuschlag = function(a, b) {
 
-  var zuschlag = 0;
-  
+  let zuschlag = 0;
+
   if (a <= 10) {
     zuschlag = zuschlag + 1;
   } else {
     zuschlag = zuschlag + 2;
   }
-  
+
   if (b <= 10) {
     zuschlag = zuschlag + 1;
   } else {
     zuschlag = zuschlag + 2;
   }
-  
+
   return a + b + zuschlag;
 };</code></pre></div>
     

@@ -6,14 +6,14 @@ jshero.koans.add({
 
   lesson: `Zur Ausgabe der Daten eines Date-Objekts gibt es sieben sogenannte Getter-Methoden:
 
-<pre><code>var startFastnacht = new Date(2017, 10, 11, 11, 11);
-var jahr = startFastnacht.getFullYear();
-var monat = startFastnacht.getMonth();
-var tag = startFastnacht.getDate();
-var stunde = startFastnacht.getHours();
-var minute = startFastnacht.getMinutes();
-var sekunde = startFastnacht.getSeconds();
-var millisekunde = startFastnacht.getMilliseconds();</code></pre>
+<pre><code>let startFastnacht = new Date(2017, 10, 11, 11, 11);
+let jahr = startFastnacht.getFullYear();
+let monat = startFastnacht.getMonth();
+let tag = startFastnacht.getDate();
+let stunde = startFastnacht.getHours();
+let minute = startFastnacht.getMinutes();
+let sekunde = startFastnacht.getSeconds();
+let millisekunde = startFastnacht.getMilliseconds();</code></pre>
 
 Man erhält die erwarteten Werte: <code>2017</code> für das Jahr, <code>10</code> für den Monat,
 <code>11</code> für den Tag, die Stunde und die Minute, sowie <code>0</code> für die Sekunde und die Millisekunde.

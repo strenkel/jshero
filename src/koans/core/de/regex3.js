@@ -10,10 +10,10 @@ als auch für <code>Meier</code>. Er steht aber auch für <code>Mxier</code>.
 Möchte man letzteres ausschließen, so muss man die Zeichenauswahl auf <code>a</code>
 und <code>e</code> begrenzen. Dazu schreibt man die gewünschte Auswahl in eckige Klammern:
 
-<pre><code>var var t1 = /M[ae]ier/.test('Maier');
-var t2 = /M[ae]ier/.test('Meier');
-var t3 = /M[ae]ier/.test('Mxier');
-var t4 = /M[ae]ier/.test('Maeier');</code></pre>
+<pre><code>let let t1 = /M[ae]ier/.test('Maier');
+let t2 = /M[ae]ier/.test('Meier');
+let t3 = /M[ae]ier/.test('Mxier');
+let t4 = /M[ae]ier/.test('Maeier');</code></pre>
 
 Der Ausdruck in eckigen Klammern steht für genau ein Zeichen aus diesem Ausdruck.
 <code>/[ae]/</code> steht also für ein Zeichen, das ein <code>a</code> oder ein <code>e</code> ist.
@@ -29,12 +29,12 @@ Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
 <code>pruefe('Frau Mayer')</code> sollte <code>true</code> und
 <code>pruefe('Herr Mezer')</code> sollte <code>false</code> ergeben.`,
 
-  hint: `<pre><code>var pruefe = function(s) {
+  hint: `<pre><code>let pruefe = function(s) {
 // Verwende die Zeichenauswahl
 // zweimal.
 };</code></pre>`,
 
-  solution: `<pre><code>var pruefe = function(s) {
+  solution: `<pre><code>let pruefe = function(s) {
   return /M[ae][iy]er/.test(s);
 };</code></pre>`,
 

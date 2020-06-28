@@ -13,7 +13,7 @@ You can work with strings. For example, they can be concatenated. This is done w
 <code>'Java' + 'Script'</code> results in the string <code>'JavaScript'</code>.
 The following function appends <code>' is great!'</code> to the passed parameter and returns the result:
 
-<pre><code>var praise = function(name) {
+<pre><code>let praise = function(name) {
   return name + ' is great!';
 };</code></pre>
 
@@ -23,11 +23,11 @@ The following function appends <code>' is great!'</code> to the passed parameter
 <code>greet('Ada')</code> should return <code>'Hello Ada!'</code> and <code>greet('Tayo')</code> should return
 <code>'Hello Tayo!'</code>.`,
 
-    hint: `<pre><code>var greet = function(name) {
+    hint: `<pre><code>let greet = function(name) {
   return ...
 };</code></pre>`,
 
-    solution: `<pre><code>var greet = function(name) {
+    solution: `<pre><code>let greet = function(name) {
   return 'Hello ' + name + '!';
 };</code></pre>`,
 

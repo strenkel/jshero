@@ -12,11 +12,11 @@ jshero.koans.add({
 in Grad Celsius und F die Temperatur in Grad Fahrenheit, so gilt: F = 1.8 * C + 32.
 <br><br>Beispiel: <code>toFahrenheit(0)</code> sollte <code>32</code> ergeben.`,
 
-  hint: `<pre><code>var toFahrenheit = function(celsius) {
+  hint: `<pre><code>let toFahrenheit = function(celsius) {
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>var toFahrenheit = function(celsius) {
+  solution: `<pre><code>let toFahrenheit = function(celsius) {
   return 1.8 * celsius + 32;
 };</code></pre>`,
 

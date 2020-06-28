@@ -10,11 +10,11 @@ jshero.koans.add({
 to <a href='https://en.wikipedia.org/wiki/Fahrenheit'>Fahrenheit</a>. If C is the temperature in Celsius and
 F the temperature in Fahrenheit, the following applies: F = 1.8 * C + 32. <code>toFahrenheit(0)</code> should return <code>32</code>.`,
 
-  hint: `<pre><code>var toFahrenheit = function(celsius) {
+  hint: `<pre><code>let toFahrenheit = function(celsius) {
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>var toFahrenheit = function(celsius) {
+  solution: `<pre><code>let toFahrenheit = function(celsius) {
   return 1.8 * celsius + 32;
 };</code></pre>`,
 

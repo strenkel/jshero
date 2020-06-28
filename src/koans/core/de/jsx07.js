@@ -7,11 +7,11 @@
     title: 'Was ist x?',
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>var bleiben = function(name) {
+<pre><code>let bleiben = function(name) {
   return name + ' bleibt ' + name;
 };
 
-var x = bleiben('Mainz');</code></pre>`,
+let x = bleiben('Mainz');</code></pre>`,
 
     solution: `<pre><code>'Mainz bleibt Mainz'</code></pre>`,
 

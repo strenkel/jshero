@@ -59,8 +59,8 @@ Funktionen geben <code>NaN</code> zurück, wenn sie keinen Wert berechnen könne
 <code><a href='parseint.html'>parseInt</a></code> kennengelernt. <code>parseInt</code> gibt <code>NaN</code>
 zurück, wenn es keine Zahl parsen kann. Ein weiteres Beispiel ist die Berechnung der Wurzel aus einer negativen Zahl:
 
-<pre><code>var age = parseInt('Babylon');
-var length = Math.sqrt(-1);</code></pre>
+<pre><code>let age = parseInt('Babylon');
+let length = Math.sqrt(-1);</code></pre>
 
 Sowohl <code>age</code> als auch <code>length</code> haben den Wert <code>NaN</code>.<br><br>
 Möchte man testen, ob <code>NaN</code> vorliegt, kann man leider nicht <code>===</code> verwenden.
@@ -69,9 +69,9 @@ Möchte man testen, ob <code>NaN</code> vorliegt, kann man leider nicht <code>==
 
 Um auf <code>NaN</code> zu testen, sollte man die Funktion <code>Number.isNaN</code> verwenden:
 
-<pre><code>var input = 'Babylon';
-var message;
-var age = parseInt(input);
+<pre><code>let input = 'Babylon';
+let message;
+let age = parseInt(input);
 if ( Number.isNaN(age) ) {
   message = 'Du hast keine Zahl eingegeben.';
 }</code></pre></div>

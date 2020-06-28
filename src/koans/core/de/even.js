@@ -11,7 +11,7 @@ Beispiel: Der Aufruf <code>isEven(6)</code> soll <code>true</code> ergeben und <
 
   hint: `Verwende den Modulo-Operator zusammen mit strikter Gleichheit, um zu bestimmen, ob eine Zahl gerade ist.`,
 
-  solution: `<pre><code>var isEven = function(n) {
+  solution: `<pre><code>let isEven = function(n) {
   return n % 2 === 0;
 };</code></pre>`,
 

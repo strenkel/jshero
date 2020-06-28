@@ -13,8 +13,8 @@ an das Objekt angehängt. Wie bei Funktionen üblich folgt dem Methodennamen die
 Das 1te Element wird zum 0ten, das 2te zum 1ten, das 3te zum 2ten, usw.
 Das 0te Element wird aus dem Array entfernt und zurückgegeben. Nach dem <code>shift</code> hat das Array ein Element weniger.
 
-<pre><code>var sprachen = ['C', 'Java', 'JavaScript'];
-var naechsteSprache = sprachen.shift();</code></pre>
+<pre><code>let sprachen = ['C', 'Java', 'JavaScript'];
+let naechsteSprache = sprachen.shift();</code></pre>
 
 Das Array <code>sprachen</code> wird mit 3 Programmiersprachen angelegt.
 Nach dem <code>shift</code> enthält <code>sprachen</code> nur noch 2 Elemente,
@@ -23,7 +23,7 @@ nämlich <code>['Java', 'JavaScript']</code>. Der Wert <code>'C'</code> ist in d
 Mit der häufig verwendeten Methode <code>push</code> fügt man dem Array ein neues Element hinzu.
 Das neue Element wird als Parameter übergeben und an das Ende des Arrays gehängt.
 
-<pre><code>var sprachen = [];
+<pre><code>let sprachen = [];
 sprachen.push('C');
 sprachen.push('Java');
 sprachen.push('JavaScript');</code></pre>
@@ -42,8 +42,8 @@ Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array sol
 Füge mit push das 0te Element wieder hinzu.
 </code></pre>`,
 
-    solution: `<pre><code>var rotiere = function(einArray) {
-  var element0 = einArray.shift();
+    solution: `<pre><code>let rotiere = function(einArray) {
+  let element0 = einArray.shift();
   einArray.push(element0);
   return einArray;
 };</code></pre>`,

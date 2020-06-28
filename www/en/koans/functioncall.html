@@ -54,14 +54,14 @@
     <div id="koans-lesson" class="paragraph">The difference between the definition and the call of a function is important.
 The following definition of a function
 
-<pre><code>var f = function() {
+<pre><code>let f = function() {
   return 'hello';
 };</code></pre>
 
 says what the function will do: Return 'hello', if called. The function will not be executed, but only provided.
 Only with its call
 
-<pre><code>var x = f();</code></pre>
+<pre><code>let x = f();</code></pre>
 
 the function is executed. Every instruction in the function block is executed in order.
 The result of the function in the example above will be assigned to the variable <code>x</code>.
@@ -79,11 +79,11 @@ result of the call to the variable <code>salutation</code>.</div>
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var greet = function() {
+    <div id="hint-area" class="paragraph"><pre><code>let greet = function() {
   ...
 };
 
-var salutation = ...</code></pre></div>
+let salutation = ...</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -91,11 +91,11 @@ var salutation = ...</code></pre></div>
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var greet = function() {
+    <div id="solution-area" class="paragraph"><pre><code>let greet = function() {
   return 'Haydo!';
 };
 
-var salutation = greet();</code></pre></div>
+let salutation = greet();</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

@@ -14,17 +14,17 @@ For example, 3! = 1*2*3 = 6. By definition, 0! = 1.`,
     task: `Write a function <code>factorial</code> that calculates the factorial of a positive integer.
 <code>factorial(3)</code> should return <code>6</code>.`,
 
-    hint: `<pre><code>var factorial = function(n) {
-      var result = 1;
+    hint: `<pre><code>let factorial = function(n) {
+      let result = 1;
       for (...) {
         ...
       }
       return result;
     };</pre></code>`,
 
-    solution: `<pre><code>var factorial = function(n) {
-  var result = 1;
-  for (var i = 1; i <= n; i++) {
+    solution: `<pre><code>let factorial = function(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
     result = result * i;
   }
   return result;

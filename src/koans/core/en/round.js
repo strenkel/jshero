@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `If you want to round a number, you can use the
 <code>Math.round()</code>, <code>Math.floor()</code> and <code>Math.ceil()</code> functions.
 
-<pre><code>var a = Math.round(5.49);
-var b = Math.round(4.5);
-var c = Math.floor(5.99);
-var d = Math.ceil(4.01);</code></pre>
+<pre><code>let a = Math.round(5.49);
+let b = Math.round(4.5);
+let c = Math.floor(5.99);
+let d = Math.ceil(4.01);</code></pre>
 
 <code>Math.round()</code> rounds a number to the nearest integer,
 <code>Math.floor()</code> rounds a number downwards to the nearest integer and

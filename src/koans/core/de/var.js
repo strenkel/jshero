@@ -14,19 +14,19 @@ Eine elementare Anweisung ist die Deklaration und Initialisierung einer Variable
 In der Programmierung ist eine Variable ein Behälter für einen Wert.
 Mit der Anweisung
 
-<pre><code>var stadt = 'Prag';</code></pre>
+<pre><code>let stadt = 'Prag';</code></pre>
 
 deklariert man eine Variable mit dem Namen <code>stadt</code> und initialisiert sie mit dem Wert <code>'Prag'</code>.
-Mit dem Schlüsselwort <code>var</code> wird die Variable deklariert.
+Mit dem Schlüsselwort <code>let</code> wird die Variable deklariert.
 Mit dem Gleichheitszeichen, dem Zuweisungsoperator, weist man der Variablen einen Wert zu.<br><br>
 Beachte: JavaScript unterscheidet zwischen Groß- und Kleinschreibung. <code>stadt</code> und <code>Stadt</code> sind
 zwei verschiedene Variablen. Man sagt auch: JavaScript ist case sensitive.`,
 
     task: `Deklariere eine Variable <code>vorname</code> und initialisiere sie mit dem Wert <code>'Franz'</code>.`,
 
-    hint: `<pre><code>var vorname = ...</code></pre>`,
+    hint: `<pre><code>let vorname = ...</code></pre>`,
 
-    solution: `<pre><code>var vorname = 'Franz';</code></pre>`,
+    solution: `<pre><code>let vorname = 'Franz';</code></pre>`,
 
     tests: [
 

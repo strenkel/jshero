@@ -7,9 +7,9 @@ jshero.koans.add({
   lesson: `Der Methode <code>indexOf</code> kann man als zweiten Parameter noch die Stelle mitgeben,
 ab der der Suchstring im aufrufenden String gesucht werden soll.
 
-<pre><code>var n1 = "Fred Feuerstein".indexOf("e", 2);
-var n2 = "Fred Feuerstein".indexOf("e", 3);
-var n3 = "Fred Feuerstein".indexOf("e", 7);</code></pre>
+<pre><code>let n1 = "Fred Feuerstein".indexOf("e", 2);
+let n2 = "Fred Feuerstein".indexOf("e", 3);
+let n3 = "Fred Feuerstein".indexOf("e", 7);</code></pre>
 
 Das erste <code>"e"</code> befindet sich in <code>"Fred Feuerstein"</code> an 2. Stelle. Es wird bei einer Suche ab der 2. Stelle gefunden. <code>n1</code>
 ist also 2. Das zweite <code>"e"</code> in <code>"Fred Feuerstein"</code> befindet sich an der 6. Stelle. Es wird bei der Suche ab der 3. Stelle gefunden.
@@ -22,14 +22,14 @@ zweiten Strings im ersten String bestimmt. Kommt der Suchstring nicht zweimal vo
 <br><br>Tipp: Falls Du Hilfe brauchst, lies dir auch die Beschreibung in
 <a href="https://wiki.selfhtml.org/wiki/JavaScript/Objekte/String/indexOf">SELFHTML</a> durch.`,
 
-  hint: `<pre><code>var secondIndexOf = function(s1, s2) {
+  hint: `<pre><code>let secondIndexOf = function(s1, s2) {
 // Verwende indexOf zweimal.
 // Zuerst ohne, dann mit
-// zweitem Parameter. 
+// zweitem Parameter.
 };</code></pre>`,
 
-  solution: `<pre><code>var secondIndexOf = function(s1, s2) {
-  var firstIndex = s1.indexOf(s2);
+  solution: `<pre><code>let secondIndexOf = function(s1, s2) {
+  let firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
 };</code></pre>`,
 

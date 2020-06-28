@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `If a code block should be executed if an <code>if</code> condition
 is not fulfilled, an <code>else</code> is added.
 
-<pre><code>var message;
+<pre><code>let message;
 if (amount > 1000) {
   message = 'No payout possible!';
 } else {

@@ -7,15 +7,15 @@
     title: 'Funktionen rufen Funktionen auf',
 
     lesson: `Funktionen können weitere Funktionen aufrufen:
-<pre><code>var brutto = function(netto) {
-  var steuersatz = 19;
-  var steuer = netto * steuersatz / 100;
+<pre><code>let brutto = function(netto) {
+  let steuersatz = 19;
+  let steuer = netto * steuersatz / 100;
   return netto + steuer;
 };
 
-var addiereMitMehrwertsteuer = function(nettoX, nettoY) {
-  var bruttoX = brutto(nettoX);
-  var bruttoY = brutto(nettoY);
+let addiereMitMehrwertsteuer = function(nettoX, nettoY) {
+  let bruttoX = brutto(nettoX);
+  let bruttoY = brutto(nettoY);
   return bruttoX + bruttoY;
 };</code></pre>
 
@@ -82,7 +82,7 @@ Durchschnitt dieser Zahlen zurückgibt. Die Funktion <code>mean</code> sollte di
       function() {
         return testutil.assert_functionReturns('mean([-2, -4, 17, 34])', 11.25);
       }
-      
+
     ]
 
   });

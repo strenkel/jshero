@@ -58,8 +58,8 @@ The arguments enclosed in parentheses follow. Two of these string methods are th
 methods <code>toUpperCase</code> and <code>toLowerCase</code>. They return the string in
 uppercase or lowercase.
 
-<pre><code>var town = 'Mthatha';
-var output = town.toUpperCase();</code/></pre>
+<pre><code>let town = 'Mthatha';
+let output = town.toUpperCase();</code/></pre>
 
 <code>output</code> has the value <code>'MTHATHA'</code>.
 <code>town</code> still has the value <code>'Mthatha'</code>.
@@ -78,7 +78,7 @@ lowercase and uppercase with <code>-</code> as delimiter.
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var toCase = function(text) {
+    <div id="hint-area" class="paragraph"><pre><code>let toCase = function(text) {
   return ... + '-' + ...;
 };</code></pre></div>
     
@@ -88,7 +88,7 @@ lowercase and uppercase with <code>-</code> as delimiter.
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var toCase = function(text) {
+    <div id="solution-area" class="paragraph"><pre><code>let toCase = function(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code></pre></div>
     

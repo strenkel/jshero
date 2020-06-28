@@ -58,7 +58,7 @@
 Objekt-Eigenschaften können aber auch Funktionen sein. Solche Objekt-Eigenschaften nennt man
 Methoden. Methoden operieren auf den Daten eines Objekts.
 
-<pre><code>var ware = {
+<pre><code>let ware = {
   name: 'Äpfel',
   preis: 2.15,
   erhoehePreis: function(erhoehung) {
@@ -66,9 +66,9 @@ Methoden. Methoden operieren auf den Daten eines Objekts.
   }
 };
 
-var alterPreis = ware.preis;
+let alterPreis = ware.preis;
 ware.erhoehePreis(0.05);
-var neuerPreis = ware.preis;</code></pre>
+let neuerPreis = ware.preis;</code></pre>
 
 Das Objekt <code>ware</code> besitzt die Methode <code>erhoehePreis</code>. Diese Methode greift mithilfe von
 <code>this</code> auf die Objekt-Eigenschaft <code>preis</code> zu. <code>this</code> steht innerhalb eines Objekts für

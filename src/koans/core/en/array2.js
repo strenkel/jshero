@@ -6,10 +6,10 @@ jshero.koans.add({
 
   lesson: `The elements of an array are accessed by an index beginning with 0.
 
-<pre><code>var languages = ['C', 'C++', 'Java'];
-var c = languages[0];
-var cPlusPlus = languages[1];
-var java = languages[2];</code></pre>`,
+<pre><code>let languages = ['C', 'C++', 'Java'];
+let c = languages[0];
+let cPlusPlus = languages[1];
+let java = languages[2];</code></pre>`,
 
   task: `Write a function <code>getFirstElement</code> that takes an array and returns the first element of the array.
 <code>getFirstElement([1, 2])</code> should return <code>1</code>.`,

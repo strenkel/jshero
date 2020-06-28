@@ -58,7 +58,7 @@
 Werts: <code>null</code>. Man kann einer Variablen den Wert <code>null</code> zuordnen und testet mit strikter
 Gleichheit auf diesen Wert:
 
-<pre><code>var foo = null;
+<pre><code>let foo = null;
 if (foo === null) {
   foo = 1;
 }</code></pre>
@@ -69,7 +69,7 @@ Es ist ein Design-Fehler, dass JavaScript zwei Werte für "kein Wert" besitzt. W
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>cutComment</code>, die eine Zeile JavaScript entgegennimmt
 und einen möglichen Zeilenkommentar getrimmt zurückgibt. Enthält die Zeile keinen Kommentar, soll <code>null</code>
-zurückgegeben werden. <code>cutCommt('var i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
+zurückgegeben werden. <code>cutCommt('let i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
 Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb eines Strings enthält.</div>
     
     

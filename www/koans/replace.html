@@ -56,18 +56,18 @@
     
     <div id="koans-lesson" class="paragraph">Die Methode <code>replace</code> ersetzt einen Teilstring durch einen anderen:
 
-<pre><code>var str = 'Hallo Marcel!';
-var newstr = str.replace('Marcel', 'Robert');</code></pre>
+<pre><code>let str = 'Hallo Marcel!';
+let newstr = str.replace('Marcel', 'Robert');</code></pre>
 
 'Marcel' wird durch 'Robert' ersetzt. <code>newstr</code> hat also den Wert <code>'Hallo Robert!'</code>.
 Der ursprüngliche String bleibt unverändert. Nur das erste Vorkommen wird ersetzt:
 
-<pre><code>var newname = 'Peter'.replace('e', 'a');</code></pre>
+<pre><code>let newname = 'Peter'.replace('e', 'a');</code></pre>
 
 <code>newname</code> enthält den Wert <code>'Pater'</code> und nicht <code>'Patar'</code>.
 Ein Spezialfall ergibt sich, wenn der ersetzende String der Leerstring ist:
 
-<pre><code>var nurso = 'sowie so'.replace('wie', '');</code></pre>
+<pre><code>let nurso = 'sowie so'.replace('wie', '');</code></pre>
 
 Der zu ersetzende String wird entfernt. <code>nurso</code> enthält den Wert <code>'so so'</code>.
 Kommt der zu ersetzende String nicht vor, so wird der ursprüngliche String zurückgegeben.</div>
@@ -82,7 +82,7 @@ Kommt der zu ersetzende String nicht vor, so wird der ursprüngliche String zur�
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var convert = function(dateEn) {
+    <div id="hint-area" class="paragraph"><pre><code>let convert = function(dateEn) {
   // Verwende replace viermal.
 };</code></pre></div>
     
@@ -92,8 +92,8 @@ Kommt der zu ersetzende String nicht vor, so wird der ursprüngliche String zur�
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var convert = function(dateEn) {
-  var dateDe = dateEn.replace('-', '.');
+    <div id="solution-area" class="paragraph"><pre><code>let convert = function(dateEn) {
+  let dateDe = dateEn.replace('-', '.');
   dateDe = dateDe.replace('-', '.');
   dateDe = dateDe.replace('/', '.');
   dateDe = dateDe.replace('/', '.');

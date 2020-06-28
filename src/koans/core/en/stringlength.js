@@ -7,11 +7,11 @@ jshero.koans.add({
   lesson: `Strings have the <code>length</code> property. This property represents the number of characters in a string.
 To do this, you must append <code>.length</code> to the string or to the variable that contains the string:
 
-<pre><code>var charNumber = 'Ai'.length;</code/></pre>
+<pre><code>let charNumber = 'Ai'.length;</code/></pre>
 
 <code>'Ai'</code> has 2 characters. So <code>charNumber</code> has the value <code>2</code>.
 
-<pre><code>var name = 'Weiwei';
+<pre><code>let name = 'Weiwei';
 charNumber = name.length;</code/></pre>
 
 <code>'Weiwei'</code> has 6 characters. <code>charNumber</code> now has the value <code>6</code>.

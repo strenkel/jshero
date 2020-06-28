@@ -1,6 +1,6 @@
 (function() {
 
-  var random = function() {
+  let random = function() {
     return Math.round(Math.random() * 10);
   };
 
@@ -13,12 +13,12 @@
     lesson: `Die Eigenschaft <code>length</code> hatten wird schon bei Strings kennengelernt. Dort gab sie die Anzahl
 der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente zurück.
 
-<pre><code>var sprachen = [];
-var l0 = sprachen.length;
+<pre><code>let sprachen = [];
+let l0 = sprachen.length;
 sprachen[0] = 'C';
-var l1 = sprachen.length;
+let l1 = sprachen.length;
 sprachen[1] = 'C++';
-var l2 = sprachen.length;</code></pre>
+let l2 = sprachen.length;</code></pre>
 
 Das leere Array zu Anfang enthält keine Elemente. <code>l0</code> ist also <code>0</code>.
 Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>.
@@ -30,8 +30,8 @@ des Arrays zurückgibt.<br><br>Beispiel: <code>getLastElement([1, 2])</code> sol
     hint: `Bestimme den Index des letzten Elements mit der Array-Eigenschaft <code>length</code>.
 Beachte, dass das erste Element im Array den Index <code>0</code> besitzt.`,
 
-    solution: `<pre><code>var getLastElement = function(anArray) {
-  var lastIndex = anArray.length - 1;
+    solution: `<pre><code>let getLastElement = function(anArray) {
+  let lastIndex = anArray.length - 1;
   return anArray[lastIndex];
 };</code></pre>`,
 
@@ -61,10 +61,10 @@ Beachte, dass das erste Element im Array den Index <code>0</code> besitzt.`,
       },
 
       function() {
-        var testArray = new Array();
-        var testArrayString = '[';
-        var size = 4;
-        for (var i = 0; i < size - 1; i++) {
+        let testArray = new Array();
+        let testArrayString = '[';
+        let size = 4;
+        for (let i = 0; i < size - 1; i++) {
           testArray[i] = random();
           testArrayString += testArray[i] + ', ';
         }

@@ -9,14 +9,14 @@
     lesson: `Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion.
 Mit der Definition, z. B.
 
-<pre><code>var f = function() {
+<pre><code>let f = function() {
   return 'hallo';
 };</code></pre>
 
 wird festgelegt, was die Funktion machen soll. Sie wird dabei nicht ausgeführt. Sie wird lediglich zur Ausführung bereitgestellt.
 Erst mit ihrem Aufruf
 
-<pre><code>var x = f();</code></pre>
+<pre><code>let x = f();</code></pre>
 
 wird die Funktion ausgeführt. Dann werden die Anweisungen im Funktionsblock der Reihe nach abgearbeitet.
 Die Rückgabe der Funktion wird in diesem Beispiel der Variablen <code>x</code> zugewiesen.
@@ -29,17 +29,17 @@ Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen
 2. Deklariere eine Variable <code>begruessung</code>. Rufe die Funktion <code>begruesse</code> auf und weise der Variablen
 <code>begruessung</code> die Rückgabe dieses Aufrufs zu.`,
 
-    hint: `<pre><code>var begruesse = function() {
+    hint: `<pre><code>let begruesse = function() {
   ...
 };
 
-var begruessung = ...</code></pre>`,
+let begruessung = ...</code></pre>`,
 
-    solution: `<pre><code>var begruesse = function() {
+    solution: `<pre><code>let begruesse = function() {
   return 'Moin!';
 };
 
-var begruessung = begruesse();</code></pre>`,
+let begruessung = begruesse();</code></pre>`,
 
     tests: [
 

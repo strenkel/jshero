@@ -8,7 +8,7 @@ jshero.koans.add({
 As a reminder: A function with name <code>color</code> returning the value
 <code>'red'</code> is defined as followed:
 
-<pre><code>var color = function() {
+<pre><code>let color = function() {
   return 'red';
 };</code></pre>`,
 

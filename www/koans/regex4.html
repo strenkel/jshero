@@ -55,16 +55,16 @@
     <h1 id="koans-title">Regex: Bereiche</h1>
     
     <div id="koans-lesson" class="paragraph">Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
-dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich. 
+dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich.
 Mit einem Bindestrich kann man größere, zusammenhängende Zeichenbereiche leicht darstellen:
 
-<pre><code>var pruefeZiffer = /[0-9]/;
-var pruefe1Bis6 = /[1-6]/;
-var pruefeABisZ = /[A-Z]/;
-var pruefeaBisz = /[a-z]/; 
-var pruefeDeutschesAlphabet = /[a-zäöüß]/;
-var pruefeABisz = /[A-Za-z]/;
-var pruefeMBisT = /[M-T]/;</code></pre>
+<pre><code>let pruefeZiffer = /[0-9]/;
+let pruefe1Bis6 = /[1-6]/;
+let pruefeABisZ = /[A-Z]/;
+let pruefeaBisz = /[a-z]/;
+let pruefeDeutschesAlphabet = /[a-zäöüß]/;
+let pruefeABisz = /[A-Za-z]/;
+let pruefeMBisT = /[M-T]/;</code></pre>
 
 <code>/[0-9]/</code> steht wie der Regex oben für genau eine Ziffer.
 Den Ziffernbereich kann man, wie <code>/[1-6]/</code> zeigt, leicht auf eine gewünschte Auswahl
@@ -88,9 +88,9 @@ zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var pruefe = function(s) {
+    <div id="hint-area" class="paragraph"><pre><code>let pruefe = function(s) {
 // Verwende Literale
-// und Bereiche.  
+// und Bereiche.
 };</code></pre></div>
     
     
@@ -99,7 +99,7 @@ zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var pruefe = function(s) {
+    <div id="solution-area" class="paragraph"><pre><code>let pruefe = function(s) {
   return /Klasse [1-6][a-d]/.test(s);
 };</code></pre></div>
     

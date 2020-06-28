@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Häufig soll Code nur dann ausgeführt werden, wenn eine bestimmte Bedingung erfüllt ist.
 Dazu verwendet man die <code>if</code>-Anweisung.
 
-<pre><code>var gewinn = 0;
+<pre><code>let gewinn = 0;
 if (wuerfelzahl === 6) {
   gewinn = 100;
 }</code></pre>
@@ -24,7 +24,7 @@ Hat in unserem Beispiel die Variable <code>wuerfelzahl</code> den Wert <code>6</
 gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie ungleich, so soll man
 <code>'UNGLEICH'</code> erhalten.`,
 
-  hint: `<pre><code>var gleich = function(a, b) {
+  hint: `<pre><code>let gleich = function(a, b) {
 // Initialisiere eine Variable
 // mit 'UNGLEICH'. Verwende 'if',
 // um die Variable ggf. auf
@@ -32,8 +32,8 @@ gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie
 // Variable zurück.
 };</code></pre>`,
 
-  solution: `<pre><code>var gleich = function(a, b) {
-  var ergebnis = 'UNGLEICH';
+  solution: `<pre><code>let gleich = function(a, b) {
+  let ergebnis = 'UNGLEICH';
   if (a === b) {
     ergebnis = 'GLEICH';
   }

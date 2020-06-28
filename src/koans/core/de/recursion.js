@@ -9,7 +9,7 @@
     lesson: `Funktionen können sich auch selbst aufrufen. Das nennt man <a href='https://de.wikipedia.org/wiki/Rekursive_Programmierung'>Rekursion</a>.
 Das bekannteste Beispiel ist die Berechnung der Fakultät:
 
-<pre><code>var fakultaet = function(n) {
+<pre><code>let fakultaet = function(n) {
   if (n === 0) {
     return 1;
   }
@@ -55,7 +55,7 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
       function() {
         return testutil.assert_functionReturns("reverse('Nebel')", 'lebeN');
       }
-      
+
     ]
 
   });

@@ -7,13 +7,13 @@ jshero.koans.add({
   lesson: `Das <code>arguments</code>-Objekt ist eine in jeder Funktion verfügbare Variable.
 Es ist ein Array ähnliches Objekt, das die übergebenen Argumente einer Funktion der Reihe nach enthält.
 
-<pre><code>var add = function() {
-  var arg0 = arguments[0];
-  var arg1 = arguments[1];
+<pre><code>let add = function() {
+  let arg0 = arguments[0];
+  let arg1 = arguments[1];
   return arg0 + arg1;
 };
 
-var sum = add(1, 2);</code></pre>
+let sum = add(1, 2);</code></pre>
 
 Hier wird <code>add</code> mit den Argumenten <code>1</code> und <code>2</code> aufgerufen.
 <code>arguments[0]</code> enthält also den Wert <code>1</code>, <code>arguments[1]</code> den Wert <code>2</code>.
@@ -21,16 +21,16 @@ Mit dem <code>arguments</code>-Objekt kann man ohne Parameter auf die übergeben
 Das ist z.B. dann praktisch, wenn man eine Funktion schreiben möchte, die eine beliebige Anzahl von Argumenten
 verarbeiten soll.
 
-<pre><code>var add = function() {
-  var sum = 0;
-  for (var i = 0; i < arguments.length; i++) {
+<pre><code>let add = function() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
     sum = sum + arguments[i];
   }
   return sum;
 };
 
-var s1 = add(2, 4);
-var s2 = add(2, 3, 5, 7);</code></pre>
+let s1 = add(2, 4);
+let s2 = add(2, 3, 5, 7);</code></pre>
 
 Hier iterieren wir über alle übergebenen Argumente und summieren sie auf.
 <code>arguments.length</code> liefert dabei die Anzahl der übergebenen Argumente.

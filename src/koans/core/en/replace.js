@@ -6,13 +6,13 @@ jshero.koans.add({
 
   lesson: `The <code>replace</code> method replaces a substring with another:
 
-<pre><code>var str = 'JavaScript';
-var newstr = str.replace('Java', 'ECMA');</code></pre>
+<pre><code>let str = 'JavaScript';
+let newstr = str.replace('Java', 'ECMA');</code></pre>
 
 <code>'Java'</code> is replaced with <code>'ECMA'</code>. Thus <code>newstr</code> has the value <code>'ECMAScript'</code>.
 The original string remains unchanged. Only the first occurrence is replaced:
 
-<pre><code>var newstr = 'Dada'.replace('a', 'i');</code></pre>
+<pre><code>let newstr = 'Dada'.replace('a', 'i');</code></pre>
 
 <code>newstr</code> has the value <code>'Dida'</code> and not <code>'Didi'</code>.`,
 

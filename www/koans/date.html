@@ -59,14 +59,14 @@ einen Zeitpunkt, also ein Datum zusammen mit einer Uhrzeit. Die Uhrzeit wird dab
 Ein Date-Objekt erzeugt man mit <code>new Date()</code>. Es gibt 4 mögliche Aufrufe:
 
 <pre><code>// aktueller Zeitpunkt
-var d1 = new Date();</code></pre>
+let d1 = new Date();</code></pre>
 
 Ohne Parameter erzeugt <code>new Date()</code> ein Date-Objekt, das dem Zeitpunkt seines Aufrufs entspricht. Wird obiges Beispiel
 am 1. Mai 2017 um 8:15 Uhr aufgerufen, so enthält <code>d1</code> eben diesen Zeitpunkt.
 
 <pre><code>// Aufruf mit Jahr, Monat, Tag, Stunde,
 // Stunde, Minute, Sekunde, Millisekunde
-var d2 = new Date(2017, 2, 8, 16, 31, 10, 117);</code></pre>
+let d2 = new Date(2017, 2, 8, 16, 31, 10, 117);</code></pre>
 
 Möchte man ein Date-Objekt zu einem bestimmten Zeitpunkt erstellen, verwendet man am besten die zweite Möglichkeit.
 Hier übergibt man als Parameter das Jahr, den Monat, den Tag, die Stunde, die Minute, die Sekunde und die Millisekunde.
@@ -80,14 +80,14 @@ Das ist besonders praktisch, wenn man nur mit einem Datum arbeiten möchte.
 Dann läßt man einfach alle Zeitangaben weg. <code>new&nbsp;Date(2017, 5, 2)</code> ist der 2.6.2017, 0:00 Uhr.
 
 <pre><code>// Millisekunden seit dem 1.1.1970
-var d3 = new Date(86400000);</code></pre>
+let d3 = new Date(86400000);</code></pre>
 
 Bei der dritten Variante übergibt man die vergangenen Millisekunden seit dem 1.1.1970, 0:00 Uhr.
 Der Bezugspunkt 1.1.1970 für Datumsangaben ist seit den Tagen von Unix und der Programmiersprache C in der IT üblich geworden.
 Ein Tag hat 24 * 60 * 60 * 1000 = 86400000 Millisekunden. <code>d3</code> ist also der 2.1.1970, 0:00 Uhr.
 
 <pre><code>// Übergabe eines Datumsstrings
-var d4 = new Date('2017-3-8T16:31:10.117');</code></pre>
+let d4 = new Date('2017-3-8T16:31:10.117');</code></pre>
 
 Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d.h. in einer bestimmten Schreibweise, übergeben.
 <code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden. Diese Varainte ist jedoch nicht zu empfehlen,

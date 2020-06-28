@@ -9,20 +9,20 @@
     lesson: `So far we have stored numbers, strings and boolean values in arrays.
 But you can also store arrays in arrays:
 
-<pre><code>var teams = [
+<pre><code>let teams = [
   ['Ruby', 'Angel'],
   ['Mia', 'Yui', 'Merve', 'Elif'],
   ['Saanvi', 'Giulia', 'Zeynep']
 ];
 
-var row1 = [4, 9, 2];
-var row2 = [3, 5, 7];
-var row3 = [8, 1, 6];
-var loshu = [row1, row2, row3];</code></pre>
+let row1 = [4, 9, 2];
+let row2 = [3, 5, 7];
+let row3 = [8, 1, 6];
+let loshu = [row1, row2, row3];</code></pre>
 
 In the first example, 3 teams are stored in an array. Each team itself is an array of names.
-The individual teams have different sizes. With <pre><code>var team = teams[0];</code></pre> you can access a team and
-with <pre><code>var member = teams[0][0];</code></pre> you can access an individual team member.<br><br>
+The individual teams have different sizes. With <pre><code>let team = teams[0];</code></pre> you can access a team and
+with <pre><code>let member = teams[0][0];</code></pre> you can access an individual team member.<br><br>
 Arrays that contain arrays are also called two-dimensional arrays.
 Carrying this on, you get three- or multidimensional arrays.<br><br>
 In the second example, the <a href='https://en.wikipedia.org/wiki/Lo_Shu_Square'>Lo Shu Square</a>

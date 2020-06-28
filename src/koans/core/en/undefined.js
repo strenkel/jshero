@@ -9,23 +9,23 @@
     lesson: `Up to now we had always initialized variables at declaration.
 
 <pre><code>// declaration and initialization
-var x = 1;</code></pre>
+let x = 1;</code></pre>
 
 However, you can also declare a variable and initialize it later.
 
-<pre><code>var x; // declaration
+<pre><code>let x; // declaration
 x = 1; // initialization</code></pre>
 
 Variables that were not initialized have the value <code>undefined</code>.<br><br>
 Uninitialized variables can also occur on function calls.
 If you call a function with a parameter without an argument, the parameter gets the value <code>undefined</code>:
 
-<pre><code>var echo = function(x) {
+<pre><code>let echo = function(x) {
   return x;
 };
 
 // function call without argument
-var y = echo();</code></pre>
+let y = echo();</code></pre>
 
 <code>echo</code> is called without any argument.
 The parameter <code>x</code> receives the value <code>undefined</code>. Since <code>echo</code> simply returns

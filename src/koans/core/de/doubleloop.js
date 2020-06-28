@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `Schleifen kann man auch ineinander schachteln. Im Falle einer for-Schleife muss man zwei verschiedene
 Laufindizes benutzen.
 
-<pre><code>var a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
-var sum = 0;
-for (var i = 0; i < 3; i++) {
-  for (var j = 0; j < 3; j++) {
+<pre><code>let a = [[1, 7, 3], [2, 8, 5], [9, 0, 4]];
+let sum = 0;
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
     sum = sum + a[i][j];
   }
 }</code></pre>

@@ -7,8 +7,8 @@ jshero.koans.add({
   lesson: `<code>for</code>-Schleifen eignen sich besonders gut zum Durchlaufen von Arrays.
 Im folgenden Beispiel werden die Elemente eines Arrays aufaddiert:
 
-<pre><code>var sum = 0;
-for (var i = 0; i < myArray.length; i++) {
+<pre><code>let sum = 0;
+for (let i = 0; i < myArray.length; i++) {
   sum = sum + myArray[i];
 }</code></pre>`,
 

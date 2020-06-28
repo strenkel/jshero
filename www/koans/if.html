@@ -57,7 +57,7 @@
     <div id="koans-lesson" class="paragraph">Häufig soll Code nur dann ausgeführt werden, wenn eine bestimmte Bedingung erfüllt ist.
 Dazu verwendet man die <code>if</code>-Anweisung.
 
-<pre><code>var gewinn = 0;
+<pre><code>let gewinn = 0;
 if (wuerfelzahl === 6) {
   gewinn = 100;
 }</code></pre>
@@ -80,7 +80,7 @@ gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var gleich = function(a, b) {
+    <div id="hint-area" class="paragraph"><pre><code>let gleich = function(a, b) {
 // Initialisiere eine Variable
 // mit 'UNGLEICH'. Verwende 'if',
 // um die Variable ggf. auf
@@ -94,8 +94,8 @@ gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var gleich = function(a, b) {
-  var ergebnis = 'UNGLEICH';
+    <div id="solution-area" class="paragraph"><pre><code>let gleich = function(a, b) {
+  let ergebnis = 'UNGLEICH';
   if (a === b) {
     ergebnis = 'GLEICH';
   }

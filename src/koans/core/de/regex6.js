@@ -19,11 +19,11 @@ der 8 Schreibweisen Maier, Meier, Mayer, Meyer, Mair, Meir, Mayr oder Meyr enth√
 <code>pruefe('Mayer')</code> und <code>pruefe('Mayr')</code> sollte <code>true</code>
 ergeben.`,
 
-    hint: `<pre><code>var pruefe = function(s) {
+    hint: `<pre><code>let pruefe = function(s) {
 // Benutze e?
 };</code></pre>`,
 
-    solution: `<pre><code>var pruefe = function(s) {
+    solution: `<pre><code>let pruefe = function(s) {
   return /M[ae][iy]e?r/.test(s);
 };</code></pre>`,
 

@@ -9,23 +9,23 @@
     lesson: `Bisher hatten wir Variablen bei der Deklaration immer auch initialisiert.
 
 <pre><code>// Deklaration und Initialisierung
-var x = 1;</code></pre>
+let x = 1;</code></pre>
 
 Man kann eine Variable aber auch deklarieren und ihr später einen Wert zuweisen.
 
-<pre><code>var x; // Deklaration
+<pre><code>let x; // Deklaration
 x = 1; // Initialisierung</code></pre>
 
 Variablen, die nicht initialisiert wurden, haben den Wert <code>undefined</code> (engl.: nicht definiert).<br><br>
 Nicht initialisierte Variablen können auch bei Funktionsaufrufen vorkommen. Ruft man eine Funktion, die einen Parameter
 erwartet, ohne Argument auf, dann erhält der Funktionsparameter den Wert <code>undefined</code>.
 
-<pre><code>var echo = function(x) {
+<pre><code>let echo = function(x) {
   return x;
 };
 
 // Aufruf ohne Argument
-var y = echo();</code></pre>
+let y = echo();</code></pre>
 
 <code>echo</code> wird ohne Argument aufgerufen. Dem Parameter <code>x</code> wird so kein Wert zugewiesen,
 er erhält den Wert <code>undefined</code>.

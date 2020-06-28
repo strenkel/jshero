@@ -6,9 +6,9 @@ jshero.koans.add({
 
   lesson: `Using the <code>concat</code> method you can concatenate two arrays:
 
-<pre><code>var a1 = [1, 2, 3];
-var a2 = [4, 5, 6];
-var a3 = a1.concat(a2);</code></pre>
+<pre><code>let a1 = [1, 2, 3];
+let a2 = [4, 5, 6];
+let a3 = a1.concat(a2);</code></pre>
 
 <code>a3</code> contains the array <code>[1, 2, 3, 4, 5, 6]</code>.
 The two existing arrays <code>a1</code> and <code>a2</code> will not be changed.`,

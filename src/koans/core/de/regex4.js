@@ -5,16 +5,16 @@ jshero.koans.add({
   title: 'Regex: Bereiche',
 
   lesson: `Möchte man mit der Zeichenauswahl alle Ziffern zulassen, so kann man
-dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich. 
+dafür <code>/[0123456789]/</code> verwenden. Das ist aber recht umständlich.
 Mit einem Bindestrich kann man größere, zusammenhängende Zeichenbereiche leicht darstellen:
 
-<pre><code>var pruefeZiffer = /[0-9]/;
-var pruefe1Bis6 = /[1-6]/;
-var pruefeABisZ = /[A-Z]/;
-var pruefeaBisz = /[a-z]/; 
-var pruefeDeutschesAlphabet = /[a-zäöüß]/;
-var pruefeABisz = /[A-Za-z]/;
-var pruefeMBisT = /[M-T]/;</code></pre>
+<pre><code>let pruefeZiffer = /[0-9]/;
+let pruefe1Bis6 = /[1-6]/;
+let pruefeABisZ = /[A-Z]/;
+let pruefeaBisz = /[a-z]/;
+let pruefeDeutschesAlphabet = /[a-zäöüß]/;
+let pruefeABisz = /[A-Za-z]/;
+let pruefeMBisT = /[M-T]/;</code></pre>
 
 <code>/[0-9]/</code> steht wie der Regex oben für genau eine Ziffer.
 Den Ziffernbereich kann man, wie <code>/[1-6]/</code> zeigt, leicht auf eine gewünschte Auswahl
@@ -32,12 +32,12 @@ Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M
 Zeichenfolge wie 'Klasse 2b' enthält. Dabei sind Klassen von 1 bis 6 und a bis d
 zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben.`,
 
-  hint: `<pre><code>var pruefe = function(s) {
+  hint: `<pre><code>let pruefe = function(s) {
 // Verwende Literale
-// und Bereiche.  
+// und Bereiche.
 };</code></pre>`,
 
-  solution: `<pre><code>var pruefe = function(s) {
+  solution: `<pre><code>let pruefe = function(s) {
   return /Klasse [1-6][a-d]/.test(s);
 };</code></pre>`,
 

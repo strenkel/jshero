@@ -12,8 +12,8 @@ Zwei dieser String-Methoden sind die parameterlosen Methoden <code>toUpperCase</
 Sie geben den String, auf dem sie angewendet werden, in Groß- bzw. Kleinbuchstaben zurück. Wichtig ist,
 dass der eigentliche String unverändert bleibt. Die Rückgabe dieser Methoden ist der in Groß- bzw. Kleinbuchstaben
 umgewandelte String.
-<pre><code>var stadt = 'Prag';
-var ausgabe = stadt.toUpperCase();</code/></pre>
+<pre><code>let stadt = 'Prag';
+let ausgabe = stadt.toUpperCase();</code/></pre>
 <code>ausgabe</code> erhält den Wert <code>'PRAG'</code>. <code>stadt</code> hat weiterhin den Wert <code>'Prag'</code>.
 <pre><code>ausgabe = stadt.toLowerCase();</code/></pre>
 Jetzt hat <code>ausgabe</code> den Wert <code>'prag'</code>.
@@ -25,11 +25,11 @@ Hier wird <code>toUpperCase()</code> direkt auf einen String angewendet. Der Wer
 in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klein- und Großschreibung soll
 <code>-</code> sein.<br><br>Beispiel: <code>toCase('Ida')</code> sollte <code>'ida-IDA'</code> zurückgeben.`,
 
-  hint: `<pre><code>var toCase = function(text) {
+  hint: `<pre><code>let toCase = function(text) {
   return ... + '-' + ...;
 };</code/></pre>`,
 
-  solution: `<pre><code>var toCase = function(text) {
+  solution: `<pre><code>let toCase = function(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code/></pre>`,
 

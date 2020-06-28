@@ -6,10 +6,10 @@ jshero.koans.add({
 
   lesson: `With <code>slice</code> you can copy a subarray from an array:
 
-<pre><code>var abcd = ['a', 'b', 'c', 'd'];
-var ab = abcd.slice(0, 2);
-var bc = abcd.slice(1, 3);
-var bcd = abcd.slice(1, 4);</code></pre>
+<pre><code>let abcd = ['a', 'b', 'c', 'd'];
+let ab = abcd.slice(0, 2);
+let bc = abcd.slice(1, 3);
+let bcd = abcd.slice(1, 4);</code></pre>
 
 The first parameter specifies the start index (included) and the second parameter specifies the end index (excluded).
 The original array will not be modified.`,

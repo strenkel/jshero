@@ -9,8 +9,8 @@
     lesson: `Mit Schleifen können Code-Abschnitte mehrmals durchlaufen werden. JavaScript kennt mehrere Schleifenarten.
 Die einfachste ist die <code>for</code>-Schleife.
 
-<pre><code>var summe = 0;
-for (var i = 1; i < 3; i++) {
+<pre><code>let summe = 0;
+for (let i = 1; i < 3; i++) {
   summe = summe + i;
 }</code></pre>
 
@@ -39,17 +39,17 @@ Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.`,
 alle natürlichen Zahlen kleiner gleich dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
 <code>addiereBis(3)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
 
-hint: `<pre><code>var addiereBis = function(n) {
-  var summe = 0;
-  for (var i = 0; i <= n; i++) {
+hint: `<pre><code>let addiereBis = function(n) {
+  let summe = 0;
+  for (let i = 0; i <= n; i++) {
     ...
   }
   return summe;
 };</pre></code>`,
 
-solution: `<pre><code>var addiereBis = function(n) {
-  var summe = 0;
-  for (var i = 0; i <= n; i++) {
+solution: `<pre><code>let addiereBis = function(n) {
+  let summe = 0;
+  for (let i = 0; i <= n; i++) {
     summe = summe + i;
   }
   return summe;

@@ -21,11 +21,11 @@ Ein Zeilenumbruch innerhalb des Zitats ist also nicht zulässig.
 <code>hasQuote('"Ja!"')</code> sollte <code>true</code> und
 <code>hasQuote('Nein')</code> sollte <code>false</code> ergeben.`,
 
-    hint: `<pre><code>var hasQuote = function(s) {
+    hint: `<pre><code>let hasQuote = function(s) {
 // Benutze .*
 };</code></pre>`,
 
-    solution: `<pre><code>var hasQuote = function(s) {
+    solution: `<pre><code>let hasQuote = function(s) {
   return /".*"/.test(s);
 };</code></pre>`,
 

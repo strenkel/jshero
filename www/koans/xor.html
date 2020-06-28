@@ -57,10 +57,10 @@
     <div id="koans-lesson" class="paragraph">Die logischen Operatoren kennen, ähnlich der Punkt- vor Strich-Rechnung, eine Reihenfolge:
 NICHT zuerst, anschließend UND, zuletzt ODER. Möchte man diese Reihenfolge ändern, verwendet man Klammern:
 
-<pre><code>var x1 = true || false && false;
-var x2 = (true || false) && false;
-var x3 = !false && false;
-var x4 = !(false && false);</code></pre>
+<pre><code>let x1 = true || false && false;
+let x2 = (true || false) && false;
+let x3 = !false && false;
+let x4 = !(false && false);</code></pre>
 
 In der ersten Zeile wird zuerst UND ausgewertet. <code>x1</code> wird <code>true</code>.
 In der zweiten Zeile wird zuerst ODER ausgewertet. <code>x2</code> wird <code>false</code>.
@@ -92,7 +92,7 @@ Klammern sind bei der Lösung nicht nötig.</div>
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var xor = function(a, b) {
+    <div id="solution-area" class="paragraph"><pre><code>let xor = function(a, b) {
   return a && !b || !a && b;
 };</code></pre></div>
     

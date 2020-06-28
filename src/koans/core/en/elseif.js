@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `If you want to distinguish multiple cases, you can supplement an <code>if</code> with any number of
 <code>else if</code>. Finally, a single <code>else</code> can be added.
 
-<pre><code>var message;
+<pre><code>let message;
 if (amount > 1000) {
   message = 'Too high. No payout possible!';
 } else if (amount < 10) {

@@ -57,14 +57,14 @@
     <div id="koans-lesson" class="paragraph">Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion.
 Mit der Definition, z. B.
 
-<pre><code>var f = function() {
+<pre><code>let f = function() {
   return 'hallo';
 };</code></pre>
 
 wird festgelegt, was die Funktion machen soll. Sie wird dabei nicht ausgeführt. Sie wird lediglich zur Ausführung bereitgestellt.
 Erst mit ihrem Aufruf
 
-<pre><code>var x = f();</code></pre>
+<pre><code>let x = f();</code></pre>
 
 wird die Funktion ausgeführt. Dann werden die Anweisungen im Funktionsblock der Reihe nach abgearbeitet.
 Die Rückgabe der Funktion wird in diesem Beispiel der Variablen <code>x</code> zugewiesen.
@@ -83,11 +83,11 @@ Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var begruesse = function() {
+    <div id="hint-area" class="paragraph"><pre><code>let begruesse = function() {
   ...
 };
 
-var begruessung = ...</code></pre></div>
+let begruessung = ...</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -95,11 +95,11 @@ var begruessung = ...</code></pre></div>
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var begruesse = function() {
+    <div id="solution-area" class="paragraph"><pre><code>let begruesse = function() {
   return 'Moin!';
 };
 
-var begruessung = begruesse();</code></pre></div>
+let begruessung = begruesse();</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

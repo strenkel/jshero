@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `The Boolean operators have an order: First NOT, then AND, last OR.
 If you want to change this order, use parentheses:
 
-<pre><code>var x1 = true || false && false;
-var x2 = (true || false) && false;
-var x3 = !false && false;
-var x4 = !(false && false);</code></pre>
+<pre><code>let x1 = true || false && false;
+let x2 = (true || false) && false;
+let x3 = !false && false;
+let x4 = !(false && false);</code></pre>
 
 In the 1st line <code>&&</code> is evaluated first. <code>x1</code> is <code>true</code>.
 In the 2nd line <code>||</code> is evaluated first. <code>x2</code> is <code>false</code>.

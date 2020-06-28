@@ -56,15 +56,15 @@
     
     <div id="koans-lesson" class="paragraph">Auf Objekt-Eigenschaften kann man mit der Punkt-Notation zugreifen:
 
-<pre><code>var person = {
+<pre><code>let person = {
   name: 'Constanze Kurz',
   geburtstag: new Date(1974, 2, 2),
   geburtsort: 'Ost-Berlin'
 };
 
-var pName = person.name;
-var pGeburtstag = person.geburtstag;
-var pGeburtsort = person.geburtsort;</code></pre>
+let pName = person.name;
+let pGeburtstag = person.geburtstag;
+let pGeburtsort = person.geburtsort;</code></pre>
 
 Die drei Eigenschaften des Objekts <code>person</code> werden in drei Variablen gespeichert.</div>
     
@@ -86,9 +86,9 @@ Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var distance = function(point) {
-  var xSquare = Math.pow(point.x, 2);
-  var ySquare = Math.pow(point.y, 2);
+    <div id="solution-area" class="paragraph"><pre><code>let distance = function(point) {
+  let xSquare = Math.pow(point.x, 2);
+  let ySquare = Math.pow(point.y, 2);
   return Math.sqrt(xSquare + ySquare);
 };</code></pre></div>
     

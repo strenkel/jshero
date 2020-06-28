@@ -6,9 +6,9 @@ jshero.koans.add({
 
   lesson: `Um die Position eines Strings innerhalb eines anderen Strings zu bestimmen, verwendet man die Methode <code>indexOf</code>:
 
-<pre><code>var n1 = 'Bit'.indexOf('it');
-var n2 = 'Bit'.indexOf('js');
-var n3 = 'Bit'.indexOf('IT');</code></pre>
+<pre><code>let n1 = 'Bit'.indexOf('it');
+let n2 = 'Bit'.indexOf('js');
+let n3 = 'Bit'.indexOf('IT');</code></pre>
 
 <code>n1</code> ist <code>1</code>, da <code>'it'</code> in <code>'Bit'</code> an der 1. Stelle beginnt.
 Wie üblich beginnt die Zählung mit 0.
@@ -21,16 +21,16 @@ Die Methode <code>indexOf()</code> unterscheidet zwischen Groß- und Kleinschrei
 Sowohl <code>indexOfIgnoreCase('JS', 'JS')</code> als auch <code>indexOfIgnoreCase('JS', 'js')</code> sollten
 <code>0</code> ergeben.`,
 
-hint: `<pre><code>var indexOfIgnoreCase = function(s1, s2) {
+hint: `<pre><code>let indexOfIgnoreCase = function(s1, s2) {
 // Wandle s1 und s2 zuerst
 // in Kleinbuchstaben um.
 // Verwende dann die
-// indexOf-Methode. 
+// indexOf-Methode.
 };</code></pre>`,
 
-solution: `<pre><code>var indexOfIgnoreCase = function(s1, s2) {
-  var s1Klein = s1.toLowerCase();
-  var s2Klein = s2.toLowerCase();
+solution: `<pre><code>let indexOfIgnoreCase = function(s1, s2) {
+  let s1Klein = s1.toLowerCase();
+  let s2Klein = s2.toLowerCase();
   return s1Klein.indexOf(s2Klein);
 };</code></pre>`,
 

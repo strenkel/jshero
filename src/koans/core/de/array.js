@@ -9,24 +9,24 @@
     lesson: `Arrays sind Objekte zur Speicherung vieler, meist ähnlicher Werte. Diese sogenannten Elemente werden
 in einem Array der Reihe nach abgelegt. Arrays erzeugt man am besten mit eckigen Klammern.
 
-<pre><code>var sprachen = ['C', 'C++', 'Java', 'JavaScript'];
-var primzahlen = [2, 3, 5, 7, 11];
-var leeresArray = [];
-var a = 'Douglas';
-var b = 12;
-var c = true;
-var allesMoegliche = [a, b, c];</code></pre>
+<pre><code>let sprachen = ['C', 'C++', 'Java', 'JavaScript'];
+let primzahlen = [2, 3, 5, 7, 11];
+let leeresArray = [];
+let a = 'Douglas';
+let b = 12;
+let c = true;
+let allesMoegliche = [a, b, c];</code></pre>
 
 Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen anderen Datentyp besitzen.`,
 
     task: `Schreibe eine Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt.
 <br><br>Beispiel: <code>toArray(5, 9)</code> sollte das Array <code>[5, 9]</code> ergeben.`,
 
-    hint: `<pre><code>var toArray = function(a, b) {
+    hint: `<pre><code>let toArray = function(a, b) {
   return [...];
 };</code></pre>`,
 
-    solution: `<pre><code>var toArray = function(a, b) {
+    solution: `<pre><code>let toArray = function(a, b) {
   return [a, b];
 };</code></pre>`,
 

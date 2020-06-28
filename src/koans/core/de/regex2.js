@@ -6,13 +6,13 @@ jshero.koans.add({
 
   lesson: `Neben einfachen Zeichenliteralen kennen reguläre Ausdrücke eine
 Reihe von Zeichen mit besonderer Bedeutung, sogenannte Metazeichen.
-Ein solches Metazeichen ist der Punkt. Er steht für genau ein beliebiges Zeichen ausgenommen den Zeilenumbruch: 
+Ein solches Metazeichen ist der Punkt. Er steht für genau ein beliebiges Zeichen ausgenommen den Zeilenumbruch:
 
-<pre><code>var t1 = /M.ier/.test('Maier');
-var t2 = /M.ier/.test('Meierei');
-var t3 = /M.ier/.test('Baier');
-var t4 = /M.ier/.test('Mier');
-var t5 = /M.ier/.test('M-ier');</code></pre>
+<pre><code>let t1 = /M.ier/.test('Maier');
+let t2 = /M.ier/.test('Meierei');
+let t3 = /M.ier/.test('Baier');
+let t4 = /M.ier/.test('Mier');
+let t5 = /M.ier/.test('M-ier');</code></pre>
 
 Der regulärer Ausdruck <code>/M.ier/</code> steht für alle Zeichenketten, die mit
 <code>M</code> beginnen, ein beliebiges zweites Zeichen besitzen und anschließend mit
@@ -30,7 +30,7 @@ zwei beliebige Zeichen besitzen und mit <code>s</code> enden. <code>Hans</code> 
 treffen auf dieses Pattern zu, <code>His</code> und <code>Heros</code> nicht.`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String zwei in
-doppelte Anführungszeichen eingeschlossene Zeichen besitzt.  
+doppelte Anführungszeichen eingeschlossene Zeichen besitzt.
 <code>pruefe('"Wo"')</code> sollte <code>true</code> und
 <code>pruefe('"Was"')</code> sollte <code>false</code> ergeben.`,
 

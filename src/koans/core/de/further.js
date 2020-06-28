@@ -33,18 +33,18 @@ Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)
     }
   ],
 
-  hint: `<pre><code>var quersumme = function(zahl) {
+  hint: `<pre><code>let quersumme = function(zahl) {
 // Extrahiere in einer Schleife
 // mit Modulo jeweils die
-// Einer-Stelle und addiere 
+// Einer-Stelle und addiere
 // sie auf.
 };</code></pre>`,
 
-  solution: `<pre><code>var quersumme = function(zahl) {
-  var sum = 0;
-  var rest = zahl;
+  solution: `<pre><code>let quersumme = function(zahl) {
+  let sum = 0;
+  let rest = zahl;
   while (rest > 0) {
-    var einer = rest % 10;
+    let einer = rest % 10;
     sum = sum + einer;
     rest = (rest - einer)/10;
   }

@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: `Mit <code>!==</code> vergleicht man zwei Werte auf strikte Ungleichheit.
 
-<pre><code>var v1 = 'lauf' !== 'Lauf';
-var v2 = 10 !== '10';</code></pre>
+<pre><code>let v1 = 'lauf' !== 'Lauf';
+let v2 = 10 !== '10';</code></pre>
 
 Beide Vergleiche ergeben <code>true</code>. Der erste, weil sich die beiden
 Strings in der Groß- und Kleinschreibung unterscheiden.
@@ -18,11 +18,11 @@ Die Funktion soll nur dann <code>true</code> ergeben, wenn alle drei Parameter u
 <code>ungleich(1, 2, 3)</code> soll <code>true</code> liefern, <code>ungleich(1, 1, 2)</code> soll
 <code>false</code> ergeben.`,
 
-  hint: `<pre><code>var ungleich = function (a, b, c) {
+  hint: `<pre><code>let ungleich = function (a, b, c) {
   return a !== b && ...
 };</code></pre>`,
 
-  solution: `<pre><code>var ungleich = function (a, b, c) {
+  solution: `<pre><code>let ungleich = function (a, b, c) {
   return a !== b && a !== c && b !== c;
 };</code></pre>`,
 

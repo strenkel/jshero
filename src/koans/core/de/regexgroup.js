@@ -12,8 +12,8 @@ Damit kann man nach Wiederholungen suchen.<br>
 <code>/([a-z])\\1/</code> findet doppelte Kleinbuchstaben und <code>/(\\d)(\\d).*\\1\\2/</code>
 findet doppelte zweistellige Zahlen.
 
-<pre><code>var t1 = /([a-z])\\1/.test('Affe'); // true
-var t2 = /(\\d)(\\d).*\\1\\2/.test(12 mal 12'); // true</code></pre>`,
+<pre><code>let t1 = /([a-z])\\1/.test('Affe'); // true
+let t2 = /(\\d)(\\d).*\\1\\2/.test(12 mal 12'); // true</code></pre>`,
 
   task: `Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String ein doppeltes Wort enthält.
 Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet.
@@ -52,7 +52,7 @@ Klein- oder Großschreibung soll keine Rolle spielen. <code>test('Apfel Birne Ap
     function() {
       return jshero.testutil.assert_functionReturns("test('ein rein')", false);
     }
-    
+
   ]
 
 });

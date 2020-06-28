@@ -14,15 +14,15 @@ Reguläre Ausdrücke sind leistungsstark, aber auch sehr kryptisch.
 <br><br>
 In JavaScript werden reguläre Ausdrücke zwischen Schrägstrichen notiert:
 
-<pre><code>var pruefeAufOF = /OF/;</code></pre>
+<pre><code>let pruefeAufOF = /OF/;</code></pre>
 
 Hier ist <code>OF</code> der regulärer Ausdruck. Es ist ein sogenanntes Zeichenliteral und steht für sich selbst.
 Mit ihm kann man testen, ob ein anderer String die Zeichenfolge <code>OF</code> enthält:
 
-<pre><code>var t1 = /OF/.test('OF-C 79');
-var t2 = /OF/.test('B-OF 61')
-var t3 = /OF/.test('HB-F 42');
-var t4 = /OF/.test('Ofen');</code></pre>
+<pre><code>let t1 = /OF/.test('OF-C 79');
+let t2 = /OF/.test('B-OF 61')
+let t3 = /OF/.test('HB-F 42');
+let t4 = /OF/.test('Ofen');</code></pre>
 
 <code>test()</code> ist eine Regex-Methode. Sie gibt <code>true</code> zurück, wenn
 der ihr übergebene String das durch den Regex beschriebene Muster enthält.
@@ -41,7 +41,7 @@ Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
 
 hint: `<pre><code>Benutze den Regex /Rose/.</pre></code>`,
 
-solution: `<pre><code>var enthaeltRose = function(s) {
+solution: `<pre><code>let enthaeltRose = function(s) {
   return /Rose/.test(s);
 };</pre></code>`,
 

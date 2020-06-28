@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Soll ein Codeblock nur dann ausgeführt werden, wenn eine <code>if</code>-Bedingung
 nicht erfüllt ist, verwendet man zusätzlich zum <code>if</code> ein <code>else</code> (engl.: sonst).
 
-<pre><code>var mitteilung;
+<pre><code>let mitteilung;
 if (betrag > 1000) {
   mitteilung = 'Keine Auszahlung möglich!';
 } else {
@@ -22,35 +22,35 @@ Für jeden Betrag, der kleiner gleich <code>10</code> ist, beträgt der Zuschlag
 Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>.<br><br>Beispiel:
 Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben.`,
 
-  hint: `<pre><code>var addiereMitZuschlag = function(a, b) {
+  hint: `<pre><code>let addiereMitZuschlag = function(a, b) {
 
-  var zuschlag = 0;
-  
+  let zuschlag = 0;
+
   if (a <= 10) {
     zuschlag = zuschlag + 1;
   } else ...
-  
+
   ...
 
   return a + b + zuschlag;
 };</code></pre>`,
 
-  solution: `<pre><code>var addiereMitZuschlag = function(a, b) {
+  solution: `<pre><code>let addiereMitZuschlag = function(a, b) {
 
-  var zuschlag = 0;
-  
+  let zuschlag = 0;
+
   if (a <= 10) {
     zuschlag = zuschlag + 1;
   } else {
     zuschlag = zuschlag + 2;
   }
-  
+
   if (b <= 10) {
     zuschlag = zuschlag + 1;
   } else {
     zuschlag = zuschlag + 2;
   }
-  
+
   return a + b + zuschlag;
 };</code></pre>`,
 

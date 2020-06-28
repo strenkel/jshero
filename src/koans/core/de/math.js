@@ -8,8 +8,8 @@ jshero.koans.add({
 So gibt <code>Math.sqrt(x)</code> die Quadratwurzel (engl.: square root) zurück
 und mit <code>Math.pow(x, y)</code> berechnet man die Potenz (engl.: power) x hoch y.
 
-<pre><code>var y1 = Math.sqrt(9);
-var y2 = Math.pow(10, 3);</code></pre>
+<pre><code>let y1 = Math.sqrt(9);
+let y2 = Math.pow(10, 3);</code></pre>
 
 <code>y1</code> hat den Wert <code>3</code> und <code>y2</code> den Wert <code>1000</code> (10&sup3; = 10 * 10 * 10 = 1000).`,
 
@@ -19,13 +19,13 @@ var y2 = Math.pow(10, 3);</code></pre>
 Katheten und c die Länge der Hypotenuse, so gilt: a&sup2; + b&sup2; = c&sup2;.
 <br><br>Beispiel: Da 3&sup2; + 4&sup2; = 5&sup2; gilt, sollte <code>hypotenuse(3,&nbsp;4)</code> den Wert <code>5</code> liefern.`,
 
-  hint: `<pre><code>var hypotenuse = function(a, b) {
-  var cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
+  hint: `<pre><code>let hypotenuse = function(a, b) {
+  let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>var hypotenuse = function(a, b) {
-  var cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
+  solution: `<pre><code>let hypotenuse = function(a, b) {
+  let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return Math.sqrt(cQuadrat);
 };</code></pre>`,
 

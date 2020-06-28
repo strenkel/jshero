@@ -62,8 +62,8 @@ Zwei dieser String-Methoden sind die parameterlosen Methoden <code>toUpperCase</
 Sie geben den String, auf dem sie angewendet werden, in Groß- bzw. Kleinbuchstaben zurück. Wichtig ist,
 dass der eigentliche String unverändert bleibt. Die Rückgabe dieser Methoden ist der in Groß- bzw. Kleinbuchstaben
 umgewandelte String.
-<pre><code>var stadt = 'Prag';
-var ausgabe = stadt.toUpperCase();</code/></pre>
+<pre><code>let stadt = 'Prag';
+let ausgabe = stadt.toUpperCase();</code/></pre>
 <code>ausgabe</code> erhält den Wert <code>'PRAG'</code>. <code>stadt</code> hat weiterhin den Wert <code>'Prag'</code>.
 <pre><code>ausgabe = stadt.toLowerCase();</code/></pre>
 Jetzt hat <code>ausgabe</code> den Wert <code>'prag'</code>.
@@ -81,7 +81,7 @@ in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klei
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var toCase = function(text) {
+    <div id="hint-area" class="paragraph"><pre><code>let toCase = function(text) {
   return ... + '-' + ...;
 };</code/></pre></div>
     
@@ -91,7 +91,7 @@ in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klei
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var toCase = function(text) {
+    <div id="solution-area" class="paragraph"><pre><code>let toCase = function(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code/></pre></div>
     

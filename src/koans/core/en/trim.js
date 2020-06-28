@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: `The <code>trim</code> method removes whitespaces from both ends of a string.
 
-<pre><code>var input = ' Rosa Parks ';
-var name = input.trim();</code></pre>
+<pre><code>let input = ' Rosa Parks ';
+let name = input.trim();</code></pre>
 
 <code>name</code> contains the string <code>'Rosa Parks'</code>.
 Notice that <code>input</code> still contains the string <code>' Rosa Parks '</code>.`,
@@ -15,14 +15,14 @@ Notice that <code>input</code> still contains the string <code>' Rosa Parks '</c
   task: `Write a function <code>firstChar</code>, which returns the first character that is not a space
 when a string is passed. <code>firstChar(' Rosa Parks ')</code> should return <code>'R'</code>.`,
 
-  hint: `<pre><code>var firstChar = function(text) {
+  hint: `<pre><code>let firstChar = function(text) {
 // Trim first.
 // Then use the
 // charAt method.
 };</code></pre>`,
 
-  solution: `<pre><code>var firstChar = function(text) {
-  var trimmedText = text.trim();
+  solution: `<pre><code>let firstChar = function(text) {
+  let trimmedText = text.trim();
   return trimmedText.charAt(0);
 };</code></pre>`,
 

@@ -9,7 +9,7 @@
     lesson: `Let's practice what we've just learned. Here you have to read code.`,
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>var x = 'Geeta';</code></pre>`,
+<pre><code>let x = 'Geeta';</code></pre>`,
 
     solution: `<pre><code>'Geeta'</code></pre>`,
 

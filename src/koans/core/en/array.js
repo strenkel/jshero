@@ -6,13 +6,13 @@ jshero.koans.add({
 
   lesson: `Arrays are objects for storing multiple values. Arrays are preferably created with square brackets.
 
-<pre><code>var languages = ['C', 'C++', 'Java'];
-var primes = [2, 3, 5, 7, 11];
-var emptyArray = [];
-var a = 'Douglas';
-var b = 12;
-var c = true;
-var someValues = [a, b, c];</code></pre>`,
+<pre><code>let languages = ['C', 'C++', 'Java'];
+let primes = [2, 3, 5, 7, 11];
+let emptyArray = [];
+let a = 'Douglas';
+let b = 12;
+let c = true;
+let someValues = [a, b, c];</code></pre>`,
 
   task: `Write a function <code>toArray</code> that takes 2 values and returns these values in an array.
 <code>toArray(5,&nbsp;9)</code> should return the array <code>[5,&nbsp;9]</code>.`,

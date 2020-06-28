@@ -8,7 +8,7 @@ jshero.koans.add({
 Werts: <code>null</code>. Man kann einer Variablen den Wert <code>null</code> zuordnen und testet mit strikter
 Gleichheit auf diesen Wert:
 
-<pre><code>var foo = null;
+<pre><code>let foo = null;
 if (foo === null) {
   foo = 1;
 }</code></pre>
@@ -18,7 +18,7 @@ Es ist ein Design-Fehler, dass JavaScript zwei Werte für "kein Wert" besitzt. W
 
   task: `Schreibe eine Funktion <code>cutComment</code>, die eine Zeile JavaScript entgegennimmt
 und einen möglichen Zeilenkommentar getrimmt zurückgibt. Enthält die Zeile keinen Kommentar, soll <code>null</code>
-zurückgegeben werden. <code>cutCommt('var i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
+zurückgegeben werden. <code>cutCommt('let i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
 Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb eines Strings enthält.`,
 
   tests: [
@@ -31,17 +31,17 @@ Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zei
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("cutComment('var i; // Laufvariable')", 'Laufvariable');
+      return jshero.testutil.assert_functionReturns("cutComment('let i; // Laufvariable')", 'Laufvariable');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("cutComment('var n; // Number')", 'Number');
+      return jshero.testutil.assert_functionReturns("cutComment('let n; // Number')", 'Number');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("cutComment('var i;')", null);
+      return jshero.testutil.assert_functionReturns("cutComment('let i;')", null);
     }
-   
+
   ]
 
 });

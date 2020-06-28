@@ -1,16 +1,16 @@
 (function(testutil, evaluator) {
 
-  var evalDice = function() {
+  let evalDice = function() {
     return evaluator.evalTest('dice()');
   };
 
-  var isOneToSix = function(x) {
+  let isOneToSix = function(x) {
     return x === 1 || x === 2 || x === 3 || x === 4 || x === 5 || x === 6;
   };
 
-  var throwA = function(x) {
-    var result;
-    for (var i = 0; i < 1000; i++) {
+  let throwA = function(x) {
+    let result;
+    for (let i = 0; i < 1000; i++) {
       result = evalDice();
       if (result === x) {
         return true;
@@ -19,8 +19,8 @@
     return false;
   };
 
-  var testWith = function(x) {
-    var ok, msg, e;
+  let testWith = function(x) {
+    let ok, msg, e;
     try {
       ok = throwA(x);
       if (ok) {
@@ -48,7 +48,7 @@
 
     lesson: `Mit <code>Math.random()</code> erzeugt man eine Pseudozufallszahl zwischen 0 (inklusive) und 1 (exklusive).
 
-<pre><code>var x = Math.random();</code></pre>
+<pre><code>let x = Math.random();</code></pre>
 
 <code>x</code> könnte z.B. den Wert <code>0.6206372241429993</code> erhalten.
 Jeder Aufruf von <code>Math.random()</code> generiert eine neue Pseudozufallszahl.
@@ -70,11 +70,11 @@ geeignet umrechnen. Das soll jetzt gleich geübt werden.`,
       },
 
       function() {
-        var ok, msg, e;
+        let ok, msg, e;
         try {
           ok = true;
-          var result;
-          for (var i = 0; i < 1000; i++) {
+          let result;
+          for (let i = 0; i < 1000; i++) {
             result = evalDice();
             if (!isOneToSix(result)) {
               ok = false;

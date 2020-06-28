@@ -10,7 +10,7 @@
 Objekt-Eigenschaften können aber auch Funktionen sein. Solche Objekt-Eigenschaften nennt man
 Methoden. Methoden operieren auf den Daten eines Objekts.
 
-<pre><code>var ware = {
+<pre><code>let ware = {
   name: 'Äpfel',
   preis: 2.15,
   erhoehePreis: function(erhoehung) {
@@ -18,9 +18,9 @@ Methoden. Methoden operieren auf den Daten eines Objekts.
   }
 };
 
-var alterPreis = ware.preis;
+let alterPreis = ware.preis;
 ware.erhoehePreis(0.05);
-var neuerPreis = ware.preis;</code></pre>
+let neuerPreis = ware.preis;</code></pre>
 
 Das Objekt <code>ware</code> besitzt die Methode <code>erhoehePreis</code>. Diese Methode greift mithilfe von
 <code>this</code> auf die Objekt-Eigenschaft <code>preis</code> zu. <code>this</code> steht innerhalb eines Objekts für
@@ -39,8 +39,8 @@ soll den Wert von <code>x</code> um <code>1</code> erhöhen. Weise das Objekt ei
       },
 
       function() {
-        var out = evaluator.evalTest("point");
-        var ok, msg;
+        let out = evaluator.evalTest("point");
+        let ok, msg;
         if (out === null) {
           ok = false;
           msg = "<code>point</code> ist <code>null</code>.";
@@ -60,8 +60,8 @@ soll den Wert von <code>x</code> um <code>1</code> erhöhen. Weise das Objekt ei
       },
 
       function() {
-        var out = evaluator.evalTest("point");
-        var ok, msg;
+        let out = evaluator.evalTest("point");
+        let ok, msg;
         if (out.y === 0) {
           ok = true;
           msg = "<code>point.y</code> hat den Wert <code>0</code>."
@@ -82,8 +82,8 @@ soll den Wert von <code>x</code> um <code>1</code> erhöhen. Weise das Objekt ei
       },
 
       function() {
-        var out = evaluator.evalTest("point");
-        var ok, msg;
+        let out = evaluator.evalTest("point");
+        let ok, msg;
         out.moveX();
         if (out.x === 1 && out.y === 0) {
           ok = true;

@@ -7,19 +7,19 @@
     title: 'Modulo',
 
     lesson: 'Another arithmetic operator is modulo. It calculates the remainder of a division and is represented by <code>%</code>.' +
-      '<pre><code>var x = 7 % 2;<br>' +
-      'var y = 20 % 3;</code></pre>' +
+      '<pre><code>let x = 7 % 2;<br>' +
+      'let y = 20 % 3;</code></pre>' +
       '7 divided by 2 is 3 with remainder 1. <code>x</code> is <code>1</code>.<br>' +
       '20 divided by 3 is 6 with remainder 2. <code>y</code> is <code>2</code>.',
 
     task: 'Write a function <code>onesDigit</code> that takes a natural number and returns the ones digit of that number. ' +
       '<code>onesDigit(2674)</code> should return <code>4</code>.',
 
-    hint: `<pre><code>var onesDigit = function(n) {
-// Use modulo 10.  
+    hint: `<pre><code>let onesDigit = function(n) {
+// Use modulo 10.
 };</code></pre>`,
 
-    solution: `<pre><code>var onesDigit = function(n) {
+    solution: `<pre><code>let onesDigit = function(n) {
   return n % 10;
 };</code></pre>`,
 

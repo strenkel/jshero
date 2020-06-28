@@ -8,9 +8,9 @@
 
     lesson: `Die Werte von Objekt-Eigenschaften kann man auch mithilfe von Variablen festlegen:
 
-<pre><code>var title = 'Clean Code';
-var author = 'Robert C. Martin';
-var book = {
+<pre><code>let title = 'Clean Code';
+let author = 'Robert C. Martin';
+let book = {
   title: title,
   author: author
 };</code></pre>
@@ -25,11 +25,11 @@ und nach dem Doppelpunkt die zuvor definierte Variable.`,
 entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten zurückgibt.
 <code>createPoint(1,&nbsp;2)</code> sollte <code>{x:&nbsp;1,&nbsp;y:&nbsp;2}</code> zurückgeben.`,
 
-    hint: `<pre><code>var createPoint = function(x, y) {
+    hint: `<pre><code>let createPoint = function(x, y) {
   return ...
 };</code></pre>`,
 
-    solution: `<pre><code>var createPoint = function(x, y) {
+    solution: `<pre><code>let createPoint = function(x, y) {
   return {
     x: x,
     y: y

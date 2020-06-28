@@ -6,8 +6,8 @@ jshero.koans.add({
 
   lesson: `With <code>!==</code> two values are compared for strict inequality.
 
-<pre><code>var c1 = 'rose' !== 'Rose';
-var c2 = 10 !== '10';</code></pre>
+<pre><code>let c1 = 'rose' !== 'Rose';
+let c2 = 10 !== '10';</code></pre>
 
 Both comparisons result in <code>true</code>.
 The first one, because the two strings differ in upper and lower case.

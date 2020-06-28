@@ -57,7 +57,7 @@
     <div id="koans-lesson" class="paragraph">Mit der <code>if</code>-Anweisung hat man die Möglichkeit, Funktionen mit zwei <code>return</code>-Anweisungen
 zu schreiben:
 
-<pre><code>var gewinn = function(zahl) {
+<pre><code>let gewinn = function(zahl) {
   if (zahl === 6) {
     return 100;
   }
@@ -85,7 +85,7 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var schnapszahl = function(n) {
+    <div id="hint-area" class="paragraph"><pre><code>let schnapszahl = function(n) {
 // Berechne die Einerstelle
 // von n mit Modulo 10.
 // Berechne die Zehnerstelle
@@ -101,9 +101,9 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var schnapszahl = function(n) {
-  var einer = n % 10;
-  var zehner = Math.floor(n / 10);
+    <div id="solution-area" class="paragraph"><pre><code>let schnapszahl = function(n) {
+  let einer = n % 10;
+  let zehner = Math.floor(n / 10);
   if (einer === zehner) {
     return 'Schnaps!';
   }

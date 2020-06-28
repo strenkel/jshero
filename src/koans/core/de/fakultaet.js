@@ -13,17 +13,17 @@ Sie wird durch ein nachgestelltes Ausrufezeichen abgekürzt: 3! = 1*2*3 = 6. Per
     task: `Schreibe eine Funktion <code>fakultaet</code>, die die Fakultät einer natürlichen Zahl berechnet.
 <code>fakultaet(3)</code> sollte <code>1*2*3</code> = <code>6</code> ergeben.`,
 
-    hint: `<pre><code>var fakultaet = function(n) {
-      var result = 1;
+    hint: `<pre><code>let fakultaet = function(n) {
+      let result = 1;
       for (...) {
         ...
       }
       return result;
     };</pre></code>`,
 
-    solution: `<pre><code>var fakultaet = function(n) {
-  var result = 1;
-  for (var i = 1; i <= n; i++) {
+    solution: `<pre><code>let fakultaet = function(n) {
+  let result = 1;
+  for (let i = 1; i <= n; i++) {
     result = result * i;
   }
   return result;

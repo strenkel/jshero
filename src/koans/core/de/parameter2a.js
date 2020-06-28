@@ -7,13 +7,13 @@ jshero.koans.add({
   lesson: `Bitte achte darauf, dass du eventuelle Parameter deiner Funktion anders nennst als die Funktion selbst.
 Die Funktion <code>f1</code> zum Beispiel
 
-<pre><code>var f1 = function(f1) {
+<pre><code>let f1 = function(f1) {
   return f1;
 };</code></pre>
 
 macht das gleiche wie diese Funktion:
 
-<pre><code>var f2 = function(eingabe) {
+<pre><code>let f2 = function(eingabe) {
   return eingabe;
 };</code></pre>
 

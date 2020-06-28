@@ -59,13 +59,13 @@ Während <code>test</code> feststellt, ob ein Regex in einem String gefunden wir
 auch den gefundenen String und alle gefundenen Gruppen zurück. Das geschiet in Form eines Arrays.
 Dieses Array hat darüber hinaus die beiden Eigenschaften <code>index</code> und <code>input</code>.
 <code>index</code> enthält den 0-basierten Index des gefundenen Strings und <code>input</code>
-den originalen String.<br> 
+den originalen String.<br>
 
-<pre><code>var resultat = /(\d+):(\d+)/.exec("Kiel-Flensburg 23:25");
-var endstand = resultat[0]; // "23:25"
-var toreKiel = resultat[1]; // "23"
-var toreFlensburg = resultat[2]; // "25"
-var index = resultat.index; // 15</code></pre>
+<pre><code>let resultat = /(\d+):(\d+)/.exec("Kiel-Flensburg 23:25");
+let endstand = resultat[0]; // "23:25"
+let toreKiel = resultat[1]; // "23"
+let toreFlensburg = resultat[2]; // "25"
+let index = resultat.index; // 15</code></pre>
 
 Wird der reguläre Ausdruck nicht gefunden, gibt <code>exec</code> <code>null</code> zurück.</div>
     

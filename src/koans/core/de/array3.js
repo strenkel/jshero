@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `Ebenso wie man Array-Elemente über einen Index auslesen kann, kann man sie über diesen Index setzen.
 Dabei spielt es keine Rolle, ob das Array vorher gefüllt oder leer war.
 
-<pre><code>var sprachen = [];
+<pre><code>let sprachen = [];
 sprachen[0] = 'C';
 sprachen[1] = 'C++';
 sprachen[2] = 'Java';

@@ -7,8 +7,8 @@ jshero.koans.add({
   lesson: `<code>for</code> loops are handy for traversing arrays.
 In the following example, the elements of an array are added together:
 
-<pre><code>var sum = 0;
-for (var i = 0; i < myArray.length; i++) {
+<pre><code>let sum = 0;
+for (let i = 0; i < myArray.length; i++) {
   sum = sum + myArray[i];
 }</code></pre>`,
 

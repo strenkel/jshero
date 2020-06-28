@@ -23,13 +23,13 @@ Es sind alle Zeitangaben von 00:00:00 bis 99:59:59 zugelassen. Bei einstelligen 
 führende Null obligatorisch. <code>isTime('02:15:25')</code> sollte <code>true</code> und
 <code>isTime('x02:15:25x')</code> sollte <code>false</code> ergeben.`,
 
-    hint: `<pre><code>var isTime = function(s) {
+    hint: `<pre><code>let isTime = function(s) {
 // Verwende ^, $ und
 // Bereiche.
 };</code></pre>`,
 
-    solution: `<pre><code>var isTime = function(s) {
-  return /^\\d\\d:[0-5]\\d:[0-5]\\d$/.test(s);      
+    solution: `<pre><code>let isTime = function(s) {
+  return /^\\d\\d:[0-5]\\d:[0-5]\\d$/.test(s);
 };</code></pre>`,
 
     tests: [
@@ -56,7 +56,7 @@ führende Null obligatorisch. <code>isTime('02:15:25')</code> sollte <code>true<
       function() {
         return testutil.assert_functionReturns("isTime('000:00:00')", false);
       },
-      
+
       function() {
         return testutil.assert_functionReturns("isTime('00:00:000')", false);
       },

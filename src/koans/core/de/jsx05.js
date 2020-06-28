@@ -9,11 +9,11 @@
     lesson: `Auch bei Funktionen mit Parametern wollen wir den Funktionsaufruf üben.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>var reply = function(phrase) {
+<pre><code>let reply = function(phrase) {
   return phrase;
 };
 
-var x = reply('How do you do?');</code></pre>`,
+let x = reply('How do you do?');</code></pre>`,
 
     solution: `<pre><code>'How do you do?'</code></pre>`,
 

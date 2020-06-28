@@ -13,9 +13,9 @@ if at least one of the two input values is <code>true</code>. If both input valu
 the result is <code>false</code>. <code>!</code> is applied to a single Boolean value and inverts this value:
 <code>!true</code> is <code>false</code> and <code>!false</code> is <code>true</code>.
 
-<pre><code>var x1 = true && false;
-var x2 = !x1;
-var x3 = x1 || x2;</code></pre>
+<pre><code>let x1 = true && false;
+let x2 = !x1;
+let x3 = x1 || x2;</code></pre>
 
 <code>x1</code> is <code>false</code>, <code>x2</code> is <code>true</code> and <code>x3</code> is <code>true</code>.`,
 
@@ -24,13 +24,13 @@ the result should be <code>false</code>. In the other cases the return should be
 The call <code>nand(true, true)</code> should return <code>false</code>. The calls <code>nand(true, false)</code>,
 <code>nand(false, true)</code> and <code>nand(false, false)</code> should return <code>true</code>.`,
 
-  hint: `<pre><code>var nand = function(a, b) {
-  var and = a && b;
+  hint: `<pre><code>let nand = function(a, b) {
+  let and = a && b;
   ...
 };</code></pre>`,
 
-  solution: `<pre><code>var nand = function(a, b) {
-  var and = a && b;
+  solution: `<pre><code>let nand = function(a, b) {
+  let and = a && b;
   return !and;
 };</code></pre>`,
 

@@ -7,11 +7,11 @@
     title: 'What is x?',
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>var double = function(name) {
+<pre><code>let double = function(name) {
   return name + ' and ' + name;
 };
 
-var x = double('Roy');</code></pre>`,
+let x = double('Roy');</code></pre>`,
 
     solution: `<pre><code>'Roy and Roy'</code></pre>`,
 

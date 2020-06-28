@@ -7,11 +7,11 @@ jshero.koans.add({
   lesson: `Die Methode <code>split</code> zerlegt einen String anhand eines Trennstrings in Teilstrings.
 Die Teilstrings werden als Array zurückgegeben. Der ursprüngliche String wird nicht verändert.
 
-<pre><code>var date = '31-10-2017';
-var parts = date.split('-');
-var day = parts[0]; // '31'
-var month = parts[1]; // '10'
-var year = parts[2]; // '2017'</code></pre>
+<pre><code>let date = '31-10-2017';
+let parts = date.split('-');
+let day = parts[0]; // '31'
+let month = parts[1]; // '10'
+let year = parts[2]; // '2017'</code></pre>
 
 Der Trennstring ist hier der Bindestrich. Er zerlegt den Datumsstring in drei Teile. Diese drei Teile werden als
 Array der Variablen <code>parts</code> zugewiesen. Anschließend werden die einzelnen Teile aus dem Array ausgelesen

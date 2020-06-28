@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `Wie wir gesehen haben, besitzen reguläre Ausdrücke eine Reihe von Zeichen mit besonderer Bedeutung.
 So steht <code>.</code> nicht für einen Punkt, sondern für ein beliebiges Zeichen.
 Möchte man nach einen Punkt suchen, so muss man die besondere Bedeutung gewissermaßen
-ausschalten. Das macht man mit einen vorangestellten Backslash: 
+ausschalten. Das macht man mit einen vorangestellten Backslash:
 
-<pre><code>var t1 = /\\./.test('Z. B.');
-var t2 = /\\./.test('ZB');</code></pre>
+<pre><code>let t1 = /\\./.test('Z. B.');
+let t2 = /\\./.test('ZB');</code></pre>
 
 Der erste Ausdruck ergibt <code>true</code>, der zweite <code>false</code>.
 Ohne den Backslash würden beide Ausdrücke <code>true</code> ergeben.
@@ -18,7 +18,7 @@ Ein solches 'Ausschalten' nennt man maskieren oder escapen.
 
 Möchte man nach dem Backslash suchen, so muss man diesen ebenfalls maskieren:
 
-<pre><code>var t = /\\\\/.test('A \\ B');
+<pre><code>let t = /\\\\/.test('A \\ B');
 // t ist true</code></pre>
 
 Insgesamt gibt es 15 Zeichen, die man maskieren muss, wenn man nach ihnen suchen möchte:

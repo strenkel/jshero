@@ -7,9 +7,9 @@ jshero.koans.add({
   lesson: `Mit der <code>indexOf</code> Methode kann man die Positions des übergebenen Elements innerhalb eines
 Arrays bestimmen. Die Zählung beginnt mit 0:
 
-<pre><code>var systems = ['Debian', 'Ubuntu', 'Mint'];
-var i1 = systems.indexOf('Mint');
-var i2 = systems.indexOf('Windows');</code></pre>
+<pre><code>let systems = ['Debian', 'Ubuntu', 'Mint'];
+let i1 = systems.indexOf('Mint');
+let i2 = systems.indexOf('Windows');</code></pre>
 
 <code>i1</code> erhält den Wert <code>2</code>, da <code>'Mint'</code> das 2te Element in
 <code>systems</code> ist. <code>i2</code> erhält den Wert <code>-1</code>.

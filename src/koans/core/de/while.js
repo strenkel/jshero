@@ -9,7 +9,7 @@ Der Schleifen-Code wird ausgeführt, solange die Bedingung <code>true</code> erg
 Ergibt die Bedingung <code>false</code>, wird die Schleife beendet und die Codeausführung
 wird nach der Schleife fortgesetzt.
 
-<pre><code>var dreiX = '';
+<pre><code>let dreiX = '';
 while (dreiX.length < 3) {
   dreiX = dreiX + 'x';
 }</code></pre>

@@ -10,11 +10,11 @@
 alle Wörter, die mit <code>Ja</code> beginnen und <code>/tion\\b/</code> alle Wörter, die mit <code>tion</code> enden.
 Verwendet man <code>\\b</code> sowohl am Anfang als auch am Ende, so kann man nach ganzen Wörten suchen.
 
-<pre><code>var t1 = /\\bdenke/.test('Wir denken'); // true
-var t2 = /\\bdenke/.test('Bedenke'); // false
-var t3 = /lauf\\b/.test('der Wettlauf hat'); // true
-var t4 = /lauf\\b/.test('laufen'); // false
-var t5 = /\\bso\\b/.test('Aber so ist'); // true</code></pre>
+<pre><code>let t1 = /\\bdenke/.test('Wir denken'); // true
+let t2 = /\\bdenke/.test('Bedenke'); // false
+let t3 = /lauf\\b/.test('der Wettlauf hat'); // true
+let t4 = /lauf\\b/.test('laufen'); // false
+let t5 = /\\bso\\b/.test('Aber so ist'); // true</code></pre>
 
 Wichtig ist, welche Zeichen als Wortgrenze gelten. In den obigen Beispielen war es das Leerzeichen.
 Hinzu kommen alle Satzzeichen wie Punkt, Komma, Ausrufezeichen usw.
@@ -53,7 +53,7 @@ Alle deutschen Umlaute gelten somit als Wortgrenze. Hier muss man aufpassen.
       function() {
         return testutil.assert_functionReturns("hatLauf('lau')", false);
       },
-      
+
 
     ]
 

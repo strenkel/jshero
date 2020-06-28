@@ -57,12 +57,12 @@
     <div id="koans-lesson" class="paragraph">Die Eigenschaft <code>length</code> hatten wird schon bei Strings kennengelernt. Dort gab sie die Anzahl
 der Zeichen eines Strings zurück. Bei Arrays gibt sie die Anzahl der Elemente zurück.
 
-<pre><code>var sprachen = [];
-var l0 = sprachen.length;
+<pre><code>let sprachen = [];
+let l0 = sprachen.length;
 sprachen[0] = 'C';
-var l1 = sprachen.length;
+let l1 = sprachen.length;
 sprachen[1] = 'C++';
-var l2 = sprachen.length;</code></pre>
+let l2 = sprachen.length;</code></pre>
 
 Das leere Array zu Anfang enthält keine Elemente. <code>l0</code> ist also <code>0</code>.
 Nun füllen wir das Array nach und nach. <code>l1</code> und <code>l2</code> haben dann die Werte <code>1</code> und <code>2</code>.
@@ -86,8 +86,8 @@ Beachte, dass das erste Element im Array den Index <code>0</code> besitzt.</div>
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var getLastElement = function(anArray) {
-  var lastIndex = anArray.length - 1;
+    <div id="solution-area" class="paragraph"><pre><code>let getLastElement = function(anArray) {
+  let lastIndex = anArray.length - 1;
   return anArray[lastIndex];
 };</code></pre></div>
     

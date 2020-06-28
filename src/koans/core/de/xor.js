@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `Die logischen Operatoren kennen, ähnlich der Punkt- vor Strich-Rechnung, eine Reihenfolge:
 NICHT zuerst, anschließend UND, zuletzt ODER. Möchte man diese Reihenfolge ändern, verwendet man Klammern:
 
-<pre><code>var x1 = true || false && false;
-var x2 = (true || false) && false;
-var x3 = !false && false;
-var x4 = !(false && false);</code></pre>
+<pre><code>let x1 = true || false && false;
+let x2 = (true || false) && false;
+let x3 = !false && false;
+let x4 = !(false && false);</code></pre>
 
 In der ersten Zeile wird zuerst UND ausgewertet. <code>x1</code> wird <code>true</code>.
 In der zweiten Zeile wird zuerst ODER ausgewertet. <code>x2</code> wird <code>false</code>.
@@ -30,7 +30,7 @@ der zweite <code>false</code> ist. Schreibe dann einen Ausdruck, der nur dann <c
 Parameter <code>false</code> und der zweite <code>true</code> ist. Verknüpfe beide Ausdrücke angemessen.
 Klammern sind bei der Lösung nicht nötig.`,
 
-  solution: `<pre><code>var xor = function(a, b) {
+  solution: `<pre><code>let xor = function(a, b) {
   return a && !b || !a && b;
 };</code></pre>`,
 

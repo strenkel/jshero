@@ -57,13 +57,13 @@
     <div id="koans-lesson" class="paragraph">Häufig möchte man eine Zahl, die als String vorliegt, in eine Zahl vom Typ Number umwandeln.
 Für das Umwandeln von ganzen Zahlen (..., -2, -1, 0, 1, 2, ..) gibt es in JavaScript die Funktion <code>parseInt</code>.
 Folgende Beispiele geben <code>19</code> oder <code>-19</code> zurück:
-<pre><code>var n1 = parseInt('19', 10);
-var n2 = parseInt('+19', 10);
-var n3 = parseInt('-19', 10);
-var n4 = parseInt('19 Grad', 10);
-var n5 = parseInt('19.1', 10);
-var n6 = parseInt('019', 10);
-var n7 = parseInt(' 19', 10);</code></pre>
+<pre><code>let n1 = parseInt('19', 10);
+let n2 = parseInt('+19', 10);
+let n3 = parseInt('-19', 10);
+let n4 = parseInt('19 Grad', 10);
+let n5 = parseInt('19.1', 10);
+let n6 = parseInt('019', 10);
+let n7 = parseInt(' 19', 10);</code></pre>
 Neben dem direkten Einlesen von ganzen Zahlen mit oder ohne Vorzeichen (n1, n2, n3) beherrscht <code>parseInt</code>
 auch einige komplexe Fälle. Nicht-numerische Zeichen nach der ganzen Zahl (n4, n5) sowie Nullen (n6) und
 Leerzeichen (n7) vor der Zahl werden ignoriert.<br><br>
@@ -74,8 +74,8 @@ Da es aber von dieser Regel Ausnahmen gibt und diese Ausnahmen in verschiedenen 
 gehandhabt werden, sollte man immer die Basis mit angeben!
 <br><br>
 Kann <code>parseInt</code> keine Zahl einlesen, gibt sie den Wert <code>NaN</code> (engl.: Not a Number) zurück:
-<pre><code>var n1 = parseInt('Nur Text', 10);
-var n2 = parseInt('Nr. 8', 10);</code></pre>
+<pre><code>let n1 = parseInt('Nur Text', 10);
+let n2 = parseInt('Nr. 8', 10);</code></pre>
 Im ersten Fall ist überhaupt keine Zahl vorhanden. Im zweiten Fall gibt es nicht-numerische Zeichen vor der
 eigentlichen Zahl. Auch das ist nicht zulässig und führt zur Rückgabe <code>NaN</code>.
 <br><br>
@@ -104,11 +104,11 @@ Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.<
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var add = function(s) {
-  var summand1 = parseInt(s, 10);
-  var positionPlus = s.indexOf('+');
-  var sNachPlus = s.substring(positionPlus + 1);
-  var summand2 = parseInt(sNachPlus, 10);
+    <div id="solution-area" class="paragraph"><pre><code>let add = function(s) {
+  let summand1 = parseInt(s, 10);
+  let positionPlus = s.indexOf('+');
+  let sNachPlus = s.substring(positionPlus + 1);
+  let summand2 = parseInt(sNachPlus, 10);
   return summand1 + summand2;
 };</code></pre></div>
     

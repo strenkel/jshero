@@ -9,8 +9,8 @@
     lesson: `Loops can execute code blocks several times. JavaScript knows different kinds of loops. The simplest one is
 the <code>for</code> loop.
 
-<pre><code>var sum = 0;
-for (var i = 1; i < 3; i++) {
+<pre><code>let sum = 0;
+for (let i = 1; i < 3; i++) {
   sum = sum + i;
 }</code></pre>
 
@@ -38,17 +38,17 @@ after the loop. Our code example has added all natural numbers smaller than 3.`,
 smaller or equal than the parameter. The result is to be returned. <code>addTo(3)</code> should return
 <code>1+2+3</code> = <code>6</code>.`,
 
-    hint: `<pre><code>var addTo = function(n) {
-  var sum = 0;
-  for (var i = 0; i <= n; i++) {
+    hint: `<pre><code>let addTo = function(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
     ...
   }
   return sum;
 };</pre></code>`,
 
-    solution: `<pre><code>var addTo = function(n) {
-  var sum = 0;
-  for (var i = 0; i <= n; i++) {
+    solution: `<pre><code>let addTo = function(n) {
+  let sum = 0;
+  for (let i = 0; i <= n; i++) {
     sum = sum + i;
   }
   return sum;

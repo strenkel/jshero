@@ -6,18 +6,18 @@ jshero.koans.add({
 
   lesson: `Die Methode <code>replace</code> ersetzt einen Teilstring durch einen anderen:
 
-<pre><code>var str = 'Hallo Marcel!';
-var newstr = str.replace('Marcel', 'Robert');</code></pre>
+<pre><code>let str = 'Hallo Marcel!';
+let newstr = str.replace('Marcel', 'Robert');</code></pre>
 
 'Marcel' wird durch 'Robert' ersetzt. <code>newstr</code> hat also den Wert <code>'Hallo Robert!'</code>.
 Der urspr체ngliche String bleibt unver채ndert. Nur das erste Vorkommen wird ersetzt:
 
-<pre><code>var newname = 'Peter'.replace('e', 'a');</code></pre>
+<pre><code>let newname = 'Peter'.replace('e', 'a');</code></pre>
 
 <code>newname</code> enth채lt den Wert <code>'Pater'</code> und nicht <code>'Patar'</code>.
 Ein Spezialfall ergibt sich, wenn der ersetzende String der Leerstring ist:
 
-<pre><code>var nurso = 'sowie so'.replace('wie', '');</code></pre>
+<pre><code>let nurso = 'sowie so'.replace('wie', '');</code></pre>
 
 Der zu ersetzende String wird entfernt. <code>nurso</code> enth채lt den Wert <code>'so so'</code>.
 Kommt der zu ersetzende String nicht vor, so wird der urspr체ngliche String zur체ckgegeben.`,
@@ -26,12 +26,12 @@ Kommt der zu ersetzende String nicht vor, so wird der urspr체ngliche String zur�
 20/05/2017) in deutsche Schreibweise (20.05.2017) umwandet.<br><br>Beispiel: Sowohl
 <code>convert('20-05-2017')</code> als auch <code>convert('20/05/2017')</code> sollten <code>'20.05.2017'</code> ergeben.`,
 
-  hint: `<pre><code>var convert = function(dateEn) {
+  hint: `<pre><code>let convert = function(dateEn) {
   // Verwende replace viermal.
 };</code></pre>`,
 
-  solution: `<pre><code>var convert = function(dateEn) {
-  var dateDe = dateEn.replace('-', '.');
+  solution: `<pre><code>let convert = function(dateEn) {
+  let dateDe = dateEn.replace('-', '.');
   dateDe = dateDe.replace('-', '.');
   dateDe = dateDe.replace('/', '.');
   dateDe = dateDe.replace('/', '.');

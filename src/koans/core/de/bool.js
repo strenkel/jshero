@@ -14,9 +14,9 @@ man ähnlich "rechnen" wie mit Zahlen. JavaScript kennt drei boolesche Operatore
 <code>true</code>. <code>!</code> wird nur auf einen booleschen Wert angewendet und invertiert diesen Wert: aus
 <code>true</code> wird <code>false</code> und aus <code>false</code> wird <code>true</code>.
 
-<pre><code>var x1 = true && false;
-var x2 = !x1;
-var x3 = x1 || x2;</code></pre>
+<pre><code>let x1 = true && false;
+let x2 = !x1;
+let x3 = x1 || x2;</code></pre>
 
 <code>x1</code> ist <code>false</code>,  <code>x2</code> ist <code>true</code> und <code>x3</code> ist ebenfalls
 <code>true</code>.`,
@@ -27,13 +27,13 @@ Rückgabe <code>true</code> sein.<br><br>D.h.: <code>nand(true, true)</code> sol
 <code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen
 <code>true</code> zurückgeben.`,
 
-  hint: `<pre><code>var nand = function(a, b) {
-  var and = a && b;
+  hint: `<pre><code>let nand = function(a, b) {
+  let and = a && b;
   ...
 };</code></pre>`,
 
-  solution: `<pre><code>var nand = function(a, b) {
-  var and = a && b;
+  solution: `<pre><code>let nand = function(a, b) {
+  let and = a && b;
   return !and;
 };</code></pre>`,
 

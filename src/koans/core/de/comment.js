@@ -35,10 +35,10 @@ Alles dazwischen ist Kommentar. Hier ein paar Beispiele:
  * Prüft, ob eine String kein Zeichen
  * außer Leerzeichen enthält.
  */
-var isEmpty = function(string) {
+let isEmpty = function(string) {
   // Die Methode trim() entfernt Leerzeichen
   // am Anfang und am Ende einer Zeichenfolge.
-  var trimmedString = string.trim();
+  let trimmedString = string.trim();
   return trimmedString.length === 0;
 };</code></pre>
 

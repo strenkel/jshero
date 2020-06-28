@@ -8,15 +8,15 @@
 
     lesson: `Auf Objekt-Eigenschaften kann man mit der Punkt-Notation zugreifen:
 
-<pre><code>var person = {
+<pre><code>let person = {
   name: 'Constanze Kurz',
   geburtstag: new Date(1974, 2, 2),
   geburtsort: 'Ost-Berlin'
 };
 
-var pName = person.name;
-var pGeburtstag = person.geburtstag;
-var pGeburtsort = person.geburtsort;</code></pre>
+let pName = person.name;
+let pGeburtstag = person.geburtstag;
+let pGeburtsort = person.geburtsort;</code></pre>
 
 Die drei Eigenschaften des Objekts <code>person</code> werden in drei Variablen gespeichert.`,
 
@@ -26,9 +26,9 @@ Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.
 
     hint: `Der Abstand eines  Punkts mit den Koordinaten x und y zum Nullpunkt ist &radic;(x&sup2;&nbsp;+&nbsp;y&sup2;).`,
 
-    solution: `<pre><code>var distance = function(point) {
-  var xSquare = Math.pow(point.x, 2);
-  var ySquare = Math.pow(point.y, 2);
+    solution: `<pre><code>let distance = function(point) {
+  let xSquare = Math.pow(point.x, 2);
+  let ySquare = Math.pow(point.y, 2);
   return Math.sqrt(xSquare + ySquare);
 };</code></pre>`,
 
@@ -49,7 +49,7 @@ Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.
       function() {
         return testutil.assert_functionReturns('distance({x: 0, y: -3})', 3);
       },
-      
+
       function() {
         return testutil.assert_functionReturns('distance({x: 3, y: 4})', 5);
       }

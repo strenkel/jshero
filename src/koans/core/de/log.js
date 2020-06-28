@@ -13,13 +13,13 @@
   Beispiel: Der Aufruf <code>rufe('Werder')</code>
   sollte <code>'WerderWerder'</code> zurückgeben und er sollte <code>'WerderWerder'</code> loggen.`,
 
-    hint: `<pre><code>var rufe = function(name) {
-  var ruf = name + name;
+    hint: `<pre><code>let rufe = function(name) {
+  let ruf = name + name;
   ...
 };</code></pre>`,
 
-    solution: `<pre><code>var rufe = function(name) {
-  var ruf = name + name;
+    solution: `<pre><code>let rufe = function(name) {
+  let ruf = name + name;
   console.log(ruf);
   return ruf;
 };</code></pre>`,

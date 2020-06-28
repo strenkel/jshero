@@ -8,24 +8,24 @@ jshero.koans.add({
 Der an den Enden um Leerzeichen bereinigte String wird zurückgegeben.
 Der ursprügliche String bleibt unverändert.
 
-<pre><code>var eingabe = ' Rosa Parks ';
-var name = eingabe.trim();</code></pre>
+<pre><code>let eingabe = ' Rosa Parks ';
+let name = eingabe.trim();</code></pre>
 
-<code>name</code> enthält den String <code>'Rosa Parks'</code>. 
+<code>name</code> enthält den String <code>'Rosa Parks'</code>.
 Wie angedeutet werden häufig Benutzereingaben vor der Verarbeitung getrimmt.`,
 
   task: `Schreibe eine Funktion <code>firstChar</code>, die bei Übergabe eines Strings das erste Zeichen,
 das kein Leerzeichen ist, zurückgibt.<br><br>Beispiel: <code>firstChar(' Rosa')</code> sollte <code>'R'</code>
 zurückgeben.`,
 
-  hint: `<pre><code>var firstChar = function(text) {
+  hint: `<pre><code>let firstChar = function(text) {
 // Trimme zuerst text.
 // Verwende dann die
 // charAt-Methode.
 };</code></pre>`,
 
-  solution: `<pre><code>var firstChar = function(text) {
-  var textGetrimmt = text.trim();
+  solution: `<pre><code>let firstChar = function(text) {
+  let textGetrimmt = text.trim();
   return textGetrimmt.charAt(0);
 };</code></pre>`,
 

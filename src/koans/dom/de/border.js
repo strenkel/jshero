@@ -7,7 +7,7 @@ jshero.koans.add({
   lesson: `HTML-Elementen kann man einen Rahmen geben. Ein Rahmen wird durch drei Eigenschaften beschrieben:
 seine Breite, seine Farbe und sein Aussehen:
 
-<pre><code>var elm = document.getElementById("content");
+<pre><code>let elm = document.getElementById("content");
 elm.style.borderWidth = '1px';
 elm.style.borderColor = 'purple';
 elm.style.borderStyle = 'dotted';</code></pre>
@@ -29,15 +29,15 @@ Hier stehen die Schlüsselwörter <code>dotted</code> (gepunkted), <code>dashed<
   task: `Versehe das <code>fixme</code>-Element mit einem Rahmen. Der Rahmen soll durchgezogen und indigo sein sowie
 eine Breite von 5 Pixel besitzen.`,
 
-solution: `<pre><code>var style = document.getElementById('fixme').style;
+solution: `<pre><code>let style = document.getElementById('fixme').style;
 style.borderWidth = '5px';
 style.borderColor = 'indigo';
 style.borderStyle = 'solid';</code></pre>`,
 
   tests: [
     function() {
-      var root = document.getElementById("fixme");
-      var actual = root.style.borderStyle;
+      let root = document.getElementById("fixme");
+      let actual = root.style.borderStyle;
       if (actual === 'solid') {
         return {
           ok: true,
@@ -52,8 +52,8 @@ style.borderStyle = 'solid';</code></pre>`,
     },
 
     function() {
-      var root = document.getElementById("fixme");
-      var actual = root.style.borderColor;
+      let root = document.getElementById("fixme");
+      let actual = root.style.borderColor;
       if (actual === 'indigo') {
         return {
           ok: true,
@@ -68,8 +68,8 @@ style.borderStyle = 'solid';</code></pre>`,
     },
 
     function() {
-      var root = document.getElementById("fixme");
-      var actual = root.style.borderWidth;
+      let root = document.getElementById("fixme");
+      let actual = root.style.borderWidth;
       if (actual === '5px') {
         return {
           ok: true,

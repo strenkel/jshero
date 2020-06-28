@@ -58,8 +58,8 @@
 So gibt <code>Math.sqrt(x)</code> die Quadratwurzel (engl.: square root) zurück
 und mit <code>Math.pow(x, y)</code> berechnet man die Potenz (engl.: power) x hoch y.
 
-<pre><code>var y1 = Math.sqrt(9);
-var y2 = Math.pow(10, 3);</code></pre>
+<pre><code>let y1 = Math.sqrt(9);
+let y2 = Math.pow(10, 3);</code></pre>
 
 <code>y1</code> hat den Wert <code>3</code> und <code>y2</code> den Wert <code>1000</code> (10&sup3; = 10 * 10 * 10 = 1000).</div>
     
@@ -75,8 +75,8 @@ Katheten und c die Länge der Hypotenuse, so gilt: a&sup2; + b&sup2; = c&sup2;.
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>var hypotenuse = function(a, b) {
-  var cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
+    <div id="hint-area" class="paragraph"><pre><code>let hypotenuse = function(a, b) {
+  let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return ...
 };</code></pre></div>
     
@@ -86,8 +86,8 @@ Katheten und c die Länge der Hypotenuse, so gilt: a&sup2; + b&sup2; = c&sup2;.
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>var hypotenuse = function(a, b) {
-  var cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
+    <div id="solution-area" class="paragraph"><pre><code>let hypotenuse = function(a, b) {
+  let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return Math.sqrt(cQuadrat);
 };</code></pre></div>
     

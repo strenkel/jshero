@@ -8,15 +8,15 @@
 
     lesson: `Jetzt lernen wir Funktionen mit Parametern kennen. Mit
 
-  <pre><code>var gebe = function(eingabe) {
+  <pre><code>let gebe = function(eingabe) {
   return eingabe;
 };</code></pre>
 
 definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt.
-Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>var</code> zu
+Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>let</code> zu
 ihrer Deklaration. Mit
 
-<pre><code>var ergebnis = gebe('Apfel');</code></pre>
+<pre><code>let ergebnis = gebe('Apfel');</code></pre>
 
 wird die Funktion mit dem Argument <code>'Apfel'</code> aufgerufen. Jetzt wird unsere zuvor definierte Funktion
 ausgeführt. Dabei wird zunächst das Argument <code>'Apfel'</code> dem Parameter <code>eingabe</code> zugewiesen.
@@ -26,11 +26,11 @@ Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeb
 
     task: `Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.`,
 
-    hint: `<pre><code>var echo = function(ton) {
+    hint: `<pre><code>let echo = function(ton) {
   ...
 };</code></pre>`,
 
-    solution: `<pre><code>var echo = function(ton) {
+    solution: `<pre><code>let echo = function(ton) {
   return ton;
 };</code></pre>`,
 

@@ -8,11 +8,11 @@ jshero.koans.add({
 the two values are equal, or <code>false</code>, the two values are not equal. The operator for strict equality
 is&nbsp;<code>===</code>.
 
-<pre><code>var language = 'JavaScript';
-var x = 10;
-var c1 = language === 'Java';
-var c2 = x === 10;
-var c3 = x === '10';</code></pre>
+<pre><code>let language = 'JavaScript';
+let x = 10;
+let c1 = language === 'Java';
+let c2 = x === 10;
+let c3 = x === '10';</code></pre>
 
 The first comparison results in <code>false</code>, because <code>language</code> does not have the value
 <code>'Java'</code>. So <code>c1</code> is <code>false</code>. The second comparison results in <code>true</code>,
@@ -24,11 +24,11 @@ On the left side of the comparison is a number, on the right side a string.`,
   task: `Write a function <code>equals</code> that checks two values for strict equality. <code>equals(1, 1)</code>
 should return <code>true</code> and <code>equals(1, 2)</code> should return <code>false</code>.`,
 
-  hint: `<pre><code>var equals = function(a, b) {
+  hint: `<pre><code>let equals = function(a, b) {
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>var equals = function(a, b) {
+  solution: `<pre><code>let equals = function(a, b) {
   return a === b;
 };</code></pre>`,
 

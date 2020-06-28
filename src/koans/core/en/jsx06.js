@@ -7,11 +7,11 @@
     title: 'What is x?',
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>var whereIs = function(name) {
+<pre><code>let whereIs = function(name) {
   return 'Where is ' + name + '?';
 };
 
-var x = whereIs('Jacky');</code></pre>`,
+let x = whereIs('Jacky');</code></pre>`,
 
     solution: `<pre><code>'Where is Jacky?'</code></pre>`,
 

@@ -6,10 +6,10 @@ jshero.koans.add({
 
   lesson: `Mit <code>join</code> verbindet man alle Elemente eines Arrays zu einem String:
 
-<pre><code>var words = ['Sex', 'Drugs', 'Rock', 'Roll'];
-var l1 = words.join();
-var l2 = words.join(' & ');
-var l3 = words.join(' and ');</code></pre>
+<pre><code>let words = ['Sex', 'Drugs', 'Rock', 'Roll'];
+let l1 = words.join();
+let l2 = words.join(' & ');
+let l3 = words.join(' and ');</code></pre>
 
 Ohne Argument fügt <code>join</code> die Elemente kommasepariert zusammen.
 <code>l1</code> ergibt <code>'Sex,Drugs,Rock,Roll'</code>.

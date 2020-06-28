@@ -8,12 +8,12 @@
 
     lesson: `Like strings, arrays have the property <code>length</code>. Here it returns the number of elements in the array:
 
-<pre><code>var languages = [];
-var len0 = languages.length;
+<pre><code>let languages = [];
+let len0 = languages.length;
 languages[0] = 'C';
-var len1 = languages.length;
+let len1 = languages.length;
 languages[1] = 'C++';
-var len2 = languages.length;</code></pre>
+let len2 = languages.length;</code></pre>
 
 The empty array contains no elements. <code>len0</code> is <code>0</code>.
 Now we fill the array step by step. <code>len1</code> is <code>1</code> and <code>len2</code> is <code>2</code>.`,

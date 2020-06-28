@@ -13,8 +13,8 @@ Setze den Text auf <code>Good bye!</code>.`,
   tests: [
 
     function() {
-      var root = document.getElementById("fixme");
-      var color = root.style.backgroundColor;
+      let root = document.getElementById("fixme");
+      let color = root.style.backgroundColor;
       if (color === 'rgb(20, 166, 44)') {
         return {
           ok: true,
@@ -29,8 +29,8 @@ Setze den Text auf <code>Good bye!</code>.`,
     },
 
     function() {
-      var root = document.getElementById("fixme");
-      var text = root.textContent;
+      let root = document.getElementById("fixme");
+      let text = root.textContent;
       if (text === 'Good bye!') {
         return {
           ok: true,

@@ -18,11 +18,11 @@ Das geschiet mit Hilfe von JavaScript. Einen solchen Farbwechsel wollen wir jetz
 Um einzelne Tags einer Webseite verändern zu können, benötigt JavaScript eine gesonderte Bibliothek,
 das Document Object Model (DOM). Diese Bibliothek steht in jedem Browser über das
 <code>document</code> Objekt zur Verfügung. Um auf ein Tag, auch HTML-Element genannt, zugreifen zu können,
-muss man es identifizieren. Das geht am besten, wenn man dem Tag im HTML Code eine ID, einen 
+muss man es identifizieren. Das geht am besten, wenn man dem Tag im HTML Code eine ID, einen
 <a href="https://de.wikipedia.org/wiki/Identifikator">Identifikator</a>, zuweist.
-Hat ein Tag die ID <code>content</code>, so sieht der Zugriff wie folgt aus:  
+Hat ein Tag die ID <code>content</code>, so sieht der Zugriff wie folgt aus:
 
-<pre><code>var elm = document.getElementById("content");</code></pre>
+<pre><code>let elm = document.getElementById("content");</code></pre>
 
 <code>document</code> besitzt die Methode <code>getElementById</code>. Übergibt man dieser Methode eine ID,
 so liefert sie ein Objekt zurück, dass das entsprechende HTML-Element repräsentiert.
@@ -31,7 +31,7 @@ Eine dieser Eigenschaften ist <code>style</code>. Es ist ein Objekt, dass alle C
 des HTML-Elements repräsentiert. Mit diesem Objekt können wir nun die Hintergrundfarbe eines HTML-Elements
 verändern:
 
-<pre><code>var elm = document.getElementById("content");
+<pre><code>let elm = document.getElementById("content");
 elm.style.backgroundColor = 'blue';</code></pre>
 
 Im ersten Schritt holen wir uns mit der bekannten Methode <code>getElementById</code> das HTML-Element.
@@ -43,13 +43,13 @@ mit der ID <code>fixme</code>. Setze die Hintergrundfarbe dieses Streifens auf o
 
 hint: `Setze <code>backgroundColor</code> auf <code>'orange'</code>.`,
 
-solution: `<pre><code>var elm = document.getElementById('fixme');
+solution: `<pre><code>let elm = document.getElementById('fixme');
 elm.style.backgroundColor = 'orange';</code></pre>`,
 
   tests: [
     function() {
-      var root = document.getElementById("fixme");
-      var backgroundColor = root.style.backgroundColor;
+      let root = document.getElementById("fixme");
+      let backgroundColor = root.style.backgroundColor;
       if (backgroundColor === 'orange') {
         return {
           ok: true,

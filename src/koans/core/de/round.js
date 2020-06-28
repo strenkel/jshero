@@ -7,10 +7,10 @@ jshero.koans.add({
   lesson: `Möchte man eine Dezimalzahl auf- oder abrunden, stehen einem die Funktionen <code>Math.round()</code>,
 <code>Math.floor()</code> (engl.: Boden) und <code>Math.ceil()</code> (engl: Decke) zur Verfügung.
 
-<pre><code>var a = Math.round(5.49);
-var b = Math.round(4.5);
-var c = Math.floor(5.99);
-var d = Math.ceil(4.01);</code></pre>
+<pre><code>let a = Math.round(5.49);
+let b = Math.round(4.5);
+let c = Math.floor(5.99);
+let d = Math.ceil(4.01);</code></pre>
 
 <code>Math.round()</code> rundet kaufmännisch. Zahlen mit der ersten Dezimalstelle kleiner gleich 4 werden abgerundet, alle anderen aufgerundet.
 <code>Math.floor()</code> rundet immer ab und <code>Math.ceil()</code> rundet immer auf. Die Variablen <code>a</code> bis <code>d</code>
@@ -22,7 +22,7 @@ sollte <code>900</code> ergeben.`,
 
   hint: `Verwende neben <code>Math.round()</code> noch Multiplikation und Division.`,
 
-  solution: `<pre><code>var round100 = function(x) {
+  solution: `<pre><code>let round100 = function(x) {
   return Math.round(x / 100) * 100;
 };</code></pre>`,
 

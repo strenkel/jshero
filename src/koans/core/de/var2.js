@@ -8,8 +8,8 @@
 
     lesson: `Möchte man mehrere Variablen deklarieren und initialisieren, so kann man das in zwei Programmzeilen tun:
 
-<pre><code>var stadt = 'Prag';
-var land = 'Tschechien';</code></pre>
+<pre><code>let stadt = 'Prag';
+let land = 'Tschechien';</code></pre>
 
 In jeder Zeile steht eine Anweisung. Jede Anweisung sollte mit einem Semikolon abgeschlossen werden.`,
 

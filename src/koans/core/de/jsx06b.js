@@ -7,13 +7,13 @@
     title: 'Was ist x?',
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>var hi = function(name) {
+<pre><code>let hi = function(name) {
   return 'Hi ' + name + '!';
 };
 
-var h1 = hi('Selva');
-var h2 = hi('Pola');
-var x = h1 + ' ' + h2;</code></pre>`,
+let h1 = hi('Selva');
+let h2 = hi('Pola');
+let x = h1 + ' ' + h2;</code></pre>`,
 
     solution: `<pre><code>'Hi Selva! Hi Pola!'</code></pre>`,
 
