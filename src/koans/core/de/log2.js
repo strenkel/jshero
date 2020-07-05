@@ -17,11 +17,11 @@ In der Konsole erscheint <code>'Ken Thompson'</code>. Das ist der Wert der Varia
     task: `Schreibe eine Funktion <code>logge</code>, die einen Parameter entgegennimmt und diesen Parameter loggt.<br><br>
 Beispiel: Der Aufruf <code>logge('Ken Thompson')</code> sollte <code>'Ken Thompson'</code> loggen.`,
 
-    hint: `<pre><code>let logge = function(wert) {
+    hint: `<pre><code>function logge(wert) {
   ...
 };</code></pre>`,
 
-    solution: `<pre><code>let logge = function(wert) {
+    solution: `<pre><code>function logge(wert) {
   console.log(wert);
 };</code></pre>`,
 

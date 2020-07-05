@@ -7,7 +7,7 @@
     title: 'Was ist x?',
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>let woIst = function(name) {
+<pre><code>function woIst(name) {
   return 'Wo ist ' + name + '?';
 };
 

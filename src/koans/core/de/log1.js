@@ -27,11 +27,11 @@ Deshalb schreibt JS Hero das Log zusätzlich in die Testausgabe.`,
     task: `Schreibe eine Funktion <code>logge</code>, die den String <code>'Hallo Konsole!'</code> loggt.
 Arbeitest du mit einem Desktop-Browser öffne zusätzlich die Entwickler-Tools, um auch dort die Ausgabe zu sehen.`,
 
-    hint: `<pre><code>let logge = function() {
+    hint: `<pre><code>function logge() {
   console.log(...);
 };</code></pre>`,
 
-    solution: `<pre><code>let logge = function() {
+    solution: `<pre><code>function logge() {
   console.log('Hallo Konsole!');
 };</code></pre>`,
 

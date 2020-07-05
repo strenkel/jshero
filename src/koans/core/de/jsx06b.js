@@ -7,7 +7,7 @@
     title: 'Was ist x?',
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>let hi = function(name) {
+<pre><code>function hi(name) {
   return 'Hi ' + name + '!';
 };
 
