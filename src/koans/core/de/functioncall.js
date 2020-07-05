@@ -20,9 +20,9 @@ Erst mit ihrem Aufruf
 <pre><code>let x = f();</code></pre>
 
 wird die Funktion ausgeführt. Dann werden die Anweisungen im Funktionsblock der Reihe nach abgearbeitet.
-Die Rückgabe der Funktion wird in diesem Beispiel der Variablen <code>x</code> zugewiesen.
-Definiert werden Funktionen mit dem Schlüsselwort <code>function</code>. Aufgerufen werden Funktionen über ihren Namen.
-Funktionen werden einmal definiert, um sie dann durch ihren Aufruf an verschiedenen Stellen mehrfach zu benutzen.`,
+Die Rückgabe der Funktion wird in diesem Beispiel der Variablen <code>x</code> zugewiesen. <code>x</code> erhält den
+Wert <code>'hallo'</code>. Definiert wurde die Funktion mit dem Schlüsselwort <code>function</code>.
+Aufgerufen wurde die Funktion über ihren Namen.`,
 
     task: `1. Definiere eine Funktion <code>begruesse</code>, die den Wert <code>'Moin!'</code> zurückgibt.
 <br/>

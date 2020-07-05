@@ -7,8 +7,9 @@
     title: 'Funktionen',
 
     lesson: `Eine Funktion ist ein Block von Anweisungen, der beliebig oft ausgeführt werden kann. Eine Funktion kann
-Parameter entgegennehmen und eine Funktion kann einen Wert zurückgeben. Funktionen kann man mit dem Schlüsselwort
-<code>function</code> definieren. Es folgen:
+Parameter entgegennehmen und eine Funktion kann einen Wert zurückgeben. Funktionen kann man in JavaScript auf verschiedene
+Weisen definieren. Die vielleicht gebräuchlichste ist die sogenannte Funktionsdeklaration. Sie wird mit dem Schlüsselwort
+<code>function</code> eingeleitet. Es folgen:
 <ul><li>der Name der Funktion,</li>
 <li>die Parameter eingeschlossen in runden Klammern,</li>
 <li>die Anweisungen eingeschlossen in geschweiften Klammern.</li></ul>
