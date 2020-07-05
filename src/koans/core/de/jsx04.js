@@ -9,7 +9,7 @@
     lesson: `Das eben Gelernte wollen wir nochmal üben.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>let hello = function() {
+<pre><code>function hello() {
   return 'Hi!';
 };
 

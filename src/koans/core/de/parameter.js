@@ -8,7 +8,7 @@
 
     lesson: `Jetzt lernen wir Funktionen mit Parametern kennen. Mit
 
-  <pre><code>let gebe = function(eingabe) {
+  <pre><code>function gebe(eingabe) {
   return eingabe;
 };</code></pre>
 
@@ -26,11 +26,11 @@ Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeb
 
     task: `Schreibe eine Funktion <code>echo</code>, die ebenfalls den übergebenen Parameter wieder zurückgibt.`,
 
-    hint: `<pre><code>let echo = function(ton) {
+    hint: `<pre><code>function echo(ton) {
   ...
 };</code></pre>`,
 
-    solution: `<pre><code>let echo = function(ton) {
+    solution: `<pre><code>function echo(ton) {
   return ton;
 };</code></pre>`,
 

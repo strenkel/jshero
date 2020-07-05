@@ -13,7 +13,7 @@ Man kann sie zum Beispiel verketten. Dies macht man mit dem <code>+</code> Zeich
 ergibt den String <code>'Blaumeier'</code>.<br>Die folgende Funktion hängt an dem übergebenen Parameter einen Text
 an und gibt den zusammengesetzten Text zurück:
 
-<pre><code>let lobe = function(name) {
+<pre><code>function lobe(name) {
   return name + ' ist toll!';
 };</code></pre>
 
@@ -24,11 +24,11 @@ So liefert <code>lobe('JavaScript')</code> den Wert <code>'JavaScript ist toll!'
 Beispiel: Übergibt man der Funktion <code>begruesse</code> den Wert <code>'Ada'</code>,
 so sollte die Funktion <code>'Hallo Ada!'</code> zurückgeben.`,
 
-  hint: `<pre><code>let begruesse = function(name) {
+  hint: `<pre><code>function begruesse(name) {
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>let begruesse = function(name) {
+  solution: `<pre><code>function begruesse(name) {
   return 'Hallo ' + name + '!';
 };</code></pre>`,
 

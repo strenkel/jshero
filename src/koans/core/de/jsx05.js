@@ -9,7 +9,7 @@
     lesson: `Auch bei Funktionen mit Parametern wollen wir den Funktionsaufruf üben.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
-<pre><code>let reply = function(phrase) {
+<pre><code>function reply(phrase) {
   return phrase;
 };
 
