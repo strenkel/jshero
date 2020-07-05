@@ -55,19 +55,22 @@
     <h1 id="koans-title">Funktionen</h1>
     
     <div id="koans-lesson" class="paragraph">Eine Funktion ist ein Block von Anweisungen, der beliebig oft ausgeführt werden kann. Eine Funktion kann
-Parameter entgegennehmen und eine Funktion kann einen Wert zurückgeben. Funktionen werden mit dem Schlüsselwort
-<code>function</code> definiert. Darauf folgen in runden Klammern eingeschlossen die Parameter und anschließend,
-eingeschlossen in geschweiften Klammern, die Anweisungen. Mit dem Schlüsselwort <code>return</code> kann ein Wert
-zurückgegeben werden. Gleichzeitig beendet <code>return</code> die Funktion. Anweisungen nach einem <code>return</code>
-werden nicht mehr ausgeführt. Funktionen kann man Variablen zuordnen. Mit
+Parameter entgegennehmen und eine Funktion kann einen Wert zurückgeben. Funktionen kann man mit dem Schlüsselwort
+<code>function</code> definieren. Es folgen:
+<ul><li>der Name der Funktion,</li>
+<li>die Parameter eingeschlossen in runden Klammern,</li>
+<li>die Anweisungen eingeschlossen in geschweiften Klammern.</li></ul>
+Mit dem Schlüsselwort <code>return</code> kann ein Wert zurückgegeben werden. Gleichzeitig beendet <code>return</code>
+die Funktion. Anweisungen nach einem <code>return</code> werden nicht mehr ausgeführt. Mit
 
-<pre><code>let farbe = function() {
+<pre><code>function farbe() {
   return 'grün';
-};</code></pre>
+}</code></pre>
 
-definieren wir eine Funktion, die <code>'grün'</code> zurückgibt. Die Funktion nimmt keine Paramter entgegen
-(die runde Klammer ist leer) und sie enthält genau eine Anweisung, die Rückgabe. Die Funktion wird der Variablen
-<code>farbe</code> zugeordnet. Über diese Variable wird die Funktion aufgerufen:
+definieren wir eine Funktion mit Namen <code>farbe</code>, die <code>'grün'</code> zurückgibt.
+Die Funktion nimmt keine Paramter entgegen (die runde Klammer ist leer) und sie enthält genau eine Anweisung, die Rückgabe.
+Die Funktion wird nicht mit einem Semikolon abgeschlossen.<br><br>
+Über ihren Namen wird die Funktion aufgerufen:
 
 <pre><code>let ergebnis = farbe();</code></pre>
 
@@ -75,16 +78,16 @@ Jetzt wird die Funktion ausgeführt. Ihre Rückgabe wird der Variablen <code>erg
 <code>ergebnis</code> hat dann den Wert <code>'grün'</code>.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Deklariere eine Variable <code>hallo</code> und weise ihr eine Funktion zu, die <code>'Hallo Welt!'</code> zurückgibt.</div>
+    <div id="koans-task" class="paragraph">Definiere eine Funktion <code>hallo</code>, die <code>'Hallo Welt!'</code> zurückgibt.</div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>let hallo = function() {
+    <div id="hint-area" class="paragraph"><pre><code>function hallo() {
   ...
-};</code></pre></div>
+}</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -92,9 +95,9 @@ Jetzt wird die Funktion ausgeführt. Ihre Rückgabe wird der Variablen <code>erg
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let hallo = function() {
+    <div id="solution-area" class="paragraph"><pre><code>function hallo() {
   return 'Hallo Welt!';
-};</code></pre></div>
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

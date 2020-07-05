@@ -9,33 +9,33 @@
     lesson: `Wichtig ist der Unterschied zwischen der Definition und dem Aufruf einer Funktion.
 Mit der Definition, z. B.
 
-<pre><code>let f = function() {
+<pre><code>function f() {
   return 'hallo';
-};</code></pre>
+}</code></pre>
 
-wird festgelegt, was die Funktion machen soll. Sie wird dabei nicht ausgeführt. Sie wird lediglich zur Ausführung bereitgestellt.
+wird festgelegt, was die Funktion machen soll. Sie wird dabei nicht ausgeführt.
+Sie wird lediglich zur Ausführung bereitgestellt.
 Erst mit ihrem Aufruf
 
 <pre><code>let x = f();</code></pre>
 
 wird die Funktion ausgeführt. Dann werden die Anweisungen im Funktionsblock der Reihe nach abgearbeitet.
 Die Rückgabe der Funktion wird in diesem Beispiel der Variablen <code>x</code> zugewiesen.
-Definiert werden Funktionen mit dem Schlüsselwort <code>function</code>.
-Ist die Funktion einer Variablen zugewiesen, geschieht der Aufruf der Funktion über diese Variable.
-Funktionen werden einmal definiert, um sie dann an verschiedenen Programmstellen durch ihren Aufruf mehrfach zu benutzen.`,
+Definiert werden Funktionen mit dem Schlüsselwort <code>function</code>. Aufgerufen werden Funktionen über ihren Namen.
+Funktionen werden einmal definiert, um sie dann durch ihren Aufruf an verschiedenen Stellen mehrfach zu benutzen.`,
 
     task: `1. Definiere eine Funktion <code>begruesse</code>, die den Wert <code>'Moin!'</code> zurückgibt.
 <br/>
 2. Deklariere eine Variable <code>begruessung</code>. Rufe die Funktion <code>begruesse</code> auf und weise der Variablen
 <code>begruessung</code> die Rückgabe dieses Aufrufs zu.`,
 
-    hint: `<pre><code>let begruesse = function() {
+    hint: `<pre><code>function begruesse() {
   ...
 };
 
 let begruessung = ...</code></pre>`,
 
-    solution: `<pre><code>let begruesse = function() {
+    solution: `<pre><code>function begruesse() {
   return 'Moin!';
 };
 
