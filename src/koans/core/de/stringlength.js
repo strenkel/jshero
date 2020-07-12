@@ -23,11 +23,11 @@ Der Leerstring besitzt keine Zeichen. Der Wert von <code>anzahl</code> ist jetzt
   task: `Schreibe eine Funktion <code>laenge</code>, die bei Übergabe eines Strings die Anzahl der Zeichen dieses
 Strings zurückgibt.<br><br>Beispiel: <code>laenge('Franz')</code> sollte <code>5</code> zurückgeben.`,
 
-  hint: `<pre><code>let laenge = function(s) {
-...
+  hint: `<pre><code>function laenge(s) {
+  ...
 };</code/></pre>`,
 
-  solution: `<pre><code>let laenge = function(s) {
+  solution: `<pre><code>function laenge(s) {
   return s.length;
 };</code/></pre>`,
 

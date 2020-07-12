@@ -25,11 +25,11 @@ Hier wird <code>toUpperCase()</code> direkt auf einen String angewendet. Der Wer
 in Klein- und in Großschreibung zurückgibt. Das Trennzeichen zwischen der Klein- und Großschreibung soll
 <code>-</code> sein.<br><br>Beispiel: <code>toCase('Ida')</code> sollte <code>'ida-IDA'</code> zurückgeben.`,
 
-  hint: `<pre><code>let toCase = function(text) {
+  hint: `<pre><code>function toCase(text) {
   return ... + '-' + ...;
 };</code/></pre>`,
 
-  solution: `<pre><code>let toCase = function(text) {
+  solution: `<pre><code>function toCase(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
 };</code/></pre>`,
 

@@ -15,20 +15,20 @@ Wie üblich beginnt die Zählung mit 0.
 Kommt das Suchwort im aufrufenden String nicht vor, wird <code>-1</code> zurückgegeben. <code>n2</code> ist also <code>-1</code>.
 Die Methode <code>indexOf()</code> unterscheidet zwischen Groß- und Kleinschreibung. <code>n3</code> ist also auch <code>-1</code>.`,
 
-  task: `Schreibe eine Funktion <code>indexOfIgnoreCase</code>, die 2 Strings entgegennimmt und wie die Methode
+  task: `Schreibe eine Funktion <code>indexOfIgnoreCase</code>, die zwei Strings entgegennimmt und wie die Methode
 <code>indexOf</code> die Position des zweiten Strings im ersten String bestimmt. Im Unterschied zur Methode
 <code>indexOf</code> soll die Groß- oder Kleinschreibung keine Rolle spielen.<br><br>Beispiel:
 Sowohl <code>indexOfIgnoreCase('JS', 'JS')</code> als auch <code>indexOfIgnoreCase('JS', 'js')</code> sollten
 <code>0</code> ergeben.`,
 
-hint: `<pre><code>let indexOfIgnoreCase = function(s1, s2) {
+hint: `<pre><code>function indexOfIgnoreCase(s1, s2) {
 // Wandle s1 und s2 zuerst
 // in Kleinbuchstaben um.
 // Verwende dann die
 // indexOf-Methode.
 };</code></pre>`,
 
-solution: `<pre><code>let indexOfIgnoreCase = function(s1, s2) {
+solution: `<pre><code>function indexOfIgnoreCase(s1, s2) {
   let s1Klein = s1.toLowerCase();
   let s2Klein = s2.toLowerCase();
   return s1Klein.indexOf(s2Klein);

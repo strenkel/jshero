@@ -21,11 +21,11 @@ für <code>index</code> ist <code>0</code>. Der Wert von <code>n4</code> ist als
   task: `Schreibe eine Funktion <code>abkuerzung</code>, die zwei Strings als Parameter entgegennimmt und als Rückgabe die Anfangsbuchstaben
 dieser Strings zurückgibt.<br><br>Beispiel: <code>abkuerzung('Hansestadt', 'Bremen')</code> sollte <code>'HB'</code> zurückliefern.`,
 
-  hint: `<pre><code>let abkuerzung = function(s1, s2) {
+  hint: `<pre><code>function abkuerzung(s1, s2) {
   ...
 };</code/></pre>`,
 
-  solution: `<pre><code>let abkuerzung = function(s1, s2) {
+  solution: `<pre><code>function abkuerzung(s1, s2) {
   return s1.charAt(0) + s2.charAt(0);
 };</code/></pre>`,
 

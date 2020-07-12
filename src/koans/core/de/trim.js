@@ -18,13 +18,13 @@ Wie angedeutet werden häufig Benutzereingaben vor der Verarbeitung getrimmt.`,
 das kein Leerzeichen ist, zurückgibt.<br><br>Beispiel: <code>firstChar(' Rosa')</code> sollte <code>'R'</code>
 zurückgeben.`,
 
-  hint: `<pre><code>let firstChar = function(text) {
+  hint: `<pre><code>function firstChar(text) {
 // Trimme zuerst text.
 // Verwende dann die
 // charAt-Methode.
 };</code></pre>`,
 
-  solution: `<pre><code>let firstChar = function(text) {
+  solution: `<pre><code>function firstChar(text) {
   let textGetrimmt = text.trim();
   return textGetrimmt.charAt(0);
 };</code></pre>`,
