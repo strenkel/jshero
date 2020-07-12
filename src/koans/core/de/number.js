@@ -29,11 +29,11 @@ Die Variablen <code>x3</code> bis <code>x6</code> haben so die Werte <code>8</co
   task: `Schreibe eine Funktion <code>add</code>, die zwei Zahlen als Parameter entgegennimmt
 und deren Summe zurückgibt.<br><br>Beispiel: <code>add(1, 2)</code> sollte <code>3</code> ergeben.`,
 
-  hint: `<pre><code>let add = function(x, y) {
+  hint: `<pre><code>function add(x, y) {
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>let add = function(x, y) {
+  solution: `<pre><code>function add(x, y) {
   return x + y;
 };</code></pre>`,
 

@@ -19,12 +19,12 @@ let y2 = Math.pow(10, 3);</code></pre>
 Katheten und c die Länge der Hypotenuse, so gilt: a&sup2; + b&sup2; = c&sup2;.
 <br><br>Beispiel: Da 3&sup2; + 4&sup2; = 5&sup2; gilt, sollte <code>hypotenuse(3,&nbsp;4)</code> den Wert <code>5</code> liefern.`,
 
-  hint: `<pre><code>let hypotenuse = function(a, b) {
+  hint: `<pre><code>function hypotenuse(a, b) {
   let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return ...
 };</code></pre>`,
 
-  solution: `<pre><code>let hypotenuse = function(a, b) {
+  solution: `<pre><code>function hypotenuse(a, b) {
   let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return Math.sqrt(cQuadrat);
 };</code></pre>`,

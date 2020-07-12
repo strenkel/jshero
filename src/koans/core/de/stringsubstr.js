@@ -18,7 +18,7 @@ Ist der zweite Paramter nicht angegeben, so wird immer bis zum Ende des ursprüg
 in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ersten Leerzeichen.<br><br>Beispiel:
 <code>firstWord('Wo ist hier')</code> sollte <code>'Wo'</code> zurückgeben.`,
 
-  hint: `<pre><code>let firstWord = function(s) {
+  hint: `<pre><code>function firstWord(s) {
 // Bestimme mit indexOf
 // die Position des
 // ersten Leerzeichens.
@@ -26,7 +26,7 @@ in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ers
 // substr-Methode.
 };</code></pre>`,
 
-  solution: `<pre><code>let firstWord = function(s) {
+  solution: `<pre><code>function firstWord(s) {
   let firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
 };</code></pre>`,

@@ -13,11 +13,11 @@ jshero.koans.add({
   task: `Schreibe eine Funktion <code>einer</code>, die eine natürliche Zahl entgegenimmt und die Ziffer der
 Einer-Stelle zurückgibt.<br><br>Beispiel: <code>einer(2674)</code> sollte <code>4</code> zurückgeben.`,
 
-  hint: `<pre><code>let einer = function(n) {
-// Benutze Modulo 10.
+  hint: `<pre><code>function einer(n) {
+  // Benutze Modulo 10.
 };</code></pre>`,
 
-  solution: `<pre><code>let einer = function(n) {
+  solution: `<pre><code>function einer(n) {
   return n % 10;
 };</code></pre>`,
 
