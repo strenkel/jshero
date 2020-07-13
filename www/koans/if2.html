@@ -85,7 +85,7 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>let schnapszahl = function(n) {
+    <div id="hint-area" class="paragraph"><pre><code>function schnapszahl(n) {
 // Berechne die Einerstelle
 // von n mit Modulo 10.
 // Berechne die Zehnerstelle
@@ -93,7 +93,7 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
 // durch 10 und Abrunden.
 // Vergleiche Einer- und
 // Zehnerstelle.
-};</code></pre></div>
+}</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -101,14 +101,14 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let schnapszahl = function(n) {
+    <div id="solution-area" class="paragraph"><pre><code>function schnapszahl(n) {
   let einer = n % 10;
   let zehner = Math.floor(n / 10);
   if (einer === zehner) {
     return 'Schnaps!';
   }
   return 'Kein Schnaps!';
-};</code></pre></div>
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

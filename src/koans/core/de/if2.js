@@ -29,7 +29,7 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
 <br><br>Beispiel: <code>schnapszahl(22)</code> sollte <code>'Schnaps!'</code> und
 <code>schnapszahl(23)</code> sollte <code>'Kein Schnaps!'</code> zurückgeben.`,
 
-  hint: `<pre><code>let schnapszahl = function(n) {
+  hint: `<pre><code>function schnapszahl(n) {
 // Berechne die Einerstelle
 // von n mit Modulo 10.
 // Berechne die Zehnerstelle
@@ -37,16 +37,16 @@ ist eine mehrstellige Zahl, die ausschließlich durch identische Ziffern dargest
 // durch 10 und Abrunden.
 // Vergleiche Einer- und
 // Zehnerstelle.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let schnapszahl = function(n) {
+  solution: `<pre><code>function schnapszahl(n) {
   let einer = n % 10;
   let zehner = Math.floor(n / 10);
   if (einer === zehner) {
     return 'Schnaps!';
   }
   return 'Kein Schnaps!';
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {
