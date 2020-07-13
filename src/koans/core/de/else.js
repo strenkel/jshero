@@ -22,7 +22,7 @@ Für jeden Betrag, der kleiner gleich <code>10</code> ist, beträgt der Zuschlag
 Für jeden Betrag, der größer <code>10</code> ist, beträgt der Zuschlag <code>2</code>.<br><br>Beispiel:
 Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben.`,
 
-  hint: `<pre><code>let addiereMitZuschlag = function(a, b) {
+  hint: `<pre><code>function addiereMitZuschlag(a, b) {
 
   let zuschlag = 0;
 
@@ -33,9 +33,9 @@ Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben
   ...
 
   return a + b + zuschlag;
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let addiereMitZuschlag = function(a, b) {
+  solution: `<pre><code>function addiereMitZuschlag(a, b) {
 
   let zuschlag = 0;
 
@@ -52,7 +52,7 @@ Der Aufruf <code>addiereMitZuschlag(5, 15)</code> sollte <code>23</code> ergeben
   }
 
   return a + b + zuschlag;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

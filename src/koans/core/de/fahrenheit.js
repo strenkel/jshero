@@ -14,11 +14,11 @@ in Grad Celsius und F die Temperatur in Grad Fahrenheit, so gilt: F = 1.8 * C + 
 
   hint: `<pre><code>function toFahrenheit(celsius) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
   solution: `<pre><code>function toFahrenheit(celsius) {
   return 1.8 * celsius + 32;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
 

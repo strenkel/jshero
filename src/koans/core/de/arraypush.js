@@ -42,11 +42,11 @@ Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array sol
 Füge mit push das 0te Element wieder hinzu.
 </code></pre>`,
 
-    solution: `<pre><code>let rotiere = function(einArray) {
+    solution: `<pre><code>function rotiere(einArray) {
   let element0 = einArray.shift();
   einArray.push(element0);
   return einArray;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
       function() {

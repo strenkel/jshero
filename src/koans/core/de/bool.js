@@ -27,15 +27,15 @@ Rückgabe <code>true</code> sein.<br><br>D.h.: <code>nand(true, true)</code> sol
 <code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen
 <code>true</code> zurückgeben.`,
 
-  hint: `<pre><code>let nand = function(a, b) {
+  hint: `<pre><code>function nand(a, b) {
   let and = a && b;
   ...
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let nand = function(a, b) {
+  solution: `<pre><code>function nand(a, b) {
   let and = a && b;
   return !and;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

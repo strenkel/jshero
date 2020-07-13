@@ -21,7 +21,7 @@ x und y ist (x + y) / 2.</code></pre>`,
 
   solution: `<pre><code>function mittelwert(x, y) {
   return (x + y) / 2;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

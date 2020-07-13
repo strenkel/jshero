@@ -22,12 +22,12 @@ Katheten und c die Länge der Hypotenuse, so gilt: a&sup2; + b&sup2; = c&sup2;.
   hint: `<pre><code>function hypotenuse(a, b) {
   let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
   solution: `<pre><code>function hypotenuse(a, b) {
   let cQuadrat = Math.pow(a, 2) + Math.pow(b, 2);
   return Math.sqrt(cQuadrat);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

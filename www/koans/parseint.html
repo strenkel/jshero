@@ -104,13 +104,13 @@ Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.<
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let add = function(s) {
+    <div id="solution-area" class="paragraph"><pre><code>function add(s) {
   let summand1 = parseInt(s, 10);
   let positionPlus = s.indexOf('+');
   let sNachPlus = s.substring(positionPlus + 1);
   let summand2 = parseInt(sNachPlus, 10);
   return summand1 + summand2;
-};</code></pre></div>
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
