@@ -39,21 +39,21 @@ Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.`,
 alle natürlichen Zahlen kleiner gleich dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
 <code>addiereBis(3)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
 
-hint: `<pre><code>let addiereBis = function(n) {
+hint: `<pre><code>function addiereBis(n) {
   let summe = 0;
   for (let i = 0; i <= n; i++) {
     ...
   }
   return summe;
-};</pre></code>`,
+}</pre></code>`,
 
-solution: `<pre><code>let addiereBis = function(n) {
+solution: `<pre><code>function addiereBis(n) {
   let summe = 0;
   for (let i = 0; i <= n; i++) {
     summe = summe + i;
   }
   return summe;
-};</pre></code>`,
+}</pre></code>`,
 
     tests: [
       function() {

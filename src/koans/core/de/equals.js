@@ -26,13 +26,13 @@ rechten Seite ein String.`,
 <code>gleich(1, 1)</code> soll <code>true</code> zurückgeben, <code>gleich(1, 2)</code> soll
 <code>false</code> ergeben.`,
 
-  hint: `<pre><code>let gleich = function(a, b) {
+  hint: `<pre><code>function gleich(a, b) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let gleich = function(a, b) {
+  solution: `<pre><code>function gleich(a, b) {
   return a === b;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

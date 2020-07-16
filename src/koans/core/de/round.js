@@ -22,9 +22,9 @@ sollte <code>900</code> ergeben.`,
 
   hint: `Verwende neben <code>Math.round()</code> noch Multiplikation und Division.`,
 
-  solution: `<pre><code>let round100 = function(x) {
+  solution: `<pre><code>function round100(x) {
   return Math.round(x / 100) * 100;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

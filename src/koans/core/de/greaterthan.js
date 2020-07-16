@@ -17,13 +17,13 @@ let v4 = 5 <= 5;</code></pre>`,
 ist.<br><br>Beispiel: <code>istDreistellig(500)</code> sollte <code>true</code> zurückgeben,
 <code>istDreistellig(50)</code> sollte <code>false</code> ergeben.`,
 
-  hint: `<pre><code>let istDreistellig = function(x) {
+  hint: `<pre><code>function istDreistellig(x) {
   return x >= 100 && ...
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let istDreistellig = function(x) {
+  solution: `<pre><code>function istDreistellig(x) {
   return x >= 100 && x < 1000;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

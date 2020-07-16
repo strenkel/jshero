@@ -26,11 +26,11 @@ Kommt der zu ersetzende String nicht vor, so wird der urspr√ºngliche String zur√
 20/05/2017) in deutsche Schreibweise (20.05.2017) umwandet.<br><br>Beispiel: Sowohl
 <code>convert('20-05-2017')</code> als auch <code>convert('20/05/2017')</code> sollten <code>'20.05.2017'</code> ergeben.`,
 
-  hint: `<pre><code>let convert = function(dateEn) {
+  hint: `<pre><code>function convert(dateEn) {
   // Verwende replace viermal.
 };</code></pre>`,
 
-  solution: `<pre><code>let convert = function(dateEn) {
+  solution: `<pre><code>function convert(dateEn) {
   let dateDe = dateEn.replace('-', '.');
   dateDe = dateDe.replace('-', '.');
   dateDe = dateDe.replace('/', '.');

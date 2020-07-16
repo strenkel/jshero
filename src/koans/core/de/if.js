@@ -24,21 +24,21 @@ Hat in unserem Beispiel die Variable <code>wuerfelzahl</code> den Wert <code>6</
 gleich, so soll der String <code>'GLEICH'</code> zurückgegeben werden. Sind sie ungleich, so soll man
 <code>'UNGLEICH'</code> erhalten.`,
 
-  hint: `<pre><code>let gleich = function(a, b) {
+  hint: `<pre><code>function gleich(a, b) {
 // Initialisiere eine Variable
 // mit 'UNGLEICH'. Verwende 'if',
 // um die Variable ggf. auf
 // 'GLEICH' zu setzen. Gebe die
 // Variable zurück.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let gleich = function(a, b) {
+  solution: `<pre><code>function gleich(a, b) {
   let ergebnis = 'UNGLEICH';
   if (a === b) {
     ergebnis = 'GLEICH';
   }
   return ergebnis;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

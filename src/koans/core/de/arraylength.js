@@ -30,10 +30,10 @@ des Arrays zurückgibt.<br><br>Beispiel: <code>getLastElement([1, 2])</code> sol
     hint: `Bestimme den Index des letzten Elements mit der Array-Eigenschaft <code>length</code>.
 Beachte, dass das erste Element im Array den Index <code>0</code> besitzt.`,
 
-    solution: `<pre><code>let getLastElement = function(anArray) {
+    solution: `<pre><code>function getLastElement(anArray) {
   let lastIndex = anArray.length - 1;
   return anArray[lastIndex];
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
       function() {

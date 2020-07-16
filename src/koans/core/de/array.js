@@ -22,13 +22,13 @@ Die Elemente eines Arrays können, wie das letzte Beispiel zeigt, alle einen and
     task: `Schreibe eine Funktion <code>toArray</code>, die 2 Paramter entgegennimmt und diese als Array zurückgibt.
 <br><br>Beispiel: <code>toArray(5, 9)</code> sollte das Array <code>[5, 9]</code> ergeben.`,
 
-    hint: `<pre><code>let toArray = function(a, b) {
+    hint: `<pre><code>function toArray(a, b) {
   return [...];
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let toArray = function(a, b) {
+    solution: `<pre><code>function toArray(a, b) {
   return [a, b];
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 
