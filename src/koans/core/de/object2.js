@@ -25,16 +25,16 @@ und nach dem Doppelpunkt die zuvor definierte Variable.`,
 entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten zurückgibt.
 <code>createPoint(1,&nbsp;2)</code> sollte <code>{x:&nbsp;1,&nbsp;y:&nbsp;2}</code> zurückgeben.`,
 
-    hint: `<pre><code>let createPoint = function(x, y) {
+    hint: `<pre><code>function createPoint(x, y) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let createPoint = function(x, y) {
+    solution: `<pre><code>function createPoint(x, y) {
   return {
     x: x,
     y: y
   };
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

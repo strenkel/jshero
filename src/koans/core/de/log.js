@@ -16,13 +16,13 @@
     hint: `<pre><code>function rufe(name) {
   let ruf = name + name;
   ...
-};</code></pre>`,
+}</code></pre>`,
 
     solution: `<pre><code>function rufe(name) {
   let ruf = name + name;
   console.log(ruf);
   return ruf;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

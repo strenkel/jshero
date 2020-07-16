@@ -28,11 +28,11 @@ Variable <code>eingabe</code> mit der <code>return</code>-Anweisung zurückgegeb
 
     hint: `<pre><code>function echo(ton) {
   ...
-};</code></pre>`,
+}</code></pre>`,
 
     solution: `<pre><code>function echo(ton) {
   return ton;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
       function() {

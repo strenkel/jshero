@@ -19,9 +19,9 @@ Mittelwert zurückgibt.<br><br>Beispiel: <code>mittelwert(1, 2)</code> sollte <c
   hint: `<pre><code>Der Mittelwert zweier Zahlen
 x und y ist (x + y) / 2.</code></pre>`,
 
-  solution: `<pre><code>let mittelwert = function(x, y) {
+  solution: `<pre><code>function mittelwert(x, y) {
   return (x + y) / 2;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

@@ -29,14 +29,14 @@ Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
 <code>pruefe('Frau Mayer')</code> sollte <code>true</code> und
 <code>pruefe('Herr Mezer')</code> sollte <code>false</code> ergeben.`,
 
-  hint: `<pre><code>let pruefe = function(s) {
+  hint: `<pre><code>function pruefe(s) {
 // Verwende die Zeichenauswahl
 // zweimal.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let pruefe = function(s) {
+  solution: `<pre><code>function pruefe(s) {
   return /M[ae][iy]er/.test(s);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

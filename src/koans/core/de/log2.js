@@ -19,11 +19,11 @@ Beispiel: Der Aufruf <code>logge('Ken Thompson')</code> sollte <code>'Ken Thomps
 
     hint: `<pre><code>function logge(wert) {
   ...
-};</code></pre>`,
+}</code></pre>`,
 
     solution: `<pre><code>function logge(wert) {
   console.log(wert);
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

@@ -42,13 +42,13 @@ Bestimme mit <code>indexOf</code> die Position des Plus-Zeichens.
 Bestimme mit <code>substring</code> den Teilstring nach dem Plus-Zeichen.
 Bestimme mit <code>parseInt</code> aus diesem Teilstring den zweiten Summanden.`,
 
-  solution: `<pre><code>let add = function(s) {
+  solution: `<pre><code>function add(s) {
   let summand1 = parseInt(s, 10);
   let positionPlus = s.indexOf('+');
   let sNachPlus = s.substring(positionPlus + 1);
   let summand2 = parseInt(sNachPlus, 10);
   return summand1 + summand2;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

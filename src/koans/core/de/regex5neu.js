@@ -21,13 +21,13 @@ Word Character sind und <code>\\S</code> steht für alle Zeichen, die kein Leerr
   task: `Schreibe eine Funktion <code>test</code>, die prüft, ob ein String 5 aufeinanderfolgende
 Ziffern enthält. <code>test('28205')</code> sollte <code>true</code> ergeben.`,
 
-  hint: `<pre><code>let test = function(s) {
+  hint: `<pre><code>function test(s) {
 // Verwende \\d fünfmal.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let test = function(s) {
+  solution: `<pre><code>function test(s) {
   return /\\d\\d\\d\\d\\d/.test(s);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

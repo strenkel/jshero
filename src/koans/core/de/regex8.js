@@ -18,13 +18,13 @@ beliebige Großbuchstaben, YY für 1 bis 2 beliebige Großbuchstaben und NNNN f�
 Nullen sind bei der Zahl nicht zugelassen. <code>pruefe('OF C 709')</code> sollte <code>true</code> und
 <code>pruefe('OF 709')</code> sollte <code>false</code> ergeben.`,
 
-    hint: `<pre><code>let pruefe = function(s) {
+    hint: `<pre><code>function pruefe(s) {
   return /^[A-Z]{1,3}...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let pruefe = function(s) {
+    solution: `<pre><code>function pruefe(s) {
   return /^[A-Z]{1,3} [A-Z]{1,2} [1-9][0-9]{0,3}$/.test(s);
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
       function() {

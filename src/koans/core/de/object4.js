@@ -22,15 +22,15 @@ Zunächst legen wir eine Ware mit dem Preis <code>2.15</code> an. Irgendwann sp�
     task: `Schreibe eine Funktion <code>moveX</code>, die einen Punkt um 1 nach rechts verschiebt.
 <code>moveX({x:&nbsp;2,&nbsp;y:&nbsp;5})</code> sollte <code>{x:&nbsp;3,&nbsp;y:&nbsp;5}</code> zurückgeben.`,
 
-    hint: `<pre><code>let moveX = function(point) {
+    hint: `<pre><code>function moveX(point) {
   ...
   return point;
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let moveX = function(point) {
+    solution: `<pre><code>function moveX(point) {
   point.x = point.x + 1;
   return point;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

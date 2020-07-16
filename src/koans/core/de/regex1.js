@@ -41,9 +41,9 @@ Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
 
 hint: `<pre><code>Benutze den Regex /Rose/.</pre></code>`,
 
-solution: `<pre><code>let enthaeltRose = function(s) {
+solution: `<pre><code>function enthaeltRose(s) {
   return /Rose/.test(s);
-};</pre></code>`,
+}</pre></code>`,
 
     tests: [
       function() {

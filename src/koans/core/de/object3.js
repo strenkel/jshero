@@ -26,11 +26,11 @@ Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.
 
     hint: `Der Abstand eines  Punkts mit den Koordinaten x und y zum Nullpunkt ist &radic;(x&sup2;&nbsp;+&nbsp;y&sup2;).`,
 
-    solution: `<pre><code>let distance = function(point) {
+    solution: `<pre><code>function distance(point) {
   let xSquare = Math.pow(point.x, 2);
   let ySquare = Math.pow(point.y, 2);
   return Math.sqrt(xSquare + ySquare);
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 
