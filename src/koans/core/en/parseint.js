@@ -44,13 +44,13 @@ Use <code>indexOf</code> to determine the position of the plus sign.
 Determine with <code>substring</code> the substring after the plus sign.
 Use <code>parseInt</code> to determine the second summand from this substring.`,
 
-  solution: `<pre><code>let add = function(s) {
+  solution: `<pre><code>function add(s) {
   let summand1 = parseInt(s, 10);
   let positionPlus = s.indexOf('+');
   let sAfterPlus = s.substring(positionPlus + 1);
   let summand2 = parseInt(sAfterPlus, 10);
   return summand1 + summand2;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

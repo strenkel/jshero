@@ -17,13 +17,13 @@
     task: 'Write a function <code>add</code> that takes two numbers and returns their sum. ' +
       '<code>add(1,&nbsp;2)</code> should return <code>3</code>.',
 
-    hint: `<pre><code>let add = function(x, y) {
+    hint: `<pre><code>function add(x, y) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let add = function(x, y) {
+    solution: `<pre><code>function add(x, y) {
   return x + y;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

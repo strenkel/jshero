@@ -7,9 +7,9 @@
     title: 'What is x?',
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>let reply = function(phrase) {
+<pre><code>function reply(phrase) {
   return phrase;
-};
+}
 
 let x = reply('How do you do?');</code></pre>`,
 

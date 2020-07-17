@@ -11,9 +11,9 @@ followed by the instructions enclosed in curly brackets.
 Use the keyword <code>return</code> to return a value. At the same time <code>return</code> terminates the function.
 Functions can be assigned to a variable. With
 
-<pre><code>let color = function() {
+<pre><code>function color() {
   return 'red';
-};</code></pre>
+}</code></pre>
 
 we define a function that returns the value <code>'red'</code>. The function has no parameters (the parentheses are empty)
 and contains only the return statement. The function is assigned to the variable <code>color</code>.
@@ -26,13 +26,13 @@ has the value <code>'red'</code>.`,
 
   task: `Declare a variable <code>hello</code>. Assign a function to it returning <code>'Hello world!'</code>.`,
 
-  hint: `<pre><code>let hello = function() {
+  hint: `<pre><code>function hello() {
   ...
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let hello = function() {
+  solution: `<pre><code>function hello() {
   return 'Hello world!';
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

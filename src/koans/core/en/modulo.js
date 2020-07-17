@@ -15,13 +15,13 @@
     task: 'Write a function <code>onesDigit</code> that takes a natural number and returns the ones digit of that number. ' +
       '<code>onesDigit(2674)</code> should return <code>4</code>.',
 
-    hint: `<pre><code>let onesDigit = function(n) {
+    hint: `<pre><code>function onesDigit(n) {
 // Use modulo 10.
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let onesDigit = function(n) {
+    solution: `<pre><code>function onesDigit(n) {
   return n % 10;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

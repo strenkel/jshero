@@ -7,11 +7,11 @@ jshero.koans.add({
   lesson: `Inside every function an <code>arguments</code> object is accessible.
 It is an Array-like object that contains the values of the arguments passed to the function.
 
-<pre><code>let add = function() {
+<pre><code>function add() {
   let arg0 = arguments[0];
   let arg1 = arguments[1];
   return arg0 + arg1;
-};
+}
 
 let sum = add(1, 2);</code></pre>
 
@@ -21,13 +21,13 @@ So <code>arguments[0]</code> contains the value <code>1</code> and <code>argumen
 With the <code>arguments</code> object you can access the passed arguments without parameters.
 This is useful, for example, if you want to write a function that processes an arbitrary number of arguments.
 
-<pre><code>let add = function() {
+<pre><code>function add() {
   let sum = 0;
   for (let i = 0; i < arguments.length; i++) {
     sum = sum + arguments[i];
   }
   return sum;
-};
+}
 
 let s1 = add(2, 4);
 let s2 = add(2, 3, 5, 7);</code></pre>

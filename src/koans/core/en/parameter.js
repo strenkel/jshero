@@ -5,8 +5,8 @@ jshero.koans.add({
   title: 'Parameters',
 
   lesson: `Now we get to know functions with parameters. With
-<pre><code>let give = function(input) {
-  return input;<br>};</code></pre>
+<pre><code>function give(input) {
+  return input;<br>}</code></pre>
 we define a function that simply returns the parameter <code>input</code>.
 Parameters are variables. With
 <pre><code>let result = give('apple');</code></pre>
@@ -19,13 +19,13 @@ This return is assigned to the variable <code>result</code>. Finally, <code>resu
   task: `Write a function <code>echo</code> that also returns the passed parameter.
 <code>echo('Greta')</code> should return <code>'Greta'</code> and <code>echo('CO2')</code> should return <code>'CO2'</code>`,
 
-  hint: `<pre><code>let echo = function(sound) {
+  hint: `<pre><code>function echo(sound) {
   ...
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let echo = function(sound) {
+  solution: `<pre><code>function echo(sound) {
   return sound;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

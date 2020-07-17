@@ -38,21 +38,21 @@ after the loop. Our code example has added all natural numbers smaller than 3.`,
 smaller or equal than the parameter. The result is to be returned. <code>addTo(3)</code> should return
 <code>1+2+3</code> = <code>6</code>.`,
 
-    hint: `<pre><code>let addTo = function(n) {
+    hint: `<pre><code>function addTo(n) {
   let sum = 0;
   for (let i = 0; i <= n; i++) {
     ...
   }
   return sum;
-};</pre></code>`,
+}</pre></code>`,
 
-    solution: `<pre><code>let addTo = function(n) {
+    solution: `<pre><code>function addTo(n) {
   let sum = 0;
   for (let i = 0; i <= n; i++) {
     sum = sum + i;
   }
   return sum;
-};</pre></code>`,
+}</pre></code>`,
 
     tests: [
 

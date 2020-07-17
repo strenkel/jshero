@@ -20,9 +20,9 @@ let x2 = (3 + 4) * 2;</code></pre>
     hint: `<pre><code>The mean value of two numbers
 x and y is (x + y) / 2.</code></pre>`,
 
-    solution: `<pre><code>let mean = function(x, y) {
+    solution: `<pre><code>function mean(x, y) {
   return (x + y) / 2;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

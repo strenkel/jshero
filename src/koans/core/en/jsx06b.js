@@ -7,9 +7,9 @@
     title: 'What is x?',
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>let hi = function(name) {
+<pre><code>function hi(name) {
   return 'Hi ' + name + '!';
-};
+}
 
 let h1 = hi('Selva');
 let h2 = hi('Pola');

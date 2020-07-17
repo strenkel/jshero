@@ -7,9 +7,9 @@ jshero.koans.add({
   lesson: `The difference between the definition and the call of a function is important.
 The following definition of a function
 
-<pre><code>let f = function() {
+<pre><code>function f() {
   return 'hello';
-};</code></pre>
+}</code></pre>
 
 says what the function will do: Return 'hello', if called. The function will not be executed, but only provided.
 Only with its call
@@ -26,15 +26,15 @@ Functions are defined once so that they can be used multiple times at different 
 2. Declare a variable <code>salutation</code>. Call the function <code>greet</code> and assign the
 result of the call to the variable <code>salutation</code>.`,
 
-  hint: `<pre><code>let greet = function() {
+  hint: `<pre><code>function greet() {
   ...
-};
+}
 
 let salutation = ...</code></pre>`,
 
-  solution: `<pre><code>let greet = function() {
+  solution: `<pre><code>function greet() {
   return 'Haydo!';
-};
+}
 
 let salutation = greet();</code></pre>`,
 

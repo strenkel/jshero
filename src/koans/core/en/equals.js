@@ -24,13 +24,13 @@ On the left side of the comparison is a number, on the right side a string.`,
   task: `Write a function <code>equals</code> that checks two values for strict equality. <code>equals(1, 1)</code>
 should return <code>true</code> and <code>equals(1, 2)</code> should return <code>false</code>.`,
 
-  hint: `<pre><code>let equals = function(a, b) {
+  hint: `<pre><code>function equals(a, b) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let equals = function(a, b) {
+  solution: `<pre><code>function equals(a, b) {
   return a === b;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
 

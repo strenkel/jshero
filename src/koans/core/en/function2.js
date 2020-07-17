@@ -8,9 +8,9 @@ jshero.koans.add({
 As a reminder: A function with name <code>color</code> returning the value
 <code>'red'</code> is defined as followed:
 
-<pre><code>let color = function() {
+<pre><code>function color() {
   return 'red';
-};</code></pre>`,
+}</code></pre>`,
 
   task: `Define two functions. The first function <code>a</code> should return
 <code>'Hello a!'</code> and the second function <code>b</code> should return

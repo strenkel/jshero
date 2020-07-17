@@ -7,9 +7,9 @@
     title: 'What is x?',
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>let whereIs = function(name) {
+<pre><code>function whereIs(name) {
   return 'Where is ' + name + '?';
-};
+}
 
 let x = whereIs('Jacky');</code></pre>`,
 

@@ -13,9 +13,9 @@ You can work with strings. For example, they can be concatenated. This is done w
 <code>'Java' + 'Script'</code> results in the string <code>'JavaScript'</code>.
 The following function appends <code>' is great!'</code> to the passed parameter and returns the result:
 
-<pre><code>let praise = function(name) {
+<pre><code>function praise(name) {
   return name + ' is great!';
-};</code></pre>
+}</code></pre>
 
 <code>praise('JavaScript')</code> will return <code>'JavaScript is great!'</code>.`,
 
@@ -23,13 +23,13 @@ The following function appends <code>' is great!'</code> to the passed parameter
 <code>greet('Ada')</code> should return <code>'Hello Ada!'</code> and <code>greet('Tayo')</code> should return
 <code>'Hello Tayo!'</code>.`,
 
-    hint: `<pre><code>let greet = function(name) {
+    hint: `<pre><code>function greet(name) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let greet = function(name) {
+    solution: `<pre><code>function greet(name) {
   return 'Hello ' + name + '!';
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

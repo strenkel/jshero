@@ -28,13 +28,13 @@ Therefore JS Hero writes the log additionally into the test output.`,
     task: `Write a function <code>log</code> that logs <code>'Hello Console!'</code>.
 If you are working with a desktop browser, open the developer tools to see the output there as well.`,
 
-    hint: `<pre><code>let log = function() {
+    hint: `<pre><code>function log() {
   console.log(...);
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let log = function() {
+    solution: `<pre><code>function log() {
   console.log('Hello Console!');
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

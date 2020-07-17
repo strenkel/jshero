@@ -22,15 +22,15 @@ triangle the Pythagorean theorem is valid. If a and b are the lengths of the two
 is the length of the hypotenuse, the following is true: a&sup2; + b&sup2; = c&sup2;.
 Since 3&sup2; + 4&sup2; = 5&sup2; applies, <code>hypotenuse(3,&nbsp;4)</code> should return <code>5</code>.`,
 
-    hint: `<pre><code>let hypotenuse = function(a, b) {
+    hint: `<pre><code>function hypotenuse(a, b) {
   let cSquare = Math.pow(a, 2) + Math.pow(b, 2);
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let hypotenuse = function(a, b) {
+    solution: `<pre><code>function hypotenuse(a, b) {
   let cSquare = Math.pow(a, 2) + Math.pow(b, 2);
   return Math.sqrt(cSquare);
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

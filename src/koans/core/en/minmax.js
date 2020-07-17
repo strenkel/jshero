@@ -20,18 +20,17 @@ The <a href='https://en.wikipedia.org/wiki/Mid-range'>midrange</a>
 is the mean of the smallest and largest number.
 <code>midrange(3, 9, 1)</code> should return <code>(9+1)/2</code> = <code>5</code>.`,
 
-    hint: `<pre><code>let midrange = function(a, b, c) {
+    hint: `<pre><code>function midrange(a, b, c) {
   let min = Math.min(a, b, c);
   let max = Math.max(a, b, c);
   ...
-};</code></pre>`,
+}</code></pre>`,
 
-
-    solution: `<pre><code>let midrange = function(a, b, c) {
+    solution: `<pre><code>function midrange(a, b, c) {
   let min = Math.min(a, b, c);
   let max = Math.max(a, b, c);
   return (min + max) / 2;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
       function() {

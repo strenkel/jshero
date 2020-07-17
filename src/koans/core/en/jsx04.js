@@ -9,9 +9,9 @@
     lesson: 'Just practice this again.',
 
     task: `Which value does <code>x</code> have after execution of the following code?
-<pre><code>let hello = function() {
+<pre><code>function hello() {
   return 'Hi!';
-};
+}
 
 let x = hello();</code></pre>`,
 

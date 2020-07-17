@@ -34,12 +34,12 @@ covers 2 lines. */
  * Checks whether a string contains
  * any characters other than spaces.
  */
-let isEmpty = function(string) {
+function isBlank(string) {
   // The method trim() removes spaces at
   // the beginning and the end of a string.
   let trimmedString = string.trim();
   return trimmedString.length === 0;
-};</code></pre>
+}</code></pre>
 
 Comments can't be checked with the tests used here.
 It follows a task where you have to apply much of what you have learned so far.`,

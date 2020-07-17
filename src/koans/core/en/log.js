@@ -12,16 +12,16 @@
 returns this string duplicated. In addition, the return should be logged.
 The call <code>shout('Fire')</code> should return <code>'FireFire'</code> and should log <code>'FireFire'</code>.`,
 
-    hint: `<pre><code>let shout = function(word) {
+    hint: `<pre><code>function shout(word) {
   let result = word + word;
   ...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let shout = function(word) {
+    solution: `<pre><code>function shout(word) {
   let result = word + word;
   console.log(result);
   return result;
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 
