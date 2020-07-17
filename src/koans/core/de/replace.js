@@ -28,7 +28,7 @@ Kommt der zu ersetzende String nicht vor, so wird der urspr√ºngliche String zur√
 
   hint: `<pre><code>function convert(dateEn) {
   // Verwende replace viermal.
-};</code></pre>`,
+}</code></pre>`,
 
   solution: `<pre><code>function convert(dateEn) {
   let dateDe = dateEn.replace('-', '.');
@@ -36,7 +36,7 @@ Kommt der zu ersetzende String nicht vor, so wird der urspr√ºngliche String zur√
   dateDe = dateDe.replace('/', '.');
   dateDe = dateDe.replace('/', '.');
   return dateDe;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

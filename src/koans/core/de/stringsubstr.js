@@ -24,12 +24,12 @@ in diesem String zurückgibt. Das erste Wort sind dabei alle Zeichen bis zum ers
 // ersten Leerzeichens.
 // Verwende dann die
 // substr-Methode.
-};</code></pre>`,
+}</code></pre>`,
 
   solution: `<pre><code>function firstWord(s) {
   let firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

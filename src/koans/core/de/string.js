@@ -15,7 +15,7 @@ an und gibt den zusammengesetzten Text zurück:
 
 <pre><code>function lobe(name) {
   return name + ' ist toll!';
-};</code></pre>
+}</code></pre>
 
 So liefert <code>lobe('JavaScript')</code> den Wert <code>'JavaScript ist toll!'</code>.`,
 
@@ -26,11 +26,11 @@ so sollte die Funktion <code>'Hallo Ada!'</code> zurückgeben.`,
 
   hint: `<pre><code>function begruesse(name) {
   return ...
-};</code></pre>`,
+}</code></pre>`,
 
   solution: `<pre><code>function begruesse(name) {
   return 'Hallo ' + name + '!';
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

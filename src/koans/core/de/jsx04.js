@@ -11,7 +11,7 @@
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>function hello() {
   return 'Hi!';
-};
+}
 
 let x = hello();</code></pre>`,
 

@@ -23,11 +23,11 @@ dieser Strings zurückgibt.<br><br>Beispiel: <code>abkuerzung('Hansestadt', 'Bre
 
   hint: `<pre><code>function abkuerzung(s1, s2) {
   ...
-};</code/></pre>`,
+}</code/></pre>`,
 
   solution: `<pre><code>function abkuerzung(s1, s2) {
   return s1.charAt(0) + s2.charAt(0);
-};</code/></pre>`,
+}</code/></pre>`,
 
   tests: [
     function() {

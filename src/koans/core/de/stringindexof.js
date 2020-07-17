@@ -26,13 +26,13 @@ hint: `<pre><code>function indexOfIgnoreCase(s1, s2) {
 // in Kleinbuchstaben um.
 // Verwende dann die
 // indexOf-Methode.
-};</code></pre>`,
+}</code></pre>`,
 
 solution: `<pre><code>function indexOfIgnoreCase(s1, s2) {
   let s1Klein = s1.toLowerCase();
   let s2Klein = s2.toLowerCase();
   return s1Klein.indexOf(s2Klein);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

@@ -10,7 +10,7 @@
 
   <pre><code>function gebe(eingabe) {
   return eingabe;
-};</code></pre>
+}</code></pre>
 
 definieren wir eine Funktion, die den übergebenen Parameter <code>eingabe</code> einfach wieder zurückgibt.
 Parameter sind Variablen. Sie stehen in der runden Klammer und benötigen nicht das Schlüsselwort <code>let</code> zu

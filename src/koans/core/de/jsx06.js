@@ -9,7 +9,7 @@
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>function woIst(name) {
   return 'Wo ist ' + name + '?';
-};
+}
 
 let x = woIst('Fred');</code></pre>`,
 

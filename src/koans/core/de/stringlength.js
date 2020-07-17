@@ -25,11 +25,11 @@ Strings zurückgibt.<br><br>Beispiel: <code>laenge('Franz')</code> sollte <code>
 
   hint: `<pre><code>function laenge(s) {
   ...
-};</code/></pre>`,
+}</code/></pre>`,
 
   solution: `<pre><code>function laenge(s) {
   return s.length;
-};</code/></pre>`,
+}</code/></pre>`,
 
   tests: [
     function() {

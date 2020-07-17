@@ -31,13 +31,13 @@ Aufgerufen wurde die Funktion über ihren Namen.`,
 
     hint: `<pre><code>function begruesse() {
   ...
-};
+}
 
 let begruessung = ...</code></pre>`,
 
     solution: `<pre><code>function begruesse() {
   return 'Moin!';
-};
+}
 
 let begruessung = begruesse();</code></pre>`,
 

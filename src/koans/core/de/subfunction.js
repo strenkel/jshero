@@ -7,17 +7,17 @@
     title: 'Funktionen rufen Funktionen auf',
 
     lesson: `Funktionen können weitere Funktionen aufrufen:
-<pre><code>let brutto = function(netto) {
+<pre><code>function brutto(netto) {
   let steuersatz = 19;
   let steuer = netto * steuersatz / 100;
   return netto + steuer;
-};
+}
 
-let addiereMitMehrwertsteuer = function(nettoX, nettoY) {
+function addiereMitMehrwertsteuer(nettoX, nettoY) {
   let bruttoX = brutto(nettoX);
   let bruttoY = brutto(nettoY);
   return bruttoX + bruttoY;
-};</code></pre>
+}</code></pre>
 
 <code>addiereMitMehrwertsteuer</code> nimmt 2 Nettobeträge entgegen und gibt die Summe der Bruttobeträge zurück.
 <code>brutto</code> berechnet aus einem Nettobetrag den Bruttobetrag. Dabei wird eine Mehrwertsteuer von 19% zugrunde

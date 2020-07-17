@@ -22,12 +22,12 @@ zurückgeben.`,
 // Trimme zuerst text.
 // Verwende dann die
 // charAt-Methode.
-};</code></pre>`,
+}</code></pre>`,
 
   solution: `<pre><code>function firstChar(text) {
   let textGetrimmt = text.trim();
   return textGetrimmt.charAt(0);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

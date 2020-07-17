@@ -30,9 +30,9 @@ der zweite <code>false</code> ist. Schreibe dann einen Ausdruck, der nur dann <c
 Parameter <code>false</code> und der zweite <code>true</code> ist. Verknüpfe beide Ausdrücke angemessen.
 Klammern sind bei der Lösung nicht nötig.`,
 
-  solution: `<pre><code>let xor = function(a, b) {
+  solution: `<pre><code>function xor(a, b) {
   return a && !b || !a && b;
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

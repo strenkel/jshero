@@ -9,7 +9,7 @@
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>function bleiben(name) {
   return name + ' bleibt ' + name;
-};
+}
 
 let x = bleiben('Mainz');</code></pre>`,
 

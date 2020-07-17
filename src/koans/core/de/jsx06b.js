@@ -9,7 +9,7 @@
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>function hi(name) {
   return 'Hi ' + name + '!';
-};
+}
 
 let h1 = hi('Selva');
 let h2 = hi('Pola');
