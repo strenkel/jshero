@@ -54,9 +54,9 @@
     <div id="koans-lesson" class="paragraph">The difference between the definition and the call of a function is important.
 The following definition of a function
 
-<pre><code>let f = function() {
+<pre><code>function f() {
   return 'hello';
-};</code></pre>
+}</code></pre>
 
 says what the function will do: Return 'hello', if called. The function will not be executed, but only provided.
 Only with its call
@@ -79,9 +79,9 @@ result of the call to the variable <code>salutation</code>.</div>
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>let greet = function() {
+    <div id="hint-area" class="paragraph"><pre><code>function greet() {
   ...
-};
+}
 
 let salutation = ...</code></pre></div>
     
@@ -91,9 +91,9 @@ let salutation = ...</code></pre></div>
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let greet = function() {
+    <div id="solution-area" class="paragraph"><pre><code>function greet() {
   return 'Haydo!';
-};
+}
 
 let salutation = greet();</code></pre></div>
     

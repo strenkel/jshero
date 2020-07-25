@@ -57,12 +57,12 @@
     <div id="koans-lesson" class="paragraph">Mit der <code>if</code>-Anweisung hat man die Möglichkeit, Funktionen mit zwei <code>return</code>-Anweisungen
 zu schreiben:
 
-<pre><code>let gewinn = function(zahl) {
+<pre><code>function gewinn(zahl) {
   if (zahl === 6) {
     return 100;
   }
   return 0;
-};</code></pre>
+}</code></pre>
 
 Hat <code>zahl</code> den Wert <code>6</code>, so ist die <code>if</code>-Bedingung erfüllt und die erste
 <code>return</code>-Anweisung wird ausgeführt. Die Funktion wird beendet und gibt <code>100</code> zurück.

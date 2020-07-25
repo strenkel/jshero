@@ -103,13 +103,13 @@ Use <code>parseInt</code> to determine the second summand from this substring.</
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let add = function(s) {
+    <div id="solution-area" class="paragraph"><pre><code>function add(s) {
   let summand1 = parseInt(s, 10);
   let positionPlus = s.indexOf('+');
   let sAfterPlus = s.substring(positionPlus + 1);
   let summand2 = parseInt(sAfterPlus, 10);
   return summand1 + summand2;
-};</code></pre></div>
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

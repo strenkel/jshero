@@ -52,8 +52,8 @@
     <h1 id="koans-title">Parameters</h1>
     
     <div id="koans-lesson" class="paragraph">Now we get to know functions with parameters. With
-<pre><code>let give = function(input) {
-  return input;<br>};</code></pre>
+<pre><code>function give(input) {
+  return input;<br>}</code></pre>
 we define a function that simply returns the parameter <code>input</code>.
 Parameters are variables. With
 <pre><code>let result = give('apple');</code></pre>
@@ -72,9 +72,9 @@ This return is assigned to the variable <code>result</code>. Finally, <code>resu
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>let echo = function(sound) {
+    <div id="hint-area" class="paragraph"><pre><code>function echo(sound) {
   ...
-};</code></pre></div>
+}</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -82,9 +82,9 @@ This return is assigned to the variable <code>result</code>. Finally, <code>resu
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let echo = function(sound) {
+    <div id="solution-area" class="paragraph"><pre><code>function echo(sound) {
   return sound;
-};</code></pre></div>
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

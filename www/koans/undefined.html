@@ -68,9 +68,9 @@ Variablen, die nicht initialisiert wurden, haben den Wert <code>undefined</code>
 Nicht initialisierte Variablen können auch bei Funktionsaufrufen vorkommen. Ruft man eine Funktion, die einen Parameter
 erwartet, ohne Argument auf, dann erhält der Funktionsparameter den Wert <code>undefined</code>.
 
-<pre><code>let echo = function(x) {
+<pre><code>function echo(x) {
   return x;
-};
+}
 
 // Aufruf ohne Argument
 let y = echo();</code></pre>
