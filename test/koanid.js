@@ -1,6 +1,6 @@
 const fs = require('fs');
 const assert = require('assert');
-eval(fs.readFileSync('src/www/js/lib/koans.js').toString()); // load koans.js
+eval(fs.readFileSync('src/www_root/js/lib/koans.js').toString()); // load koans.js
 
 testKoanIdsIn("src/koans/core/de/");
 testKoanIdsIn("src/koans/core/en/");
@@ -12,8 +12,8 @@ function testKoanIdsIn(koansDirName) {
 
     // Array containing filenames. E.g.: [array.js, bool.js, ...]
     let koansDir = fs.readdirSync(koansDirName);
-    koansDir.forEach(function(koanFileName) {  
-        
+    koansDir.forEach(function(koanFileName) {
+
       describe(koanFileName, function() {
 
         it('should have had proper id', function() {

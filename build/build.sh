@@ -3,17 +3,17 @@ rm -r -f www/*
 rm -r -f src/tmp/*
 echo "Successfully cleaned target and tmp."
 
-# copy unmodified files from src/www (except js)
-cp src/www/*.html www/
-cp -r src/www/css/ www/css
-cp -r src/www/en/ www/en
-cp -r src/www/img www/img
+# copy unmodified files from src/www_root (except js)
+cp src/www_root/*.html www/
+cp -r src/www_root/css/ www/css
+cp -r src/www_root/en/ www/en
+cp -r src/www_root/img www/img
 mkdir www/koans
 mkdir www/en/koans
 echo "Successfully copied base files."
 
 # minify and copy js
-babel src/www/js -d www/js
+babel src/www_root/js -d www/js
 
 browserify src/js/nodeutil.js -o www/js/util/nodeutil.js
 echo "Successfully browserified nodeutil."

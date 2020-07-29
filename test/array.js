@@ -2,17 +2,17 @@ const fs = require('fs');
 const assert = require('assert');
 
 // Read in testcode.
-eval(fs.readFileSync('src/www/js/util/array.js').toString());
+eval(fs.readFileSync('src/www_root/js/util/array.js').toString());
 
 describe('jshero.array', function() {
   describe('#isEqual()', function() {
-    
+
     const isEqual = jshero.array.isEqual;
 
     it('should return true for two empty arrays', function() {
       assert.strictEqual(isEqual([], []), true);
     });
-    
+
     it('should return true for arrays with equal numbers', function() {
       assert.strictEqual(isEqual([1, 2, 3], [1, 2, 3]), true);
     });

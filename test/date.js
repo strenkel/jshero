@@ -2,12 +2,12 @@ const fs = require('fs');
 const assert = require('assert');
 
 // Read in testcode.
-eval(fs.readFileSync('src/www/js/util/date.js').toString());
+eval(fs.readFileSync('src/www_root/js/util/date.js').toString());
 
 
 describe('jshero.date', function() {
   describe('#isDate()', function() {
-    
+
     const isDate = jshero.date.isDate;
 
     it('should return true for a normal Date', function() {
@@ -104,7 +104,7 @@ describe('jshero.date', function() {
     it('should return false when undefined is passed', function() {
       assert.strictEqual(isEqual(new Date(2019, 10, 10)), false);
     });
-    
+
   });
 
   describe('#toString()', function() {
