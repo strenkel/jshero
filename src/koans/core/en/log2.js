@@ -14,8 +14,8 @@ console.log(scientist);</code></pre>
 The variable <code>scientist</code> is logged.
 The console outputs <code>'Ken Thompson'</code>.`,
 
-    task: `Write a function <code>log</code>, that takes a parameter and logs this parameter.
-<code>log('Ken Thompson')</code> should log <code>'Ken Thompson'</code>.`,
+    task: `Write a function <code>log</code>, that takes a parameter and logs this parameter.<br><br>
+Example: <code>log('Ken Thompson')</code> should log <code>'Ken Thompson'</code>.`,
 
     hint: `<pre><code>function log(value) {
   ...

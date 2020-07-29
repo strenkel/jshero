@@ -19,9 +19,9 @@ The following function appends <code>' is great!'</code> to the passed parameter
 
 <code>praise('JavaScript')</code> will return <code>'JavaScript is great!'</code>.`,
 
-    task: `Write a function <code>greet</code> having one parameter and returning <code>'Hello &lt;parameter&gt;!'</code>.
-<code>greet('Ada')</code> should return <code>'Hello Ada!'</code> and <code>greet('Tayo')</code> should return
-<code>'Hello Tayo!'</code>.`,
+    task: `Write a function <code>greet</code> having one parameter and returning <code>'Hello &lt;parameter&gt;!'</code>.<br><br>
+Example: <code>greet('Ada')</code> should return <code>'Hello Ada!'</code> and <code>greet('Grace')</code> should return
+<code>'Hello Grace!'</code>.`,
 
     hint: `<pre><code>function greet(name) {
   return ...
@@ -46,7 +46,11 @@ The following function appends <code>' is great!'</code> to the passed parameter
       },
 
       function() {
-        return testutil.assert_functionReturns("greet('Tayo')", 'Hello Tayo!');
+        return testutil.assert_functionReturns("greet('Grace')", 'Hello Grace!');
+      },
+
+      function() {
+        return testutil.assert_functionReturns("greet('Joan')", 'Hello Joan!');
       }
 
     ]
