@@ -18,17 +18,17 @@ If the second parameter is not set, all the characters from start position to th
 The first word are all characters up to the first space.
 <code>firstWord('see and stop')</code> should return <code>'see'</code>.`,
 
-  hint: `<pre><code>let firstWord = function(s) {
+  hint: `<pre><code>function firstWord(s) {
 // Determine with indexOf
 // the position of the
 // first space. Then use
 // the substr method.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let firstWord = function(s) {
+  solution: `<pre><code>function firstWord(s) {
   let firstBlank = s.indexOf(' ');
   return s.substr(0, firstBlank);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

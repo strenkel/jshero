@@ -73,9 +73,9 @@ If the search string does not occur twice, <code>-1</code> should be returned.
         <span id="hint-open-close">+</span> Hint
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>let secondIndexOf = function(s1, s2) {
+    <div id="hint-area" class="paragraph"><pre><code>function secondIndexOf(s1, s2) {
 // Use indexOf twice.
-};</code></pre></div>
+}</code></pre></div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -83,10 +83,10 @@ If the search string does not occur twice, <code>-1</code> should be returned.
         <span id="solution-open-close">+</span> Solution
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>let secondIndexOf = function(s1, s2) {
+    <div id="solution-area" class="paragraph"><pre><code>function secondIndexOf(s1, s2) {
   let firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
-};</code></pre></div>
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

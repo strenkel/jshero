@@ -9,8 +9,8 @@
     lesson: 'Now we want to practice logging together with string concatenation.',
 
     task: `Write a function <code>shout</code> that takes a string and
-returns this string duplicated. In addition, the return should be logged.
-The call <code>shout('Fire')</code> should return <code>'FireFire'</code> and should log <code>'FireFire'</code>.`,
+returns this string duplicated. In addition, the return should be logged.<br><br>
+Example: <code>shout('Fire')</code> should return <code>'FireFire'</code> and should log <code>'FireFire'</code>.`,
 
     hint: `<pre><code>function shout(word) {
   let result = word + word;
@@ -38,11 +38,11 @@ The call <code>shout('Fire')</code> should return <code>'FireFire'</code> and sh
       },
 
       function() {
-        return testutil.assert_functionReturns("shout('Run')", 'RunRun');
+        return testutil.assert_functionLogs("shout('Fire')", 'FireFire');
       },
 
       function() {
-        return testutil.assert_functionLogs("shout('Fire')", 'FireFire');
+        return testutil.assert_functionReturns("shout('Run')", 'RunRun');
       },
 
       function() {

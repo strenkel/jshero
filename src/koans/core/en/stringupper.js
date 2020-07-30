@@ -22,16 +22,16 @@ let output = town.toUpperCase();</code/></pre>
 Now <code>output</code> has the value <code>'mthatha'</code>.`,
 
   task: `Write a function <code>toCase</code> that takes a string and returns that string in
-lowercase and uppercase with <code>-</code> as delimiter.
-<code>toCase('Mthatha')</code> should return <code>'mthatha-MTHATHA'</code>.`,
+lowercase and uppercase with <code>-</code> as delimiter.<br><br>
+Example: <code>toCase('Mthatha')</code> should return <code>'mthatha-MTHATHA'</code>.`,
 
-  hint: `<pre><code>let toCase = function(text) {
+  hint: `<pre><code>function toCase(text) {
   return ... + '-' + ...;
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let toCase = function(text) {
+  solution: `<pre><code>function toCase(text) {
   return text.toLowerCase() + '-' + text.toUpperCase();
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
 

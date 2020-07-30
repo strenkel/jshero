@@ -20,9 +20,9 @@ Variables that were not initialized have the value <code>undefined</code>.<br><b
 Uninitialized variables can also occur on function calls.
 If you call a function with a parameter without an argument, the parameter gets the value <code>undefined</code>:
 
-<pre><code>let echo = function(x) {
+<pre><code>function echo(x) {
   return x;
-};
+}
 
 // function call without argument
 let y = echo();</code></pre>

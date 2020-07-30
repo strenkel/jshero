@@ -16,13 +16,13 @@ If the index is larger than the index of the last character, the empty string is
     task: `Write a function <code>shortcut</code> that takes two strings and returns the initial letters of theses strings.
 <code>shortcut('Amnesty', 'International')</code> should return <code>'AI'</code>.`,
 
-    hint: `<pre><code>let shortcut = function(s1, s2) {
+    hint: `<pre><code>function shortcut(s1, s2) {
   ...
-};</code></pre>`,
+}</code></pre>`,
 
-    solution: `<pre><code>let shortcut = function(s1, s2) {
+    solution: `<pre><code>function shortcut(s1, s2) {
   return s1.charAt(0) + s2.charAt(0);
-};</code></pre>`,
+}</code></pre>`,
 
     tests: [
 

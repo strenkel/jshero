@@ -18,18 +18,18 @@ Thus <code>n2</code> is <code>-1</code>. The <code>indexOf</code> method is case
 and determining the first occurrence of the second string in the first string. The function should be case insensitive.
 <code>indexOfIgnoreCase('bit','it')</code> and <code>indexOfIgnoreCase('bit','IT')</code> should return <code>1</code>.`,
 
-  hint: `<pre><code>let indexOfIgnoreCase = function(s1, s2) {
+  hint: `<pre><code>function indexOfIgnoreCase(s1, s2) {
 // Change s1 and s2
 // first to lowercase.
 // Then use the
 // indexOf method.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let indexOfIgnoreCase = function(s1, s2) {
+  solution: `<pre><code>function indexOfIgnoreCase(s1, s2) {
   let s1Lower = s1.toLowerCase();
   let s2Lower = s2.toLowerCase();
   return s1Lower.indexOf(s2Lower);
-};</code></pre>`,
+}</code></pre>`,
 
   tests: [
     function() {

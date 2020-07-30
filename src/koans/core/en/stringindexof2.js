@@ -20,14 +20,14 @@ and determining the second occurrence of the second string in the first string.
 If the search string does not occur twice, <code>-1</code> should be returned.
 <code>secondIndexOf('White Rabbit', 'it')</code> should return <code>10</code>.`,
 
-  hint: `<pre><code>let secondIndexOf = function(s1, s2) {
+  hint: `<pre><code>function secondIndexOf(s1, s2) {
 // Use indexOf twice.
-};</code></pre>`,
+}</code></pre>`,
 
-  solution: `<pre><code>let secondIndexOf = function(s1, s2) {
+  solution: `<pre><code>function secondIndexOf(s1, s2) {
   let firstIndex = s1.indexOf(s2);
   return s1.indexOf(s2, firstIndex + 1);
-};</code></pre>`,
+}</code></pre>`,
 
 
   tests: [

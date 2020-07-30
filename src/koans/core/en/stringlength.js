@@ -18,8 +18,8 @@ charNumber = name.length;</code/></pre>
 <pre><code>charNumber = ''.length;</code/></pre>
 The empty string has no characters. The value of <code>charNumber</code> is <code>0</code>.`,
 
-  task: `Write a function <code>length</code> that takes a string and returns the number of characters of the string.
-<code>length('sun')</code> should return <code>3</code>.`,
+  task: `Write a function <code>length</code> that takes a string and returns the number of characters of the string.<br><br>
+Example: <code>length('sun')</code> should return <code>3</code>.`,
 
   tests: [
 
