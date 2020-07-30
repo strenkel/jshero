@@ -13,7 +13,8 @@ let name = input.trim();</code></pre>
 Notice that <code>input</code> still contains the string <code>' Rosa Parks '</code>.`,
 
   task: `Write a function <code>firstChar</code>, which returns the first character that is not a space
-when a string is passed. <code>firstChar(' Rosa Parks ')</code> should return <code>'R'</code>.`,
+when a string is passed.<br><br>
+Example: <code>firstChar(' Rosa Parks ')</code> should return <code>'R'</code>.`,
 
   hint: `<pre><code>function firstChar(text) {
 // Trim first.

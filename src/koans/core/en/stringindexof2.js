@@ -17,8 +17,8 @@ Starting our search at position <code>3</code> it will be found. <code>n2</code>
 
   task: `Write a function <code>secondIndexOf</code>, taking two strings
 and determining the second occurrence of the second string in the first string.
-If the search string does not occur twice, <code>-1</code> should be returned.
-<code>secondIndexOf('White Rabbit', 'it')</code> should return <code>10</code>.`,
+If the search string does not occur twice, <code>-1</code> should be returned.<br><br>
+Example: <code>secondIndexOf('White Rabbit', 'it')</code> should return <code>10</code>.`,
 
   hint: `<pre><code>function secondIndexOf(s1, s2) {
 // Use indexOf twice.

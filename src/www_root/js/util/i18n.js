@@ -89,8 +89,8 @@ jshero.i18n = (function() {
     functionReturnsDate: "<code>%0</code> returns %1.",
     functionNotReturnsDate: "<code>%0</code> does not return %1, but %2.",
     functionNotReturnsValidDate: "<code>%0</code> does not return %1, but <code>%2</code>.",
-    correctNumOfParam: "<code>%0</code> has %1 parameter.",
-    wrongNumOfParam: "<code>%0</code> has not %1, but %2 parameter.",
+    correctNumOfParam: "<code>%0</code> has %1 parameter(s).",
+    wrongNumOfParam: "<code>%0</code> has not %1, but %2 parameter(s).",
     varHasValue: "<code>%0</code> has a value.",
     varHasNoValue: "<code>%0</code> has no value.",
     varHasValueOf: "<code>%0</code> has value of <code>%1</code>.",
@@ -106,7 +106,7 @@ jshero.i18n = (function() {
   dic = dic_en; // default
 
   /**
-     * @param {String} lang, e.g. "de", "en" 
+     * @param {String} lang, e.g. "de", "en"
      */
   var setLanguage = function(language) {
     if (language === "de") {

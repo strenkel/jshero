@@ -15,8 +15,8 @@ The second parameter specifies the number of characters to extract.
 If the second parameter is not set, all the characters from start position to the end of the string are extracted.`,
 
   task: `Write a function <code>firstWord</code>, taking a string and returning the first word in that string.
-The first word are all characters up to the first space.
-<code>firstWord('see and stop')</code> should return <code>'see'</code>.`,
+The first word are all characters up to the first space.<br><br>
+Example: <code>firstWord('see and stop')</code> should return <code>'see'</code>.`,
 
   hint: `<pre><code>function firstWord(s) {
 // Determine with indexOf

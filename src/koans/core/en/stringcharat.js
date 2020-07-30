@@ -13,8 +13,8 @@ let char9 = 'Frantz'.charAt(9);</code></pre>
 The first character has the index 0. So <code>char0</code> has the value <code>'F'</code> and <code>char1</code> has the value <code>'r'</code>.
 If the index is larger than the index of the last character, the empty string is returned. So <code>char9</code> has the value <code>''</code>.`,
 
-    task: `Write a function <code>shortcut</code> that takes two strings and returns the initial letters of theses strings.
-<code>shortcut('Amnesty', 'International')</code> should return <code>'AI'</code>.`,
+    task: `Write a function <code>shortcut</code> that takes two strings and returns the initial letters of theses strings.<br><br>
+Example: <code>shortcut('Amnesty', 'International')</code> should return <code>'AI'</code>.`,
 
     hint: `<pre><code>function shortcut(s1, s2) {
   ...
