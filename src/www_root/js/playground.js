@@ -56,16 +56,15 @@
   /**
    * Eval code in separate function scope.
    * So we can't overwrite variables in management code with test code.
-   * 
-   * @param {String} code 
+   *
+   * @param {String} code
    */
   var evalCode = function(code) {
     eval(code);
   };
 
   var showExample = function() {
-    var code = 'var hello = function() {\n  return "Hello world!";\n};\n\n';
-    code = code + 'console.log("hello() returns:");\n';
+    var code = "function hello() {\n  return 'Hello world!';\n}\n\n";
     code = code + 'console.log(hello());';
     codeArea.set(code);
   };
