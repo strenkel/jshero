@@ -16,8 +16,8 @@ The original string remains unchanged. Only the first occurrence is replaced:
 
 <code>newstr</code> has the value <code>'Dida'</code> and not <code>'Didi'</code>.`,
 
-  task: `Write a function <code>normalize</code>, that replaces <code>'-'</code> with <code>'/'</code> in a date string.
-<code>normalize('20-05-2017')</code> should return <code>'20/05/2017'</code>.`,
+  task: `Write a function <code>normalize</code>, that replaces <code>'-'</code> with <code>'/'</code> in a date string.<br><br>
+Example: <code>normalize('20-05-2017')</code> should return <code>'20/05/2017'</code>.`,
 
   tests: [
     function() {
