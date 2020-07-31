@@ -17,8 +17,8 @@ The special: Both functions can be called with an arbitrary number of arguments.
 
     task: `Write a function <code>midrange</code>, that calculates the midrange of 3 numbers.
 The <a href='https://en.wikipedia.org/wiki/Mid-range'>midrange</a>
-is the mean of the smallest and largest number.
-<code>midrange(3, 9, 1)</code> should return <code>(9+1)/2</code> = <code>5</code>.`,
+is the mean of the smallest and largest number.<br><br>
+Example: <code>midrange(3, 9, 1)</code> should return <code>(9+1)/2</code> = <code>5</code>.`,
 
     hint: `<pre><code>function midrange(a, b, c) {
   let min = Math.min(a, b, c);
