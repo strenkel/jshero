@@ -21,7 +21,7 @@ programmieren.`,
 
   task: `Schreibe eine Funktion <code>xor</code>, die zwei boolesche Werte als Parameter entgegennimmt.
 Die Rückgabe der Funktion soll <code>true</code> sein, wenn beide Paramter verschieden sind.
-In den anderen Fällen soll die Rückgabe <code>false</code> sein.<br><br>D.h.: <code>xor(true, false)</code> und
+In den anderen Fällen soll die Rückgabe <code>false</code> sein.<br><br>D. h.: <code>xor(true, false)</code> und
 <code>xor(false, true)</code> sollen <code>true</code> liefern, <code>xor(true, true)</code> und
 <code>xor(false, false)</code> sollen <code>false</code> zurückgeben.`,
 

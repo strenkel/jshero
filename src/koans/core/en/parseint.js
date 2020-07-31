@@ -36,8 +36,8 @@ A detailed documentation of <code>parseInt</code> can be found at
 <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt'>Mozilla web docs</a>.`,
 
   task: `Write a function <code>add</code> that takes a string with a summation task and returns its result as a number.
-Two natural numbers should be added. The summation task is a string of the form '102+17'.
-<code>add('102+17')</code> should return <code>119</code>.`,
+Two natural numbers should be added. The summation task is a string of the form '102+17'.<br><br>
+Example: <code>add('102+17')</code> should return <code>119</code>.`,
 
   hint: `Determine the first summand with <code>parseInt</code>.
 Use <code>indexOf</code> to determine the position of the plus sign.

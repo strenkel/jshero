@@ -39,7 +39,7 @@ Ein Tag hat 24 * 60 * 60 * 1000 = 86400000 Millisekunden. <code>d3</code> ist al
 <pre><code>// Übergabe eines Datumsstrings
 let d4 = new Date('2017-3-8T16:31:10.117');</code></pre>
 
-Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d.h. in einer bestimmten Schreibweise, übergeben.
+Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d. h. in einer bestimmten Schreibweise, übergeben.
 <code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden. Diese Varainte ist jedoch nicht zu empfehlen,
 da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufweisen.`,
 
