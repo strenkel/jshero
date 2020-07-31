@@ -14,8 +14,8 @@ let x2 = (3 + 4) * 2;</code></pre>
 
 <code>x1</code> is <code>11</code> and <code>x2</code> is <code>14</code>.`,
 
-    task: `Write a function <code>mean</code> that takes 2 numbers and returns their mean value.
-<code>mean(1, 2)</code> should return <code>1.5</code>.`,
+    task: `Write a function <code>mean</code> that takes 2 numbers and returns their mean value.<br><br>
+Example: <code>mean(1, 2)</code> should return <code>1.5</code>.`,
 
     hint: `<pre><code>The mean value of two numbers
 x and y is (x + y) / 2.</code></pre>`,
@@ -36,6 +36,10 @@ x and y is (x + y) / 2.</code></pre>`,
 
       function() {
         return testutil.assert_functionReturns('mean(1, 2)', 1.5);
+      },
+
+      function() {
+        return testutil.assert_functionReturns('mean(5, 9)', 7);
       },
 
       function() {
