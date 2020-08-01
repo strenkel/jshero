@@ -25,8 +25,8 @@ If no condition is met, the final <code>else</code> block is executed.`,
   task: `Write a function <code>addWithSurcharge</code> that adds two amounts with surcharge.
 For each amount less than or equal to <code>10</code>, the surcharge is <code>1</code>.
 For each amount greater than <code>10</code> and less than or equal to <code>20</code>, the surcharge is <code>2</code>.
-For each amount greater than <code>20</code>, the surcharge is <code>3</code>.
-The call <code>addWithSurcharge(10, 30)</code> should return <code>44</code>.`,
+For each amount greater than <code>20</code>, the surcharge is <code>3</code>.<br><br>
+Example: <code>addWithSurcharge(10,&nbsp;30)</code> should return <code>44</code>.`,
 
   tests: [
     function() {

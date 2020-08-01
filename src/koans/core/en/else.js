@@ -19,8 +19,8 @@ either the <code>if</code> branch or the <code>else</code> branch is executed.`,
 
   task: `Write a function <code>addWithSurcharge</code> that adds two amounts with surcharge.
 For each amount less than or equal to <code>10</code>, the surcharge is <code>1</code>.
-For each amount greater than <code>10</code>, the surcharge is <code>2</code>.
-The call <code>addWithSurcharge(5, 15)</code> should return <code>23</code>.`,
+For each amount greater than <code>10</code>, the surcharge is <code>2</code>.<br><br>
+Example: <code>addWithSurcharge(5,&nbsp;15)</code> should return <code>23</code>.`,
 
   tests: [
     function() {

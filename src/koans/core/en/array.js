@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'array',
 
-  title: 'Creating arrays',
+  title: 'Arrays',
 
   lesson: `Arrays are objects for storing multiple values. Arrays are preferably created with square brackets.
 
@@ -14,8 +14,8 @@ let b = 12;
 let c = true;
 let someValues = [a, b, c];</code></pre>`,
 
-  task: `Write a function <code>toArray</code> that takes 2 values and returns these values in an array.
-<code>toArray(5,&nbsp;9)</code> should return the array <code>[5,&nbsp;9]</code>.`,
+  task: `Write a function <code>toArray</code> that takes 2 values and returns these values in an array.<br><br>
+Example: <code>toArray(5,&nbsp;9)</code> should return the array <code>[5,&nbsp;9]</code>.`,
 
   tests: [
 

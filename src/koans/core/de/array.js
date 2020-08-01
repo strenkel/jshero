@@ -4,7 +4,7 @@
 
     id: 'array',
 
-    title: 'Arrays anlegen',
+    title: 'Arrays',
 
     lesson: `Arrays sind Objekte zur Speicherung vieler, meist ähnlicher Werte. Diese sogenannten Elemente werden
 in einem Array der Reihe nach abgelegt. Arrays erzeugt man am besten mit eckigen Klammern.
