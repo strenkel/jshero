@@ -21,9 +21,9 @@ If <code>dice</code> does not have the value <code>6</code>, then <code>win</cod
 
   task: `Write a function <code>equals</code> that checks two values for strict equality.
 If the two values are equal, the string <code>'EQUAL'</code> should be returned.
-If they are unequal, you should get <code>'UNEQUAL'</code>.
-The call <code>equals(1, 1)</code> should return <code>'EQUAL'</code>,
-the call <code>equals(1, 2)</code> should return <code>'UNEQUAL'</code>.`,
+If they are unequal, you should get <code>'UNEQUAL'</code>.<br><br>
+Example: <code>equals(1,&nbsp;1)</code> should return <code>'EQUAL'</code> and
+<code>equals(1,&nbsp;2)</code> should return <code>'UNEQUAL'</code>.`,
 
   tests: [
 

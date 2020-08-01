@@ -21,8 +21,9 @@ let x3 = x1 || x2;</code></pre>
 
   task: `Write a function <code>nand</code> that takes two Boolean values. If both values are <code>true</code>,
 the result should be <code>false</code>. In the other cases the return should be <code>true</code>.<br><br>
-I.e.: The call <code>nand(true, true)</code> should return <code>false</code>. The calls <code>nand(true, false)</code>,
-<code>nand(false, true)</code> and <code>nand(false, false)</code> should return <code>true</code>.`,
+I.e.: The call <code>nand(true,&nbsp;true)</code> should return <code>false</code>. The calls
+<code>nand(true,&nbsp;false)</code>, <code>nand(false,&nbsp;true)</code> and <code>nand(false,&nbsp;false)</code>
+should return <code>true</code>.`,
 
   hint: `<pre><code>function nand(a, b) {
   let and = a && b;

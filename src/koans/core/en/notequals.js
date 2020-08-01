@@ -13,10 +13,10 @@ Both comparisons result in <code>true</code>.
 The first one, because the two strings differ in upper and lower case.
 The second, because the two values differ in type.`,
 
-  task: `Write a function <code>unequal</code> that checks 3 values for strict inequality.
-The function should return <code>true</code> if all three parameters are strict unequal.
-Otherwise <code>false</code>. The call <code>unequal(1, 2, 3)</code> should return <code>true</code>
-and <code>unequal(1, 1, 2)</code> should return <code>false</code>.`,
+  task: `Write a function <code>unequal</code> that checks 3 values for strict inequality. The function
+should return <code>true</code> if all three parameters are strict unequal. Otherwise <code>false</code>.<br><br>
+Example: <code>unequal(1,&nbsp;2,&nbsp;3)</code> should return <code>true</code> and
+<code>unequal(1,&nbsp;1,&nbsp;2)</code> should return <code>false</code>.`,
 
   tests: [
     function() {

@@ -7,9 +7,9 @@ jshero.koans.add({
   lesson: 'The following task can be solved by an interaction of strict equality and the modulo operator.',
 
   task: `Write a function <code>isEven</code> that checks if a passed number is even.
-If the given number is even, <code>true</code> should be returned, otherwise <code>false</code>.
-The call <code>isEven(2)</code> should return <code>true</code> and
-<code>isEven(3)</code> should return <code>false</code>.`,
+If the given number is even, <code>true</code> should be returned, otherwise <code>false</code>.<br><br>
+Example: <code>isEven(2)</code> should return <code>true</code> and <code>isEven(3)</code> should
+return <code>false</code>.`,
 
   tests: [
     function() {

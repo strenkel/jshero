@@ -21,8 +21,9 @@ In the case of strict equality, it is also important that the two compared value
 <code>c3</code> is <code>false</code>, because different data types are compared here.
 On the left side of the comparison is a number, on the right side a string.`,
 
-  task: `Write a function <code>equals</code> that checks two values for strict equality. <code>equals(1, 1)</code>
-should return <code>true</code> and <code>equals(1, 2)</code> should return <code>false</code>.`,
+  task: `Write a function <code>equals</code> that checks two values for strict equality.<br><br>
+Example: <code>equals(1,&nbsp;1)</code> should return <code>true</code> and <code>equals(1,&nbsp;2)</code> should
+return <code>false</code>.`,
 
   hint: `<pre><code>function equals(a, b) {
   return ...

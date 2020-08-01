@@ -12,8 +12,9 @@ let v3 = 5 < 6;
 let v4 = 5 <= 5;</code></pre>`,
 
   task: `Write a function <code>isThreeDigit</code> that checks if a number is greater than
-or equal to 100 and less than 1000. <code>isThreeDigit(500)</code> should return <code>true</code>.
-The call <code>isThreeDigit(50)</code> should return <code>false</code>.`,
+or equal to 100 and less than 1000.<br><br>
+Example: <code>isThreeDigit(500)</code> should return <code>true</code> and <code>isThreeDigit(50)</code>
+should return <code>false</code>.`,
 
   tests: [
 
