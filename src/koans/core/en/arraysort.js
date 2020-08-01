@@ -6,8 +6,9 @@ jshero.koans.add({
 
   lesson: 'Now we can sort arrays with given length.',
 
-  task: `Write a function <code>sort</code> that takes an array filled with 3 numbers and returns these 3 numbers sorted in ascending order as an array.
-<code>sort([2,&nbsp;3,&nbsp;1])</code> should return <code>[1,&nbsp;2,&nbsp;3]</code>.`,
+  task: `Write a function <code>sort</code> that takes an array filled with 3 numbers and returns these 3 numbers sorted in
+ascending order as an array.<br><br>
+Example: <code>sort([2,&nbsp;3,&nbsp;1])</code> should return <code>[1,&nbsp;2,&nbsp;3]</code>.`,
 
   tests: [
     function() {

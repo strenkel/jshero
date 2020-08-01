@@ -18,8 +18,8 @@ let len2 = languages.length;</code></pre>
 The empty array contains no elements. <code>len0</code> is <code>0</code>.
 Now we fill the array step by step. <code>len1</code> is <code>1</code> and <code>len2</code> is <code>2</code>.`,
 
-    task: `Write a function <code>getLastElement</code> that takes an array and returns the last element of the array.
-<code>getLastElement([1, 2])</code> should return <code>2</code>.`,
+    task: `Write a function <code>getLastElement</code> that takes an array and returns the last element of the array.<br><br>
+Example: <code>getLastElement([1,&nbsp;2])</code> should return <code>2</code>.`,
 
     tests: [
 

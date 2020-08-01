@@ -11,8 +11,8 @@ let c = languages[0];
 let cPlusPlus = languages[1];
 let java = languages[2];</code></pre>`,
 
-  task: `Write a function <code>getFirstElement</code> that takes an array and returns the first element of the array.
-<code>getFirstElement([1, 2])</code> should return <code>1</code>.`,
+  task: `Write a function <code>getFirstElement</code> that takes an array and returns the first element of the array.<br><br>
+Example: <code>getFirstElement([1, 2])</code> should return <code>1</code>.`,
 
   tests: [
 

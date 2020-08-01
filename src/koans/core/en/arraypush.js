@@ -30,8 +30,8 @@ Finally we get the array <code>['C', 'Java', 'JavaScript']</code>.`,
 
   task: `Write a function <code>rotate</code> that rotates the elements of an array.
 All elements should be moved one position to the left.
-The 0th element should be placed at the end of the array. The rotated array should be returned.
-<code>rotate(['a', 'b', 'c'])</code> should return <code>['b', 'c', 'a']</code>.`,
+The 0th element should be placed at the end of the array. The rotated array should be returned.<br><br>
+Example: <code>rotate(['a',&nbsp;'b',&nbsp;'c'])</code> should return <code>['b',&nbsp;'c',&nbsp;'a']</code>.`,
 
   tests: [
     function() {

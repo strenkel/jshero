@@ -15,9 +15,9 @@ The two existing arrays <code>a1</code> and <code>a2</code> will not be changed.
 
   task: `Write a function <code>concatUp</code> that concatenate two arrays.
 The longer array should be appended to the shorter array.
-If both arrays are equally long, the second array should be appended to the first array.
-<code>concatUp([1, 2], [3])</code> should return <code>[3, 1, 2]</code>
-and <code>concatUp([5, 7], [6, 8])</code> should return <code>[5, 7, 6, 8]</code>.`,
+If both arrays are equally long, the second array should be appended to the first array.<br><br>
+Example: <code>concatUp([1,&nbsp;2],&nbsp;[3])</code> should return <code>[3,&nbsp;1,&nbsp;2]</code>
+and <code>concatUp([5,&nbsp;7],&nbsp;[6,&nbsp;8])</code> should return <code>[5,&nbsp;7,&nbsp;6,&nbsp;8]</code>.`,
 
   tests: [
     function() {

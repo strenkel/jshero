@@ -28,8 +28,8 @@ Carrying this on, you get three- or multidimensional arrays.<br><br>
 In the second example, the <a href='https://en.wikipedia.org/wiki/Lo_Shu_Square'>Lo Shu Square</a>
 is stored in a two-dimensional array.`,
 
-    task: `Write a function <code>flat</code> that flattens a two-dimensional array with 3 entries.
-<code>flat(loshu)</code> should return <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code>.
+    task: `Write a function <code>flat</code> that flattens a two-dimensional array with 3 entries.<br><br>
+Example: <code>flat(loshu)</code> should return <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code>.
 Thereby <code>loshu</code> is the magic square from the example above.`,
 
     tests: [

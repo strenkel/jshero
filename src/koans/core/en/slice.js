@@ -15,8 +15,8 @@ The first parameter specifies the start index (included) and the second paramete
 The original array will not be modified.`,
 
   task: `Write a function <code>halve</code> that copies the first half of an array.
-With an odd number of array elements, the middle element should belong to the first half.
-<code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.`,
+With an odd number of array elements, the middle element should belong to the first half.<br><br>
+Example: <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.`,
 
   tests: [
     function() {

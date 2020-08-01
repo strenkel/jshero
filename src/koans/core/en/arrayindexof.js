@@ -17,9 +17,9 @@ For a complete reference see
 MDN&nbsp;web&nbsp;docs</a>.`,
 
   task: `Write a function <code>add</code> that adds an element to the end of an array.
-However, the element should only be added if it is not already in the array.
-<code>add([1, 2], 3)</code> should return <code>[1, 2, 3]</code> and <code>add([1, 2], 2)</code> should return
-<code>[1, 2]</code>.`,
+However, the element should only be added if it is not already in the array.<br><br>
+Example: <code>add([1,&nbsp;2],&nbsp;3)</code> should return <code>[1,&nbsp;2,&nbsp;3]</code> and
+<code>add([1,&nbsp;2],&nbsp;2)</code> should return <code>[1,&nbsp;2]</code>.`,
 
   tests: [
     function() {
