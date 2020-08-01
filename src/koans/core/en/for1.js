@@ -35,8 +35,8 @@ The loop condition <code>3 < 3</code> is no longer fulfilled. The loop is termin
 after the loop. Our code example has added all natural numbers smaller than 3.`,
 
     task: `Write a function <code>addTo</code> that accepts a number as a parameter and adds all natural numbers
-smaller or equal than the parameter. The result is to be returned. <code>addTo(3)</code> should return
-<code>1+2+3</code> = <code>6</code>.`,
+smaller or equal than the parameter. The result is to be returned.<br><br>
+Example: <code>addTo(3)</code> should return <code>1+2+3</code> = <code>6</code>.`,
 
     hint: `<pre><code>function addTo(n) {
   let sum = 0;

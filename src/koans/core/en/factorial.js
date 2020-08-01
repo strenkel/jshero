@@ -11,16 +11,16 @@
 The factorial of a positive integer n, denoted by n!, is the product of all positive integers less than or equal to n.
 For example, 3! = 1*2*3 = 6. By definition, 0! = 1.`,
 
-    task: `Write a function <code>factorial</code> that calculates the factorial of a positive integer.
-<code>factorial(3)</code> should return <code>6</code>.`,
+    task: `Write a function <code>factorial</code> that calculates the factorial of a positive integer.<br><br>
+Example: <code>factorial(3)</code> should return <code>6</code>.`,
 
     hint: `<pre><code>function factorial(n) {
-      let result = 1;
-      for (...) {
-        ...
-      }
-      return result;
-    }</pre></code>`,
+  let result = 1;
+  for (...) {
+    ...
+  }
+  return result;
+}</pre></code>`,
 
     solution: `<pre><code>function factorial(n) {
   let result = 1;

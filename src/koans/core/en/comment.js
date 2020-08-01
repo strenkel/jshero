@@ -45,8 +45,8 @@ Comments can't be checked with the tests used here.
 It follows a task where you have to apply much of what you have learned so far.`,
 
   task: `Write a function <code>median</code> that takes an array of ascending numbers and returns the
-<a href='https://en.wikipedia.org/wiki/Median'>median</a> of that numbers.
-<code>median([1, 2, 10])</code> should return <code>2</code> and <code>median([1, 2, 10, 100])</code> should return
+<a href='https://en.wikipedia.org/wiki/Median'>median</a> of that numbers.<br><br>
+Example: <code>median([1, 2, 10])</code> should return <code>2</code> and <code>median([1, 2, 10, 100])</code> should return
 <code>6</code>.`,
 
   hint: `The median of a sorted series of numbers is the value in the middle.
