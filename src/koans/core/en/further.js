@@ -7,8 +7,8 @@ jshero.koans.add({
   lesson: 'JS Hero will be continued. Here\'s one last exercise.',
 
   task: `Write a function <code>digitsum</code> that calculates the digit sum of an integer.
-The digit sum of an integer is the sum of all its digits.
-<code>digitsum(192)</code> should return <code>12</code>.`,
+The digit sum of an integer is the sum of all its digits.<br><br>
+Example: <code>digitsum(192)</code> should return <code>12</code>.`,
 
   tests: [
     function() {

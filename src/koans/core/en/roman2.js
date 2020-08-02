@@ -8,8 +8,8 @@
 
     lesson: `Now let's try it vice-versa.`,
 
-    task: `Write a function <code>roman</code> that converts an Arabic number (up to 1000) into a Roman numeral.
-    <code>roman(483)</code> should return <code>'CDLXXXIII'</code>.`,
+    task: `Write a function <code>roman</code> that converts an Arabic number (up to 1000) into a Roman numeral.<br><br>
+Example: <code>roman(483)</code> should return <code>'CDLXXXIII'</code>.`,
 
     tests: [
 
