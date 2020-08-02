@@ -17,8 +17,8 @@ for (let i = 0; i < 3; i++) {
 
 The code snippet calculates the sum of all elements of a two-dimensional array.`,
 
-  task: `Write a function <code>sum</code> that calculates the sum of all elements of a two-dimensional array.
-<code>sum([[1, 2], [3]])</code> should return <code>6</code>.`,
+  task: `Write a function <code>sum</code> that calculates the sum of all elements of a two-dimensional array.<br><br>
+Example: <code>sum([[1, 2], [3]])</code> should return <code>6</code>.`,
 
   tests: [
     function() {

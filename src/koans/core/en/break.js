@@ -39,8 +39,8 @@ If <code>i</code> is an even number, the following applies: i modulo 2 = 0. The 
 
   task: `Write a function <code>isPrime</code> that checks whether a passed number is
 <a href="https://en.wikipedia.org/wiki/Prime_number">prime</a>.
-In case of a prime number it should return <code>true</code>, otherwise <code>false</code>.
-The call <code>isPrime(2)</code> should return <code>true</code> and <code>isPrime(4)</code> should return
+In case of a prime number it should return <code>true</code>, otherwise <code>false</code>.<br><br>
+Example: <code>isPrime(7)</code> should return <code>true</code> and <code>isPrime(8)</code> should return
 <code>false</code>.`,
 
   tests: [

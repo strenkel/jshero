@@ -18,8 +18,8 @@ As long as <code>threeX</code> has less than 3 characters, it is supplemented by
 If <code>threeX</code> has the length 3, the loop is terminated.
 <code>threeX</code> has the value <code>'xxx'</code>.`,
 
-  task: `Write a function <code>spaces</code> that takes a natural number n and returns a string of n spaces.
-<code>spaces(1)</code> should return <code>' '</code>.`,
+  task: `Write a function <code>spaces</code> that takes a natural number n and returns a string of n spaces.<br><br>
+Example: <code>spaces(1)</code> should return <code>' '</code>.`,
 
   tests: [
     function() {

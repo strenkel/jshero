@@ -28,8 +28,8 @@ if ( Number.isNaN(age) ) {
 }</code></pre>`,
 
     task: `Write a function <code>parseFirstInt</code> that takes a string and returns the first integer present in the
-string. If the string does not contain an integer, you should get <code>NaN</code>.
-<code>parseFirstInt('No. 10')</code> should return <code>10</code> and <code>parseFirstInt('Babylon')</code> should
+string. If the string does not contain an integer, you should get <code>NaN</code>.<br><br>
+Example: <code>parseFirstInt('No. 10')</code> should return <code>10</code> and <code>parseFirstInt('Babylon')</code> should
 return <code>NaN</code>.`,
 
     tests: [

@@ -9,8 +9,8 @@ jshero.koans.add({
 <a href='https://en.wikipedia.org/wiki/Greatest_common_divisor'>greatest common divisor (gcd)</a>.
 The greatest common divisor of two natural numbers a and b is the largest natural numbers that divides a and b.`,
 
-  task: `Write a function <code>gcd</code> that takes two natural numbers and calculates their gcd.
-<code>gcd(6, 15)</code> should return <code>3</code>.`,
+  task: `Write a function <code>gcd</code> that takes two natural numbers and calculates their gcd.<br><br>
+  Example: <code>gcd(6, 15)</code> should return <code>3</code>.`,
 
   tests: [
     function() {

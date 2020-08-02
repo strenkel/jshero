@@ -45,8 +45,8 @@ Therefore, <code>charAt</code> could contain the following code snippet:
 }</code></pre>`,
 
     task: `Write a function <code>hello</code> having one parameter and returning <code>'Hello &lt;parameter&gt;!'</code>.
-The call <code>hello('Nala')</code> should return <code>'Hello Nala!'</code>.
-If <code>hello</code> is called without an argument, <code>'Hello world!'</code> should be returned.`,
+If <code>hello</code> is called without an argument, <code>'Hello world!'</code> should be returned.<br><br>
+Example: <code>hello('Nala')</code> should return <code>'Hello Nala!'</code>.`,
 
     tests: [
       function() {

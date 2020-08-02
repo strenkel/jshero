@@ -13,7 +13,8 @@ for (let i = 0; i < myArray.length; i++) {
 }</code></pre>`,
 
   task: `Write a function <code>mean</code> that accepts an array filled with numbers
-and returns the arithmetic mean of those numbers. <code>mean([1, 2, 3])</code> should return <code>(1+2+3)/3</code> = <code>2</code>.`,
+and returns the arithmetic mean of those numbers.<br><br>
+Example: <code>mean([1, 2, 3])</code> should return <code>(1+2+3)/3</code> = <code>2</code>.`,
 
   tests: [
     function() {

@@ -36,8 +36,8 @@ We iterate over all passed arguments and sum them up.
 Thereby <code>arguments.length</code> returns the number of passed arguments.
 Now we can call <code>add</code> with an arbitrary number of arguments.`,
 
-  task: `Write a function <code>max</code> that calculates the maximum of an arbitrary number of numbers.
-<code>max(1, 2)</code> should return <code>2</code> and <code>max(2, 3, 1)</code> should return <code>3</code>.`,
+  task: `Write a function <code>max</code> that calculates the maximum of an arbitrary number of numbers.<br><br>
+Example: <code>max(1, 2)</code> should return <code>2</code> and <code>max(2, 3, 1)</code> should return <code>3</code>.`,
 
   tests: [
     function() {
