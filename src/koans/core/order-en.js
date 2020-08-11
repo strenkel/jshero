@@ -76,6 +76,7 @@ jshero.koans.initReorder(
     'stringsplit',
     'roman1',
     'roman2',
+    'euler1',
     'further'
   ]
 );

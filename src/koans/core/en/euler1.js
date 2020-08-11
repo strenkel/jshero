@@ -6,14 +6,13 @@
 
     title: 'Project Euler',
 
-    lesson: `Die folgende Aufgabe ist dem <a href='https://projecteuler.net'>Project Euler</a> entnommen.
-Es ist dort die erste Aufgabe. Das Project Euler ist eine Sammlung anspruchsvoller Aufgaben aus dem Bereich Mathematik
-und Informatik. Nach Anlegen eines Account kannst Du auch dort deine Lösung überprüfen.`,
+    lesson: `The following task is taken from <a href='https://projecteuler.net'>Project Euler</a>.
+It's the first task there. Project Euler is a series of challenging mathematical and computer programming problems.`,
 
-    task: `Schreibe eine Funktion <code>sumMultiples</code>, die eine natürliche Zahl n übergeben bekommt und die die Summe
-aller Vielfachen von 3 und von 5, die echt kleiner als n sind, zurückgibt.<br><br>
-Beispiel: Alle Vielfachen von 3 und 5 kleiner als 20 sind 3, 5, 6, 9, 10, 12, 15 und 18. Ihre Summe ist 78.
-<code>sumMultiples(20)</code> sollte also <code>78</code> ergeben.`,
+    task: `Write a function <code>sumMultiples</code> taking a natural number n and returning the sum of all
+multiples of 3 and of 5 that are truly less than n.<br><br>
+Example: All multiples of 3 and 5 less than 20 are 3, 5, 6, 9, 10, 12, 15 and 18. Their sum is 78.
+<code>sumMultiples(20)</code> should return <code>78</code>.`,
 
     tests: [
 
