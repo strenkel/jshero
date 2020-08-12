@@ -18,8 +18,9 @@ Es ist ein Design-Fehler, dass JavaScript zwei Werte für "kein Wert" besitzt. W
 
   task: `Schreibe eine Funktion <code>cutComment</code>, die eine Zeile JavaScript entgegennimmt
 und einen möglichen Zeilenkommentar getrimmt zurückgibt. Enthält die Zeile keinen Kommentar, soll <code>null</code>
-zurückgegeben werden. <code>cutCommt('let i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
-Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb eines Strings enthält.`,
+zurückgegeben werden. Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb
+eines Strings enthält.<br><br>
+Beispiel: <code>cutCommt('let foo; // bar')</code> sollte <code>'bar'</code> zurückgeben.`,
 
   tests: [
     function() {
@@ -31,7 +32,7 @@ Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zei
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("cutComment('let i; // Laufvariable')", 'Laufvariable');
+      return jshero.testutil.assert_functionReturns("cutComment('let foo; // bar')", 'bar');
     },
 
     function() {

@@ -69,8 +69,9 @@ Es ist ein Design-Fehler, dass JavaScript zwei Werte für "kein Wert" besitzt. W
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>cutComment</code>, die eine Zeile JavaScript entgegennimmt
 und einen möglichen Zeilenkommentar getrimmt zurückgibt. Enthält die Zeile keinen Kommentar, soll <code>null</code>
-zurückgegeben werden. <code>cutCommt('let i; // Laufvariable')</code> sollte <code>'Laufvariable'</code> zurückgeben.
-Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb eines Strings enthält.</div>
+zurückgegeben werden. Ein­fach­heits­hal­ber gehen wir davon aus, dass der Code kein Kommentar-Zeichen innerhalb
+eines Strings enthält.<br><br>
+Beispiel: <code>cutCommt('let foo; // bar')</code> sollte <code>'bar'</code> zurückgeben.</div>
     
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
