@@ -41,6 +41,7 @@ jshero.koans.initReorder(
     'random',
     'parseint',
     'numbertostring',
+    'numbertofixed',
     'bool',
     'nor',
     'xor',

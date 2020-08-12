@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="nor.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="bool.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="numbertofixed.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="numbertostring.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -52,52 +52,26 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Wahrheitswerte</h1>
+    <h1 id="koans-title">Number: toFixed()</h1>
     
-    <div id="koans-lesson" class="paragraph">Der dritte wichtige Datentyp neben Strings und Zahlen sind Wahrheitswerte. Sie werden auch boolesche Werte
-genannt. Boolesche Werte kennen nur zwei Zustände: <code>true</code> und <code>false</code>. Mit booleschen Werten kann
-man ähnlich "rechnen" wie mit Zahlen. JavaScript kennt drei boolesche Operatoren: '<code>&&</code> (und),
-<code>||</code> (oder) und <code>!</code> (nicht). Das Ergebnis dieser Operationen ist wieder ein boolescher Wert.
-<code>&&</code> verknüpft zwei boolesche Werte. Sind beide Werte <code>true</code>, ist das Ergebnis auch
-<code>true</code>. In allen anderen Fällen ist es <code>false</code>. Bei <code>||</code> ist das Ergebnis
-<code>false</code>, wenn beide Eingangswerte auch <code>false</code> sind. In  allen anderen Fällen ist das Ergebnis
-<code>true</code>. <code>!</code> wird nur auf einen booleschen Wert angewendet und invertiert diesen Wert: aus
-<code>true</code> wird <code>false</code> und aus <code>false</code> wird <code>true</code>.
+    <div id="koans-lesson" class="paragraph">Eine weitere Number-Methode ist <code>toFixed</code>. Sie gibt die Zahl als String mit festen Nachkommastellen zurück.
 
-<pre><code>let x1 = true && false;
-let x2 = !x1;
-let x3 = x1 || x2;</code></pre>
+<code><pre>let n = 7.25
+let zeroDigits = n.toFixed(0);
+let oneDigit = n.toFixed(1);
+let twoDigits = n.toFixed(2);
+let threeDigits = n.toFixed(3);</code></pre>
 
-<code>x1</code> ist <code>false</code>,  <code>x2</code> ist <code>true</code> und <code>x3</code> ist ebenfalls
-<code>true</code>.</div>
+<code>zeroDigits</code> hat den Wert <code>'7'</code>. Es hat keine Nachkommastellen. <code>oneDigit</code> hat den Wert
+<code>'7.3'</code>. Es wird wie bei <code>Math.round()</code> kaufmänisch gerundet. <code>twoDigits</code> hat den Wert
+<code>'7.25'</code>. Und <code>threeDigits</code> hat den Wert <code>'7.250'</code>. Hier werden fehlende Nachkommastellen
+mit 0 aufgefüllt.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>nand</code>, die zwei boolesche Werte als Parameter entgegennimmt. Die Rückgabe
-der Funktion soll <code>false</code> sein, wenn beide Paramter <code>true</code> sind. In den anderen Fällen soll die
-Rückgabe <code>true</code> sein.<br><br>D. h.: <code>nand(true, true)</code> soll <code>false</code> liefern,
-<code>nand(true, false)</code>, <code>nand(false, true)</code> und <code>nand(false, false)</code> sollen
-<code>true</code> zurückgeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toEuro</code>, die eine Zahl als Euro-Betrag ausgibt. Der Betrag soll zwei
+Nachkommastellen und ein angehängtes Euro-Zeichen besitzen. Dezimalpunkt soll das Komma sein.<br><br>
+Beispiel: <code>toEuro(1)</code> soll '1,00 €' ergeben.</div>
     
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Tipp
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph"><pre><code>function nand(a, b) {
-  let and = a && b;
-  ...
-}</code></pre></div>
-    
-    
-    <div id="solution-link-root" class="paragraph">
-      <span id="solution-link">
-        <span id="solution-open-close">+</span> Lösung
-      </span>
-    </div>
-    <div id="solution-area" class="paragraph"><pre><code>function nand(a, b) {
-  let and = a && b;
-  return !and;
-}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

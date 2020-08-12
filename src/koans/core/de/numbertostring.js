@@ -4,7 +4,9 @@ jshero.koans.add({
 
   title: 'Number: toString()',
 
-  lesson: `Die Number-Methode <code>toString</code> wandelt eine Zahl in den entsprechenden String um.
+  lesson: `Strings, so hatten wir gesehen, besitzen eine Reihe von Methoden.
+Auch Numbers besitzen einige - wenn auch wenige - Methoden.
+Eine davon ist <code>toString</code>. Sie wandelt die Zahl in den entsprechenden String um.
 Der Dezimalpunkt wird dabei als Punkt dargestellt. Das kann man z.B. dazu verwenden, eine Zahl im deutschen Format,
 also mit Komma als Dezimalpunkt, auszugeben:
 
