@@ -6,7 +6,7 @@ jshero.koans.add({
 
   task: `Schreibe eine Funktion <code>isEven</code>, die prüft, ob eine Zahl gerade oder ungerade ist.
 Ist die Zahl gerade, so soll die Funktion <code>true</code> zurückgeben, andernfalls <code>false</code>.<br><br>
-Beispiel: Der Aufruf <code>isEven(6)</code> soll <code>true</code> ergeben und <code>isEven(7)</code> soll
+Beispiel: <code>isEven(6)</code> soll <code>true</code> und <code>isEven(7)</code> soll
 <code>false</code> zurückgeben.`,
 
   hint: `Verwende den Modulo-Operator zusammen mit strikter Gleichheit, um zu bestimmen, ob eine Zahl gerade ist.`,

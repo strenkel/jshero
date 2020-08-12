@@ -7,8 +7,8 @@ jshero.koans.add({
   lesson: 'Die folgende Aufgabe soll das Zusammenspiel von strikter Gleichheit und booleschen Operatoren vertiefen.',
 
   task: `Schreibe eine Funktion <code>gleich</code>, die 3 Werte auf strikte Gleichheit überprüft. Die Funktion soll nur
-dann <code>true</code> ergeben, wenn alle 3 Werte strikt gleich sind.<br><br>Beispiel: <code>gleich(1, 1, 1)</code> soll
-<code>true</code> zurückgeben, <code>gleich(1, 1, 2)</code> soll <code>false</code> ergeben.`,
+dann <code>true</code> ergeben, wenn alle 3 Werte strikt gleich sind.<br><br>
+Beispiel: <code>gleich(1, 1, 1)</code> soll <code>true</code> und <code>gleich(1, 1, 2)</code> soll <code>false</code> ergeben.`,
 
   tests: [
     function() {

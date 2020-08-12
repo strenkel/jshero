@@ -23,8 +23,7 @@ da hier unterschiedliche Typen verglichen werden. Auf der linken Seite des Vergl
 rechten Seite ein String.`,
 
   task: `Schreibe eine Funktion <code>gleich</code>, die zwei Werte auf strikte Gleichheit überprüft.<br><br>Beispiel:
-<code>gleich(1, 1)</code> soll <code>true</code> zurückgeben, <code>gleich(1, 2)</code> soll
-<code>false</code> ergeben.`,
+<code>gleich(1, 1)</code> soll <code>true</code> und <code>gleich(1, 2)</code> soll <code>false</code> ergeben.`,
 
   hint: `<pre><code>function gleich(a, b) {
   return ...
