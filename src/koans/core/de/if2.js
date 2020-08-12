@@ -17,7 +17,7 @@ zu schreiben:
 Hat <code>zahl</code> den Wert <code>6</code>, so ist die <code>if</code>-Bedingung erfüllt und die erste
 <code>return</code>-Anweisung wird ausgeführt. Die Funktion wird beendet und gibt <code>100</code> zurück.
 Hat <code>zahl</code> nicht den Wert <code>6</code>, so ist die <code>if</code>-Bedingung nicht erfüllt.
-Die Codeausfüfrung wird hinter dem zur <code>if</code>-Anweisung gehörigen Block fortgesetzt. Die zweite
+Die Codeausführung wird hinter dem zur <code>if</code>-Anweisung gehörigen Block fortgesetzt. Die zweite
 <code>return</code>-Anweisung wird ausgeführt. Die Funktion gibt <code>0</code> zurück.<br><br>
 Aber Achtung: Zwei oder auch mehr <code>return</code>-Anweisungen in einer Funktion sollte man sorgsam verwenden.
 Andernfalls wird der Code unübersichtlich.`,
