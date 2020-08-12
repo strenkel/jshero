@@ -17,9 +17,9 @@
 <body class="en">
 
   <div id="header">
-    <a id="next-button" class="control" href="if2.html" title="Next page"></a>
+    <a id="next-button" class="control" href="else.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="greaterthan.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="if.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,30 +49,58 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">if</h1>
+    <h1 id="koans-title">Two returns</h1>
     
-    <div id="koans-lesson" class="paragraph">Often code should only be executed if a certain condition is true.
-To do this, use the <code>if</code> statement.
+    <div id="koans-lesson" class="paragraph">With <code>if</code> you can write functions with two return statements:
 
-<pre><code>let win = 0;
-if (dice === 6) {
-  win = 100;
+<pre><code>function prize(number) {
+  if (number === 6) {
+    return 100;
+  }
+  return 0;
 }</code></pre>
 
-This statement consists of the keyword <code>if</code> followed by parentheses.
-The parentheses contain an expression - the condition - that is evaluated to <code>true</code> or <code>false</code>.
-If the condition results in <code>true</code>, all statements in the block delimited by the curly brackets will be executed.
-If the condition results in <code>false</code>, the block bounded by the curly brackets will be skipped.
-In our example, if <code>dice</code> has the value <code>6</code>, then <code>win</code> is set to <code>100</code>.
-If <code>dice</code> does not have the value <code>6</code>, then <code>win</code> remains at <code>0</code>.</div>
+If <code>number</code> has the value <code>6</code>, the <code>if</code> condition is fulfilled and the first <code>return</code>
+statement will be executed. The function terminates and returns <code>100</code>. If <code>number</code> does not have the
+value <code>6</code>, the <code>if</code> condition is not fulfilled. The code execution continues after the <code>if</code> block.
+The second return statement will be executed. The function terminates and returns <code>0</code>.<br><br>
+However, be careful using two or more return statements in a function. Such code can become obscure.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>equals</code> that checks two values for strict equality.
-If the two values are equal, the string <code>'EQUAL'</code> should be returned.
-If they are unequal, you should get <code>'UNEQUAL'</code>.<br><br>
-Example: <code>equals(1,&nbsp;1)</code> should return <code>'EQUAL'</code> and
-<code>equals(1,&nbsp;2)</code> should return <code>'UNEQUAL'</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>repdigit</code> that determines whether a two-digit decimal is a
+<a href="https://en.wikipedia.org/wiki/Repdigit">repdigit</a> or not.
+If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No repdigit!'.<br><br>
+Example: <code>repdigit(22)</code> shouöd return <code>'Repdigit!'</code> and
+<code>repdigit(23)</code> should return <code>'No repdigit!'</code>.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph"><pre><code>function repdigit(n) {
+// Calculate the ones digit
+// of n with modulo 10.
+// Calculate the tens digit
+// of n by dividing by 10
+// and rounding down.
+// Compare ones and tens digits.
+}</code></pre></div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function repdigit(n) {
+  let ones = n % 10;
+  let tens = Math.floor(n / 10);
+  if (ones === tens) {
+    return 'Repdigit!';
+  }
+  return 'No Repdigit!';
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
