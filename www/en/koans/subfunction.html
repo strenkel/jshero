@@ -17,9 +17,9 @@
 <body class="en">
 
   <div id="header">
-    <a id="next-button" class="control" href="subfunction.html" title="Next page"></a>
+    <a id="next-button" class="control" href="roman1.html" title="Next page"></a>
     <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="nan.html" title="Previous page"></a>
+    <a id="prev-button" class="control" href="stringsplit.html" title="Previous page"></a>
     <div id="menu" class="menu" title="Menu"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -49,25 +49,30 @@
       Without localStorage your solutions will not be stored.
     </p>
 
-    <h1 id="koans-title">String: split()</h1>
+    <h1 id="koans-title">Functions call functions</h1>
     
-    <div id="koans-lesson" class="paragraph">The <code>split</code> method splits a string into substrings using a separator string.
-The substrings are returned as an array. The original string is not changed.
+    <div id="koans-lesson" class="paragraph">Functions can call other functions:
+<pre><code>function gross(net) {
+  let vat = 20;
+  let tax = net * vat / 100;
+  return net + tax;
+}
 
-<pre><code>let date = '31-10-2017';
-let parts = date.split('-');
-let day = parts[0]; // '31'
-let month = parts[1]; // '10'
-let year = parts[2]; // '2017'</code></pre>
+function addWithVat(netX, netY) {
+  let grossX = gross(netX);
+  let grossY = gross(netY);
+  return grossX + grossY;
+}</code></pre>
 
-Here, the separator string is the hyphen. It splits the date string into three parts.
-These three parts are assigned as an array to the variable <code>parts</code>.
-Afterwards, the individual parts are assigned to separate variables.</div>
+<code>addWithVat</code> takes two net amounts and returns the sum of the gross amounts.
+<code>gross</code> calculates the gross amount from a net amount. Thereby a value added tax of 20% is assumed.
+Instead of calculating the gross amount itself, <code>addWithVat</code> use the function <code>brutto</code>.
+This has two advantages: The code is easier to read and the gross calculation is performed centrally in one place.</div>
     
     <h2>Exercise</h2>
-    <div id="koans-task" class="paragraph">Write a function <code>add</code> that takes a string with a summation task and returns its result as a
-number. A finite number of natural numbers should be added. The summation task is a string of the form '1+19+...+281'.<br><br>
-Example: <code>add('7+12+100')</code> should return <code>119</code>.</div>
+    <div id="koans-task" class="paragraph">Write a function <code>sum</code> that takes an array of numbers and returns the sum of these numbers.
+Write a function <code>mean</code> that takes an array of numbers and returns the average of these numbers.
+The <code>mean</code> function should use the <code>sum</code> function.</div>
     
     
 
