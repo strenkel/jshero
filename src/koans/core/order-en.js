@@ -77,6 +77,7 @@ jshero.koans.initReorder(
     'nan',
     'stringsplit',
     'subfunction',
+    'recursion',
     'roman1',
     'roman2',
     'euler1',

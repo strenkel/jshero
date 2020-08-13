@@ -1,4 +1,4 @@
-(function(testutil, evaluator) {
+(function(testutil) {
 
   jshero.koans.add({
 
@@ -26,7 +26,8 @@ Nun benötigt man noch eine Abbruchbedingung, damit die Rekursion nicht unendlic
 sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
 
     task: `Schreibe eine Funktion <code>reverse</code>, die die Reihenfolge der Zeichen in einem String umkehrt.
-<code>reverse('Nebel')</code> sollte <code>'lebeN'</code> zurückgeben. Die Funktion sollte rekursiv sein.`,
+Die Funktion sollte rekursiv sein.<br><br>
+Beispiel: <code>reverse('Nebel')</code> sollte <code>'lebeN'</code> zurückgeben.`,
 
     tests: [
 
@@ -53,6 +54,10 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
       },
 
       function() {
+        return testutil.assert_functionReturns("reverse('12345')", '54321');
+      },
+
+      function() {
         return testutil.assert_functionReturns("reverse('Nebel')", 'lebeN');
       }
 
@@ -60,4 +65,4 @@ sondern das Ergebnis, nämlich 0! = 1, wird direkt zurückgegeben.`,
 
   });
 
-})(jshero.testutil, jshero.evaluator);
+})(jshero.testutil);
