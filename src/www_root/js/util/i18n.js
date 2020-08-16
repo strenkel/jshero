@@ -35,7 +35,7 @@ jshero.i18n = (function() {
     isNotAFunction: "ist keine Funktion",
     errorAtCallOf: "Fehler beim Aufruf von",
     endlessLoopOnRead: "Es kommt zu einer Endlosschleife. Fehler beim Einlesen des Codes!",
-    useConsole: "Benutze <code>console.log</code> zur Ausgabe!",
+    terminatedSuccessfully: "Programm erfolgreich beendet!",
     oldBrowser: oldBrowser_de,
 
     hasValue: "hat den Wert",
@@ -78,7 +78,7 @@ jshero.i18n = (function() {
     isNotAFunction: "is not a function",
     errorAtCallOf: "Error on call of",
     endlessLoopOnRead: "Endless loop. Error reading your code!",
-    useConsole: "Use <code>console.log</code> for output!",
+    terminatedSuccessfully: "Terminated successfully!",
     oldBrowser: oldBrowser_en,
 
     hasValue: "has the value",

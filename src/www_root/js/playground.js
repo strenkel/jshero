@@ -31,13 +31,12 @@
             ok: true,
             logs: logs
           });
-        } else {
-          var message = I18N("useConsole");
-          msg.log({
-            ok: false,
-            msg: message
-          });
         }
+        var message = I18N("terminatedSuccessfully");
+        msg.log({
+          ok: true,
+          msg: message
+        });
       } catch (e) {
         msg.log({
           ok: false,
