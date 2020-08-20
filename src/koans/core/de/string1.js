@@ -1,6 +1,6 @@
 jshero.koans.add({
 
-  id: 'string',
+  id: 'string1',
 
   title: 'Strings',
 
@@ -19,38 +19,38 @@ an und gibt den zusammengesetzten Text zurück:
 
 So liefert <code>praise('JavaScript')</code> den Wert <code>'JavaScript ist toll!'</code>.`,
 
-  task: `Schreibe eine Funktion <code>greet</code>, die einen Parameter entgegennimmt und die
+  task: `Schreibe eine Funktion <code>welcome</code>, die einen Parameter entgegennimmt und die
 <code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt.<br><br>
-Beispiel: Übergibt man der Funktion <code>greet</code> den Wert <code>'Ada'</code>,
+Beispiel: Übergibt man der Funktion <code>welcome</code> den Wert <code>'Ada'</code>,
 so sollte die Funktion <code>'Hallo Ada!'</code> zurückgeben.`,
 
-  hint: `<pre><code>function greet(name) {
+  hint: `<pre><code>function welcome(name) {
   return ...
 }</code></pre>`,
 
-  solution: `<pre><code>function greet(name) {
+  solution: `<pre><code>function welcome(name) {
   return 'Hallo ' + name + '!';
 }</code></pre>`,
 
   tests: [
     function() {
-      return jshero.testutil.assert_isFunction('greet');
+      return jshero.testutil.assert_isFunction('welcome');
     },
 
     function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('greet', 1);
+      return jshero.testutil.assert_functionHasNumOfParameter('welcome', 1);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("greet('Maria')", 'Hallo Maria!');
+      return jshero.testutil.assert_functionReturns("welcome('Ada')", 'Hallo Ada!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("greet('Franz')", 'Hallo Franz!');
+      return jshero.testutil.assert_functionReturns("welcome('Marianne')", 'Hallo Marianne!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("greet('Ada')", 'Hallo Ada!');
+      return jshero.testutil.assert_functionReturns("welcome('Mitchell')", 'Hallo Mitchell!');
     }
   ]
 
