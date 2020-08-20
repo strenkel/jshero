@@ -13,44 +13,44 @@ Man kann sie zum Beispiel verketten. Dies macht man mit dem <code>+</code> Zeich
 ergibt den String <code>'Blaumeier'</code>.<br>Die folgende Funktion hängt an dem übergebenen Parameter einen Text
 an und gibt den zusammengesetzten Text zurück:
 
-<pre><code>function lobe(name) {
+<pre><code>function praise(name) {
   return name + ' ist toll!';
 }</code></pre>
 
-So liefert <code>lobe('JavaScript')</code> den Wert <code>'JavaScript ist toll!'</code>.`,
+So liefert <code>praise('JavaScript')</code> den Wert <code>'JavaScript ist toll!'</code>.`,
 
-  task: `Schreibe eine Funktion <code>begruesse</code>, die einen Parameter entgegennimmt und die
+  task: `Schreibe eine Funktion <code>greet</code>, die einen Parameter entgegennimmt und die
 <code>'Hallo &lt;Parameter&gt;!'</code> zurückgibt.<br><br>
-Beispiel: Übergibt man der Funktion <code>begruesse</code> den Wert <code>'Ada'</code>,
+Beispiel: Übergibt man der Funktion <code>greet</code> den Wert <code>'Ada'</code>,
 so sollte die Funktion <code>'Hallo Ada!'</code> zurückgeben.`,
 
-  hint: `<pre><code>function begruesse(name) {
+  hint: `<pre><code>function greet(name) {
   return ...
 }</code></pre>`,
 
-  solution: `<pre><code>function begruesse(name) {
+  solution: `<pre><code>function greet(name) {
   return 'Hallo ' + name + '!';
 }</code></pre>`,
 
   tests: [
     function() {
-      return jshero.testutil.assert_isFunction('begruesse');
+      return jshero.testutil.assert_isFunction('greet');
     },
 
     function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('begruesse', 1);
+      return jshero.testutil.assert_functionHasNumOfParameter('greet', 1);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("begruesse('Maria')", 'Hallo Maria!');
+      return jshero.testutil.assert_functionReturns("greet('Maria')", 'Hallo Maria!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("begruesse('Franz')", 'Hallo Franz!');
+      return jshero.testutil.assert_functionReturns("greet('Franz')", 'Hallo Franz!');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("begruesse('Ada')", 'Hallo Ada!');
+      return jshero.testutil.assert_functionReturns("greet('Ada')", 'Hallo Ada!');
     }
   ]
 
