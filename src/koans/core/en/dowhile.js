@@ -22,8 +22,8 @@ After the loop <code>threeX</code> has the value <code>'xxx'</code>.`,
 The lcm of two natural numbers a und b is the smallest natural number that is divisible by a and b.<br><br>
 Example: <code>lcm(4, 6)</code> should return <code>12</code>.`,
 
-  hint: `Start with the number <code>1</code>. Test whether it is divisible by a and b. If so, it is the lcm.
-If not, increase your start number by <code>1</code>. Test again. And so forth.`,
+  hint: `To calculate the lcm of a and b, take <code>1</code> and test whether it is divisible by a and b.
+If so, <code>1</code> is the lcm. If not, take <code>2</code> and test again. And so forth.`,
 
   solution: `<pre><code>function lcm(a, b) {
 
