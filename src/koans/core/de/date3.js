@@ -29,9 +29,10 @@ someDay.setDate(0);</code></pre>
 Zunächst repräsentiert <code>someDay</code> den 1.4.2020. Nun wird der Tag auf den 32. gesetzt.
 Da der April 30 Tage hat, entspricht das dem 2.5.2020. Wird nun der Tag auf 0 gesetzt, erhält man den 30.4.2020.`,
 
-  task: `Schreibe eine Funktion <code>yesterday</code>, die ein Date-Objekt entgegennimmt, dessen Datum um einen Tag zurücksetzt
-und dann dieses Date-Objekt zurückgibt. Die Uhrzeit soll dabei nicht verändert werden. Mit <code>date = new Date(1965, 8, 14)</code>
-sollte <code>yesterday(date)</code> ein Date-Objekt zurückgeben, das den 13.9.1965 repräsentiert.`,
+  task: `Schreibe eine Funktion <code>yesterday</code>, die ein Date-Objekt entgegennimmt, dessen Datum um einen Tag
+zurücksetzt und dann dieses Date-Objekt zurückgibt. Die Uhrzeit soll dabei nicht verändert werden.<br><br>Beispiel:
+Mit <code>date = new Date(1965, 8, 14)</code> sollte <code>yesterday(date)</code> ein Date-Objekt zurückgeben,
+das den 13.9.1965 repräsentiert.`,
 
   tests: [
 

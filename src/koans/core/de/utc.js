@@ -25,8 +25,9 @@ Mit dieser Zahl und <code>new Date()</code> erzeugt man anschließend das gewün
 (siehe <a href='date.html'>Datum und Uhrzeit</a>). Die Variable <code>datum</code> repräsentiert den
 5.5.2018, 0:00 UTC.`,
 
-  task: `Schreibe eine Funktion <code>nikolausUTC</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
-des übergebenen Jahres, 0:00 UTC, zurückgibt. <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 UTC zurückgeben.`,
+  task: `Schreibe eine Funktion <code>nikolausUTC</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein
+Date-Objekt mit dem 6. Dezember des übergebenen Jahres, 0:00 UTC, zurückgibt.<br><br>Beispiel:
+<code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 UTC zurückgeben.`,
 
   tests: [
     function() {
