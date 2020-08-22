@@ -39,7 +39,8 @@ Das Array ist aufsteigend sortiert.</code></pre>`,
 
   task: `Schreibe eine Funktion <code>sort</code>, die ein mit Zahlen gefülltes Array entgegennimmt und die diese Zahlen
 aufsteigend sortiert als Array zurückgibt. Wird ein leeres Array übergeben, so soll auch ein leeres Array zurückgegeben
-werden. <code>sort([4,&nbsp;2,&nbsp;3,&nbsp;1])</code> sollte <code>[1,&nbsp;2,&nbsp;3,&nbsp;4]</code> ergeben.`,
+werden.<br><br>Beispiel:
+<code>sort([4,&nbsp;2,&nbsp;3,&nbsp;1])</code> sollte <code>[1,&nbsp;2,&nbsp;3,&nbsp;4]</code> ergeben.`,
 
   tests: [
     function() {

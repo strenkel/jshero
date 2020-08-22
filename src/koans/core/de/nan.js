@@ -29,9 +29,9 @@ if ( Number.isNaN(age) ) {
 }</code></pre>`,
 
     task: `Schreibe eine Funktion <code>parseFirstInt</code>, die einen String entgegennimmt und die die erste in dem
-String vorkommende ganze Zahl zurückgibt. Enthält der String keine ganze Zahl, soll man <code>NaN</code> erhalten.
-<code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code>
-zurückgeben. <code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> ergeben.`,
+String vorkommende ganze Zahl zurückgibt. Enthält der String keine ganze Zahl, soll man <code>NaN</code> erhalten.<br><br>
+Beispiel: <code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code> zurückgeben.
+<code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> ergeben.`,
 
     tests: [
 

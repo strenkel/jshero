@@ -18,7 +18,7 @@ for (let i = 0; i < 3; i++) {
 Im Codeschnipsel wird die Summe aller Elemente eines zweidimensionalen Arrays berechnet.`,
 
   task: `Schreibe eine Funktion <code>sum</code>, die die Summe aller Elemente eines zweidimensionalen,
-numerischen Arrays berechnet. <code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.`,
+numerischen Arrays berechnet.<br><br>Beispiel: <code>sum([[1, 2], [3]])</code> sollte <code>6</code> zurückgeben.`,
 
   tests: [
     function() {

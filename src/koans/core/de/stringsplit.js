@@ -19,8 +19,8 @@ und gesonderten Variablen zugewiesen. Die Variable <code>date</code> hat weiterh
 
   task: `Schreibe eine Funktion <code>add</code>, die einen String mit einer Additionsaufgabe entgegennimmt und
 die das Ergebnis der Addition als Zahl zurückgibt. Es sollen endlich viele natürliche Zahlen addiert werden.
-Die Additionsaufgabe ist ein String der Form '1+19+...+281'. So soll <code>add('7+12+100')</code> die Zahl
-<code>119</code> zurückgeben.`,
+Die Additionsaufgabe ist ein String der Form '1+19+...+281'.<br><br>Beispiel: <code>add('7+12+100')</code> sollte
+<code>119</code> ergeben.`,
 
   tests: [
     function() {
