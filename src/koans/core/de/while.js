@@ -19,8 +19,8 @@ Hat <code>dreiX</code> die Länge 3, wird die Schleife beendet.
 <code>dreiX</code> hat dann den Wert <code>'xxx'</code>.`,
 
   task: `Schreibe eine Funktion <code>abstand</code>, die eine natürliche Zahl n als Parameter
-entgegennimmt und die einen String bestehend aus n Leerzeichen zurückgibt.
-<code>abstand(1)</code> sollte <code>' '</code> ergeben.`,
+entgegennimmt und die einen String bestehend aus n Leerzeichen zurückgibt.<br><br>
+Beispiel: <code>abstand(1)</code> sollte <code>' '</code> ergeben.`,
 
   tests: [
     function() {

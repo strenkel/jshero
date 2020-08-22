@@ -10,7 +10,7 @@ jshero.koans.add({
 Der größte gemeinsame Teiler zweier Zahlen a und b ist die größte Zahl, durch die sich sowohl a als auch b teilen läßt.`,
 
   task: `Schreibe eine Funktion <code>ggT</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren ggT berechnet.
-<code>ggT(6, 15)</code> sollte <code>3</code> zurückgeben.`,
+<br><br>Beispiel: <code>ggT(6, 15)</code> sollte <code>3</code> zurückgeben.`,
 
   tests: [
     function() {

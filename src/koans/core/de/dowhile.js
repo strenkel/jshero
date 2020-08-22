@@ -32,7 +32,7 @@ erneut durchlaufen. Ergeben beide Modulo-Berechnungen <code>0</code>, ist die Sc
 <code>kgV</code> hat dann den gewünschten Wert (nämlich 24), da es die erste Zahl ist, die sowohl durch 6 als auch durch 8 teilbar ist.`,
 
   task: `Schreibe eine Funktion <code>kgV</code>, die zwei natürliche Zahlen als Parameter entgegennimmt und deren kgV berechnet.
-<code>kgV(6, 8)</code> sollte <code>24</code> zurückgeben.`,
+<br><br>Beispiel: <code>kgV(6, 8)</code> sollte <code>24</code> zurückgeben.`,
 
   tests: [
     function() {

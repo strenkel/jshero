@@ -40,9 +40,10 @@ zu <code>sum</code> hinzugezählt. So werden alle ungeraden Zahlen kleiner 10 au
 <code>break</code> und <code>continue</code> kann man in allen Schleifen (for, while, do...while) verwenden.`,
 
   task: `Schreibe eine Funktion <code>isPrime</code>. Sie soll prüfen, ob eine übergebene Zahl eine Primzahl ist oder
-nicht. Ist die Zahl prim, so soll <code>true</code> zurückgegeben werden, im anderen Fall <code>false</code>.
-Der Aufruf <code>isPrime(2)</code> soll <code>true</code> zurückgeben, <code>isPrime(4)</code> soll <code>false</code>
-ergeben. Eine Primzahl ist eine natürliche Zahl, die größer als 1 und nur durch sich selbst und durch 1 teilbar ist.`,
+nicht. Ist die Zahl prim, so soll <code>true</code> zurückgegeben werden, im anderen Fall <code>false</code>. Eine
+<a href='https://de.wikipedia.org/wiki/Primzahl'>Primzahl</a> ist eine natürliche Zahl, die größer als 1 und nur durch
+sich selbst und durch 1 teilbar ist.<br><br>
+Beispiel: <code>isPrime(2)</code> soll <code>true</code> und <code>isPrime(4)</code> soll <code>false</code> ergeben.`,
 
   tests: [
     function() {
