@@ -6,6 +6,11 @@
 
     title: 'Was ist x?',
 
+    lesson: `Hier soll nochmal der Unterschied zwischen einer Funktionsdefinition und einem Funktionsaufruf
+geübt werden.<br><br>Möchtest du das bisher Gelernte in Aktion sehen, schaue dir im
+<a href='https://blog.jshero.net'>JS Hero Blog</a> die Posts
+<a href='https://blog.jshero.net/playground/'>Playground</a> und <a href='https://blog.jshero.net/funktionen/'>Funktionen</a> an.`,
+
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?
 <pre><code>function woIst(name) {
   return 'Wo ist ' + name + '?';
