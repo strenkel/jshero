@@ -13,9 +13,20 @@ for (let i = 0; i < myArray.length; i++) {
 }</code></pre>`,
 
   task: `Schreibe eine Funktion <code>mean</code>, die ein Array gefüllt mit Zahlen entgegennimmt und den
-Durchschnitt dieser Zahlen zurückgibt. Tipp: Um den Durchschnitt von n Zahlen zu berechnen,
-mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen.
-<code>mean([1, 2, 3])</code> sollte <code>(1+2+3)/3</code> = <code>2</code> ergeben.`,
+Durchschnitt dieser Zahlen zurückgibt.<br><br>
+Beispiel: <code>mean([1, 2, 3])</code> sollte <code>(1+2+3)/3</code> = <code>2</code> ergeben.`,
+
+  hint: `Um den Durchschnitt von n Zahlen zu berechnen, mußt du die Zahlen aufaddieren und die erhaltene Summe durch n teilen.`,
+
+  solution: `<pre><code>function mean(data) {
+
+  let sum = 0;
+  for (let i = 0; i < data.length; i ++) {
+    sum = sum + data[i];
+  }
+
+  return sum / data.length;
+};</code></pre>`,
 
   tests: [
     function() {

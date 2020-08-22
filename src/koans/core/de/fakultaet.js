@@ -10,8 +10,8 @@
 Die Fakultät einer natürlichen Zahl n ist das Produkt aller natürlichen Zahlen (ohne Null) kleiner oder gleich n.
 Sie wird durch ein nachgestelltes Ausrufezeichen abgekürzt: 3! = 1*2*3 = 6. Per Definition gilt 0! = 1.`,
 
-    task: `Schreibe eine Funktion <code>fakultaet</code>, die die Fakultät einer natürlichen Zahl berechnet.
-<code>fakultaet(3)</code> sollte <code>1*2*3</code> = <code>6</code> ergeben.`,
+    task: `Schreibe eine Funktion <code>fakultaet</code>, die die Fakultät einer natürlichen Zahl berechnet.<br><br>
+Beispiel: <code>fakultaet(3)</code> sollte <code>1*2*3</code> = <code>6</code> ergeben.`,
 
     hint: `<pre><code>function fakultaet(n) {
       let result = 1;

@@ -36,8 +36,8 @@ Die Schleifenbedingung <code>3 < 3</code> ist jetzt nicht mehr erfüllt. Die Sch
 Unser Codebeispiel hat also alle natürlichen Zahlen echt kleiner 3 addiert.`,
 
     task: `Schreibe eine Funktion <code>addiereBis</code>, die eine Zahl als Parameter entgegennimmt und die
-alle natürlichen Zahlen kleiner gleich dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.
-<code>addiereBis(3)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
+alle natürlichen Zahlen kleiner gleich dem Paramter aufaddiert. Das Ergebnis der Addition soll zurückgegeben werden.<br><br>
+Beispiel: <code>addiereBis(3)</code> sollte <code>1+2+3</code> = <code>6</code> ergeben.`,
 
 hint: `<pre><code>function addiereBis(n) {
   let summe = 0;
