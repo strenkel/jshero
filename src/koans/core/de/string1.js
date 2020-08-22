@@ -4,14 +4,14 @@ jshero.koans.add({
 
   title: 'Strings',
 
-  lesson: `Wir haben gesehen, dass eine Variable ein Behälter für einen Wert ist. Werte besitzen dabei einen Typ.
-So kann ein Wert eine Zahl wie <code>7.12</code> sein. Der Typ von <code>7.12</code> ist Zahl. Oder ein Wert kann
-ein Text wie <code>'Hallo Welt!'</code> sein. Der Typ von <code>'Hallo Welt!'</code> ist Text. Diesen Typ bezeichnet
-man auch als Zeichenkette oder String. Dabei kann man einfache oder doppelte Anführungszeichen verwenden.
-So ist <code>'Hallo Welt!'</code> derselbe String wie <code>"Hallo Welt!"</code>.<br>Mit Strings kann man arbeiten.
-Man kann sie zum Beispiel verketten. Dies macht man mit dem <code>+</code> Zeichen. <code>'Blau' + 'meier'</code>
-ergibt den String <code>'Blaumeier'</code>.<br>Die folgende Funktion hängt an dem übergebenen Parameter einen Text
-an und gibt den zusammengesetzten Text zurück:
+  lesson: `Wir haben gesehen, dass eine Variable ein Behälter für einen Wert ist.
+Ein Wert kann ein Text wie <code>'Hallo Welt!'</code> sein. Werte besitzen dabei einen Typ.
+Der Typ von <code>'Hallo Welt!'</code> ist <code>string</code>.
+Um aus einem Text einen String zu machen, kann man einfache oder doppelte Anführungszeichen verwenden.
+So ist <code>'Hallo Welt!'</code> derselbe String wie <code>"Hallo Welt!"</code>.<br><br>
+Mit Strings kann man arbeiten. Man kann sie zum Beispiel verketten. Dies macht man mit dem <code>+</code> Zeichen.
+<code>'Blau' + 'meier'</code> ergibt den String <code>'Blaumeier'</code>.<br><br>
+Die folgende Funktion hängt an dem übergebenen Parameter einen Text an und gibt den zusammengesetzten Text zurück:
 
 <pre><code>function praise(name) {
   return name + ' ist toll!';
