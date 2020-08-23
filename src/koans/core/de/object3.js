@@ -21,7 +21,7 @@ let pGeburtsort = person.geburtsort;</code></pre>
 Die drei Eigenschaften des Objekts <code>person</code> werden in drei Variablen gespeichert.`,
 
     task: `Schreibe eine Funktion <code>distance</code>, die den Abstand eines Punkts zum Nullpunkt berechnet.
-Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.
+Hier und im Folgenden ist ein Punkt ein Objekt mit den Eigenschaften x und y.<br><br>Beispiel:
 <code>distance({x:&nbsp3,&nbspy:&nbsp;4})</code> sollte <code>5</code> zurückgeben.`,
 
     hint: `Der Abstand eines  Punkts mit den Koordinaten x und y zum Nullpunkt ist &radic;(x&sup2;&nbsp;+&nbsp;y&sup2;).`,

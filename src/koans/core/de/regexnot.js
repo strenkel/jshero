@@ -6,12 +6,12 @@ jshero.koans.add({
 
   lesson: `Möchte man alle Zeichen bis auf einige Ausnahmen zulassen, kann man mit <code>^</code> die Zeichenauswahl
 negieren. <code>^</code> ist als Negation nur innerhalb einer Zeichenauswahl gültig. Es muss an erster Stelle der
-Zeichenauswahl stehen und negiert die komplette Auswahl. <code>[^ab]</code> steht für alle Zeichen außer einem 
+Zeichenauswahl stehen und negiert die komplette Auswahl. <code>[^ab]</code> steht für alle Zeichen außer einem
 <code>a</code> oder <code>b</code> und <code>[^0-9]</code> steht für alle Zeichen außer einer Ziffer.`,
 
   task: `Schreibe eine Funktion <code>test</code>, die prüft, ob ein String nur Zeichen des englischen
-Alphabets enthält. <code>test('Blue')</code> sollte <code>true</code> und <code>test('Blue sea')</code> sollte
-<code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).`,
+Alphabets enthält.<br><br>Beispiel: <code>test('Blue')</code> sollte <code>true</code> und <code>test('Blue sea')</code>
+sollte <code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).`,
 
   tests: [
     function() {

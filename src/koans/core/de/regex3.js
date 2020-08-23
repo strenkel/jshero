@@ -25,7 +25,7 @@ Die Auswahl kann beliebig viele Zeichen enthalten. <code>/[abc]/</code> steht f�
 und <code>/[123456]/</code> steht für eine Ziffer von 1 bis 6.`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String den Namen
-Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.
+Meier in einer der 4 Schreibweisen Maier, Meier, Mayer oder Meyer enthält.<br><br>Beispiel:
 <code>pruefe('Frau Mayer')</code> sollte <code>true</code> und
 <code>pruefe('Herr Mezer')</code> sollte <code>false</code> ergeben.`,
 

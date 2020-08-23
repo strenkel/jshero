@@ -36,7 +36,7 @@ Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
 <code>t4</code> ist <code>false</code>.`,
 
     task: `Schreibe eine Funktion <code>enthaeltRose</code>, die prüft, ob ein String den Teilstring
-<code>'Rose'</code> enthält. <code>enthaeltRose('eine Rose')</code> sollte <code>true</code> und
+<code>'Rose'</code> enthält.<br><br>Beispiel: <code>enthaeltRose('eine Rose')</code> sollte <code>true</code> und
 <code>enthaeltRose('ein Blatt')</code> sollte <code>false</code> ergeben.`,
 
 hint: `<pre><code>Benutze den Regex /Rose/.</pre></code>`,

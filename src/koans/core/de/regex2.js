@@ -30,7 +30,7 @@ zwei beliebige Zeichen besitzen und mit <code>s</code> enden. <code>Hans</code> 
 treffen auf dieses Pattern zu, <code>His</code> und <code>Heros</code> nicht.`,
 
   task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String zwei in
-doppelte Anführungszeichen eingeschlossene Zeichen besitzt.
+doppelte Anführungszeichen eingeschlossene Zeichen besitzt.<br><br>Beispiel:
 <code>pruefe('"Wo"')</code> sollte <code>true</code> und
 <code>pruefe('"Was"')</code> sollte <code>false</code> ergeben.`,
 

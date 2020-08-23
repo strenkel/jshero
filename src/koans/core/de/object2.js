@@ -22,8 +22,8 @@ In der Zeile <code>title: title</code> ist <code>title</code> vor dem Doppelpunk
 und nach dem Doppelpunkt die zuvor definierte Variable.`,
 
     task: `Schreibe eine Funktion <code>createPoint</code>, die die Koordinaten eines Punkts in der Ebene
-entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten zurückgibt.
-<code>createPoint(1,&nbsp;2)</code> sollte <code>{x:&nbsp;1,&nbsp;y:&nbsp;2}</code> zurückgeben.`,
+entgegennimmt und ein Objekt mit den Eigenschaften x und y sowie den übergebenen Koordinaten zurückgibt.<br><br>
+Beispiel: <code>createPoint(1,&nbsp;2)</code> sollte <code>{x:&nbsp;1,&nbsp;y:&nbsp;2}</code> zurückgeben.`,
 
     hint: `<pre><code>function createPoint(x, y) {
   return ...

@@ -28,9 +28,9 @@ einfach vor oder hinter den Bereich (<code>/[a-zäöüß]/</code>). Ebenso kann 
 hintereinander aufführen. <code>/[A-Za-z]/</code> steht für genau einen Klein- oder Großbuchstaben.
 Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M-T]/</code>).`,
 
-  task: `Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine
-Zeichenfolge wie 'Klasse 2b' enthält. Dabei sind Klassen von 1 bis 6 und a bis d
-zulässig. <code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben.`,
+  task: `Schreibe eine Funktion <code>pruefe</code>, die testet, ob ein String eine Zeichenfolge wie
+'Klasse 2b' enthält. Dabei sind Klassen von 1 bis 6 und a bis d zulässig.<br><br>Beispiel:
+<code>pruefe('Die Klasse 1a')</code> sollte <code>true</code> ergeben.`,
 
   hint: `<pre><code>function pruefe(s) {
 // Verwende Literale

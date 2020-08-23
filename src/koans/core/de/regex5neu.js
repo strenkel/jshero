@@ -18,8 +18,8 @@ Verwendet man anstelle des Kleinbuchstaben den Großbuchstaben, kann man die neg
 <code>\\D</code> steht für alle Zeichen, die keine Ziffer sind, <code>\\W</code> für alle Zeichen, die kein
 Word Character sind und <code>\\S</code> steht für alle Zeichen, die kein Leerraum-Zeichen sind.`,
 
-  task: `Schreibe eine Funktion <code>test</code>, die prüft, ob ein String 5 aufeinanderfolgende
-Ziffern enthält. <code>test('28205')</code> sollte <code>true</code> ergeben.`,
+  task: `Schreibe eine Funktion <code>test</code>, die prüft, ob ein String 5 aufeinanderfolgende Ziffern enthält.
+<br><br>Beispiel: <code>test('28205')</code> sollte <code>true</code> ergeben.`,
 
   hint: `<pre><code>function test(s) {
 // Verwende \\d fünfmal.

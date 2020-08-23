@@ -16,7 +16,7 @@ Zwischen dem 1.1.1970, 0:00:00 UTC und dem 1.1.1970, 0:00:01 UTC liegen 1000 Mil
 <code>time</code> erhält den Wert <code>1000</code>.`,
 
     task: `Schreibe eine Funktion <code>days</code>, die die Differenz in Tagen zwischen zwei Date-Objekten berechnet.
-Es sollen nur volle Tage gezählt werden.
+Es sollen nur volle Tage gezählt werden.<br><br>Beispiel:
 <code>days(new Date(2018, 0, 1), new Date(2018, 0, 2))</code> und
 <code>days(new Date(2018, 0, 1), new Date(2018, 0, 2, 12))</code> sollten <code>1</code> zurückgeben.`,
 

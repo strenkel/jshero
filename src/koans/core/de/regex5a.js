@@ -20,7 +20,7 @@ Anker.`,
     task: `Schreibe eine Funktion <code>isTime</code>, die prüft, ob ein String eine Zeitangabe der Form
 hh:mm:ss ist. hh steht dabei für die Stunden, mm für die Minuten und ss für die Sekunden.
 Es sind alle Zeitangaben von 00:00:00 bis 99:59:59 zugelassen. Bei einstelligen Stunden, Minuten oder Sekunden ist eine
-führende Null obligatorisch. <code>isTime('02:15:25')</code> sollte <code>true</code> und
+führende Null obligatorisch.<br><br>Beispiel: <code>isTime('02:15:25')</code> sollte <code>true</code> und
 <code>isTime('x02:15:25x')</code> sollte <code>false</code> ergeben.`,
 
     hint: `<pre><code>function isTime(s) {

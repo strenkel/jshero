@@ -19,7 +19,7 @@ ware.preis = 2.25;</code></pre>
 Zunächst legen wir eine Ware mit dem Preis <code>2.15</code> an. Irgendwann später wird dieser Preis auf
 <code>2.25</code> erhöht.`,
 
-    task: `Schreibe eine Funktion <code>moveX</code>, die einen Punkt um 1 nach rechts verschiebt.
+    task: `Schreibe eine Funktion <code>moveX</code>, die einen Punkt um 1 nach rechts verschiebt.<br><br>Beispiel:
 <code>moveX({x:&nbsp;2,&nbsp;y:&nbsp;5})</code> sollte <code>{x:&nbsp;3,&nbsp;y:&nbsp;5}</code> zurückgeben.`,
 
     hint: `<pre><code>function moveX(point) {
