@@ -15,8 +15,8 @@ höchsten 20 beliebige Zeichen und <code>/[a-zA-Z]{5,}/</code> für mindestens 5
     task: `Schreibe eine Funktion <code>pruefe</code>, die feststellt, ob ein String ein deutsches
 Kfz-Kennzeichen ist. Ein solches Kennzeichen soll dem Schema 'XXX YY NNNN' genügen. Dabei steht XXX für 1 bis 3
 beliebige Großbuchstaben, YY für 1 bis 2 beliebige Großbuchstaben und NNNN für eine maximal 4stellige Zahl. Führende
-Nullen sind bei der Zahl nicht zugelassen. <code>pruefe('OF C 709')</code> sollte <code>true</code> und
-<code>pruefe('OF 709')</code> sollte <code>false</code> ergeben.`,
+Nullen sind bei der Zahl nicht zugelassen.<br><br>Beispiel: <code>pruefe('OF C 709')</code> sollte <code>true</code>
+und <code>pruefe('OF 709')</code> sollte <code>false</code> ergeben.`,
 
     hint: `<pre><code>function pruefe(s) {
   return /^[A-Z]{1,3}...

@@ -37,7 +37,7 @@ Hier iterieren wir über alle übergebenen Argumente und summieren sie auf.
 Nun können wir <code>add</code> mit einer beliebigen Anzahl von Argumenten aufrufen.`,
 
   task: `Schreibe eine Funktion <code>maximum</code>, die beliebig viele Zahlen entgegennimmt und das Maximum dieser
-Zahlen liefert.<br><br>Bespiel: <code>maximum(12, 68, 3, 52)</code> sollte <code>68</code> ergeben.`,
+Zahlen liefert.<br><br>Beispiel: <code>maximum(12, 68, 3, 52)</code> sollte <code>68</code> ergeben.`,
 
   tests: [
     function() {

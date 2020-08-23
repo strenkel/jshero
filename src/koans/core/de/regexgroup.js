@@ -17,8 +17,8 @@ let t2 = /(\\d)(\\d).*\\1\\2/.test(12 mal 12'); // true</code></pre>`,
 
   task: `Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String ein doppeltes Wort enthält.
 Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet.
-Klein- oder Großschreibung soll keine Rolle spielen. <code>test('Apfel Birne Apfel')</code> sollte true und
-<code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
+Klein- oder Großschreibung soll keine Rolle spielen.<br><br>Beispiel: <code>test('Apfel Birne Apfel')</code> sollte
+true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
 
   tests: [
     function() {

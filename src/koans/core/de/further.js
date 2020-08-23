@@ -9,7 +9,8 @@ jshero.koans.add({
  Zum Abschluss der Einführung in den Sprachkern noch eine Aufgabe aus dem Gebiet der Mathematik:`,
 
   task: `Schreibe eine Funktion <code>quersumme</code>, die die Quersumme einer natürlichen Zahl berechnet.
-Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern. <code>quersumme(198)</code> sollte <code>18</code> ergeben.`,
+Die Quersumme einer Zahl ist dabei die Summe ihrer Ziffern.<br><br>Beispiel:
+<code>quersumme(198)</code> sollte <code>18</code> ergeben.`,
 
   tests: [
     function() {

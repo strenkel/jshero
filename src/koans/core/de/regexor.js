@@ -9,12 +9,12 @@ jshero.koans.add({
 gilt für den kompletten Regex. <code>/\\bTom|Jerry\\b/</code> sucht nach Wörtern, die mit <code>Tom</code>
 beginnen oder mit <code>Jerry</code> enden. <code>Tomme</code> wird so auch gefunden.
 Möchte man, dass beide Wortgrenzen für beide Namen gelten, kann man Klammern verwenden.
-<code>/\\b(Tom|Jerry)\\b/</code> sucht nach den Wörtern <code>Tom</code> oder <code>Jerry</code>. Der 
+<code>/\\b(Tom|Jerry)\\b/</code> sucht nach den Wörtern <code>Tom</code> oder <code>Jerry</code>. Der
 <code>|</code> Operator gilt jetzt nur für die Klammer. <code>Tomme</code> wird nicht mehr gefunden.`,
 
   task: `Schreibe eine Funktion <code>isTime</code>, die feststellt, ob ein String eine Zeitangabe der Form
 <code>hh:mm</code> ist. Für <code>hh</code> sind alle Werte von <code>00</code> bis <code>23</code> und für
-<code>mm</code> alle Werte von <code>00</code> bis <code>59</code> zugelassen.
+<code>mm</code> alle Werte von <code>00</code> bis <code>59</code> zugelassen.<br><br>Beispiel:
 <code>isTime('23:27')</code> sollte <code>true</code> und <code>isTime('24:12')</code> sollte
 <code>false</code> ergeben.`,
 
