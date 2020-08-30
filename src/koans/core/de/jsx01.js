@@ -6,7 +6,7 @@
 
     title: 'Was ist x?',
 
-    lesson: `Das eben gelernt wollen wir nochmal üben. Während Du bei der ersten Aufgabe Code geschrieben hast,
+    lesson: `Das eben Gelernte wollen wir nochmal üben. Während Du bei der ersten Aufgabe Code geschrieben hast,
 sollst du hier Code lesen.`,
 
     task: `Welchen Wert hat <code>x</code> nach Ausführung des folgenden Codes?

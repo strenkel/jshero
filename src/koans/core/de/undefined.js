@@ -34,7 +34,7 @@ erhält auch <code>y</code> den Wert <code>undefined</code>.<br><br>
 Eine Funktion, die einen Parameter erwartet, kann immer auch ohne Argument aufgerufen werden.
 Man sollte sich beim Schreiben von Funktionen immer überlegen, was in diesem Fall passieren soll.
 Gute Praxis ist es, in einem solchen Fall dem Parameter einen Default-Wert (engl.: Vorgabe) zuzuweisen.
-Das hatten wir schon bei der String-Methode <code><a href="stringcharat.html">charAt(index)</a></code> kennen gelernt.
+Das hatten wir schon bei der String-Methode <code><a href="stringcharat.html">charAt(index)</a></code> kennengelernt.
 Normalerweise gibt diese Methode das Zeichen an der Stelle <code>index</code>
 zurück. Rufen wir <code>charAt</code> ohne Argument auf, erhält <code>index</code> den Default <code>0</code>.
 Es wird das Zeichen an der Stelle <code>0</code> zurückgegeben.<br><br>
