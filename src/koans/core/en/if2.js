@@ -21,9 +21,9 @@ However, be careful using two or more return statements in a function. Such code
 
   task: `Write a function <code>repdigit</code> that determines whether a two-digit decimal is a
 <a href="https://en.wikipedia.org/wiki/Repdigit">repdigit</a> or not.
-If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No repdigit!'.<br><br>
-Example: <code>repdigit(22)</code> shouöd return <code>'Repdigit!'</code> and
-<code>repdigit(23)</code> should return <code>'No repdigit!'</code>.`,
+If the decimal is a repdigit, 'Repdigit!' should be returned, otherwise 'No Repdigit!'.<br><br>
+Example: <code>repdigit(22)</code> should return <code>'Repdigit!'</code> and
+<code>repdigit(23)</code> should return <code>'No Repdigit!'</code>.`,
 
   hint: `<pre><code>function repdigit(n) {
 // Calculate the ones digit
