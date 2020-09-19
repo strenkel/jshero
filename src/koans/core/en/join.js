@@ -20,8 +20,25 @@ Otherwise, the passed argument specifies the separator.
   task: `Write a function <code>list</code> that takes an array of words and returns a string by
 concatenating the words in the array, separated by commas and - the last word - by an 'and'.
 An empty array should return an empty string.<br><br>
-Example: <code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.
-`,
+Example: <code>list(['Huey', 'Dewey', 'Louie'])</code> should return <code>'Huey, Dewey and Louie'</code>.`,
+
+  hint: `Create a new array without the last element. Join the elements of this new array with a comma.
+Append the last element of the original array. Handle edge cases separately.`,
+
+  solution: `<pre><code>function list(words) {
+
+  if (words.length === 0) {
+    return '';
+  }
+
+  if (words.length === 1) {
+    return words[0];
+  }
+
+  let wordsExLast = words.slice(0, words.length - 1);
+  let lastWord = words[words.length - 1];
+  return wordsExLast.join(', ') + ' and ' + lastWord;
+}</code></pre>`,
 
   tests: [
     function() {
