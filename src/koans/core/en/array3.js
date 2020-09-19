@@ -18,6 +18,17 @@ Here an empty array is filled successively with the listed values.`,
 The variable should be inserted as the first element in the array. The array should be returned.<br><br>
 Example: <code>setFirstElement([1,&nbsp;2],&nbsp;3)</code> should return <code>[3,&nbsp;2]</code>.`,
 
+
+  hint: `<pre><code>function setFirstElement(anArray, firstElement) {
+  ...
+  return anArray;
+}</code></pre>`,
+
+  solution: `<pre><code>function setFirstElement(anArray, firstElement) {
+  anArray[0] = firstElement;
+  return anArray;
+}</code></pre>`,
+
   tests: [
 
     function() {
