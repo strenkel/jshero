@@ -1,49 +1,44 @@
-# jshero
+# JS Hero
 
-JS Hero: JavaScript-Tutorial mit Übungen/Koans
+JS Hero: JavaScript tutorial with exersices/koans.
 
 Website: <https://www.jshero.net><br>
 Playstore: <https://play.google.com/store/apps/details?id=net.jshero>
 
-Statische Websites: laufen lokal (nur eingeschränkt) oder in jedem Webserver.
-Lokal nur in Browsern, die auch lokal local storage unterstuetzen (Firefix, nicht Chrome, ...).
-Die Playstore-App ist ein CORDOVA-Build (<https://cordova.apache.org>) der Website.
+Static websites: run locally (limited) or on any web server (recommended).  
+Locally only in browsers that support locally local storage (Firefix, not Chrome, ...).  
+The Playstore app is a CORDOVA build (<https://cordova.apache.org>) of the website.
 
-## Verzeichnisstruktur
+## Folder
 
-www: das gebaute Projekt  
-src: Sourcen, um das Projekt zu bauen  
-build: Build-Skripte  
+www: the built project  
+src: Sources to build the project  
+build: Build scripts  
 test: Unit tests  
 
-## Deployen
+## Deploy
 
-Den Inhalt des Verzeichnisses www in einem Webserver hinterlegen.
+Copy the content of the folder `www` in a web server (e.g. apache).
 
-## Lokal starten
+## Local use
 
-www/index.html im Browser öffnen. Funktioniert nur eingeschränkt.
+Open `www/index.html` in a browser. Works limited.  
 
-## Bauen
+## Build
 
-Voraussetzung: node
-Nach Änderungen an den Koans muss JS Hero mit npm neu gebaut werden.
-Die Datei package.json definiert die dazu nötigen Schritte und Module.
+Requirement: node  
 
-Mit `npm install` die Module einmalig installieren.
-Mit `npm run build` das Projekt bauen.
-Diesen Befehl immer dann aufrufen, wenn etwas geändert wurde (Details siehe package.json)
-Erst dann werden die Änderungen im Browser sichtbar.
+After changes JS Hero has to be rebuilt with npm.
+`package.json` together with `build.js` and `build.sh` defines the necessary steps and modules.
 
-`npm run build` ist (leider) vom Betriebssystem abhänigig. Es läuft nur unter Linux (ggf. iOS).
-Lässt sich aber leicht für Windows anpassen.
+Use `npm install` to install the modules once.
+Use `npm run build` to (re)build the project.
 
-## Ein neues Koan hinzufügen
+`npm run build` depends (unfortunately) on the operating system. It only runs with a Linux shell. Use `Git Bash` or `WSL` on windows systems.
 
-1. Kopiere ein vorhandens Koan und passe es an allen Stellen sinnvoll an (was genau sinnvoll ist, wird noch beschrieben).
+## Add a new koan
 
-2. Füge die id des neuen Koans in die Datei zzz-order.js an der richtigen Stelle ein.
-
-3. `npm run build`
-
-4. Browser aktualisieren
+1. Copy an existing koan and modify it.
+2. Insert the id of the new koan in the file order-de.js or order-en.js at the desired position.
+3. Execute `npm run build` in a linux shell.
+4. Refresh your browser
