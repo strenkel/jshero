@@ -34,7 +34,7 @@ After changes JS Hero has to be rebuilt with npm.
 Use `npm install` to install the modules once.
 Use `npm run build` to (re)build the project.
 
-`npm run build` depends (unfortunately) on the operating system. It only runs with a Linux shell. Use `Git Bash` or `WSL` on windows systems.
+`npm run build` depends (unfortunately) on the operating system. It only runs with a Linux shell. Use `Git Bash` or `WSL` on windows.
 
 ## Add a new koan
 
