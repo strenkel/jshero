@@ -41,13 +41,13 @@ Example: <code>add('102+17')</code> should return <code>119</code>.`,
 
   hint: `Determine the first summand with <code>parseInt</code>.
 Use <code>indexOf</code> to determine the position of the plus sign.
-Determine with <code>substring</code> the substring after the plus sign.
+Determine with <code>substr</code> the substring after the plus sign.
 Use <code>parseInt</code> to determine the second summand from this substring.`,
 
   solution: `<pre><code>function add(s) {
   let summand1 = parseInt(s, 10);
-  let positionPlus = s.indexOf('+');
-  let sAfterPlus = s.substring(positionPlus + 1);
+  let indexPlus = s.indexOf('+');
+  let sAfterPlus = s.substr(indexPlus + 1);
   let summand2 = parseInt(sAfterPlus, 10);
   return summand1 + summand2;
 }</code></pre>`,
