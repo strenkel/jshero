@@ -22,7 +22,7 @@
    */
   var initPage = function() {
 
-    var koanId = actualKoan.getId();
+    var koanId = actualKoan.id;
 
     if (hintLink) {
       showHintOpenLink();
@@ -70,7 +70,7 @@
       testButton.focus();
 
       var code = codeArea.get();
-      var koanId = actualKoan.getId();
+      var koanId = actualKoan.id;
       var lastResult = results[results.length - 1];
 
       if (lastResult.oldBrowser) {
@@ -86,7 +86,7 @@
             ok: true,
             msg: I18N("testsPassed")
           });
-          msg.goto(actualKoan.nextPageUrl());
+          msg.goto(actualKoan.nextPageUrl);
         } else {
           storage.setShot(koanId, code);
           header.toRed();

@@ -190,6 +190,6 @@ jshero.tester = (function(koanId, i18n, LANGUAGE) {
     run: run
   };
 
-})(jshero.actualKoan.getId(),
+})(jshero.actualKoan.id,
   jshero.i18n,
   jshero.language.LANGUAGE);
