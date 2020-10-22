@@ -3,12 +3,13 @@ if (typeof jshero === "undefined") {
 }
 
 /**
- * Just include this script in your page before all other scripts.
- * It works because every page has a defined language.
- * If you change the language, you change the page and reload this script.
+ * Just include this script in every page before all other scripts.
+ * Every page (except german pages) has a defined language identifier in their path.
+ * Pages in german doesn't have a language identifier in their path.
+ * If you change the language, you change the page and this script is reloaded.
  */
 jshero.language = {
 
-  //Constant language string like "en", "de", ...
+  // English pages contains '/en/' in their path.
   LANGUAGE: document.URL.indexOf("/en/") === -1 ? "de" : "en"
 };
