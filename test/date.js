@@ -4,7 +4,6 @@ const assert = require('assert');
 // Read in testcode.
 eval(fs.readFileSync('src/www_root/js/util/date.js').toString());
 
-
 describe('jshero.date', function() {
   describe('#isDate()', function() {
 
@@ -56,31 +55,6 @@ describe('jshero.date', function() {
     });
   });
 
-  describe('#isInvalidDate()', function() {
-
-    const isInvalidDate = jshero.date.isInvalidDate;
-
-    it('should return false for a normal Date', function() {
-      assert.strictEqual(isInvalidDate(new Date()), false);
-    });
-
-    it('should return true for an invalid Date', function() {
-      assert.strictEqual(isInvalidDate(new Date('invalid')), true);
-    });
-
-    it('should return false when an object is passed', function() {
-      assert.strictEqual(isInvalidDate({}), false);
-    });
-
-    it('should return false when a number is passed', function() {
-      assert.strictEqual(isInvalidDate(1), false);
-    });
-
-    it('should return false when null is passed', function() {
-      assert.strictEqual(isInvalidDate(null), false);
-    });
-  });
-
   describe('#isEqual()', function() {
 
     const isEqual = jshero.date.isEqual;
@@ -89,8 +63,12 @@ describe('jshero.date', function() {
       assert.strictEqual(isEqual(new Date(2019, 10, 10), new Date(2019, 10, 10)), true);
     });
 
-    it('should return true for two invalid Dates', function() {
-      assert.strictEqual(isEqual(new Date('i'), new Date('i')), true);
+    it('should return false for two invalid Dates', function() {
+      assert.strictEqual(isEqual(new Date('i'), new Date('i')), false);
+    });
+
+    it('should return false for a valid and an invalid Date', function() {
+      assert.strictEqual(isEqual(new Date(2019, 10, 10), new Date('i')), false);
     });
 
     it('should return false for two unequal Dates', function() {

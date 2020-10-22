@@ -4,12 +4,14 @@ if (typeof jshero === "undefined") {
 
 jshero.date = (function() {
 
+  "use strict";
+
   /**
      * Check whether obj is a Date object.
      * 
      * @param obj {*}
      */
-  var isDate = function(obj) {
+  function isDate(obj) {
     return Object.prototype.toString.call(obj) === "[object Date]";
   };
 
@@ -18,26 +20,18 @@ jshero.date = (function() {
    * 
    * @param obj {*}
    */
-  var isValidDate = function(obj) {
+  function isValidDate(obj) {
     return isDate(obj) && !isNaN(obj.getTime());
   };
 
   /**
-   * Check whether obj is an invalid Date object.
-   */
-  var isInvalidDate = function(obj) {
-    return isDate(obj) && isNaN(obj.getTime());
-  };
-
-  /**
-   * Returns true if d1 and d2 are Date objects and represent the same timestamp.
+   * Returns true if d1 and d2 are Date objects and represent the same (valid) timestamp.
    * 
    * @param d1 {*}
    * @param d2 {*}
    */
-  var isEqual = function(d1, d2) {
-    return isDate(d1) && isDate(d2) &&
-      (d1.getTime() === d2.getTime() || (isNaN(d1.getTime()) && isNaN(d2.getTime())));
+  function isEqual(d1, d2) {
+    return isValidDate(d1) && isValidDate(d2) && d1.getTime() === d2.getTime();
   };
 
   /**
@@ -46,7 +40,7 @@ jshero.date = (function() {
    * @param {Date} date
    * @param {Object} format
    */
-  var toString = function(date, format) {
+  function toString(date, format) {
 
     if (format.utc) {
       return date.toLocaleString("de-DE", { "timeZone": "UTC" }) + " UTC";
@@ -56,12 +50,11 @@ jshero.date = (function() {
     return date.toLocaleString();
   };
 
-  return {
+  return Object.freeze({
     isDate: isDate,
     isValidDate: isValidDate,
-    isInvalidDate: isInvalidDate,
     isEqual: isEqual,
     toString: toString
-  };
+  });
 
 })();
