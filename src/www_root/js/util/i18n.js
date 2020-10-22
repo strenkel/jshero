@@ -3,21 +3,23 @@ if (typeof jshero === "undefined") {
 }
 
 /**
- * Singleton.
+ * Stateful Singleton.
  */
 jshero.i18n = (function() {
 
-  var oldBrowser_de = "Dein Browser unterstützt kein aktuelles JavaScript."
+  "use strict";
+
+  const oldBrowser_de = "Dein Browser unterstützt kein aktuelles JavaScript."
     + " Möglicherweise ist er veraltet."
     + " Verwende einen Browser, der aktuelles JavaScript unterstützt!";
 
-  var oldBrowser_en = "Your browser doesn't support up-to-date JavaScript."
+  const oldBrowser_en = "Your browser doesn't support up-to-date JavaScript."
     + " Maybe it's outdated."
     + " Use a browser that supports up-to-date JavaScript!";
 
-  var dic;
+  let dic;
 
-  var dic_de = {
+  const dic_de = {
 
     hint: "Tipp",
     solution: "Lösung",
@@ -60,7 +62,7 @@ jshero.i18n = (function() {
     doesNotLog: "<code>%0</code> loggt nicht <code>%1</code>."
   };
 
-  var dic_en = {
+  const dic_en = {
 
     hint: "Hint",
     solution: "Solution",
@@ -106,9 +108,9 @@ jshero.i18n = (function() {
   dic = dic_en; // default
 
   /**
-     * @param {String} lang, e.g. "de", "en"
-     */
-  var setLanguage = function(language) {
+   * @param {String} lang, e.g. "de", "en"
+   */
+  function setLanguage(language) {
     if (language === "de") {
       dic = dic_de;
     } else {
@@ -116,13 +118,13 @@ jshero.i18n = (function() {
     }
   };
 
-  var get = function(key) {
+  function get(key) {
     return dic[key];
   };
 
-  return {
+  return Object.freeze({
     setLanguage: setLanguage,
     get: get
-  };
+  });
 
 })();
