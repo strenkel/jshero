@@ -4,6 +4,8 @@ if (typeof jshero === "undefined") {
 
 jshero.array = (function() {
 
+  "use strict";
+
   /**
    * Returns true, if a and b are arrays with same length and
    * all elements are strict equal.
@@ -11,14 +13,14 @@ jshero.array = (function() {
    * @param a {*}
    * @param b {*}
    */
-  var isEqual = function(a, b) {
+  function isEqual(a, b) {
     if (!Array.isArray(a) || !Array.isArray(b)) {
       return false;
     }
     if (a.length !== b.length) {
       return false;
     }
-    for (var i = 0, l = a.length; i < l; i++) {
+    for (let i = 0, l = a.length; i < l; i++) {
       if (a[i] !== b[i]) {
         return false;
       }
@@ -26,8 +28,8 @@ jshero.array = (function() {
     return true;
   };
 
-  return {
+  return Object.freeze({
     isEqual: isEqual
-  };
+  });
 
 })();
