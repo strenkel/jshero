@@ -70,6 +70,48 @@ For each amount less than or equal to <code>10</code>, the surcharge is <code>1<
 For each amount greater than <code>10</code>, the surcharge is <code>2</code>.<br><br>
 Example: <code>addWithSurcharge(5,&nbsp;15)</code> should return <code>23</code>.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph"><pre><code>function addWithSurcharge(a, b) {
+
+  let surcharge = 0;
+
+  if (a <= 10) {
+    surcharge = surcharge + 1;
+  } else ...
+
+  ...
+
+  return a + b + surcharge;
+}</code></pre></div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function addWithSurcharge(a, b) {
+
+  let surcharge = 0;
+
+  if (a <= 10) {
+    surcharge = surcharge + 1;
+  } else {
+    surcharge = surcharge + 2;
+  }
+
+  if (b <= 10) {
+    surcharge = surcharge + 1;
+  } else {
+    surcharge = surcharge + 2;
+  }
+
+  return a + b + surcharge;
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

@@ -22,6 +22,38 @@ For each amount less than or equal to <code>10</code>, the surcharge is <code>1<
 For each amount greater than <code>10</code>, the surcharge is <code>2</code>.<br><br>
 Example: <code>addWithSurcharge(5,&nbsp;15)</code> should return <code>23</code>.`,
 
+  hint: `<pre><code>function addWithSurcharge(a, b) {
+
+  let surcharge = 0;
+
+  if (a <= 10) {
+    surcharge = surcharge + 1;
+  } else ...
+
+  ...
+
+  return a + b + surcharge;
+}</code></pre>`,
+
+  solution: `<pre><code>function addWithSurcharge(a, b) {
+
+  let surcharge = 0;
+
+  if (a <= 10) {
+    surcharge = surcharge + 1;
+  } else {
+    surcharge = surcharge + 2;
+  }
+
+  if (b <= 10) {
+    surcharge = surcharge + 1;
+  } else {
+    surcharge = surcharge + 2;
+  }
+
+  return a + b + surcharge;
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('addWithSurcharge');
