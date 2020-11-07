@@ -33,40 +33,39 @@ Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt. A
 <code>sprachen[sprachen.length] = 'PHP'</code> ist dasselbe wie <code>sprachen.push('PHP')</code>. Doch schon
 an der Länge des Codes sieht man, dass die Variante mit <code>push</code> eleganter ist.`,
 
-    task: `Schreibe eine Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert.
+    task: `Schreibe eine Funktion <code>rotate</code>, die die Elemente eines Arrays rotiert.
 Alle Elemente des Arrays sollen um eine Position nach links verschoben werden.
 Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden.<br><br>Beispiel:
-<code>rotiere(['a', 'b', 'c'])</code> sollte <code>['b', 'c', 'a']</code> ergeben.`,
+<code>rotate(['a', 'b', 'c'])</code> sollte <code>['b', 'c', 'a']</code> ergeben.`,
 
-    hint: `<pre><code>Entferne mit shift das 0te Element.
-Füge mit push das 0te Element wieder hinzu.
-</code></pre>`,
+    hint: `Entferne mit <code>shift</code> das 0te Element.
+Füge mit <code>push</code> das 0te Element wieder hinzu.`,
 
-    solution: `<pre><code>function rotiere(einArray) {
-  let element0 = einArray.shift();
-  einArray.push(element0);
-  return einArray;
+    solution: `<pre><code>function rotate(anArray) {
+  let element0 = anArray.shift();
+  anArray.push(element0);
+  return anArray;
 }</code></pre>`,
 
     tests: [
       function() {
-        return testutil.assert_isFunction('rotiere');
+        return testutil.assert_isFunction('rotate');
       },
 
       function() {
-        return testutil.assert_functionHasNumOfParameter('rotiere', 1);
+        return testutil.assert_functionHasNumOfParameter('rotate', 1);
       },
 
       function() {
-        return testutil.assert_functionReturns('rotiere([1, 2])', [2, 1]);
+        return testutil.assert_functionReturns('rotate([1, 2])', [2, 1]);
       },
 
       function() {
-        return testutil.assert_functionReturns("rotiere(['a', 'b', 'c'])", ['b', 'c', 'a']);
+        return testutil.assert_functionReturns("rotate(['a', 'b', 'c'])", ['b', 'c', 'a']);
       },
 
       function() {
-        return testutil.assert_functionReturns("rotiere([1, 'b', 'c', 37])", ['b', 'c', 37, 1]);
+        return testutil.assert_functionReturns("rotate([1, 'b', 'c', 37])", ['b', 'c', 37, 1]);
       }
     ]
 

@@ -33,6 +33,15 @@ All elements should be moved one position to the left.
 The 0th element should be placed at the end of the array. The rotated array should be returned.<br><br>
 Example: <code>rotate(['a',&nbsp;'b',&nbsp;'c'])</code> should return <code>['b',&nbsp;'c',&nbsp;'a']</code>.`,
 
+  hint: `Remove the 0th element with <code>shift</code>.
+Add it again with <code>push</code>.`,
+
+    solution: `<pre><code>function rotate(anArray) {
+  let element0 = anArray.shift();
+  anArray.push(element0);
+  return anArray;
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('rotate');

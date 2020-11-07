@@ -21,6 +21,14 @@ Now we fill the array step by step. <code>len1</code> is <code>1</code> and <cod
     task: `Write a function <code>getLastElement</code> that takes an array and returns the last element of the array.<br><br>
 Example: <code>getLastElement([1,&nbsp;2])</code> should return <code>2</code>.`,
 
+    hint: `Determine the index of the last element with the <code>length</code> property.
+Take into account that the first element in the array has the index <code>0</code>.`,
+
+    solution: `<pre><code>function getLastElement(anArray) {
+  let lastIndex = anArray.length - 1;
+  return anArray[lastIndex];
+}</code></pre>`,
+
     tests: [
 
       function() {

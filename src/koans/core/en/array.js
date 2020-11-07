@@ -17,6 +17,14 @@ let someValues = [a, b, c];</code></pre>`,
   task: `Write a function <code>toArray</code> that takes 2 values and returns these values in an array.<br><br>
 Example: <code>toArray(5,&nbsp;9)</code> should return the array <code>[5,&nbsp;9]</code>.`,
 
+hint: `<pre><code>function toArray(a, b) {
+  return [...];
+}</code></pre>`,
+
+solution: `<pre><code>function toArray(a, b) {
+  return [a, b];
+}</code></pre>`,
+
   tests: [
 
     function() {

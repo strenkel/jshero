@@ -67,6 +67,24 @@ Now we fill the array step by step. <code>len1</code> is <code>1</code> and <cod
     <div id="koans-task" class="paragraph">Write a function <code>getLastElement</code> that takes an array and returns the last element of the array.<br><br>
 Example: <code>getLastElement([1,&nbsp;2])</code> should return <code>2</code>.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph">Determine the index of the last element with the <code>length</code> property.
+Take into account that the first element in the array has the index <code>0</code>.</div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function getLastElement(anArray) {
+  let lastIndex = anArray.length - 1;
+  return anArray[lastIndex];
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

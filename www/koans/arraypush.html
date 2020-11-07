@@ -82,19 +82,18 @@ Hier wird ein leeres Array nacheinander mit den aufgeführten Werten gefüllt. A
 an der Länge des Codes sieht man, dass die Variante mit <code>push</code> eleganter ist.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>rotiere</code>, die die Elemente eines Arrays rotiert.
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>rotate</code>, die die Elemente eines Arrays rotiert.
 Alle Elemente des Arrays sollen um eine Position nach links verschoben werden.
 Das 0te Element soll ans Ende des Arrays gestellt werden. Das rotierte Array soll zurückgegeben werden.<br><br>Beispiel:
-<code>rotiere(['a', 'b', 'c'])</code> sollte <code>['b', 'c', 'a']</code> ergeben.</div>
+<code>rotate(['a', 'b', 'c'])</code> sollte <code>['b', 'c', 'a']</code> ergeben.</div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>Entferne mit shift das 0te Element.
-Füge mit push das 0te Element wieder hinzu.
-</code></pre></div>
+    <div id="hint-area" class="paragraph">Entferne mit <code>shift</code> das 0te Element.
+Füge mit <code>push</code> das 0te Element wieder hinzu.</div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -102,10 +101,10 @@ Füge mit push das 0te Element wieder hinzu.
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>function rotiere(einArray) {
-  let element0 = einArray.shift();
-  einArray.push(element0);
-  return einArray;
+    <div id="solution-area" class="paragraph"><pre><code>function rotate(anArray) {
+  let element0 = anArray.shift();
+  anArray.push(element0);
+  return anArray;
 }</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"

@@ -81,6 +81,25 @@ All elements should be moved one position to the left.
 The 0th element should be placed at the end of the array. The rotated array should be returned.<br><br>
 Example: <code>rotate(['a',&nbsp;'b',&nbsp;'c'])</code> should return <code>['b',&nbsp;'c',&nbsp;'a']</code>.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph">Remove the 0th element with <code>shift</code>.
+Add it again with <code>push</code>.</div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function rotate(anArray) {
+  let element0 = anArray.shift();
+  anArray.push(element0);
+  return anArray;
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
