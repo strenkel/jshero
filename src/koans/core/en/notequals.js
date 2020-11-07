@@ -18,6 +18,14 @@ should return <code>true</code> if all three parameters are strict unequal. Othe
 Example: <code>unequal(1,&nbsp;2,&nbsp;3)</code> should return <code>true</code> and
 <code>unequal(1,&nbsp;1,&nbsp;2)</code> should return <code>false</code>.`,
 
+hint: `<pre><code>function unequal(a, b, c) {
+  return a !== b && ...
+}</code></pre>`,
+
+  solution: `<pre><code>function unequal(a, b, c) {
+  return a !== b && a !== c && b !== c;
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('unequal');
