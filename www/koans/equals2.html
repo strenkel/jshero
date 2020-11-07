@@ -57,10 +57,29 @@
     <div id="koans-lesson" class="paragraph">Die folgende Aufgabe soll das Zusammenspiel von strikter Gleichheit und booleschen Operatoren vertiefen.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>gleich</code>, die 3 Werte auf strikte Gleichheit überprüft. Die Funktion soll nur
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>equals</code>, die 3 Werte auf strikte Gleichheit überprüft. Die Funktion soll nur
 dann <code>true</code> ergeben, wenn alle 3 Werte strikt gleich sind.<br><br>
-Beispiel: <code>gleich(1, 1, 1)</code> soll <code>true</code> und <code>gleich(1, 1, 2)</code> soll <code>false</code> ergeben.</div>
+Beispiel: <code>equals(1, 1, 1)</code> soll <code>true</code> und <code>equals(1, 1, 2)</code> soll <code>false</code> ergeben.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph"><pre><code>function equals(a, b, c) {
+  // Vergleiche a und b sowie a und c.
+  // Verknüpfe das Ergebnis beider Vergleiche mit &&.
+}</code></pre></div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function equals(a, b, c) {
+  return a === b && a === c;
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

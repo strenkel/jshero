@@ -11,6 +11,15 @@ The function should only return <code>true</code> if all 3 values are equal.<br>
 Example: <code>equals(1,&nbsp;1,&nbsp;1)</code> should return <code>true</code> and
 <code>equals(1,&nbsp;2,&nbsp;1)</code> should return <code>false</code>.`,
 
+hint: `<pre><code>function equals(a, b, c) {
+  // Compare a with b and a with c.
+  // Connect the result of both comparisons with &&.
+}</code></pre>`,
+
+  solution: `<pre><code>function equals(a, b, c) {
+  return a === b && a === c;
+}</code></pre>`,
+
   tests: [
 
     function() {
