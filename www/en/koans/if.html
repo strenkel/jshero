@@ -73,6 +73,30 @@ If they are unequal, you should get <code>'UNEQUAL'</code>.<br><br>
 Example: <code>equals(1,&nbsp;1)</code> should return <code>'EQUAL'</code> and
 <code>equals(1,&nbsp;2)</code> should return <code>'UNEQUAL'</code>.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph"><pre><code>function equals(a, b) {
+// Initialize a variable with 'UNEQUAL'.
+// Use 'if' to set the variable to 'EQUAL' if necessary.
+// Return the variable.
+}</code></pre></div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function equals(a, b) {
+  let result = 'UNEQUAL';
+  if (a === b) {
+    result = 'EQUAL';
+  }
+  return result;
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

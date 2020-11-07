@@ -16,6 +16,14 @@ or equal to 100 and less than 1000.<br><br>
 Example: <code>isThreeDigit(500)</code> should return <code>true</code> and <code>isThreeDigit(50)</code>
 should return <code>false</code>.`,
 
+hint: `<pre><code>function isThreeDigit(x) {
+  return x >= 100 && ...
+}</code></pre>`,
+
+  solution: `<pre><code>function isThreeDigit(x) {
+  return x >= 100 && x < 1000;
+}</code></pre>`,
+
   tests: [
 
     function() {

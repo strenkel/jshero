@@ -25,6 +25,20 @@ If they are unequal, you should get <code>'UNEQUAL'</code>.<br><br>
 Example: <code>equals(1,&nbsp;1)</code> should return <code>'EQUAL'</code> and
 <code>equals(1,&nbsp;2)</code> should return <code>'UNEQUAL'</code>.`,
 
+hint: `<pre><code>function equals(a, b) {
+// Initialize a variable with 'UNEQUAL'.
+// Use 'if' to set the variable to 'EQUAL' if necessary.
+// Return the variable.
+}</code></pre>`,
+
+    solution: `<pre><code>function equals(a, b) {
+  let result = 'UNEQUAL';
+  if (a === b) {
+    result = 'EQUAL';
+  }
+  return result;
+}</code></pre>`,
+
   tests: [
 
     function() {
