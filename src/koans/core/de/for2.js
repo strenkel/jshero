@@ -21,6 +21,7 @@ Beispiel: <code>mean([1, 2, 3])</code> sollte <code>(1+2+3)/3</code> = <code>2</
   solution: `<pre><code>function mean(data) {
 
   let sum = 0;
+
   for (let i = 0; i < data.length; i ++) {
     sum = sum + data[i];
   }

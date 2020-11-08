@@ -72,6 +72,36 @@ Ansonsten gibt das übergebene Argument das Trennzeichen vor.
 Ein leeres Array soll den Leerstring ergeben.
 <br><br>Beispiel: <code>list(['Sonne', 'Mond', 'Sterne'])</code> soll <code>'Sonne, Mond und Sterne'</code> ergeben.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph">Erzeuge aus dem übergebenen Array ein neues Array ohne das letzte Element.
+Verkette die Elemente des neuen Arrays mit Komma und Leerzeichen.
+Füge das letztes Element des übergebene Array mit <code>' und '</code> hinzu.
+Behandle Sonderfälle getrennt.</div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function list(words) {
+
+  if (words.length === 0) {
+    return '';
+  }
+
+  if (words.length === 1) {
+    return words[0];
+  }
+
+  let wordsExLast = words.slice(0, words.length - 1);
+  let lastWord = words[words.length - 1];
+  return wordsExLast.join(', ') + ' und ' + lastWord;
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

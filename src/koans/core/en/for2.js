@@ -16,6 +16,19 @@ for (let i = 0; i < myArray.length; i++) {
 and returns the arithmetic mean of those numbers.<br><br>
 Example: <code>mean([1, 2, 3])</code> should return <code>(1+2+3)/3</code> = <code>2</code>.`,
 
+  hint: `To calculate the mean of n numbers, you have to add up the numbers and divide the obtained sum by n.`,
+
+  solution: `<pre><code>function mean(data) {
+
+  let sum = 0;
+
+  for (let i = 0; i < data.length; i ++) {
+    sum = sum + data[i];
+  }
+
+  return sum / data.length;
+};</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('mean');

@@ -67,6 +67,30 @@ If both arrays are equally long, the second array should be appended to the firs
 Example: <code>concatUp([1,&nbsp;2],&nbsp;[3])</code> should return <code>[3,&nbsp;1,&nbsp;2]</code>
 and <code>concatUp([5,&nbsp;7],&nbsp;[6,&nbsp;8])</code> should return <code>[5,&nbsp;7,&nbsp;6,&nbsp;8]</code>.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Hint
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph"><pre><code>function concatUp(firstArray, secondArray) {
+  // Use if to decide in which order the
+  // two arrays should be concatenated.
+}</code></pre></div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function concatUp(firstArray, secondArray) {
+
+  if (secondArray.length >= firstArray.length) {
+    return firstArray.concat(secondArray);
+  }
+
+  return secondArray.concat(firstArray);
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

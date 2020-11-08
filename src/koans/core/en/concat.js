@@ -19,6 +19,20 @@ If both arrays are equally long, the second array should be appended to the firs
 Example: <code>concatUp([1,&nbsp;2],&nbsp;[3])</code> should return <code>[3,&nbsp;1,&nbsp;2]</code>
 and <code>concatUp([5,&nbsp;7],&nbsp;[6,&nbsp;8])</code> should return <code>[5,&nbsp;7,&nbsp;6,&nbsp;8]</code>.`,
 
+  hint: `<pre><code>function concatUp(firstArray, secondArray) {
+  // Use if to decide in which order the
+  // two arrays should be concatenated.
+}</code></pre>`,
+
+  solution: `<pre><code>function concatUp(firstArray, secondArray) {
+
+  if (secondArray.length >= firstArray.length) {
+    return firstArray.concat(secondArray);
+  }
+
+  return secondArray.concat(firstArray);
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('concatUp');

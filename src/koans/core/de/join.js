@@ -21,6 +21,26 @@ Ansonsten gibt das übergebene Argument das Trennzeichen vor.
 Ein leeres Array soll den Leerstring ergeben.
 <br><br>Beispiel: <code>list(['Sonne', 'Mond', 'Sterne'])</code> soll <code>'Sonne, Mond und Sterne'</code> ergeben.`,
 
+  hint: `Erzeuge aus dem übergebenen Array ein neues Array ohne das letzte Element.
+Verkette die Elemente des neuen Arrays mit Komma und Leerzeichen.
+Füge das letztes Element des übergebene Array mit <code>' und '</code> hinzu.
+Behandle Sonderfälle getrennt.`,
+
+  solution: `<pre><code>function list(words) {
+
+  if (words.length === 0) {
+    return '';
+  }
+
+  if (words.length === 1) {
+    return words[0];
+  }
+
+  let wordsExLast = words.slice(0, words.length - 1);
+  let lastWord = words[words.length - 1];
+  return wordsExLast.join(', ') + ' und ' + lastWord;
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('list');
