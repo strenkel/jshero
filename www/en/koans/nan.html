@@ -70,7 +70,9 @@ let message;
 let age = parseInt(input);
 if ( Number.isNaN(age) ) {
   message = 'Input is not a number!';
-}</code></pre></div>
+}</code></pre>
+
+The following task is challenging.</div>
     
     <h2>Exercise</h2>
     <div id="koans-task" class="paragraph">Write a function <code>parseFirstInt</code> that takes a string and returns the first integer present in the
@@ -78,6 +80,26 @@ string. If the string does not contain an integer, you should get <code>NaN</cod
 Example: <code>parseFirstInt('No. 10')</code> should return <code>10</code> and <code>parseFirstInt('Babylon')</code> should
 return <code>NaN</code>.</div>
     
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function parseFirstInt(input) {
+
+  let inputToParse = input;
+
+  for (let i = 0; i < input.length; i++) {
+    let firstInt = parseInt(inputToParse);
+    if (!Number.isNaN(firstInt)) {
+      return firstInt;
+    }
+    inputToParse = inputToParse.substr(1);
+  }
+
+  return NaN;
+}</code></pre></div>
     
 
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

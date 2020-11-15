@@ -26,12 +26,29 @@ let message;
 let age = parseInt(input);
 if ( Number.isNaN(age) ) {
   message = 'Du hast keine Zahl eingegeben.';
-}</code></pre>`,
+}</code></pre>
+
+Die folgende Aufgabe ist anspruchsvoll.`,
 
     task: `Schreibe eine Funktion <code>parseFirstInt</code>, die einen String entgegennimmt und die die erste in dem
 String vorkommende ganze Zahl zurückgibt. Enthält der String keine ganze Zahl, soll man <code>NaN</code> erhalten.<br><br>
 Beispiel: <code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code> zurückgeben.
 <code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> ergeben.`,
+
+    solution: `<pre><code>function parseFirstInt(input) {
+
+  let inputToParse = input;
+
+  for (let i = 0; i < input.length; i++) {
+    let firstInt = parseInt(inputToParse);
+    if (!Number.isNaN(firstInt)) {
+      return firstInt;
+    }
+    inputToParse = inputToParse.substr(1);
+  }
+
+  return NaN;
+}</code></pre>`,
 
     tests: [
 

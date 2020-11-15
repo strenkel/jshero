@@ -25,12 +25,29 @@ let message;
 let age = parseInt(input);
 if ( Number.isNaN(age) ) {
   message = 'Input is not a number!';
-}</code></pre>`,
+}</code></pre>
+
+The following task is challenging.`,
 
     task: `Write a function <code>parseFirstInt</code> that takes a string and returns the first integer present in the
 string. If the string does not contain an integer, you should get <code>NaN</code>.<br><br>
 Example: <code>parseFirstInt('No. 10')</code> should return <code>10</code> and <code>parseFirstInt('Babylon')</code> should
 return <code>NaN</code>.`,
+
+    solution: `<pre><code>function parseFirstInt(input) {
+
+  let inputToParse = input;
+
+  for (let i = 0; i < input.length; i++) {
+    let firstInt = parseInt(inputToParse);
+    if (!Number.isNaN(firstInt)) {
+      return firstInt;
+    }
+    inputToParse = inputToParse.substr(1);
+  }
+
+  return NaN;
+}</code></pre>`,
 
     tests: [
 
