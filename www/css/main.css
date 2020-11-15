@@ -204,6 +204,11 @@ textarea.code-area {
   display: none;
 }
 
+#portrait {
+  height: 8em;
+  float: right;
+}
+
 /* Small screens and tablets */
 @media (max-width: 1200px) {
 
@@ -230,6 +235,11 @@ textarea.code-area {
 
   #content {
     padding: 8em 1em 14em 1em;
+  }
+
+  #portrait {
+    height: 6em;
+    margin-right: 3%;
   }
 
 }
