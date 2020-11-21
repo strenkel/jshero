@@ -34,6 +34,8 @@ string. If the string does not contain an integer, you should get <code>NaN</cod
 Example: <code>parseFirstInt('No. 10')</code> should return <code>10</code> and <code>parseFirstInt('Babylon')</code> should
 return <code>NaN</code>.`,
 
+    hint: `Use a loop. Within the loop use <code>parseInt()</code>.`,
+
     solution: `<pre><code>function parseFirstInt(input) {
 
   let inputToParse = input;

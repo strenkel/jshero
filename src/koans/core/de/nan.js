@@ -35,6 +35,8 @@ String vorkommende ganze Zahl zurückgibt. Enthält der String keine ganze Zahl,
 Beispiel: <code>parseFirstInt('Sonnebornstr. 27')</code> sollte <code>27</code> zurückgeben.
 <code>parseFirstInt('Babylon')</code> sollte <code>NaN</code> ergeben.`,
 
+    hint: `Benutze eine Schleife. Verwende innerhalb der Schleife <code>parseInt()</code>.`,
+
     solution: `<pre><code>function parseFirstInt(input) {
 
   let inputToParse = input;
