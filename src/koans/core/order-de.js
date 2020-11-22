@@ -95,6 +95,7 @@ jshero.koans.initReorder(
     'object3',
     'object4',
     'method1',
+    'functional',
     'regex1',
     'regex2',
     'regex3',

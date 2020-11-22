@@ -17,9 +17,9 @@
 <body>
 
   <div id="header">
-    <a id="next-button" class="control" href="regex2.html" title="Nächste Seite"></a>
+    <a id="next-button" class="control" href="regex1.html" title="Nächste Seite"></a>
     <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="functional.html" title="Vorherige Seite"></a>
+    <a id="prev-button" class="control" href="method1.html" title="Vorherige Seite"></a>
     <div id="menu" class="menu" title="Menü"></div>
     <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
     <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -52,48 +52,44 @@
       Ohne localStorage werden deine Lösungen nicht gespeichert.
     </p>
 
-    <h1 id="koans-title">Regex: Zeichenliterale</h1>
+    <h1 id="koans-title">Funktionale Programmierung</h1>
     
-    <div id="koans-lesson" class="paragraph"><a href='https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck'>Reguläre Ausdrücke</a>,
-kurz Regex (engl.: regular expression), sind Muster zum Beschreiben von Zeichenketten.
-Sie bilden eine kleine, eigenständige Sprache, die Teil von JavaScript
-und vielen weiteren Sprachen (Python, Perl, ...) und Programmen (LibreOffice, Emacs, ...) ist.
-Reguläre Ausdrücke sind leistungsstark, aber auch sehr kryptisch.
-<br><br>
-In JavaScript werden reguläre Ausdrücke zwischen Schrägstrichen notiert:
+    <div id="koans-lesson" class="paragraph">Bei der <a href="https://de.wikipedia.org/wiki/Funktionale_Programmierung">funktionalen Programmierung</a>
+werden Funktionen nicht nur wie bisher deklariert und aufgerufen, sondern Funktionen werden auch als Parameter
+an andere Funktionen übergeben oder Funktionen werden von Funktionen zurückgegeben. Eine Stärke von JavaScript ist es, dass es
+ebenso wie objektorientierte auch funktionale Programmierung unterstützt.<br><br>
+In JavaScript sind Funktionen nämlich Objekte, die wie alle anderen Objekte Variablen zugeordnet werden
+können. Deklariert man eine Funktion mit dem Schlüsselwort <code>function</code> und anschließendem Funktionsnamen,
+so wir automatisch eine Variable mit dem Namen der Funktion erzeugt. Diese Variable enthält als Wert die Funktion.<br><br>
+Schauen wir uns das Ganze am Beispiel der Array-Methode <code>map</code> (engl.: abbilden) an:
 
-<pre><code>let pruefeAufOF = /OF/;</code></pre>
+<pre><code>function addOne(x) {
+  return x + 1;
+}
 
-Hier ist <code>OF</code> der regulärer Ausdruck. Es ist ein sogenanntes Zeichenliteral und steht für sich selbst.
-Mit ihm kann man testen, ob ein anderer String die Zeichenfolge <code>OF</code> enthält:
+let startNumbers = [1, 2, 3];
+let newNumbers = startNumbers.map(addOne);
+console.log(newNumbers); // > [2, 3, 4]</code></pre>
 
-<pre><code>let t1 = /OF/.test('OF-C 79');
-let t2 = /OF/.test('B-OF 61')
-let t3 = /OF/.test('HB-F 42');
-let t4 = /OF/.test('Ofen');</code></pre>
-
-<code>test()</code> ist eine Regex-Methode. Sie gibt <code>true</code> zurück, wenn
-der ihr übergebene String das durch den Regex beschriebene Muster enthält.
-In unserem Fall ist das Muster die Zeichenfolge <code>OF</code>. <code>'OF-C 79'</code> und
-<code>'B-OF 61'</code> enthalten <code>OF</code>, also erhalten <code>t1</code> und <code>t2</code>
-den Wert <code>true</code>. Der String <code>'HB-F 42'</code> enthält nicht <code>OF</code>.
-<code>t3</code> ist <code>false</code>.
-<br>
-Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
-<code>'Ofen'</code> enthält zwar <code>Of</code>, aber nicht <code>OF</code>.
-<code>t4</code> ist <code>false</code>.</div>
+Die Methothe <code>map()</code> verlangt als Parameter eine Funktion. In den ersten drei Zeilen haben wir einen Funktion
+mit dem Namen <code>addOne</code> deklariert. Mit dieser Deklaration wurde gleichzeitig die Variable mit dem Namen
+<code>addOne</code> erzeugt. Die Variable <code>addOne</code> enthält die Funktion <code>addOne()</code>. Diese Funktion
+wird nun der Methode <code>map()</code> übergeben. Intern ruft jetzt <code>map()</code> die Funktion <code>addOne()</code>
+für jedes Array-Element auf. Die Funktion <code>addOne()</code> wird also sukzessive mit den Werten <code>1</code>,
+<code>2</code> und <code>3</code> aufgerufen. Als Ergbnis erhält man die Werte <code>2</code>, <code>3</code> und
+<code>4</code>. Diese Werte werden von <code>map()</code> als Array zurückgegeben.</div>
     
     <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>enthaeltRose</code>, die prüft, ob ein String den Teilstring
-<code>'Rose'</code> enthält.<br><br>Beispiel: <code>enthaeltRose('eine Rose')</code> sollte <code>true</code> und
-<code>enthaeltRose('ein Blatt')</code> sollte <code>false</code> ergeben.</div>
+    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>double</code>, die ein Array mit Zahlen entgegennimmt und die diese Zahlen
+verdoppelt als Array zurückgibt.<br><br>
+Beispiel: <code>double([1, 2, 3])</code> sollte <code>[2, 4, 6]</code> ergeben.</div>
     
     <div id="hint-link-root" class="paragraph">
       <span id="hint-link">
         <span id="hint-open-close">+</span> Tipp
       </span>
     </div>
-    <div id="hint-area" class="paragraph"><pre><code>Benutze den Regex /Rose/.</pre></code></div>
+    <div id="hint-area" class="paragraph">Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> zu finden.</div>
     
     
     <div id="solution-link-root" class="paragraph">
@@ -101,9 +97,23 @@ Reguläre Ausdrücke unterscheiden zwischen Groß- und Kleinschreibung.
         <span id="solution-open-close">+</span> Lösung
       </span>
     </div>
-    <div id="solution-area" class="paragraph"><pre><code>function enthaeltRose(s) {
-  return /Rose/.test(s);
-}</pre></code></div>
+    <div id="solution-area" class="paragraph"><pre><code>// mit Schleife
+function double(myNumbers) {
+  let result = [];
+  for (let i = 0; i < myNumbers.length; i++) {
+    result.push(myNumbers[i] * 2);
+  }
+  return result;
+}
+
+// mit map()
+function timesTwo(x) {
+  return 2 * x;
+}
+
+function double(myNumbers) {
+  return myNumbers.map(timesTwo);
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
