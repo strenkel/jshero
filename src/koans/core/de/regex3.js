@@ -10,7 +10,7 @@ als auch für <code>Meier</code>. Er steht aber auch für <code>Mxier</code>.
 Möchte man letzteres ausschließen, so muss man die Zeichenauswahl auf <code>a</code>
 und <code>e</code> begrenzen. Dazu schreibt man die gewünschte Auswahl in eckige Klammern:
 
-<pre><code>let let t1 = /M[ae]ier/.test('Maier');
+<pre><code>let t1 = /M[ae]ier/.test('Maier');
 let t2 = /M[ae]ier/.test('Meier');
 let t3 = /M[ae]ier/.test('Mxier');
 let t4 = /M[ae]ier/.test('Maeier');</code></pre>

@@ -55,6 +55,14 @@ Den Buchstabenbereich kann man wie bei Ziffern beliebig einschränken (<code>/[M
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 2b')", true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("pruefe('Klasse 5c')", true);
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns("pruefe('Klasse 6d')", true);
     },
 
