@@ -24,13 +24,7 @@ let newNumbers = startNumbers.map(function (x) {
 });
 console.log(newNumbers); // > [2, 3, 4]</code></pre>
 
-Die Methothe <code>map()</code> verlangt als Parameter eine Funktion. In den ersten drei Zeilen haben wir einen Funktion
-mit dem Namen <code>addOne</code> deklariert. Mit dieser Deklaration wurde gleichzeitig die Variable mit dem Namen
-<code>addOne</code> erzeugt. Die Variable <code>addOne</code> enthält die Funktion <code>addOne()</code>. Diese Funktion
-wird nun der Methode <code>map()</code> übergeben. Intern ruft jetzt <code>map()</code> die Funktion <code>addOne()</code>
-für jedes Array-Element auf. Die Funktion <code>addOne()</code> wird also sukzessive mit den Werten <code>1</code>,
-<code>2</code> und <code>3</code> aufgerufen. Als Ergbnis erhält man die Werte <code>2</code>, <code>3</code> und
-<code>4</code>. Diese Werte werden von <code>map()</code> als Array zurückgegeben.`,
+`,
 
   task: `Schreibe eine Funktion <code>double</code>, die ein Array mit Zahlen entgegennimmt und die diese Zahlen
 verdoppelt als Array zurückgibt.<br><br>
