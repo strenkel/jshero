@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'functionexpression',
 
-  title: 'Functionsausdrücke',
+  title: 'Funktionsausdrücke',
 
   lesson: `Wir haben bisher Funktionsdeklarationen kennen gelernt. Man kann Funktionen aber auch direkt im laufenden
 Code definieren. Eine solche Funktionsdefinition im laufende Code nennt man Funktionsausdruck.
