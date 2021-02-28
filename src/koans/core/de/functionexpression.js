@@ -24,7 +24,10 @@ foo = plusOne(foo);
 
 Eine Funktionsdeklaration und ein Funktionsausdruck mit Variablendeklaration sind praktisch gleichwertig.
 Welche Schreibweise man bevorzugt, ist Geschmackssache.
-Wie wir noch sehen werden, spielen Funktionsausdrücke in der funktionalen Programmierung eine wichtige Rolle.`,
+Wie wir noch sehen werden, spielen Funktionsausdrücke in der funktionalen Programmierung eine wichtige Rolle.
+<br></br>
+Da man die Verwendung von Funktionsausdrücken schwer testen kann, hier eine Aufgabe, die das Zusammenspiel von Strings
+und Schleifen übt.`,
 
   task: `Schreibe eine Funktion <code>sperren</code>, die ein Wort entgegennimmt und dieses Wort gesperrt
 zurückgibt. Das Sperren soll dabei durch Einfügen von Leerzeichen realisiert werden.<br><br>
@@ -40,6 +43,10 @@ Beispiel: <code>sperren("Juni")</code> sollte <code>"J u n i"</code> ergeben.`,
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns('sperren("Ei")', 'E i');
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns('sperren("Juni")', 'J u n i');
     },
 
@@ -48,7 +55,7 @@ Beispiel: <code>sperren("Juni")</code> sollte <code>"J u n i"</code> ergeben.`,
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('double("Blaumeise")', 'B l a u m e i s e');
+      return jshero.testutil.assert_functionReturns('sperren("Blaumeise")', 'B l a u m e i s e');
     }
 
   ]
