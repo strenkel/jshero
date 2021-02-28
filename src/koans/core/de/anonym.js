@@ -1,74 +1,54 @@
 jshero.koans.add({
 
-  id: 'anonym',
+  id: 'functionexpression',
 
-  title: 'Anonyme Functionen',
+  title: 'Functionsausdrücke',
 
   lesson: `Wir haben bisher Funktionsdeklarationen kennen gelernt. Man kann Funktionen aber auch direkt im laufenden
 Code definieren. Eine solche Funktionsdefinition im laufende Code nennt man Funktionsausdruck.
-So kann man zum Beispiel einer Variablen direkt eine Funktion zuordnen.
+So kann man zum Beispiel einer Variablen oder Konstanten direkt eine Funktion zuordnen.
 
-<pre><code>let plusOne = function(x) {
+<pre><code>const plusOne = function(x) {
   return x + 1;
 };</code></pre>
 
-Hier wurde keine Funktion deklariert, sondern wir haben einen Funktionsausdruck direkt einer Variablen zugeordnet.
+Hier wurde keine Funktion deklariert, sondern wir haben einen Funktionsausdruck direkt einer Konstanten zugeordnet.
 Da es sich hier um eine Variablen-Zuordnung handelt, sollte das Statement mit einem Semikolon abgeschlossen werden.
 Im Gegensatz zu einer Funktionsdeklaration kann man bei einem Funktionsausdruck den Namen der Funktion weglassen.
-Man spricht in diesem Fall von einer anonymen Funktion. Eine Funktionsdeklaration und ein Funktionsausdruck mit
-Variablendeklaration sind praktisch gleichwertig.
+Man spricht in diesem Fall von einer anonymen Funktion. Die Funktion wird über den zugeordneten Variablennamen
+aufgerufen:
 
-<pre><code>let startNumbers = [1, 2, 3];
-let newNumbers = startNumbers.map(function (x) {
-  return x + 1;
-});
-console.log(newNumbers); // > [2, 3, 4]</code></pre>
+<pre><code>let foo = 1;
+foo = plusOne(foo);
+</code></pre>
 
-`,
+Eine Funktionsdeklaration und ein Funktionsausdruck mit Variablendeklaration sind praktisch gleichwertig.
+Welche Schreibweise man bevorzugt, ist Geschmackssache.
+Wie wir noch sehen werden, spielen Funktionsausdrücke in der funktionalen Programmierung eine wichtige Rolle.`,
 
-  task: `Schreibe eine Funktion <code>double</code>, die ein Array mit Zahlen entgegennimmt und die diese Zahlen
-verdoppelt als Array zurückgibt.<br><br>
-Beispiel: <code>double([1, 2, 3])</code> sollte <code>[2, 4, 6]</code> ergeben.`,
-
-  hint: `Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> zu finden.`,
-
-  solution: `<pre><code>// mit Schleife
-function double(myNumbers) {
-  let result = [];
-  for (let i = 0; i < myNumbers.length; i++) {
-    result.push(myNumbers[i] * 2);
-  }
-  return result;
-}
-
-// mit map()
-function timesTwo(x) {
-  return 2 * x;
-}
-
-function double(myNumbers) {
-  return myNumbers.map(timesTwo);
-}</code></pre>`,
+  task: `Schreibe eine Funktion <code>sperren</code>, die ein Wort entgegennimmt und dieses Wort gesperrt
+zurückgibt. Das Sperren soll dabei durch Einfügen von Leerzeichen realisiert werden.<br><br>
+Beispiel: <code>sperren("Juni")</code> sollte <code>"J u n i"</code> ergeben.`,
 
   tests: [
     function() {
-      return jshero.testutil.assert_isFunction('double');
+      return jshero.testutil.assert_isFunction('sperren');
     },
 
     function() {
-      return jshero.testutil.assert_functionHasNumOfParameter('double', 1);
+      return jshero.testutil.assert_functionHasNumOfParameter('sperren', 1);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('double([1])', [2]);
+      return jshero.testutil.assert_functionReturns('sperren("Juni")', 'J u n i');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('double([10, 15])', [20, 30]);
+      return jshero.testutil.assert_functionReturns('sperren("Traum")', 'T r a u m');
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('double([1, 2, 3])', [2, 4, 6]);
+      return jshero.testutil.assert_functionReturns('double("Blaumeise")', 'B l a u m e i s e');
     }
 
   ]
