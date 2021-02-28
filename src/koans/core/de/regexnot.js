@@ -31,7 +31,7 @@ sollte <code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).`
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("test('Red wine')", false);
+      return jshero.testutil.assert_functionReturns("test('Spa ce')", false);
     },
 
     function() {
@@ -51,7 +51,23 @@ sollte <code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).`
     },
 
     function() {
+      return jshero.testutil.assert_functionReturns("test('Punkt.')", false);
+    },
+
+    function() {
       return jshero.testutil.assert_functionReturns("test('a-z')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('UNTER_STRICH')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('Äh')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('Eßzett')", false);
     }
 
   ]
