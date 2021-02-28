@@ -87,6 +87,7 @@ jshero.koans.initReorder(
     'gettime',
     'subfunction',
     'recursion',
+    'const',
     'roman1',
     'roman2',
     'euler1',
