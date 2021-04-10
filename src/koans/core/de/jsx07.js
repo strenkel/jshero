@@ -10,7 +10,7 @@
 <a href="http://silentteacher.toxicode.fr/">SILENT TEACHER</a>. Spielerisch lernt man einfache
 Programmierkonzepte kennen. Da SILENT TEACHER als Programmiersprache JavaScript verwendet, eignet
 es sich hervorragend als Ergänzung zu JS Hero. Mehr zu SILENT TEACHER findest du im
-<a href="https://blog.jshero.net/silent-teacher/">JS Hero Blog</a> und bei
+<a href="https://blog.jshero.net/silent-teacher/">Code Hero Blog</a> und bei
 <a href="http://silentteacher.toxicode.fr/about">Toxicode</a>.<br><br>
 Hier soll nochmal die Verkettung von Strings geübt werden.`,
 
