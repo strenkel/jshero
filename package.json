@@ -10,11 +10,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-transform-template-literals": "^7.0.0",
-    "browserify": "^16.5.0",
-    "ejs": "^2.7.1",
-    "mocha": "^6.2.2"
+    "@babel/cli": "^7.13.14",
+    "@babel/core": "^7.13.15",
+    "@babel/plugin-transform-template-literals": "^7.13.0",
+    "browserify": "^16.5.2",
+    "ejs": "^2.7.4",
+    "mocha": "^6.2.3"
   }
 }
