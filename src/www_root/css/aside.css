@@ -7,7 +7,7 @@ aside {
   border: 1px #424242 solid;
 }
 
-aside a {
+aside h1 a {
   text-decoration: none;
 }
 
@@ -42,6 +42,11 @@ aside div {
 
 aside a {
   color: black;
+}
+
+aside a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 @media (max-width: 1350px) {
