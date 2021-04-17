@@ -1,0 +1,43 @@
+aside {
+  position: absolute;
+  /* center on the right column */
+  right: calc(25% - 315px);
+  top: 15em;
+  width: 11em;
+  border: 1px #424242 solid;
+}
+
+aside h1, aside h2 {
+  font-size: 1em;
+  background-color: #424242;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+aside h1 {
+  font-weight: bold;
+  padding-top: 1em;
+}
+
+aside h2 {
+  font-size: 0.7em;
+  font-style: italic;
+  padding-top: 0.8em;
+  padding-bottom: 1.43em;
+}
+
+aside div {
+  text-align: center;
+  margin: 2em;
+}
+
+aside a {
+  color: black;
+}
+
+@media (max-width: 1350px) {
+  aside {
+    display: none;
+  }
+}
