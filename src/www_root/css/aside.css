@@ -7,10 +7,18 @@ aside {
   border: 1px #424242 solid;
 }
 
+aside a {
+  text-decoration: none;
+}
+
+aside h1 a, aside h2 {
+  color: white;
+}
+
 aside h1, aside h2 {
+  color: white;
   font-size: 1em;
   background-color: #424242;
-  color: white;
   margin: 0;
   text-align: center;
 }

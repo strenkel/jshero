@@ -7,6 +7,7 @@
   background-color: #424242; /* grey 800 */
   display: none;
   padding: 2em 0 2em 0;
+  z-index: 1;
 }
 
 #nav a {
