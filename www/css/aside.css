@@ -1,3 +1,5 @@
+/* ALL */
+
 aside {
   position: absolute;
   /* center on the right column */
@@ -7,23 +9,26 @@ aside {
   border: 1px #424242 solid;
 }
 
-aside h1 a {
-  text-decoration: none;
+aside a:hover {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
-aside h1 a, aside h2 {
-  color: white;
-}
+/* HEADER */
 
 aside h1, aside h2 {
-  color: white;
-  font-size: 1em;
   background-color: #424242;
   margin: 0;
   text-align: center;
 }
 
+aside h1 a {
+  text-decoration: none;
+  color: white
+}
+
 aside h1 {
+  font-size: 1em;
   font-weight: bold;
   padding-top: 1em;
 }
@@ -31,25 +36,38 @@ aside h1 {
 aside h2 {
   font-size: 0.7em;
   font-style: italic;
+  color: white;
   padding-top: 0.8em;
   padding-bottom: 1.43em;
 }
+
+/* CONTENT */
 
 aside div {
   text-align: center;
   margin: 2em;
 }
 
-aside a {
+aside div a {
   color: black;
 }
 
-aside a:hover {
-  text-decoration: underline;
-  text-decoration-style: dotted;
+/* Breakpoint content-align: center => left*/
+@media (max-width: 1600px) {
+  aside {
+    right: calc(50% - 550px);
+  }
 }
 
-@media (max-width: 1350px) {
+/* Breakpoint font-size: 20px => 18px */
+@media (max-width: 1200px) {
+  aside {
+    right: calc(50% - 470px);
+  }
+}
+
+/* Right side too small for aside */
+@media (max-width: 1000px) {
   aside {
     display: none;
   }

@@ -87,7 +87,7 @@ textarea.code-area {
 
 #content {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 37em;
   /* Content height determine page height. */
   padding: 8em 6% 8em 6%;
 }
@@ -208,6 +208,13 @@ textarea.code-area {
   height: 8em;
   float: right;
 }
+
+@media (max-width: 1600px) {
+  #content {
+    margin: 0;
+  }
+}
+
 
 /* Small screens and tablets */
 @media (max-width: 1200px) {
