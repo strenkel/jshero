@@ -3,8 +3,8 @@
 aside {
   position: absolute;
   /* center on the right column */
-  right: calc(25% - 315px);
-  top: 15em;
+  right: calc(50% - 700px);
+  top: 14em;
   width: 11em;
   border: 1px #424242 solid;
 }
@@ -55,7 +55,7 @@ aside div a {
 /* Breakpoint content-align: center => left*/
 @media (max-width: 1600px) {
   aside {
-    right: calc(50% - 550px);
+    right: calc(50% - 570px);
   }
 }
 

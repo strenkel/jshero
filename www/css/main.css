@@ -86,7 +86,7 @@ textarea.code-area {
 /* --- CONTENT --- */
 
 #content {
-  margin: 0 auto;
+  margin: 0 0 0 12em;
   max-width: 37em;
   /* Content height determine page height. */
   padding: 8em 6% 8em 6%;
@@ -212,7 +212,7 @@ textarea.code-area {
 /* Change content align from center to left */
 @media (max-width: 1600px) {
   #content {
-    margin: 0;
+    margin: 0 0 0 4em;
   }
 }
 
@@ -221,6 +221,10 @@ textarea.code-area {
 
   html, body {
     font-size: 18px;
+  }
+
+  #content {
+    margin: 0;
   }
 
 }
