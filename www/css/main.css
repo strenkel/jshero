@@ -209,12 +209,12 @@ textarea.code-area {
   float: right;
 }
 
+/* Change content align from center to left */
 @media (max-width: 1600px) {
   #content {
     margin: 0;
   }
 }
-
 
 /* Small screens and tablets */
 @media (max-width: 1200px) {
