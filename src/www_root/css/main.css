@@ -96,6 +96,10 @@ textarea.code-area {
   color: #0033ff; /* blue */
 }
 
+#content a:hover {
+  text-decoration-thickness: 2px;
+}
+
 #content pre {
   background-color: #f5f5f5; /* grey 100 */
   padding: 1em 0.7em;
@@ -194,10 +198,13 @@ textarea.code-area {
 }
 
 #hint-link-root,  #solution-link-root {
-  text-decoration: underline;
   text-align: right;
-  cursor: pointer;
   font-style: italic;
+}
+
+#hint-link,  #solution-link {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #hint-area, #solution-area {
