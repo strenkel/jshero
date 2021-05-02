@@ -1,4 +1,4 @@
-/* ALL */
+/* --- ALL --- */
 
 aside {
   position: absolute;
@@ -6,13 +6,19 @@ aside {
   right: calc(50% - 700px);
   top: 14em;
   width: 11em;
-  border: 1px #424242 solid;
+
 }
 
 aside a:hover {
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }
+
+aside section {
+  border: 1px #424242 solid;
+}
+
+/* --- BLOG --- */
 
 /* HEADER */
 
@@ -50,6 +56,25 @@ aside div {
 
 aside div a {
   color: black;
+}
+
+/* --- ANDROID APP --- */
+
+#aside-android-app {
+  margin-top: 3em;
+  height: 4.3em;
+}
+
+#aside-android-app a {
+  background-image: url("../img/google-play-badge.png");
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+}
+
+#aside-android-app a:hover {
+  background-color: #424242;
 }
 
 /* Breakpoint content-align: center => left*/
