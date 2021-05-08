@@ -52,6 +52,7 @@ aside h2 {
 aside div {
   text-align: center;
   margin: 2em;
+  line-height: 1.3em;
 }
 
 aside div a {
@@ -62,19 +63,10 @@ aside div a {
 
 #aside-android-app {
   margin-top: 3em;
-  height: 4.3em;
 }
 
-#aside-android-app a {
-  background-image: url("../img/google-play-badge.png");
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
-  display: inline-block;
-}
-
-#aside-android-app a:hover {
-  background-color: #424242;
+#aside-android-app h1 {
+  padding: 1em 0;
 }
 
 /* Breakpoint content-align: center => left*/
