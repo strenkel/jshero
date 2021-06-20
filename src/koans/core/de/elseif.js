@@ -41,7 +41,7 @@ Für jeden Betrag, der größer <code>20</code> ist, beträgt der Zuschlag <code
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(10, 9)', 21);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(10, 10)', 22);
     },
 
     function() {
@@ -53,27 +53,55 @@ Für jeden Betrag, der größer <code>20</code> ist, beträgt der Zuschlag <code
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(13, 20)', 37);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(11, 11)', 26);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(20, 13)', 37);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(10, 20)', 33);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(15, 27)', 47);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(20, 10)', 33);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(27, 15)', 47);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(10, 21)', 35);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(25, 5)', 34);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(21, 10)', 35);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(5, 25)', 34);
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(11, 20)', 35);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(20, 11)', 35);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(11, 21)', 37);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(21, 11)', 37);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(20, 20)', 44);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(21, 20)', 46);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(20, 21)', 46);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addiereMitZuschlag(21, 21)', 48);
     }
   ]
 

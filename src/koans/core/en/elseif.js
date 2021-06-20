@@ -42,7 +42,7 @@ Example: <code>addWithSurcharge(10,&nbsp;30)</code> should return <code>44</code
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(10, 9)', 21);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(10, 10)', 22);
     },
 
     function() {
@@ -54,27 +54,55 @@ Example: <code>addWithSurcharge(10,&nbsp;30)</code> should return <code>44</code
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(13, 20)', 37);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(11, 11)', 26);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(20, 13)', 37);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(10, 20)', 33);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(15, 27)', 47);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(20, 10)', 33);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(27, 15)', 47);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(10, 21)', 35);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(25, 5)', 34);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(21, 10)', 35);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('addWithSurcharge(5, 25)', 34);
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(11, 20)', 35);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(20, 11)', 35);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(11, 21)', 37);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(21, 11)', 37);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(20, 20)', 44);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(21, 20)', 46);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(20, 21)', 46);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('addWithSurcharge(21, 21)', 48);
     }
   ]
 
