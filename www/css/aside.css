@@ -4,7 +4,7 @@ aside {
   position: absolute;
   /* center on the right column */
   right: calc(50% - 700px);
-  top: 14em;
+  top: 11em;
   width: 11em;
 
 }
@@ -16,6 +16,17 @@ aside a:hover {
 
 aside section {
   border: 1px #424242 solid;
+}
+
+/* --- IMG --- */
+
+aside img {
+  width: 100%;
+}
+
+aside .img {
+  border: none;
+  margin-bottom: 3em;
 }
 
 /* --- BLOG --- */
