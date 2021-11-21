@@ -18,17 +18,6 @@ aside section {
   border: 1px #424242 solid;
 }
 
-/* --- IMG --- */
-
-aside img {
-  width: 100%;
-}
-
-aside .img {
-  border: none;
-  margin-bottom: 3em;
-}
-
 /* --- BLOG --- */
 
 /* HEADER */
@@ -80,7 +69,7 @@ aside div a {
   padding: 1em 0;
 }
 
-/* Breakpoint content-align: center => left*/
+/* Breakpoint content-align: center => left */
 @media (max-width: 1600px) {
   aside {
     right: calc(50% - 570px);
