@@ -6,9 +6,9 @@ jshero.koans.add({
 
   lesson: `Klammern hatten wir schon kennengelernt. Sie begrenzen die Anwendung eines Operators auf den eingeklammerten
 Bereich. Klammern haben aber noch eine weitere wichtige Funktion. Eingeklammerte Bereiche definieren eine Gruppe.
-Diese Gruppen werden von 1 bis 9 durchnummeriert (mehr Gruppen kann man nicht definieren).
-Mit <code>\\1</code> bis <code>\\9</code> kann man innerhalb des Regex auf eine Gruppe zugreifen.
-Damit kann man nach Wiederholungen suchen.<br>
+Diese Gruppen werden von 1 bis 9 durchnummeriert. Mit <code>\\1</code> bis <code>\\9</code> kann man innerhalb des Regex
+auf eine Gruppe zugreifen. Dabei wird der durch die Gruppe zuvor gefundene String referenziert.
+So ist es möglich nach Wiederholungen zu suchen.<br>
 <code>/([a-z])\\1/</code> findet doppelte Kleinbuchstaben und <code>/(\\d)(\\d).*\\1\\2/</code>
 findet doppelte zweistellige Zahlen.
 
@@ -17,7 +17,7 @@ let t2 = /(\\d)(\\d).*\\1\\2/.test(12 mal 12'); // true</code></pre>`,
 
   task: `Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String ein doppeltes Wort enthält.
 Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet.
-Klein- oder Großschreibung soll keine Rolle spielen.<br><br>Beispiel: <code>test('Apfel Birne Apfel')</code> sollte
+<br><br>Beispiel: <code>test('Apfel Birne Apfel')</code> sollte
 true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
 
   tests: [
@@ -27,6 +27,22 @@ true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
 
     function() {
       return jshero.testutil.assert_functionHasNumOfParameter('test', 1);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('a a')", true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('aa a')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('a aa')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('Apfel Apfel')", true);
     },
 
     function() {
@@ -41,16 +57,21 @@ true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
       return jshero.testutil.assert_functionReturns("test('ApfelApfel')", false);
     },
 
-    function() {
-      return jshero.testutil.assert_functionReturns("test('Apfel Apfel')", true);
-    },
-
+    
     function() {
       return jshero.testutil.assert_functionReturns("test('Apfel Apfelmus')", false);
     },
 
     function() {
       return jshero.testutil.assert_functionReturns("test('ein rein')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('fein rein')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('1 1')", false);
     }
 
   ]
