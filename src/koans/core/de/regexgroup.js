@@ -16,9 +16,10 @@ findet doppelte zweistellige Zahlen.
 let t2 = /(\\d)(\\d).*\\1\\2/.test(12 mal 12'); // true</code></pre>`,
 
   task: `Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String ein doppeltes Wort enthält.
-Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet.
-<br><br>Beispiel: <code>test('Apfel Birne Apfel')</code> sollte
-true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
+Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet. Klein- und Großschreibung
+soll keine Rolle spielen.
+<br><br>Beispiel: <code>test('Ich denke, also bin ich.')</code> sollte <code>true</code>
+und <code>test('Sein oder Nichtsein, das ist hier die Frage!')</code> sollte <code>false</code> ergeben.`,
 
   tests: [
     function() {
@@ -40,6 +41,15 @@ true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
     function() {
       return jshero.testutil.assert_functionReturns("test('a aa')", false);
     },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('B A a b')", true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('a aa')", false);
+    },
+
 
     function() {
       return jshero.testutil.assert_functionReturns("test('Apfel Apfel')", true);
@@ -68,6 +78,19 @@ true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.`,
 
     function() {
       return jshero.testutil.assert_functionReturns("test('fein rein')", false);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('Ich denke, also bin ich.')", true);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('Sein oder Nichtsein, das ist hier die Frage!')", false);
+    },
+
+
+    function() {
+      return jshero.testutil.assert_functionReturns("test('Ja, ja!')", true);
     },
 
     function() {

@@ -69,9 +69,10 @@ let t2 = /(\d)(\d).*\1\2/.test(12 mal 12'); // true</code></pre></div>
     
     <h2>Aufgabe</h2>
     <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>test</code>, die feststellt, ob ein String ein doppeltes Wort enthält.
-Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet.
-<br><br>Beispiel: <code>test('Apfel Birne Apfel')</code> sollte
-true und <code>test('Apfel Birne')</code> sollte <code>false</code> ergeben.</div>
+Ein Wort soll aus mindestens einem Buchstaben bestehen. Zugrunde liegt das englische Alphabet. Klein- und Großschreibung
+soll keine Rolle spielen.
+<br><br>Beispiel: <code>test('Ich denke, also bin ich.')</code> sollte <code>true</code>
+und <code>test('Sein oder Nichtsein, das ist hier die Frage!')</code> sollte <code>false</code> ergeben.</div>
     
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
