@@ -23,11 +23,11 @@ sollte <code>false</code> ergeben (das Leerzeichen gehört nicht zum Alphabet).`
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("test('Red')", true);
+      return jshero.testutil.assert_functionReturns("test('OFC')", true);
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("test('OFC')", true);
+      return jshero.testutil.assert_functionReturns("test('Kickers')", true);
     },
 
     function() {

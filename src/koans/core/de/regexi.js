@@ -10,7 +10,7 @@
 Ist es gesetzt, unterscheidet das Pattern nicht zwischen Groß- und Kleinschreibung. Der Regex ist case-insensitive.
 Flags werden dem Regex einfach angehängt:
 
-<pre><code>let t1 = /es/i.test("Was es"); // true
+<pre><code>let t1 = /es/i.test("War es"); // true
 let t2 = /es/i.test("Es war"); // true
 let t3 = /es/i.test("ES"); // true</code></pre>`,
 

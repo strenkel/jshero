@@ -11,7 +11,7 @@ den Unterstrich (engl.: word character). <code>/\\w/</code> ist identisch mit <c
 Der Abkürzung ist ein Backslash vorangestellt, damit sie nicht als normaler Buchstabe
 gelesen wird. Abkürzungen kann man auch innerhalb einer Zeichenauswahl verwenden.
 <code>/[\\da-z]/</code> steht für eine Ziffer oder einen Kleinbuchstaben.<br><br>
-Ein weitere nützliche Zeichenklasse ist <code>\\s</code>. Sie steht für ein sogenannten Leerraum-Zeichen
+Eine weitere nützliche Zeichenklasse ist <code>\\s</code>. Sie steht für ein sogenanntes Leerraum-Zeichen
 (engl.: whitespace character). Sie umfasst das gewöhnliche Leerzeichen, das Tabulator-Zeichen, den Zeilenumbruch
 und weitere ähnliche Zeichen.<br><br>
 Verwendet man anstelle des Kleinbuchstaben den Großbuchstaben, kann man die negierte Zeichenklasse darstellen.

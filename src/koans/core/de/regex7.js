@@ -55,7 +55,11 @@ Ein Zeilenumbruch innerhalb des Zitats ist also nicht zulässig.<br><br>Beispiel
       },
 
       function() {
-        return testutil.assert_functionReturns("hasQuote('32\"')", false);
+        return testutil.assert_functionReturns("hasQuote('\"nein')", false);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("hasQuote('nein\"')", false);
       }
 
     ]

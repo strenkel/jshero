@@ -57,6 +57,14 @@ zurückgegeben werden.<br><br>Beispiel:
 
     function() {
       return jshero.testutil.assert_functionReturns(
+        'parseDate("02.05.1912")',
+        new Date(Date.UTC(1912, 4, 2)), {
+          'utc': true
+        });
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns(
         'parseDate("...31.12.2000...")',
         new Date(Date.UTC(2000, 11, 31)), {
           'utc': true

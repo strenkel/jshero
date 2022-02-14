@@ -44,11 +44,11 @@ und <code>pruefe('OF 709')</code> sollte <code>false</code> ergeben.`,
       },
 
       function() {
-        return testutil.assert_functionReturns("pruefe('F AA 1')", true);
+        return testutil.assert_functionReturns("pruefe('OF ZZ 1')", true);
       },
 
       function() {
-        return testutil.assert_functionReturns("pruefe('LUP A 1')", true);
+        return testutil.assert_functionReturns("pruefe('LUP B 456')", true);
       },
 
       function() {
@@ -60,23 +60,31 @@ und <code>pruefe('OF 709')</code> sollte <code>false</code> ergeben.`,
       },
 
       function() {
-        return testutil.assert_functionReturns("pruefe('F A 12345')", false);
+        return testutil.assert_functionReturns("pruefe('OF A 12345')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns("pruefe('F A')", false);
+        return testutil.assert_functionReturns("pruefe('OF A')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns("pruefe('F 1')", false);
+        return testutil.assert_functionReturns("pruefe('HH 1')", false);
       },
 
       function() {
-        return testutil.assert_functionReturns("pruefe('F AAA 1')", false);
+        return testutil.assert_functionReturns("pruefe('HB AAA 1')", false);
       },
 
       function() {
         return testutil.assert_functionReturns("pruefe('FFFF A 1')", false);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("pruefe('F A A 1')", false);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("pruefe('F A 1 1')", false);
       }
 
     ]

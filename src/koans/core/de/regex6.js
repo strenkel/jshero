@@ -77,11 +77,31 @@ ergeben.`,
       },
 
       function() {
+        return testutil.assert_functionReturns("pruefe('Maie')", false);
+      },
+
+      function() {
         return testutil.assert_functionReturns("pruefe('Maior')", false);
       },
 
       function() {
+        return testutil.assert_functionReturns("pruefe('Maiir')", false);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("pruefe('Major')", false);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("pruefe('Miyer')", false);
+      },
+
+      function() {
         return testutil.assert_functionReturns("pruefe('Mayeer')", false);
+      },
+
+      function() {
+        return testutil.assert_functionReturns("pruefe('Maer')", false);
       }
 
     ]
