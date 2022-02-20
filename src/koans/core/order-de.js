@@ -89,6 +89,7 @@ jshero.koans.initReorder(
     'recursion',
     'const',
     'functionexpression',
+    'arrow',
     'roman1',
     'roman2',
     'euler1',
