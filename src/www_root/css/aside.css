@@ -4,7 +4,7 @@ aside {
   position: absolute;
   /* center on the right column */
   right: calc(50% - 700px);
-  top: 11em;
+  top: 9em;
   width: 11em;
 
 }
@@ -57,6 +57,11 @@ aside div {
 
 aside div a {
   color: black;
+}
+
+#ukraine {
+  width: 220px;
+  margin-bottom: 3em;
 }
 
 /* --- ANDROID APP --- */
