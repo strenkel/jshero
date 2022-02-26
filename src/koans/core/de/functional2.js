@@ -16,9 +16,14 @@ let newNumbers = startNumbers.map(function(x) {
   
 console.log(newNumbers); // [2, 3, 4]</code></pre>
 
-Man sieht gewissermaßen direkt, mit welcher Operation das Array gemappt wird.`,
+Verwendet man jetzt auch noch <a href="arrow.html">Pfeilfunktionen</a>, so sieht man gewissermaßen direkt,
+mit welcher Operation das Array gemappt wird:
+
+<pre><code>let startNumbers = [1, 2, 3];
+let newNumbers = startNumbers.map(x => x + 1);
+console.log(newNumbers); // [2, 3, 4]</code></pre>`,
   
-    task: `Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie {x: 1, y: 2} entgegennimmt
+    task: `Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie <code>{x: 1, y: 2}</code> entgegennimmt
 und die x-Werte dieser Punkte als Array zurückgibt.<br><br>
 Beispiel: <code>toX([{x: -1, y: -5}, {x: 2, y: 7}])</code> sollte <code>[-1, 2]</code> liefern.`,
   
