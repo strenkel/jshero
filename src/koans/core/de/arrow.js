@@ -20,14 +20,13 @@ const f2 = (a, b) => {
 Die beiden Funktionen <code>f1</code> und <code>f2</code> sind funktional identisch. <code>f1</code>
 wird ein anonymer Funktionsausdruck zugeordnet, <code>f2</code> eine Pfeilfunktion.<br><br>
 Kann man den return-Wert direkt mit einem Ausdruck bestimmen, so kann man das <code>return</code>
-inklusive der Funktionsklammern auch weglassen:
+zusammen mit den Funktionsklammern weglassen:
 
 <pre><code>const f3 = function(a, b) {
   return a * b * 100;
 };
 
-const f4 = (a, b) => a * b * 100;
-};</code></pre>
+const f4 = (a, b) => a * b * 100;</code></pre>
 
 <code>f3</code> und <code>f4</code> sind wieder funktional identisch.<br><br>
 Besitzt die Funktion nur einen Parameter, so ergibt sich eine weitere Vereinfachung.
@@ -37,17 +36,16 @@ In diesem Fall kann man die Parameter-Klammer weglassen:
   return a * a;
 };
 
-const f4 = a => a * a;
-};</code></pre>
+const f6 = a => a * a;</code></pre>
 
 Pfeilfunktionen werden, wie wir später sehen, hauptsächlich in der funktionalen Programmierung verwendet.<br><br>
 Da man die Verwendung von Pfeilfunktionen nur schwer testen kann, hier eine anspruchsvolle Aufgabe aus
 dem Gebiet der Mathematik:`,
   
     task: `Schreibe eine Funktion <code>toDecimal</code>, die einen String mit einer
-<a href="https://de.wikipedia.org/wiki/Dualsystem">Binärzahl</a> entgegen nimmt und diese als Dezimalzahl zurückgibt.<br><br>
+<a href="https://de.wikipedia.org/wiki/Dualsystem">Binärzahl</a> entgegennimmt und diese als Dezimalzahl zurückgibt.<br><br>
 Beispiel: <code>toDecimal("10")</code> sollte <code>2</code> und
-<code>toDecimal("101")</code> sollte <code>5</code> zurückgeben.`,
+<code>toDecimal("101")</code> sollte <code>5</code> ergeben.`,
   
     tests: [
       function() {
