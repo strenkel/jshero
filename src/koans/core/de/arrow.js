@@ -2,46 +2,117 @@ jshero.koans.add({
 
     id: 'arrow',
   
-    title: 'Arrow function',
+    title: 'Pfeilfunktionen',
   
-    lesson: `<a href="functionexpression.html">Funktionsausdrücke</a> hatten wir schon kennengelernt. Dort wurde einer
-Variablen eine anonyme Funktion zugeordnet. Anonyme Funktionen kann man aber auch direkt, ohne vorherige Variablenzuodnung,
-an Funktionen übergeben, die Funktionen als Argument verlangen. Das <code>map</code>-Beispiel aus der vorherigen Lektion sieht dann so aus:
-  
-<pre><code>let startNumbers = [1, 2, 3];
+    lesson: `Pfeilfunktionen (engl.: arrow functions) bieten verschiedene Möglichkeiten, Funktionsausdrücke noch
+kürzer zu schreiben. Zunächst kann <code>function</code> durch einen Pfeil ersetzt werden:
 
-let newNumbers = startNumbers.map(function(x) {
-  return x+1;
-});
-  
-console.log(newNumbers); // [2, 3, 4]</code></pre>
+<pre><code>const f1 = function(a, b) {
+  const offset = 100;
+  return a + b + offset;
+};
 
-Man sieht gewissermaßen direkt, mit welcher Operation das Array gemappt wird.`,
+const f2 = (a, b) => {
+  const offset = 100;
+  return a + b + offset;
+};</code></pre>
+
+Die beiden Funktionen <code>f1</code> und <code>f2</code> sind funktional identisch. <code>f1</code>
+wird ein anonymer Funktionsausdruck zugeordnet, <code>f2</code> eine Pfeilfunktion.<br><br>
+Kann man den return-Wert direkt mit einem Ausdruck bestimmen, so kann man das <code>return</code>
+inklusive der Funktionsklammern auch weglassen:
+
+<pre><code>const f3 = function(a, b) {
+  return a * b * 100;
+};
+
+const f4 = (a, b) => a * b * 100;
+};</code></pre>
+
+<code>f3</code> und <code>f4</code> sind wieder funktional identisch.<br><br>
+Besitzt die Funktion nur einen Parameter, so ergibt sich eine weitere Vereinfachung.
+In diesem Fall kann man die Parameter-Klammer weglassen:
+
+<pre><code>const f5 = function(a) {
+  return a * a;
+};
+
+const f4 = a => a * a;
+};</code></pre>
+
+Pfeilfunktionen werden, wie wir später sehen, hauptsächlich in der funktionalen Programmierung verwendet.<br><br>
+Da man die Verwendung von Pfeilfunktionen nur schwer testen kann, hier eine anspruchsvolle Aufgabe aus
+dem Gebiet der Mathematik:`,
   
-    task: `Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie {x: 1, y: 2} entgegennimmt
-und die x-Werte dieser Punkte als Array zurückgibt.<br><br>
-Beispiel: <code>toX([{x: -1, y: -5}, {x: 2, y: 7}])</code> sollte <code>[-1, 2]</code> liefern.`,
+    task: `Schreibe eine Funktion <code>toDecimal</code>, die einen String mit einer
+<a href="https://de.wikipedia.org/wiki/Dualsystem">Binärzahl</a> entgegen nimmt und diese als Dezimalzahl zurückgibt.<br><br>
+Beispiel: <code>toDecimal("10")</code> sollte <code>2</code> und
+<code>toDecimal("101")</code> sollte <code>5</code> zurückgeben.`,
   
     tests: [
       function() {
-        return jshero.testutil.assert_isFunction('toX');
+        return jshero.testutil.assert_isFunction('toDecimal');
       },
   
       function() {
-        return jshero.testutil.assert_functionHasNumOfParameter('toX', 1);
+        return jshero.testutil.assert_functionHasNumOfParameter('toDecimal', 1);
       },
   
       function() {
-        return jshero.testutil.assert_functionReturns('toX([{x: -1, y: 2}])', [-1]);
+        return jshero.testutil.assert_functionReturns('toDecimal("0")', 0);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("1")', 1);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("10")', 2);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("11")', 3);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("100")', 4);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("101")', 5);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("110")', 6);
+      },
+
+        
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("111")', 7);
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('toX([{x: 2, y: 3}, {x: 4, y: 5}])', [2, 4]);
+        return jshero.testutil.assert_functionReturns('toDecimal("1000")', 8);
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('toX([{x: 9, y: 1}, {x: 8, y: 2}, {x: 7, y: 3}])', [9, 8, 7]);
-      }  
+        return jshero.testutil.assert_functionReturns('toDecimal("10000000000")', 1024);
+      },
+
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("11111010000")', 2000);
+      },
+
+      function() {
+        return jshero.testutil.assert_functionReturns('toDecimal("101110111000")', 3000);
+      }
+     
     ]
      
   });
