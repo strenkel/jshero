@@ -13,7 +13,7 @@ jshero.tester = (function(koanId, i18n, LANGUAGE) {
   var I18N = i18n.get;
   var NO_WORKER = typeof Worker === "undefined";
   var WORKER_URL = LANGUAGE === "de" ? "../js/lib/testWorker.js" : "../../js/lib/testWorker.js";
-  WORKER_URL += "?v=433";
+  WORKER_URL += "?v=440";
 
   var code; // String
   var testNr; // Integer
