@@ -32,7 +32,9 @@ für jedes Array-Element auf. Dabei werden die Array-Elemente <code>addOne()</co
 Als Ergbnis erhält man die Werte <code>2</code>, <code>3</code> und <code>4</code>.
 Diese Werte werden von <code>map()</code> als neues Array zurückgegeben. Das ursprüngliche Array bleibt dabei unverändert.
 Die Methode <code>map()</code> hat also zusammen mit
-der Funktion <code>addOne()</code> das Array <code>[1, 2, 3]</code> auf das Array <code>[2, 3, 4]</code> abgebildet.`,
+der Funktion <code>addOne()</code> das Array <code>[1, 2, 3]</code> auf das Array <code>[2, 3, 4]</code> abgebildet.<br><br>
+Eine Funktion, die einer anderen Funktion als Parameter übergeben wird und von dieser dann aufgerufen wird, bezeichnet man in der
+Informatik als <a href="https://de.wikipedia.org/wiki/R%C3%BCckruffunktion">Callback</a>.`,
 
   task: `Schreibe eine Funktion <code>double</code>, die ein Array mit Zahlen entgegennimmt und die diese Zahlen
 verdoppelt als Array zurückgibt.<br><br>
