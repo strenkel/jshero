@@ -100,6 +100,7 @@ jshero.koans.initReorder(
     'method1',
     'functional',
     'functional2',
+    'filter',
     'regex1',
     'regex2',
     'regex3',
