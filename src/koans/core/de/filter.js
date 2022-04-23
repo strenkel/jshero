@@ -18,7 +18,7 @@ let postiveNumbers = numbers.filter(x => x > 0);
 let negativeNumbers = numbers.filter(x => x < 0);
 
 // [-6, 120, 2]
-let evenNumbers = numbers.filter(x => x % 2);</code></pre>
+let evenNumbers = numbers.filter(x => x % 2 === 0);</code></pre>
 
 Läßt sich die Filterbedingung wie hier in einem kurzen Ausdruck darstellen, so kann man die Callback-Funktion elegant
 als Pfeilfunktion übergeben. In komplexeren Fällen ist eine eigenständige Funktion sinnvoll:
@@ -57,16 +57,21 @@ Beispiel: <code>filterBlau(['Korngelb', 'Tannenblau', 'Rosenrot'])</code> sollte
       },
   
       function() {
-        return jshero.testutil.assert_functionReturns('filterBlau(["Himmelblau"])', ["Himmelblau"]);
+        return jshero.testutil.assert_functionReturns("filterBlau(['Himmelblau'])", ['Himmelblau']);
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('toX([{x: 2, y: 3}, {x: 4, y: 5}])', [2, 4]);
+        return jshero.testutil.assert_functionReturns("filterBlau(['Korngelb', 'Tannenblau', 'Rosenrot'])", ['Tannenblau']);
       },
 
       function() {
-        return jshero.testutil.assert_functionReturns('toX([{x: 9, y: 1}, {x: 8, y: 2}, {x: 7, y: 3}])', [9, 8, 7]);
-      }  
+        return jshero.testutil.assert_functionReturns("filterBlau(['Blau', 'Gelb'])", ['Blau']);
+      },
+
+      function() {
+        return jshero.testutil.assert_functionReturns("filterBlau(['ROTKELCHEN', 'BLAUMEISE'])", ['BLAUMEISE']);
+      }
+      
     ]
      
   });

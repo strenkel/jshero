@@ -6,7 +6,7 @@ jshero.koans.add({
   
     lesson: `<a href="functionexpression.html">Funktionsausdrücke</a> hatten wir schon kennengelernt. Dort wurde einer
 Variablen eine anonyme Funktion zugeordnet. Anonyme Funktionen kann man aber auch direkt, ohne vorherige Variablenzuodnung,
-an Funktionen übergeben, die Funktionen als Argument verlangen. Das <code>map</code>-Beispiel aus der vorherigen Lektion sieht dann so aus:
+an Funktionen übergeben, die Funktionen als Argument verlangen. Das <code>map()</code>-Beispiel aus der vorherigen Lektion sieht dann so aus:
   
 <pre><code>let startNumbers = [1, 2, 3];
 
@@ -16,7 +16,7 @@ let newNumbers = startNumbers.map(function(x) {
   
 console.log(newNumbers); // [2, 3, 4]</code></pre>
 
-Verwendet man jetzt auch noch <a href="arrow.html">Pfeilfunktionen</a>, so sieht man gewissermaßen direkt,
+Verwendet man jetzt auch noch <a href="arrow.html">Pfeilfunktionen</a>, so sieht man direkt,
 mit welcher Operation das Array gemappt wird:
 
 <pre><code>let startNumbers = [1, 2, 3];
