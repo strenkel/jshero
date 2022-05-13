@@ -90,9 +90,7 @@ describe('jshero.date', function() {
     const toString = jshero.date.toString;
 
     it('should return the correct UTC Date string in local de when utc is passed', function() {
-      // The format is wrong. It should be german but is iso.
-      // Maybe node doesn't know the local 'de-DE'. Firefox returns the correct german date.
-      // FIXME: assert.strictEqual(toString(new Date(Date.UTC(2019, 11, 31)), {utc: true}), '2019-12-31 0:00:00 UTC');
+      assert.strictEqual(toString(new Date(Date.UTC(2019, 11, 31)), {utc: true}), '31.12.2019, 00:00:00 UTC');
     });
 
   });

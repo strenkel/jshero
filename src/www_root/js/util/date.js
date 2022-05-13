@@ -7,10 +7,10 @@ jshero.date = (function() {
   "use strict";
 
   /**
-     * Check whether obj is a Date object.
-     * 
-     * @param obj {*}
-     */
+   * Check whether obj is a Date object.
+   * 
+   * @param obj {*}
+   */
   function isDate(obj) {
     return Object.prototype.toString.call(obj) === "[object Date]";
   };
