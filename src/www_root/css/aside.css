@@ -59,9 +59,9 @@ aside div a {
   color: black;
 }
 
-#ukraine {
+.aside-image {
   width: 11em;
-  margin-bottom: 3em;
+  margin-top: 2em;
 }
 
 /* --- ANDROID APP --- */
