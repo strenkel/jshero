@@ -4,11 +4,19 @@ jshero.koans.add({
 
   title: 'Funktionsausdrücke',
 
-  lesson: `Wir haben bisher Funktionsdeklarationen kennen gelernt. Man kann Funktionen aber auch direkt im laufenden
-Code definieren. Eine solche Funktionsdefinition im laufende Code nennt man Funktionsausdruck.
+  lesson: `Wir haben bisher Funktionsdeklarationen kennen gelernt. Sie beginnen mit dem Schlüsselwort <code>function</code>
+gefolgt von dem Funktionsnamen, den Parametern und dem Funktionskörper:
+
+<pre><code>// Funktionsdeklaration
+function plusOne(x) {
+  return x + 1;
+}</code></pre>
+  
+Man kann Funktionen aber auch direkt im laufenden Code definieren. Eine solche Funktionsdefinition im laufende Code nennt man Funktionsausdruck.
 So kann man zum Beispiel einer Variablen oder Konstanten direkt eine Funktion zuordnen.
 
-<pre><code>const plusOne = function(x) {
+<pre><code>// Funktionsausdruck
+const plusOne = function(x) {
   return x + 1;
 };</code></pre>
 
@@ -24,7 +32,7 @@ foo = plusOne(foo);
 
 Eine Funktionsdeklaration und ein Funktionsausdruck mit Variablendeklaration sind praktisch gleichwertig.
 Welche Schreibweise man bevorzugt, ist Geschmackssache.
-Wie wir noch sehen werden, spielen Funktionsausdrücke in der funktionalen Programmierung eine wichtige Rolle.
+Wie wir noch sehen werden, spielen Funktionsausdrücke, insbesondere anonyme Funktionen, in der funktionalen Programmierung eine wichtige Rolle.
 <br></br>
 Da man die Verwendung von Funktionsausdrücken schwer testen kann, hier eine Aufgabe, die das Zusammenspiel von Strings
 und Schleifen übt.`,
