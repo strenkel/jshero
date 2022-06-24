@@ -40,6 +40,19 @@ function isPrime(num) {
 }
 
 const primes = numbers.filter(isPrime); // [2, 3, 5, 7]</code></pre>`,
+
+    hint: `Schreibe zunächst eine Funktion <code>containsBlau()</code>, die einen String entgegennimmt und <code>true</code> zurückgibt,
+wenn der String <code>'blau'</code> enhält. Enthält er nicht <code>'blau'</code>, soll <code>false</code> zurückgegeben werden. Groß- und Kleinschreibung
+soll keine Rolle spielen. Verwende dann die Array-Funktion <code>filter()</code> zusammen mit <code>containsBlau()</code>, um die geforderte Funktion
+<code>filterBlau()</code> zu schreiben.`,
+
+    solution: `<pre><code>function containsBlau(word) {
+  return word.toLowerCase().indexOf('blau') >= 0;
+}
+
+function filterBlau(words) {
+  return words.filter(containsBlau);
+}</pre></code>`,
   
     task: `Schreibe eine Funktion <code>filterBlau</code>, die ein Array mit Strings entgegennimmt
 und alle Array-Elemente, die den String <code>'blau'</code> enthalten, als Array zurückgibt. Groß- und Kleinschreibung
