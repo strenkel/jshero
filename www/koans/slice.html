@@ -71,6 +71,24 @@ Das ursprüngliche Array wird nicht verändert.</div>
 Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der ersten Hälfte gehören.<br><br>Beispiel:
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> sollte <code>[1,&nbsp;2]</code> zurückgeben.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph">Versuche eine Lösung mit der Array-Methode <code>slice()</code>, der Array-Eigenschaft
+<a href = 'arraylength.html'>length</a> und der Funktion <a href="round.html">Math.ceil()</a> zu finden.</div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>function halve(arr) {
+  let halfLength = Math.ceil(arr.length/2);
+  return arr.slice(0, halfLength);
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

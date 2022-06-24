@@ -18,6 +18,14 @@ Das ursprüngliche Array wird nicht verändert.`,
 Bei einer ungeraden Anzahl von Array-Elementen soll das mittlere Element zu der ersten Hälfte gehören.<br><br>Beispiel:
 <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> sollte <code>[1,&nbsp;2]</code> zurückgeben.`,
 
+  hint: `Versuche eine Lösung mit der Array-Methode <code>slice()</code>, der Array-Eigenschaft
+<a href = 'arraylength.html'>length</a> und der Funktion <a href="round.html">Math.ceil()</a> zu finden.`,
+
+  solution: `<pre><code>function halve(arr) {
+  let halfLength = Math.ceil(arr.length/2);
+  return arr.slice(0, halfLength);
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('halve');
