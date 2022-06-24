@@ -80,6 +80,32 @@ console.log(newNumbers); // [2, 3, 4]</code></pre></div>
 und die x-Werte dieser Punkte als Array zurückgibt.<br><br>
 Beispiel: <code>toX([{x: -1, y: -5}, {x: 2, y: 7}])</code> sollte <code>[-1, 2]</code> liefern.</div>
     
+    <div id="hint-link-root" class="paragraph">
+      <span id="hint-link">
+        <span id="hint-open-close">+</span> Tipp
+      </span>
+    </div>
+    <div id="hint-area" class="paragraph">Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> und einer Pfeilfunktion zu finden.</div>
+    
+    
+    <div id="solution-link-root" class="paragraph">
+      <span id="solution-link">
+        <span id="solution-open-close">+</span> Lösung
+      </span>
+    </div>
+    <div id="solution-area" class="paragraph"><pre><code>// mit Schleife
+function toX(points) {
+  let result = [];
+  for (let i = 0; i < points.length; i++) {
+    result.push(points[i].x);
+  }
+  return result;
+}
+
+// mit map() und Pfeilfunktion
+function toX(points) {
+  return points.map(p => p.x);
+}</code></pre></div>
     
     <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
       autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>

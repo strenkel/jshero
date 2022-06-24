@@ -22,6 +22,22 @@ mit welcher Operation das Array gemappt wird:
 <pre><code>let startNumbers = [1, 2, 3];
 let newNumbers = startNumbers.map(x => x + 1);
 console.log(newNumbers); // [2, 3, 4]</code></pre>`,
+
+hint: `Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> und einer Pfeilfunktion zu finden.`,
+
+  solution: `<pre><code>// mit Schleife
+function toX(points) {
+  let result = [];
+  for (let i = 0; i < points.length; i++) {
+    result.push(points[i].x);
+  }
+  return result;
+}
+
+// mit map() und Pfeilfunktion
+function toX(points) {
+  return points.map(p => p.x);
+}</code></pre>`,
   
     task: `Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie <code>{x: 1, y: 2}</code> entgegennimmt
 und die x-Werte dieser Punkte als Array zurückgibt.<br><br>
