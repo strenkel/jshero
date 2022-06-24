@@ -7,7 +7,8 @@ jshero.koans.add({
     lesson: `Eine weitere wichtige Array-Funktion mit Funktionsparamter ist <code>filter()</code>. Sie filtert aus einem Array alle
 Elemente heraus, die einen durch die Callback-Funktion implementierten Test bestehen, und gibt diese als neues Array zurück.
 Die Callback-Funktion muss dabei bei Aufruf mit einem Array-Element entweder <code>true</code> oder <code>false</code>
-ergeben. Array-Elemente, die <code>true</code> ergeben, landen im gefilterten Array.
+ergeben. Array-Elemente, die <code>true</code> ergeben, landen im gefilterten Array. Das ursprüngliche Array wird wie bei <code>map()</code>
+nicht verändert.
   
 <pre><code>let numbers = [7, -6, 120, -21, 2];
 
