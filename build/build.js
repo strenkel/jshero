@@ -25,15 +25,8 @@ render("src/html/de/playground.html", "www/playground.html");
 render("src/html/de/links.html", "www/links.html");
 render("src/html/de/privacy.html", "www/privacy.html");
 render("src/html/de/info.html", "www/info.html");
+render("src/html/de/success.html", "www/success.html", { koans: koansDe });
 
-// build de/success.html
-ejs.renderFile("src/html/de/success.html", { koans: koansDe }, function(err, successHtml) {
-  if (err) throw err;
-  fs.writeFile("www/success.html", successHtml, function(err) {
-    if (err) throw err;
-    console.log("Successfully build success.html (de).");
-  });
-});
 
 // build en/success.html
 ejs.renderFile("src/html/en/success.html", { koans: koansEn }, function(err, successHtml) {
