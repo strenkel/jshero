@@ -4,7 +4,7 @@ aside {
   position: absolute;
   /* center on the right column */
   right: calc(50% - 700px);
-  top: 6em;
+  top: 8em;
   width: 11em;
 
 }
