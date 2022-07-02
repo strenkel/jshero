@@ -17,6 +17,14 @@ ejs.renderFile("src/html/de/home.html", function(err, successHtml) {
   });
 });
 
+ejs.renderFile("src/html/de/intro.html", function(err, successHtml) {
+  if (err) throw err;
+  fs.writeFile("www/intro.html", successHtml, function(err) {
+    if (err) throw err;
+    console.log("Successfully build intro.html (de).");
+  });
+});
+
 // build de/success.html
 ejs.renderFile("src/html/de/success.html", { koans: koansDe }, function(err, successHtml) {
   if (err) throw err;
@@ -65,19 +73,20 @@ for (var i = 0, l = koansCoreDe.length; i < l; i++) {
 for (var i = 0, l = koansDomDe.length; i < l; i++) {
   var koan = koansDomDe[i];
 
-  var links = {};
+  var prevLink;
+  var nextLink;
   if (i === 0) {
-    links.prev = koansCoreDe[koansCoreDe.length - 1].id + ".html";
+    prevLink = koansCoreDe[koansCoreDe.length - 1].id + ".html";
   } else {
-    links.prev = koansDomDe[i - 1].id + ".html";
+    prevLink = koansDomDe[i - 1].id + ".html";
   }
   if (i === l - 1) {
-    links.next = "../success.html"
+    nextLink = "../success.html"
   } else {
-    links.next = koansDomDe[i + 1].id + ".html";;
+    nextLink = koansDomDe[i + 1].id + ".html";;
   }
 
-  ejs.renderFile("src/html/de/main-dom.html", { koan: koan, links: links }, function(err, koanHtml) {
+  ejs.renderFile("src/html/de/main-dom.html", { koan: koan, prevLink: prevLink, nextLink: nextLink}, function(err, koanHtml) {
     if (err) throw err;
     fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
       if (err) throw err;

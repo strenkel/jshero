@@ -10,20 +10,14 @@
   <meta name="author" content="Stefan Trenkel">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/aside.css?v=441">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/footer.css">
 </head>
 
 <body id="intro">
 
-  <div id="header">
-    <a id="next-button" class="control" href="koans/var.html" title="Nächste Seite"></a>
-    <a id="success-button" class="control" href="success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="home.html" title="Vorherige Seite"></a>
-    <div id="menu" class="menu" title="Menü"></div>
-    <a id="title" class="title" href="home.html" title="Home">JavaScript Hero</a>
-    <a id="title-short" class="title" href="home.html" title="Home">JS Hero</a>
-  </div>
+  <%- include('include/header.html', {root: "", nextLink: "koans/var.html", prevLink: "home.html"}); %>
 
   <div id="nav">
     <a href="home.html">Home</a>
@@ -110,6 +104,8 @@
       <a href="info.html">Mail</a>.
     </p>
   </div>
+
+  <%- include('include/aside.html', {root: "../"}); %>
 
   <div id="footer">
     <a href="https://blog.jshero.net">Blog</a>
