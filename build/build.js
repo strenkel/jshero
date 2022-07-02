@@ -40,19 +40,20 @@ console.log("Start building HTML koans files (de/en).");
 for (var i = 0, l = koansCoreDe.length; i < l; i++) {
   var koan = koansCoreDe[i];
 
-  var links = {};
+  var prevLink;
+  var nextLink;
   if (i === 0) {
-    links.prev = "../intro.html";
+    prevLink = "../intro.html";
   } else {
-    links.prev = koansCoreDe[i - 1].id + ".html";
+    prevLink = koansCoreDe[i - 1].id + ".html";
   }
   if (i === l - 1) {
-    links.next = koansDomDe[0].id + ".html";
+    nextLink = koansDomDe[0].id + ".html";
   } else {
-    links.next = koansCoreDe[i + 1].id + ".html";;
+    nextLink = koansCoreDe[i + 1].id + ".html";;
   }
 
-  ejs.renderFile("src/html/de/main.html", { koan: koan, links: links }, function(err, koanHtml) {
+  ejs.renderFile("src/html/de/main.html", { koan: koan, prevLink: prevLink, nextLink: nextLink }, function(err, koanHtml) {
     if (err) throw err;
     fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
       if (err) throw err;
