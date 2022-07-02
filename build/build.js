@@ -10,9 +10,9 @@ const koansDe = koansCoreDe.concat(koansDomDe);
 const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
 
 const render = function(inPath, outPath, data = {}) {
-  ejs.renderFile(inPath, data, function(err, successHtml) {
+  ejs.renderFile(inPath, data, function(err, html) {
     if (err) throw err;
-    fs.writeFile(outPath, successHtml, function(err) {
+    fs.writeFile(outPath, html, function(err) {
       if (err) throw err;
       console.log("Successfully build: " + inPath);
     });
@@ -21,6 +21,8 @@ const render = function(inPath, outPath, data = {}) {
 
 render("src/html/de/home.html", "www/home.html");
 render("src/html/de/intro.html", "www/intro.html");
+render("src/html/de/playground.html", "www/playground.html");
+render("src/html/de/links.html", "www/links.html");
 render("src/html/de/privacy.html", "www/privacy.html");
 render("src/html/de/info.html", "www/info.html");
 
