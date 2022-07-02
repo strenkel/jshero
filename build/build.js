@@ -9,21 +9,20 @@ const koansDomDe = require("../src/tmp/koans-dom-de.js").getKoans();
 const koansDe = koansCoreDe.concat(koansDomDe);
 const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
 
-ejs.renderFile("src/html/de/home.html", function(err, successHtml) {
-  if (err) throw err;
-  fs.writeFile("www/home.html", successHtml, function(err) {
+const render = function(inPath, outPath, data = {}) {
+  ejs.renderFile(inPath, data, function(err, successHtml) {
     if (err) throw err;
-    console.log("Successfully build home.html (de).");
+    fs.writeFile(outPath, successHtml, function(err) {
+      if (err) throw err;
+      console.log("Successfully build: " + inPath);
+    });
   });
-});
+}
 
-ejs.renderFile("src/html/de/intro.html", function(err, successHtml) {
-  if (err) throw err;
-  fs.writeFile("www/intro.html", successHtml, function(err) {
-    if (err) throw err;
-    console.log("Successfully build intro.html (de).");
-  });
-});
+render("src/html/de/home.html", "www/home.html");
+render("src/html/de/intro.html", "www/intro.html");
+render("src/html/de/privacy.html", "www/privacy.html");
+render("src/html/de/info.html", "www/info.html");
 
 // build de/success.html
 ejs.renderFile("src/html/de/success.html", { koans: koansDe }, function(err, successHtml) {
