@@ -9,6 +9,14 @@ const koansDomDe = require("../src/tmp/koans-dom-de.js").getKoans();
 const koansDe = koansCoreDe.concat(koansDomDe);
 const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
 
+ejs.renderFile("src/html/de/home.html", function(err, successHtml) {
+  if (err) throw err;
+  fs.writeFile("www/home.html", successHtml, function(err) {
+    if (err) throw err;
+    console.log("Successfully build home.html (de).");
+  });
+});
+
 // build de/success.html
 ejs.renderFile("src/html/de/success.html", { koans: koansDe }, function(err, successHtml) {
   if (err) throw err;
