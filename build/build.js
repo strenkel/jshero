@@ -18,7 +18,7 @@ const render = function(inPath, outPath, data = {}) {
     if (err) throw err;
     fs.writeFile(outPath, html, function(err) {
       if (err) throw err;
-      console.log("Successfully build: " + inPath);
+      console.log("Successfully build " + outPath);
     });
   });
 }
@@ -33,6 +33,7 @@ render("src/html/de/info.html", "www/info.html");
 render("src/html/de/success.html", "www/success.html", { koans: koansDe });
 
 // en
+render("src/html/en/home.html", "www/en/home.html");
 render("src/html/en/success.html", "www/en/success.html", { koans: koansEn });
 
 // build de/koans html
