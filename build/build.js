@@ -1,3 +1,4 @@
+// Render all html files with EJS.
 // Run from JS Hero root: node build/build.js
 // build.sh has to be run before.
 // Require pathes relative to build directory.
@@ -9,6 +10,9 @@ const koansDomDe = require("../src/tmp/koans-dom-de.js").getKoans();
 const koansDe = koansCoreDe.concat(koansDomDe);
 const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
 
+/**
+ * Render a file with EJS and save the result.
+ */
 const render = function(inPath, outPath, data = {}) {
   ejs.renderFile(inPath, data, function(err, html) {
     if (err) throw err;
@@ -19,6 +23,7 @@ const render = function(inPath, outPath, data = {}) {
   });
 }
 
+// de
 render("src/html/de/home.html", "www/home.html");
 render("src/html/de/intro.html", "www/intro.html");
 render("src/html/de/playground.html", "www/playground.html");
@@ -27,23 +32,15 @@ render("src/html/de/privacy.html", "www/privacy.html");
 render("src/html/de/info.html", "www/info.html");
 render("src/html/de/success.html", "www/success.html", { koans: koansDe });
 
-
-// build en/success.html
-ejs.renderFile("src/html/en/success.html", { koans: koansEn }, function(err, successHtml) {
-  if (err) throw err;
-  fs.writeFile("www/en/success.html", successHtml, function(err) {
-    if (err) throw err;
-    console.log("Successfully build success.html (en).");
-  });
-});
+// en
+render("src/html/en/success.html", "www/en/success.html", { koans: koansEn });
 
 // build de/koans html
 console.log("Start building HTML koans files (de/en).");
 for (var i = 0, l = koansCoreDe.length; i < l; i++) {
-  var koan = koansCoreDe[i];
-
-  var prevLink;
-  var nextLink;
+  
+  let prevLink;
+  let nextLink;
   if (i === 0) {
     prevLink = "../intro.html";
   } else {
@@ -55,20 +52,14 @@ for (var i = 0, l = koansCoreDe.length; i < l; i++) {
     nextLink = koansCoreDe[i + 1].id + ".html";;
   }
 
-  ejs.renderFile("src/html/de/main.html", { koan: koan, prevLink: prevLink, nextLink: nextLink }, function(err, koanHtml) {
-    if (err) throw err;
-    fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
-      if (err) throw err;
-    });
-  });
-
+  const koan = koansCoreDe[i];
+  render("src/html/de/main.html", "www/koans/" + koan.id + ".html", { koan: koan, prevLink: prevLink, nextLink: nextLink });
 }
 
 for (var i = 0, l = koansDomDe.length; i < l; i++) {
-  var koan = koansDomDe[i];
-
-  var prevLink;
-  var nextLink;
+  
+  let prevLink;
+  let nextLink;
   if (i === 0) {
     prevLink = koansCoreDe[koansCoreDe.length - 1].id + ".html";
   } else {
@@ -80,20 +71,14 @@ for (var i = 0, l = koansDomDe.length; i < l; i++) {
     nextLink = koansDomDe[i + 1].id + ".html";;
   }
 
-  ejs.renderFile("src/html/de/main-dom.html", { koan: koan, prevLink: prevLink, nextLink: nextLink}, function(err, koanHtml) {
-    if (err) throw err;
-    fs.writeFile("www/koans/" + koan.id + ".html", koanHtml, function(err) {
-      if (err) throw err;
-    });
-  });
-
+  const koan = koansDomDe[i];
+  render("src/html/de/main-dom.html", "www/koans/" + koan.id + ".html", { koan: koan, prevLink: prevLink, nextLink: nextLink });
 }
 
 // build en/koans html
 for (var i = 0, l = koansEn.length; i < l; i++) {
-  var koan = koansEn[i];
-
-  var links = {};
+  
+  let links = {};
   if (i === 0) {
     links.prev = "../home.html";
   } else {
@@ -105,11 +90,6 @@ for (var i = 0, l = koansEn.length; i < l; i++) {
     links.next = koansEn[i + 1].id + ".html";;
   }
 
-  ejs.renderFile("src/html/en/main.html", { koan: koan, links: links }, function(err, koanHtml) {
-    if (err) throw err;
-    fs.writeFile("www/en/koans/" + koan.id + ".html", koanHtml, function(err) {
-      if (err) throw err;
-    });
-  });
-
+  const koan = koansEn[i];
+  render("src/html/en/main.html", "www/en/koans/" + koan.id + ".html", { koan: koan, links: links });
 }
