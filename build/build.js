@@ -34,6 +34,10 @@ render("src/html/de/success.html", "www/success.html", { koans: koansDe });
 
 // en
 render("src/html/en/home.html", "www/en/home.html");
+render("src/html/en/playground.html", "www/en/playground.html");
+render("src/html/en/links.html", "www/en/links.html");
+render("src/html/en/privacy.html", "www/en/privacy.html");
+render("src/html/en/info.html", "www/en/info.html");
 render("src/html/en/success.html", "www/en/success.html", { koans: koansEn });
 
 // build de/koans html
