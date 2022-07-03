@@ -6,9 +6,9 @@ echo "Successfully cleaned target and tmp."
 # copy unmodified files from src/www_root (except js)
 cp src/www_root/*.html www/
 cp -r src/www_root/css/ www/css
-cp -r src/www_root/en/ www/en
 cp -r src/www_root/img www/img
 mkdir www/koans
+mkdir www/en
 mkdir www/en/koans
 echo "Successfully copied base files."
 
