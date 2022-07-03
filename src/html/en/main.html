@@ -18,14 +18,7 @@
 
 <body class="en">
 
-  <div id="header">
-    <a id="next-button" class="control" href="<%- links.next %>" title="Next page"></a>
-    <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="<%- links.prev %>" title="Previous page"></a>
-    <div id="menu" class="menu" title="Menu"></div>
-    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
-    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
-  </div>
+  <%- include('include/header.html', {root: "../"}); %>
 
   <div id="nav">
     <a href="../home.html">Home</a>

@@ -18,7 +18,6 @@ const render = function(inPath, outPath, data = {}) {
     if (err) throw err;
     fs.writeFile(outPath, html, function(err) {
       if (err) throw err;
-      console.log("Successfully build " + outPath);
     });
   });
 }
@@ -31,6 +30,7 @@ render("src/html/de/links.html", "www/links.html");
 render("src/html/de/privacy.html", "www/privacy.html");
 render("src/html/de/info.html", "www/info.html");
 render("src/html/de/success.html", "www/success.html", { koans: koansDe });
+console.log("Successfully render de/html files with EJS.");
 
 // en
 render("src/html/en/home.html", "www/en/home.html");
@@ -39,9 +39,9 @@ render("src/html/en/links.html", "www/en/links.html");
 render("src/html/en/privacy.html", "www/en/privacy.html");
 render("src/html/en/info.html", "www/en/info.html");
 render("src/html/en/success.html", "www/en/success.html", { koans: koansEn });
+console.log("Successfully render en/html files with EJS.");
 
 // build de/koans html
-console.log("Start building HTML koans files (de/en).");
 for (var i = 0, l = koansCoreDe.length; i < l; i++) {
   
   let prevLink;
@@ -79,22 +79,25 @@ for (var i = 0, l = koansDomDe.length; i < l; i++) {
   const koan = koansDomDe[i];
   render("src/html/de/main-dom.html", "www/koans/" + koan.id + ".html", { koan: koan, prevLink: prevLink, nextLink: nextLink });
 }
+console.log("Successfully render de/koan files with EJS.");
 
 // build en/koans html
 for (var i = 0, l = koansEn.length; i < l; i++) {
   
-  let links = {};
+  let prevLink;
+  let nextLink;
   if (i === 0) {
-    links.prev = "../home.html";
+    prevLink = "../home.html";
   } else {
-    links.prev = koansEn[i - 1].id + ".html";
+    prevLink = koansEn[i - 1].id + ".html";
   }
   if (i === l - 1) {
-    links.next = "../success.html"
+    nextLink = "../success.html"
   } else {
-    links.next = koansEn[i + 1].id + ".html";;
+    nextLink = koansEn[i + 1].id + ".html";;
   }
 
   const koan = koansEn[i];
-  render("src/html/en/main.html", "www/en/koans/" + koan.id + ".html", { koan: koan, links: links });
+  render("src/html/en/main.html", "www/en/koans/" + koan.id + ".html", { koan: koan, nextLink: nextLink, prevLink: prevLink });
 }
+console.log("Successfully render en/koan files with EJS.");
