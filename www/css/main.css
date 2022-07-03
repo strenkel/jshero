@@ -169,12 +169,12 @@ textarea.code-area {
 
 /* --- LINKS & PLAYGROUND PAGE --- */
 
-#links h2 {
+#links #content h2 {
   font-size: 1.1em;
   margin: 1em 0 0 0;
 }
 
-#links p {
+#links #content p {
   margin: 0.5em 0 3em 0;
 }
 

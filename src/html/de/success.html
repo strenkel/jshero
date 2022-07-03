@@ -10,8 +10,10 @@
   <meta name="author" content="Stefan Trenkel">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/aside.css?v=441">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/love.css">
   <link rel="stylesheet" href="css/success.css">
 </head>
 
@@ -78,6 +80,9 @@
     </div>
 
   </div>
+
+  <%- include('include/aside.html'); %>
+  <%- include('include/love.html', {root: ""}); %>
 
   <div id="footer">
     <a href="https://blog.jshero.net">Blog</a>
