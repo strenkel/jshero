@@ -4,7 +4,7 @@ aside {
   position: absolute;
   /* center on the right column */
   right: calc(50% - 700px);
-  top: 8em;
+  top: 7em;
   width: 11em;
 
 }
@@ -43,15 +43,15 @@ aside h2 {
   font-size: 0.7em;
   font-style: italic;
   color: white;
-  padding-top: 0.8em;
-  padding-bottom: 1.43em;
+  padding-top: 0.5em;
+  padding-bottom: 1.3em;
 }
 
 /* CONTENT */
 
 aside div {
   text-align: center;
-  margin: 2em;
+  margin: 1.5em;
   line-height: 1.3em;
 }
 
