@@ -1,62 +1,54 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width" name="viewport">
-  <title>JS Hero</title>
-  <meta name="description" content="Learn to Code">
-  <meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
-  <meta name="author" content="Stefan Trenkel">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/aside.css?v=441">
-  <link rel="stylesheet" href="../css/footer1.css">
-  <link rel="stylesheet" href="../css/footer.css">
+<meta charset="utf-8">
+<meta content="width=device-width" name="viewport">
+<title>JS Hero</title>
+<meta name="description" content="Learn to Code">
+<meta name="keywords" content="JavaScript Koans Lernen Übungen Programmierung Kurs Aufgaben">
+<meta name="author" content="Stefan Trenkel">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/aside.css?v=441">
+<link rel="stylesheet" href="../css/footer1.css">
+<link rel="stylesheet" href="../css/footer.css">
 </head>
-
 <body>
+<div id="header">
+<a id="next-button" class="control" href="filter.html" title="Nächste Seite"></a>
+<a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
+<a id="prev-button" class="control" href="functional.html" title="Vorherige Seite"></a>
+<div id="menu" class="menu" title="Menü"></div>
+<a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
+<a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
+</div>
+<div id="nav">
+<a href="../home.html">Home</a>
+<a href="../intro.html">Einführung</a>
+<a href="var.html">Start</a>
+<a href="../success.html">Übersicht</a>
+<a href="../playground.html">Playground</a>
+<a href="https://blog.jshero.net">Code Hero Blog</a>
+<a href="../links.html">Links</a>
+<a href="../en/koans/var.html">--- English ---</a>
+</div>
+<div id="content">
+<noscript>
+<p class="warning">
+Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
+Browser mit aktiviertem JavaScript.
+</p>
+</noscript>
+<p id="no-storage-warning" class="warning">
+Der Browser-Speicher
+<a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
+ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
+Ohne localStorage werden deine Lösungen nicht gespeichert.
+</p>
+<h1 id="koans-title">Funktionale Programmierung 2</h1>
 
-  <div id="header">
-    <a id="next-button" class="control" href="filter.html" title="Nächste Seite"></a>
-    <a id="success-button" class="control" href="../success.html" title="Übersicht"></a>
-    <a id="prev-button" class="control" href="functional.html" title="Vorherige Seite"></a>
-    <div id="menu" class="menu" title="Menü"></div>
-    <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
-    <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
-  </div>
-
-  <div id="nav">
-    <a href="../home.html">Home</a>
-    <a href="../intro.html">Einführung</a>
-    <a href="var.html">Start</a>
-    <a href="../success.html">Übersicht</a>
-    <a href="../playground.html">Playground</a>
-    <a href="https://blog.jshero.net">Code Hero Blog</a>
-    <a href="../links.html">Links</a>
-    <a href="../en/koans/var.html">--- English ---</a>
-  </div>
-
-  <div id="content">
-
-    <noscript>
-      <p class="warning">
-        Du hast JavaScript deaktiviert oder dein Browser unterstützt kein JavaScript. JavaScript Hero benötigt einen
-        Browser mit aktiviertem JavaScript.
-      </p>
-    </noscript>
-
-    <p id="no-storage-warning" class="warning">
-      Der Browser-Speicher
-      <a href="https://wiki.selfhtml.org/wiki/JavaScript/Web_Storage">localStorage</a>
-      ist nicht verfügbar. Entweder unterstützt dein Browser ihn nicht oder du hast ihn deaktiviert oder er ist voll.
-      Ohne localStorage werden deine Lösungen nicht gespeichert.
-    </p>
-
-    <h1 id="koans-title">Funktionale Programmierung 2</h1>
-    
-    <div id="koans-lesson" class="paragraph"><a href="functionexpression.html">Funktionsausdrücke</a> hatten wir schon kennengelernt. Dort wurde einer
+<div id="koans-lesson" class="paragraph"><a href="functionexpression.html">Funktionsausdrücke</a> hatten wir schon kennengelernt. Dort wurde einer
 Variablen eine anonyme Funktion zugeordnet. Anonyme Funktionen kann man aber auch direkt, ohne vorherige Variablenzuodnung,
 an Funktionen übergeben, die Funktionen als Argument verlangen. Das <code>map()</code>-Beispiel aus der vorherigen Lektion sieht dann so aus:
   
@@ -74,26 +66,26 @@ mit welcher Operation das Array gemappt wird:
 <pre><code>let startNumbers = [1, 2, 3];
 let newNumbers = startNumbers.map(x => x + 1);
 console.log(newNumbers); // [2, 3, 4]</code></pre></div>
-    
-    <h2>Aufgabe</h2>
-    <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie <code>{x: 1, y: 2}</code> entgegennimmt
+
+<h2>Aufgabe</h2>
+<div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie <code>{x: 1, y: 2}</code> entgegennimmt
 und die x-Werte dieser Punkte als Array zurückgibt.<br><br>
 Beispiel: <code>toX([{x: -1, y: -5}, {x: 2, y: 7}])</code> sollte <code>[-1, 2]</code> liefern.</div>
-    
-    <div id="hint-link-root" class="paragraph">
-      <span id="hint-link">
-        <span id="hint-open-close">+</span> Tipp
-      </span>
-    </div>
-    <div id="hint-area" class="paragraph">Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> und einer Pfeilfunktion zu finden.</div>
-    
-    
-    <div id="solution-link-root" class="paragraph">
-      <span id="solution-link">
-        <span id="solution-open-close">+</span> Lösung
-      </span>
-    </div>
-    <div id="solution-area" class="paragraph"><pre><code>// mit Schleife
+
+<div id="hint-link-root" class="paragraph">
+<span id="hint-link">
+<span id="hint-open-close">+</span> Tipp
+</span>
+</div>
+<div id="hint-area" class="paragraph">Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> und einer Pfeilfunktion zu finden.</div>
+
+
+<div id="solution-link-root" class="paragraph">
+<span id="solution-link">
+<span id="solution-open-close">+</span> Lösung
+</span>
+</div>
+<div id="solution-area" class="paragraph"><pre><code>// mit Schleife
 function toX(points) {
   let result = [];
   for (let i = 0; i < points.length; i++) {
@@ -106,75 +98,62 @@ function toX(points) {
 function toX(points) {
   return points.map(p => p.x);
 }</code></pre></div>
-    
-    <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
-      autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
 
-    <p>
-      <button id="test-button">Tests</button>
-    </p>
-
-    <div id="messages"></div>
-
-  </div>
-
-  <aside>
-
-    <section id="aside-blog">
-      <h1><a href="https://blog.jshero.net">Code Hero Blog</a></h1>
-      <h2>Tipps</h2>
-      <div><a href="https://blog.jshero.net/silent-teacher/">Silent Teacher</a></div>
-      <div><a href="https://blog.jshero.net/compute-it/">Compute it</a></div>
-      <div><a href="https://blog.jshero.net/playground/">Playground</a></div>
-      <div><a href="https://blog.jshero.net/funktionen/">Funktionen</a></div>
-    </section>
-
-  </aside>
-  <div id= "footer1">
-    <div id="footer1-title">loving</div>
-    <div id="footer1-links">
-      <a href="https://fsfe.org/" title="Free Software Foundation Europe" onclick="jshero?.link?.countClick('fsfe-de')">
-        <img id="fsfe-de" src="../img/fsfe.svg" alt="Free Software Foundation Europe">
-      </a>
-      <a href="https://www.mozilla.org/" title="Mozilla" onclick="jshero?.link?.countClick('mozilla-de')">
-        <img id="mozilla-de" src="../img/moz.svg" alt="Mozilla">
-      </a>
-      <a href="https://www.aerzte-ohne-grenzen.de/" title="Ärzte ohne Grenzen" onclick="jshero?.link?.countClick('msf-de')">
-        <img id="msf-de" src="../img/msf.png" alt="Ärzte ohne Grenzen">
-      </a>
-    </div>
-  </div>
-
-  <div id="footer">
-    <a href="https://blog.jshero.net">Blog</a>
-    <a id="web-app-link" href="https://www.jshero.net">Web App</a>
-    <a id="android-app-link" href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
-    <a href="../privacy.html">Datenschutz</a>
-    <a href="../info.html">Kontakt</a>
-  </div>
-
-  <script src="../js/util/cordova.js"></script>
-  <script src="../js/util/nodeutil.js"></script>
-  <script src="../js/util/polyfill.js"></script>
-  <script src="../js/util/array.js"></script>
-  <script src="../js/util/object.js"></script>
-  <script src="../js/util/date.js"></script>
-  <script src="../js/util/util.js"></script>
-  <script src="../js/util/language.js"></script>
-  <script src="../js/util/i18n.js"></script>
-  <script src="../js/lib/evaluator.js"></script>
-  <script src="../js/lib/nav.js"></script>
-  <script src="../js/lib/header.js"></script>
-  <script src="../js/lib/storage.js"></script>
-  <script src="../js/lib/code.js"></script>
-  <script src="../js/lib/message.js"></script>
-  <script src="../js/lib/log.js"></script>
-  <script src="../js/lib/testutil.js"></script>
-  <script src="../js/lib/actualkoan.js"></script>
-  <script src="../js/lib/tester.js?v=441"></script>
-  <script src="../js/lib/link.js"></script>
-  <script src="../js/main.js"></script>
-
+<textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off"
+autocomplete="off" placeholder="// ... deine Lösung ..." rows="8"></textarea>
+<p>
+<button id="test-button">Tests</button>
+</p>
+<div id="messages"></div>
+</div>
+<aside>
+<section id="aside-blog">
+<h1><a href="https://blog.jshero.net">Code Hero Blog</a></h1>
+<h2>Tipps</h2>
+<div><a href="https://blog.jshero.net/silent-teacher/">Silent Teacher</a></div>
+<div><a href="https://blog.jshero.net/compute-it/">Compute it</a></div>
+<div><a href="https://blog.jshero.net/playground/">Playground</a></div>
+<div><a href="https://blog.jshero.net/funktionen/">Funktionen</a></div>
+</section>
+</aside>
+<div id= "footer1">
+<div id="footer1-title">loving</div>
+<div id="footer1-links">
+<a href="https://fsfe.org/" title="Free Software Foundation Europe" onclick="jshero?.link?.countClick('fsfe-de')">
+<img id="fsfe-de" src="../img/fsfe.svg" alt="Free Software Foundation Europe"></a>
+<a href="https://www.mozilla.org/" title="Mozilla" onclick="jshero?.link?.countClick('mozilla-de')">
+<img id="mozilla-de" src="../img/moz.svg" alt="Mozilla"></a>
+<a href="https://www.aerzte-ohne-grenzen.de/" title="Ärzte ohne Grenzen" onclick="jshero?.link?.countClick('msf-de')">
+<img id="msf-de" src="../img/msf.png" alt="Ärzte ohne Grenzen"></a>
+</div>
+</div>
+<div id="footer">
+<a href="https://blog.jshero.net">Blog</a>
+<a id="web-app-link" href="https://www.jshero.net">Web App</a>
+<a id="android-app-link" href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+<a href="../privacy.html">Datenschutz</a>
+<a href="../info.html">Kontakt</a>
+</div>
+<script src="../js/util/cordova.js"></script>
+<script src="../js/util/nodeutil.js"></script>
+<script src="../js/util/polyfill.js"></script>
+<script src="../js/util/array.js"></script>
+<script src="../js/util/object.js"></script>
+<script src="../js/util/date.js"></script>
+<script src="../js/util/util.js"></script>
+<script src="../js/util/language.js"></script>
+<script src="../js/util/i18n.js"></script>
+<script src="../js/lib/evaluator.js"></script>
+<script src="../js/lib/nav.js"></script>
+<script src="../js/lib/header.js"></script>
+<script src="../js/lib/storage.js"></script>
+<script src="../js/lib/code.js"></script>
+<script src="../js/lib/message.js"></script>
+<script src="../js/lib/log.js"></script>
+<script src="../js/lib/testutil.js"></script>
+<script src="../js/lib/actualkoan.js"></script>
+<script src="../js/lib/tester.js?v=441"></script>
+<script src="../js/lib/link.js"></script>
+<script src="../js/main.js"></script>
 </body>
-
 </html>

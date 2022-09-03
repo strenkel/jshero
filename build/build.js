@@ -14,7 +14,7 @@ const koansEn = require("../src/tmp/koans-core-en.js").getKoans();
  * Render a file with EJS and save the result.
  */
 const render = function(inPath, outPath, data = {}) {
-  ejs.renderFile(inPath, data, function(err, html) {
+  ejs.renderFile(inPath, data, {rmWhitespace: true}, function(err, html) {
     if (err) throw err;
     fs.writeFile(outPath, html, function(err) {
       if (err) throw err;

@@ -1,202 +1,184 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width" name="viewport">
-  <title>JS Hero</title>
-  <meta name="description" content="Learn to Code">
-  <meta name="keywords" content="JavaScript Tutorial Course Exercises Learning Tests Koans Programming Language Hour-Of-Code JSHero">
-  <meta name="author" content="Stefan Trenkel">
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/nav.css">
-  <link rel="stylesheet" href="../css/aside.css?v=441">
-  <link rel="stylesheet" href="../css/footer1.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../css/success.css">
+<meta charset="utf-8">
+<meta content="width=device-width" name="viewport">
+<title>JS Hero</title>
+<meta name="description" content="Learn to Code">
+<meta name="keywords" content="JavaScript Tutorial Course Exercises Learning Tests Koans Programming Language Hour-Of-Code JSHero">
+<meta name="author" content="Stefan Trenkel">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/header.css">
+<link rel="stylesheet" href="../css/nav.css">
+<link rel="stylesheet" href="../css/aside.css?v=441">
+<link rel="stylesheet" href="../css/footer1.css">
+<link rel="stylesheet" href="../css/footer.css">
+<link rel="stylesheet" href="../css/success.css">
 </head>
-
 <body id="success" class="en">
-
-  <div id="header">
-    <a id="next-button" class="control" href="playground.html" title="Next page"></a>
-    <a id="success-button" class="control" href="success.html" title="Overview"></a>
-    <a id="prev-button" class="control" href="koans/further.html" title="Previous page"></a>
-    <div id="menu" class="menu" title="Menu"></div>
-    <a id="title" class="title" href="home.html" title="Home">JavaScript Hero</a>
-    <a id="title-short" class="title" href="home.html" title="Home">JS Hero</a>
-  </div>
-
-  <div id="nav">
-    <a href="home.html">Home</a>
-    <a href="koans/var.html">Start</a>
-    <a href="success.html">Overview</a>
-    <a href="playground.html">Playground</a>
-    <a href="links.html">Links</a>
-    <a href="../success.html">--- German ---</a>
-  </div>
-
-  <div id="content">
-
-    <noscript>
-      <p class="warning">
-        You have disabled JavaScript or your browser does not support JavaScript. JavaScript Hero need a browser with enabled JavaScript.
-      </p>
-    </noscript>
-
-    <p id="no-storage-warning" class="warning">
-      The browser storage
-      <a href="https://en.wikipedia.org/wiki/Web_storage">localStorage</a>
-      is not available. Either your browser does not support it or you have disabled it or the maximum memory size is exceeded.
-      Without localStorage your solutions will not be stored.
-    </p>
-
-    <h1>Overview</h1>
-
-    <p class="extra-margin">
-      Here you find all exercises. Unsolved exercises are red, solved green. With click or touch you navigate to
-      the exercise. Reset JS Hero with the button below. All exercises will be red and you can start JS Hero
-      again.
-    </p>
-
-    <p id="koans">
-      <a id="var" href="koans/var.html">1. Variables</a>
-      <a id="jsx01" href="koans/jsx01.html">2. What is x?</a>
-      <a id="var2" href="koans/var2.html">3. Several variables</a>
-      <a id="jsx02" href="koans/jsx02.html">4. Reassignment</a>
-      <a id="jsx03" href="koans/jsx03.html">5. Assign variables</a>
-      <a id="function" href="koans/function.html">6. Functions</a>
-      <a id="function2" href="koans/function2.html">7. Multiple functions</a>
-      <a id="functioncall" href="koans/functioncall.html">8. Function calls</a>
-      <a id="jsx04" href="koans/jsx04.html">9. What is x?</a>
-      <a id="parameter" href="koans/parameter.html">10. Parameters</a>
-      <a id="jsx05" href="koans/jsx05.html">11. What is x?</a>
-      <a id="string" href="koans/string.html">12. Strings</a>
-      <a id="jsx06" href="koans/jsx06.html">13. What is x?</a>
-      <a id="jsx06b" href="koans/jsx06b.html">14. What is x?</a>
-      <a id="log1" href="koans/log1.html">15. Logging</a>
-      <a id="log2" href="koans/log2.html">16. Logging variables</a>
-      <a id="log" href="koans/log.html">17. Logging and Strings</a>
-      <a id="jsx07" href="koans/jsx07.html">18. Silent Teacher</a>
-      <a id="stringlength" href="koans/stringlength.html">19. String: length</a>
-      <a id="stringupper" href="koans/stringupper.html">20. String: toUpperCase()</a>
-      <a id="stringcharat" href="koans/stringcharat.html">21. String: charAt()</a>
-      <a id="trim" href="koans/trim.html">22. String: trim()</a>
-      <a id="stringindexof" href="koans/stringindexof.html">23. String: indexOf()</a>
-      <a id="stringindexof2" href="koans/stringindexof2.html">24. String: indexOf() with from index</a>
-      <a id="stringsubstr" href="koans/stringsubstr.html">25. String: substr()</a>
-      <a id="replace" href="koans/replace.html">26. String: replace()</a>
-      <a id="number" href="koans/number.html">27. Numbers</a>
-      <a id="increment" href="koans/increment.html">28. Increment</a>
-      <a id="fahrenheit" href="koans/fahrenheit.html">29. Fahrenheit</a>
-      <a id="modulo" href="koans/modulo.html">30. Modulo</a>
-      <a id="mean" href="koans/mean.html">31. Parentheses</a>
-      <a id="math" href="koans/math.html">32. Math</a>
-      <a id="minmax" href="koans/minmax.html">33. min and max</a>
-      <a id="pi" href="koans/pi.html">34. Math.PI</a>
-      <a id="round" href="koans/round.html">35. Rounding</a>
-      <a id="random" href="koans/random.html">36. Random numbers</a>
-      <a id="parseint" href="koans/parseint.html">37. parseInt</a>
-      <a id="bool" href="koans/bool.html">38. Boolean</a>
-      <a id="nor" href="koans/nor.html">39. NOR</a>
-      <a id="xor" href="koans/xor.html">40. XOR</a>
-      <a id="equals" href="koans/equals.html">41. Strict equality</a>
-      <a id="equals2" href="koans/equals2.html">42. Three identical values</a>
-      <a id="even" href="koans/even.html">43. Even numbers</a>
-      <a id="notequals" href="koans/notequals.html">44. Strict inequality</a>
-      <a id="greaterthan" href="koans/greaterthan.html">45. Compare numbers</a>
-      <a id="if" href="koans/if.html">46. if</a>
-      <a id="if2" href="koans/if2.html">47. Two returns</a>
-      <a id="else" href="koans/else.html">48. if...else</a>
-      <a id="elseif" href="koans/elseif.html">49. else if</a>
-      <a id="array" href="koans/array.html">50. Arrays</a>
-      <a id="array2" href="koans/array2.html">51. Get array elements</a>
-      <a id="array3" href="koans/array3.html">52. Set array elements</a>
-      <a id="arraylength" href="koans/arraylength.html">53. Array: length</a>
-      <a id="arraysort" href="koans/arraysort.html">54. Sorting arrays</a>
-      <a id="arraypush" href="koans/arraypush.html">55. Array: shift() and push()</a>
-      <a id="arrayindexof" href="koans/arrayindexof.html">56. Array: indexOf()</a>
-      <a id="concat" href="koans/concat.html">57. Array: concat()</a>
-      <a id="slice" href="koans/slice.html">58. Array: slice()</a>
-      <a id="join" href="koans/join.html">59. Array: join()</a>
-      <a id="dimarray" href="koans/dimarray.html">60. Array of arrays</a>
-      <a id="comment" href="koans/comment.html">61. Comments</a>
-      <a id="undefined" href="koans/undefined.html">62. undefined</a>
-      <a id="null" href="koans/null.html">63. null</a>
-      <a id="for1" href="koans/for1.html">64. for loop</a>
-      <a id="factorial" href="koans/factorial.html">65. Factorial</a>
-      <a id="for2" href="koans/for2.html">66. Loops and arrays</a>
-      <a id="while" href="koans/while.html">67. while loop</a>
-      <a id="dowhile" href="koans/dowhile.html">68. do...while loop</a>
-      <a id="ggt" href="koans/ggt.html">69. gcd</a>
-      <a id="break" href="koans/break.html">70. break and continue</a>
-      <a id="doubleloop" href="koans/doubleloop.html">71. Nested loops</a>
-      <a id="arguments" href="koans/arguments.html">72. The arguments object</a>
-      <a id="nan" href="koans/nan.html">73. NaN</a>
-      <a id="stringsplit" href="koans/stringsplit.html">74. String: split()</a>
-      <a id="subfunction" href="koans/subfunction.html">75. Functions call functions</a>
-      <a id="recursion" href="koans/recursion.html">76. Recursion</a>
-      <a id="roman1" href="koans/roman1.html">77. Roman numerals I</a>
-      <a id="roman2" href="koans/roman2.html">78. Roman numerals II</a>
-      <a id="euler1" href="koans/euler1.html">79. Project Euler</a>
-      <a id="further" href="koans/further.html">80. To be continued ...</a></p>
-
-    <p id="reset-exercises" class="paragraph5">
-      <button id="reset-button">Reset JS Hero</button>
-    </p>
-
-    <div id="reset-confirmation" class="paragraph5">
-      <p>
-        Do you really want to reset JS Hero?
-      </p>
-      <p>
-        <button id="reset-no-button" class="reset-confirmation-button">No</button>
-        <button id="reset-yes-button" class="reset-confirmation-button">Yes</button>
-      </p>
-    </div>
-
-  </div>
-
-  <aside>
-    <section id="aside-android-app">
-      <h1>
-        <a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
-      </h1>
-      <div><a href="https://play.google.com/store/apps/details?id=net.jshero">JS Hero on Google Play</a></div>
-    </section>  
-  </aside>
-  <div id="footer1">
-    <div id="footer1-title">loving</div>
-    <div id="footer1-links">
-      <a href="https://www.fsf.org/">
-        <img id="fsf-en"src="../img/fsf.png" alt="Free Software Foundation">
-      </a>
-      <a href="https://www.mozilla.org/">
-        <img id="mozilla-en" src="../img/moz.svg" alt="Mozilla">
-      </a>
-      <a href="https://www.msf.org/">
-        <img id="msf-en" src="../img/msf_us.svg" alt="Médecins Sans Frontières" height="65px">
-      </a>
-    </div>
-  </div>
-
-  <div id="footer">
-    <a id="web-app-link" href="https://www.jshero.net">Web App</a>
-    <a id="android-app-link" href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="info.html">Contact</a>
-  </div>
-
-  <script src="../js/util/cordova.js"></script>
-  <script src="../js/util/language.js"></script>
-  <script src="../js/util/util.js"></script>
-  <script src="../js/util/i18n.js"></script>
-  <script src="../js/lib/nav.js"></script>
-  <script src="../js/lib/header.js"></script>
-  <script src="../js/lib/storage.js"></script>
-  <script src="../js/success.js"></script>
-
+<div id="header">
+<a id="next-button" class="control" href="playground.html" title="Next page"></a>
+<a id="success-button" class="control" href="success.html" title="Overview"></a>
+<a id="prev-button" class="control" href="koans/further.html" title="Previous page"></a>
+<div id="menu" class="menu" title="Menu"></div>
+<a id="title" class="title" href="home.html" title="Home">JavaScript Hero</a>
+<a id="title-short" class="title" href="home.html" title="Home">JS Hero</a>
+</div>
+<div id="nav">
+<a href="home.html">Home</a>
+<a href="koans/var.html">Start</a>
+<a href="success.html">Overview</a>
+<a href="playground.html">Playground</a>
+<a href="links.html">Links</a>
+<a href="../success.html">--- German ---</a>
+</div>
+<div id="content">
+<noscript>
+<p class="warning">
+You have disabled JavaScript or your browser does not support JavaScript. JavaScript Hero need a browser with enabled JavaScript.
+</p>
+</noscript>
+<p id="no-storage-warning" class="warning">
+The browser storage
+<a href="https://en.wikipedia.org/wiki/Web_storage">localStorage</a>
+is not available. Either your browser does not support it or you have disabled it or the maximum memory size is exceeded.
+Without localStorage your solutions will not be stored.
+</p>
+<h1>Overview</h1>
+<p class="extra-margin">
+Here you find all exercises. Unsolved exercises are red, solved green. With click or touch you navigate to
+the exercise. Reset JS Hero with the button below. All exercises will be red and you can start JS Hero
+again.
+</p>
+<p id="koans">
+<a id="var" href="koans/var.html">1. Variables</a>
+<a id="jsx01" href="koans/jsx01.html">2. What is x?</a>
+<a id="var2" href="koans/var2.html">3. Several variables</a>
+<a id="jsx02" href="koans/jsx02.html">4. Reassignment</a>
+<a id="jsx03" href="koans/jsx03.html">5. Assign variables</a>
+<a id="function" href="koans/function.html">6. Functions</a>
+<a id="function2" href="koans/function2.html">7. Multiple functions</a>
+<a id="functioncall" href="koans/functioncall.html">8. Function calls</a>
+<a id="jsx04" href="koans/jsx04.html">9. What is x?</a>
+<a id="parameter" href="koans/parameter.html">10. Parameters</a>
+<a id="jsx05" href="koans/jsx05.html">11. What is x?</a>
+<a id="string" href="koans/string.html">12. Strings</a>
+<a id="jsx06" href="koans/jsx06.html">13. What is x?</a>
+<a id="jsx06b" href="koans/jsx06b.html">14. What is x?</a>
+<a id="log1" href="koans/log1.html">15. Logging</a>
+<a id="log2" href="koans/log2.html">16. Logging variables</a>
+<a id="log" href="koans/log.html">17. Logging and Strings</a>
+<a id="jsx07" href="koans/jsx07.html">18. Silent Teacher</a>
+<a id="stringlength" href="koans/stringlength.html">19. String: length</a>
+<a id="stringupper" href="koans/stringupper.html">20. String: toUpperCase()</a>
+<a id="stringcharat" href="koans/stringcharat.html">21. String: charAt()</a>
+<a id="trim" href="koans/trim.html">22. String: trim()</a>
+<a id="stringindexof" href="koans/stringindexof.html">23. String: indexOf()</a>
+<a id="stringindexof2" href="koans/stringindexof2.html">24. String: indexOf() with from index</a>
+<a id="stringsubstr" href="koans/stringsubstr.html">25. String: substr()</a>
+<a id="replace" href="koans/replace.html">26. String: replace()</a>
+<a id="number" href="koans/number.html">27. Numbers</a>
+<a id="increment" href="koans/increment.html">28. Increment</a>
+<a id="fahrenheit" href="koans/fahrenheit.html">29. Fahrenheit</a>
+<a id="modulo" href="koans/modulo.html">30. Modulo</a>
+<a id="mean" href="koans/mean.html">31. Parentheses</a>
+<a id="math" href="koans/math.html">32. Math</a>
+<a id="minmax" href="koans/minmax.html">33. min and max</a>
+<a id="pi" href="koans/pi.html">34. Math.PI</a>
+<a id="round" href="koans/round.html">35. Rounding</a>
+<a id="random" href="koans/random.html">36. Random numbers</a>
+<a id="parseint" href="koans/parseint.html">37. parseInt</a>
+<a id="bool" href="koans/bool.html">38. Boolean</a>
+<a id="nor" href="koans/nor.html">39. NOR</a>
+<a id="xor" href="koans/xor.html">40. XOR</a>
+<a id="equals" href="koans/equals.html">41. Strict equality</a>
+<a id="equals2" href="koans/equals2.html">42. Three identical values</a>
+<a id="even" href="koans/even.html">43. Even numbers</a>
+<a id="notequals" href="koans/notequals.html">44. Strict inequality</a>
+<a id="greaterthan" href="koans/greaterthan.html">45. Compare numbers</a>
+<a id="if" href="koans/if.html">46. if</a>
+<a id="if2" href="koans/if2.html">47. Two returns</a>
+<a id="else" href="koans/else.html">48. if...else</a>
+<a id="elseif" href="koans/elseif.html">49. else if</a>
+<a id="array" href="koans/array.html">50. Arrays</a>
+<a id="array2" href="koans/array2.html">51. Get array elements</a>
+<a id="array3" href="koans/array3.html">52. Set array elements</a>
+<a id="arraylength" href="koans/arraylength.html">53. Array: length</a>
+<a id="arraysort" href="koans/arraysort.html">54. Sorting arrays</a>
+<a id="arraypush" href="koans/arraypush.html">55. Array: shift() and push()</a>
+<a id="arrayindexof" href="koans/arrayindexof.html">56. Array: indexOf()</a>
+<a id="concat" href="koans/concat.html">57. Array: concat()</a>
+<a id="slice" href="koans/slice.html">58. Array: slice()</a>
+<a id="join" href="koans/join.html">59. Array: join()</a>
+<a id="dimarray" href="koans/dimarray.html">60. Array of arrays</a>
+<a id="comment" href="koans/comment.html">61. Comments</a>
+<a id="undefined" href="koans/undefined.html">62. undefined</a>
+<a id="null" href="koans/null.html">63. null</a>
+<a id="for1" href="koans/for1.html">64. for loop</a>
+<a id="factorial" href="koans/factorial.html">65. Factorial</a>
+<a id="for2" href="koans/for2.html">66. Loops and arrays</a>
+<a id="while" href="koans/while.html">67. while loop</a>
+<a id="dowhile" href="koans/dowhile.html">68. do...while loop</a>
+<a id="ggt" href="koans/ggt.html">69. gcd</a>
+<a id="break" href="koans/break.html">70. break and continue</a>
+<a id="doubleloop" href="koans/doubleloop.html">71. Nested loops</a>
+<a id="arguments" href="koans/arguments.html">72. The arguments object</a>
+<a id="nan" href="koans/nan.html">73. NaN</a>
+<a id="stringsplit" href="koans/stringsplit.html">74. String: split()</a>
+<a id="subfunction" href="koans/subfunction.html">75. Functions call functions</a>
+<a id="recursion" href="koans/recursion.html">76. Recursion</a>
+<a id="roman1" href="koans/roman1.html">77. Roman numerals I</a>
+<a id="roman2" href="koans/roman2.html">78. Roman numerals II</a>
+<a id="euler1" href="koans/euler1.html">79. Project Euler</a>
+<a id="further" href="koans/further.html">80. To be continued ...</a></p>
+<p id="reset-exercises" class="paragraph5">
+<button id="reset-button">Reset JS Hero</button>
+</p>
+<div id="reset-confirmation" class="paragraph5">
+<p>
+Do you really want to reset JS Hero?
+</p>
+<p>
+<button id="reset-no-button" class="reset-confirmation-button">No</button>
+<button id="reset-yes-button" class="reset-confirmation-button">Yes</button>
+</p>
+</div>
+</div>
+<aside>
+<section id="aside-android-app">
+<h1>
+<a href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+</h1>
+<div><a href="https://play.google.com/store/apps/details?id=net.jshero">JS Hero on Google Play</a></div>
+</section>
+</aside>
+<div id="footer1">
+<div id="footer1-title">loving</div>
+<div id="footer1-links">
+<a href="https://www.fsf.org/">
+<img id="fsf-en"src="../img/fsf.png" alt="Free Software Foundation">
+</a>
+<a href="https://www.mozilla.org/">
+<img id="mozilla-en" src="../img/moz.svg" alt="Mozilla">
+</a>
+<a href="https://www.msf.org/">
+<img id="msf-en" src="../img/msf_us.svg" alt="Médecins Sans Frontières" height="65px">
+</a>
+</div>
+</div>
+<div id="footer">
+<a id="web-app-link" href="https://www.jshero.net">Web App</a>
+<a id="android-app-link" href="https://play.google.com/store/apps/details?id=net.jshero">Android App</a>
+<a href="privacy.html">Privacy</a>
+<a href="info.html">Contact</a>
+</div>
+<script src="../js/util/cordova.js"></script>
+<script src="../js/util/language.js"></script>
+<script src="../js/util/util.js"></script>
+<script src="../js/util/i18n.js"></script>
+<script src="../js/lib/nav.js"></script>
+<script src="../js/lib/header.js"></script>
+<script src="../js/lib/storage.js"></script>
+<script src="../js/success.js"></script>
 </body>
-
 </html>

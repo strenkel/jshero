@@ -5,8 +5,9 @@ if (typeof jshero === "undefined") {
 jshero.link = (function() {
 
   const countClick = function(id) {
-    fetch(`https://jshero.net/api/count/${id}`)
-      .catch(() => {}); // Nothing to catch.
+    navigator.sendBeacon(`https://www.jshero.net/api/count/${id}`);
+    // fetch(`https://www.jshero.net/api/count/${id}`)
+    //   .catch(() => {}); // Nothing to catch.
   };
 
   return {
