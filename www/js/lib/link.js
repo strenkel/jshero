@@ -1,1 +1,0 @@
-if(typeof jshero==="undefined"){var jshero={}}jshero.link=function(){const countClick=function(id){navigator.sendBeacon("https://www.jshero.net/api/count/".concat(id))};return{countClick:countClick}}();
