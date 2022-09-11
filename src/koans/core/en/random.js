@@ -62,11 +62,11 @@ This should be practiced now.`,
 
     tests: [
       function() {
-        return jshero.testutil.assert_isFunction('dice');
+        return testutil.assert_isFunction('dice');
       },
 
       function() {
-        return jshero.testutil.assert_functionHasNumOfParameter('dice', 0);
+        return testutil.assert_functionHasNumOfParameter('dice', 0);
       },
 
       function() {
