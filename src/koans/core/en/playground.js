@@ -33,7 +33,9 @@ After clicking on "OK" <code>alert()</code> terminates without a return value.
 <code>prompt()</code> and <code>alert()</code> can't be used on the JS Hero exercise pages.
 This is because the solution code runs encapsulated in a so-called WebWorker. Both functions are not available there.
 
-prompt() and alert() should not be used in professional web development. But they are ideal for practice.`
+prompt() and alert() should not be used in professional web development. But they are ideal for practicing.`,
+
+  task: '',
 
   });
 

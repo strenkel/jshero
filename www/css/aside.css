@@ -6,7 +6,6 @@ aside {
   right: calc(50% - 700px);
   top: 7em;
   width: 11em;
-
 }
 
 aside a:hover {
@@ -51,7 +50,7 @@ aside h2 {
 
 aside div {
   text-align: center;
-  margin: 1.5em;
+  margin: 1.2em;
   line-height: 1.3em;
 }
 
@@ -61,7 +60,7 @@ aside div a {
 
 .aside-image {
   width: 11em;
-  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 /* --- ANDROID APP --- */
