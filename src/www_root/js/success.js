@@ -31,7 +31,6 @@
 
   resetButton.onclick = function() {
     showConfirmation();
-    util.scrollToBottom();
   };
 
   resetNoButton.onclick = showReset;
@@ -50,6 +49,7 @@
   function showConfirmation() {
     resetConfiramtionRoot.style.display = "block";
     resetButtonRoot.style.display = "none";
+    util.scrollToElm(resetButtonRoot);
   };
 
   function showReset() {

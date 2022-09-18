@@ -4,13 +4,14 @@ if (typeof jshero === "undefined") {
 
 jshero.util = (function() {
 
-  function scrollToBottom() {
-    window.scrollTo(0, document.body.scrollHeight);
-  };
-
   function scrollToTop() {
     window.scrollTo(0, 0);
   };
+
+  function scrollToElm(elm) {
+    elm.scrollIntoView(false);
+    window.scrollBy(0, 32);
+  }
 
   /**
    * Replaces the placeholders %0, %1, %2, ... with the values in the array.
@@ -38,8 +39,8 @@ jshero.util = (function() {
   };
 
   return Object.freeze({
-    scrollToBottom: scrollToBottom,
     scrollToTop: scrollToTop,
+    scrollToElm: scrollToElm,
     formatMessage: formatMessage,
     onclick: onclick
   });

@@ -14,8 +14,9 @@
 
     msg.clear();
     var code = codeArea.get();
+    let scrollToElm;
     if (code.length === 0) {
-      msg.log({
+      scrollToElm = msg.log({
         ok: false,
         msg: I18N("writeCode")
       });
@@ -33,12 +34,12 @@
           });
         }
         var message = I18N("terminatedSuccessfully");
-        msg.log({
+        scrollToElm= msg.log({
           ok: true,
           msg: message
         });
       } catch (e) {
-        msg.log({
+        scrollToElm = msg.log({
           ok: false,
           msg: I18N("runError"),
           e: e,
@@ -46,7 +47,7 @@
         });
       }
     }
-    util.scrollToBottom();
+    util.scrollToElm(scrollToElm);
 
     // see main.js method testCode
     return false;

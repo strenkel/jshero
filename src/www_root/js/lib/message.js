@@ -31,6 +31,7 @@ jshero.message = (function(I18N) {
 
     messageElm.className = testResult.ok ? 'green' : 'red';
     messageRoot.appendChild(messageElm);
+    return messageElm;
   };
 
   /**
@@ -43,6 +44,7 @@ jshero.message = (function(I18N) {
     link.className = "link-button";
     messageRoot.appendChild(link);
     link.focus();
+    return link;
   };
 
   /**

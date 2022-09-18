@@ -72,6 +72,7 @@
       var code = codeArea.get();
       var koanId = actualKoan.id;
       var lastResult = results[results.length - 1];
+      let scrollToElm;
 
       if (lastResult.oldBrowser) {
         // Due to backwarts compability.
@@ -86,17 +87,18 @@
             ok: true,
             msg: I18N("testsPassed")
           });
-          msg.goto(actualKoan.nextPageUrl);
+          scrollToElm = msg.goto(actualKoan.nextPageUrl);
         } else {
           storage.setShot(koanId, code);
           header.toRed();
-          msg.log({
+          scrollToElm = msg.log({
             ok: false,
             msg: I18N("testError")
           });
         }
+        util.scrollToElm(scrollToElm);
       }
-      util.scrollToBottom();
+      
       testsAreRunning = false;
     });
     // Auf touch Geraeten wird beim Betätigen des Test-Buttons bei richtiger Lösung
