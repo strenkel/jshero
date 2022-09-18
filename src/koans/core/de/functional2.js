@@ -11,21 +11,26 @@ an Funktionen übergeben, die Funktionen als Argument verlangen. Das <code>map()
 <pre><code>let startNumbers = [1, 2, 3];
 
 let newNumbers = startNumbers.map(function(x) {
-  return x+1;
+  return x + 1;
 });
   
 console.log(newNumbers); // [2, 3, 4]</code></pre>
 
-Verwendet man jetzt auch noch <a href="arrow.html">Pfeilfunktionen</a>, so sieht man direkt,
+Verwendet man jetzt auch noch <a href="arrow.html">Pfeilfunktionen</a>, so sieht man direkt
 mit welcher Operation das Array gemappt wird:
 
 <pre><code>let startNumbers = [1, 2, 3];
 let newNumbers = startNumbers.map(x => x + 1);
 console.log(newNumbers); // [2, 3, 4]</code></pre>`,
 
-hint: `Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> und einer Pfeilfunktion zu finden.`,
 
-  solution: `<pre><code>// mit Schleife
+    task: `Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie <code>{x: 1, y: 2}</code> entgegennimmt
+und die die x-Werte dieser Punkte als Array zurückgibt.<br><br>
+Beispiel: <code>toX([{x: -1, y: -5}, {x: 2, y: 7}])</code> sollte <code>[-1, 2]</code> zurückgeben.`,
+
+    hint: `Versuche eine Lösung mit Schleife und eine Lösung mit der Array-Methode <code>map()</code> und einer Pfeilfunktion zu finden.`,
+
+    solution: `<pre><code>// mit Schleife
 function toX(points) {
   let result = [];
   for (let i = 0; i < points.length; i++) {
@@ -39,9 +44,7 @@ function toX(points) {
   return points.map(p => p.x);
 }</code></pre>`,
   
-    task: `Schreibe eine Funktion <code>toX</code>, die ein Array mit Punkten wie <code>{x: 1, y: 2}</code> entgegennimmt
-und die x-Werte dieser Punkte als Array zurückgibt.<br><br>
-Beispiel: <code>toX([{x: -1, y: -5}, {x: 2, y: 7}])</code> sollte <code>[-1, 2]</code> liefern.`,
+    
   
     tests: [
       function() {
