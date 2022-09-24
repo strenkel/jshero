@@ -54,22 +54,22 @@ Eine solche Variable könnte man natürlich auch mit <code>let</code> deklariere
 dass man ihren Wert nicht aus Versehen ändert. Besser wäre es, wenn man ihren Wert erst garnicht ändern kann. Hier kommt
 <code>const</code> ins Spiel:
 
-<pre><code>const MEHRWERTSTEUER = 1.19;
+<pre><code>const MEHRWERTSTEUER = 19;
 let netto = 100;
-let brutto = MEHRWERTSTEUER * netto;
-console.log(brutto);
+let steuer = netto * MEHRWERTSTEUER / 100;
+console.log(steuer);
 
-MEHRWERTSTEUER = 1.20; // Programmfehler!
+MEHRWERTSTEUER = 20; // Programmfehler!
 netto = 200;
-brutto = MEHRWERTSTEUER * netto;
-console.log(brutto);</code></pre>
+steuer = netto * MEHRWERTSTEUER / 100;
+console.log(steuer);</code></pre>
 
 Eine Deklaration mit <code>const</code> erzeugt eine Konstante. Eine Konstante funktioniert genauso wie eine mit
 <code>let</code> erzeugte Variable. Mit einem Unterschied: weist man einer Konstante einen neuen Wert zu, so kommt
 es zu einem Programmfehler. Führt man obigen Code im <a href="../playground.html">JS-Hero Playground</a> aus,
-so wird korrekt <code>119</code> ausgegeben. Das nächste Brutto wird allerdings nicht ausgegeben.
+so wird korrekt <code>19</code> ausgegeben. Die nächste Steuer wird allerdings nicht ausgegeben.
 Stattdessen erhalten wir einen Fehler wie "invalid assignment to const 'MEHRWERTSTEUER'". In Zeile 6 haben wir der
-Konstanten <code>MEHRWERTSTEUER</code> den neuen Wert <code>1.20</code> zugeordnet. Das ist nicht erlaubt. Das Programm
+Konstanten <code>MEHRWERTSTEUER</code> den neuen Wert <code>20</code> zugeordnet. Das ist nicht erlaubt. Das Programm
 bricht an dieser Stelle mit dem genannten Fehler ab. Entfernt man diese Zeile, läuft das Programm korrekt durch.
 <br><br>
 Einer Konstante muss man direkt bei der Deklaration einen Wert zuweisen. Eine Konstante nur deklarieren und ihr
