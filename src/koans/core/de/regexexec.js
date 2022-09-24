@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'regexexec',
 
-  title: 'Regex: exec',
+  title: 'Regex: exec()',
 
   lesson: `Neben der Methode <code>test</code> besitzen reguläre Ausdrücke noch die Methode <code>exec</code>.
 Während <code>test</code> feststellt, ob ein Regex in einem String gefunden wird, gibt <code>exec</code>

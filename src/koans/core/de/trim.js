@@ -12,7 +12,7 @@ Der ursprügliche String bleibt unverändert.
 let name = eingabe.trim();</code></pre>
 
 <code>name</code> enthält den String <code>'Rosa Parks'</code>.
-Wie angedeutet werden häufig Benutzereingaben vor der Verarbeitung getrimmt.`,
+Wie angedeutet werden Benutzereingaben häufig vor der Verarbeitung getrimmt.`,
 
   task: `Schreibe eine Funktion <code>firstChar</code>, die bei Übergabe eines Strings das erste Zeichen,
 das kein Leerzeichen ist, zurückgibt.<br><br>Beispiel: <code>firstChar(' Rosa')</code> sollte <code>'R'</code>

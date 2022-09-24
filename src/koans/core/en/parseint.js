@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'parseint',
 
-  title: 'parseInt',
+  title: 'parseInt()',
 
   lesson: `Sometimes you want to read a number from a string. In case of an integer (..., -2, -1, 0, 1, 2, ..) you can
 use the <code>parseInt</code> function. The following examples return <code>19</code> or <code>-19</code>:

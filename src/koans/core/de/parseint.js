@@ -2,7 +2,7 @@ jshero.koans.add({
 
   id: 'parseint',
 
-  title: 'parseInt',
+  title: 'parseInt()',
 
   lesson: `Häufig möchte man eine Zahl, die als String vorliegt, in eine Zahl vom Typ Number umwandeln.
 Für das Umwandeln von ganzen Zahlen (..., -2, -1, 0, 1, 2, ..) gibt es in JavaScript die Funktion <code>parseInt</code>.
