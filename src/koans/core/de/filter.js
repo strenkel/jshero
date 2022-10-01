@@ -4,7 +4,7 @@ jshero.koans.add({
   
     title: 'Array: filter()',
   
-    lesson: `Eine weitere wichtige Array-Funktion mit Funktionsparamter ist <code>filter()</code>. Sie filtert aus einem Array alle
+    lesson: `Eine weitere wichtige Array-Methode mit Funktionsparamter ist <code>filter()</code>. Sie filtert aus einem Array alle
 Elemente heraus, die einen durch die Callback-Funktion implementierten Test bestehen, und gibt diese als neues Array zurück.
 Die Callback-Funktion muss dabei bei Aufruf mit einem Array-Element entweder <code>true</code> oder <code>false</code>
 ergeben. Array-Elemente, die <code>true</code> ergeben, landen im gefilterten Array. Das ursprüngliche Array wird wie bei <code>map()</code>
@@ -13,7 +13,7 @@ nicht verändert.
 <pre><code>let numbers = [7, -6, 120, -21, 2];
 
 // [7, 120, 2]
-let postiveNumbers = numbers.filter(x => x > 0);
+let positiveNumbers = numbers.filter(x => x > 0);
 
 // [-6, -21]
 let negativeNumbers = numbers.filter(x => x < 0);
@@ -29,18 +29,22 @@ als Pfeilfunktion übergeben. In komplexeren Fällen ist eine eigenständige Fun
 function isPrime(num) {
    
   if (num < 2) {
-    return false; // nicht prim, weil zu klein
+    // nicht prim, weil zu klein
+    return false;
   }
 
   for (let i = 2; i < num; i++) {
-    if (num % i == 0) {
-      return false; // nicht prim, weil teilbar
+    if (num % i === 0) {
+      // nicht prim, weil teilbar
+      return false;
     }
   }
-  return true; // prim
+  // prim
+  return true;
 }
 
-const primes = numbers.filter(isPrime); // [2, 3, 5, 7]</code></pre>`,
+// [2, 3, 5, 7]
+const primes = numbers.filter(isPrime);</code></pre>`,
 
     hint: `Schreibe zunächst eine Funktion <code>containsBlau()</code>, die einen String entgegennimmt und <code>true</code> zurückgibt,
 wenn der String <code>'blau'</code> enhält. Enthält er nicht <code>'blau'</code>, soll <code>false</code> zurückgegeben werden. Groß- und Kleinschreibung
@@ -84,6 +88,14 @@ Beispiel: <code>filterBlau(['Korngelb', 'Tannenblau', 'Rosenrot'])</code> sollte
 
       function() {
         return jshero.testutil.assert_functionReturns("filterBlau(['ROTKELCHEN', 'BLAUMEISE'])", ['BLAUMEISE']);
+      },
+
+      function() {
+        return jshero.testutil.assert_functionReturns("filterBlau(['grün', 'weiß'])", []);
+      },
+
+      function() {
+        return jshero.testutil.assert_functionReturns("filterBlau([])", []);
       }
       
     ]

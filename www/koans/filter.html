@@ -48,7 +48,7 @@ Ohne localStorage werden deine Lösungen nicht gespeichert.
 </p>
 <h1 id="koans-title">Array: filter()</h1>
 
-<div id="koans-lesson" class="paragraph">Eine weitere wichtige Array-Funktion mit Funktionsparamter ist <code>filter()</code>. Sie filtert aus einem Array alle
+<div id="koans-lesson" class="paragraph">Eine weitere wichtige Array-Methode mit Funktionsparamter ist <code>filter()</code>. Sie filtert aus einem Array alle
 Elemente heraus, die einen durch die Callback-Funktion implementierten Test bestehen, und gibt diese als neues Array zurück.
 Die Callback-Funktion muss dabei bei Aufruf mit einem Array-Element entweder <code>true</code> oder <code>false</code>
 ergeben. Array-Elemente, die <code>true</code> ergeben, landen im gefilterten Array. Das ursprüngliche Array wird wie bei <code>map()</code>
@@ -57,7 +57,7 @@ nicht verändert.
 <pre><code>let numbers = [7, -6, 120, -21, 2];
 
 // [7, 120, 2]
-let postiveNumbers = numbers.filter(x => x > 0);
+let positiveNumbers = numbers.filter(x => x > 0);
 
 // [-6, -21]
 let negativeNumbers = numbers.filter(x => x < 0);
@@ -73,18 +73,22 @@ als Pfeilfunktion übergeben. In komplexeren Fällen ist eine eigenständige Fun
 function isPrime(num) {
    
   if (num < 2) {
-    return false; // nicht prim, weil zu klein
+    // nicht prim, weil zu klein
+    return false;
   }
 
   for (let i = 2; i < num; i++) {
-    if (num % i == 0) {
-      return false; // nicht prim, weil teilbar
+    if (num % i === 0) {
+      // nicht prim, weil teilbar
+      return false;
     }
   }
-  return true; // prim
+  // prim
+  return true;
 }
 
-const primes = numbers.filter(isPrime); // [2, 3, 5, 7]</code></pre></div>
+// [2, 3, 5, 7]
+const primes = numbers.filter(isPrime);</code></pre></div>
 
 <h2>Aufgabe</h2>
 <div id="koans-task" class="paragraph">Schreibe eine Funktion <code>filterBlau</code>, die ein Array mit Strings entgegennimmt
