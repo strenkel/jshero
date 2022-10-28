@@ -16,9 +16,9 @@
 </head>
 <body class="en">
 <div id="header">
-<a id="next-button" class="control" href="stringupper.html" title="Next page"></a>
+<a id="next-button" class="control" href="stringlength.html" title="Next page"></a>
 <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-<a id="prev-button" class="control" href="playground.html" title="Previous page"></a>
+<a id="prev-button" class="control" href="jsx07.html" title="Previous page"></a>
 <div id="menu" class="menu" title="Menu"></div>
 <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
 <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -43,25 +43,51 @@ The browser storage
 is not available. Either your browser does not support it or you have disabled it or the maximum memory size is exceeded.
 Without localStorage your solutions will not be stored.
 </p>
-<h1 id="koans-title">String: length</h1>
+<h1 id="koans-title">Playground</h1>
 
-<div id="koans-lesson" class="paragraph">Strings have the <code>length</code> property. This property represents the number of characters in a string.
-To do this, you must append <code>.length</code> to the string or to the variable that contains the string:
+<div id="koans-lesson" class="paragraph">JS Hero has a <a href="../playground.html">Playground</a>. Here I want to show you how to write small programs using the Playground.
+Programs usually has an input and an output. Within the Playground, the easiest way to achieve this is to use the two functions
+<code>prompt()</code> and <code>alert()</code>:
 
-<pre><code>let charNumber = 'Ai'.length;</code/></pre>
+<pre><code>let name = prompt('What is your name?');
+alert('Hello ' + name + '!');</code></pre>
 
-<code>'Ai'</code> has 2 characters. So <code>charNumber</code> has the value <code>2</code>.
-
-<pre><code>let name = 'Weiwei';
-charNumber = name.length;</code/></pre>
-
-<code>'Weiwei'</code> has 6 characters. <code>charNumber</code> now has the value <code>6</code>.
-<pre><code>charNumber = ''.length;</code/></pre>
-The empty string has no characters. The value of <code>charNumber</code> is <code>0</code>.</div>
+If you enter this code in the Playground and click on "Run", a dialog opens with the question "What is your name?".
+If you type "Kitty Pryde" and confirm the input, the dialog closes and a window with the message "Hello Kitty Pryde!" opens.
+After clicking on "OK" this window closes as well and our little program ends. With "Run" it can be started again.
+<br><br>
+<code>prompt()</code> and <code>alert()</code> are two functions provided by the browser.
+<br><br>
+<code>prompt()</code> takes a string as parameter. Above <code>prompt()</code> is passed the string <code>'What is your name?'</code>.
+This string is displayed in the dialog window. Now <code>prompt()</code> interrupts the program execution and waits for our input. 
+If we enter "Kitty Pryde" and confirm the input with "OK", <code>prompt()</code> returns the string <code>'Kitty Pryde'</code>.
+This return is assigned to the variable <code>name</code>.
+<br><br>
+<code>alert()</code>, like <code>prompt()</code>, takes a string as parameter.
+Above we pass the expression <code>'Hello' + name + '!'</code> to <code>alert()</code>. The variable
+<code>name</code> has the value <code>'Kitty Pryde'</code>, so this expression results in <code>'Hello Kitty Pride!'</code>.
+With this string <code>alert()</code> is called. <code>alert()</code> displays this string in a small window and interrupts the program execution.
+After clicking on "OK" <code>alert()</code> terminates without a return value.
+<br><br>
+<code>prompt()</code> and <code>alert()</code> should not be used in professional web development. But they are ideal for practicing.
+<br><br>
+<code>prompt()</code> and <code>alert()</code> can't be used on most JS Hero exercise pages.
+This is because the solution code runs encapsulated in a so-called WebWorker. Both functions are not available there.
+<br><br>
+So, let's practice variable assignment and concatenation again:</div>
 
 <h2>Exercise</h2>
-<div id="koans-task" class="paragraph">Write a function <code>length</code> that takes a string and returns the number of characters of the string.<br><br>
-Example: <code>length('sun')</code> should return <code>3</code>.</div>
+<div id="koans-task" class="paragraph">Which value does <code>x</code> have after execution of the following code?
+<pre><code>let x = 'Tic';
+x = x + 'Tac';
+x = x + x;</code></pre></div>
+
+<div id="hint-link-root" class="paragraph">
+<span id="hint-link">
+<span id="hint-open-close">+</span> Hint
+</span>
+</div>
+<div id="hint-area" class="paragraph">Paste the code into the Playgrund and display <code>x</code> with <code>alert()</code>.</div>
 
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."

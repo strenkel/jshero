@@ -20,6 +20,7 @@ jshero.koans.initReorder(
     'log2',
     'log',
     'jsx07',
+    'playground',
     'stringlength',
     'stringupper',
     'stringcharat',
