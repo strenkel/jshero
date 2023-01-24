@@ -6,8 +6,8 @@ jshero.koans.add({
   title: 'Datum und Uhrzeit ändern',
 
   lesson: `Passend zu den sieben Getter-Methoden besitzt das Date-Objekt sieben Setter-Methoden:
-<code>setFullYear</code>, <code>setMonth</code>, <code>setDate</code>, <code>setHours</code>, <code>setMinutes</code>,
-<code>setSeconds</code> und <code>setMilliseconds</code>.
+<code>setFullYear()</code>, <code>setMonth()</code>, <code>setDate()</code>, <code>setHours()</code>, <code>setMinutes()</code>,
+<code>setSeconds()</code> und <code>setMilliseconds()</code>.
 Mit diesen 7 Methoden kann man den entsprechenden Date-Eintrag setzen:
 
 <pre><code>let today = new Date();
