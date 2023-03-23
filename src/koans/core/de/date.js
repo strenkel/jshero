@@ -14,14 +14,13 @@ let d1 = new Date();</code></pre>
 Ohne Parameter erzeugt <code>new Date()</code> ein Date-Objekt, das dem Zeitpunkt seines Aufrufs entspricht. Wird obiges Beispiel
 am 1. Mai 2017 um 8:15 Uhr aufgerufen, so enthält <code>d1</code> eben diesen Zeitpunkt.
 
-<pre><code>// Aufruf mit Jahr, Monat, Tag, Stunde,
+<pre><code>// Aufruf mit Jahr, Monat, Tag,
 // Stunde, Minute, Sekunde, Millisekunde
 let d2 = new Date(2017, 2, 8, 16, 31, 10, 117);</code></pre>
 
-Möchte man ein Date-Objekt zu einem bestimmten Zeitpunkt erstellen, verwendet man am besten die zweite Möglichkeit.
-Hier übergibt man als Parameter das Jahr, den Monat, den Tag, die Stunde, die Minute, die Sekunde und die Millisekunde.
-Das Jahr muss in voller Länge übergeben werden. <code>17</code> ergibt das Jahr 17 n. Chr. und <code>2017</code> das Jahr 2017 n. Chr.
-Bei dem Monat muss man aufpassen. JavaScript nummeriert die Monate von 0 (Januar) bis 11 (Dezember).
+Bei der zweiten Variante übergibt man als Parameter das Jahr, den Monat, den Tag, die Stunde, die Minute, die Sekunde und die Millisekunde.
+Das Jahr sollte man in voller Länge übergeben. Aufpassen muss man für Jahreszahlen zwischen 0 und 99. Hier wird unglücklicherweise 1900 hinzuaddiert.
+<code>17</code> ergibt das Jahr 1917. Bei dem Monat muss man ebenfalls aufpassen. JavaScript nummeriert die Monate von 0 (Januar) bis 11 (Dezember).
 Alle weiteren Zahlen entsprechen der üblichen Bedeutung. <code>d2</code> repräsentiert also den
 Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden.<br>
 Die Parameter Millisekunde, Sekunde, Minute, Stunde und Tag sind - in dieser Reihenfolge - optional. Man kann sie weglassen.
@@ -37,13 +36,12 @@ Der Bezugspunkt 1.1.1970 für Datumsangaben ist seit den Tagen von Unix und der 
 Ein Tag hat 24 * 60 * 60 * 1000 = 86400000 Millisekunden. <code>d3</code> ist also der 2.1.1970, 0:00 Uhr.
 
 <pre><code>// Übergabe eines Datumsstrings
-let d4 = new Date('2017-3-8T16:31:10.117');</code></pre>
+let d4 = new Date('2017-03-08T16:31:10.117');</code></pre>
 
-Bei der vierten Variante wird ein Datumsstring in einem bestimmten Format, d. h. in einer bestimmten Schreibweise, übergeben.
-<code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden. Diese Varainte ist jedoch nicht zu empfehlen,
-da verschiedene Browser leichte Unterschiede bei der Bestimmung des Datums aufweisen.`,
+Bei der vierten Variante wird ein Datumsstring im sogenannten <a href="https://de.wikipedia.org/wiki/ISO_8601">ISO-Format</a> übergeben.
+<code>d4</code> entspricht ebenfalls dem Zeitpunkt 8.3.2017, 16:31:10 Uhr und 117 Millisekunden.`,
 
-  task: `Schreibe eine Funktion <code>nikolaus</code>, die eine Jahreangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
+  task: `Schreibe eine Funktion <code>nikolaus</code>, die eine Jahresangabe als Zahl entgegennimmt und die ein Date-Objekt mit dem 6. Dezember
 des übergebenen Jahres, 0:00 Uhr, zurückgibt.<br><br>
 Beispiel: <code>nikolaus(2017)</code> sollte ein Date-Objekt mit dem Zeitpunkt 6.12.2017, 0:00 Uhr zurückgeben.`,
 
