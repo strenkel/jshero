@@ -63,6 +63,23 @@ If <code>threeX</code> has the length 3, the loop is terminated.
 <div id="koans-task" class="paragraph">Write a function <code>spaces</code> that takes a natural number n and returns a string of n spaces.<br><br>
 Example: <code>spaces(1)</code> should return <code>' '</code>.</div>
 
+<div id="solution-link-root" class="paragraph">
+  <span id="solution-link">
+      <span id="solution-open-close">+</span> Solution
+  </span>
+</div>
+<div id="solution-area" class="paragraph">
+  <pre><code>function spaces(num){
+  if(num === 0){
+    return '';
+  }
+  let s = ' ';
+  while(s.length < num ) {
+    s = s + ' ';
+  }
+  return s;
+}</code></pre>
+</div>
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>

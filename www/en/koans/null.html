@@ -62,6 +62,23 @@ If the line contains no line comment, <code>null</code> should be returned.
 For simplicity, we assume that the code does not contain the comment characters within a string.<br><br>
 Example: <code>cutCommt('let foo; // bar')</code> should return <code>'bar'</code>.</div>
 
+<div id="solution-link-root" class="paragraph">
+  <span id="solution-link">
+      <span id="solution-open-close">+</span> Solution
+  </span>
+</div>
+<div id="solution-area" class="paragraph">
+  <pre><code>function cutComment(str){
+  let slash = str.indexOf('/');
+  if(slash === -1){
+    return null;
+  }
+  else{
+    let ans = str.substr(slash + 3, str.length);
+    return ans;
+  }
+}</code></pre>
+</div>
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>

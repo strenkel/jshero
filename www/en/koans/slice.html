@@ -60,6 +60,17 @@ The original array will not be modified.</div>
 With an odd number of array elements, the middle element should belong to the first half.<br><br>
 Example: <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.</div>
 
+<div id="solution-link-root" class="paragraph">
+    <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+    </span>
+</div>
+<div id="solution-area" class="paragraph">
+    <pre><code>function halve(arr){
+    let len = Math.ceil(arr.length / 2);
+    return arr.slice(0, len);
+}</code></pre>
+</div>
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>

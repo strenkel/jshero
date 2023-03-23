@@ -62,6 +62,19 @@ Therefore, the variables <code>a</code> to <code>d</code> all get the value <cod
 <div id="koans-task" class="paragraph">Write a function <code>round100</code> that rounds a number to the nearest hundred.<br><br>
 Example: <code>round100(1749)</code> should return <code>1700</code> and <code>round100(856.12)</code> should return <code>900</code>.</div>
 
+<div id="solution-link-root" class="paragraph">
+    <span id="solution-link">
+        <span id="solution-open-close">+</span> Solution
+    </span>
+</div>
+<div id="solution-area" class="paragraph">
+    <pre><code>function round100(num){
+    let newnum = num/100;
+    let ans = Math.round(newnum) * 100;
+    return ans;
+}</code></pre>
+</div>
+    
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>
