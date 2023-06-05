@@ -100,6 +100,20 @@ Example: <code>median([1, 2, 10])</code> should return <code>2</code> and <code>
 If the number of values is even, the median is the mean of the two middle numbers.</div>
 
 
+<div id="solution-link-root" class="paragraph">
+<span id="solution-link">
+<span id="solution-open-close">+</span> Solution
+</span>
+</div>
+<div id="solution-area" class="paragraph"><pre><code>function median(nums) {
+  let len = nums.length;
+  if (len % 2 === 0) {
+    return (nums[len / 2] + nums[(len / 2) - 1]) / 2;
+  } else {
+    return nums[(len - 1) / 2];
+  }
+}</code></pre></div>
+
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>
 <p>

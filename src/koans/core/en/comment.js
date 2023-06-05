@@ -52,6 +52,15 @@ Example: <code>median([1, 2, 10])</code> should return <code>2</code> and <code>
   hint: `The median of a sorted series of numbers is the value in the middle.
 If the number of values is even, the median is the mean of the two middle numbers.`,
 
+solution: `<pre><code>function median(nums) {
+  let len = nums.length;
+  if (len % 2 === 0) {
+    return (nums[len / 2] + nums[(len / 2) - 1]) / 2;
+  } else {
+    return nums[(len - 1) / 2];
+  }
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('median');

@@ -21,6 +21,16 @@ However, the element should only be added if it is not already in the array.<br>
 Example: <code>add([1,&nbsp;2],&nbsp;3)</code> should return <code>[1,&nbsp;2,&nbsp;3]</code> and
 <code>add([1,&nbsp;2],&nbsp;2)</code> should return <code>[1,&nbsp;2]</code>.`,
 
+  hint: `Use an <code>if</code> statement together with the array methods <code>indexOf()</code> and <code>push()</code>.`,
+
+  solution: `<pre><code>function add(arr, elm) {
+  if (arr.indexOf(elm) === -1) {
+    arr.push(elm);
+  }
+  return arr;
+}</code></pre>`,
+
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('add');

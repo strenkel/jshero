@@ -63,6 +63,25 @@ However, the element should only be added if it is not already in the array.<br>
 Example: <code>add([1,&nbsp;2],&nbsp;3)</code> should return <code>[1,&nbsp;2,&nbsp;3]</code> and
 <code>add([1,&nbsp;2],&nbsp;2)</code> should return <code>[1,&nbsp;2]</code>.</div>
 
+<div id="hint-link-root" class="paragraph">
+<span id="hint-link">
+<span id="hint-open-close">+</span> Hint
+</span>
+</div>
+<div id="hint-area" class="paragraph">Use an <code>if</code> statement together with the array methods <code>indexOf()</code> and <code>push()</code>.</div>
+
+
+<div id="solution-link-root" class="paragraph">
+<span id="solution-link">
+<span id="solution-open-close">+</span> Solution
+</span>
+</div>
+<div id="solution-area" class="paragraph"><pre><code>function add(arr, elm) {
+  if (arr.indexOf(elm) === -1) {
+    arr.push(elm);
+  }
+  return arr;
+}</code></pre></div>
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>
