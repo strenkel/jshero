@@ -32,6 +32,12 @@ is stored in a two-dimensional array.`,
 Example: <code>flat(loshu)</code> should return <code>[4, 9, 2, 3, 5, 7, 8, 1, 6]</code>.
 Thereby <code>loshu</code> is the magic square from the example above.`,
 
+    hint: `Use the array method <code>concat()</code>.`,
+
+    solution: `<pre><code>function flat(arr){
+  return arr[0].concat(arr[1]).concat(arr[2]);
+}</code></pre>`,
+
     tests: [
       function() {
         return testutil.assert_isFunction('flat');

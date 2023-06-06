@@ -63,6 +63,20 @@ For simplicity, we assume that the code does not contain the comment characters 
 Example: <code>cutCommt('let foo; // bar')</code> should return <code>'bar'</code>.</div>
 
 
+<div id="solution-link-root" class="paragraph">
+<span id="solution-link">
+<span id="solution-open-close">+</span> Solution
+</span>
+</div>
+<div id="solution-area" class="paragraph"><pre><code>function cutComment(str) {
+  let startOfComment = str.indexOf('//');
+  if (startOfComment === -1) {
+    return null;
+  }
+  let comment = str.substr(startOfComment + 2);
+  return comment.trim();
+}</code></pre></div>
+
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>
 <p>

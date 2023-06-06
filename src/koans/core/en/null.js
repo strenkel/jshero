@@ -20,6 +20,15 @@ If the line contains no line comment, <code>null</code> should be returned.
 For simplicity, we assume that the code does not contain the comment characters within a string.<br><br>
 Example: <code>cutCommt('let foo; // bar')</code> should return <code>'bar'</code>.`,
 
+solution: `<pre><code>function cutComment(str) {
+  let startOfComment = str.indexOf('//');
+  if (startOfComment === -1) {
+    return null;
+  }
+  let comment = str.substr(startOfComment + 2);
+  return comment.trim();
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('cutComment');
@@ -34,7 +43,7 @@ Example: <code>cutCommt('let foo; // bar')</code> should return <code>'bar'</cod
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns("cutComment('let n; // number')", 'number');
+      return jshero.testutil.assert_functionReturns("cutComment('let x = 1/3; //~0.33')", '~0.33');
     },
 
     function() {

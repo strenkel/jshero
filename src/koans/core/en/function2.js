@@ -14,7 +14,23 @@ As a reminder: A function with name <code>color</code> returning the value
 
   task: `Define two functions. The first function <code>a</code> should return
 <code>'Hello a!'</code> and the second function <code>b</code> should return
- <code>'Hello b!'</code>.`,
+<code>'Hello b!'</code>.`,
+
+  hint: `<pre><code>function a() {
+  return ...
+}
+
+function b() {
+  return ...
+}</code></pre>`,
+
+solution: `<pre><code>function a() {
+  return 'Hello a!';
+}
+
+function b() {
+  return 'Hello b!';
+}</code></pre>`,
 
   tests: [
     function() {

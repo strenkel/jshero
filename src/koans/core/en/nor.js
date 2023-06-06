@@ -14,6 +14,10 @@ In the other cases the return should be <code>false</code>.<br><br>
 I.e.: The call <code>nor(false,&nbsp;false)</code> should return <code>true</code>. The calls <code>nor(true,&nbsp;false)</code>,
 <code>nor(false,&nbsp;true)</code> and <code>nor(true,&nbsp;true)</code> should return <code>false</code>.`,
 
+solution: `<pre><code>function nor(b1, b2) {
+  return !(b1 || b2);
+}</code></pre>`,
+
   tests: [
 
     function() {

@@ -11,6 +11,10 @@ If the given number is even, <code>true</code> should be returned, otherwise <co
 Example: <code>isEven(2)</code> should return <code>true</code> and <code>isEven(3)</code> should
 return <code>false</code>.`,
 
+solution: `<pre><code>function isEven(num) {
+  return num % 2 === 0;
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('isEven');
