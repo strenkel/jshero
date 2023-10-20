@@ -58,6 +58,10 @@ Example: <code>max(1, 2)</code> should return <code>2</code> and <code>max(2, 3,
 
     function() {
       return jshero.testutil.assert_functionReturns('max(-1, 0, 9, 8)', 9);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('max(-4, -3, -2, -1)', -1);
     }
   ]
 

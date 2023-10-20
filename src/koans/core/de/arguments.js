@@ -58,6 +58,10 @@ Zahlen liefert.<br><br>Beispiel: <code>maximum(12, 68, 3, 52)</code> sollte <cod
 
     function() {
       return jshero.testutil.assert_functionReturns('maximum(-1, 0, 9, 8)', 9);
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns('maximum(-4, -3, -2, -1)', -1);
     }
   ]
 
