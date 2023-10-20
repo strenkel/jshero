@@ -58,8 +58,9 @@ Analog zu den sieben lokalen Date-Gettern und -Settern gibt es sieben UTC Date-G
 und <code>getUTCHours()</code> unabhängig vom Ort die Werte <code>2022</code>, <code>11</code>, <code>31</code> und <code>22</code>.</div>
 
 <h2>Aufgabe</h2>
-<div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toJSTDateTimeString</code>, die ein Date entgegennimmt und das Datum inkl. Uhrzeit als String in der Japan Standard Time (JST)
-zurückgibt. Die Uhrzeit soll dabei ohne Millisekunden angegeben werden.<br><br>Beispiel: Für <code>date = new Date(Date.UTC(2022, 12, 31, 22, 0))</code> sollte
+<div id="koans-task" class="paragraph">Schreibe eine Funktion <code>toJST</code>, die ein Date entgegennimmt und das Datum inkl. Uhrzeit als String in der
+<a href='https://en.wikipedia.org/wiki/Japan_Standard_Time'>Japan Standard Time (JST)</a>
+zurückgibt. Die Uhrzeit soll dabei ohne Millisekunden angegeben werden.<br><br>Beispiel: Für <code>date = new Date(Date.UTC(2022, 11, 31, 22, 0))</code> sollte
 <code>toJSTDateTimeString(date)</code>den String <code>'2023-01-01T07:00:00 JST'</code> ergeben.</div>
 
 
