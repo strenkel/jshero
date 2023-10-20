@@ -24,6 +24,15 @@ be <code>true</code>. If both values are the same, the result should be <code>fa
 I.e.: The calls <code>xor(true,&nbsp;false)</code> and <code>xor(false,&nbsp;true)</code> should return <code>true</code>.
 The calls <code>xor(true,&nbsp;true)</code> and <code>xor(false,&nbsp;false)</code> should return <code>false</code>.`,
 
+  hint: `Write an expression that returns <code>true</code> only if the first parameter is <code>true</code> and the second is <code>false</code>.
+Then write an expression that returns <code>true</code> only if the first parameter is <code>false</code> and the second is <code>true</code>.
+Combine both expressions appropriately.`,
+
+  solution: `<pre><code>function xor(a, b) {
+  return a && !b || !a && b;
+}</code></pre>`,
+
+
   tests: [
 
     function() {
