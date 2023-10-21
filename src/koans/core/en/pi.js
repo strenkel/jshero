@@ -13,6 +13,14 @@
 The function is given the radius of the circle.<br><br>
 Example: <code>area(1)</code> should return <code>&#960;</code> and <code>area(2)</code> should return <code>4 * &#960;</code>.`,
 
+    hint: `<pre><code>function area(r) {
+  return Math.PI ... ;
+}</code></pre>`,
+
+    solution: `<pre><code>function area(r) {
+  return Math.PI * r * r;
+}</code></pre>`,
+
     tests: [
 
       function() {

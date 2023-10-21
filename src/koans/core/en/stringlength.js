@@ -21,6 +21,10 @@ The empty string has no characters. The value of <code>charNumber</code> is <cod
   task: `Write a function <code>length</code> that takes a string and returns the number of characters of the string.<br><br>
 Example: <code>length('sun')</code> should return <code>3</code>.`,
 
+solution: `<pre><code>function length(str) {
+  return str.length;
+}</code></pre>`,
+
   tests: [
 
     function() {

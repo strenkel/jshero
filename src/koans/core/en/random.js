@@ -60,6 +60,11 @@ This should be practiced now.`,
 
     task: 'Write a function <code>dice</code> that returns like a dice a random number between 1 and 6.',
 
+    solution: `<pre><code>function dice() {
+  let x = Math.random() * 6;
+  return Math.ceil(x);
+}`,
+
     tests: [
       function() {
         return testutil.assert_isFunction('dice');

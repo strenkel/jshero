@@ -14,9 +14,14 @@ let bcd = abcd.slice(1, 4);</code></pre>
 The first parameter specifies the start index (included) and the second parameter specifies the end index (excluded).
 The original array will not be modified.`,
 
-  task: `Write a function <code>halve</code> that copies the first half of an array.
+  task: `Write a function <code>halve</code> that copy the first half of an array.
 With an odd number of array elements, the middle element should belong to the first half.<br><br>
 Example: <code>halve([1,&nbsp;2,&nbsp;3,&nbsp;4])</code> should return <code>[1,&nbsp;2]</code>.`,
+
+  solution: `<pre><code>function halve(arr) {
+  let halfLength = Math.ceil(arr.length / 2);
+  return arr.slice(0, halfLength);
+}</code></pre>`,
 
   tests: [
     function() {

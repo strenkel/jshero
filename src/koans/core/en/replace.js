@@ -19,6 +19,16 @@ The original string remains unchanged. Only the first occurrence is replaced:
   task: `Write a function <code>normalize</code>, that replaces <code>'-'</code> with <code>'/'</code> in a date string.<br><br>
 Example: <code>normalize('20-05-2017')</code> should return <code>'20/05/2017'</code>.`,
 
+  hint: `<pre><code>function normalize(date) {
+  // Use replace() twice.
+}</code></pre>`,
+
+  solution: `<pre><code>function normalize(date) {
+  let newDate = date.replace('-','/');
+  newDate = newDate.replace('-','/');
+  return newDate;
+}</code></pre>`,
+
   tests: [
     function() {
       return jshero.testutil.assert_isFunction('normalize');

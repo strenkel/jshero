@@ -61,6 +61,26 @@ The original string remains unchanged. Only the first occurrence is replaced:
 <div id="koans-task" class="paragraph">Write a function <code>normalize</code>, that replaces <code>'-'</code> with <code>'/'</code> in a date string.<br><br>
 Example: <code>normalize('20-05-2017')</code> should return <code>'20/05/2017'</code>.</div>
 
+<div id="hint-link-root" class="paragraph">
+<span id="hint-link">
+<span id="hint-open-close">+</span> Hint
+</span>
+</div>
+<div id="hint-area" class="paragraph"><pre><code>function normalize(date) {
+  // Use replace() twice.
+}</code></pre></div>
+
+
+<div id="solution-link-root" class="paragraph">
+<span id="solution-link">
+<span id="solution-open-close">+</span> Solution
+</span>
+</div>
+<div id="solution-area" class="paragraph"><pre><code>function normalize(date) {
+  let newDate = date.replace('-','/');
+  newDate = newDate.replace('-','/');
+  return newDate;
+}</code></pre></div>
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>

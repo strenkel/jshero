@@ -48,6 +48,13 @@ Therefore, <code>charAt</code> could contain the following code snippet:
 If <code>hello</code> is called without an argument, <code>'Hello world!'</code> should be returned.<br><br>
 Example: <code>hello('Nala')</code> should return <code>'Hello Nala!'</code>.`,
 
+    solution: `<pre><code>function hello(name){
+  if (name === undefined) {
+    name = "world";
+  }
+  return 'Hello ' + name + '!'
+}</code></pre>`,
+
     tests: [
       function() {
         return testutil.assert_isFunction('hello');
