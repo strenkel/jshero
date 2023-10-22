@@ -42,7 +42,7 @@
 }
 
 #mozilla-de {
-  height: 2em;
+  height: 2.4em;
 }
 
 #mozilla-en {
@@ -55,6 +55,13 @@
 
 #msf-en {
   height: 3.1em;
+}
+
+/* small desktops */
+@media (max-width: 1000px) {
+  #footer1-links a:nth-child(4) {
+    display: none;
+  }
 }
 
 /* tablets */
