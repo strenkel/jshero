@@ -44,6 +44,10 @@ dieser Strings zurückgibt.<br><br>Beispiel: <code>abkuerzung('Hansestadt', 'Bre
 
     function() {
       return jshero.testutil.assert_functionReturns("abkuerzung('Java', 'Script')", 'JS');
+    },
+
+    function() {
+      return jshero.testutil.assert_functionReturns("abkuerzung('personal', 'computer')", 'pc');
     }
 
   ]

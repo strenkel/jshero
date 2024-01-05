@@ -40,6 +40,10 @@ Example: <code>shortcut('Amnesty', 'International')</code> should return <code>'
 
       function() {
         return testutil.assert_functionReturns("shortcut('Java', 'Script')", 'JS');
+      },
+
+      function() {
+        return testutil.assert_functionReturns("shortcut('personal', 'computer')", 'pc');
       }
 
     ]
