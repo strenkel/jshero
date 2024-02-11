@@ -90,7 +90,7 @@ describe('jshero.date', function() {
     const toString = jshero.date.toString;
 
     it('should return the correct UTC Date string in local de when utc is passed', function() {
-      assert.strictEqual(toString(new Date(Date.UTC(2019, 11, 31)), {utc: true}), '31.12.2019, 00:00:00 UTC');
+      assert.strictEqual(toString(new Date(Date.UTC(2019, 11, 31, 10)), {utc: true}), '31.12.2019, 10:00:00 UTC');
     });
 
   });
