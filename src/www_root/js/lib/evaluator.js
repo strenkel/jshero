@@ -2,75 +2,87 @@ if (typeof jshero === "undefined") {
   var jshero = {};
 }
 
-/**
- * User code evaluator.
- * Statefull singleton.
- */
-jshero.evaluator = (function() {
-
-  // {String} User input.
-  var userCode;
+(function() {
 
   /**
-   * @param {String} myCode
+   * Encapsulates 'eval' so that the code executed by 'eval' does not have any variables defined
+   * here in its scope (except the global namespace 'jshero' and 'this'). 
    */
-  var init = function(code) {
-    userCode = code;
-    return this;
-  };
+  const myEval = function(code) {
+    return eval(code);
+  }
 
   /**
-   * Run testCode against the user code.
-   * Returns the result of testCode. 
-   * 
-   * @param {String} testCode
+   * User code evaluator.
+   * Statefull singleton.
    */
-  var evalTest = function(testCode) {
-    var userCodeWithTest = userCode + ";\n" + testCode;
-    return eval(userCodeWithTest);
-  };
+  jshero.evaluator = (function() {
 
-  /**
-   * Test, if the user code is executable.
-   * Throw an error if not.
-   * Execute the user code with eval.
-   */
-  var evalParse = function() {
-    eval(userCode);
-  };
+    // {String} User input.
+    var userCode;
 
-  /**
-   * Test, if the user code is the specified string.
-   * The user code can use ", ' or `.
-   * 
-   * @param {String} myString 
-   */
-  var equalsString = function(myString) {
-    return userCode === '"' + myString + '"'
-      || userCode === "'" + myString + "'"
-      || userCode === "`" + myString + "`";
-  };
+    /**
+     * @param {String} code
+     */
+    var init = function(code) {
+      userCode = code;
+      return this;
+    };
 
-  /**
-   * Test, if the user code is identical with the passed value.
-   * 
-   * @param {String} myValue 
-   */
-  var equalsValue = function(myValue) {
-    return userCode === myValue;
-  };
+    /**
+     * Run testCode against the user code.
+     * Returns the result of testCode. 
+     * 
+     * @param {String} testCode
+     */
+    var evalTest = function(testCode) {
+      var userCodeWithTest = userCode + ";\n" + testCode;
+      return myEval(userCodeWithTest);
+    };
 
-  var getCode = function() {
-    return userCode;
-  };
+    /**
+     * Test, if the user code is executable.
+     * Throw an error if not.
+     * Execute the user code with eval.
+     */
+    var evalParse = function() {
+      myEval(userCode);
+    };
 
-  return {
-    init: init,
-    evalTest: evalTest,
-    evalParse: evalParse,
-    equalsString: equalsString,
-    equalsValue: equalsValue,
-    getCode: getCode
-  };
+    /**
+     * Test, if the user code is the specified string.
+     * The user code can use ", ' or `.
+     * 
+     * @param {String} myString 
+     */
+    var equalsString = function(myString) {
+      return userCode === '"' + myString + '"'
+        || userCode === "'" + myString + "'"
+        || userCode === "`" + myString + "`";
+    };
+
+    /**
+     * Test, if the user code is identical with the passed value.
+     * 
+     * @param {String} myValue 
+     */
+    var equalsValue = function(myValue) {
+      return userCode === myValue;
+    };
+
+    var getCode = function() {
+      return userCode;
+    };
+
+    return {
+      init: init,
+      evalTest: evalTest,
+      evalParse: evalParse,
+      equalsString: equalsString,
+      equalsValue: equalsValue,
+      getCode: getCode
+    };
+
+  })();
 
 })();
