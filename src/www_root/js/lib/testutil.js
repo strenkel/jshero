@@ -18,6 +18,7 @@ jshero.testutil = (function(I18N, jsheroDate, jsheroUtil, jsheroArray, jsheroObj
    * Copyright(c) 2015 Andreas Lubbe
    * Copyright(c) 2015 Tiancheng "Timothy" Gu
    * MIT Licensed
+   * See: https://github.com/component/escape-html
    */
 
   var matchHtmlRegExp = /["'&<>\s]/;
