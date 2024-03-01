@@ -1,8 +1,8 @@
 // Render all html files with EJS.
 // Run from JS Hero root: node build/build.js
 // build.sh has to be run before.
-// Require pathes relative to build directory.
-// Other pathes relative to JS Hero root directory.
+// Require paths relative to build directory.
+// Other paths relative to JS Hero root directory.
 const fs = require('fs');
 const ejs = require('ejs');
 const koansCoreDe = require("../src/tmp/koans-core-de.js").getKoans();

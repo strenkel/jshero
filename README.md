@@ -3,15 +3,13 @@
 JS Hero: JavaScript tutorial with exersices/koans.
 
 Website: <https://www.jshero.net><br>
-Playstore: <https://play.google.com/store/apps/details?id=net.jshero>
 
 Static websites: run locally (limited) or on any web server (recommended).  
 Locally only in browsers that support locally local storage (Firefix, not Chrome, ...).  
-The Playstore app is a CORDOVA build (<https://cordova.apache.org>) of the website.
 
 ## Folder
 
-www: the built project  
+www: The built project  
 src: Sources to build the project  
 build: Build scripts  
 test: Unit tests  
@@ -26,7 +24,7 @@ Open `www/index.html` in a browser. Works limited.
 
 ## Build
 
-Requirement: node  
+Requirement: node.js  
 
 After changes JS Hero has to be rebuilt with npm.
 `package.json` together with `build.js` and `build.sh` defines the necessary steps and modules.
