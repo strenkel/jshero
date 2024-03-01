@@ -1,7 +1,6 @@
 {
-  "name": "build-tools",
-  "description": "Tools to build jshero (though it also runs locally)",
-  "version": "1.1.0",
+  "name": "jshero-builder",
+  "version": "1.2.0",
   "author": "jshero authors",
   "private": true,
   "scripts": {
