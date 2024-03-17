@@ -23,7 +23,7 @@ Beachte: Die Konstanten werden im Gegensatz zu Funktionen ohne anschließende Kl
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('flaeche(4)', Math.PI * 4 * 4);
+      return jshero.testutil.assert_functionReturns('flaeche(0)', 0);
     },
 
     function() {
@@ -31,8 +31,8 @@ Beachte: Die Konstanten werden im Gegensatz zu Funktionen ohne anschließende Kl
     },
 
     function() {
-      return jshero.testutil.assert_functionReturns('flaeche(0)', 0);
-    }
+      return jshero.testutil.assert_functionReturns('flaeche(4)', Math.PI * 4 * 4);
+    },
 
   ]
 
