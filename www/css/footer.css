@@ -9,7 +9,7 @@
 }
 
 #footer a {
-  padding: 0 1em;
+  padding: 0 3em;
   color: white;
   text-decoration: none;
 }
@@ -24,11 +24,11 @@
   #footer {
     padding: 1.5em 0;
     height: 8em;
-    line-height: 2em;
+    line-height: 2.5em;
   }
 
   .en #footer {
-    height: 6em;
+    height: 5em;
   }
 
   #footer a {
