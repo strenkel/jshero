@@ -18,14 +18,6 @@
   text-decoration: underline;
 }
 
-.web-app #web-app-link {
-  display: none;
-}
-
-.android-app #android-app-link {
-  display: none;
-}
-
 /* smartphones */
 @media (max-width: 630px) {
 

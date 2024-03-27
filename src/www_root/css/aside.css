@@ -63,12 +63,6 @@ aside div a {
   margin-bottom: 2em;
 }
 
-/* --- ANDROID APP --- */
-
-#aside-android-app h1 {
-  padding: 1em 0;
-}
-
 /* Breakpoint content-align: center => left */
 @media (max-width: 1600px) {
   aside {

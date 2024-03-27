@@ -1,1 +1,0 @@
-(function(){"use strict";const isAndroidApp=document.URL.indexOf("android")>-1;const bodyClass=isAndroidApp?"android-app":"web-app";document.body.classList.add(bodyClass)})();
