@@ -89,7 +89,9 @@ textarea.code-area {
   margin: 0 0 0 12em;
   max-width: 37em;
   /* Content height determine page height. */
-  padding: 8em 6% 8em 6%;
+  padding-top: 8em;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 
 #content a {
@@ -252,7 +254,8 @@ textarea.code-area {
   }
 
   #content {
-    padding: 8em 1em 14em 1em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   #portrait {
