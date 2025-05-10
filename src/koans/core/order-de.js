@@ -54,6 +54,7 @@ jshero.koans.initReorder(
     'if2',
     'else',
     'elseif',
+    'switch',
     'array',
     'array2',
     'array3',

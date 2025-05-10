@@ -16,9 +16,9 @@
 </head>
 <body class="en">
 <div id="header">
-<a id="next-button" class="control" href="switch.html" title="Next page"></a>
+<a id="next-button" class="control" href="array.html" title="Next page"></a>
 <a id="success-button" class="control" href="../success.html" title="Overview"></a>
-<a id="prev-button" class="control" href="else.html" title="Previous page"></a>
+<a id="prev-button" class="control" href="elseif.html" title="Previous page"></a>
 <div id="menu" class="menu" title="Menu"></div>
 <a id="title" class="title" href="../home.html" title="Home">JavaScript Hero</a>
 <a id="title-short" class="title" href="../home.html" title="Home">JS Hero</a>
@@ -43,33 +43,68 @@ The browser storage
 is not available. Either your browser does not support it or you have disabled it or the maximum memory size is exceeded.
 Without localStorage your solutions will not be stored.
 </p>
-<h1 id="koans-title">else if</h1>
+<h1 id="koans-title">Switch</h1>
 
-<div id="koans-lesson" class="paragraph">If you want to distinguish multiple cases, you can supplement an <code>if</code> with any number of
-<code>else if</code>. Finally, a single <code>else</code> can be added.
+<div id="koans-lesson" class="paragraph">The <code>switch</code> statement allows you to execute different blocks of code based on the value of a variable.  
+It's a cleaner alternative to writing multiple <code>if...else if</code> conditions when checking the same variable against different values.
 
-<pre><code>let message;
-if (amount > 1000) {
-  message = 'Too high. No payout possible!';
-} else if (amount < 10) {
-  message = 'Too low. No payout possible!';
-} else {
-  message = 'The amount will be paid out!';
+The structure of a <code>switch</code> statement looks like this:
+
+<pre><code>let fruit = 'apple';
+switch (fruit) {
+  case 'banana':
+    console.log('Yellow');
+    break;
+  case 'apple':
+    console.log('Red');
+    break;
+  default:
+    console.log('Unknown');
 }</code></pre>
 
-First it is checked whether <code>amount</code> is greater than <code>1000</code>.
-If so, the 'Too high ...' message is set and the code will be continued at the end of the entire block.
-If not, it is checked whether <code>amount</code> is less than <code>10</code>.
-If so, the 'Too low ...' message is set and the code will be continued at the end of the entire block.
-If no condition is met, the final <code>else</code> block is executed.</div>
+Each <code>case</code> compares the value of the variable (in this case, <code>fruit</code>) with a specific value (like <code>'banana'</code> or <code>'apple'</code>).  
+If a match is found, the corresponding code block is executed. The <code>break</code> statement tells the program to exit the <code>switch</code> after executing the matching case.
+
+If no <code>case</code> matches, the code in <code>default</code> will run (if provided).
+
+In the example above, the value of <code>fruit</code> is <code>'apple'</code>, so the output is <code>Red</code>.</div>
 
 <h2>Exercise</h2>
-<div id="koans-task" class="paragraph">Write a function <code>addWithSurcharge</code> that adds two amounts with surcharge.
-For each amount less than or equal to <code>10</code>, the surcharge is <code>1</code>.
-For each amount greater than <code>10</code> and less than or equal to <code>20</code>, the surcharge is <code>2</code>.
-For each amount greater than <code>20</code>, the surcharge is <code>3</code>.<br><br>
-Example: <code>addWithSurcharge(10,&nbsp;30)</code> should return <code>44</code>.</div>
+<div id="koans-task" class="paragraph">Write a function <code>getDayName</code> that takes a number between 1 and 3 and returns the corresponding weekday name.
 
+Use a <code>switch</code> statement.<br><br>
+
+- 1 → 'Monday'<br>
+- 2 → 'Tuesday'<br>
+- 3 → 'Wednesday'<br><br>
+
+<code>getDayName(1)</code> should return <code>'Monday'</code>.</div>
+
+<div id="hint-link-root" class="paragraph">
+<span id="hint-link">
+<span id="hint-open-close">+</span> Hint
+</span>
+</div>
+<div id="hint-area" class="paragraph"><pre><code>function getDayName(n) {
+  ...
+}</code></pre></div>
+
+
+<div id="solution-link-root" class="paragraph">
+<span id="solution-link">
+<span id="solution-open-close">+</span> Solution
+</span>
+</div>
+<div id="solution-area" class="paragraph"><pre><code>function getDayName(n) {
+  switch (n) {
+    case 1:
+      return 'Monday';
+    case 2:
+      return 'Tuesday';
+    case 3:
+      return 'Wednesday';
+  }
+}</code></pre></div>
 
 <textarea id="code-area" class="code-area" autocapitalize="none" spellcheck="false" autocorrect="off" autocomplete="off" placeholder="// ... your code ..."
 rows="10"></textarea>
